@@ -1,4 +1,3 @@
-***Not Complete***
 # P Browser Builder
 Turn your online website to Standalone Application
 ## What is P Browser Builder
