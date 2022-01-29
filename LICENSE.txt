@@ -8,7 +8,7 @@ Everyone is NOT PERMITTED TO COPY OR DISTRIBUTE this document of license.
 TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 (1.) Everyone can forks, download a copy, modification the code in your own repository or device,
 but not for commercial use. for company or large group plese contact us pavichdev@gmail.com.
-(2.) Any person is NOT PERMITTED TO RE-DISTRIBUTE a copy of this code for commercial use.
+(2.) Any person is NOT PERMITTED TO RE-DISTRIBUTE a copy of this code for any of use.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,EXPRESS OR IMPLIED, INCLUDING BUT
 NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRI-
