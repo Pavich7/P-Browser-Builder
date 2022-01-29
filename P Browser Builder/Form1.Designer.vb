@@ -229,7 +229,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel2.BackColor = System.Drawing.Color.White
-        Me.Panel2.Location = New System.Drawing.Point(34, 99)
+        Me.Panel2.Location = New System.Drawing.Point(34, 98)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(553, 358)
         Me.Panel2.TabIndex = 14
@@ -260,7 +260,7 @@ Partial Class Form1
         'ProgressBar1
         '
         Me.ProgressBar1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ProgressBar1.Location = New System.Drawing.Point(20, 444)
+        Me.ProgressBar1.Location = New System.Drawing.Point(20, 453)
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(304, 10)
         Me.ProgressBar1.TabIndex = 15
@@ -270,7 +270,7 @@ Partial Class Form1
         Me.Label7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(20, 424)
+        Me.Label7.Location = New System.Drawing.Point(20, 433)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(125, 17)
         Me.Label7.TabIndex = 16
