@@ -9,3 +9,6 @@ P Browser Builder is a Windows Application that help you turn your online websit
 * WebGL and GPU acceleration support
 * Low space usage when compared to others tool
 * Easy to use best for starter
+## License
+Since P Browser Builder is open-source software. Please read LICENSE.TXT for condition of use on this source code. \
+This project is a part of PavichDev open-source and using new license PavichDev Private License 1.0
