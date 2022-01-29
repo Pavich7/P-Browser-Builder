@@ -41,7 +41,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Panel1)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "P Browser App (Pre-Alpha)"
+        Me.Text = "P Browser App (Alpha)"
         Me.ResumeLayout(False)
 
     End Sub
