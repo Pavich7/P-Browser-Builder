@@ -9,26 +9,30 @@ Public Class Form1
         InitializeComponent()
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Label7.Visible = True
-        ProgressBar1.Visible = True
-        Dim apppath As String = Application.StartupPath()
-        Dim pbcfg As String = apppath + "\resource\testspace\builderdata.pbcfg"
-        Dim testapp As String = apppath + "\resource\testspace\P Browser App.exe"
-        ProgressBar1.Value = 20
-        If System.IO.File.Exists(pbcfg) = True Then
-            ProgressBar1.Value = 50
-            Dim objWriter As New System.IO.StreamWriter(pbcfg)
-            objWriter.Write(TextBox1.Text)
-            objWriter.Close()
-            ProgressBar1.Value = 100
-            MessageBox.Show("Build Completed! Click continue to test app.", "Build Completed!")
-            Process.Start(testapp)
-            Label7.Visible = False
-            ProgressBar1.Visible = False
+        If TextBox1.Text = "" Then
+            MessageBox.Show("Please enter your websites URL.", "Build Failed!")
         Else
-            MessageBox.Show("Build Failed! Incomplete or corrupted Data please reinstall builder.", "Build Failed!")
-            Label7.Visible = False
-            ProgressBar1.Visible = False
+            Label7.Visible = True
+            ProgressBar1.Visible = True
+            Dim apppath As String = Application.StartupPath()
+            Dim pbcfg As String = apppath + "\resource\testspace\builderdata.pbcfg"
+            Dim testapp As String = apppath + "\resource\testspace\P Browser App.exe"
+            ProgressBar1.Value = 20
+            If System.IO.File.Exists(pbcfg) = True Then
+                ProgressBar1.Value = 50
+                Dim objWriter As New System.IO.StreamWriter(pbcfg)
+                objWriter.Write(TextBox1.Text)
+                objWriter.Close()
+                ProgressBar1.Value = 100
+                MessageBox.Show("Build Completed! Click continue to test app.", "Build Completed!")
+                Process.Start(testapp)
+                Label7.Visible = False
+                ProgressBar1.Visible = False
+            Else
+                MessageBox.Show("Build Failed! Incomplete or corrupted Data please reinstall builder.", "Build Failed!")
+                Label7.Visible = False
+                ProgressBar1.Visible = False
+            End If
         End If
     End Sub
 
@@ -47,74 +51,78 @@ Public Class Form1
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        If RadioButton1.Checked = True Then
-            Label7.Visible = True
-            ProgressBar1.Visible = True
-            Dim apppath As String = Application.StartupPath()
-            Dim pbcfg As String = apppath + "\resource\buildspace\quickmode\builderdata.pbcfg"
-            Dim buildedapp As String = apppath + "\binary\P Browser App.exe"
-            System.IO.Directory.Delete(apppath + "\binary", True)
-            System.IO.Directory.CreateDirectory(apppath + "\binary")
-            ProgressBar1.Value = 20
-            If System.IO.File.Exists(pbcfg) = True Then
-                Dim objWriter As New System.IO.StreamWriter(pbcfg)
-                objWriter.Write(TextBox1.Text)
-                objWriter.Close()
-                ProgressBar1.Value = 50
-                My.Computer.FileSystem.CopyDirectory(apppath + "\resource\buildspace\quickmode", apppath + "\binary", True)
-                ProgressBar1.Value = 100
-                MessageBox.Show("Build Completed! Click OK to continue.", "Build Completed!")
-                If CheckBox1.Checked = True Then
-                    Process.Start(buildedapp)
-                End If
-                If CheckBox2.Checked Then
-                    Process.Start(apppath + "\binary")
-                End If
-                Label7.Visible = False
-                ProgressBar1.Visible = False
-            Else
-                MessageBox.Show("Build Failed! Incomplete or corrupted Data please reinstall builder.", "Build Failed!")
-                Label7.Visible = False
-                ProgressBar1.Visible = False
-            End If
-        ElseIf RadioButton2.Checked = True Then
-            Dim apppath As String = Application.StartupPath()
-            Dim zipPath As String = apppath + "\resource\resourcepack\freshapp.zip"
-            Dim extractPath As String = apppath + "\resource\buildspace\cleanmode"
-            ZipFile.ExtractToDirectory(zipPath, extractPath)
-            Label7.Visible = True
-            ProgressBar1.Visible = True
-            Dim pbcfg As String = apppath + "\resource\buildspace\cleanmode\builderdata.pbcfg"
-            Dim buildedapp As String = apppath + "\binary\P Browser App.exe"
-            System.IO.Directory.Delete(apppath + "\binary", True)
-            System.IO.Directory.CreateDirectory(apppath + "\binary")
-            ProgressBar1.Value = 20
-            If System.IO.File.Exists(pbcfg) = True Then
-                Dim objWriter As New System.IO.StreamWriter(pbcfg)
-                objWriter.Write(TextBox1.Text)
-                objWriter.Close()
-                ProgressBar1.Value = 50
-                My.Computer.FileSystem.CopyDirectory(apppath + "\resource\buildspace\cleanmode", apppath + "\binary", True)
-                ProgressBar1.Value = 70
-                System.IO.Directory.Delete(apppath + "\resource\buildspace\cleanmode", True)
-                System.IO.Directory.CreateDirectory(apppath + "\resource\buildspace\cleanmode")
-                ProgressBar1.Value = 100
-                MessageBox.Show("Build Completed! Click OK to continue.", "Build Completed!")
-                If CheckBox1.Checked = True Then
-                    Process.Start(buildedapp)
-                End If
-                If CheckBox2.Checked Then
-                    Process.Start(apppath + "\binary")
-                End If
-                Label7.Visible = False
-                ProgressBar1.Visible = False
-            Else
-                MessageBox.Show("Build Failed! Incomplete or corrupted Data please reinstall builder.", "Build Failed!")
-                Label7.Visible = False
-                ProgressBar1.Visible = False
-            End If
+        If TextBox1.Text = "" Then
+            MessageBox.Show("Please enter your websites URL.", "Build Failed!")
         Else
-            MessageBox.Show("Please select Build Mode!", "Build Failed!")
+            If RadioButton1.Checked = True Then
+                Label7.Visible = True
+                ProgressBar1.Visible = True
+                Dim apppath As String = Application.StartupPath()
+                Dim pbcfg As String = apppath + "\resource\buildspace\quickmode\builderdata.pbcfg"
+                Dim buildedapp As String = apppath + "\binary\P Browser App.exe"
+                System.IO.Directory.Delete(apppath + "\binary", True)
+                System.IO.Directory.CreateDirectory(apppath + "\binary")
+                ProgressBar1.Value = 20
+                If System.IO.File.Exists(pbcfg) = True Then
+                    Dim objWriter As New System.IO.StreamWriter(pbcfg)
+                    objWriter.Write(TextBox1.Text)
+                    objWriter.Close()
+                    ProgressBar1.Value = 50
+                    My.Computer.FileSystem.CopyDirectory(apppath + "\resource\buildspace\quickmode", apppath + "\binary", True)
+                    ProgressBar1.Value = 100
+                    MessageBox.Show("Build Completed! Click OK to continue.", "Build Completed!")
+                    If CheckBox1.Checked = True Then
+                        Process.Start(buildedapp)
+                    End If
+                    If CheckBox2.Checked Then
+                        Process.Start(apppath + "\binary")
+                    End If
+                    Label7.Visible = False
+                    ProgressBar1.Visible = False
+                Else
+                    MessageBox.Show("Build Failed! Incomplete or corrupted Data please reinstall builder.", "Build Failed!")
+                    Label7.Visible = False
+                    ProgressBar1.Visible = False
+                End If
+            ElseIf RadioButton2.Checked = True Then
+                Dim apppath As String = Application.StartupPath()
+                Dim zipPath As String = apppath + "\resource\resourcepack\freshapp.zip"
+                Dim extractPath As String = apppath + "\resource\buildspace\cleanmode"
+                ZipFile.ExtractToDirectory(zipPath, extractPath)
+                Label7.Visible = True
+                ProgressBar1.Visible = True
+                Dim pbcfg As String = apppath + "\resource\buildspace\cleanmode\builderdata.pbcfg"
+                Dim buildedapp As String = apppath + "\binary\P Browser App.exe"
+                System.IO.Directory.Delete(apppath + "\binary", True)
+                System.IO.Directory.CreateDirectory(apppath + "\binary")
+                ProgressBar1.Value = 20
+                If System.IO.File.Exists(pbcfg) = True Then
+                    Dim objWriter As New System.IO.StreamWriter(pbcfg)
+                    objWriter.Write(TextBox1.Text)
+                    objWriter.Close()
+                    ProgressBar1.Value = 50
+                    My.Computer.FileSystem.CopyDirectory(apppath + "\resource\buildspace\cleanmode", apppath + "\binary", True)
+                    ProgressBar1.Value = 70
+                    System.IO.Directory.Delete(apppath + "\resource\buildspace\cleanmode", True)
+                    System.IO.Directory.CreateDirectory(apppath + "\resource\buildspace\cleanmode")
+                    ProgressBar1.Value = 100
+                    MessageBox.Show("Build Completed! Click OK to continue.", "Build Completed!")
+                    If CheckBox1.Checked = True Then
+                        Process.Start(buildedapp)
+                    End If
+                    If CheckBox2.Checked Then
+                        Process.Start(apppath + "\binary")
+                    End If
+                    Label7.Visible = False
+                    ProgressBar1.Visible = False
+                Else
+                    MessageBox.Show("Build Failed! Incomplete or corrupted Data please reinstall builder.", "Build Failed!")
+                    Label7.Visible = False
+                    ProgressBar1.Visible = False
+                End If
+            Else
+                MessageBox.Show("Please select Build Mode!", "Build Failed!")
+            End If
         End If
     End Sub
 
