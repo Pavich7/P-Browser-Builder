@@ -183,4 +183,12 @@ Public Class Form1
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
         Browser.Load(TextBox1.Text)
     End Sub
+
+    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+        If TextBox2.Text = "" Then
+            Label2.Text = "Application name (example.exe)"
+        Else
+            Label2.Text = "Application name (" + TextBox2.Text + ".exe)"
+        End If
+    End Sub
 End Class
