@@ -53,13 +53,14 @@ Public Class Form1
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         If TextBox1.Text = "" Then
             MessageBox.Show("Please enter your websites URL.", "Build Failed!")
+        ElseIf TextBox2.Text = "" Then
+            MessageBox.Show("Please enter your application name.", "Build Failed!")
         Else
             If RadioButton1.Checked = True Then
                 Label7.Visible = True
                 ProgressBar1.Visible = True
                 Dim apppath As String = Application.StartupPath()
                 Dim pbcfg As String = apppath + "\resource\buildspace\quickmode\builderdata.pbcfg"
-                Dim buildedapp As String = apppath + "\binary\P Browser App.exe"
                 System.IO.Directory.Delete(apppath + "\binary", True)
                 System.IO.Directory.CreateDirectory(apppath + "\binary")
                 ProgressBar1.Value = 20
@@ -69,13 +70,14 @@ Public Class Form1
                     objWriter.Close()
                     ProgressBar1.Value = 50
                     My.Computer.FileSystem.CopyDirectory(apppath + "\resource\buildspace\quickmode", apppath + "\binary", True)
+                    My.Computer.FileSystem.RenameFile(apppath + "\binary\P Browser App.exe", TextBox2.Text + ".exe")
                     ProgressBar1.Value = 100
                     MessageBox.Show("Build Completed! Click OK to continue.", "Build Completed!")
                     If CheckBox1.Checked = True Then
-                        Process.Start(buildedapp)
+                        Process.Start(apppath + "\binary\" + TextBox2.Text + ".exe")
                     End If
                     If CheckBox2.Checked Then
-                        Process.Start(apppath + "\binary")
+                        Process.Start(apppath + "\binary\")
                     End If
                     Label7.Visible = False
                     ProgressBar1.Visible = False
@@ -86,13 +88,14 @@ Public Class Form1
                 End If
             ElseIf RadioButton2.Checked = True Then
                 Dim apppath As String = Application.StartupPath()
+                System.IO.Directory.Delete(apppath + "\resource\buildspace\cleanmode", True)
+                System.IO.Directory.CreateDirectory(apppath + "\resource\buildspace\cleanmode")
                 Dim zipPath As String = apppath + "\resource\resourcepack\freshapp.zip"
                 Dim extractPath As String = apppath + "\resource\buildspace\cleanmode"
                 ZipFile.ExtractToDirectory(zipPath, extractPath)
                 Label7.Visible = True
                 ProgressBar1.Visible = True
                 Dim pbcfg As String = apppath + "\resource\buildspace\cleanmode\builderdata.pbcfg"
-                Dim buildedapp As String = apppath + "\binary\P Browser App.exe"
                 System.IO.Directory.Delete(apppath + "\binary", True)
                 System.IO.Directory.CreateDirectory(apppath + "\binary")
                 ProgressBar1.Value = 20
@@ -102,16 +105,17 @@ Public Class Form1
                     objWriter.Close()
                     ProgressBar1.Value = 50
                     My.Computer.FileSystem.CopyDirectory(apppath + "\resource\buildspace\cleanmode", apppath + "\binary", True)
+                    My.Computer.FileSystem.RenameFile(apppath + "\binary\P Browser App.exe", TextBox2.Text + ".exe")
                     ProgressBar1.Value = 70
                     System.IO.Directory.Delete(apppath + "\resource\buildspace\cleanmode", True)
                     System.IO.Directory.CreateDirectory(apppath + "\resource\buildspace\cleanmode")
                     ProgressBar1.Value = 100
                     MessageBox.Show("Build Completed! Click OK to continue.", "Build Completed!")
                     If CheckBox1.Checked = True Then
-                        Process.Start(buildedapp)
+                        Process.Start(apppath + "\binary\" + TextBox2.Text + ".exe")
                     End If
                     If CheckBox2.Checked Then
-                        Process.Start(apppath + "\binary")
+                        Process.Start(apppath + "\binary\")
                     End If
                     Label7.Visible = False
                     ProgressBar1.Visible = False
@@ -128,10 +132,18 @@ Public Class Form1
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Try
+            Label7.Visible = True
+            Label7.Text = "Cleaning in progress..."
+            ProgressBar1.Visible = True
+            ProgressBar1.Value = 20
             Dim apppath As String = Application.StartupPath()
             System.IO.Directory.Delete(apppath + "\binary", True)
+            ProgressBar1.Value = 50
             System.IO.Directory.CreateDirectory(apppath + "\binary")
+            ProgressBar1.Value = 100
             MessageBox.Show("Cleanup completed!", "Completed!")
+            Label7.Visible = False
+            ProgressBar1.Visible = False
         Catch ex As Exception
             MessageBox.Show("Please close builded app first before perform this action.", "Failed!")
         End Try
@@ -145,7 +157,6 @@ Public Class Form1
         Panel2.Controls.Add(Browser)
         Label7.Visible = False
         ProgressBar1.Visible = False
-        TextBox2.Enabled = False
         Button4.Enabled = False
         Button5.Enabled = False
         EditToolStripMenuItem.Enabled = False
