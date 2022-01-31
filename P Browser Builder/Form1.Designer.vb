@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -59,6 +60,10 @@ Partial Class Form1
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -123,7 +128,7 @@ Partial Class Form1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Button1.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(20, 469)
+        Me.Button1.Location = New System.Drawing.Point(20, 504)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(149, 35)
         Me.Button1.TabIndex = 1
@@ -134,7 +139,7 @@ Partial Class Form1
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Button2.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(175, 469)
+        Me.Button2.Location = New System.Drawing.Point(175, 504)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(149, 35)
         Me.Button2.TabIndex = 2
@@ -228,7 +233,7 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Location = New System.Drawing.Point(344, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(560, 553)
+        Me.Panel1.Size = New System.Drawing.Size(560, 588)
         Me.Panel1.TabIndex = 12
         '
         'Panel2
@@ -239,7 +244,7 @@ Partial Class Form1
         Me.Panel2.BackColor = System.Drawing.Color.White
         Me.Panel2.Location = New System.Drawing.Point(18, 98)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(523, 358)
+        Me.Panel2.Size = New System.Drawing.Size(523, 393)
         Me.Panel2.TabIndex = 14
         '
         'Label6
@@ -258,7 +263,7 @@ Partial Class Form1
         '
         Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Button3.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(20, 510)
+        Me.Button3.Location = New System.Drawing.Point(20, 545)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(304, 35)
         Me.Button3.TabIndex = 14
@@ -268,7 +273,7 @@ Partial Class Form1
         'ProgressBar1
         '
         Me.ProgressBar1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ProgressBar1.Location = New System.Drawing.Point(20, 453)
+        Me.ProgressBar1.Location = New System.Drawing.Point(20, 488)
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(304, 10)
         Me.ProgressBar1.TabIndex = 15
@@ -278,7 +283,7 @@ Partial Class Form1
         Me.Label7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(20, 433)
+        Me.Label7.Location = New System.Drawing.Point(20, 468)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(125, 17)
         Me.Label7.TabIndex = 16
@@ -367,7 +372,7 @@ Partial Class Form1
         Me.Panel3.Controls.Add(Me.Label11)
         Me.Panel3.Location = New System.Drawing.Point(928, 75)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(265, 207)
+        Me.Panel3.Size = New System.Drawing.Size(265, 209)
         Me.Panel3.TabIndex = 24
         '
         'Label10
@@ -375,7 +380,7 @@ Partial Class Form1
         Me.Label10.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label10.Location = New System.Drawing.Point(923, 288)
+        Me.Label10.Location = New System.Drawing.Point(923, 292)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(105, 28)
         Me.Label10.TabIndex = 26
@@ -386,7 +391,7 @@ Partial Class Form1
         Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(66, 92)
+        Me.Label11.Location = New System.Drawing.Point(66, 93)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(133, 17)
         Me.Label11.TabIndex = 27
@@ -396,28 +401,68 @@ Partial Class Form1
         '
         Me.Panel4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel4.BackColor = System.Drawing.Color.White
+        Me.Panel4.Controls.Add(Me.Label15)
+        Me.Panel4.Controls.Add(Me.Label14)
+        Me.Panel4.Controls.Add(Me.Label13)
         Me.Panel4.Controls.Add(Me.Label12)
-        Me.Panel4.Location = New System.Drawing.Point(928, 327)
+        Me.Panel4.Location = New System.Drawing.Point(928, 334)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(265, 212)
+        Me.Panel4.Size = New System.Drawing.Size(265, 240)
         Me.Panel4.TabIndex = 28
         '
         'Label12
         '
         Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(66, 95)
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(14, 12)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(133, 17)
+        Me.Label12.Size = New System.Drawing.Size(232, 21)
         Me.Label12.TabIndex = 27
-        Me.Label12.Text = "Extension not installed"
+        Me.Label12.Text = "Fetching News Feed with Server"
+        '
+        'Label13
+        '
+        Me.Label13.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Segoe UI Light", 10.0!)
+        Me.Label13.Location = New System.Drawing.Point(14, 39)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(228, 19)
+        Me.Label13.TabIndex = 28
+        Me.Label13.Text = "Fetching news with PavichDev Server..." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        '
+        'Label14
+        '
+        Me.Label14.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(14, 64)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(98, 17)
+        Me.Label14.TabIndex = 29
+        Me.Label14.Text = "January 1, 1970"
+        '
+        'Timer1
+        '
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label15.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label15.Location = New System.Drawing.Point(15, 64)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(60, 17)
+        Me.Label15.TabIndex = 29
+        Me.Label15.Text = "Try again"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1216, 559)
+        Me.ClientSize = New System.Drawing.Size(1216, 594)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Panel3)
@@ -497,4 +542,8 @@ Partial Class Form1
     Friend WithEvents Label11 As Label
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label12 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents Label15 As Label
 End Class
