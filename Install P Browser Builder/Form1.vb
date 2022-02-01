@@ -29,13 +29,16 @@ Public Class Form1
         Dim apppath As String = Application.StartupPath()
         Dim zipPath As String = apppath + "\installresource\installresource.zip"
         Dim extractPath As String = apppath
+        ProgressBar1.Value = 10
         Try
             ZipFile.ExtractToDirectory(zipPath, extractPath)
+            ProgressBar1.Value = 100
         Catch ex As Exception
             MessageBox.Show("Error! Please uninstall older version first!", "Installation Exist Error!")
             Process.Start(apppath)
             Application.Exit()
         End Try
+        ProgressBar1.Value = 100
         MessageBox.Show("Installation Complete!", "Complete!")
         Process.Start(apppath + "\P Browser Builder.exe")
         Application.Exit()

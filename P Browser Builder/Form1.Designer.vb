@@ -416,7 +416,7 @@ Partial Class Form1
         Me.Label15.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label15.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label15.Location = New System.Drawing.Point(15, 64)
+        Me.Label15.Location = New System.Drawing.Point(15, 63)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(60, 17)
         Me.Label15.TabIndex = 29
@@ -427,7 +427,7 @@ Partial Class Form1
         Me.Label14.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(14, 64)
+        Me.Label14.Location = New System.Drawing.Point(14, 63)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(98, 17)
         Me.Label14.TabIndex = 29

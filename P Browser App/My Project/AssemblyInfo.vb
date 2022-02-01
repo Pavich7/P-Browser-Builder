@@ -9,10 +9,10 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("P Browser App")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyDescription("P Browser App form P Browser Builder")>
+<Assembly: AssemblyCompany("PavichDev Software")>
 <Assembly: AssemblyProduct("P Browser App")>
-<Assembly: AssemblyCopyright("Copyright ©  2022")>
+<Assembly: AssemblyCopyright("Copyright © 2022 PavichDev Software")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
