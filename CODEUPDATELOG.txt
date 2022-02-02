@@ -1,3 +1,4 @@
 Alpha 0.0.2
 - FIXED: Progressbar and label not disappearing after failed cleaning.
 - FIXED: Job label not returning to default after fail clean.
+- FIXED: The job label sometimes displays incorrectly after the news feed is finished fetching.

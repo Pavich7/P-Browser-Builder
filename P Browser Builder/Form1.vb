@@ -226,9 +226,9 @@ Public Class Form1
             Label13.Text = stringReader2
             Label14.Text = stringReader3
             ProgressBar1.Value = 100
-            Label7.Text = "Building in progress..."
             Label7.Visible = False
             ProgressBar1.Visible = False
+            Label7.Text = "Building in progress..."
         Catch ex As Exception
             Label7.Visible = False
             ProgressBar1.Visible = False
