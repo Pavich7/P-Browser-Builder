@@ -1,5 +1,5 @@
-Alpha 0.0.2
-- FIXED: Progressbar and label not disappearing after failed cleaning.
-- FIXED: Job label not returning to default after fail clean.
-- FIXED: The job label sometimes displays incorrectly after the news feed is finished fetching.
-- FIXED: News Feed description text is not displayed properly.
+Alpha 0.0.3
+- CHANGED: News Feed fetching description text
+- ADDED: Clear All Function in File Menu strip
+- ADDED: File menu strip shortcut key
+- REMOVED: Edit menu strip

@@ -161,7 +161,6 @@ Public Class Form1
         Panel2.Controls.Add(Browser)
         Button4.Enabled = False
         Button5.Enabled = False
-        EditToolStripMenuItem.Enabled = False
         GuideToolStripMenuItem.Enabled = False
         Label15.Visible = False
         Label7.Visible = True
@@ -244,5 +243,14 @@ Public Class Form1
         If (result = DialogResult.Yes) Then
             Application.Restart()
         End If
+    End Sub
+
+    Private Sub ClearAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearAllToolStripMenuItem.Click
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        RadioButton1.Checked = False
+        RadioButton2.Checked = False
+        CheckBox1.Checked = False
+        CheckBox2.Checked = False
     End Sub
 End Class
