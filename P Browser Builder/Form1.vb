@@ -189,7 +189,7 @@ Public Class Form1
         Browser = New ChromiumWebBrowser("")
         Panel2.Controls.Add(Browser)
         Button4.Enabled = False
-        Button5.Enabled = False
+        TextBox3.Enabled = False
         GuideToolStripMenuItem.Enabled = False
         Label15.Visible = False
         Label7.Visible = True
@@ -296,6 +296,15 @@ Public Class Form1
             PictureBox1.Image = Image.FromFile(OpenFileDialog1.FileName)
             TextBox3.Text = OpenFileDialog1.FileName
             My.Computer.FileSystem.CopyFile(OpenFileDialog1.FileName, apppath + "\buildcache\appicns\appicns.ico")
+        End If
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        OpenFileDialog2.Multiselect = False
+        OpenFileDialog2.Title = "Choose your project file"
+        OpenFileDialog2.Filter = "P Browser Builder Project Files|*.pbproj"
+        If OpenFileDialog2.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
+            MessageBox.Show("Project files corrupt or not valid!", "Load failure!")
         End If
     End Sub
 End Class

@@ -71,6 +71,7 @@ Partial Class Form1
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -530,6 +531,10 @@ Partial Class Form1
         Me.TextBox3.Size = New System.Drawing.Size(230, 20)
         Me.TextBox3.TabIndex = 29
         '
+        'OpenFileDialog2
+        '
+        Me.OpenFileDialog2.FileName = "OpenFileDialog2"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -632,4 +637,5 @@ Partial Class Form1
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label17 As Label
     Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents OpenFileDialog2 As OpenFileDialog
 End Class
