@@ -27,6 +27,15 @@ Public Class Form1
                 objWriter.Close()
                 objWriter2.Write(TextBox2.Text)
                 objWriter2.Close()
+                Dim icnexist As String = apppath + "\resource\testspace\appicns.ico"
+                If System.IO.File.Exists(icnexist) Then
+                    My.Computer.FileSystem.DeleteFile(apppath + "\resource\testspace\appicns.ico")
+                Else
+                    Dim icnshave As String = apppath + "\buildcache\appicns\appicns.ico"
+                    If System.IO.File.Exists(icnshave) Then
+                        My.Computer.FileSystem.CopyFile(apppath + "\buildcache\appicns\appicns.ico", apppath + "\resource\testspace\appicns.ico")
+                    End If
+                End If
                 ProgressBar1.Value = 100
                 MessageBox.Show("Build Completed! Click continue to test app.", "Build Completed!")
                 Process.Start(testapp)
@@ -79,6 +88,10 @@ Public Class Form1
                     ProgressBar1.Value = 50
                     My.Computer.FileSystem.CopyDirectory(apppath + "\resource\buildspace\quickmode", apppath + "\binary", True)
                     My.Computer.FileSystem.RenameFile(apppath + "\binary\P Browser App.exe", TextBox2.Text + ".exe")
+                    Dim icnshave As String = apppath + "\buildcache\appicns\appicns.ico"
+                    If System.IO.File.Exists(icnshave) Then
+                        My.Computer.FileSystem.CopyFile(apppath + "\buildcache\appicns\appicns.ico", apppath + "\binary\appicns.ico")
+                    End If
                     ProgressBar1.Value = 100
                     MessageBox.Show("Build Completed! Click OK to continue.", "Build Completed!")
                     If CheckBox1.Checked = True Then
@@ -118,6 +131,10 @@ Public Class Form1
                     ProgressBar1.Value = 50
                     My.Computer.FileSystem.CopyDirectory(apppath + "\resource\buildspace\cleanmode", apppath + "\binary", True)
                     My.Computer.FileSystem.RenameFile(apppath + "\binary\P Browser App.exe", TextBox2.Text + ".exe")
+                    Dim icnshave As String = apppath + "\buildcache\appicns\appicns.ico"
+                    If System.IO.File.Exists(icnshave) Then
+                        My.Computer.FileSystem.CopyFile(apppath + "\buildcache\appicns\appicns.ico", apppath + "\binary\appicns.ico")
+                    End If
                     ProgressBar1.Value = 70
                     System.IO.Directory.Delete(apppath + "\resource\buildspace\cleanmode", True)
                     System.IO.Directory.CreateDirectory(apppath + "\resource\buildspace\cleanmode")
@@ -207,8 +224,10 @@ Public Class Form1
     Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
         If TextBox2.Text = "" Then
             Label2.Text = "Application name (example.exe)"
+            Label17.Text = "example"
         Else
             Label2.Text = "Application name (" + TextBox2.Text + ".exe)"
+            Label17.Text = TextBox2.Text
         End If
     End Sub
 
@@ -264,5 +283,19 @@ Public Class Form1
         RadioButton2.Checked = False
         CheckBox1.Checked = False
         CheckBox2.Checked = False
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Dim apppath As String = Application.StartupPath()
+        System.IO.Directory.Delete(apppath + "\buildcache\appicns", True)
+        System.IO.Directory.CreateDirectory(apppath + "\buildcache\appicns")
+        OpenFileDialog1.Multiselect = False
+        OpenFileDialog1.Title = "Choose your icons file"
+        OpenFileDialog1.Filter = "Icons Files|*.ico"
+        If OpenFileDialog1.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
+            PictureBox1.Image = Image.FromFile(OpenFileDialog1.FileName)
+            TextBox3.Text = OpenFileDialog1.FileName
+            My.Computer.FileSystem.CopyFile(OpenFileDialog1.FileName, apppath + "\buildcache\appicns\appicns.ico")
+        End If
     End Sub
 End Class
