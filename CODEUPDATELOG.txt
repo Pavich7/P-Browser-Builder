@@ -2,4 +2,5 @@ Alpha 0.0.3
 - CHANGED: News Feed fetching description text
 - ADDED: Clear All Function in File Menu strip
 - ADDED: File menu strip shortcut key
+- ADDED: Changable P Browser App title name
 - REMOVED: Edit menu strip

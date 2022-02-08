@@ -11,9 +11,14 @@ Public Class Form1
             Dim apppath As String = Application.StartupPath()
             Dim setting As New CefSettings
             Dim filereader As System.IO.StreamReader
+            Dim filereader2 As System.IO.StreamReader
             filereader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\builderdata.pbcfg")
+            filereader2 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\progdata.pbcfg")
             Dim loadweb As String
+            Dim loadcaption As String
             loadweb = filereader.ReadLine()
+            loadcaption = filereader2.ReadLine()
+            Me.Text = loadcaption
             setting.RemoteDebuggingPort = 8088
             CefSharp.Cef.Initialize(setting)
             Browser = New ChromiumWebBrowser(loadweb)

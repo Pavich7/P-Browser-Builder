@@ -16,13 +16,17 @@ Public Class Form1
             ProgressBar1.Visible = True
             Dim apppath As String = Application.StartupPath()
             Dim pbcfg As String = apppath + "\resource\testspace\builderdata.pbcfg"
+            Dim pbprogcfg As String = apppath + "\resource\testspace\progdata.pbcfg"
             Dim testapp As String = apppath + "\resource\testspace\P Browser App.exe"
             ProgressBar1.Value = 20
             If System.IO.File.Exists(pbcfg) = True Then
                 ProgressBar1.Value = 50
                 Dim objWriter As New System.IO.StreamWriter(pbcfg)
+                Dim objWriter2 As New System.IO.StreamWriter(pbprogcfg)
                 objWriter.Write(TextBox1.Text)
                 objWriter.Close()
+                objWriter2.Write(TextBox2.Text)
+                objWriter2.Close()
                 ProgressBar1.Value = 100
                 MessageBox.Show("Build Completed! Click continue to test app.", "Build Completed!")
                 Process.Start(testapp)
@@ -61,6 +65,7 @@ Public Class Form1
                 ProgressBar1.Visible = True
                 Dim apppath As String = Application.StartupPath()
                 Dim pbcfg As String = apppath + "\resource\buildspace\quickmode\builderdata.pbcfg"
+                Dim pbprogcfg As String = apppath + "\resource\buildspace\quickmode\progdata.pbcfg"
                 System.IO.Directory.Delete(apppath + "\binary", True)
                 System.IO.Directory.CreateDirectory(apppath + "\binary")
                 ProgressBar1.Value = 20
@@ -68,6 +73,9 @@ Public Class Form1
                     Dim objWriter As New System.IO.StreamWriter(pbcfg)
                     objWriter.Write(TextBox1.Text)
                     objWriter.Close()
+                    Dim objWriter2 As New System.IO.StreamWriter(pbprogcfg)
+                    objWriter2.Write(TextBox2.Text)
+                    objWriter2.Close()
                     ProgressBar1.Value = 50
                     My.Computer.FileSystem.CopyDirectory(apppath + "\resource\buildspace\quickmode", apppath + "\binary", True)
                     My.Computer.FileSystem.RenameFile(apppath + "\binary\P Browser App.exe", TextBox2.Text + ".exe")
@@ -96,6 +104,7 @@ Public Class Form1
                 Label7.Visible = True
                 ProgressBar1.Visible = True
                 Dim pbcfg As String = apppath + "\resource\buildspace\cleanmode\builderdata.pbcfg"
+                Dim pbprogcfg As String = apppath + "\resource\buildspace\cleanmode\progdata.pbcfg"
                 System.IO.Directory.Delete(apppath + "\binary", True)
                 System.IO.Directory.CreateDirectory(apppath + "\binary")
                 ProgressBar1.Value = 20
@@ -103,6 +112,9 @@ Public Class Form1
                     Dim objWriter As New System.IO.StreamWriter(pbcfg)
                     objWriter.Write(TextBox1.Text)
                     objWriter.Close()
+                    Dim objWriter2 As New System.IO.StreamWriter(pbprogcfg)
+                    objWriter2.Write(TextBox2.Text)
+                    objWriter2.Close()
                     ProgressBar1.Value = 50
                     My.Computer.FileSystem.CopyDirectory(apppath + "\resource\buildspace\cleanmode", apppath + "\binary", True)
                     My.Computer.FileSystem.RenameFile(apppath + "\binary\P Browser App.exe", TextBox2.Text + ".exe")
