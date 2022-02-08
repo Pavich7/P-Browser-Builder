@@ -277,12 +277,16 @@ Public Class Form1
     End Sub
 
     Private Sub ClearAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearAllToolStripMenuItem.Click
+        Dim apppath As String = Application.StartupPath()
         TextBox1.Text = ""
         TextBox2.Text = ""
+        TextBox3.Text = ""
         RadioButton1.Checked = False
         RadioButton2.Checked = False
         CheckBox1.Checked = False
         CheckBox2.Checked = False
+        System.IO.Directory.Delete(apppath + "\buildcache\appicns", True)
+        System.IO.Directory.CreateDirectory(apppath + "\buildcache\appicns")
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
@@ -304,7 +308,7 @@ Public Class Form1
         OpenFileDialog2.Title = "Choose your project file"
         OpenFileDialog2.Filter = "P Browser Builder Project Files|*.pbproj"
         If OpenFileDialog2.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
-            MessageBox.Show("Project files corrupt or not valid!", "Load failure!")
+            MessageBox.Show("Project data files corrupt or not valid!", "Load failure!")
         End If
     End Sub
 End Class
