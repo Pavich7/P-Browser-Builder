@@ -3,4 +3,6 @@ Alpha 0.0.3
 - ADDED: Clear All Function in File Menu strip
 - ADDED: File menu strip shortcut key
 - ADDED: Changable P Browser App title name
+- ADDED: Changable P Browser App icon
+- ADDED: P Browser App icon dialog chooser
 - REMOVED: Edit menu strip
