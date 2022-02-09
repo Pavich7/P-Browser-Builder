@@ -127,8 +127,14 @@
   <data name="Screenshot 2022-01-28 214601" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\..\..\Pictures\Screenshot 2022-01-28 214601.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="p_browser_icon_001_rq2_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\Downloads\p_browser_icon_001_rq2_icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Screenshot 2022-02-02 122416" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\..\..\Pictures\Screenshot 2022-02-02 122416.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Screenshot 2022-02-09 122127" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\Pictures\Screenshot 2022-02-09 122127.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="buildersplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\..\..\Pictures\buildersplash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,7 +142,7 @@
   <data name="Screenshot 2022-02-08 135538" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\..\..\Pictures\Screenshot 2022-02-08 135538.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="p_browser_icon_001_rq2_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\..\Downloads\p_browser_icon_001_rq2_icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Screenshot 2022-02-09 122155" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\Pictures\Screenshot 2022-02-09 122155.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
