@@ -188,6 +188,23 @@ Public Class Form1
         CefSharp.Cef.Initialize(setting)
         Browser = New ChromiumWebBrowser("")
         Panel2.Controls.Add(Browser)
+        Dim rscheck As String = apppath + "\resource"
+        If Not System.IO.Directory.Exists(rscheck) Then
+            Button1.Enabled = False
+            Button2.Enabled = False
+            RadioButton1.Enabled = False
+            RadioButton2.Enabled = False
+            CheckBox1.Enabled = False
+            CheckBox2.Enabled = False
+            Label6.Enabled = False
+            Label9.Enabled = False
+            Label4.Enabled = False
+            Label8.Enabled = False
+        Else
+            Label18.Visible = False
+            Label19.Visible = False
+            Label20.Visible = False
+        End If
         Button4.Enabled = False
         TextBox3.Enabled = False
         GuideToolStripMenuItem.Enabled = False
@@ -264,8 +281,8 @@ Public Class Form1
             ProgressBar1.Visible = False
             Label15.Visible = True
             Label14.Visible = False
-            Label12.Text = "Fetching failure!"
-            Label13.Text = "Can't fetch news feed with server."
+            Label12.Text = "Running in offline mode"
+            Label13.Text = "Can't establish connection and fetch news feed with PavichDev Server."
         End Try
     End Sub
 
