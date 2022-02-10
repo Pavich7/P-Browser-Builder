@@ -330,4 +330,14 @@ Public Class Form1
             MessageBox.Show("Project data files corrupt or not valid!", "Load failure!")
         End If
     End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim apppath As String = Application.StartupPath()
+        SaveFileDialog1.Filter = "P Browser Builder Project Files|*.pbproj"
+        If SaveFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
+            System.IO.Directory.Delete(apppath + "\savecache", True)
+            System.IO.Directory.CreateDirectory(apppath + "\savecache")
+            System.IO.Directory.CreateDirectory(apppath + "\savecache\" + TextBox2.Text)
+        End If
+    End Sub
 End Class

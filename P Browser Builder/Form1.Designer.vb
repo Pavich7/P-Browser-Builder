@@ -59,6 +59,9 @@ Partial Class Form1
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -72,9 +75,7 @@ Partial Class Form1
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -428,6 +429,42 @@ Partial Class Form1
         Me.Panel4.Size = New System.Drawing.Size(265, 240)
         Me.Panel4.TabIndex = 28
         '
+        'Label18
+        '
+        Me.Label18.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.ForeColor = System.Drawing.Color.Red
+        Me.Label18.Location = New System.Drawing.Point(14, 196)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(211, 17)
+        Me.Label18.TabIndex = 32
+        Me.Label18.Text = "Just now (Builder critical warning)"
+        '
+        'Label19
+        '
+        Me.Label19.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label19.Font = New System.Drawing.Font("Segoe UI Light", 10.0!)
+        Me.Label19.ForeColor = System.Drawing.Color.Red
+        Me.Label19.Location = New System.Drawing.Point(14, 134)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(228, 61)
+        Me.Label19.TabIndex = 31
+        Me.Label19.Text = "Test and build feature are disabled" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "due to missing resource. Go back to installe" &
+    "r and install builder resources."
+        '
+        'Label20
+        '
+        Me.Label20.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.ForeColor = System.Drawing.Color.Red
+        Me.Label20.Location = New System.Drawing.Point(14, 109)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(200, 21)
+        Me.Label20.TabIndex = 30
+        Me.Label20.Text = "Builder resource not found!"
+        '
         'Label15
         '
         Me.Label15.AutoSize = True
@@ -541,42 +578,6 @@ Partial Class Form1
         '
         Me.OpenFileDialog2.FileName = "OpenFileDialog2"
         '
-        'Label18
-        '
-        Me.Label18.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.ForeColor = System.Drawing.Color.Red
-        Me.Label18.Location = New System.Drawing.Point(14, 196)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(211, 17)
-        Me.Label18.TabIndex = 32
-        Me.Label18.Text = "Just now (Builder critical warning)"
-        '
-        'Label19
-        '
-        Me.Label19.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label19.Font = New System.Drawing.Font("Segoe UI Light", 10.0!)
-        Me.Label19.ForeColor = System.Drawing.Color.Red
-        Me.Label19.Location = New System.Drawing.Point(14, 134)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(228, 61)
-        Me.Label19.TabIndex = 31
-        Me.Label19.Text = "Test and build feature are disabled" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "due to missing resource. Go back to installe" &
-    "r and install builder resources."
-        '
-        'Label20
-        '
-        Me.Label20.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.ForeColor = System.Drawing.Color.Red
-        Me.Label20.Location = New System.Drawing.Point(14, 109)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(200, 21)
-        Me.Label20.TabIndex = 30
-        Me.Label20.Text = "Builder resource not found!"
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -683,4 +684,5 @@ Partial Class Form1
     Friend WithEvents Label18 As Label
     Friend WithEvents Label19 As Label
     Friend WithEvents Label20 As Label
+    Friend WithEvents SaveFileDialog1 As SaveFileDialog
 End Class
