@@ -2,4 +2,5 @@ Alpha 0.1.0
 - ADDED: Resource file checker
 - ADDED: Complete Installer Reworks
 - ADDED: Optional Builder Resource install
+- ADDED: Installer can install only resource
 - CHANGED: News feed failed fetch text
