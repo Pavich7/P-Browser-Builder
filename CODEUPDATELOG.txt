@@ -4,3 +4,4 @@ Alpha 0.1.0
 - ADDED: Optional Builder Resource install
 - ADDED: Installer can install only resource
 - CHANGED: News feed failed fetch text
+- REMOVED: Save and load project buttons

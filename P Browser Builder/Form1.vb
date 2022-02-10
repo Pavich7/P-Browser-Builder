@@ -206,6 +206,8 @@ Public Class Form1
             Label20.Visible = False
         End If
         Button4.Enabled = False
+        Button4.Visible = False
+        Button5.Visible = False
         TextBox3.Enabled = False
         GuideToolStripMenuItem.Enabled = False
         Label15.Visible = False
