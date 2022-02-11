@@ -3,5 +3,7 @@ Beta 0.1.0
 - ADDED: Complete Installer Reworks
 - ADDED: Optional Builder Resource install
 - ADDED: Installer can install only resource
+- UPDATED: CefSharp.Common
+- UPDATED: CefSharp.WinForms
 - CHANGED: News feed failed fetch text
 - REMOVED: Save and load project buttons
