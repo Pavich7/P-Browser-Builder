@@ -461,9 +461,9 @@ Partial Class Form1
         Me.Label20.ForeColor = System.Drawing.Color.Red
         Me.Label20.Location = New System.Drawing.Point(14, 109)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(200, 21)
+        Me.Label20.Size = New System.Drawing.Size(217, 21)
         Me.Label20.TabIndex = 30
-        Me.Label20.Text = "Builder resource not found!"
+        Me.Label20.Text = "Builder resource not installed!"
         '
         'Label15
         '
