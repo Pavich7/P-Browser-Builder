@@ -1,4 +1,4 @@
-Alpha 0.1.0
+Beta 0.1.0
 - ADDED: Resource file checker
 - ADDED: Complete Installer Reworks
 - ADDED: Optional Builder Resource install
