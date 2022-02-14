@@ -30,6 +30,7 @@ Partial Class Form1
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReloadPreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenPreviewLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GuideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InstallationGuideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CustomizingGuildToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -82,7 +83,7 @@ Partial Class Form1
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
-        Me.OpenPreviewLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label22 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -111,14 +112,14 @@ Partial Class Form1
         'ClearAllToolStripMenuItem
         '
         Me.ClearAllToolStripMenuItem.Name = "ClearAllToolStripMenuItem"
-        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.ClearAllToolStripMenuItem.Text = "Clear All"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'PreviewToolStripMenuItem
@@ -132,8 +133,14 @@ Partial Class Form1
         '
         Me.ReloadPreviewToolStripMenuItem.Name = "ReloadPreviewToolStripMenuItem"
         Me.ReloadPreviewToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5
-        Me.ReloadPreviewToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ReloadPreviewToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
         Me.ReloadPreviewToolStripMenuItem.Text = "Reload Preview"
+        '
+        'OpenPreviewLogToolStripMenuItem
+        '
+        Me.OpenPreviewLogToolStripMenuItem.Name = "OpenPreviewLogToolStripMenuItem"
+        Me.OpenPreviewLogToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
+        Me.OpenPreviewLogToolStripMenuItem.Text = "Open Preview Log"
         '
         'GuideToolStripMenuItem
         '
@@ -291,6 +298,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.BackColor = System.Drawing.Color.Silver
+        Me.Panel1.Controls.Add(Me.Label22)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Location = New System.Drawing.Point(344, 12)
         Me.Panel1.Name = "Panel1"
@@ -623,11 +631,16 @@ Partial Class Form1
         '
         Me.OpenFileDialog2.FileName = "OpenFileDialog2"
         '
-        'OpenPreviewLogToolStripMenuItem
+        'Label22
         '
-        Me.OpenPreviewLogToolStripMenuItem.Name = "OpenPreviewLogToolStripMenuItem"
-        Me.OpenPreviewLogToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.OpenPreviewLogToolStripMenuItem.Text = "Open Preview Log"
+        Me.Label22.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Segoe UI Light", 20.0!)
+        Me.Label22.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label22.Location = New System.Drawing.Point(207, 531)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(0, 37)
+        Me.Label22.TabIndex = 16
         '
         'Form1
         '
@@ -672,6 +685,7 @@ Partial Class Form1
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel4.ResumeLayout(False)
@@ -743,4 +757,5 @@ Partial Class Form1
     Friend WithEvents PreviewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReloadPreviewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpenPreviewLogToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label22 As Label
 End Class
