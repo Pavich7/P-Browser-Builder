@@ -1,14 +1,3 @@
-Beta 0.1.0
-- ADDED: Resource file checker
-- ADDED: Complete Installer Reworks
-- ADDED: Optional Builder Resource install
-- ADDED: Installer can install only resource
-- ADDED: Installation Guide Link
-- ADDED: Customizing Guide Link
-- ADDED: Building Guide Link
-- UPDATED: CefSharp.Common
-- UPDATED: CefSharp.WinForms
-- CHANGED: News feed failed fetch text
-- CHANGED: Enabled guide menu
-- CHANGED: Run resource and data cleanup
-- REMOVED: Save and load project buttons
+Beta 0.2.0
+- ADDED: Reziable About Window
+- CHANGED: About Window Picture
