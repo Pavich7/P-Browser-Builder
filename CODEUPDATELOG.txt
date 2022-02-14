@@ -1,3 +1,8 @@
 Beta 0.2.0
+- ADDED: Submit Bugs Report Menu
+- ADDED: Preview Menu
+- ADDED: Reload Preview Menu
+- ADDED: Show Debug Log Menu
 - CHANGED: About Window Picture
 - CHANGED: Installing Tab Picture
+- REMOVED: Clear All shotcut key

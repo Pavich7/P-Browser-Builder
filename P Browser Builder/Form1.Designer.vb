@@ -28,10 +28,16 @@ Partial Class Form1
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClearAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReloadPreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GuideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InstallationGuideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CustomizingGuildToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BuildingGuideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SupportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SubmitBugsReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -76,9 +82,7 @@ Partial Class Form1
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
-        Me.InstallationGuideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CustomizingGuildToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BuildingGuideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenPreviewLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -90,7 +94,7 @@ Partial Class Form1
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.White
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.GuideToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.PreviewToolStripMenuItem, Me.GuideToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1216, 24)
@@ -107,16 +111,29 @@ Partial Class Form1
         'ClearAllToolStripMenuItem
         '
         Me.ClearAllToolStripMenuItem.Name = "ClearAllToolStripMenuItem"
-        Me.ClearAllToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Delete), System.Windows.Forms.Keys)
-        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ClearAllToolStripMenuItem.Text = "Clear All"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
+        '
+        'PreviewToolStripMenuItem
+        '
+        Me.PreviewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReloadPreviewToolStripMenuItem, Me.OpenPreviewLogToolStripMenuItem})
+        Me.PreviewToolStripMenuItem.Name = "PreviewToolStripMenuItem"
+        Me.PreviewToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
+        Me.PreviewToolStripMenuItem.Text = "Preview"
+        '
+        'ReloadPreviewToolStripMenuItem
+        '
+        Me.ReloadPreviewToolStripMenuItem.Name = "ReloadPreviewToolStripMenuItem"
+        Me.ReloadPreviewToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5
+        Me.ReloadPreviewToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ReloadPreviewToolStripMenuItem.Text = "Reload Preview"
         '
         'GuideToolStripMenuItem
         '
@@ -125,9 +142,27 @@ Partial Class Form1
         Me.GuideToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
         Me.GuideToolStripMenuItem.Text = "Guide"
         '
+        'InstallationGuideToolStripMenuItem
+        '
+        Me.InstallationGuideToolStripMenuItem.Name = "InstallationGuideToolStripMenuItem"
+        Me.InstallationGuideToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.InstallationGuideToolStripMenuItem.Text = "Installation Guide"
+        '
+        'CustomizingGuildToolStripMenuItem
+        '
+        Me.CustomizingGuildToolStripMenuItem.Name = "CustomizingGuildToolStripMenuItem"
+        Me.CustomizingGuildToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.CustomizingGuildToolStripMenuItem.Text = "Customizing Guild"
+        '
+        'BuildingGuideToolStripMenuItem
+        '
+        Me.BuildingGuideToolStripMenuItem.Name = "BuildingGuideToolStripMenuItem"
+        Me.BuildingGuideToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.BuildingGuideToolStripMenuItem.Text = "Building Guide"
+        '
         'HelpToolStripMenuItem
         '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem, Me.SupportToolStripMenuItem})
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem, Me.SupportToolStripMenuItem, Me.SubmitBugsReportToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
@@ -135,14 +170,20 @@ Partial Class Form1
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'SupportToolStripMenuItem
         '
         Me.SupportToolStripMenuItem.Name = "SupportToolStripMenuItem"
-        Me.SupportToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.SupportToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
         Me.SupportToolStripMenuItem.Text = "Support"
+        '
+        'SubmitBugsReportToolStripMenuItem
+        '
+        Me.SubmitBugsReportToolStripMenuItem.Name = "SubmitBugsReportToolStripMenuItem"
+        Me.SubmitBugsReportToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.SubmitBugsReportToolStripMenuItem.Text = "Submit Bugs Report"
         '
         'Button1
         '
@@ -582,23 +623,11 @@ Partial Class Form1
         '
         Me.OpenFileDialog2.FileName = "OpenFileDialog2"
         '
-        'InstallationGuideToolStripMenuItem
+        'OpenPreviewLogToolStripMenuItem
         '
-        Me.InstallationGuideToolStripMenuItem.Name = "InstallationGuideToolStripMenuItem"
-        Me.InstallationGuideToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.InstallationGuideToolStripMenuItem.Text = "Installation Guide"
-        '
-        'CustomizingGuildToolStripMenuItem
-        '
-        Me.CustomizingGuildToolStripMenuItem.Name = "CustomizingGuildToolStripMenuItem"
-        Me.CustomizingGuildToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.CustomizingGuildToolStripMenuItem.Text = "Customizing Guild"
-        '
-        'BuildingGuideToolStripMenuItem
-        '
-        Me.BuildingGuideToolStripMenuItem.Name = "BuildingGuideToolStripMenuItem"
-        Me.BuildingGuideToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.BuildingGuideToolStripMenuItem.Text = "Building Guide"
+        Me.OpenPreviewLogToolStripMenuItem.Name = "OpenPreviewLogToolStripMenuItem"
+        Me.OpenPreviewLogToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.OpenPreviewLogToolStripMenuItem.Text = "Open Preview Log"
         '
         'Form1
         '
@@ -710,4 +739,8 @@ Partial Class Form1
     Friend WithEvents InstallationGuideToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CustomizingGuildToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BuildingGuideToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SubmitBugsReportToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PreviewToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReloadPreviewToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OpenPreviewLogToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -343,4 +343,22 @@ Public Class Form1
     Private Sub InstallationGuideToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InstallationGuideToolStripMenuItem.Click
         Process.Start("https://github.com/Pavich7/P-Browser-Builder/wiki/P-Browser-Builder-Guild#install-p-browser-builder")
     End Sub
+
+    Private Sub SubmitBugsReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SubmitBugsReportToolStripMenuItem.Click
+        Process.Start("https://github.com/Pavich7/P-Browser-Builder/issues/new/choose")
+    End Sub
+
+    Private Sub ReloadPreviewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReloadPreviewToolStripMenuItem.Click
+        Browser.Load(TextBox1.Text)
+        Browser.Refresh()
+    End Sub
+
+    Private Sub OpenPreviewLogToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenPreviewLogToolStripMenuItem.Click
+        Try
+            Dim apppath As String = Application.StartupPath()
+            Process.Start(apppath + "\debug.log")
+        Catch ex As Exception
+            MessageBox.Show("Log not found! Maybe you can load some web and try again.", "Error!")
+        End Try
+    End Sub
 End Class
