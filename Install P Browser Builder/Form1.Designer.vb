@@ -28,6 +28,7 @@ Partial Class Form1
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -35,30 +36,29 @@ Partial Class Form1
         Me.Label5 = New System.Windows.Forms.Label()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.CheckBox4 = New System.Windows.Forms.CheckBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.TabPage4.SuspendLayout()
-        Me.TabPage5.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage5.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -117,6 +117,16 @@ Partial Class Form1
         Me.Button2.TabIndex = 6
         Me.Button2.Text = "Get started!"
         Me.Button2.UseVisualStyleBackColor = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Install_P_Browser_Builder.My.Resources.Resources.P_Browser_icon_001
+        Me.PictureBox1.Location = New System.Drawing.Point(193, 117)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(305, 188)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 5
+        Me.PictureBox1.TabStop = False
         '
         'TabPage2
         '
@@ -201,6 +211,62 @@ Partial Class Form1
         Me.TabPage3.Text = "Install Option"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label8.Location = New System.Drawing.Point(255, 303)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(206, 19)
+        Me.Label8.TabIndex = 16
+        Me.Label8.Text = "Available disk space [diskreq] GB"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
+        Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label7.Location = New System.Drawing.Point(255, 325)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(197, 19)
+        Me.Label7.TabIndex = 15
+        Me.Label7.Text = "Disk space required [selopt] GB"
+        '
+        'CheckBox3
+        '
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox3.Location = New System.Drawing.Point(280, 85)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(120, 21)
+        Me.CheckBox3.TabIndex = 14
+        Me.CheckBox3.Text = "Core component"
+        Me.CheckBox3.UseVisualStyleBackColor = True
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox1.Location = New System.Drawing.Point(280, 112)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(116, 21)
+        Me.CheckBox1.TabIndex = 13
+        Me.CheckBox1.Text = "Builder resource"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI Light", 20.0!)
+        Me.Label6.Location = New System.Drawing.Point(257, 23)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(166, 37)
+        Me.Label6.TabIndex = 12
+        Me.Label6.Text = "Install Option"
+        '
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!)
@@ -223,6 +289,17 @@ Partial Class Form1
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Installing"
         Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.White
+        Me.PictureBox2.Image = Global.Install_P_Browser_Builder.My.Resources.Resources.Screenshot_2022_02_09_215237
+        Me.PictureBox2.Location = New System.Drawing.Point(6, 6)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(678, 359)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 15
+        Me.PictureBox2.TabStop = False
         '
         'Label4
         '
@@ -255,92 +332,6 @@ Partial Class Form1
         Me.TabPage5.Text = "Completed"
         Me.TabPage5.UseVisualStyleBackColor = True
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI Light", 20.0!)
-        Me.Label6.Location = New System.Drawing.Point(257, 23)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(166, 37)
-        Me.Label6.TabIndex = 12
-        Me.Label6.Text = "Install Option"
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.Location = New System.Drawing.Point(280, 112)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(116, 21)
-        Me.CheckBox1.TabIndex = 13
-        Me.CheckBox1.Text = "Builder resource"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'CheckBox3
-        '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox3.Location = New System.Drawing.Point(280, 85)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(120, 21)
-        Me.CheckBox3.TabIndex = 14
-        Me.CheckBox3.Text = "Core component"
-        Me.CheckBox3.UseVisualStyleBackColor = True
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
-        Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label7.Location = New System.Drawing.Point(255, 325)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(197, 19)
-        Me.Label7.TabIndex = 15
-        Me.Label7.Text = "Disk space required [selopt] GB"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
-        Me.Label8.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label8.Location = New System.Drawing.Point(255, 303)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(206, 19)
-        Me.Label8.TabIndex = 16
-        Me.Label8.Text = "Available disk space [diskreq] GB"
-        '
-        'Button4
-        '
-        Me.Button4.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!)
-        Me.Button4.Location = New System.Drawing.Point(203, 361)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(285, 41)
-        Me.Button4.TabIndex = 11
-        Me.Button4.Text = "Complete"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI Light", 20.0!)
-        Me.Label9.Location = New System.Drawing.Point(257, 25)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(192, 37)
-        Me.Label9.TabIndex = 13
-        Me.Label9.Text = "Conglaturation!"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI Light", 15.0!)
-        Me.Label10.Location = New System.Drawing.Point(145, 73)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(434, 28)
-        Me.Label10.TabIndex = 14
-        Me.Label10.Text = "You have completed P Browser Builder installation!"
-        '
         'CheckBox4
         '
         Me.CheckBox4.AutoSize = True
@@ -352,26 +343,35 @@ Partial Class Form1
         Me.CheckBox4.Text = "Run P Browser Builder"
         Me.CheckBox4.UseVisualStyleBackColor = True
         '
-        'PictureBox1
+        'Label10
         '
-        Me.PictureBox1.Image = Global.Install_P_Browser_Builder.My.Resources.Resources.P_Browser_icon_001
-        Me.PictureBox1.Location = New System.Drawing.Point(193, 117)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(305, 188)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 5
-        Me.PictureBox1.TabStop = False
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI Light", 15.0!)
+        Me.Label10.Location = New System.Drawing.Point(145, 73)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(434, 28)
+        Me.Label10.TabIndex = 14
+        Me.Label10.Text = "You have completed P Browser Builder installation!"
         '
-        'PictureBox2
+        'Label9
         '
-        Me.PictureBox2.BackColor = System.Drawing.Color.White
-        Me.PictureBox2.Image = Global.Install_P_Browser_Builder.My.Resources.Resources.Screenshot_2022_02_09_215237
-        Me.PictureBox2.Location = New System.Drawing.Point(6, 6)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(678, 359)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 15
-        Me.PictureBox2.TabStop = False
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI Light", 20.0!)
+        Me.Label9.Location = New System.Drawing.Point(257, 25)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(192, 37)
+        Me.Label9.TabIndex = 13
+        Me.Label9.Text = "Conglaturation!"
+        '
+        'Button4
+        '
+        Me.Button4.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!)
+        Me.Button4.Location = New System.Drawing.Point(203, 361)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(285, 41)
+        Me.Button4.TabIndex = 11
+        Me.Button4.Text = "Complete"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -389,16 +389,16 @@ Partial Class Form1
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
         Me.TabPage4.ResumeLayout(False)
         Me.TabPage4.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage5.ResumeLayout(False)
         Me.TabPage5.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
