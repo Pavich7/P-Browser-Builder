@@ -1,2 +1,3 @@
 Beta 0.2.0
 - CHANGED: About Window Picture
+- CHANGED: Installing Tab Picture
