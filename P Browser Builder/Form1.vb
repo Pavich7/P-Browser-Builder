@@ -207,8 +207,9 @@ Public Class Form1
         Button4.Visible = False
         Button5.Visible = False
         TextBox3.Enabled = False
-        GuideToolStripMenuItem.Enabled = False
         Label15.Visible = False
+        CustomizingGuildToolStripMenuItem.Enabled = False
+        BuildingGuideToolStripMenuItem.Enabled = False
         Label7.Visible = True
         Label7.Text = "Fetching in progress..."
         ProgressBar1.Visible = True
@@ -337,5 +338,9 @@ Public Class Form1
             System.IO.Directory.CreateDirectory(apppath + "\savecache")
             System.IO.Directory.CreateDirectory(apppath + "\savecache\" + TextBox2.Text)
         End If
+    End Sub
+
+    Private Sub InstallationGuideToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InstallationGuideToolStripMenuItem.Click
+        Process.Start("https://github.com/Pavich7/P-Browser-Builder/wiki/P-Browser-Builder-Guild#install-p-browser-builder")
     End Sub
 End Class

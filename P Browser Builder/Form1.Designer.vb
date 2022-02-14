@@ -76,6 +76,9 @@ Partial Class Form1
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.InstallationGuideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CustomizingGuildToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BuildingGuideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -117,6 +120,7 @@ Partial Class Form1
         '
         'GuideToolStripMenuItem
         '
+        Me.GuideToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InstallationGuideToolStripMenuItem, Me.CustomizingGuildToolStripMenuItem, Me.BuildingGuideToolStripMenuItem})
         Me.GuideToolStripMenuItem.Name = "GuideToolStripMenuItem"
         Me.GuideToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
         Me.GuideToolStripMenuItem.Text = "Guide"
@@ -578,6 +582,24 @@ Partial Class Form1
         '
         Me.OpenFileDialog2.FileName = "OpenFileDialog2"
         '
+        'InstallationGuideToolStripMenuItem
+        '
+        Me.InstallationGuideToolStripMenuItem.Name = "InstallationGuideToolStripMenuItem"
+        Me.InstallationGuideToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.InstallationGuideToolStripMenuItem.Text = "Installation Guide"
+        '
+        'CustomizingGuildToolStripMenuItem
+        '
+        Me.CustomizingGuildToolStripMenuItem.Name = "CustomizingGuildToolStripMenuItem"
+        Me.CustomizingGuildToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CustomizingGuildToolStripMenuItem.Text = "Customizing Guild"
+        '
+        'BuildingGuideToolStripMenuItem
+        '
+        Me.BuildingGuideToolStripMenuItem.Name = "BuildingGuideToolStripMenuItem"
+        Me.BuildingGuideToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BuildingGuideToolStripMenuItem.Text = "Building Guide"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -685,4 +707,7 @@ Partial Class Form1
     Friend WithEvents Label19 As Label
     Friend WithEvents Label20 As Label
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
+    Friend WithEvents InstallationGuideToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CustomizingGuildToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BuildingGuideToolStripMenuItem As ToolStripMenuItem
 End Class
