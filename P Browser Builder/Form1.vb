@@ -1,7 +1,4 @@
-﻿Imports System.IO.StreamWriter
-Imports System.IO.Compression
-Imports System.IO
-Imports CefSharp
+﻿Imports System.IO.Compression
 Imports CefSharp.WinForms
 Public Class Form1
     Private WithEvents Browser As ChromiumWebBrowser
@@ -183,8 +180,9 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim apppath As String = Application.StartupPath()
-        Dim setting As New CefSettings
-        setting.RemoteDebuggingPort = 8088
+        Dim setting As New CefSettings With {
+            .RemoteDebuggingPort = 8088
+        }
         CefSharp.Cef.Initialize(setting)
         Browser = New ChromiumWebBrowser("")
         Panel2.Controls.Add(Browser)

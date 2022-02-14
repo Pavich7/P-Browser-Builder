@@ -1,6 +1,4 @@
-﻿Imports CefSharp
-Imports CefSharp.WinForms
-Imports System.IO.StreamReader
+﻿Imports CefSharp.WinForms
 Public Class Form1
     Private WithEvents Browser As ChromiumWebBrowser
     Public Sub New()
@@ -19,10 +17,10 @@ Public Class Form1
             Dim loadicon As String = apppath + "\appicns.ico"
             loadweb = filereader.ReadLine()
             loadcaption = filereader2.ReadLine()
-            Me.Text = loadcaption
+            Text = loadcaption
             If System.IO.File.Exists(loadicon) Then
                 Try
-                    Me.Icon = New Icon(apppath + "\appicns.ico")
+                    Icon = New Icon(apppath + "\appicns.ico")
                 Catch ex As Exception
                     MessageBox.Show("Failed to Initialize app icons!", "Fatal Error!")
                     Application.Exit()
