@@ -1,7 +1,7 @@
 # P Browser Builder
 Open source software that turn your online website to a standalone application.
 ## What is P Browser Builder
-P Browser Builder is an open-source Windows application that help you turn your online websites into standalone application.
+P Browser Builder is an open-source Windows application that help you turn your online websites into a standalone application.
 ## Feature
 * Zero Percent Coding
 * Online Game Web-Application support
