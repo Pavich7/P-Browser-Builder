@@ -1,4 +1,4 @@
-Beta 0.2.0
+Beta 0.2.1
 - UPDATED: CefSharp.Redist
 - UPDATED: CefSharp.Common
 - UPDATED: CefSharp.WinForms
