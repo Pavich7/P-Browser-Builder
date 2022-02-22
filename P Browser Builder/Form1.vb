@@ -171,7 +171,7 @@ Public Class Form1
             Label7.Visible = False
             ProgressBar1.Visible = False
         Catch ex As Exception
-            MessageBox.Show("Please close builded app first before perform this action.", "Failed!")
+            MessageBox.Show("Please close built app first before perform this action.", "Failed!")
             Label7.Visible = False
             Label7.Text = "Building in progress..."
             ProgressBar1.Visible = False

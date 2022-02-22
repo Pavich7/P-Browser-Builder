@@ -1,4 +1,5 @@
 Beta 0.2.1
+- FIXED: English text correction
 - UPDATED: CefSharp.Redist
 - UPDATED: CefSharp.Common
 - UPDATED: CefSharp.WinForms
