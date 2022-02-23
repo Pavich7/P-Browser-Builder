@@ -1,5 +1,2 @@
-Beta 0.2.1
-- FIXED: English text correction
-- UPDATED: CefSharp.Redist
-- UPDATED: CefSharp.Common
-- UPDATED: CefSharp.WinForms
+Beta 0.3.0
+- Partially supported on system that unable to install .NET Framework 4.8
