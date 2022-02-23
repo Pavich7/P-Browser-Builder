@@ -243,7 +243,7 @@ Partial Class Form1
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(120, 21)
         Me.CheckBox3.TabIndex = 14
-        Me.CheckBox3.Text = "Core component"
+        Me.CheckBox3.Text = "Base component"
         Me.CheckBox3.UseVisualStyleBackColor = True
         '
         'CheckBox1
@@ -252,9 +252,9 @@ Partial Class Form1
         Me.CheckBox1.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox1.Location = New System.Drawing.Point(280, 112)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(116, 21)
+        Me.CheckBox1.Size = New System.Drawing.Size(108, 21)
         Me.CheckBox1.TabIndex = 13
-        Me.CheckBox1.Text = "Builder resource"
+        Me.CheckBox1.Text = "Build Resource"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'Label6

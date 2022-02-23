@@ -1,2 +1,4 @@
 Beta 0.3.0
-- Partially supported on system that unable to install .NET Framework 4.8 (Builder, App)
+- ADDED: Able to update without uninstall older version.
+- ADDED: Partially supported on system that unable to install .NET Framework 4.8.
+- CHANGED: Complete installer structure reworks.

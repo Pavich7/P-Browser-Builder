@@ -26,14 +26,14 @@ Public Class Form1
         TabPage4.Enabled = True
         TabPage5.Enabled = False
         Dim apppath As String = Application.StartupPath()
-        Dim zipPath As String = apppath + "\installresource\installresource.zip"
-        Dim extractPath As String = apppath
+        Dim zipPath As String = apppath + "\updateresource\updateresource.zip"
+        Dim extractPath As String = apppath + "\app0.3.0"
         ProgressBar1.Value = 10
         Try
             ZipFile.ExtractToDirectory(zipPath, extractPath)
             ProgressBar1.Value = 100
             If CheckBox1.Checked = False Then
-                System.IO.Directory.Delete(apppath + "\resource", True)
+                System.IO.Directory.Delete(apppath + "\app0.3.0\resource", True)
             End If
         Catch ex As Exception
             MessageBox.Show("Error! Please uninstall older version first!", "Installation Exist Error!")
@@ -73,7 +73,7 @@ Public Class Form1
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Dim apppath As String = Application.StartupPath()
-        Dim filecheck As String = apppath + "\P Browser Builder.exe"
+        Dim filecheck As String = apppath + "\app0.3.0\P Browser Builder.exe"
         If System.IO.File.Exists(filecheck) Then
             Dim result As DialogResult = MessageBox.Show("Another P Browser Builder Detected!" + vbNewLine + "Do you want to install only Builder Resource?" + vbNewLine + "(Do not click yes if you want to update version)", "Already Install Detected!", MessageBoxButtons.YesNo)
             If (result = DialogResult.Yes) Then
@@ -83,17 +83,17 @@ Public Class Form1
                 TabPage3.Enabled = False
                 TabPage4.Enabled = True
                 TabPage5.Enabled = False
-                Dim zipPath As String = apppath + "\installresource\installresource.zip"
-                Dim extractPath As String = apppath + "\installtemp"
+                Dim zipPath As String = apppath + "\updateresource\updateresource.zip"
+                Dim extractPath As String = apppath + "\updatetemp"
                 ProgressBar1.Value = 10
                 Try
-                    Dim fcheck As String = apppath + "\installtemp"
+                    Dim fcheck As String = apppath + "\updatetemp"
                     If System.IO.Directory.Exists(fcheck) Then
-                        System.IO.Directory.Delete(apppath + "\installtemp", True)
+                        System.IO.Directory.Delete(apppath + "\updatetemp", True)
                     End If
-                    System.IO.Directory.CreateDirectory(apppath + "\installtemp")
+                    System.IO.Directory.CreateDirectory(apppath + "\updatetemp")
                     ZipFile.ExtractToDirectory(zipPath, extractPath)
-                    My.Computer.FileSystem.CopyDirectory(apppath + "\installtemp", apppath, True)
+                    My.Computer.FileSystem.CopyDirectory(apppath + "\updatetemp", apppath + "\app0.3.0", True)
                     ProgressBar1.Value = 100
                 Catch ex As Exception
                     MessageBox.Show("Error! Builder Resource already installed", "Installation Exist Error!")
@@ -101,10 +101,10 @@ Public Class Form1
                 End Try
                 ProgressBar1.Value = 100
                 MessageBox.Show("Patching complete! Click OK to launch P Browser Builder", "Installation Completed!")
-                Process.Start(apppath + "\P Browser Builder.exe")
+                Process.Start(apppath + "\app0.3.0\P Browser Builder.exe")
                 Application.Exit()
             Else
-                MessageBox.Show("In case to update version, please uninstall older one first then running downloaded installer again.", "Already Install Detected!")
+                MessageBox.Show("In case to reinstall, please uninstall older one first then running downloaded installer again.", "Already Install Detected!")
                 Application.Exit()
             End If
         End If
@@ -128,7 +128,7 @@ Public Class Form1
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Dim apppath As String = Application.StartupPath()
         If CheckBox4.Checked Then
-            Process.Start(apppath + "\P Browser Builder.exe")
+            Process.Start(apppath + "\app0.3.0\P Browser Builder.exe")
         End If
         Application.Exit()
     End Sub
