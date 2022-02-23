@@ -1,2 +1,2 @@
 Beta 0.3.0
-- Partially supported on system that unable to install .NET Framework 4.8
+- Partially supported on system that unable to install .NET Framework 4.8 (Builder)
