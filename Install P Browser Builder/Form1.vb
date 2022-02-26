@@ -2,6 +2,15 @@
 Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim apppath As String = Application.StartupPath()
+        Dim appcheck As String = apppath + "\app0.3.0"
+        If System.IO.Directory.Exists(appcheck) Then
+            Dim result As DialogResult = MessageBox.Show("Installer detected current installed P Browser Builder with the same version as installer content." + vbNewLine + "You are about to launch installer while P Browser Build already installed! If you are about to install only resource please click YES." + vbNewLine + "Do you wish to proceed anyway?", "Installed content detected!", MessageBoxButtons.YesNo)
+            If (result = DialogResult.No) Then
+                Process.Start(apppath + "/app0.3.0/P Browser Builder.exe")
+                Application.Exit()
+            End If
+        End If
         Dim space As Int64 = My.Computer.FileSystem.Drives.Item(0).AvailableFreeSpace
         Dim spacecal As Int64 = space / 1000000000
         Dim spacecalcom As String = spacecal.ToString
