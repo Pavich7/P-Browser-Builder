@@ -293,7 +293,7 @@ Partial Class Form1
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.White
-        Me.PictureBox2.Image = Global.Install_P_Browser_Builder.My.Resources.Resources.Screenshot_2022_02_14_191055
+        Me.PictureBox2.Image = Global.Install_P_Browser_Builder.My.Resources.Resources.Screenshot_2022_02_28_185835
         Me.PictureBox2.Location = New System.Drawing.Point(6, 6)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(678, 359)
