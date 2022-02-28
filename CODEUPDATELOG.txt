@@ -3,3 +3,4 @@ Beta 0.3.0
 - ADDED: Partially supported on system that unable to install .NET Framework 4.8.
 - ADDED: Detectable exist builder installation while lauching installer.
 - CHANGED: Complete installer structure reworks.
+- CHANGED: Pre-installer images
