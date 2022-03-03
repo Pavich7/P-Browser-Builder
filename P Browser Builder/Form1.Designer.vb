@@ -50,7 +50,6 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label22 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -67,7 +66,6 @@ Partial Class Form1
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Label18 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -84,6 +82,7 @@ Partial Class Form1
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.Label18 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -112,14 +111,14 @@ Partial Class Form1
         'ClearAllToolStripMenuItem
         '
         Me.ClearAllToolStripMenuItem.Name = "ClearAllToolStripMenuItem"
-        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
+        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ClearAllToolStripMenuItem.Text = "Clear All"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'PreviewToolStripMenuItem
@@ -133,13 +132,13 @@ Partial Class Form1
         '
         Me.ReloadPreviewToolStripMenuItem.Name = "ReloadPreviewToolStripMenuItem"
         Me.ReloadPreviewToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5
-        Me.ReloadPreviewToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
+        Me.ReloadPreviewToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ReloadPreviewToolStripMenuItem.Text = "Reload Preview"
         '
         'OpenPreviewLogToolStripMenuItem
         '
         Me.OpenPreviewLogToolStripMenuItem.Name = "OpenPreviewLogToolStripMenuItem"
-        Me.OpenPreviewLogToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
+        Me.OpenPreviewLogToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.OpenPreviewLogToolStripMenuItem.Text = "Open Preview Log"
         '
         'GuideToolStripMenuItem
@@ -152,19 +151,19 @@ Partial Class Form1
         'InstallationGuideToolStripMenuItem
         '
         Me.InstallationGuideToolStripMenuItem.Name = "InstallationGuideToolStripMenuItem"
-        Me.InstallationGuideToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.InstallationGuideToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.InstallationGuideToolStripMenuItem.Text = "Installation Guide"
         '
         'CustomizingGuildToolStripMenuItem
         '
         Me.CustomizingGuildToolStripMenuItem.Name = "CustomizingGuildToolStripMenuItem"
-        Me.CustomizingGuildToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.CustomizingGuildToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CustomizingGuildToolStripMenuItem.Text = "Customizing Guild"
         '
         'BuildingGuideToolStripMenuItem
         '
         Me.BuildingGuideToolStripMenuItem.Name = "BuildingGuideToolStripMenuItem"
-        Me.BuildingGuideToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.BuildingGuideToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.BuildingGuideToolStripMenuItem.Text = "Building Guide"
         '
         'HelpToolStripMenuItem
@@ -177,19 +176,19 @@ Partial Class Form1
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'SupportToolStripMenuItem
         '
         Me.SupportToolStripMenuItem.Name = "SupportToolStripMenuItem"
-        Me.SupportToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.SupportToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SupportToolStripMenuItem.Text = "Support"
         '
         'SubmitBugsReportToolStripMenuItem
         '
         Me.SubmitBugsReportToolStripMenuItem.Name = "SubmitBugsReportToolStripMenuItem"
-        Me.SubmitBugsReportToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.SubmitBugsReportToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SubmitBugsReportToolStripMenuItem.Text = "Submit Bugs Report"
         '
         'Button1
@@ -298,23 +297,11 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.BackColor = System.Drawing.Color.Silver
-        Me.Panel1.Controls.Add(Me.Label22)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Location = New System.Drawing.Point(344, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(560, 601)
         Me.Panel1.TabIndex = 12
-        '
-        'Label22
-        '
-        Me.Label22.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Segoe UI Light", 20.0!)
-        Me.Label22.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label22.Location = New System.Drawing.Point(207, 531)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(0, 37)
-        Me.Label22.TabIndex = 16
         '
         'Panel2
         '
@@ -493,41 +480,29 @@ Partial Class Form1
         Me.Panel4.Size = New System.Drawing.Size(265, 240)
         Me.Panel4.TabIndex = 28
         '
-        'Label18
-        '
-        Me.Label18.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.ForeColor = System.Drawing.Color.Red
-        Me.Label18.Location = New System.Drawing.Point(14, 196)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(211, 17)
-        Me.Label18.TabIndex = 32
-        Me.Label18.Text = "Just now (Builder critical warning)"
-        '
         'Label19
         '
         Me.Label19.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label19.Font = New System.Drawing.Font("Segoe UI Light", 10.0!)
-        Me.Label19.ForeColor = System.Drawing.Color.Red
+        Me.Label19.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label19.Location = New System.Drawing.Point(14, 134)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(228, 61)
+        Me.Label19.Size = New System.Drawing.Size(228, 60)
         Me.Label19.TabIndex = 31
-        Me.Label19.Text = "Test and build feature are disabled" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "due to missing resource. Go back to installe" &
-    "r and install builder resources."
+        Me.Label19.Text = "Test and build feature are disabled. After fresh install you will need to downloa" &
+    "d builder resource."
         '
         'Label20
         '
         Me.Label20.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.ForeColor = System.Drawing.Color.Red
+        Me.Label20.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label20.Location = New System.Drawing.Point(14, 109)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(217, 21)
+        Me.Label20.Size = New System.Drawing.Size(237, 21)
         Me.Label20.TabIndex = 30
-        Me.Label20.Text = "Builder resource not installed!"
+        Me.Label20.Text = "Builder resource not installed yet" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'Label15
         '
@@ -642,6 +617,18 @@ Partial Class Form1
         '
         Me.OpenFileDialog2.FileName = "OpenFileDialog2"
         '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label18.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label18.Location = New System.Drawing.Point(15, 195)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(125, 17)
+        Me.Label18.TabIndex = 32
+        Me.Label18.Text = "Download and Install"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -685,7 +672,6 @@ Partial Class Form1
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel4.ResumeLayout(False)
@@ -746,7 +732,6 @@ Partial Class Form1
     Friend WithEvents Label17 As Label
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents OpenFileDialog2 As OpenFileDialog
-    Friend WithEvents Label18 As Label
     Friend WithEvents Label19 As Label
     Friend WithEvents Label20 As Label
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
@@ -757,5 +742,5 @@ Partial Class Form1
     Friend WithEvents PreviewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReloadPreviewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpenPreviewLogToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Label22 As Label
+    Friend WithEvents Label18 As Label
 End Class

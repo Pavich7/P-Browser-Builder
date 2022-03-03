@@ -199,9 +199,9 @@ Public Class Form1
             Label4.Enabled = False
             Label8.Enabled = False
         Else
-            Label18.Visible = False
             Label19.Visible = False
             Label20.Visible = False
+            Label18.Visible = False
         End If
         Button4.Enabled = False
         Button4.Visible = False
@@ -360,5 +360,9 @@ Public Class Form1
         Catch ex As Exception
             MessageBox.Show("Log not found! Maybe you can load some web and try again.", "Error!")
         End Try
+    End Sub
+
+    Private Sub Label18_Click(sender As Object, e As EventArgs) Handles Label18.Click
+
     End Sub
 End Class
