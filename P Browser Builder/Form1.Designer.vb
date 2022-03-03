@@ -83,6 +83,8 @@ Partial Class Form1
         Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.Label18 = New System.Windows.Forms.Label()
+        Me.ProgressBar2 = New System.Windows.Forms.ProgressBar()
+        Me.Label21 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -468,6 +470,8 @@ Partial Class Form1
         '
         Me.Panel4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel4.BackColor = System.Drawing.Color.White
+        Me.Panel4.Controls.Add(Me.Label21)
+        Me.Panel4.Controls.Add(Me.ProgressBar2)
         Me.Panel4.Controls.Add(Me.Label18)
         Me.Panel4.Controls.Add(Me.Label19)
         Me.Panel4.Controls.Add(Me.Label20)
@@ -629,6 +633,25 @@ Partial Class Form1
         Me.Label18.TabIndex = 32
         Me.Label18.Text = "Download and Install"
         '
+        'ProgressBar2
+        '
+        Me.ProgressBar2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ProgressBar2.Location = New System.Drawing.Point(18, 197)
+        Me.ProgressBar2.Name = "ProgressBar2"
+        Me.ProgressBar2.Size = New System.Drawing.Size(227, 10)
+        Me.ProgressBar2.TabIndex = 32
+        '
+        'Label21
+        '
+        Me.Label21.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(15, 210)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(123, 17)
+        Me.Label21.TabIndex = 33
+        Me.Label21.Text = "Installing resource..."
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -743,4 +766,6 @@ Partial Class Form1
     Friend WithEvents ReloadPreviewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpenPreviewLogToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label18 As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents ProgressBar2 As ProgressBar
 End Class

@@ -203,6 +203,8 @@ Public Class Form1
             Label20.Visible = False
             Label18.Visible = False
         End If
+        ProgressBar2.Visible = False
+        Label21.Visible = False
         Button4.Enabled = False
         Button4.Visible = False
         Button5.Visible = False
@@ -363,6 +365,27 @@ Public Class Form1
     End Sub
 
     Private Sub Label18_Click(sender As Object, e As EventArgs) Handles Label18.Click
-
+        Label21.Visible = True
+        ProgressBar2.Visible = True
+        Label18.Visible = False
+        Try
+            Dim apppath As String = Application.StartupPath()
+            ProgressBar2.Value = 0
+            System.IO.Directory.Delete(apppath + "\updatedata", True)
+            System.IO.Directory.CreateDirectory(apppath + "\updatedata")
+            ProgressBar2.Value = 10
+            My.Computer.Network.DownloadFile("https://github.com/Pavich7/P-Browser-Builder-Resource/releases/latest/download/pbb-resource.zip", apppath + "\updatedata\pbb-resource.zip", vbNullString, vbNullString, True, 5000, True)
+            ProgressBar2.Value = 50
+            'Not complete yet. Having truble on download. File not complete!
+        Catch ex As Exception
+            Dim apppath As String = Application.StartupPath()
+            MessageBox.Show("Cannot retrive data from server!", "Error!")
+            Label21.Visible = False
+            ProgressBar2.Visible = False
+            Label18.Visible = True
+            System.IO.Directory.Delete(apppath + "\buildcache\appicns", True)
+            System.IO.Directory.CreateDirectory(apppath + "\buildcache\appicns")
+            Label18.Text = "Try again"
+        End Try
     End Sub
 End Class
