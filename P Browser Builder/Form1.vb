@@ -199,6 +199,7 @@ Public Class Form1
             Label9.Enabled = False
             Label4.Enabled = False
             Label8.Enabled = False
+            UninstallBuilderResourceToolStripMenuItem.Enabled = False
         Else
             Label19.Visible = False
             Label20.Visible = False
@@ -404,6 +405,20 @@ Public Class Form1
             System.IO.Directory.Delete(apppath + "\buildcache\appicns", True)
             System.IO.Directory.CreateDirectory(apppath + "\buildcache\appicns")
             Label18.Text = "Try again"
+        End Try
+    End Sub
+
+    Private Sub UninstallBuilderResourceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UninstallBuilderResourceToolStripMenuItem.Click
+        Try
+            Dim result As DialogResult = MessageBox.Show("Do you wish to completely uninstall builder resource?" + vbNewLine + "You can reinstall resource later via notification box", "You sure about this?", MessageBoxButtons.YesNo)
+            If (result = DialogResult.Yes) Then
+                Dim apppath As String = Application.StartupPath()
+                System.IO.Directory.Delete(apppath + "\resource", True)
+                MessageBox.Show("P Browser Builder need to restart app", "Uninstall Completed!")
+                Application.Restart()
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Could not attempt to uninstall resource!" + vbNewLine + ex.Message, "Error!")
         End Try
     End Sub
 End Class

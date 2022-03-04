@@ -1,3 +1,7 @@
 Beta 0.3.0
 - ADDED: Able to update without uninstall older version.
 - ADDED: Partially supported on system that unable to install .NET Framework 4.8.
+- ADDED: Downloadable resource after fresh installation.
+- ADDED: Option to uninstall resource
+- CHANGED: Merge Installer with Builder.
+- REMOVED: Remove Install P Browser Builder

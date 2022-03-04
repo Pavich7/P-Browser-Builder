@@ -66,6 +66,9 @@ Partial Class Form1
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.ProgressBar2 = New System.Windows.Forms.ProgressBar()
+        Me.Label18 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -82,9 +85,8 @@ Partial Class Form1
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.ProgressBar2 = New System.Windows.Forms.ProgressBar()
-        Me.Label21 = New System.Windows.Forms.Label()
+        Me.ResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UninstallBuilderResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -96,7 +98,7 @@ Partial Class Form1
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.White
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.PreviewToolStripMenuItem, Me.GuideToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.PreviewToolStripMenuItem, Me.ResourceToolStripMenuItem, Me.GuideToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1216, 24)
@@ -484,6 +486,37 @@ Partial Class Form1
         Me.Panel4.Size = New System.Drawing.Size(265, 240)
         Me.Panel4.TabIndex = 28
         '
+        'Label21
+        '
+        Me.Label21.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(15, 210)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(123, 17)
+        Me.Label21.TabIndex = 33
+        Me.Label21.Text = "Installing resource..."
+        '
+        'ProgressBar2
+        '
+        Me.ProgressBar2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ProgressBar2.Location = New System.Drawing.Point(18, 197)
+        Me.ProgressBar2.Name = "ProgressBar2"
+        Me.ProgressBar2.Size = New System.Drawing.Size(227, 10)
+        Me.ProgressBar2.TabIndex = 32
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label18.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label18.Location = New System.Drawing.Point(15, 195)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(125, 17)
+        Me.Label18.TabIndex = 32
+        Me.Label18.Text = "Download and Install"
+        '
         'Label19
         '
         Me.Label19.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -621,36 +654,18 @@ Partial Class Form1
         '
         Me.OpenFileDialog2.FileName = "OpenFileDialog2"
         '
-        'Label18
+        'ResourceToolStripMenuItem
         '
-        Me.Label18.AutoSize = True
-        Me.Label18.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label18.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label18.Location = New System.Drawing.Point(15, 195)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(125, 17)
-        Me.Label18.TabIndex = 32
-        Me.Label18.Text = "Download and Install"
+        Me.ResourceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UninstallBuilderResourceToolStripMenuItem})
+        Me.ResourceToolStripMenuItem.Name = "ResourceToolStripMenuItem"
+        Me.ResourceToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
+        Me.ResourceToolStripMenuItem.Text = "Resource"
         '
-        'ProgressBar2
+        'UninstallBuilderResourceToolStripMenuItem
         '
-        Me.ProgressBar2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ProgressBar2.Location = New System.Drawing.Point(18, 197)
-        Me.ProgressBar2.Name = "ProgressBar2"
-        Me.ProgressBar2.Size = New System.Drawing.Size(227, 10)
-        Me.ProgressBar2.TabIndex = 32
-        '
-        'Label21
-        '
-        Me.Label21.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(15, 210)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(123, 17)
-        Me.Label21.TabIndex = 33
-        Me.Label21.Text = "Installing resource..."
+        Me.UninstallBuilderResourceToolStripMenuItem.Name = "UninstallBuilderResourceToolStripMenuItem"
+        Me.UninstallBuilderResourceToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
+        Me.UninstallBuilderResourceToolStripMenuItem.Text = "Uninstall Builder Resource"
         '
         'Form1
         '
@@ -768,4 +783,6 @@ Partial Class Form1
     Friend WithEvents Label18 As Label
     Friend WithEvents Label21 As Label
     Friend WithEvents ProgressBar2 As ProgressBar
+    Friend WithEvents ResourceToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UninstallBuilderResourceToolStripMenuItem As ToolStripMenuItem
 End Class
