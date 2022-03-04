@@ -31,6 +31,8 @@ Partial Class Form1
         Me.PreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReloadPreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenPreviewLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UninstallBuilderResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GuideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InstallationGuideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CustomizingGuildToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -85,8 +87,6 @@ Partial Class Form1
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
-        Me.ResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UninstallBuilderResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -115,14 +115,14 @@ Partial Class Form1
         'ClearAllToolStripMenuItem
         '
         Me.ClearAllToolStripMenuItem.Name = "ClearAllToolStripMenuItem"
-        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.ClearAllToolStripMenuItem.Text = "Clear All"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'PreviewToolStripMenuItem
@@ -136,14 +136,27 @@ Partial Class Form1
         '
         Me.ReloadPreviewToolStripMenuItem.Name = "ReloadPreviewToolStripMenuItem"
         Me.ReloadPreviewToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5
-        Me.ReloadPreviewToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ReloadPreviewToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
         Me.ReloadPreviewToolStripMenuItem.Text = "Reload Preview"
         '
         'OpenPreviewLogToolStripMenuItem
         '
         Me.OpenPreviewLogToolStripMenuItem.Name = "OpenPreviewLogToolStripMenuItem"
-        Me.OpenPreviewLogToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.OpenPreviewLogToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
         Me.OpenPreviewLogToolStripMenuItem.Text = "Open Preview Log"
+        '
+        'ResourceToolStripMenuItem
+        '
+        Me.ResourceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UninstallBuilderResourceToolStripMenuItem})
+        Me.ResourceToolStripMenuItem.Name = "ResourceToolStripMenuItem"
+        Me.ResourceToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
+        Me.ResourceToolStripMenuItem.Text = "Resource"
+        '
+        'UninstallBuilderResourceToolStripMenuItem
+        '
+        Me.UninstallBuilderResourceToolStripMenuItem.Name = "UninstallBuilderResourceToolStripMenuItem"
+        Me.UninstallBuilderResourceToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
+        Me.UninstallBuilderResourceToolStripMenuItem.Text = "Uninstall Builder Resource"
         '
         'GuideToolStripMenuItem
         '
@@ -155,19 +168,19 @@ Partial Class Form1
         'InstallationGuideToolStripMenuItem
         '
         Me.InstallationGuideToolStripMenuItem.Name = "InstallationGuideToolStripMenuItem"
-        Me.InstallationGuideToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.InstallationGuideToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.InstallationGuideToolStripMenuItem.Text = "Installation Guide"
         '
         'CustomizingGuildToolStripMenuItem
         '
         Me.CustomizingGuildToolStripMenuItem.Name = "CustomizingGuildToolStripMenuItem"
-        Me.CustomizingGuildToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CustomizingGuildToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.CustomizingGuildToolStripMenuItem.Text = "Customizing Guild"
         '
         'BuildingGuideToolStripMenuItem
         '
         Me.BuildingGuideToolStripMenuItem.Name = "BuildingGuideToolStripMenuItem"
-        Me.BuildingGuideToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BuildingGuideToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.BuildingGuideToolStripMenuItem.Text = "Building Guide"
         '
         'HelpToolStripMenuItem
@@ -180,19 +193,19 @@ Partial Class Form1
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'SupportToolStripMenuItem
         '
         Me.SupportToolStripMenuItem.Name = "SupportToolStripMenuItem"
-        Me.SupportToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SupportToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
         Me.SupportToolStripMenuItem.Text = "Support"
         '
         'SubmitBugsReportToolStripMenuItem
         '
         Me.SubmitBugsReportToolStripMenuItem.Name = "SubmitBugsReportToolStripMenuItem"
-        Me.SubmitBugsReportToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SubmitBugsReportToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
         Me.SubmitBugsReportToolStripMenuItem.Text = "Submit Bugs Report"
         '
         'Button1
@@ -653,19 +666,6 @@ Partial Class Form1
         'OpenFileDialog2
         '
         Me.OpenFileDialog2.FileName = "OpenFileDialog2"
-        '
-        'ResourceToolStripMenuItem
-        '
-        Me.ResourceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UninstallBuilderResourceToolStripMenuItem})
-        Me.ResourceToolStripMenuItem.Name = "ResourceToolStripMenuItem"
-        Me.ResourceToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
-        Me.ResourceToolStripMenuItem.Text = "Resource"
-        '
-        'UninstallBuilderResourceToolStripMenuItem
-        '
-        Me.UninstallBuilderResourceToolStripMenuItem.Name = "UninstallBuilderResourceToolStripMenuItem"
-        Me.UninstallBuilderResourceToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
-        Me.UninstallBuilderResourceToolStripMenuItem.Text = "Uninstall Builder Resource"
         '
         'Form1
         '
