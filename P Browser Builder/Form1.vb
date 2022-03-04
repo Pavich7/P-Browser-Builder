@@ -1,5 +1,6 @@
 ﻿Imports System.IO.Compression
 Imports CefSharp.WinForms
+Imports System.Net
 Public Class Form1
     Private WithEvents Browser As ChromiumWebBrowser
     Public Sub New()
@@ -373,13 +374,30 @@ Public Class Form1
             ProgressBar2.Value = 0
             System.IO.Directory.Delete(apppath + "\updatedata", True)
             System.IO.Directory.CreateDirectory(apppath + "\updatedata")
-            ProgressBar2.Value = 10
-            My.Computer.Network.DownloadFile("https://github.com/Pavich7/P-Browser-Builder-Resource/releases/latest/download/pbb-resource.zip", apppath + "\updatedata\pbb-resource.zip", vbNullString, vbNullString, True, 5000, True)
+            ProgressBar2.Value = 25
+            Dim strURL As String = "https://github.com/Pavich7/P-Browser-Builder-Resource/releases/latest/download/pbb-resource.zip"
+            Using webcli As WebClient = New WebClient()
+                webcli.DownloadFile(strURL, apppath + "\updatedata\pbb-resource.zip")
+            End Using
             ProgressBar2.Value = 50
-            'Not complete yet. Having truble on download. File not complete!
+            Dim zipPath As String = apppath + "\updatedata\pbb-resource.zip"
+            Dim extractPath As String = apppath
+            ProgressBar2.Value = 75
+            ZipFile.ExtractToDirectory(zipPath, extractPath)
+            ProgressBar2.Value = 100
+            Dim result As DialogResult = MessageBox.Show("Installation completed but restart required!" + vbNewLine + "Do you want to restart P Browser Builder now?", "Installation completed!", MessageBoxButtons.YesNo)
+            If (result = DialogResult.Yes) Then
+                Application.Restart()
+            Else
+                Label18.Text = "Already installed! Please restart app."
+                Label18.Visible = True
+                Label18.Enabled = False
+                Label21.Visible = False
+                ProgressBar2.Visible = False
+            End If
         Catch ex As Exception
             Dim apppath As String = Application.StartupPath()
-            MessageBox.Show("Cannot retrive data from server!", "Error!")
+            MessageBox.Show("Could not attempt to install resource!" + vbNewLine + ex.Message, "Error!")
             Label21.Visible = False
             ProgressBar2.Visible = False
             Label18.Visible = True
