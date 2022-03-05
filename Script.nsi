@@ -22,7 +22,7 @@
 ; Interface Settings
 
   !define MUI_ABORTWARNING
-  !define MUI_FINISHPAGE_RUN Install_P_Browser_Builder.exe
+  !define MUI_FINISHPAGE_RUN P Browser Builder.exe
 
 ; --------------------------------
 ; Pages
@@ -48,7 +48,13 @@ Section "P Browser Installer" SecDummy
   
   ; ADD YOUR OWN FILES HERE...
   File /r "C:\Users\Pavich Komansil\Desktop\inspbb\*"
-  
+  CreateShortCut "$INSTDIR\${NAME}.lnk" "$INSTDIR\${NAME}.exe"
+
+  ; Start menu entries
+  SetOutPath "$SMPROGRAMS\${NAME}\"
+  CopyFiles "$INSTDIR\${NAME}.lnk" "$SMPROGRAMS\${NAME}\"
+  Delete "$INSTDIR\${NAME}.lnk"
+
   ; Store installation folder
   WriteRegStr HKCU "Software\P Browser Builder" "" $INSTDIR
   
