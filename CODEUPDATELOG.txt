@@ -5,4 +5,5 @@ Public Beta 0.3.0
 - ADDED: Option to uninstall resource.
 - ADDED: Optime to show Builder Resource version.
 - CHANGED: Merge Installer with Builder.
+- CHANGED: P Browser App is being developed separately from the builder.
 - REMOVED: Remove Install P Browser Builder.
