@@ -33,6 +33,7 @@ Partial Class Form1
         Me.OpenPreviewLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UninstallBuilderResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutBuilderResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GuideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InstallationGuideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CustomizingGuildToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -87,7 +88,7 @@ Partial Class Form1
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
-        Me.AboutBuilderResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteInstallerCacheToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -148,7 +149,7 @@ Partial Class Form1
         '
         'ResourceToolStripMenuItem
         '
-        Me.ResourceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UninstallBuilderResourceToolStripMenuItem, Me.AboutBuilderResourceToolStripMenuItem})
+        Me.ResourceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UninstallBuilderResourceToolStripMenuItem, Me.DeleteInstallerCacheToolStripMenuItem, Me.AboutBuilderResourceToolStripMenuItem})
         Me.ResourceToolStripMenuItem.Name = "ResourceToolStripMenuItem"
         Me.ResourceToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
         Me.ResourceToolStripMenuItem.Text = "Resource"
@@ -158,6 +159,12 @@ Partial Class Form1
         Me.UninstallBuilderResourceToolStripMenuItem.Name = "UninstallBuilderResourceToolStripMenuItem"
         Me.UninstallBuilderResourceToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
         Me.UninstallBuilderResourceToolStripMenuItem.Text = "Uninstall Builder Resource"
+        '
+        'AboutBuilderResourceToolStripMenuItem
+        '
+        Me.AboutBuilderResourceToolStripMenuItem.Name = "AboutBuilderResourceToolStripMenuItem"
+        Me.AboutBuilderResourceToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
+        Me.AboutBuilderResourceToolStripMenuItem.Text = "About Builder Resource"
         '
         'GuideToolStripMenuItem
         '
@@ -668,11 +675,11 @@ Partial Class Form1
         '
         Me.OpenFileDialog2.FileName = "OpenFileDialog2"
         '
-        'AboutBuilderResourceToolStripMenuItem
+        'DeleteInstallerCacheToolStripMenuItem
         '
-        Me.AboutBuilderResourceToolStripMenuItem.Name = "AboutBuilderResourceToolStripMenuItem"
-        Me.AboutBuilderResourceToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
-        Me.AboutBuilderResourceToolStripMenuItem.Text = "About Builder Resource"
+        Me.DeleteInstallerCacheToolStripMenuItem.Name = "DeleteInstallerCacheToolStripMenuItem"
+        Me.DeleteInstallerCacheToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
+        Me.DeleteInstallerCacheToolStripMenuItem.Text = "Delete Installer Cache"
         '
         'Form1
         '
@@ -793,4 +800,5 @@ Partial Class Form1
     Friend WithEvents ResourceToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UninstallBuilderResourceToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutBuilderResourceToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DeleteInstallerCacheToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -206,6 +206,10 @@ Public Class Form1
             Label20.Visible = False
             Label18.Visible = False
         End If
+        Dim cachecheck As String = apppath + "\updatedata\pbb-resource.zip"
+        If Not System.IO.File.Exists(cachecheck) Then
+            DeleteInstallerCacheToolStripMenuItem.Enabled = False
+        End If
         ProgressBar2.Visible = False
         Label21.Visible = False
         Button4.Enabled = False
@@ -430,5 +434,17 @@ Public Class Form1
         Dim stringReader As String
         stringReader = fileReader.ReadLine()
         MessageBox.Show("Builder Resource version: " + stringReader + vbNewLine + "To update version please uninstall and reinstall builder resource", "About Builder Resource")
+    End Sub
+
+    Private Sub DeleteInstallerCacheToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteInstallerCacheToolStripMenuItem.Click
+        Try
+            Dim apppath As String = Application.StartupPath()
+            System.IO.Directory.Delete(apppath + "\updatedata", True)
+            System.IO.Directory.CreateDirectory(apppath + "\updatedata")
+            MessageBox.Show("P Browser Builder need to restart app", "Deletion Completed!")
+            Application.Restart()
+        Catch ex As Exception
+            MessageBox.Show("Could not attempt to delete installer cache!" + vbNewLine + ex.Message + vbNewLine + "You may need to restart builder and try again.", "Error!")
+        End Try
     End Sub
 End Class
