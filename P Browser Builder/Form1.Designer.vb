@@ -87,6 +87,7 @@ Partial Class Form1
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.AboutBuilderResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -147,7 +148,7 @@ Partial Class Form1
         '
         'ResourceToolStripMenuItem
         '
-        Me.ResourceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UninstallBuilderResourceToolStripMenuItem})
+        Me.ResourceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UninstallBuilderResourceToolStripMenuItem, Me.AboutBuilderResourceToolStripMenuItem})
         Me.ResourceToolStripMenuItem.Name = "ResourceToolStripMenuItem"
         Me.ResourceToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
         Me.ResourceToolStripMenuItem.Text = "Resource"
@@ -667,6 +668,12 @@ Partial Class Form1
         '
         Me.OpenFileDialog2.FileName = "OpenFileDialog2"
         '
+        'AboutBuilderResourceToolStripMenuItem
+        '
+        Me.AboutBuilderResourceToolStripMenuItem.Name = "AboutBuilderResourceToolStripMenuItem"
+        Me.AboutBuilderResourceToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
+        Me.AboutBuilderResourceToolStripMenuItem.Text = "About Builder Resource"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -785,4 +792,5 @@ Partial Class Form1
     Friend WithEvents ProgressBar2 As ProgressBar
     Friend WithEvents ResourceToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UninstallBuilderResourceToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AboutBuilderResourceToolStripMenuItem As ToolStripMenuItem
 End Class

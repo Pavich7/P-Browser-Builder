@@ -200,6 +200,7 @@ Public Class Form1
             Label4.Enabled = False
             Label8.Enabled = False
             UninstallBuilderResourceToolStripMenuItem.Enabled = False
+            AboutBuilderResourceToolStripMenuItem.Enabled = False
         Else
             Label19.Visible = False
             Label20.Visible = False
@@ -418,7 +419,16 @@ Public Class Form1
                 Application.Restart()
             End If
         Catch ex As Exception
-            MessageBox.Show("Could not attempt to uninstall resource!" + vbNewLine + ex.Message, "Error!")
+            MessageBox.Show("Could not attempt to uninstall resource!" + vbNewLine + ex.Message + vbNewLine + "You may need to restart builder and try again.", "Error!")
         End Try
+    End Sub
+
+    Private Sub AboutBuilderResourceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutBuilderResourceToolStripMenuItem.Click
+        Dim apppath As String = Application.StartupPath()
+        Dim fileReader As System.IO.StreamReader
+        fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\metadata\version.txt")
+        Dim stringReader As String
+        stringReader = fileReader.ReadLine()
+        MessageBox.Show("Builder Resource version: " + stringReader + vbNewLine + "To update version please uninstall and reinstall builder resource", "About Builder Resource")
     End Sub
 End Class
