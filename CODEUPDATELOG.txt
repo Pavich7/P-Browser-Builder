@@ -1,2 +1,4 @@
 Public Beta 0.4.0
 - ADDED: Option to uninstall resource installer cache.
+- ADDED: High DPI support for laptop display.
+- FIXED: Black border bugs while running on laptop display.
