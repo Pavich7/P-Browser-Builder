@@ -7,5 +7,6 @@ Public Beta 0.3.0
 - CHANGED: Merge Installer with Builder.
 - CHANGED: Installer side banner picture.
 - CHANGED: Installer icon.
+- CHANGED: Lower installer app size.
 - CHANGED: P Browser App is being developed separately from the builder.
 - REMOVED: Remove Install P Browser Builder.
