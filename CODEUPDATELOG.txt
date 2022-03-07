@@ -1,4 +1,5 @@
 Public Beta 0.4.0
 - ADDED: Option to uninstall resource installer cache.
+- ADDED: Remote debugging for websites button.
 - ADDED: High DPI support for laptop display.
 - FIXED: Black border bugs while running on laptop display.

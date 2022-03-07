@@ -33,6 +33,7 @@ Partial Class Form1
         Me.OpenPreviewLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UninstallBuilderResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteInstallerCacheToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutBuilderResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GuideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InstallationGuideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -88,7 +89,7 @@ Partial Class Form1
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
-        Me.DeleteInstallerCacheToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenRemoteDebuggingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -129,7 +130,7 @@ Partial Class Form1
         '
         'PreviewToolStripMenuItem
         '
-        Me.PreviewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReloadPreviewToolStripMenuItem, Me.OpenPreviewLogToolStripMenuItem})
+        Me.PreviewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReloadPreviewToolStripMenuItem, Me.OpenPreviewLogToolStripMenuItem, Me.OpenRemoteDebuggingToolStripMenuItem})
         Me.PreviewToolStripMenuItem.Name = "PreviewToolStripMenuItem"
         Me.PreviewToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
         Me.PreviewToolStripMenuItem.Text = "Preview"
@@ -138,13 +139,13 @@ Partial Class Form1
         '
         Me.ReloadPreviewToolStripMenuItem.Name = "ReloadPreviewToolStripMenuItem"
         Me.ReloadPreviewToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5
-        Me.ReloadPreviewToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
+        Me.ReloadPreviewToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
         Me.ReloadPreviewToolStripMenuItem.Text = "Reload Preview"
         '
         'OpenPreviewLogToolStripMenuItem
         '
         Me.OpenPreviewLogToolStripMenuItem.Name = "OpenPreviewLogToolStripMenuItem"
-        Me.OpenPreviewLogToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
+        Me.OpenPreviewLogToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
         Me.OpenPreviewLogToolStripMenuItem.Text = "Open Preview Log"
         '
         'ResourceToolStripMenuItem
@@ -159,6 +160,12 @@ Partial Class Form1
         Me.UninstallBuilderResourceToolStripMenuItem.Name = "UninstallBuilderResourceToolStripMenuItem"
         Me.UninstallBuilderResourceToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
         Me.UninstallBuilderResourceToolStripMenuItem.Text = "Uninstall Builder Resource"
+        '
+        'DeleteInstallerCacheToolStripMenuItem
+        '
+        Me.DeleteInstallerCacheToolStripMenuItem.Name = "DeleteInstallerCacheToolStripMenuItem"
+        Me.DeleteInstallerCacheToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
+        Me.DeleteInstallerCacheToolStripMenuItem.Text = "Delete Installer Cache"
         '
         'AboutBuilderResourceToolStripMenuItem
         '
@@ -675,11 +682,11 @@ Partial Class Form1
         '
         Me.OpenFileDialog2.FileName = "OpenFileDialog2"
         '
-        'DeleteInstallerCacheToolStripMenuItem
+        'OpenRemoteDebuggingToolStripMenuItem
         '
-        Me.DeleteInstallerCacheToolStripMenuItem.Name = "DeleteInstallerCacheToolStripMenuItem"
-        Me.DeleteInstallerCacheToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
-        Me.DeleteInstallerCacheToolStripMenuItem.Text = "Delete Installer Cache"
+        Me.OpenRemoteDebuggingToolStripMenuItem.Name = "OpenRemoteDebuggingToolStripMenuItem"
+        Me.OpenRemoteDebuggingToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.OpenRemoteDebuggingToolStripMenuItem.Text = "Open Remote Debugging"
         '
         'Form1
         '
@@ -801,4 +808,5 @@ Partial Class Form1
     Friend WithEvents UninstallBuilderResourceToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutBuilderResourceToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DeleteInstallerCacheToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OpenRemoteDebuggingToolStripMenuItem As ToolStripMenuItem
 End Class

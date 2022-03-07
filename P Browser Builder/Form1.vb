@@ -447,4 +447,8 @@ Public Class Form1
             MessageBox.Show("Could not attempt to delete installer cache!" + vbNewLine + ex.Message + vbNewLine + "You may need to restart builder and try again.", "Error!")
         End Try
     End Sub
+
+    Private Sub OpenRemoteDebuggingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenRemoteDebuggingToolStripMenuItem.Click
+        Process.Start("http://127.0.0.1:8088/")
+    End Sub
 End Class
