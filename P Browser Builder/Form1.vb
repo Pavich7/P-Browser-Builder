@@ -442,8 +442,7 @@ Public Class Form1
             Dim apppath As String = Application.StartupPath()
             System.IO.Directory.Delete(apppath + "\updatedata", True)
             System.IO.Directory.CreateDirectory(apppath + "\updatedata")
-            MessageBox.Show("P Browser Builder need to restart app", "Deletion Completed!")
-            Application.Restart()
+            DeleteInstallerCacheToolStripMenuItem.Enabled = False
         Catch ex As Exception
             MessageBox.Show("Could not attempt to delete installer cache!" + vbNewLine + ex.Message + vbNewLine + "You may need to restart builder and try again.", "Error!")
         End Try
