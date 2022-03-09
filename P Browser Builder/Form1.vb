@@ -429,12 +429,28 @@ Public Class Form1
     End Sub
 
     Private Sub AboutBuilderResourceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutBuilderResourceToolStripMenuItem.Click
-        Dim apppath As String = Application.StartupPath()
-        Dim fileReader As System.IO.StreamReader
-        fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\metadata\version.txt")
-        Dim stringReader As String
-        stringReader = fileReader.ReadLine()
-        MessageBox.Show("Builder Resource version: " + stringReader + vbNewLine + "To update version please uninstall and reinstall builder resource", "About Builder Resource")
+        Try
+            Dim apppath As String = Application.StartupPath()
+            System.IO.Directory.Delete(apppath + "\resource\getcache", True)
+            System.IO.Directory.CreateDirectory(apppath + "\resource\getcache")
+            Dim fileReader As System.IO.StreamReader
+            My.Computer.Network.DownloadFile("https://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/cfuversion/onlineresver.txt", apppath + "\resource\getcache\onlineresver.txt")
+            Dim fileReader1 As System.IO.StreamReader
+            fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\getcache\onlineresver.txt")
+            Dim stringReader1 As String
+            stringReader1 = fileReader1.ReadLine()
+            fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\metadata\version.txt")
+            Dim stringReader As String
+            stringReader = fileReader.ReadLine()
+            MessageBox.Show("Builder Resource version: " + stringReader + vbNewLine + "Latest Online version: " + stringReader1 + vbNewLine + "To update version please uninstall and reinstall builder resource", "About Builder Resource")
+        Catch ex As Exception
+            Dim apppath As String = Application.StartupPath()
+            Dim fileReader As System.IO.StreamReader
+            fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\metadata\version.txt")
+            Dim stringReader As String
+            stringReader = fileReader.ReadLine()
+            MessageBox.Show("Could not fetch latest online version info!" + vbNewLine + "You are using resource version: " + stringReader, "Error!")
+        End Try
     End Sub
 
     Private Sub DeleteInstallerCacheToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteInstallerCacheToolStripMenuItem.Click
