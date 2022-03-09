@@ -1,2 +1,5 @@
 Public Beta 0.4.0
 - ADDED: Online resource version in about resource.
+- UPDATED: CefSharp.Redist
+- UPDATED: CefSharp.Common
+- UPDATED: CefSharp.WinForms
