@@ -1,2 +1,2 @@
 Release Candidate 1.0.0
-- No new feature in this version
+- CHANGED: Service Channel for future version control.

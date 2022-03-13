@@ -264,9 +264,9 @@ Public Class Form1
         Try
             ProgressBar1.Value = 10
             Dim apppath As String = Application.StartupPath()
-            My.Computer.Network.DownloadFile("https://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/newsfeed/nf1_title.txt", apppath + "\nfcache\nf1_title.txt")
-            My.Computer.Network.DownloadFile("https://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/newsfeed/nf1_desc.txt", apppath + "\nfcache\nf1_desc.txt")
-            My.Computer.Network.DownloadFile("https://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/newsfeed/nf1_date.txt", apppath + "\nfcache\nf1_date.txt")
+            My.Computer.Network.DownloadFile("https://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/newsfeed/nf1_title.txt", apppath + "\nfcache\nf1_title.txt")
+            My.Computer.Network.DownloadFile("https://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/newsfeed/nf1_desc.txt", apppath + "\nfcache\nf1_desc.txt")
+            My.Computer.Network.DownloadFile("https://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/newsfeed/nf1_date.txt", apppath + "\nfcache\nf1_date.txt")
             ProgressBar1.Value = 50
             Dim fileReader1 As System.IO.StreamReader
             Dim fileReader2 As System.IO.StreamReader
@@ -434,7 +434,7 @@ Public Class Form1
             System.IO.Directory.Delete(apppath + "\resource\getcache", True)
             System.IO.Directory.CreateDirectory(apppath + "\resource\getcache")
             Dim fileReader As System.IO.StreamReader
-            My.Computer.Network.DownloadFile("https://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/cfuversion/onlineresver.txt", apppath + "\resource\getcache\onlineresver.txt")
+            My.Computer.Network.DownloadFile("https://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/cfuversion/onlineresver.txt", apppath + "\resource\getcache\onlineresver.txt")
             Dim fileReader1 As System.IO.StreamReader
             fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\getcache\onlineresver.txt")
             Dim stringReader1 As String
