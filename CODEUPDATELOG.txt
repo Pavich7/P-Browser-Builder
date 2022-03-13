@@ -1,7 +1,2 @@
-Public Beta 0.3.2
-- ADDED: Online resource version in about resource.
-- ADDED: Marquee Progress bar on splash (does not affect speed)
-- CHANGED: Date number while fetching news feed.
-- UPDATED: CefSharp.Redist
-- UPDATED: CefSharp.Common
-- UPDATED: CefSharp.WinForms
+Release Candidate 1.0.0
+- No new feature in this version
