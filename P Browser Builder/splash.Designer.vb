@@ -28,7 +28,7 @@ Partial Class splash
         'ProgressBar1
         '
         Me.ProgressBar1.Location = New System.Drawing.Point(35, 389)
-        Me.ProgressBar1.MarqueeAnimationSpeed = 15
+        Me.ProgressBar1.MarqueeAnimationSpeed = 25
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(250, 3)
         Me.ProgressBar1.TabIndex = 0
