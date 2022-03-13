@@ -7,7 +7,7 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("P Browser App")>
+<Assembly: AssemblyTitle("P Browser App (Release Candidate)")>
 <Assembly: AssemblyDescription("P Browser App form P Browser Builder")>
 <Assembly: AssemblyCompany("PavichDev Software")>
 <Assembly: AssemblyProduct("P Browser App")>
@@ -30,5 +30,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("0.4.0")>
-<Assembly: AssemblyFileVersion("0.4.0")>
+<Assembly: AssemblyVersion("1.0.0")>
+<Assembly: AssemblyFileVersion("1.0.0")>
