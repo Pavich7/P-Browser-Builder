@@ -31,6 +31,7 @@ Partial Class Form1
         Me.PreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReloadPreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenPreviewLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenRemoteDebuggingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UninstallBuilderResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteInstallerCacheToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -89,7 +90,6 @@ Partial Class Form1
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
-        Me.OpenRemoteDebuggingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -147,6 +147,12 @@ Partial Class Form1
         Me.OpenPreviewLogToolStripMenuItem.Name = "OpenPreviewLogToolStripMenuItem"
         Me.OpenPreviewLogToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
         Me.OpenPreviewLogToolStripMenuItem.Text = "Open Preview Log"
+        '
+        'OpenRemoteDebuggingToolStripMenuItem
+        '
+        Me.OpenRemoteDebuggingToolStripMenuItem.Name = "OpenRemoteDebuggingToolStripMenuItem"
+        Me.OpenRemoteDebuggingToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.OpenRemoteDebuggingToolStripMenuItem.Text = "Open Remote Debugging"
         '
         'ResourceToolStripMenuItem
         '
@@ -588,9 +594,9 @@ Partial Class Form1
         Me.Label14.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.Location = New System.Drawing.Point(14, 79)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(98, 17)
+        Me.Label14.Size = New System.Drawing.Size(76, 17)
         Me.Label14.TabIndex = 29
-        Me.Label14.Text = "January 1, 1970"
+        Me.Label14.Text = "NaN --, ----"
         '
         'Label13
         '
@@ -681,12 +687,6 @@ Partial Class Form1
         'OpenFileDialog2
         '
         Me.OpenFileDialog2.FileName = "OpenFileDialog2"
-        '
-        'OpenRemoteDebuggingToolStripMenuItem
-        '
-        Me.OpenRemoteDebuggingToolStripMenuItem.Name = "OpenRemoteDebuggingToolStripMenuItem"
-        Me.OpenRemoteDebuggingToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
-        Me.OpenRemoteDebuggingToolStripMenuItem.Text = "Open Remote Debugging"
         '
         'Form1
         '
