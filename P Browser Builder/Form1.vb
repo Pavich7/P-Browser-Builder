@@ -431,18 +431,23 @@ Public Class Form1
     Private Sub AboutBuilderResourceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutBuilderResourceToolStripMenuItem.Click
         Try
             Dim apppath As String = Application.StartupPath()
-            System.IO.Directory.Delete(apppath + "\resource\getcache", True)
-            System.IO.Directory.CreateDirectory(apppath + "\resource\getcache")
-            Dim fileReader As System.IO.StreamReader
-            My.Computer.Network.DownloadFile("https://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/cfuversion/onlineresver.txt", apppath + "\resource\getcache\onlineresver.txt")
-            Dim fileReader1 As System.IO.StreamReader
-            fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\getcache\onlineresver.txt")
-            Dim stringReader1 As String
-            stringReader1 = fileReader1.ReadLine()
-            fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\metadata\version.txt")
-            Dim stringReader As String
-            stringReader = fileReader.ReadLine()
-            MessageBox.Show("Builder Resource version: " + stringReader + vbNewLine + "Latest Online version: " + stringReader1 + vbNewLine + "To update version please uninstall and reinstall builder resource", "About Builder Resource")
+            Dim metacheck As String = apppath + "\resource\metadata\version.txt"
+            If Not System.IO.File.Exists(metacheck) Then
+                MessageBox.Show("Resource not compatible with this version of P Browser Builder!" + vbNewLine + "Please update resource by uninstall and reinstall via resource menu.", "Error!")
+            Else
+                System.IO.Directory.Delete(apppath + "\resource\getcache", True)
+                System.IO.Directory.CreateDirectory(apppath + "\resource\getcache")
+                Dim fileReader As System.IO.StreamReader
+                My.Computer.Network.DownloadFile("https://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/cfuversion/onlineresver.txt", apppath + "\resource\getcache\onlineresver.txt")
+                Dim fileReader1 As System.IO.StreamReader
+                fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\getcache\onlineresver.txt")
+                Dim stringReader1 As String
+                stringReader1 = fileReader1.ReadLine()
+                fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\metadata\version.txt")
+                Dim stringReader As String
+                stringReader = fileReader.ReadLine()
+                MessageBox.Show("Builder Resource version: " + stringReader + vbNewLine + "Latest Online version: " + stringReader1 + vbNewLine + "To update version please uninstall and reinstall builder resource", "About Builder Resource")
+            End If
         Catch ex As Exception
             Dim apppath As String = Application.StartupPath()
             Dim fileReader As System.IO.StreamReader
