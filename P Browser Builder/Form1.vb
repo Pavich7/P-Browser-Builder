@@ -218,8 +218,6 @@ Public Class Form1
         Button5.Visible = False
         TextBox3.Enabled = False
         Label15.Visible = False
-        CustomizingGuildToolStripMenuItem.Enabled = False
-        BuildingGuideToolStripMenuItem.Enabled = False
         Label7.Visible = True
         Label7.Text = "Fetching in progress..."
         ProgressBar1.Visible = True
@@ -351,7 +349,7 @@ Public Class Form1
     End Sub
 
     Private Sub InstallationGuideToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InstallationGuideToolStripMenuItem.Click
-        Process.Start("https://github.com/Pavich7/P-Browser-Builder/wiki/P-Browser-Builder-Guild#install-p-browser-builder")
+        Process.Start("https://github.com/Pavich7/P-Browser-Builder/wiki/P-Browser-Builder-Guild#install-p-browser-builder-beta-030-and-later")
     End Sub
 
     Private Sub SubmitBugsReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SubmitBugsReportToolStripMenuItem.Click
@@ -471,5 +469,13 @@ Public Class Form1
 
     Private Sub OpenRemoteDebuggingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenRemoteDebuggingToolStripMenuItem.Click
         Process.Start("http://127.0.0.1:8088/")
+    End Sub
+
+    Private Sub CustomizingGuildToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CustomizingGuildToolStripMenuItem.Click
+        Process.Start("https://github.com/Pavich7/P-Browser-Builder/wiki/P-Browser-Builder-Guild#customizing-your-p-browser-app")
+    End Sub
+
+    Private Sub BuildingGuideToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BuildingGuideToolStripMenuItem.Click
+        Process.Start("https://github.com/Pavich7/P-Browser-Builder/wiki/P-Browser-Builder-Guild#building-a-p-browser-app-from-p-browser-builder")
     End Sub
 End Class
