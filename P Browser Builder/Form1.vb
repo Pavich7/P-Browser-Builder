@@ -206,8 +206,16 @@ Public Class Form1
             Label19.Visible = False
             Label20.Visible = False
             Label18.Visible = False
+            Dim headercheck As String = apppath + "\resource\metadata\checkpoint\header.chkp"
+            Dim resvcheck As String = apppath + "\resource\metadata\checkpoint\r100.chkp"
+            If Not System.IO.File.Exists(headercheck) Then
+                MessageBox.Show("Resource not compatible! You might encounter errors." + vbNewLine + "Please reinstall builder resource via resource menu.", "Resource not compatible!")
+            End If
+            If Not System.IO.File.Exists(resvcheck) Then
+                MessageBox.Show("Resource not compatible! You might encounter errors." + vbNewLine + "Please reinstall builder resource via resource menu.", "Resource not compatible!")
+            End If
         End If
-        Dim cachecheck As String = apppath + "\updatedata\pbb-resource.zip"
+            Dim cachecheck As String = apppath + "\updatedata\pbb-resource.zip"
         If Not System.IO.File.Exists(cachecheck) Then
             DeleteInstallerCacheToolStripMenuItem.Enabled = False
         End If
