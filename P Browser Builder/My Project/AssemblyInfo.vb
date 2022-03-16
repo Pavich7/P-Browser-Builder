@@ -7,7 +7,7 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("P Browser Builder (Release Candidate)")>
+<Assembly: AssemblyTitle("P Browser Builder")>
 <Assembly: AssemblyDescription("P Browser Builder Tool")>
 <Assembly: AssemblyCompany("PavichDev Software")>
 <Assembly: AssemblyProduct("P Browser Builder")>
