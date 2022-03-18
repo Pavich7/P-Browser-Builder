@@ -1,5 +1,4 @@
 Release Candidate 1.0.0
-- ADDED: Resource metadata check in about resource.
 - ADDED: Complete Building Guide Button.
 - ADDED: Complete Customizing Guide Button.
 - ADDED: Resource version checker.
