@@ -33,9 +33,10 @@ Partial Class Form1
         Me.OpenPreviewLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenRemoteDebuggingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UninstallBuilderResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DeleteInstallerCacheToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AboutBuilderResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BuilderResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UninstallToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteCacheToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.GuideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InstallationGuideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CustomizingGuildToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -45,6 +46,7 @@ Partial Class Form1
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SupportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenBuilderInExplorerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SubmitBugsReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -70,6 +72,9 @@ Partial Class Form1
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.ProgressBar3 = New System.Windows.Forms.ProgressBar()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
@@ -98,6 +103,7 @@ Partial Class Form1
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
+        Me.OpenBuildDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -164,28 +170,35 @@ Partial Class Form1
         '
         'ResourceToolStripMenuItem
         '
-        Me.ResourceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UninstallBuilderResourceToolStripMenuItem, Me.DeleteInstallerCacheToolStripMenuItem, Me.AboutBuilderResourceToolStripMenuItem})
+        Me.ResourceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuilderResourceToolStripMenuItem, Me.OpenBuildDirectoryToolStripMenuItem})
         Me.ResourceToolStripMenuItem.Name = "ResourceToolStripMenuItem"
-        Me.ResourceToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
-        Me.ResourceToolStripMenuItem.Text = "Resource"
+        Me.ResourceToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
+        Me.ResourceToolStripMenuItem.Text = "Build"
         '
-        'UninstallBuilderResourceToolStripMenuItem
+        'BuilderResourceToolStripMenuItem
         '
-        Me.UninstallBuilderResourceToolStripMenuItem.Name = "UninstallBuilderResourceToolStripMenuItem"
-        Me.UninstallBuilderResourceToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
-        Me.UninstallBuilderResourceToolStripMenuItem.Text = "Uninstall Builder Resource"
+        Me.BuilderResourceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UninstallToolStripMenuItem, Me.DeleteCacheToolStripMenuItem, Me.AboutToolStripMenuItem1})
+        Me.BuilderResourceToolStripMenuItem.Name = "BuilderResourceToolStripMenuItem"
+        Me.BuilderResourceToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
+        Me.BuilderResourceToolStripMenuItem.Text = "Builder Resource"
         '
-        'DeleteInstallerCacheToolStripMenuItem
+        'UninstallToolStripMenuItem
         '
-        Me.DeleteInstallerCacheToolStripMenuItem.Name = "DeleteInstallerCacheToolStripMenuItem"
-        Me.DeleteInstallerCacheToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
-        Me.DeleteInstallerCacheToolStripMenuItem.Text = "Delete Installer Cache"
+        Me.UninstallToolStripMenuItem.Name = "UninstallToolStripMenuItem"
+        Me.UninstallToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.UninstallToolStripMenuItem.Text = "Uninstall"
         '
-        'AboutBuilderResourceToolStripMenuItem
+        'DeleteCacheToolStripMenuItem
         '
-        Me.AboutBuilderResourceToolStripMenuItem.Name = "AboutBuilderResourceToolStripMenuItem"
-        Me.AboutBuilderResourceToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
-        Me.AboutBuilderResourceToolStripMenuItem.Text = "About Builder Resource"
+        Me.DeleteCacheToolStripMenuItem.Name = "DeleteCacheToolStripMenuItem"
+        Me.DeleteCacheToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DeleteCacheToolStripMenuItem.Text = "Delete Cache"
+        '
+        'AboutToolStripMenuItem1
+        '
+        Me.AboutToolStripMenuItem1.Name = "AboutToolStripMenuItem1"
+        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.AboutToolStripMenuItem1.Text = "About"
         '
         'GuideToolStripMenuItem
         '
@@ -227,7 +240,7 @@ Partial Class Form1
         '
         'HelpToolStripMenuItem
         '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem, Me.SupportToolStripMenuItem, Me.SubmitBugsReportToolStripMenuItem})
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem, Me.SupportToolStripMenuItem, Me.OpenBuilderInExplorerToolStripMenuItem, Me.SubmitBugsReportToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
@@ -235,19 +248,25 @@ Partial Class Form1
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'SupportToolStripMenuItem
         '
         Me.SupportToolStripMenuItem.Name = "SupportToolStripMenuItem"
-        Me.SupportToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.SupportToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
         Me.SupportToolStripMenuItem.Text = "Support"
+        '
+        'OpenBuilderInExplorerToolStripMenuItem
+        '
+        Me.OpenBuilderInExplorerToolStripMenuItem.Name = "OpenBuilderInExplorerToolStripMenuItem"
+        Me.OpenBuilderInExplorerToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
+        Me.OpenBuilderInExplorerToolStripMenuItem.Text = "Open Builder in Explorer"
         '
         'SubmitBugsReportToolStripMenuItem
         '
         Me.SubmitBugsReportToolStripMenuItem.Name = "SubmitBugsReportToolStripMenuItem"
-        Me.SubmitBugsReportToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.SubmitBugsReportToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
         Me.SubmitBugsReportToolStripMenuItem.Text = "Submit Bugs Report"
         '
         'Button1
@@ -494,14 +513,46 @@ Partial Class Form1
         '
         Me.Panel3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel3.BackColor = System.Drawing.Color.White
+        Me.Panel3.Controls.Add(Me.Label25)
+        Me.Panel3.Controls.Add(Me.Label26)
+        Me.Panel3.Controls.Add(Me.ProgressBar3)
         Me.Panel3.Controls.Add(Me.Label24)
         Me.Panel3.Controls.Add(Me.Label23)
         Me.Panel3.Controls.Add(Me.Label22)
         Me.Panel3.Controls.Add(Me.Label11)
         Me.Panel3.Location = New System.Drawing.Point(928, 75)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(265, 119)
+        Me.Panel3.Size = New System.Drawing.Size(265, 181)
         Me.Panel3.TabIndex = 24
+        '
+        'Label25
+        '
+        Me.Label25.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(15, 148)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(61, 17)
+        Me.Label25.TabIndex = 36
+        Me.Label25.Text = "memperc"
+        '
+        'Label26
+        '
+        Me.Label26.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.Location = New System.Drawing.Point(14, 112)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(170, 21)
+        Me.Label26.TabIndex = 35
+        Me.Label26.Text = "Overall Memory Usage"
+        '
+        'ProgressBar3
+        '
+        Me.ProgressBar3.Location = New System.Drawing.Point(18, 140)
+        Me.ProgressBar3.Name = "ProgressBar3"
+        Me.ProgressBar3.Size = New System.Drawing.Size(227, 5)
+        Me.ProgressBar3.TabIndex = 34
         '
         'Label24
         '
@@ -519,7 +570,7 @@ Partial Class Form1
         Me.Label23.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(14, 36)
+        Me.Label23.Location = New System.Drawing.Point(15, 36)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(37, 17)
         Me.Label23.TabIndex = 32
@@ -553,7 +604,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label10.Location = New System.Drawing.Point(923, 203)
+        Me.Label10.Location = New System.Drawing.Point(923, 265)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(105, 28)
         Me.Label10.TabIndex = 26
@@ -573,9 +624,9 @@ Partial Class Form1
         Me.Panel4.Controls.Add(Me.Label14)
         Me.Panel4.Controls.Add(Me.Label13)
         Me.Panel4.Controls.Add(Me.Label12)
-        Me.Panel4.Location = New System.Drawing.Point(928, 246)
+        Me.Panel4.Location = New System.Drawing.Point(928, 306)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(265, 341)
+        Me.Panel4.Size = New System.Drawing.Size(265, 281)
         Me.Panel4.TabIndex = 28
         '
         'Label21
@@ -773,6 +824,12 @@ Partial Class Form1
         Me.Button8.Text = "Pause"
         Me.Button8.UseVisualStyleBackColor = True
         '
+        'OpenBuildDirectoryToolStripMenuItem
+        '
+        Me.OpenBuildDirectoryToolStripMenuItem.Name = "OpenBuildDirectoryToolStripMenuItem"
+        Me.OpenBuildDirectoryToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
+        Me.OpenBuildDirectoryToolStripMenuItem.Text = "Open Build Directory"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -892,9 +949,6 @@ Partial Class Form1
     Friend WithEvents Label21 As Label
     Friend WithEvents ProgressBar2 As ProgressBar
     Friend WithEvents ResourceToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents UninstallBuilderResourceToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AboutBuilderResourceToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DeleteInstallerCacheToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpenRemoteDebuggingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Timer2 As Timer
     Friend WithEvents Label22 As Label
@@ -904,4 +958,13 @@ Partial Class Form1
     Friend WithEvents Button8 As Button
     Friend WithEvents ExtensionsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExtensionsNotFoundToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ProgressBar3 As ProgressBar
+    Friend WithEvents Label26 As Label
+    Friend WithEvents Label25 As Label
+    Friend WithEvents OpenBuilderInExplorerToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BuilderResourceToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UninstallToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DeleteCacheToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AboutToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents OpenBuildDirectoryToolStripMenuItem As ToolStripMenuItem
 End Class

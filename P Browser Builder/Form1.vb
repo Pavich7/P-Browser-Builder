@@ -200,8 +200,8 @@ Public Class Form1
             Label9.Enabled = False
             Label4.Enabled = False
             Label8.Enabled = False
-            UninstallBuilderResourceToolStripMenuItem.Enabled = False
-            AboutBuilderResourceToolStripMenuItem.Enabled = False
+            UninstallToolStripMenuItem.Enabled = False
+            AboutToolStripMenuItem1.Enabled = False
         Else
             Label19.Visible = False
             Label20.Visible = False
@@ -217,7 +217,7 @@ Public Class Form1
         End If
             Dim cachecheck As String = apppath + "\updatedata\pbb-resource.zip"
         If Not System.IO.File.Exists(cachecheck) Then
-            DeleteInstallerCacheToolStripMenuItem.Enabled = False
+            DeleteCacheToolStripMenuItem.Enabled = False
         End If
         ExtensionsNotFoundToolStripMenuItem.Enabled = False
         Button7.Enabled = False
@@ -423,7 +423,7 @@ Public Class Form1
         End Try
     End Sub
 
-    Private Sub UninstallBuilderResourceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UninstallBuilderResourceToolStripMenuItem.Click
+    Private Sub UninstallBuilderResourceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UninstallToolStripMenuItem.Click
         Try
             Dim result As DialogResult = MessageBox.Show("Do you wish to completely uninstall builder resource?" + vbNewLine + "You can reinstall resource later via notification box", "You sure about this?", MessageBoxButtons.YesNo)
             If (result = DialogResult.Yes) Then
@@ -437,7 +437,7 @@ Public Class Form1
         End Try
     End Sub
 
-    Private Sub AboutBuilderResourceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutBuilderResourceToolStripMenuItem.Click
+    Private Sub AboutBuilderResourceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem1.Click
         Try
             Dim apppath As String = Application.StartupPath()
             Dim metacheck As String = apppath + "\resource\metadata\version.txt"
@@ -467,12 +467,12 @@ Public Class Form1
         End Try
     End Sub
 
-    Private Sub DeleteInstallerCacheToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteInstallerCacheToolStripMenuItem.Click
+    Private Sub DeleteInstallerCacheToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteCacheToolStripMenuItem.Click
         Try
             Dim apppath As String = Application.StartupPath()
             System.IO.Directory.Delete(apppath + "\updatedata", True)
             System.IO.Directory.CreateDirectory(apppath + "\updatedata")
-            DeleteInstallerCacheToolStripMenuItem.Enabled = False
+            DeleteCacheToolStripMenuItem.Enabled = False
         Catch ex As Exception
             MessageBox.Show("Could not attempt to delete installer cache!" + vbNewLine + ex.Message + vbNewLine + "You may need to restart builder and try again.", "Error!")
         End Try
@@ -493,8 +493,18 @@ Public Class Form1
     <Obsolete>
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
         Dim pros As Process = Process.GetCurrentProcess()
-        Label23.Text = "Memory Usage: " & pros.WorkingSet / 1024 / 1024 & " MB"
-        Label24.Text = "Paged Memory Usage: " & pros.PagedMemorySize / 1024 / 1024 & " MB"
+        Dim demround1 As Double = pros.WorkingSet / 1024 / 1024
+        demround1 = Math.Round(demround1, 2)
+        Dim demround2 As Double = pros.PagedMemorySize / 1024 / 1024
+        demround2 = Math.Round(demround2, 2)
+        Dim demround3 As Double = ((My.Computer.Info.TotalPhysicalMemory - My.Computer.Info.AvailablePhysicalMemory) / My.Computer.Info.TotalPhysicalMemory) * 100
+        demround3 = Math.Round(demround3, 2)
+        Dim demround4 As Double = (My.Computer.Info.TotalPhysicalMemory - My.Computer.Info.AvailablePhysicalMemory) / 1024 / 1024 / 1024
+        demround4 = Math.Round(demround4, 2)
+        Label23.Text = "Memory Usage: " & demround1 & " MB"
+        Label24.Text = "Paged Memory Usage: " & demround2 & " MB"
+        ProgressBar3.Value = ((My.Computer.Info.TotalPhysicalMemory - My.Computer.Info.AvailablePhysicalMemory) / My.Computer.Info.TotalPhysicalMemory) * 100
+        Label25.Text = "Overall Usage: " & demround3 & " % (" & demround4 & " GB)"
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
@@ -507,7 +517,19 @@ Public Class Form1
         Timer2.Stop()
         Button8.Enabled = False
         Button7.Enabled = True
+        ProgressBar3.Value = 0
         Label23.Text = "Memory Usage: Paused"
         Label24.Text = "Paged Memory Usage: Paused"
+        Label25.Text = "Paused"
+    End Sub
+
+    Private Sub OpenBuilderInExplorerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenBuilderInExplorerToolStripMenuItem.Click
+        Dim apppath As String = Application.StartupPath()
+        Process.Start(apppath)
+    End Sub
+
+    Private Sub OpenBuildDirectoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenBuildDirectoryToolStripMenuItem.Click
+        Dim apppath As String = Application.StartupPath()
+        Process.Start(apppath + "\binary")
     End Sub
 End Class
