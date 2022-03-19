@@ -40,6 +40,8 @@ Partial Class Form1
         Me.InstallationGuideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CustomizingGuildToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BuildingGuideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExtensionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExtensionsNotFoundToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SupportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -96,8 +98,6 @@ Partial Class Form1
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
-        Me.ExtensionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExtensionsNotFoundToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -211,6 +211,19 @@ Partial Class Form1
         Me.BuildingGuideToolStripMenuItem.Name = "BuildingGuideToolStripMenuItem"
         Me.BuildingGuideToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.BuildingGuideToolStripMenuItem.Text = "Building Guide"
+        '
+        'ExtensionsToolStripMenuItem
+        '
+        Me.ExtensionsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExtensionsNotFoundToolStripMenuItem})
+        Me.ExtensionsToolStripMenuItem.Name = "ExtensionsToolStripMenuItem"
+        Me.ExtensionsToolStripMenuItem.Size = New System.Drawing.Size(75, 20)
+        Me.ExtensionsToolStripMenuItem.Text = "Extensions"
+        '
+        'ExtensionsNotFoundToolStripMenuItem
+        '
+        Me.ExtensionsNotFoundToolStripMenuItem.Name = "ExtensionsNotFoundToolStripMenuItem"
+        Me.ExtensionsNotFoundToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
+        Me.ExtensionsNotFoundToolStripMenuItem.Text = "Extensions not found"
         '
         'HelpToolStripMenuItem
         '
@@ -473,9 +486,9 @@ Partial Class Form1
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
         Me.Label5.Location = New System.Drawing.Point(923, 33)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(146, 28)
+        Me.Label5.Size = New System.Drawing.Size(100, 28)
         Me.Label5.TabIndex = 23
-        Me.Label5.Text = "Resource Usage"
+        Me.Label5.Text = "Diagnostic"
         '
         'Panel3
         '
@@ -759,19 +772,6 @@ Partial Class Form1
         Me.Button8.TabIndex = 33
         Me.Button8.Text = "Pause"
         Me.Button8.UseVisualStyleBackColor = True
-        '
-        'ExtensionsToolStripMenuItem
-        '
-        Me.ExtensionsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExtensionsNotFoundToolStripMenuItem})
-        Me.ExtensionsToolStripMenuItem.Name = "ExtensionsToolStripMenuItem"
-        Me.ExtensionsToolStripMenuItem.Size = New System.Drawing.Size(75, 20)
-        Me.ExtensionsToolStripMenuItem.Text = "Extensions"
-        '
-        'ExtensionsNotFoundToolStripMenuItem
-        '
-        Me.ExtensionsNotFoundToolStripMenuItem.Name = "ExtensionsNotFoundToolStripMenuItem"
-        Me.ExtensionsNotFoundToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
-        Me.ExtensionsNotFoundToolStripMenuItem.Text = "Extensions not found"
         '
         'Form1
         '
