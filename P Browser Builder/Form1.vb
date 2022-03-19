@@ -219,11 +219,14 @@ Public Class Form1
         If Not System.IO.File.Exists(cachecheck) Then
             DeleteInstallerCacheToolStripMenuItem.Enabled = False
         End If
+        ExtensionsNotFoundToolStripMenuItem.Enabled = False
+        Button7.Enabled = False
         ProgressBar2.Visible = False
         Label21.Visible = False
         Button4.Enabled = False
         Button4.Visible = False
         Button5.Visible = False
+        Timer2.Start()
         TextBox3.Enabled = False
         Label15.Visible = False
         Label7.Visible = True
@@ -485,5 +488,26 @@ Public Class Form1
 
     Private Sub BuildingGuideToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BuildingGuideToolStripMenuItem.Click
         Process.Start("https://github.com/Pavich7/P-Browser-Builder/wiki/P-Browser-Builder-Guild#building-a-p-browser-app-from-p-browser-builder")
+    End Sub
+
+    <Obsolete>
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+        Dim pros As Process = Process.GetCurrentProcess()
+        Label23.Text = "Memory Usage: " & pros.WorkingSet / 1024 / 1024 & " MB"
+        Label24.Text = "Paged Memory Usage: " & pros.PagedMemorySize / 1024 / 1024 & " MB"
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Timer2.Start()
+        Button7.Enabled = False
+        Button8.Enabled = True
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        Timer2.Stop()
+        Button8.Enabled = False
+        Button7.Enabled = True
+        Label23.Text = "Memory Usage: Paused"
+        Label24.Text = "Paged Memory Usage: Paused"
     End Sub
 End Class

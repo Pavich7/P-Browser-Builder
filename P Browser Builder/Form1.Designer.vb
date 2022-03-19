@@ -68,6 +68,9 @@ Partial Class Form1
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -90,6 +93,11 @@ Partial Class Form1
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.ExtensionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExtensionsNotFoundToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -101,7 +109,7 @@ Partial Class Form1
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.White
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.PreviewToolStripMenuItem, Me.ResourceToolStripMenuItem, Me.GuideToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.PreviewToolStripMenuItem, Me.ResourceToolStripMenuItem, Me.GuideToolStripMenuItem, Me.ExtensionsToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1216, 24)
@@ -189,19 +197,19 @@ Partial Class Form1
         'InstallationGuideToolStripMenuItem
         '
         Me.InstallationGuideToolStripMenuItem.Name = "InstallationGuideToolStripMenuItem"
-        Me.InstallationGuideToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.InstallationGuideToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.InstallationGuideToolStripMenuItem.Text = "Installation Guide"
         '
         'CustomizingGuildToolStripMenuItem
         '
         Me.CustomizingGuildToolStripMenuItem.Name = "CustomizingGuildToolStripMenuItem"
-        Me.CustomizingGuildToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CustomizingGuildToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.CustomizingGuildToolStripMenuItem.Text = "Customizing Guild"
         '
         'BuildingGuideToolStripMenuItem
         '
         Me.BuildingGuideToolStripMenuItem.Name = "BuildingGuideToolStripMenuItem"
-        Me.BuildingGuideToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BuildingGuideToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.BuildingGuideToolStripMenuItem.Text = "Building Guide"
         '
         'HelpToolStripMenuItem
@@ -465,38 +473,74 @@ Partial Class Form1
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
         Me.Label5.Location = New System.Drawing.Point(923, 33)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(100, 28)
+        Me.Label5.Size = New System.Drawing.Size(146, 28)
         Me.Label5.TabIndex = 23
-        Me.Label5.Text = "Extensions"
+        Me.Label5.Text = "Resource Usage"
         '
         'Panel3
         '
-        Me.Panel3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel3.BackColor = System.Drawing.Color.White
+        Me.Panel3.Controls.Add(Me.Label24)
+        Me.Panel3.Controls.Add(Me.Label23)
+        Me.Panel3.Controls.Add(Me.Label22)
         Me.Panel3.Controls.Add(Me.Label11)
         Me.Panel3.Location = New System.Drawing.Point(928, 75)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(265, 222)
+        Me.Panel3.Size = New System.Drawing.Size(265, 119)
         Me.Panel3.TabIndex = 24
+        '
+        'Label24
+        '
+        Me.Label24.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(15, 87)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(76, 17)
+        Me.Label24.TabIndex = 33
+        Me.Label24.Text = "paged mem"
+        '
+        'Label23
+        '
+        Me.Label23.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Location = New System.Drawing.Point(14, 36)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(37, 17)
+        Me.Label23.TabIndex = 32
+        Me.Label23.Text = "mem"
+        '
+        'Label22
+        '
+        Me.Label22.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(14, 61)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(162, 21)
+        Me.Label22.TabIndex = 28
+        Me.Label22.Text = "Paged Memory Usage"
         '
         'Label11
         '
-        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label11.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(66, 100)
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(14, 10)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(133, 17)
+        Me.Label11.Size = New System.Drawing.Size(116, 21)
         Me.Label11.TabIndex = 27
-        Me.Label11.Text = "Extension not installed"
+        Me.Label11.Text = "Memory Usage"
         '
         'Label10
         '
-        Me.Label10.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label10.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label10.Location = New System.Drawing.Point(923, 305)
+        Me.Label10.Location = New System.Drawing.Point(923, 203)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(105, 28)
         Me.Label10.TabIndex = 26
@@ -504,7 +548,8 @@ Partial Class Form1
         '
         'Panel4
         '
-        Me.Panel4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel4.BackColor = System.Drawing.Color.White
         Me.Panel4.Controls.Add(Me.Label21)
         Me.Panel4.Controls.Add(Me.ProgressBar2)
@@ -515,14 +560,14 @@ Partial Class Form1
         Me.Panel4.Controls.Add(Me.Label14)
         Me.Panel4.Controls.Add(Me.Label13)
         Me.Panel4.Controls.Add(Me.Label12)
-        Me.Panel4.Location = New System.Drawing.Point(928, 347)
+        Me.Panel4.Location = New System.Drawing.Point(928, 246)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(265, 240)
+        Me.Panel4.Size = New System.Drawing.Size(265, 341)
         Me.Panel4.TabIndex = 28
         '
         'Label21
         '
-        Me.Label21.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label21.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.Location = New System.Drawing.Point(15, 210)
@@ -533,7 +578,7 @@ Partial Class Form1
         '
         'ProgressBar2
         '
-        Me.ProgressBar2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ProgressBar2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ProgressBar2.Location = New System.Drawing.Point(18, 197)
         Me.ProgressBar2.Name = "ProgressBar2"
         Me.ProgressBar2.Size = New System.Drawing.Size(227, 10)
@@ -541,6 +586,7 @@ Partial Class Form1
         '
         'Label18
         '
+        Me.Label18.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label18.AutoSize = True
         Me.Label18.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label18.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -553,7 +599,7 @@ Partial Class Form1
         '
         'Label19
         '
-        Me.Label19.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label19.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label19.Font = New System.Drawing.Font("Segoe UI Light", 10.0!)
         Me.Label19.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label19.Location = New System.Drawing.Point(14, 134)
@@ -565,7 +611,7 @@ Partial Class Form1
         '
         'Label20
         '
-        Me.Label20.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label20.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.ForeColor = System.Drawing.SystemColors.ControlText
@@ -577,6 +623,7 @@ Partial Class Form1
         '
         'Label15
         '
+        Me.Label15.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label15.AutoSize = True
         Me.Label15.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label15.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -589,7 +636,7 @@ Partial Class Form1
         '
         'Label14
         '
-        Me.Label14.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label14.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.Location = New System.Drawing.Point(14, 79)
@@ -600,7 +647,7 @@ Partial Class Form1
         '
         'Label13
         '
-        Me.Label13.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label13.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label13.Font = New System.Drawing.Font("Segoe UI Light", 10.0!)
         Me.Label13.Location = New System.Drawing.Point(14, 37)
         Me.Label13.Name = "Label13"
@@ -610,7 +657,7 @@ Partial Class Form1
         '
         'Label12
         '
-        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label12.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.Location = New System.Drawing.Point(14, 12)
@@ -688,11 +735,51 @@ Partial Class Form1
         '
         Me.OpenFileDialog2.FileName = "OpenFileDialog2"
         '
+        'Timer2
+        '
+        '
+        'Button7
+        '
+        Me.Button7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button7.Font = New System.Drawing.Font("Segoe UI Semilight", 8.0!)
+        Me.Button7.Location = New System.Drawing.Point(1137, 37)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(56, 29)
+        Me.Button7.TabIndex = 32
+        Me.Button7.Text = "Resume"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'Button8
+        '
+        Me.Button8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button8.Font = New System.Drawing.Font("Segoe UI Semilight", 8.0!)
+        Me.Button8.Location = New System.Drawing.Point(1075, 37)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(56, 29)
+        Me.Button8.TabIndex = 33
+        Me.Button8.Text = "Pause"
+        Me.Button8.UseVisualStyleBackColor = True
+        '
+        'ExtensionsToolStripMenuItem
+        '
+        Me.ExtensionsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExtensionsNotFoundToolStripMenuItem})
+        Me.ExtensionsToolStripMenuItem.Name = "ExtensionsToolStripMenuItem"
+        Me.ExtensionsToolStripMenuItem.Size = New System.Drawing.Size(75, 20)
+        Me.ExtensionsToolStripMenuItem.Text = "Extensions"
+        '
+        'ExtensionsNotFoundToolStripMenuItem
+        '
+        Me.ExtensionsNotFoundToolStripMenuItem.Name = "ExtensionsNotFoundToolStripMenuItem"
+        Me.ExtensionsNotFoundToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
+        Me.ExtensionsNotFoundToolStripMenuItem.Text = "Extensions not found"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1216, 607)
+        Me.Controls.Add(Me.Button8)
+        Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Label16)
@@ -809,4 +896,12 @@ Partial Class Form1
     Friend WithEvents AboutBuilderResourceToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DeleteInstallerCacheToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpenRemoteDebuggingToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Timer2 As Timer
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Label24 As Label
+    Friend WithEvents Label23 As Label
+    Friend WithEvents Button7 As Button
+    Friend WithEvents Button8 As Button
+    Friend WithEvents ExtensionsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExtensionsNotFoundToolStripMenuItem As ToolStripMenuItem
 End Class

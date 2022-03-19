@@ -1,5 +1,3 @@
-Release Candidate 1.0.0
-- ADDED: Complete Building Guide Button.
-- ADDED: Complete Customizing Guide Button.
-- ADDED: Resource version checker.
-- CHANGED: Service Channel for future version control.
+Release 2.0.0
+- ADDED: Resource usage monitor.
+- CHANGED: Move extension to menu strip.
