@@ -532,4 +532,7 @@ Public Class Form1
         Dim apppath As String = Application.StartupPath()
         Process.Start(apppath + "\binary")
     End Sub
+    'Private Sub Button9_Click(sender As Object, e As EventArgs)
+    '    Panel6.Hide()
+    'End Sub
 End Class
