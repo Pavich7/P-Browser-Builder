@@ -37,6 +37,7 @@ Partial Class Form1
         Me.UninstallToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteCacheToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenBuildDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GuideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InstallationGuideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CustomizingGuildToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -103,7 +104,6 @@ Partial Class Form1
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
-        Me.OpenBuildDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -185,20 +185,26 @@ Partial Class Form1
         'UninstallToolStripMenuItem
         '
         Me.UninstallToolStripMenuItem.Name = "UninstallToolStripMenuItem"
-        Me.UninstallToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.UninstallToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.UninstallToolStripMenuItem.Text = "Uninstall"
         '
         'DeleteCacheToolStripMenuItem
         '
         Me.DeleteCacheToolStripMenuItem.Name = "DeleteCacheToolStripMenuItem"
-        Me.DeleteCacheToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DeleteCacheToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.DeleteCacheToolStripMenuItem.Text = "Delete Cache"
         '
         'AboutToolStripMenuItem1
         '
         Me.AboutToolStripMenuItem1.Name = "AboutToolStripMenuItem1"
-        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(143, 22)
         Me.AboutToolStripMenuItem1.Text = "About"
+        '
+        'OpenBuildDirectoryToolStripMenuItem
+        '
+        Me.OpenBuildDirectoryToolStripMenuItem.Name = "OpenBuildDirectoryToolStripMenuItem"
+        Me.OpenBuildDirectoryToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
+        Me.OpenBuildDirectoryToolStripMenuItem.Text = "Open Build Directory"
         '
         'GuideToolStripMenuItem
         '
@@ -376,6 +382,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.BackColor = System.Drawing.Color.Silver
         Me.Panel1.Controls.Add(Me.Panel2)
+        Me.Panel1.Controls.Add(Me.Panel5)
         Me.Panel1.Location = New System.Drawing.Point(344, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(560, 601)
@@ -761,9 +768,10 @@ Partial Class Form1
         '
         Me.Panel5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel5.BackColor = System.Drawing.SystemColors.Control
         Me.Panel5.Controls.Add(Me.Label17)
         Me.Panel5.Controls.Add(Me.PictureBox1)
-        Me.Panel5.Location = New System.Drawing.Point(362, 112)
+        Me.Panel5.Location = New System.Drawing.Point(18, 100)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(523, 25)
         Me.Panel5.TabIndex = 15
@@ -824,12 +832,6 @@ Partial Class Form1
         Me.Button8.Text = "Pause"
         Me.Button8.UseVisualStyleBackColor = True
         '
-        'OpenBuildDirectoryToolStripMenuItem
-        '
-        Me.OpenBuildDirectoryToolStripMenuItem.Name = "OpenBuildDirectoryToolStripMenuItem"
-        Me.OpenBuildDirectoryToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
-        Me.OpenBuildDirectoryToolStripMenuItem.Text = "Open Build Directory"
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -837,7 +839,6 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(1216, 607)
         Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.Button7)
-        Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.TextBox3)
