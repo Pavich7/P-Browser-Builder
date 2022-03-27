@@ -383,45 +383,53 @@ Public Class Form1
     End Sub
 
     Private Sub Label18_Click(sender As Object, e As EventArgs) Handles Label18.Click
-        Label21.Visible = True
-        ProgressBar2.Visible = True
-        Label18.Visible = False
-        Try
-            Dim apppath As String = Application.StartupPath()
-            ProgressBar2.Value = 0
-            System.IO.Directory.Delete(apppath + "\updatedata", True)
-            System.IO.Directory.CreateDirectory(apppath + "\updatedata")
-            ProgressBar2.Value = 25
-            Dim strURL As String = "https://github.com/Pavich7/P-Browser-Builder-Resource/releases/latest/download/pbb-resource.zip"
-            Using webcli As WebClient = New WebClient()
-                webcli.DownloadFile(strURL, apppath + "\updatedata\pbb-resource.zip")
-            End Using
-            ProgressBar2.Value = 50
-            Dim zipPath As String = apppath + "\updatedata\pbb-resource.zip"
-            Dim extractPath As String = apppath
-            ProgressBar2.Value = 75
-            ZipFile.ExtractToDirectory(zipPath, extractPath)
-            ProgressBar2.Value = 100
-            Dim result As DialogResult = MessageBox.Show("Installation completed but restart required!" + vbNewLine + "Do you want to restart P Browser Builder now?", "Installation completed!", MessageBoxButtons.YesNo)
-            If (result = DialogResult.Yes) Then
-                Application.Restart()
-            Else
-                Label18.Text = "Already installed! Please restart app."
-                Label18.Visible = True
-                Label18.Enabled = False
+        Label18.Enabled = False
+        Label18.Text = "Waiting for confirmation..."
+        Dim result As DialogResult = MessageBox.Show("Do you wish to install builder resource?" + vbNewLine + "Builder will not responding while installing resource." + vbNewLine + "ATTEMPTING TO EXIT THE BUILDER MAY INCOMPLETE RESOURCE", "You sure about this?", MessageBoxButtons.YesNo)
+        If (result = DialogResult.Yes) Then
+            Label21.Visible = True
+            ProgressBar2.Visible = True
+            Label18.Visible = False
+            Try
+                Dim apppath As String = Application.StartupPath()
+                ProgressBar2.Value = 0
+                System.IO.Directory.Delete(apppath + "\updatedata", True)
+                System.IO.Directory.CreateDirectory(apppath + "\updatedata")
+                ProgressBar2.Value = 25
+                Dim strURL As String = "https://github.com/Pavich7/P-Browser-Builder-Resource/releases/latest/download/pbb-resource.zip"
+                Using webcli As WebClient = New WebClient()
+                    webcli.DownloadFile(strURL, apppath + "\updatedata\pbb-resource.zip")
+                End Using
+                ProgressBar2.Value = 50
+                Dim zipPath As String = apppath + "\updatedata\pbb-resource.zip"
+                Dim extractPath As String = apppath
+                ProgressBar2.Value = 75
+                ZipFile.ExtractToDirectory(zipPath, extractPath)
+                ProgressBar2.Value = 100
+                Dim result1 As DialogResult = MessageBox.Show("Installation completed but restart required!" + vbNewLine + "Do you want to restart P Browser Builder now?", "Installation completed!", MessageBoxButtons.YesNo)
+                If (result1 = DialogResult.Yes) Then
+                    Application.Restart()
+                Else
+                    Label18.Text = "Already installed! Please restart app."
+                    Label18.Visible = True
+                    Label18.Enabled = False
+                    Label21.Visible = False
+                    ProgressBar2.Visible = False
+                End If
+            Catch ex As Exception
+                Dim apppath As String = Application.StartupPath()
+                MessageBox.Show("Could not attempt to install resource!" + vbNewLine + ex.Message, "Error!")
                 Label21.Visible = False
                 ProgressBar2.Visible = False
-            End If
-        Catch ex As Exception
-            Dim apppath As String = Application.StartupPath()
-            MessageBox.Show("Could not attempt to install resource!" + vbNewLine + ex.Message, "Error!")
-            Label21.Visible = False
-            ProgressBar2.Visible = False
-            Label18.Visible = True
-            System.IO.Directory.Delete(apppath + "\buildcache\appicns", True)
-            System.IO.Directory.CreateDirectory(apppath + "\buildcache\appicns")
+                Label18.Visible = True
+                System.IO.Directory.Delete(apppath + "\buildcache\appicns", True)
+                System.IO.Directory.CreateDirectory(apppath + "\buildcache\appicns")
+                Label18.Text = "Try again"
+            End Try
+        Else
+            Label18.Enabled = True
             Label18.Text = "Try again"
-        End Try
+        End If
     End Sub
 
     Private Sub UninstallBuilderResourceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UninstallToolStripMenuItem.Click
@@ -553,6 +561,7 @@ Public Class Form1
         Panel1.Width = 872
         HideRightPanelToolStripMenuItem.Enabled = False
         ShowRightPanelToolStripMenuItem.Enabled = True
+        Timer2.Stop()
     End Sub
 
     Private Sub ShowRightPanelToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowRightPanelToolStripMenuItem.Click
@@ -562,5 +571,6 @@ Public Class Form1
         Panel1.Width = 560
         ShowRightPanelToolStripMenuItem.Enabled = False
         HideRightPanelToolStripMenuItem.Enabled = True
+        Timer2.Start()
     End Sub
 End Class
