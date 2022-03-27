@@ -742,9 +742,9 @@ Partial Class Form1
         Me.Label15.ForeColor = System.Drawing.SystemColors.HotTrack
         Me.Label15.Location = New System.Drawing.Point(15, 79)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(60, 17)
+        Me.Label15.Size = New System.Drawing.Size(115, 17)
         Me.Label15.TabIndex = 29
-        Me.Label15.Text = "Try again"
+        Me.Label15.Text = "Restart to try again"
         '
         'Label14
         '

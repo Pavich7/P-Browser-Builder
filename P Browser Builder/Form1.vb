@@ -424,6 +424,7 @@ Public Class Form1
                 Label18.Visible = True
                 System.IO.Directory.Delete(apppath + "\buildcache\appicns", True)
                 System.IO.Directory.CreateDirectory(apppath + "\buildcache\appicns")
+                Label18.Enabled = True
                 Label18.Text = "Try again"
             End Try
         Else

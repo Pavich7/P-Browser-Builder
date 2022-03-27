@@ -7,3 +7,4 @@ Release 2.0.0
 - ADDED: Ask before install resource.
 - CHANGED: Move extension to menu strip.
 - CHANGED: Move resource menu to build menu strip.
+- CHANGED: Try again button text when offline mode.
