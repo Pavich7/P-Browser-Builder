@@ -219,6 +219,7 @@ Public Class Form1
         If Not System.IO.File.Exists(cachecheck) Then
             DeleteCacheToolStripMenuItem.Enabled = False
         End If
+        ShowRightPanelToolStripMenuItem.Enabled = False
         ExtensionsNotFoundToolStripMenuItem.Enabled = False
         Button7.Enabled = False
         ProgressBar2.Visible = False
@@ -532,7 +533,34 @@ Public Class Form1
         Dim apppath As String = Application.StartupPath()
         Process.Start(apppath + "\binary")
     End Sub
-    'Private Sub Button9_Click(sender As Object, e As EventArgs)
-    '    Panel6.Hide()
-    'End Sub
+
+    Private Sub MaximizedToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MaximizedToolStripMenuItem.Click
+        Me.WindowState = FormWindowState.Maximized
+    End Sub
+
+    Private Sub NormalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NormalToolStripMenuItem.Click
+        Me.WindowState = FormWindowState.Normal
+    End Sub
+
+    Private Sub MinimizedToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MinimizedToolStripMenuItem.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub HideRightPanelToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HideRightPanelToolStripMenuItem.Click
+        Panel6.Hide()
+        Me.WindowState = FormWindowState.Normal
+        Me.Size = New Size(1232, 646)
+        Panel1.Width = 872
+        HideRightPanelToolStripMenuItem.Enabled = False
+        ShowRightPanelToolStripMenuItem.Enabled = True
+    End Sub
+
+    Private Sub ShowRightPanelToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowRightPanelToolStripMenuItem.Click
+        Panel6.Show()
+        Me.WindowState = FormWindowState.Normal
+        Me.Size = New Size(1232, 646)
+        Panel1.Width = 560
+        ShowRightPanelToolStripMenuItem.Enabled = False
+        HideRightPanelToolStripMenuItem.Enabled = True
+    End Sub
 End Class
