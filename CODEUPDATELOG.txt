@@ -8,3 +8,6 @@ Release 2.0.0
 - CHANGED: Move extension to menu strip.
 - CHANGED: Move resource menu to build menu strip.
 - CHANGED: Try again button text when offline mode.
+- UPDATED: CefSharp.Redist
+- UPDATED: CefSharp.Common
+- UPDATED: CefSharp.WinForms

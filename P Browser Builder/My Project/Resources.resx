@@ -118,9 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Screenshot 2022-03-16 174855" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>C:\Users\Pavich Komansil\Pictures\Screenshot 2022-03-16 174855.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="P_Browser_icon_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>C:\Users\Pavich Komansil\Pictures\P Browser icon.001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,7 +127,10 @@
   <data name="vcsconflicting_93497" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>C:\Users\Pavich Komansil\Pictures\vcsconflicting_93497.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Screenshot 2022-03-16 174817" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>C:\Users\Pavich Komansil\Pictures\Screenshot 2022-03-16 174817.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Screenshot 2022-03-29 204322" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>C:\Users\Pavich Komansil\Pictures\Screenshot 2022-03-29 204322.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Screenshot 2022-03-29 204244" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>C:\Users\Pavich Komansil\Pictures\Screenshot 2022-03-29 204244.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -83,9 +83,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Screenshot_2022_03_16_174817() As System.Drawing.Bitmap
+        Friend ReadOnly Property Screenshot_2022_03_29_204244() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Screenshot 2022-03-16 174817", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Screenshot 2022-03-29 204244", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -93,9 +93,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Screenshot_2022_03_16_174855() As System.Drawing.Bitmap
+        Friend ReadOnly Property Screenshot_2022_03_29_204322() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Screenshot 2022-03-16 174855", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Screenshot 2022-03-29 204322", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
