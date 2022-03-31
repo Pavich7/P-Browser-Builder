@@ -1,4 +1,8 @@
 Release 2.1.0
-- UPDATED: CefSharp.Redist
-- UPDATED: CefSharp.Common
-- UPDATED: CefSharp.WinForms
+- ADDED: Developers Menu
+- ADDED: Unlock Dev Menu
+- UPDATED: CefSharp.Redist Packages.
+- UPDATED: CefSharp.Common Packages.
+- UPDATED: CefSharp.WinForms Packages.
+- REMOVED: Clean up complete pop up.
+- CHANGED: Build Menu UI change.

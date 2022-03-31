@@ -46,15 +46,22 @@ Public Class Form1
 
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.Click
         Button1.Enabled = False
+        CheckBox1.Text = "Start your app after build"
+        CheckBox2.Text = "Show your app in explorer after build"
     End Sub
 
     Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.Click
         Button1.Enabled = False
+        CheckBox1.Text = "Start your app after build"
+        CheckBox2.Text = "Show your app in explorer after build"
     End Sub
 
     Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
         RadioButton1.Checked = False
         RadioButton2.Checked = False
+        RadioButton3.Checked = False
+        CheckBox1.Text = "Start your app after build"
+        CheckBox2.Text = "Show your app in explorer after build"
         Button1.Enabled = True
     End Sub
 
@@ -157,13 +164,11 @@ Public Class Form1
             ProgressBar1.Value = 50
             System.IO.Directory.CreateDirectory(apppath + "\binary")
             ProgressBar1.Value = 100
-            MessageBox.Show("Cleanup completed!", "Completed!")
             Label7.Text = "Cleanup completed!"
         Catch ex As Exception
             MessageBox.Show("Please close built app first before perform this action.", "Failed!")
-            Label7.Visible = False
-            Label7.Text = "Building in progress..."
-            ProgressBar1.Visible = False
+            Label7.Text = "Cleanup failed!"
+            ProgressBar1.Value = 100
         End Try
     End Sub
 
@@ -211,8 +216,10 @@ Public Class Form1
         ExtensionsNotFoundToolStripMenuItem.Enabled = False
         Button7.Enabled = False
         ProgressBar2.Visible = False
+        RadioButton3.Visible = False
         Label21.Visible = False
         Button4.Enabled = False
+        DevToolStripMenuItem.Visible = False
         Button4.Visible = False
         Button5.Visible = False
         Timer2.Start()
@@ -308,6 +315,10 @@ Public Class Form1
         TextBox3.Text = ""
         RadioButton1.Checked = False
         RadioButton2.Checked = False
+        RadioButton3.Checked = False
+        CheckBox1.Text = "Start your app after build"
+        CheckBox2.Text = "Show your app in explorer after build"
+        Button1.Enabled = True
         CheckBox1.Checked = False
         CheckBox2.Checked = False
         System.IO.Directory.Delete(apppath + "\buildcache\appicns", True)
@@ -560,5 +571,61 @@ Public Class Form1
         ShowRightPanelToolStripMenuItem.Enabled = False
         HideRightPanelToolStripMenuItem.Enabled = True
         Timer2.Start()
+    End Sub
+
+    Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton3.Click
+        Button1.Enabled = False
+        CheckBox1.Text = "Start your installer after build"
+        CheckBox2.Text = "Show your installer in explorer after build"
+    End Sub
+
+    Private Sub UnlockDeveloperMenuToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UnlockDeveloperMenuToolStripMenuItem.Click
+        Dim result As DialogResult = MessageBox.Show("Unlocking the Dev Menu is dangerous." + vbNewLine + "It is used to test incomplete features at runtime." + vbNewLine + "Some incomplete or faulty features can damage your Builder!" + vbNewLine + "For developers, you can go check the code in the repository." + vbNewLine + "Do you want to process it?", "You sure about this?", MessageBoxButtons.YesNo)
+        If (result = DialogResult.Yes) Then
+            DevToolStripMenuItem.Visible = True
+            UnlockDeveloperMenuToolStripMenuItem.Enabled = False
+        End If
+    End Sub
+
+    Private Sub UnlockIncompleteFeatureToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UnlockIncompleteFeatureToolStripMenuItem.Click
+        Button4.Visible = True
+        Button5.Visible = True
+        RadioButton3.Visible = True
+        UnlockIncompleteFeatureToolStripMenuItem.Enabled = False
+    End Sub
+
+    Private Sub ForceUnlockDisableButtonToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ForceUnlockDisableButtonToolStripMenuItem.Click
+        Dim result As DialogResult = MessageBox.Show("Force Unlocking the button is extremely dangerous." + vbNewLine + "YOUR MAY NEED TO REINSTALL YOUR BUILDER IN CASE OF DAMAGED!" + vbNewLine + "Do you want to process it?", "You sure about this?", MessageBoxButtons.YesNo)
+        If (result = DialogResult.Yes) Then
+            Button4.Enabled = True
+            Button1.Enabled = True
+            Button2.Enabled = True
+            Label4.Enabled = True
+            TextBox3.Enabled = True
+            Label8.Enabled = True
+            Label6.Enabled = True
+            Label9.Enabled = True
+            RadioButton1.Enabled = True
+            RadioButton2.Enabled = True
+            CheckBox1.Enabled = True
+            CheckBox2.Enabled = True
+            ShowRightPanelToolStripMenuItem.Enabled = True
+            HideRightPanelToolStripMenuItem.Enabled = True
+            UninstallToolStripMenuItem.Enabled = True
+            DeleteCacheToolStripMenuItem.Enabled = True
+            AboutToolStripMenuItem1.Enabled = True
+            ExtensionsNotFoundToolStripMenuItem.Enabled = True
+            ForceUnlockDisableButtonToolStripMenuItem.Enabled = True
+            UnlockIncompleteFeatureToolStripMenuItem.Enabled = True
+            UnlockDeveloperMenuToolStripMenuItem.Enabled = True
+        End If
+    End Sub
+
+    Private Sub ResetExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetExitToolStripMenuItem.Click
+        Application.Exit()
+    End Sub
+
+    Private Sub ReToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReToolStripMenuItem.Click
+        Application.Restart()
     End Sub
 End Class

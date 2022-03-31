@@ -112,6 +112,14 @@ Partial Class Form1
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
+        Me.UnlockDeveloperMenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DevToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UnlockIncompleteFeatureToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ForceUnlockDisableButtonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GoBackToDefaultToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ResetExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -124,7 +132,7 @@ Partial Class Form1
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.White
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.PreviewToolStripMenuItem, Me.ResourceToolStripMenuItem, Me.ExtensionsToolStripMenuItem, Me.WindowToolStripMenuItem, Me.GuideToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.PreviewToolStripMenuItem, Me.ResourceToolStripMenuItem, Me.ExtensionsToolStripMenuItem, Me.WindowToolStripMenuItem, Me.GuideToolStripMenuItem, Me.HelpToolStripMenuItem, Me.DevToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1216, 24)
@@ -141,14 +149,14 @@ Partial Class Form1
         'ClearAllToolStripMenuItem
         '
         Me.ClearAllToolStripMenuItem.Name = "ClearAllToolStripMenuItem"
-        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
+        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ClearAllToolStripMenuItem.Text = "Clear All"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'PreviewToolStripMenuItem
@@ -239,37 +247,37 @@ Partial Class Form1
         '
         Me.BuilderWindowToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NormalToolStripMenuItem, Me.MaximizedToolStripMenuItem, Me.MinimizedToolStripMenuItem})
         Me.BuilderWindowToolStripMenuItem.Name = "BuilderWindowToolStripMenuItem"
-        Me.BuilderWindowToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.BuilderWindowToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.BuilderWindowToolStripMenuItem.Text = "Builder Window"
         '
         'NormalToolStripMenuItem
         '
         Me.NormalToolStripMenuItem.Name = "NormalToolStripMenuItem"
-        Me.NormalToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.NormalToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.NormalToolStripMenuItem.Text = "Normal"
         '
         'MaximizedToolStripMenuItem
         '
         Me.MaximizedToolStripMenuItem.Name = "MaximizedToolStripMenuItem"
-        Me.MaximizedToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.MaximizedToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.MaximizedToolStripMenuItem.Text = "Maximized"
         '
         'MinimizedToolStripMenuItem
         '
         Me.MinimizedToolStripMenuItem.Name = "MinimizedToolStripMenuItem"
-        Me.MinimizedToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.MinimizedToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.MinimizedToolStripMenuItem.Text = "Minimized"
         '
         'HideRightPanelToolStripMenuItem
         '
         Me.HideRightPanelToolStripMenuItem.Name = "HideRightPanelToolStripMenuItem"
-        Me.HideRightPanelToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.HideRightPanelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.HideRightPanelToolStripMenuItem.Text = "Hide right panel"
         '
         'ShowRightPanelToolStripMenuItem
         '
         Me.ShowRightPanelToolStripMenuItem.Name = "ShowRightPanelToolStripMenuItem"
-        Me.ShowRightPanelToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.ShowRightPanelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ShowRightPanelToolStripMenuItem.Text = "Show right panel"
         '
         'GuideToolStripMenuItem
@@ -282,24 +290,24 @@ Partial Class Form1
         'InstallationGuideToolStripMenuItem
         '
         Me.InstallationGuideToolStripMenuItem.Name = "InstallationGuideToolStripMenuItem"
-        Me.InstallationGuideToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.InstallationGuideToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.InstallationGuideToolStripMenuItem.Text = "Installation Guide"
         '
         'CustomizingGuildToolStripMenuItem
         '
         Me.CustomizingGuildToolStripMenuItem.Name = "CustomizingGuildToolStripMenuItem"
-        Me.CustomizingGuildToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.CustomizingGuildToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CustomizingGuildToolStripMenuItem.Text = "Customizing Guild"
         '
         'BuildingGuideToolStripMenuItem
         '
         Me.BuildingGuideToolStripMenuItem.Name = "BuildingGuideToolStripMenuItem"
-        Me.BuildingGuideToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.BuildingGuideToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.BuildingGuideToolStripMenuItem.Text = "Building Guide"
         '
         'HelpToolStripMenuItem
         '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem, Me.SupportToolStripMenuItem, Me.OpenBuilderInExplorerToolStripMenuItem, Me.SubmitBugsReportToolStripMenuItem})
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem, Me.SupportToolStripMenuItem, Me.OpenBuilderInExplorerToolStripMenuItem, Me.SubmitBugsReportToolStripMenuItem, Me.UnlockDeveloperMenuToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
@@ -530,7 +538,7 @@ Partial Class Form1
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.Location = New System.Drawing.Point(32, 384)
+        Me.CheckBox1.Location = New System.Drawing.Point(32, 379)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(167, 21)
         Me.CheckBox1.TabIndex = 17
@@ -541,7 +549,7 @@ Partial Class Form1
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label8.Location = New System.Drawing.Point(18, 344)
+        Me.Label8.Location = New System.Drawing.Point(18, 339)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(159, 28)
         Me.Label8.TabIndex = 18
@@ -551,7 +559,7 @@ Partial Class Form1
         '
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox2.Location = New System.Drawing.Point(32, 411)
+        Me.CheckBox2.Location = New System.Drawing.Point(32, 406)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(234, 21)
         Me.CheckBox2.TabIndex = 19
@@ -584,7 +592,7 @@ Partial Class Form1
         Me.Label9.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label9.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label9.Location = New System.Drawing.Point(29, 439)
+        Me.Label9.Location = New System.Drawing.Point(29, 435)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(100, 17)
         Me.Label9.TabIndex = 22
@@ -900,11 +908,68 @@ Partial Class Form1
         Me.Panel6.Size = New System.Drawing.Size(316, 584)
         Me.Panel6.TabIndex = 16
         '
+        'RadioButton3
+        '
+        Me.RadioButton3.AutoSize = True
+        Me.RadioButton3.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton3.Location = New System.Drawing.Point(29, 470)
+        Me.RadioButton3.Name = "RadioButton3"
+        Me.RadioButton3.Size = New System.Drawing.Size(253, 21)
+        Me.RadioButton3.TabIndex = 32
+        Me.RadioButton3.TabStop = True
+        Me.RadioButton3.Text = "Build with Packaging Ready Mode (Final)"
+        Me.RadioButton3.UseVisualStyleBackColor = True
+        '
+        'UnlockDeveloperMenuToolStripMenuItem
+        '
+        Me.UnlockDeveloperMenuToolStripMenuItem.Name = "UnlockDeveloperMenuToolStripMenuItem"
+        Me.UnlockDeveloperMenuToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
+        Me.UnlockDeveloperMenuToolStripMenuItem.Text = "Unlock Developer Menu"
+        '
+        'DevToolStripMenuItem
+        '
+        Me.DevToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UnlockIncompleteFeatureToolStripMenuItem, Me.ForceUnlockDisableButtonToolStripMenuItem, Me.GoBackToDefaultToolStripMenuItem})
+        Me.DevToolStripMenuItem.Name = "DevToolStripMenuItem"
+        Me.DevToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
+        Me.DevToolStripMenuItem.Text = "Dev"
+        '
+        'UnlockIncompleteFeatureToolStripMenuItem
+        '
+        Me.UnlockIncompleteFeatureToolStripMenuItem.Name = "UnlockIncompleteFeatureToolStripMenuItem"
+        Me.UnlockIncompleteFeatureToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.UnlockIncompleteFeatureToolStripMenuItem.Text = "Unlock incomplete feature"
+        '
+        'ForceUnlockDisableButtonToolStripMenuItem
+        '
+        Me.ForceUnlockDisableButtonToolStripMenuItem.Name = "ForceUnlockDisableButtonToolStripMenuItem"
+        Me.ForceUnlockDisableButtonToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.ForceUnlockDisableButtonToolStripMenuItem.Text = "Force unlock disabled button"
+        '
+        'GoBackToDefaultToolStripMenuItem
+        '
+        Me.GoBackToDefaultToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ResetExitToolStripMenuItem, Me.ReToolStripMenuItem})
+        Me.GoBackToDefaultToolStripMenuItem.Name = "GoBackToDefaultToolStripMenuItem"
+        Me.GoBackToDefaultToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.GoBackToDefaultToolStripMenuItem.Text = "Go back to default"
+        '
+        'ResetExitToolStripMenuItem
+        '
+        Me.ResetExitToolStripMenuItem.Name = "ResetExitToolStripMenuItem"
+        Me.ResetExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ResetExitToolStripMenuItem.Text = "Reset and Exit"
+        '
+        'ReToolStripMenuItem
+        '
+        Me.ReToolStripMenuItem.Name = "ReToolStripMenuItem"
+        Me.ReToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ReToolStripMenuItem.Text = "Reset and Restart"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1216, 607)
+        Me.Controls.Add(Me.RadioButton3)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button6)
@@ -1041,4 +1106,12 @@ Partial Class Form1
     Friend WithEvents MinimizedToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HideRightPanelToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ShowRightPanelToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RadioButton3 As RadioButton
+    Friend WithEvents UnlockDeveloperMenuToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DevToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UnlockIncompleteFeatureToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ForceUnlockDisableButtonToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GoBackToDefaultToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ResetExitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReToolStripMenuItem As ToolStripMenuItem
 End Class
