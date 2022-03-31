@@ -10,8 +10,7 @@ Public Class Form1
         If TextBox1.Text = "" Then
             MessageBox.Show("Please enter your websites URL.", "Build Failed!")
         Else
-            Label7.Visible = True
-            ProgressBar1.Visible = True
+            Label7.Text = "Building in progress..."
             Dim apppath As String = Application.StartupPath()
             Dim pbcfg As String = apppath + "\resource\testspace\builderdata.pbcfg"
             Dim pbprogcfg As String = apppath + "\resource\testspace\progdata.pbcfg"
@@ -37,12 +36,10 @@ Public Class Form1
                 ProgressBar1.Value = 100
                 MessageBox.Show("Build Completed! Click continue to test app.", "Build Completed!")
                 Process.Start(testapp)
-                Label7.Visible = False
-                ProgressBar1.Visible = False
+                Label7.Text = "Build completed!"
             Else
                 MessageBox.Show("Build Failed! Incomplete or corrupted Data please reinstall builder.", "Build Failed!")
-                Label7.Visible = False
-                ProgressBar1.Visible = False
+                Label7.Text = "Build failed!"
             End If
         End If
     End Sub
@@ -68,8 +65,7 @@ Public Class Form1
             MessageBox.Show("Please enter your application name.", "Build Failed!")
         Else
             If RadioButton1.Checked = True Then
-                Label7.Visible = True
-                ProgressBar1.Visible = True
+                Label7.Text = "Building in progress..."
                 Dim apppath As String = Application.StartupPath()
                 Dim pbcfg As String = apppath + "\resource\buildspace\quickmode\builderdata.pbcfg"
                 Dim pbprogcfg As String = apppath + "\resource\buildspace\quickmode\progdata.pbcfg"
@@ -98,22 +94,19 @@ Public Class Form1
                     If CheckBox2.Checked Then
                         Process.Start(apppath + "\binary\")
                     End If
-                    Label7.Visible = False
-                    ProgressBar1.Visible = False
+                    Label7.Text = "Build completed!"
                 Else
                     MessageBox.Show("Build Failed! Incomplete or corrupted Data please reinstall builder.", "Build Failed!")
-                    Label7.Visible = False
-                    ProgressBar1.Visible = False
+                    Label7.Text = "Build failed!"
                 End If
             ElseIf RadioButton2.Checked = True Then
+                Label7.Text = "Building in progress..."
                 Dim apppath As String = Application.StartupPath()
                 System.IO.Directory.Delete(apppath + "\resource\buildspace\cleanmode", True)
                 System.IO.Directory.CreateDirectory(apppath + "\resource\buildspace\cleanmode")
                 Dim zipPath As String = apppath + "\resource\resourcepack\freshapp.zip"
                 Dim extractPath As String = apppath + "\resource\buildspace\cleanmode"
                 ZipFile.ExtractToDirectory(zipPath, extractPath)
-                Label7.Visible = True
-                ProgressBar1.Visible = True
                 Dim pbcfg As String = apppath + "\resource\buildspace\cleanmode\builderdata.pbcfg"
                 Dim pbprogcfg As String = apppath + "\resource\buildspace\cleanmode\progdata.pbcfg"
                 System.IO.Directory.Delete(apppath + "\binary", True)
@@ -144,12 +137,10 @@ Public Class Form1
                     If CheckBox2.Checked Then
                         Process.Start(apppath + "\binary\")
                     End If
-                    Label7.Visible = False
-                    ProgressBar1.Visible = False
+                    Label7.Text = "Build completed!"
                 Else
                     MessageBox.Show("Build Failed! Incomplete or corrupted Data please reinstall builder.", "Build Failed!")
-                    Label7.Visible = False
-                    ProgressBar1.Visible = False
+                    Label7.Text = "Build failed!"
                 End If
             Else
                 MessageBox.Show("Please select Build Mode!", "Build Failed!")
@@ -159,9 +150,7 @@ Public Class Form1
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Try
-            Label7.Visible = True
             Label7.Text = "Cleaning in progress..."
-            ProgressBar1.Visible = True
             ProgressBar1.Value = 20
             Dim apppath As String = Application.StartupPath()
             System.IO.Directory.Delete(apppath + "\binary", True)
@@ -169,8 +158,7 @@ Public Class Form1
             System.IO.Directory.CreateDirectory(apppath + "\binary")
             ProgressBar1.Value = 100
             MessageBox.Show("Cleanup completed!", "Completed!")
-            Label7.Visible = False
-            ProgressBar1.Visible = False
+            Label7.Text = "Cleanup completed!"
         Catch ex As Exception
             MessageBox.Show("Please close built app first before perform this action.", "Failed!")
             Label7.Visible = False
@@ -294,12 +282,11 @@ Public Class Form1
             Label13.Text = stringReader2
             Label14.Text = stringReader3
             ProgressBar1.Value = 100
-            Label7.Visible = False
-            ProgressBar1.Visible = False
-            Label7.Text = "Building in progress..."
+            Label7.Text = "Ready to build"
+            ProgressBar1.Value = 0
         Catch ex As Exception
-            Label7.Visible = False
-            ProgressBar1.Visible = False
+            Label7.Text = "Ready to build"
+            ProgressBar1.Value = 0
             Label15.Visible = True
             Label14.Visible = False
             Label12.Text = "Running in offline mode"
