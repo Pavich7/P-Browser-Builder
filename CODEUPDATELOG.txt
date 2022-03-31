@@ -1,13 +1,4 @@
-Release 2.0.0
-- ADDED: Resource usage monitor.
-- ADDED: Open Builder in Explorer.
-- ADDED: Open Build Directory.
-- ADDED: Window menu strip.
-- ADDED: Right Panel can be hide.
-- ADDED: Ask before install resource.
-- CHANGED: Move extension to menu strip.
-- CHANGED: Move resource menu to build menu strip.
-- CHANGED: Try again button text when offline mode.
+Release 2.1.0
 - UPDATED: CefSharp.Redist
 - UPDATED: CefSharp.Common
 - UPDATED: CefSharp.WinForms
