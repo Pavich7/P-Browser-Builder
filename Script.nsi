@@ -48,6 +48,7 @@ Section "P Browser Installer" SecDummy
   
   ; ADD YOUR OWN FILES HERE...
   File /r "C:\Users\Pavich Komansil\Desktop\inspbb\*"
+  ExecWait '"$INSTDIR\packages\VC_redist.x64.exe"  /passive /norestart'
 
   ; Store installation folder
   WriteRegStr HKCU "Software\P Browser Builder" "" $INSTDIR
