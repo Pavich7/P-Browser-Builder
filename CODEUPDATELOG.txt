@@ -1,9 +1,2 @@
-Release 2.1.0
-- ADDED: Developers Menu
-- ADDED: Unlock Dev Menu
-- ADDED: Hide right panel button
-- UPDATED: CefSharp.Redist Packages.
-- UPDATED: CefSharp.Common Packages.
-- UPDATED: CefSharp.WinForms Packages.
-- REMOVED: Clean up complete pop up.
-- CHANGED: Build Menu UI change.
+Release 2.2.0
+- ADDED: VC_redist.x64.exe passive install into installer
