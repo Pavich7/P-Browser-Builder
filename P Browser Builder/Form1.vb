@@ -628,4 +628,15 @@ Public Class Form1
     Private Sub ReToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReToolStripMenuItem.Click
         Application.Restart()
     End Sub
+
+    Private Sub Panel7_Paint(sender As Object, e As EventArgs) Handles Panel7.Click
+        Panel6.Hide()
+        Me.WindowState = FormWindowState.Normal
+        Me.Size = New Size(1232, 646)
+        Panel1.Width = 872
+        HideRightPanelToolStripMenuItem.Enabled = False
+        ShowRightPanelToolStripMenuItem.Enabled = True
+        Timer2.Stop()
+        MessageBox.Show("You can unhide right panel by click on" + vbNewLine + "Menu Strip: Window > Show right panel", "Notification")
+    End Sub
 End Class

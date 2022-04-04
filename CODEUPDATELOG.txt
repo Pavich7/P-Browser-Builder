@@ -1,6 +1,7 @@
 Release 2.1.0
 - ADDED: Developers Menu
 - ADDED: Unlock Dev Menu
+- ADDED: Hide right panel button
 - UPDATED: CefSharp.Redist Packages.
 - UPDATED: CefSharp.Common Packages.
 - UPDATED: CefSharp.WinForms Packages.
