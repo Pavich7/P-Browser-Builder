@@ -1,2 +1,3 @@
 Release 2.2.0
 - ADDED: VC_redist.x64.exe passive install into installer
+- CHANGED: Move project save and load to file menu strip

@@ -216,12 +216,13 @@ Public Class Form1
         ExtensionsNotFoundToolStripMenuItem.Enabled = False
         Button7.Enabled = False
         ProgressBar2.Visible = False
+        SaveProjectToolStripMenuItem.Visible = False
+        LoadProjectToolStripMenuItem.Visible = False
+        SaveProjectToolStripMenuItem.Enabled = False
+        LoadProjectToolStripMenuItem.Enabled = False
         RadioButton3.Visible = False
         Label21.Visible = False
-        Button4.Enabled = False
         DevToolStripMenuItem.Visible = False
-        Button4.Visible = False
-        Button5.Visible = False
         Timer2.Start()
         TextBox3.Enabled = False
         Label15.Visible = False
@@ -336,25 +337,6 @@ Public Class Form1
             PictureBox1.Image = Image.FromFile(OpenFileDialog1.FileName)
             TextBox3.Text = OpenFileDialog1.FileName
             My.Computer.FileSystem.CopyFile(OpenFileDialog1.FileName, apppath + "\buildcache\appicns\appicns.ico")
-        End If
-    End Sub
-
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        OpenFileDialog2.Multiselect = False
-        OpenFileDialog2.Title = "Choose your project file"
-        OpenFileDialog2.Filter = "P Browser Builder Project Files|*.pbproj"
-        If OpenFileDialog2.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
-            MessageBox.Show("Project data files corrupt or not valid!", "Load failure!")
-        End If
-    End Sub
-
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Dim apppath As String = Application.StartupPath()
-        SaveFileDialog1.Filter = "P Browser Builder Project Files|*.pbproj"
-        If SaveFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
-            System.IO.Directory.Delete(apppath + "\savecache", True)
-            System.IO.Directory.CreateDirectory(apppath + "\savecache")
-            System.IO.Directory.CreateDirectory(apppath + "\savecache\" + TextBox2.Text)
         End If
     End Sub
 
@@ -588,16 +570,15 @@ Public Class Form1
     End Sub
 
     Private Sub UnlockIncompleteFeatureToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UnlockIncompleteFeatureToolStripMenuItem.Click
-        Button4.Visible = True
-        Button5.Visible = True
         RadioButton3.Visible = True
+        SaveProjectToolStripMenuItem.Visible = True
+        LoadProjectToolStripMenuItem.Visible = True
         UnlockIncompleteFeatureToolStripMenuItem.Enabled = False
     End Sub
 
     Private Sub ForceUnlockDisableButtonToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ForceUnlockDisableButtonToolStripMenuItem.Click
         Dim result As DialogResult = MessageBox.Show("Force Unlocking the button is extremely dangerous." + vbNewLine + "YOUR MAY NEED TO REINSTALL YOUR BUILDER IN CASE OF DAMAGED!" + vbNewLine + "Do you want to process it?", "You sure about this?", MessageBoxButtons.YesNo)
         If (result = DialogResult.Yes) Then
-            Button4.Enabled = True
             Button1.Enabled = True
             Button2.Enabled = True
             Label4.Enabled = True
@@ -605,6 +586,8 @@ Public Class Form1
             Label8.Enabled = True
             Label6.Enabled = True
             Label9.Enabled = True
+            SaveProjectToolStripMenuItem.Enabled = True
+            LoadProjectToolStripMenuItem.Enabled = True
             RadioButton1.Enabled = True
             RadioButton2.Enabled = True
             CheckBox1.Enabled = True
@@ -638,5 +621,24 @@ Public Class Form1
         ShowRightPanelToolStripMenuItem.Enabled = True
         Timer2.Stop()
         MessageBox.Show("You can unhide right panel by click on" + vbNewLine + "Menu Strip: Window > Show right panel", "Notification")
+    End Sub
+
+    Private Sub SaveProjectToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveProjectToolStripMenuItem.Click
+        Dim apppath As String = Application.StartupPath()
+        SaveFileDialog1.Filter = "P Browser Builder Project Files|*.pbproj"
+        If SaveFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
+            System.IO.Directory.Delete(apppath + "\savecache", True)
+            System.IO.Directory.CreateDirectory(apppath + "\savecache")
+            System.IO.Directory.CreateDirectory(apppath + "\savecache\" + TextBox2.Text)
+        End If
+    End Sub
+
+    Private Sub LoadProjectToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoadProjectToolStripMenuItem.Click
+        OpenFileDialog2.Multiselect = False
+        OpenFileDialog2.Title = "Choose your project file"
+        OpenFileDialog2.Filter = "P Browser Builder Project Files|*.pbproj"
+        If OpenFileDialog2.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
+            MessageBox.Show("Project data files corrupt or not valid!", "Load failure!")
+        End If
     End Sub
 End Class

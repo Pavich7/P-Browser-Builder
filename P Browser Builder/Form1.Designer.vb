@@ -26,6 +26,8 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveProjectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LoadProjectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClearAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -85,8 +87,6 @@ Partial Class Form1
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -142,22 +142,34 @@ Partial Class Form1
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClearAllToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveProjectToolStripMenuItem, Me.LoadProjectToolStripMenuItem, Me.ClearAllToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
         '
+        'SaveProjectToolStripMenuItem
+        '
+        Me.SaveProjectToolStripMenuItem.Name = "SaveProjectToolStripMenuItem"
+        Me.SaveProjectToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
+        Me.SaveProjectToolStripMenuItem.Text = "Save Project"
+        '
+        'LoadProjectToolStripMenuItem
+        '
+        Me.LoadProjectToolStripMenuItem.Name = "LoadProjectToolStripMenuItem"
+        Me.LoadProjectToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
+        Me.LoadProjectToolStripMenuItem.Text = "Load Project"
+        '
         'ClearAllToolStripMenuItem
         '
         Me.ClearAllToolStripMenuItem.Name = "ClearAllToolStripMenuItem"
-        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
+        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
         Me.ClearAllToolStripMenuItem.Text = "Clear All"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'PreviewToolStripMenuItem
@@ -234,7 +246,7 @@ Partial Class Form1
         'ExtensionsNotFoundToolStripMenuItem
         '
         Me.ExtensionsNotFoundToolStripMenuItem.Name = "ExtensionsNotFoundToolStripMenuItem"
-        Me.ExtensionsNotFoundToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExtensionsNotFoundToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
         Me.ExtensionsNotFoundToolStripMenuItem.Text = "Coming Soon..."
         '
         'WindowToolStripMenuItem
@@ -248,7 +260,7 @@ Partial Class Form1
         '
         Me.BuilderWindowToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NormalToolStripMenuItem, Me.MaximizedToolStripMenuItem, Me.MinimizedToolStripMenuItem})
         Me.BuilderWindowToolStripMenuItem.Name = "BuilderWindowToolStripMenuItem"
-        Me.BuilderWindowToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BuilderWindowToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.BuilderWindowToolStripMenuItem.Text = "Builder Window"
         '
         'NormalToolStripMenuItem
@@ -272,13 +284,13 @@ Partial Class Form1
         'HideRightPanelToolStripMenuItem
         '
         Me.HideRightPanelToolStripMenuItem.Name = "HideRightPanelToolStripMenuItem"
-        Me.HideRightPanelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.HideRightPanelToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.HideRightPanelToolStripMenuItem.Text = "Hide right panel"
         '
         'ShowRightPanelToolStripMenuItem
         '
         Me.ShowRightPanelToolStripMenuItem.Name = "ShowRightPanelToolStripMenuItem"
-        Me.ShowRightPanelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ShowRightPanelToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.ShowRightPanelToolStripMenuItem.Text = "Show right panel"
         '
         'GuideToolStripMenuItem
@@ -610,26 +622,6 @@ Partial Class Form1
         Me.CheckBox2.TabIndex = 19
         Me.CheckBox2.Text = "Show your app in explorer after build"
         Me.CheckBox2.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Font = New System.Drawing.Font("Segoe UI Semilight", 8.0!)
-        Me.Button4.Location = New System.Drawing.Point(122, 37)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(77, 29)
-        Me.Button4.TabIndex = 20
-        Me.Button4.Text = "Save Project"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Font = New System.Drawing.Font("Segoe UI Semilight", 8.0!)
-        Me.Button5.Location = New System.Drawing.Point(205, 37)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(77, 29)
-        Me.Button5.TabIndex = 21
-        Me.Button5.Text = "Load Project"
-        Me.Button5.UseVisualStyleBackColor = True
         '
         'Label9
         '
@@ -987,8 +979,6 @@ Partial Class Form1
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.CheckBox1)
@@ -1052,8 +1042,6 @@ Partial Class Form1
     Friend WithEvents Label8 As Label
     Friend WithEvents CheckBox2 As CheckBox
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SupportToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label9 As Label
@@ -1126,4 +1114,6 @@ Partial Class Form1
     Friend WithEvents ResetExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Panel7 As Panel
+    Friend WithEvents SaveProjectToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LoadProjectToolStripMenuItem As ToolStripMenuItem
 End Class
