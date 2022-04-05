@@ -216,6 +216,7 @@ Public Class Form1
         ExtensionsNotFoundToolStripMenuItem.Enabled = False
         Button7.Enabled = False
         ProgressBar2.Visible = False
+        ExtensionsToolStripMenuItem.Visible = False
         SaveProjectToolStripMenuItem.Visible = False
         LoadProjectToolStripMenuItem.Visible = False
         SaveProjectToolStripMenuItem.Enabled = False
@@ -573,6 +574,7 @@ Public Class Form1
         RadioButton3.Visible = True
         SaveProjectToolStripMenuItem.Visible = True
         LoadProjectToolStripMenuItem.Visible = True
+        ExtensionsToolStripMenuItem.Visible = True
         UnlockIncompleteFeatureToolStripMenuItem.Enabled = False
     End Sub
 

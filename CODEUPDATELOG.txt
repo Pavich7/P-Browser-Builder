@@ -3,3 +3,4 @@ Release 2.2.0
 - ADDED: Check for Resource version update.
 - CHANGED: Move project save and load to file menu strip.
 - CHANGED: Text message when resource version info not found.
+- REMOVED: Extension menu strip.
