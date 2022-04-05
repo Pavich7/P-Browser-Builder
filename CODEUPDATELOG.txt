@@ -1,3 +1,5 @@
 Release 2.2.0
-- ADDED: VC_redist.x64.exe passive install into installer
-- CHANGED: Move project save and load to file menu strip
+- ADDED: VC_redist.x64.exe passive install into installer.
+- ADDED: Check for Resource version update.
+- CHANGED: Move project save and load to file menu strip.
+- CHANGED: Text message when resource version info not found.

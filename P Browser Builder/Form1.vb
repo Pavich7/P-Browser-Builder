@@ -432,7 +432,7 @@ Public Class Form1
             Dim apppath As String = Application.StartupPath()
             Dim metacheck As String = apppath + "\resource\metadata\version.txt"
             If Not System.IO.File.Exists(metacheck) Then
-                MessageBox.Show("Resource not compatible with this version of P Browser Builder!" + vbNewLine + "Please update resource by uninstall and reinstall via resource menu.", "Error!")
+                MessageBox.Show("Resource not compatible with this version of P Browser Builder!" + vbNewLine + "Please update resource by uninstall and reinstall via builder menu.", "Error!")
             Else
                 System.IO.Directory.Delete(apppath + "\resource\getcache", True)
                 System.IO.Directory.CreateDirectory(apppath + "\resource\getcache")
@@ -640,5 +640,34 @@ Public Class Form1
         If OpenFileDialog2.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
             MessageBox.Show("Project data files corrupt or not valid!", "Load failure!")
         End If
+    End Sub
+
+    Private Sub CheckForUpdateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CheckForUpdateToolStripMenuItem.Click
+        Try
+            Dim apppath As String = Application.StartupPath()
+            Dim metacheck As String = apppath + "\resource\metadata\version.txt"
+            If Not System.IO.File.Exists(metacheck) Then
+                MessageBox.Show("Resource not compatible with this version of P Browser Builder!" + vbNewLine + "Please update resource by uninstall and reinstall via build menu.", "Error!")
+            Else
+                System.IO.Directory.Delete(apppath + "\resource\getcache", True)
+                System.IO.Directory.CreateDirectory(apppath + "\resource\getcache")
+                Dim fileReader As System.IO.StreamReader
+                My.Computer.Network.DownloadFile("https://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/cfuversion/onlineresver.txt", apppath + "\resource\getcache\onlineresver.txt")
+                Dim fileReader1 As System.IO.StreamReader
+                fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\getcache\onlineresver.txt")
+                Dim stringReader1 As String
+                stringReader1 = fileReader1.ReadLine()
+                fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\metadata\version.txt")
+                Dim stringReader As String
+                stringReader = fileReader.ReadLine()
+                If stringReader1.Contains(stringReader) Then
+                    MessageBox.Show("Resource is up-to-date!", "Check for update")
+                Else
+                    MessageBox.Show("New version detected! (" + stringReader1 + ")" + vbNewLine + "Please update by uninstall and reinstall resource via build menu.", "Check for update")
+                End If
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Could not fetch latest online version info!" + vbNewLine + "Please try again later.", "Error!")
+        End Try
     End Sub
 End Class
