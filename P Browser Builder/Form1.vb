@@ -366,6 +366,11 @@ Public Class Form1
     Private Sub Label18_Click(sender As Object, e As EventArgs) Handles Label18.Click
         Label18.Enabled = False
         Label18.Text = "Waiting for confirmation..."
+        Timer2.Stop()
+        ProgressBar3.Value = 0
+        Label23.Text = "Memory Usage: Paused"
+        Label24.Text = "Paged Memory Usage: Paused"
+        Label25.Text = "Paused"
         Dim result As DialogResult = MessageBox.Show("Do you wish to install builder resource?" + vbNewLine + "Builder will not responding while installing resource." + vbNewLine + "ATTEMPTING TO EXIT THE BUILDER MAY INCOMPLETE RESOURCE", "You sure about this?", MessageBoxButtons.YesNo)
         If (result = DialogResult.Yes) Then
             Label21.Visible = True
@@ -409,6 +414,7 @@ Public Class Form1
                 Label18.Text = "Try again"
             End Try
         Else
+            Timer2.Start()
             Label18.Enabled = True
             Label18.Text = "Try again"
         End If
