@@ -27,7 +27,7 @@ Partial Class splash
         '
         'ProgressBar1
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(95, 333)
+        Me.ProgressBar1.Location = New System.Drawing.Point(71, 333)
         Me.ProgressBar1.MarqueeAnimationSpeed = 25
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(250, 3)
@@ -37,9 +37,9 @@ Partial Class splash
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.P_Browser_Builder.My.Resources.Resources.Screenshot_2022_04_09_131231
-        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ClientSize = New System.Drawing.Size(859, 440)
+        Me.BackgroundImage = Global.P_Browser_Builder.My.Resources.Resources.Screenshot_2022_04_09_190427
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(713, 440)
         Me.Controls.Add(Me.ProgressBar1)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None

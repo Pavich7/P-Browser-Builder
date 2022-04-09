@@ -1,4 +1,9 @@
 Release 3.0.0
-- ADDED: Pause system monitor while installing resource.
+- ADDED: License Agreement button in about page.
+- ADDED: Source Code License button in about page.
+- ADDED: PavichDev Support button in about page.
+- ADDED: GitHub Repository button in about page.
 - ADDED: Show splash screen in dev menu.
+- ADDED: Pause system monitor while installing resource.
 - CHANGED: New splash screen design.
+- CHANGED: New about screen design.
