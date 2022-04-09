@@ -38,6 +38,7 @@ Partial Class Form1
         Me.BuilderResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UninstallToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteCacheToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CheckForUpdateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenBuildDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExtensionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -121,7 +122,7 @@ Partial Class Form1
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
-        Me.CheckForUpdateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ShowSplashScreenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -151,26 +152,26 @@ Partial Class Form1
         'SaveProjectToolStripMenuItem
         '
         Me.SaveProjectToolStripMenuItem.Name = "SaveProjectToolStripMenuItem"
-        Me.SaveProjectToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SaveProjectToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
         Me.SaveProjectToolStripMenuItem.Text = "Save Project"
         '
         'LoadProjectToolStripMenuItem
         '
         Me.LoadProjectToolStripMenuItem.Name = "LoadProjectToolStripMenuItem"
-        Me.LoadProjectToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LoadProjectToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
         Me.LoadProjectToolStripMenuItem.Text = "Load Project"
         '
         'ClearAllToolStripMenuItem
         '
         Me.ClearAllToolStripMenuItem.Name = "ClearAllToolStripMenuItem"
-        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
         Me.ClearAllToolStripMenuItem.Text = "Clear All"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'PreviewToolStripMenuItem
@@ -216,19 +217,25 @@ Partial Class Form1
         'UninstallToolStripMenuItem
         '
         Me.UninstallToolStripMenuItem.Name = "UninstallToolStripMenuItem"
-        Me.UninstallToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.UninstallToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.UninstallToolStripMenuItem.Text = "Uninstall"
         '
         'DeleteCacheToolStripMenuItem
         '
         Me.DeleteCacheToolStripMenuItem.Name = "DeleteCacheToolStripMenuItem"
-        Me.DeleteCacheToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DeleteCacheToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.DeleteCacheToolStripMenuItem.Text = "Delete Cache"
+        '
+        'CheckForUpdateToolStripMenuItem
+        '
+        Me.CheckForUpdateToolStripMenuItem.Name = "CheckForUpdateToolStripMenuItem"
+        Me.CheckForUpdateToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.CheckForUpdateToolStripMenuItem.Text = "Check for update"
         '
         'AboutToolStripMenuItem1
         '
         Me.AboutToolStripMenuItem1.Name = "AboutToolStripMenuItem1"
-        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(165, 22)
         Me.AboutToolStripMenuItem1.Text = "About"
         '
         'OpenBuildDirectoryToolStripMenuItem
@@ -261,7 +268,7 @@ Partial Class Form1
         '
         Me.BuilderWindowToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NormalToolStripMenuItem, Me.MaximizedToolStripMenuItem, Me.MinimizedToolStripMenuItem})
         Me.BuilderWindowToolStripMenuItem.Name = "BuilderWindowToolStripMenuItem"
-        Me.BuilderWindowToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.BuilderWindowToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.BuilderWindowToolStripMenuItem.Text = "Builder Window"
         '
         'NormalToolStripMenuItem
@@ -285,13 +292,13 @@ Partial Class Form1
         'HideRightPanelToolStripMenuItem
         '
         Me.HideRightPanelToolStripMenuItem.Name = "HideRightPanelToolStripMenuItem"
-        Me.HideRightPanelToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.HideRightPanelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.HideRightPanelToolStripMenuItem.Text = "Hide right panel"
         '
         'ShowRightPanelToolStripMenuItem
         '
         Me.ShowRightPanelToolStripMenuItem.Name = "ShowRightPanelToolStripMenuItem"
-        Me.ShowRightPanelToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.ShowRightPanelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ShowRightPanelToolStripMenuItem.Text = "Show right panel"
         '
         'GuideToolStripMenuItem
@@ -358,7 +365,7 @@ Partial Class Form1
         '
         'DevToolStripMenuItem
         '
-        Me.DevToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UnlockIncompleteFeatureToolStripMenuItem, Me.ForceUnlockDisableButtonToolStripMenuItem, Me.GoBackToDefaultToolStripMenuItem})
+        Me.DevToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ShowSplashScreenToolStripMenuItem, Me.UnlockIncompleteFeatureToolStripMenuItem, Me.ForceUnlockDisableButtonToolStripMenuItem, Me.GoBackToDefaultToolStripMenuItem})
         Me.DevToolStripMenuItem.Name = "DevToolStripMenuItem"
         Me.DevToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
         Me.DevToolStripMenuItem.Text = "Dev"
@@ -385,13 +392,13 @@ Partial Class Form1
         'ResetExitToolStripMenuItem
         '
         Me.ResetExitToolStripMenuItem.Name = "ResetExitToolStripMenuItem"
-        Me.ResetExitToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.ResetExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ResetExitToolStripMenuItem.Text = "Reset and Exit"
         '
         'ReToolStripMenuItem
         '
         Me.ReToolStripMenuItem.Name = "ReToolStripMenuItem"
-        Me.ReToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.ReToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ReToolStripMenuItem.Text = "Reset and Restart"
         '
         'Button1
@@ -968,11 +975,11 @@ Partial Class Form1
         Me.RadioButton3.Text = "Build with Packaging Ready Mode (Final)"
         Me.RadioButton3.UseVisualStyleBackColor = True
         '
-        'CheckForUpdateToolStripMenuItem
+        'ShowSplashScreenToolStripMenuItem
         '
-        Me.CheckForUpdateToolStripMenuItem.Name = "CheckForUpdateToolStripMenuItem"
-        Me.CheckForUpdateToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.CheckForUpdateToolStripMenuItem.Text = "Check for update"
+        Me.ShowSplashScreenToolStripMenuItem.Name = "ShowSplashScreenToolStripMenuItem"
+        Me.ShowSplashScreenToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.ShowSplashScreenToolStripMenuItem.Text = "Show splash screen"
         '
         'Form1
         '
@@ -1124,4 +1131,5 @@ Partial Class Form1
     Friend WithEvents SaveProjectToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LoadProjectToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CheckForUpdateToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ShowSplashScreenToolStripMenuItem As ToolStripMenuItem
 End Class

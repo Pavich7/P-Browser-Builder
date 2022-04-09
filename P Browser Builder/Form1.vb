@@ -678,4 +678,8 @@ Public Class Form1
             MessageBox.Show("Could not fetch latest online version info!" + vbNewLine + "Please try again later.", "Error!")
         End Try
     End Sub
+
+    Private Sub ShowSplashScreenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowSplashScreenToolStripMenuItem.Click
+        splash.Show()
+    End Sub
 End Class

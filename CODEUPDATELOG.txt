@@ -1,2 +1,4 @@
 Release 3.0.0
 - ADDED: Pause system monitor while installing resource.
+- ADDED: Show splash screen in dev menu.
+- CHANGED: New splash screen design.
