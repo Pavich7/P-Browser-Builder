@@ -7,3 +7,6 @@ Release 3.0.0
 - ADDED: Pause system monitor while installing resource.
 - CHANGED: New splash screen design.
 - CHANGED: New about screen design.
+- UPDATED: CefSharp.Redist
+- UPDATED: CefSharp.Common
+- UPDATED: CefSharp.WinForms
