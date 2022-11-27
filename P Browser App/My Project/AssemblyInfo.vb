@@ -8,7 +8,7 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("P Browser App")>
-<Assembly: AssemblyDescription("P Browser App form P Browser Builder")>
+<Assembly: AssemblyDescription("P Browser App from P Browser Builder")>
 <Assembly: AssemblyCompany("PavichDev Software")>
 <Assembly: AssemblyProduct("P Browser App")>
 <Assembly: AssemblyCopyright("Copyright © 2022 Pavich Komansil")>
