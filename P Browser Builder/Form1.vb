@@ -232,7 +232,11 @@ Public Class Form1
         ProgressBar1.Visible = True
         System.IO.Directory.Delete(apppath + "\nfcache", True)
         System.IO.Directory.CreateDirectory(apppath + "\nfcache")
-        Timer1.Start()
+        'Disable news feed due dns problem
+        Label12.Text = "Newsfeed disabled in this version"
+        Label13.Text = "Due to DNS problem. We disabled the newsfeed in this version."
+        Label15.Enabled = False
+        'Timer1.Start()
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click

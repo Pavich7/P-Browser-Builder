@@ -23,10 +23,10 @@ Partial Class about
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -42,25 +42,15 @@ Partial Class about
         Me.Panel1.Size = New System.Drawing.Size(821, 40)
         Me.Panel1.TabIndex = 0
         '
-        'Button1
+        'Button4
         '
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(66, 5)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(167, 29)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "License Agreement"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(239, 5)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(167, 29)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Source Code License"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(585, 5)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(167, 29)
+        Me.Button4.TabIndex = 3
+        Me.Button4.Text = "GitHub Repository"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'Button3
         '
@@ -72,22 +62,32 @@ Partial Class about
         Me.Button3.Text = "PavichDev Support"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'Button4
+        'Button2
         '
-        Me.Button4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(585, 5)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(167, 29)
-        Me.Button4.TabIndex = 3
-        Me.Button4.Text = "GitHub Repository"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Button2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(239, 5)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(167, 29)
+        Me.Button2.TabIndex = 1
+        Me.Button2.Text = "Source Code License"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(66, 5)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(167, 29)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "License Agreement"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'about
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.BackgroundImage = Global.P_Browser_Builder.My.Resources.Resources.Screenshot_2022_04_09_185006
+        Me.BackgroundImage = Global.P_Browser_Builder.My.Resources.Resources.Screenshot_2023_01_14_202654
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(817, 504)
         Me.Controls.Add(Me.Panel1)

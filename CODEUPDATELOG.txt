@@ -10,3 +10,7 @@ Release 3.0.0
 - UPDATED: CefSharp.Redist
 - UPDATED: CefSharp.Common
 - UPDATED: CefSharp.WinForms
+
+KNOWN ISSUE!
+- ISSUE: Newsfeed disabled due to DNS problem.
+- ISSUE: Online service issue due to DNS problem.

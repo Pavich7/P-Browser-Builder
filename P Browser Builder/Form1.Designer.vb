@@ -61,6 +61,7 @@ Partial Class Form1
         Me.SubmitBugsReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UnlockDeveloperMenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DevToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ShowSplashScreenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UnlockIncompleteFeatureToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ForceUnlockDisableButtonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GoBackToDefaultToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -122,7 +123,6 @@ Partial Class Form1
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
-        Me.ShowSplashScreenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -268,7 +268,7 @@ Partial Class Form1
         '
         Me.BuilderWindowToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NormalToolStripMenuItem, Me.MaximizedToolStripMenuItem, Me.MinimizedToolStripMenuItem})
         Me.BuilderWindowToolStripMenuItem.Name = "BuilderWindowToolStripMenuItem"
-        Me.BuilderWindowToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BuilderWindowToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.BuilderWindowToolStripMenuItem.Text = "Builder Window"
         '
         'NormalToolStripMenuItem
@@ -292,13 +292,13 @@ Partial Class Form1
         'HideRightPanelToolStripMenuItem
         '
         Me.HideRightPanelToolStripMenuItem.Name = "HideRightPanelToolStripMenuItem"
-        Me.HideRightPanelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.HideRightPanelToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.HideRightPanelToolStripMenuItem.Text = "Hide right panel"
         '
         'ShowRightPanelToolStripMenuItem
         '
         Me.ShowRightPanelToolStripMenuItem.Name = "ShowRightPanelToolStripMenuItem"
-        Me.ShowRightPanelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ShowRightPanelToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.ShowRightPanelToolStripMenuItem.Text = "Show right panel"
         '
         'GuideToolStripMenuItem
@@ -370,6 +370,12 @@ Partial Class Form1
         Me.DevToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
         Me.DevToolStripMenuItem.Text = "Dev"
         '
+        'ShowSplashScreenToolStripMenuItem
+        '
+        Me.ShowSplashScreenToolStripMenuItem.Name = "ShowSplashScreenToolStripMenuItem"
+        Me.ShowSplashScreenToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.ShowSplashScreenToolStripMenuItem.Text = "Show splash screen"
+        '
         'UnlockIncompleteFeatureToolStripMenuItem
         '
         Me.UnlockIncompleteFeatureToolStripMenuItem.Name = "UnlockIncompleteFeatureToolStripMenuItem"
@@ -392,13 +398,13 @@ Partial Class Form1
         'ResetExitToolStripMenuItem
         '
         Me.ResetExitToolStripMenuItem.Name = "ResetExitToolStripMenuItem"
-        Me.ResetExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ResetExitToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.ResetExitToolStripMenuItem.Text = "Reset and Exit"
         '
         'ReToolStripMenuItem
         '
         Me.ReToolStripMenuItem.Name = "ReToolStripMenuItem"
-        Me.ReToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ReToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.ReToolStripMenuItem.Text = "Reset and Restart"
         '
         'Button1
@@ -974,12 +980,6 @@ Partial Class Form1
         Me.RadioButton3.TabStop = True
         Me.RadioButton3.Text = "Build with Packaging Ready Mode (Final)"
         Me.RadioButton3.UseVisualStyleBackColor = True
-        '
-        'ShowSplashScreenToolStripMenuItem
-        '
-        Me.ShowSplashScreenToolStripMenuItem.Name = "ShowSplashScreenToolStripMenuItem"
-        Me.ShowSplashScreenToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
-        Me.ShowSplashScreenToolStripMenuItem.Text = "Show splash screen"
         '
         'Form1
         '
