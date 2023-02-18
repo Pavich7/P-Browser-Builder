@@ -17,4 +17,4 @@ Since P Browser Builder is open-source software. Please read LICENSE.TXT for con
 This project is a part of PavichDev open-source and using new license PavichDev Private License 1.1
 ### End User License Agreement (EULA)
 There is EULA document you can download to know what permission that you can use on P Browser Builder.\
-You must read and agree before installing program or you can also [download from PavichDev Websites](https://pavichdev.ddns.net/download/documents/p-browser-builder-eula.pdf).
+You must read and agree before installing program or you can also [download from PavichDev Websites](http://pavichdev.ddns.net/download/documents/p-browser-builder-eula.pdf).
