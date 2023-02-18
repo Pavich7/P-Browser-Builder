@@ -201,14 +201,18 @@ Public Class Form1
             Label18.Visible = False
             Dim headercheck As String = apppath + "\resource\metadata\checkpoint\header.chkp"
             Dim resvcheck As String = apppath + "\resource\metadata\checkpoint\r100.chkp"
+            Dim resvcheck2 As String = apppath + "\resource\metadata\checkpoint\r200.chkp"
             If Not System.IO.File.Exists(headercheck) Then
-                MessageBox.Show("Resource not compatible! You might encounter errors." + vbNewLine + "Please reinstall builder resource via resource menu.", "Resource not compatible!")
+                MessageBox.Show("Legacy Resource not compatible! You might encounter errors." + vbNewLine + "Please reinstall builder resource via resource menu.", "Resource not compatible!")
             End If
             If Not System.IO.File.Exists(resvcheck) Then
-                MessageBox.Show("Resource not compatible! You might encounter errors." + vbNewLine + "Please reinstall builder resource via resource menu.", "Resource not compatible!")
+                MessageBox.Show("Legacy Resource not compatible! You might encounter errors." + vbNewLine + "Please reinstall builder resource via resource menu.", "Resource not compatible!")
+            End If
+            If Not System.IO.File.Exists(resvcheck2) Then
+                MessageBox.Show("Old Resource not compatible! You might encounter errors." + vbNewLine + "Please reinstall builder resource via resource menu.", "Resource not compatible!")
             End If
         End If
-            Dim cachecheck As String = apppath + "\updatedata\pbb-resource.zip"
+        Dim cachecheck As String = apppath + "\updatedata\pbb-resource.zip"
         If Not System.IO.File.Exists(cachecheck) Then
             DeleteCacheToolStripMenuItem.Enabled = False
         End If
@@ -232,11 +236,7 @@ Public Class Form1
         ProgressBar1.Visible = True
         System.IO.Directory.Delete(apppath + "\nfcache", True)
         System.IO.Directory.CreateDirectory(apppath + "\nfcache")
-        'Disable news feed due dns problem
-        Label12.Text = "Newsfeed disabled in this version"
-        Label13.Text = "Due to DNS problem. We disabled the newsfeed in this version."
-        Label15.Enabled = False
-        'Timer1.Start()
+        Timer1.Start()
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
@@ -275,9 +275,9 @@ Public Class Form1
         Try
             ProgressBar1.Value = 10
             Dim apppath As String = Application.StartupPath()
-            My.Computer.Network.DownloadFile("https://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/newsfeed/nf1_title.txt", apppath + "\nfcache\nf1_title.txt")
-            My.Computer.Network.DownloadFile("https://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/newsfeed/nf1_desc.txt", apppath + "\nfcache\nf1_desc.txt")
-            My.Computer.Network.DownloadFile("https://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/newsfeed/nf1_date.txt", apppath + "\nfcache\nf1_date.txt")
+            My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/newsfeed/nf1_title.txt", apppath + "\nfcache\nf1_title.txt")
+            My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/newsfeed/nf1_desc.txt", apppath + "\nfcache\nf1_desc.txt")
+            My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/newsfeed/nf1_date.txt", apppath + "\nfcache\nf1_date.txt")
             ProgressBar1.Value = 50
             Dim fileReader1 As System.IO.StreamReader
             Dim fileReader2 As System.IO.StreamReader
@@ -448,7 +448,7 @@ Public Class Form1
                 System.IO.Directory.Delete(apppath + "\resource\getcache", True)
                 System.IO.Directory.CreateDirectory(apppath + "\resource\getcache")
                 Dim fileReader As System.IO.StreamReader
-                My.Computer.Network.DownloadFile("https://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/cfuversion/onlineresver.txt", apppath + "\resource\getcache\onlineresver.txt")
+                My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/cfuversion/onlineresver.txt", apppath + "\resource\getcache\onlineresver.txt")
                 Dim fileReader1 As System.IO.StreamReader
                 fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\getcache\onlineresver.txt")
                 Dim stringReader1 As String
@@ -664,7 +664,7 @@ Public Class Form1
                 System.IO.Directory.Delete(apppath + "\resource\getcache", True)
                 System.IO.Directory.CreateDirectory(apppath + "\resource\getcache")
                 Dim fileReader As System.IO.StreamReader
-                My.Computer.Network.DownloadFile("https://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/cfuversion/onlineresver.txt", apppath + "\resource\getcache\onlineresver.txt")
+                My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/cfuversion/onlineresver.txt", apppath + "\resource\getcache\onlineresver.txt")
                 Dim fileReader1 As System.IO.StreamReader
                 fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\getcache\onlineresver.txt")
                 Dim stringReader1 As String

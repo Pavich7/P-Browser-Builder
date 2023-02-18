@@ -1,4 +1,5 @@
-﻿Imports System.Reflection
+﻿Imports System
+Imports System.Reflection
 Imports System.Runtime.InteropServices
 
 ' General Information about an assembly is controlled through the following
@@ -7,17 +8,17 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("P Browser App")>
-<Assembly: AssemblyDescription("P Browser App from P Browser Builder")>
-<Assembly: AssemblyCompany("PavichDev Software")>
-<Assembly: AssemblyProduct("P Browser App")>
-<Assembly: AssemblyCopyright("Copyright © 2023 Pavich Komansil")>
+<Assembly: AssemblyTitle("Update Utility")>
+<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyProduct("Update Utility")>
+<Assembly: AssemblyCopyright("Copyright ©  2023")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("9280bd0d-15c4-40d8-905f-7bee7b9d9bcd")>
+<Assembly: Guid("eb6dce8b-3534-4ed1-b6c2-6d2a1230a5d6")>
 
 ' Version information for an assembly consists of the following four values:
 '
@@ -30,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("2.0.0")>
-<Assembly: AssemblyFileVersion("2.0.0")>
+<Assembly: AssemblyVersion("1.0.0.0")>
+<Assembly: AssemblyFileVersion("1.0.0.0")>

@@ -7,10 +7,8 @@ Release 3.0.0
 - ADDED: Pause system monitor while installing resource.
 - CHANGED: New splash screen design.
 - CHANGED: New about screen design.
+- CHANGED: Resources compatibility text.
 - UPDATED: CefSharp.Redist
 - UPDATED: CefSharp.Common
 - UPDATED: CefSharp.WinForms
-
-KNOWN ISSUE!
-- ISSUE: Newsfeed disabled due to DNS problem.
-- ISSUE: Online service issue due to DNS problem.
+- FIXED: Online fetch problem.
