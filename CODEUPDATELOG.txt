@@ -11,5 +11,5 @@ Release 3.0.0
 - UPDATED: CefSharp.Redist
 - UPDATED: CefSharp.Common
 - UPDATED: CefSharp.WinForms
-- UPDATED: .NET Framework to 4.8.1
+- UPDATED: Update .NET Framework to 4.8.1
 - FIXED: Online fetch problem.
