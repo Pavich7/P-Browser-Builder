@@ -36,6 +36,7 @@ Partial Class Form1
         Me.OpenRemoteDebuggingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BuilderResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ResourceSettingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenBuildDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExtensionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExtensionsNotFoundToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -97,8 +98,6 @@ Partial Class Form1
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.ProgressBar2 = New System.Windows.Forms.ProgressBar()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
@@ -125,7 +124,6 @@ Partial Class Form1
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
-        Me.ResourceSettingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -217,6 +215,12 @@ Partial Class Form1
         Me.BuilderResourceToolStripMenuItem.Name = "BuilderResourceToolStripMenuItem"
         Me.BuilderResourceToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
         Me.BuilderResourceToolStripMenuItem.Text = "Builder Resource"
+        '
+        'ResourceSettingToolStripMenuItem
+        '
+        Me.ResourceSettingToolStripMenuItem.Name = "ResourceSettingToolStripMenuItem"
+        Me.ResourceSettingToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.ResourceSettingToolStripMenuItem.Text = "Resource Setting..."
         '
         'OpenBuildDirectoryToolStripMenuItem
         '
@@ -746,8 +750,6 @@ Partial Class Form1
         Me.Panel4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel4.BackColor = System.Drawing.SystemColors.Control
-        Me.Panel4.Controls.Add(Me.Label21)
-        Me.Panel4.Controls.Add(Me.ProgressBar2)
         Me.Panel4.Controls.Add(Me.Label18)
         Me.Panel4.Controls.Add(Me.Label19)
         Me.Panel4.Controls.Add(Me.Label20)
@@ -759,25 +761,6 @@ Partial Class Form1
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(265, 264)
         Me.Panel4.TabIndex = 28
-        '
-        'Label21
-        '
-        Me.Label21.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(15, 210)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(123, 17)
-        Me.Label21.TabIndex = 33
-        Me.Label21.Text = "Installing resource..."
-        '
-        'ProgressBar2
-        '
-        Me.ProgressBar2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ProgressBar2.Location = New System.Drawing.Point(18, 197)
-        Me.ProgressBar2.Name = "ProgressBar2"
-        Me.ProgressBar2.Size = New System.Drawing.Size(227, 10)
-        Me.ProgressBar2.TabIndex = 32
         '
         'Label18
         '
@@ -1026,12 +1009,6 @@ Partial Class Form1
         'Timer3
         '
         '
-        'ResourceSettingToolStripMenuItem
-        '
-        Me.ResourceSettingToolStripMenuItem.Name = "ResourceSettingToolStripMenuItem"
-        Me.ResourceSettingToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ResourceSettingToolStripMenuItem.Text = "Resource Setting..."
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1143,8 +1120,6 @@ Partial Class Form1
     Friend WithEvents ReloadPreviewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpenPreviewLogToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label18 As Label
-    Friend WithEvents Label21 As Label
-    Friend WithEvents ProgressBar2 As ProgressBar
     Friend WithEvents ResourceToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpenRemoteDebuggingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Timer2 As Timer

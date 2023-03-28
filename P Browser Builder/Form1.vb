@@ -213,14 +213,12 @@ Public Class Form1
         ShowRightPanelToolStripMenuItem.Enabled = False
         ExtensionsNotFoundToolStripMenuItem.Enabled = False
         Button7.Enabled = False
-        ProgressBar2.Visible = False
         ExtensionsToolStripMenuItem.Visible = False
         SaveProjectToolStripMenuItem.Visible = False
         LoadProjectToolStripMenuItem.Visible = False
         SaveProjectToolStripMenuItem.Enabled = False
         LoadProjectToolStripMenuItem.Enabled = False
         RadioButton3.Visible = False
-        Label21.Visible = False
         DevToolStripMenuItem.Visible = False
         Timer2.Start()
         TextBox3.Enabled = False
@@ -362,10 +360,11 @@ Public Class Form1
         End Try
     End Sub
 
-    Private Sub Label18_Click(sender As Object, e As EventArgs) Handles Label18.Click
+    Private Async Sub Label18_Click(sender As Object, e As EventArgs) Handles Label18.Click
         Label7.Text = "Installing Resource (Waiting for confirmation)"
         Timer2.Stop()
         ProgressBar1.Value = 0
+        ProgressBar3.Value = 0
         Label23.Text = "Memory Usage: Paused"
         Label24.Text = "Paged Memory Usage: Paused"
         Label25.Text = "Paused"
@@ -374,21 +373,26 @@ Public Class Form1
             Label7.Text = "Installing Resource..."
             Label18.Text = "Installing..."
             Try
+                Label18.Enabled = False
                 Dim apppath As String = Application.StartupPath()
-                ProgressBar2.Value = 0
-                System.IO.Directory.Delete(apppath + "\updatedata", True)
-                System.IO.Directory.CreateDirectory(apppath + "\updatedata")
-                ProgressBar2.Value = 25
-                Dim strURL As String = "https://github.com/Pavich7/P-Browser-Builder-Resource/releases/latest/download/pbb-resource.zip"
-                Using webcli As WebClient = New WebClient()
-                    webcli.DownloadFile(strURL, apppath + "\updatedata\pbb-resource.zip")
-                End Using
-                ProgressBar2.Value = 50
+                ProgressBar1.Value = 0
+                'System.IO.Directory.Delete(apppath + "\updatedata", True)
+                'System.IO.Directory.CreateDirectory(apppath + "\updatedata")
+                ProgressBar1.Value = 25
+                'Dim strURL As String = "https://github.com/Pavich7/P-Browser-Builder-Resource/releases/latest/download/pbb-resource.zip"
+                'Using webcli As WebClient = New WebClient()
+                'webcli.DownloadFile(strURL, apppath + "\updatedata\pbb-resource.zip")
+                'End Using
+                ProgressBar1.Value = 50
                 Dim zipPath As String = apppath + "\updatedata\pbb-resource.zip"
                 Dim extractPath As String = apppath
-                ProgressBar2.Value = 75
+                ProgressBar1.Value = 60
                 ZipFile.ExtractToDirectory(zipPath, extractPath)
-                ProgressBar2.Value = 100
+                ProgressBar1.Value = 80
+                Process.Start(apppath + "\resource\resinit.exe")
+                Label7.Text = "First initializing Resource..."
+                Await Task.Delay(30000)
+                ProgressBar1.Value = 100
                 Dim result1 As DialogResult = MessageBox.Show("Installation completed but restart required!" + vbNewLine + "Do you want to restart P Browser Builder now?", "Installation completed!", MessageBoxButtons.YesNo)
                 If (result1 = DialogResult.Yes) Then
                     Application.Restart()
@@ -401,9 +405,8 @@ Public Class Form1
             Catch ex As Exception
                 Dim apppath As String = Application.StartupPath()
                 MessageBox.Show("Could not attempt to install resource!" + vbNewLine + ex.Message, "Error!")
-                Label21.Visible = False
-                ProgressBar2.Visible = False
-                Label18.Visible = True
+                Label18.Enabled = True
+                Label18.Text = "Try again..."
                 System.IO.Directory.Delete(apppath + "\buildcache\appicns", True)
                 System.IO.Directory.CreateDirectory(apppath + "\buildcache\appicns")
                 Label7.Text = "Ready to build"
