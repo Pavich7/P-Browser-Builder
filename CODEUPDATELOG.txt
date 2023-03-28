@@ -1,15 +1,7 @@
-Release 3.0.0
-- ADDED: License Agreement button in about page.
-- ADDED: Source Code License button in about page.
-- ADDED: PavichDev Support button in about page.
-- ADDED: GitHub Repository button in about page.
-- ADDED: Show splash screen in dev menu.
-- ADDED: Pause system monitor while installing resource.
+Release 3.1.0
+- ADDED: Preference menu
+- ADDED: Status bar in builder
+- ADDED: Showing percent of current task.
 - CHANGED: New splash screen design.
 - CHANGED: New about screen design.
-- CHANGED: Resources compatibility text.
-- UPDATED: CefSharp.Redist
-- UPDATED: CefSharp.Common
-- UPDATED: CefSharp.WinForms
-- UPDATED: Update .NET Framework to 4.8.1
-- FIXED: Online fetch problem.
+- CHANGED: High DPI Support are obsolute.

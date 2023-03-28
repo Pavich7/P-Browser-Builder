@@ -177,7 +177,6 @@ Public Class Form1
         Dim setting As New CefSettings With {
             .RemoteDebuggingPort = 8088
         }
-        CefSharp.Cef.EnableHighDPISupport()
         CefSharp.Cef.Initialize(setting)
         Browser = New ChromiumWebBrowser("")
         Panel2.Controls.Add(Browser)
@@ -193,8 +192,6 @@ Public Class Form1
             Label9.Enabled = False
             Label4.Enabled = False
             Label8.Enabled = False
-            UninstallToolStripMenuItem.Enabled = False
-            AboutToolStripMenuItem1.Enabled = False
         Else
             Label19.Visible = False
             Label20.Visible = False
@@ -213,9 +210,6 @@ Public Class Form1
             End If
         End If
         Dim cachecheck As String = apppath + "\updatedata\pbb-resource.zip"
-        If Not System.IO.File.Exists(cachecheck) Then
-            DeleteCacheToolStripMenuItem.Enabled = False
-        End If
         ShowRightPanelToolStripMenuItem.Enabled = False
         ExtensionsNotFoundToolStripMenuItem.Enabled = False
         Button7.Enabled = False
@@ -234,6 +228,7 @@ Public Class Form1
         Label7.Visible = True
         Label7.Text = "Fetching in progress..."
         ProgressBar1.Visible = True
+        Timer3.Start()
         System.IO.Directory.Delete(apppath + "\nfcache", True)
         System.IO.Directory.CreateDirectory(apppath + "\nfcache")
         Timer1.Start()
@@ -368,18 +363,16 @@ Public Class Form1
     End Sub
 
     Private Sub Label18_Click(sender As Object, e As EventArgs) Handles Label18.Click
-        Label18.Enabled = False
-        Label18.Text = "Waiting for confirmation..."
+        Label7.Text = "Installing Resource (Waiting for confirmation)"
         Timer2.Stop()
-        ProgressBar3.Value = 0
+        ProgressBar1.Value = 0
         Label23.Text = "Memory Usage: Paused"
         Label24.Text = "Paged Memory Usage: Paused"
         Label25.Text = "Paused"
         Dim result As DialogResult = MessageBox.Show("Do you wish to install builder resource?" + vbNewLine + "Builder will not responding while installing resource." + vbNewLine + "ATTEMPTING TO EXIT THE BUILDER MAY INCOMPLETE RESOURCE", "You sure about this?", MessageBoxButtons.YesNo)
         If (result = DialogResult.Yes) Then
-            Label21.Visible = True
-            ProgressBar2.Visible = True
-            Label18.Visible = False
+            Label7.Text = "Installing Resource..."
+            Label18.Text = "Installing..."
             Try
                 Dim apppath As String = Application.StartupPath()
                 ProgressBar2.Value = 0
@@ -400,11 +393,10 @@ Public Class Form1
                 If (result1 = DialogResult.Yes) Then
                     Application.Restart()
                 Else
-                    Label18.Text = "Already installed! Please restart app."
-                    Label18.Visible = True
-                    Label18.Enabled = False
-                    Label21.Visible = False
-                    ProgressBar2.Visible = False
+                    Label18.Visible = False
+                    Label19.Visible = False
+                    Label20.Visible = False
+                    Label7.Text = "Ready to build"
                 End If
             Catch ex As Exception
                 Dim apppath As String = Application.StartupPath()
@@ -414,69 +406,12 @@ Public Class Form1
                 Label18.Visible = True
                 System.IO.Directory.Delete(apppath + "\buildcache\appicns", True)
                 System.IO.Directory.CreateDirectory(apppath + "\buildcache\appicns")
-                Label18.Enabled = True
-                Label18.Text = "Try again"
+                Label7.Text = "Ready to build"
             End Try
         Else
             Timer2.Start()
-            Label18.Enabled = True
-            Label18.Text = "Try again"
+            Label7.Text = "Ready to build"
         End If
-    End Sub
-
-    Private Sub UninstallBuilderResourceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UninstallToolStripMenuItem.Click
-        Try
-            Dim result As DialogResult = MessageBox.Show("Do you wish to completely uninstall builder resource?" + vbNewLine + "You can reinstall resource later via notification box", "You sure about this?", MessageBoxButtons.YesNo)
-            If (result = DialogResult.Yes) Then
-                Dim apppath As String = Application.StartupPath()
-                System.IO.Directory.Delete(apppath + "\resource", True)
-                MessageBox.Show("P Browser Builder need to restart app", "Uninstall Completed!")
-                Application.Restart()
-            End If
-        Catch ex As Exception
-            MessageBox.Show("Could not attempt to uninstall resource!" + vbNewLine + ex.Message + vbNewLine + "You may need to restart builder and try again.", "Error!")
-        End Try
-    End Sub
-
-    Private Sub AboutBuilderResourceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem1.Click
-        Try
-            Dim apppath As String = Application.StartupPath()
-            Dim metacheck As String = apppath + "\resource\metadata\version.txt"
-            If Not System.IO.File.Exists(metacheck) Then
-                MessageBox.Show("Resource not compatible with this version of P Browser Builder!" + vbNewLine + "Please update resource by uninstall and reinstall via builder menu.", "Error!")
-            Else
-                System.IO.Directory.Delete(apppath + "\resource\getcache", True)
-                System.IO.Directory.CreateDirectory(apppath + "\resource\getcache")
-                Dim fileReader As System.IO.StreamReader
-                My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/cfuversion/onlineresver.txt", apppath + "\resource\getcache\onlineresver.txt")
-                Dim fileReader1 As System.IO.StreamReader
-                fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\getcache\onlineresver.txt")
-                Dim stringReader1 As String
-                stringReader1 = fileReader1.ReadLine()
-                fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\metadata\version.txt")
-                Dim stringReader As String
-                stringReader = fileReader.ReadLine()
-                MessageBox.Show("Builder Resource version: " + stringReader + vbNewLine + "Latest Online version: " + stringReader1 + vbNewLine + "To update version please uninstall and reinstall builder resource", "About Builder Resource")
-            End If
-        Catch ex As Exception
-            Dim apppath As String = Application.StartupPath()
-            Dim fileReader As System.IO.StreamReader
-            fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\metadata\version.txt")
-            Dim stringReader As String
-            stringReader = fileReader.ReadLine()
-            MessageBox.Show("Could not fetch latest online version info!" + vbNewLine + "You are using resource version: " + stringReader, "Error!")
-        End Try
-    End Sub
-
-    Private Sub DeleteInstallerCacheToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteCacheToolStripMenuItem.Click
-        Try
-            Dim apppath As String = Application.StartupPath()
-            System.IO.Directory.Delete(apppath + "\updatedata", True)
-            System.IO.Directory.CreateDirectory(apppath + "\updatedata")
-            DeleteCacheToolStripMenuItem.Enabled = False
-        Catch ex As Exception
-            MessageBox.Show("Could not attempt to delete installer cache!" + vbNewLine + ex.Message + vbNewLine + "You may need to restart builder and try again.", "Error!")
-        End Try
     End Sub
 
     Private Sub OpenRemoteDebuggingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenRemoteDebuggingToolStripMenuItem.Click
@@ -606,9 +541,6 @@ Public Class Form1
             CheckBox2.Enabled = True
             ShowRightPanelToolStripMenuItem.Enabled = True
             HideRightPanelToolStripMenuItem.Enabled = True
-            UninstallToolStripMenuItem.Enabled = True
-            DeleteCacheToolStripMenuItem.Enabled = True
-            AboutToolStripMenuItem1.Enabled = True
             ExtensionsNotFoundToolStripMenuItem.Enabled = True
             ForceUnlockDisableButtonToolStripMenuItem.Enabled = True
             UnlockIncompleteFeatureToolStripMenuItem.Enabled = True
@@ -654,36 +586,27 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub CheckForUpdateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CheckForUpdateToolStripMenuItem.Click
-        Try
-            Dim apppath As String = Application.StartupPath()
-            Dim metacheck As String = apppath + "\resource\metadata\version.txt"
-            If Not System.IO.File.Exists(metacheck) Then
-                MessageBox.Show("Resource not compatible with this version of P Browser Builder!" + vbNewLine + "Please update resource by uninstall and reinstall via build menu.", "Error!")
-            Else
-                System.IO.Directory.Delete(apppath + "\resource\getcache", True)
-                System.IO.Directory.CreateDirectory(apppath + "\resource\getcache")
-                Dim fileReader As System.IO.StreamReader
-                My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/cfuversion/onlineresver.txt", apppath + "\resource\getcache\onlineresver.txt")
-                Dim fileReader1 As System.IO.StreamReader
-                fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\getcache\onlineresver.txt")
-                Dim stringReader1 As String
-                stringReader1 = fileReader1.ReadLine()
-                fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\metadata\version.txt")
-                Dim stringReader As String
-                stringReader = fileReader.ReadLine()
-                If stringReader1.Contains(stringReader) Then
-                    MessageBox.Show("Resource is up-to-date!", "Check for update")
-                Else
-                    MessageBox.Show("New version detected! (" + stringReader1 + ")" + vbNewLine + "Please update by uninstall and reinstall resource via build menu.", "Check for update")
-                End If
-            End If
-        Catch ex As Exception
-            MessageBox.Show("Could not fetch latest online version info!" + vbNewLine + "Please try again later.", "Error!")
-        End Try
-    End Sub
-
     Private Sub ShowSplashScreenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowSplashScreenToolStripMenuItem.Click
         splash.Show()
+    End Sub
+
+    Private Sub Timer3_Tick(sender As Object, e As EventArgs) Handles Timer3.Tick
+        If ProgressBar1.Value = 0 Then
+            Label28.Visible = False
+            Label29.Visible = False
+        Else
+            Label28.Visible = True
+            Label29.Visible = True
+            Label28.Text = ProgressBar1.Value
+        End If
+
+    End Sub
+
+    Private Sub Label30_Click(sender As Object, e As EventArgs) Handles Label30.Click
+        prefer.Show()
+    End Sub
+
+    Private Sub ResourceSettingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResourceSettingToolStripMenuItem.Click
+        prefer.Show()
     End Sub
 End Class
