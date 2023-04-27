@@ -1,5 +1,7 @@
 ﻿Imports System.IO
+Imports System.IO.Compression
 Imports System.Reflection.Emit
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class prefer
     Private Sub prefer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -103,5 +105,40 @@ Public Class prefer
 
     Private Sub Label16_Click(sender As Object, e As EventArgs) Handles Label16.Click
         about.Show()
+    End Sub
+
+    Private Sub Label19_Click(sender As Object, e As EventArgs) Handles Label19.Click
+        Try
+            MessageBox.Show("Step 1 of 3 : Welcome" + vbNewLine + "Welcome to sideload utility!" + vbNewLine + "Next step utility will let you select the sideload archive." + vbNewLine + "Select OK to continue.", "Sideload utility")
+            Dim apppath As String = Application.StartupPath()
+            OpenFileDialog1.Multiselect = False
+            OpenFileDialog1.Title = "Choose your sideload file"
+            OpenFileDialog1.Filter = "Resource sideload file|*.zip"
+            If OpenFileDialog1.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
+                MessageBox.Show("Step 2 of 3 : Installation" + vbNewLine + "Click OK to start installation", "Sideload utility")
+                Dim pbcfg = apppath + "\resource"
+                If System.IO.Directory.Exists(pbcfg) = True Then
+                    System.IO.Directory.Delete(apppath + "\resource", True)
+                End If
+                Dim zipPath As String = OpenFileDialog1.FileName
+                Dim extractPath As String = apppath
+                ZipFile.ExtractToDirectory(zipPath, extractPath)
+                Try
+                    Process.Start(apppath + "\resource\resinit.exe")
+                Catch ex As Exception
+                    MessageBox.Show("Initialization Failed! dlresCH is not updated!" + vbNewLine + "Please contact PavichDev Support! Click OK to restart.", "Error!")
+                    Application.Restart()
+                End Try
+                Label7.Text = "First initializing Resource..."
+                Dim result1 As DialogResult = MessageBox.Show("Installation completed but restart required!" + vbNewLine + "Do you want to restart P Browser Builder now?", "Installation completed!", MessageBoxButtons.YesNo)
+                If (result1 = DialogResult.Yes) Then
+                    Application.Restart()
+                End If
+            End If
+        Catch ex As Exception
+            Dim apppath As String = Application.StartupPath()
+            MessageBox.Show("Could not attempt to install resource!" + vbNewLine + ex.Message, "Error!")
+            Application.Restart()
+        End Try
     End Sub
 End Class

@@ -376,20 +376,25 @@ Public Class Form1
                 Label18.Enabled = False
                 Dim apppath As String = Application.StartupPath()
                 ProgressBar1.Value = 0
-                'System.IO.Directory.Delete(apppath + "\updatedata", True)
-                'System.IO.Directory.CreateDirectory(apppath + "\updatedata")
+                System.IO.Directory.Delete(apppath + "\updatedata", True)
+                System.IO.Directory.CreateDirectory(apppath + "\updatedata")
                 ProgressBar1.Value = 25
-                'Dim strURL As String = "https://github.com/Pavich7/P-Browser-Builder-Resource/releases/latest/download/pbb-resource.zip"
-                'Using webcli As WebClient = New WebClient()
-                'webcli.DownloadFile(strURL, apppath + "\updatedata\pbb-resource.zip")
-                'End Using
+                Dim strURL As String = "https://github.com/Pavich7/P-Browser-Builder-Resource/releases/download/3.0.0-pre.1/pbb-resource.zip"
+                Using webcli As WebClient = New WebClient()
+                    webcli.DownloadFile(strURL, apppath + "\updatedata\pbb-resource.zip")
+                End Using
                 ProgressBar1.Value = 50
                 Dim zipPath As String = apppath + "\updatedata\pbb-resource.zip"
                 Dim extractPath As String = apppath
                 ProgressBar1.Value = 60
                 ZipFile.ExtractToDirectory(zipPath, extractPath)
                 ProgressBar1.Value = 80
-                Process.Start(apppath + "\resource\resinit.exe")
+                Try
+                    Process.Start(apppath + "\resource\resinit.exe")
+                Catch ex As Exception
+                    MessageBox.Show("Initialization Failed! dlresCH is not updated!" + vbNewLine + "Please contact PavichDev Support! Click OK to restart.", "Error!")
+                    Application.Restart()
+                End Try
                 Label7.Text = "First initializing Resource..."
                 Await Task.Delay(30000)
                 ProgressBar1.Value = 100

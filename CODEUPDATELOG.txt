@@ -2,6 +2,8 @@ Release 3.1.0
 - ADDED: Preference menu
 - ADDED: Status bar in builder
 - ADDED: Showing percent of current task.
+- ADDED: Resource initialization for lower download size.
+- ADDED: Resource sideload feature.
 - CHANGED: New splash screen design.
 - CHANGED: New about screen design.
 - CHANGED: High DPI Support are obsolute.

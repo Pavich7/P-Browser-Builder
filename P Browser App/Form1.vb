@@ -27,7 +27,6 @@ Public Class Form1
                 End Try
             End If
             setting.RemoteDebuggingPort = 8088
-            CefSharp.Cef.EnableHighDPISupport()
             CefSharp.Cef.Initialize(setting)
             Browser = New ChromiumWebBrowser(loadweb)
             Panel1.Controls.Add(Browser)
