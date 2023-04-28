@@ -45,6 +45,11 @@ Partial Class prefer
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -222,7 +227,7 @@ Partial Class prefer
         '
         'Label3
         '
-        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
         Me.Label3.Location = New System.Drawing.Point(21, 405)
@@ -233,7 +238,7 @@ Partial Class prefer
         '
         'Label16
         '
-        Me.Label16.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Label16.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label16.AutoSize = True
         Me.Label16.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label16.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -246,7 +251,7 @@ Partial Class prefer
         '
         'Label17
         '
-        Me.Label17.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Label17.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.SystemColors.GrayText
@@ -258,7 +263,7 @@ Partial Class prefer
         '
         'Label18
         '
-        Me.Label18.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Label18.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.Location = New System.Drawing.Point(29, 444)
@@ -307,12 +312,71 @@ Partial Class prefer
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'Label22
+        '
+        Me.Label22.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label22.AutoSize = True
+        Me.Label22.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label22.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label22.Location = New System.Drawing.Point(429, 542)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(50, 21)
+        Me.Label22.TabIndex = 57
+        Me.Label22.Text = "Apply"
+        '
+        'Label24
+        '
+        Me.Label24.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.Label24.Location = New System.Drawing.Point(30, 567)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(222, 17)
+        Me.Label24.TabIndex = 56
+        Me.Label24.Text = "Custom source to download resources."
+        '
+        'Label25
+        '
+        Me.Label25.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(29, 542)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(181, 21)
+        Me.Label25.TabIndex = 55
+        Me.Label25.Text = "Custom Resource Server"
+        '
+        'Label26
+        '
+        Me.Label26.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
+        Me.Label26.Location = New System.Drawing.Point(21, 503)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(103, 28)
+        Me.Label26.TabIndex = 54
+        Me.Label26.Text = "Beta menu"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(33, 595)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(445, 20)
+        Me.TextBox1.TabIndex = 58
+        '
         'prefer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(500, 512)
+        Me.ClientSize = New System.Drawing.Size(500, 634)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Label22)
+        Me.Controls.Add(Me.Label24)
+        Me.Controls.Add(Me.Label25)
+        Me.Controls.Add(Me.Label26)
         Me.Controls.Add(Me.Label19)
         Me.Controls.Add(Me.Label20)
         Me.Controls.Add(Me.Label21)
@@ -370,4 +434,9 @@ Partial Class prefer
     Friend WithEvents Label20 As Label
     Friend WithEvents Label21 As Label
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Label24 As Label
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents TextBox1 As TextBox
 End Class

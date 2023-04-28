@@ -1,5 +1,4 @@
-﻿Imports System.Reflection.Emit
-Imports System.IO.Compression
+﻿Imports System.IO.Compression
 
 Public Class Form1
     Private Async Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick

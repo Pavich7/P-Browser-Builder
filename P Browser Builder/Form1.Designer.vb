@@ -26,8 +26,6 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SaveProjectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LoadProjectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClearAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -146,34 +144,22 @@ Partial Class Form1
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveProjectToolStripMenuItem, Me.LoadProjectToolStripMenuItem, Me.ClearAllToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClearAllToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
         '
-        'SaveProjectToolStripMenuItem
-        '
-        Me.SaveProjectToolStripMenuItem.Name = "SaveProjectToolStripMenuItem"
-        Me.SaveProjectToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
-        Me.SaveProjectToolStripMenuItem.Text = "Save Project"
-        '
-        'LoadProjectToolStripMenuItem
-        '
-        Me.LoadProjectToolStripMenuItem.Name = "LoadProjectToolStripMenuItem"
-        Me.LoadProjectToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
-        Me.LoadProjectToolStripMenuItem.Text = "Load Project"
-        '
         'ClearAllToolStripMenuItem
         '
         Me.ClearAllToolStripMenuItem.Name = "ClearAllToolStripMenuItem"
-        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
+        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ClearAllToolStripMenuItem.Text = "Clear All"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'PreviewToolStripMenuItem
@@ -219,7 +205,7 @@ Partial Class Form1
         'ResourceSettingToolStripMenuItem
         '
         Me.ResourceSettingToolStripMenuItem.Name = "ResourceSettingToolStripMenuItem"
-        Me.ResourceSettingToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.ResourceSettingToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ResourceSettingToolStripMenuItem.Text = "Resource Setting..."
         '
         'OpenBuildDirectoryToolStripMenuItem
@@ -1153,8 +1139,6 @@ Partial Class Form1
     Friend WithEvents ResetExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Panel7 As Panel
-    Friend WithEvents SaveProjectToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents LoadProjectToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ShowSplashScreenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Panel8 As Panel
     Friend WithEvents Label28 As Label

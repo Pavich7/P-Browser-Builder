@@ -7,3 +7,4 @@ Release 3.1.0
 - CHANGED: New splash screen design.
 - CHANGED: New about screen design.
 - CHANGED: High DPI Support are obsolute.
+- CHANGED: Combine cache folder into same folder.

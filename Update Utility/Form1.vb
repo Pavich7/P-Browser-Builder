@@ -1,7 +1,4 @@
-﻿Imports System.Reflection.Emit
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement
-
-Public Class Form1
+﻿Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim apppath As String = Application.StartupPath()
         Dim rescheck As String = apppath + "\resource"

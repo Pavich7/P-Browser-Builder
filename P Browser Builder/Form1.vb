@@ -1,6 +1,6 @@
 ﻿Imports System.IO.Compression
-Imports CefSharp.WinForms
 Imports System.Net
+Imports CefSharp.WinForms
 Public Class Form1
     Private WithEvents Browser As ChromiumWebBrowser
     Public Sub New()
@@ -28,9 +28,9 @@ Public Class Form1
                 If System.IO.File.Exists(icnexist) Then
                     My.Computer.FileSystem.DeleteFile(apppath + "\resource\testspace\appicns.ico")
                 Else
-                    Dim icnshave As String = apppath + "\buildcache\appicns\appicns.ico"
+                    Dim icnshave As String = apppath + "\statecache\buildcache\appicns\appicns.ico"
                     If System.IO.File.Exists(icnshave) Then
-                        My.Computer.FileSystem.CopyFile(apppath + "\buildcache\appicns\appicns.ico", apppath + "\resource\testspace\appicns.ico")
+                        My.Computer.FileSystem.CopyFile(apppath + "\statecache\buildcache\appicns\appicns.ico", apppath + "\resource\testspace\appicns.ico")
                     End If
                 End If
                 ProgressBar1.Value = 100
@@ -89,9 +89,9 @@ Public Class Form1
                     ProgressBar1.Value = 50
                     My.Computer.FileSystem.CopyDirectory(apppath + "\resource\buildspace\quickmode", apppath + "\binary", True)
                     My.Computer.FileSystem.RenameFile(apppath + "\binary\P Browser App.exe", TextBox2.Text + ".exe")
-                    Dim icnshave As String = apppath + "\buildcache\appicns\appicns.ico"
+                    Dim icnshave As String = apppath + "\statecache\buildcache\appicns\appicns.ico"
                     If System.IO.File.Exists(icnshave) Then
-                        My.Computer.FileSystem.CopyFile(apppath + "\buildcache\appicns\appicns.ico", apppath + "\binary\appicns.ico")
+                        My.Computer.FileSystem.CopyFile(apppath + "\statecache\buildcache\appicns\appicns.ico", apppath + "\binary\appicns.ico")
                     End If
                     ProgressBar1.Value = 100
                     MessageBox.Show("Build Completed! Click OK to continue.", "Build Completed!")
@@ -129,9 +129,9 @@ Public Class Form1
                     ProgressBar1.Value = 50
                     My.Computer.FileSystem.CopyDirectory(apppath + "\resource\buildspace\cleanmode", apppath + "\binary", True)
                     My.Computer.FileSystem.RenameFile(apppath + "\binary\P Browser App.exe", TextBox2.Text + ".exe")
-                    Dim icnshave As String = apppath + "\buildcache\appicns\appicns.ico"
+                    Dim icnshave As String = apppath + "\statecache\buildcache\appicns\appicns.ico"
                     If System.IO.File.Exists(icnshave) Then
-                        My.Computer.FileSystem.CopyFile(apppath + "\buildcache\appicns\appicns.ico", apppath + "\binary\appicns.ico")
+                        My.Computer.FileSystem.CopyFile(apppath + "\statecache\buildcache\appicns\appicns.ico", apppath + "\binary\appicns.ico")
                     End If
                     ProgressBar1.Value = 70
                     System.IO.Directory.Delete(apppath + "\resource\buildspace\cleanmode", True)
@@ -177,6 +177,7 @@ Public Class Form1
         Dim setting As New CefSettings With {
             .RemoteDebuggingPort = 8088
         }
+        setting.CachePath = apppath + "\statecache"
         CefSharp.Cef.Initialize(setting)
         Browser = New ChromiumWebBrowser("")
         Panel2.Controls.Add(Browser)
@@ -209,15 +210,29 @@ Public Class Form1
                 MessageBox.Show("Old Resource not compatible! You might encounter errors." + vbNewLine + "Please reinstall builder resource via resource menu.", "Resource not compatible!")
             End If
         End If
-        Dim cachecheck As String = apppath + "\updatedata\pbb-resource.zip"
+        'Dim fileReader1 As System.IO.StreamReader
+        'Dim fileReader2 As System.IO.StreamReader
+        'Dim fileReader3 As System.IO.StreamReader
+        'fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.urlsave.pbsf")
+        'fileReader2 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.anamesave.pbsf")
+        'fileReader3 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.icnpath.pbsf")
+        'Dim stringReader1 As String
+        'Dim stringReader2 As String
+        'Dim stringReader3 As String
+        'stringReader1 = fileReader1.ReadLine()
+        'stringReader2 = fileReader2.ReadLine()
+        'stringReader3 = fileReader3.ReadLine()
+        'TextBox1.Text = stringReader1
+        'TextBox2.Text = stringReader2
+        'TextBox3.Text = stringReader3
+        'If Not TextBox3.Text = "" Then
+        ' PictureBox1.Image = Image.FromFile(stringReader3)
+        'End If
+        Dim cachecheck As String = apppath + "\statecache\updatecache\pbb-resource.zip"
         ShowRightPanelToolStripMenuItem.Enabled = False
         ExtensionsNotFoundToolStripMenuItem.Enabled = False
         Button7.Enabled = False
         ExtensionsToolStripMenuItem.Visible = False
-        SaveProjectToolStripMenuItem.Visible = False
-        LoadProjectToolStripMenuItem.Visible = False
-        SaveProjectToolStripMenuItem.Enabled = False
-        LoadProjectToolStripMenuItem.Enabled = False
         RadioButton3.Visible = False
         DevToolStripMenuItem.Visible = False
         Timer2.Start()
@@ -227,8 +242,8 @@ Public Class Form1
         Label7.Text = "Fetching in progress..."
         ProgressBar1.Visible = True
         Timer3.Start()
-        System.IO.Directory.Delete(apppath + "\nfcache", True)
-        System.IO.Directory.CreateDirectory(apppath + "\nfcache")
+        System.IO.Directory.Delete(apppath + "\statecache\nfcache", True)
+        System.IO.Directory.CreateDirectory(apppath + "\statecache\nfcache")
         Timer1.Start()
     End Sub
 
@@ -251,6 +266,11 @@ Public Class Form1
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
         Browser.Load(TextBox1.Text)
+        'Dim apppath As String = Application.StartupPath()
+        'Dim pbcfg As String = apppath + "\statedata\usersave.builder.urlsave.pbsf"
+        'Dim objWriter As New System.IO.StreamWriter(pbcfg)
+        'objWriter.Write(TextBox1.Text)
+        'objWriter.Close()
     End Sub
 
     Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
@@ -260,6 +280,11 @@ Public Class Form1
         Else
             Label2.Text = "Application name (" + TextBox2.Text + ".exe)"
             Label17.Text = TextBox2.Text
+            'Dim apppath As String = Application.StartupPath()
+            'Dim pbcfg As String = apppath + "\statedata\usersave.builder.urlsave.pbsf"
+            'Dim objWriter As New System.IO.StreamWriter(pbcfg)
+            'objWriter.Write(TextBox2.Text)
+            'objWriter.Close()
         End If
     End Sub
 
@@ -268,16 +293,16 @@ Public Class Form1
         Try
             ProgressBar1.Value = 10
             Dim apppath As String = Application.StartupPath()
-            My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/newsfeed/nf1_title.txt", apppath + "\nfcache\nf1_title.txt")
-            My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/newsfeed/nf1_desc.txt", apppath + "\nfcache\nf1_desc.txt")
-            My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/newsfeed/nf1_date.txt", apppath + "\nfcache\nf1_date.txt")
+            My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/newsfeed/nf1_title.txt", apppath + "\statecache\nfcache\nf1_title.txt")
+            My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/newsfeed/nf1_desc.txt", apppath + "\statecache\nfcache\nf1_desc.txt")
+            My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/newsfeed/nf1_date.txt", apppath + "\statecache\nfcache\nf1_date.txt")
             ProgressBar1.Value = 50
             Dim fileReader1 As System.IO.StreamReader
             Dim fileReader2 As System.IO.StreamReader
             Dim fileReader3 As System.IO.StreamReader
-            fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\nfcache\nf1_title.txt")
-            fileReader2 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\nfcache\nf1_desc.txt")
-            fileReader3 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\nfcache\nf1_date.txt")
+            fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statecache\nfcache\nf1_title.txt")
+            fileReader2 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statecache\nfcache\nf1_desc.txt")
+            fileReader3 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statecache\nfcache\nf1_date.txt")
             Dim stringReader1 As String
             Dim stringReader2 As String
             Dim stringReader3 As String
@@ -320,21 +345,25 @@ Public Class Form1
         Button1.Enabled = True
         CheckBox1.Checked = False
         CheckBox2.Checked = False
-        System.IO.Directory.Delete(apppath + "\buildcache\appicns", True)
-        System.IO.Directory.CreateDirectory(apppath + "\buildcache\appicns")
+        System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
+        System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Dim apppath As String = Application.StartupPath()
-        System.IO.Directory.Delete(apppath + "\buildcache\appicns", True)
-        System.IO.Directory.CreateDirectory(apppath + "\buildcache\appicns")
+        System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
+        System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
         OpenFileDialog1.Multiselect = False
         OpenFileDialog1.Title = "Choose your icons file"
         OpenFileDialog1.Filter = "Icons Files|*.ico"
         If OpenFileDialog1.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
             PictureBox1.Image = Image.FromFile(OpenFileDialog1.FileName)
             TextBox3.Text = OpenFileDialog1.FileName
-            My.Computer.FileSystem.CopyFile(OpenFileDialog1.FileName, apppath + "\buildcache\appicns\appicns.ico")
+            My.Computer.FileSystem.CopyFile(OpenFileDialog1.FileName, apppath + "\statecache\buildcache\appicns\appicns.ico")
+            'Dim pbcfg As String = apppath + "\statedata\usersave.builder.urlsave.pbsf"
+            'Dim objWriter As New System.IO.StreamWriter(pbcfg)
+            'objWriter.Write(OpenFileDialog1)
+            'objWriter.Close()
         End If
     End Sub
 
@@ -376,15 +405,19 @@ Public Class Form1
                 Label18.Enabled = False
                 Dim apppath As String = Application.StartupPath()
                 ProgressBar1.Value = 0
-                System.IO.Directory.Delete(apppath + "\updatedata", True)
-                System.IO.Directory.CreateDirectory(apppath + "\updatedata")
+                System.IO.Directory.Delete(apppath + "\statecache\updatecache", True)
+                System.IO.Directory.CreateDirectory(apppath + "\statecache\updatecache")
                 ProgressBar1.Value = 25
-                Dim strURL As String = "https://github.com/Pavich7/P-Browser-Builder-Resource/releases/download/3.0.0-pre.1/pbb-resource.zip"
+                Dim fileReader As System.IO.StreamReader
+                fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.resdlserver.pbcfg")
+                Dim stringReader As String
+                stringReader = fileReader.ReadLine()
+                Dim strURL As String = stringReader
                 Using webcli As WebClient = New WebClient()
-                    webcli.DownloadFile(strURL, apppath + "\updatedata\pbb-resource.zip")
+                    webcli.DownloadFile(strURL, apppath + "\statecache\updatecache\pbb-resource.zip")
                 End Using
                 ProgressBar1.Value = 50
-                Dim zipPath As String = apppath + "\updatedata\pbb-resource.zip"
+                Dim zipPath As String = apppath + "\statecache\updatecache\pbb-resource.zip"
                 Dim extractPath As String = apppath
                 ProgressBar1.Value = 60
                 ZipFile.ExtractToDirectory(zipPath, extractPath)
@@ -412,8 +445,8 @@ Public Class Form1
                 MessageBox.Show("Could not attempt to install resource!" + vbNewLine + ex.Message, "Error!")
                 Label18.Enabled = True
                 Label18.Text = "Try again..."
-                System.IO.Directory.Delete(apppath + "\buildcache\appicns", True)
-                System.IO.Directory.CreateDirectory(apppath + "\buildcache\appicns")
+                System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
+                System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
                 Label7.Text = "Ready to build"
             End Try
         Else
@@ -525,8 +558,6 @@ Public Class Form1
 
     Private Sub UnlockIncompleteFeatureToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UnlockIncompleteFeatureToolStripMenuItem.Click
         RadioButton3.Visible = True
-        SaveProjectToolStripMenuItem.Visible = True
-        LoadProjectToolStripMenuItem.Visible = True
         ExtensionsToolStripMenuItem.Visible = True
         UnlockIncompleteFeatureToolStripMenuItem.Enabled = False
     End Sub
@@ -541,8 +572,6 @@ Public Class Form1
             Label8.Enabled = True
             Label6.Enabled = True
             Label9.Enabled = True
-            SaveProjectToolStripMenuItem.Enabled = True
-            LoadProjectToolStripMenuItem.Enabled = True
             RadioButton1.Enabled = True
             RadioButton2.Enabled = True
             CheckBox1.Enabled = True
@@ -573,25 +602,6 @@ Public Class Form1
         ShowRightPanelToolStripMenuItem.Enabled = True
         Timer2.Stop()
         MessageBox.Show("You can unhide right panel by click on" + vbNewLine + "Menu Strip: Window > Show right panel", "Notification")
-    End Sub
-
-    Private Sub SaveProjectToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveProjectToolStripMenuItem.Click
-        Dim apppath As String = Application.StartupPath()
-        SaveFileDialog1.Filter = "P Browser Builder Project Files|*.pbproj"
-        If SaveFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
-            System.IO.Directory.Delete(apppath + "\savecache", True)
-            System.IO.Directory.CreateDirectory(apppath + "\savecache")
-            System.IO.Directory.CreateDirectory(apppath + "\savecache\" + TextBox2.Text)
-        End If
-    End Sub
-
-    Private Sub LoadProjectToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoadProjectToolStripMenuItem.Click
-        OpenFileDialog2.Multiselect = False
-        OpenFileDialog2.Title = "Choose your project file"
-        OpenFileDialog2.Filter = "P Browser Builder Project Files|*.pbproj"
-        If OpenFileDialog2.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
-            MessageBox.Show("Project data files corrupt or not valid!", "Load failure!")
-        End If
     End Sub
 
     Private Sub ShowSplashScreenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowSplashScreenToolStripMenuItem.Click

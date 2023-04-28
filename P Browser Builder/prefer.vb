@@ -1,7 +1,5 @@
 ﻿Imports System.IO
 Imports System.IO.Compression
-Imports System.Reflection.Emit
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class prefer
     Private Sub prefer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -66,8 +64,8 @@ Public Class prefer
     Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
         Try
             Dim apppath As String = Application.StartupPath()
-            System.IO.Directory.Delete(apppath + "\updatedata", True)
-            System.IO.Directory.CreateDirectory(apppath + "\updatedata")
+            System.IO.Directory.Delete(apppath + "\statecache\updatecache", True)
+            System.IO.Directory.CreateDirectory(apppath + "\statecache\updatecache")
             Label9.Enabled = False
         Catch ex As Exception
             MessageBox.Show("Could not attempt to delete installer cache!" + vbNewLine + ex.Message + vbNewLine + "You may need to restart builder and try again.", "Error!")
@@ -140,5 +138,14 @@ Public Class prefer
             MessageBox.Show("Could not attempt to install resource!" + vbNewLine + ex.Message, "Error!")
             Application.Restart()
         End Try
+    End Sub
+
+    Private Sub Label22_Click(sender As Object, e As EventArgs) Handles Label22.Click
+        Dim apppath As String = Application.StartupPath()
+        Dim pbcfg As String = apppath + "\statedata\setting.builder.resdlserver.pbcfg"
+        Dim objWriter As New System.IO.StreamWriter(pbcfg)
+        objWriter.Write(TextBox1.Text)
+        objWriter.Close()
+        MessageBox.Show("Successed!", "OK!")
     End Sub
 End Class
