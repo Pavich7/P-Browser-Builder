@@ -59,6 +59,7 @@ Partial Class Form1
         Me.UnlockDeveloperMenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DevToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowSplashScreenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReinitializeResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UnlockIncompleteFeatureToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ForceUnlockDisableButtonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GoBackToDefaultToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -92,9 +93,7 @@ Partial Class Form1
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.ProgressBar3 = New System.Windows.Forms.ProgressBar()
-        Me.Label24 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -124,7 +123,6 @@ Partial Class Form1
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
-        Me.ReinitializeResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -155,14 +153,14 @@ Partial Class Form1
         'ClearAllToolStripMenuItem
         '
         Me.ClearAllToolStripMenuItem.Name = "ClearAllToolStripMenuItem"
-        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.ClearAllToolStripMenuItem.Text = "Clear All"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'PreviewToolStripMenuItem
@@ -208,7 +206,7 @@ Partial Class Form1
         'ResourceSettingToolStripMenuItem
         '
         Me.ResourceSettingToolStripMenuItem.Name = "ResourceSettingToolStripMenuItem"
-        Me.ResourceSettingToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ResourceSettingToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.ResourceSettingToolStripMenuItem.Text = "Resource Setting..."
         '
         'OpenBuildDirectoryToolStripMenuItem
@@ -233,7 +231,7 @@ Partial Class Form1
         'ExtensionsNotFoundToolStripMenuItem
         '
         Me.ExtensionsNotFoundToolStripMenuItem.Name = "ExtensionsNotFoundToolStripMenuItem"
-        Me.ExtensionsNotFoundToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExtensionsNotFoundToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
         Me.ExtensionsNotFoundToolStripMenuItem.Text = "Coming Soon..."
         '
         'WindowToolStripMenuItem
@@ -290,19 +288,19 @@ Partial Class Form1
         'InstallationGuideToolStripMenuItem
         '
         Me.InstallationGuideToolStripMenuItem.Name = "InstallationGuideToolStripMenuItem"
-        Me.InstallationGuideToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.InstallationGuideToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.InstallationGuideToolStripMenuItem.Text = "Installation Guide"
         '
         'CustomizingGuildToolStripMenuItem
         '
         Me.CustomizingGuildToolStripMenuItem.Name = "CustomizingGuildToolStripMenuItem"
-        Me.CustomizingGuildToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CustomizingGuildToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.CustomizingGuildToolStripMenuItem.Text = "Customizing Guild"
         '
         'BuildingGuideToolStripMenuItem
         '
         Me.BuildingGuideToolStripMenuItem.Name = "BuildingGuideToolStripMenuItem"
-        Me.BuildingGuideToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BuildingGuideToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.BuildingGuideToolStripMenuItem.Text = "Building Guide"
         '
         'HelpToolStripMenuItem
@@ -361,6 +359,12 @@ Partial Class Form1
         Me.ShowSplashScreenToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
         Me.ShowSplashScreenToolStripMenuItem.Text = "Show splash screen"
         '
+        'ReinitializeResourceToolStripMenuItem
+        '
+        Me.ReinitializeResourceToolStripMenuItem.Name = "ReinitializeResourceToolStripMenuItem"
+        Me.ReinitializeResourceToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.ReinitializeResourceToolStripMenuItem.Text = "Reinitialize resource"
+        '
         'UnlockIncompleteFeatureToolStripMenuItem
         '
         Me.UnlockIncompleteFeatureToolStripMenuItem.Name = "UnlockIncompleteFeatureToolStripMenuItem"
@@ -383,13 +387,13 @@ Partial Class Form1
         'ResetExitToolStripMenuItem
         '
         Me.ResetExitToolStripMenuItem.Name = "ResetExitToolStripMenuItem"
-        Me.ResetExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ResetExitToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.ResetExitToolStripMenuItem.Text = "Reset and Exit"
         '
         'ReToolStripMenuItem
         '
         Me.ReToolStripMenuItem.Name = "ReToolStripMenuItem"
-        Me.ReToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ReToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.ReToolStripMenuItem.Text = "Reset and Restart"
         '
         'Button1
@@ -652,13 +656,11 @@ Partial Class Form1
         Me.Panel3.Controls.Add(Me.Label25)
         Me.Panel3.Controls.Add(Me.Label26)
         Me.Panel3.Controls.Add(Me.ProgressBar3)
-        Me.Panel3.Controls.Add(Me.Label24)
         Me.Panel3.Controls.Add(Me.Label23)
-        Me.Panel3.Controls.Add(Me.Label22)
         Me.Panel3.Controls.Add(Me.Label11)
         Me.Panel3.Location = New System.Drawing.Point(26, 52)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(265, 181)
+        Me.Panel3.Size = New System.Drawing.Size(265, 135)
         Me.Panel3.TabIndex = 24
         '
         'Label25
@@ -666,7 +668,7 @@ Partial Class Form1
         Me.Label25.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label25.AutoSize = True
         Me.Label25.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(15, 148)
+        Me.Label25.Location = New System.Drawing.Point(15, 100)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(61, 17)
         Me.Label25.TabIndex = 36
@@ -677,7 +679,7 @@ Partial Class Form1
         Me.Label26.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(14, 112)
+        Me.Label26.Location = New System.Drawing.Point(14, 64)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(170, 21)
         Me.Label26.TabIndex = 35
@@ -685,21 +687,10 @@ Partial Class Form1
         '
         'ProgressBar3
         '
-        Me.ProgressBar3.Location = New System.Drawing.Point(18, 140)
+        Me.ProgressBar3.Location = New System.Drawing.Point(18, 92)
         Me.ProgressBar3.Name = "ProgressBar3"
         Me.ProgressBar3.Size = New System.Drawing.Size(227, 5)
         Me.ProgressBar3.TabIndex = 34
-        '
-        'Label24
-        '
-        Me.Label24.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label24.AutoSize = True
-        Me.Label24.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(15, 87)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(76, 17)
-        Me.Label24.TabIndex = 33
-        Me.Label24.Text = "paged mem"
         '
         'Label23
         '
@@ -711,17 +702,6 @@ Partial Class Form1
         Me.Label23.Size = New System.Drawing.Size(37, 17)
         Me.Label23.TabIndex = 32
         Me.Label23.Text = "mem"
-        '
-        'Label22
-        '
-        Me.Label22.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(14, 61)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(162, 21)
-        Me.Label22.TabIndex = 28
-        Me.Label22.Text = "Paged Memory Usage"
         '
         'Label11
         '
@@ -740,7 +720,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label10.Location = New System.Drawing.Point(21, 242)
+        Me.Label10.Location = New System.Drawing.Point(21, 196)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(105, 28)
         Me.Label10.TabIndex = 26
@@ -758,9 +738,9 @@ Partial Class Form1
         Me.Panel4.Controls.Add(Me.Label14)
         Me.Panel4.Controls.Add(Me.Label13)
         Me.Panel4.Controls.Add(Me.Label12)
-        Me.Panel4.Location = New System.Drawing.Point(26, 283)
+        Me.Panel4.Location = New System.Drawing.Point(26, 234)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(265, 264)
+        Me.Panel4.Size = New System.Drawing.Size(265, 313)
         Me.Panel4.TabIndex = 28
         '
         'Label18
@@ -1010,12 +990,6 @@ Partial Class Form1
         'Timer3
         '
         '
-        'ReinitializeResourceToolStripMenuItem
-        '
-        Me.ReinitializeResourceToolStripMenuItem.Name = "ReinitializeResourceToolStripMenuItem"
-        Me.ReinitializeResourceToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
-        Me.ReinitializeResourceToolStripMenuItem.Text = "Reinitialize resource"
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1130,8 +1104,6 @@ Partial Class Form1
     Friend WithEvents ResourceToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpenRemoteDebuggingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Timer2 As Timer
-    Friend WithEvents Label22 As Label
-    Friend WithEvents Label24 As Label
     Friend WithEvents Label23 As Label
     Friend WithEvents Button7 As Button
     Friend WithEvents Button8 As Button

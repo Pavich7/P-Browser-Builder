@@ -458,7 +458,6 @@ Public Class Form1
         ProgressBar1.Value = 0
         ProgressBar3.Value = 0
         Label23.Text = "Memory Usage: Paused"
-        Label24.Text = "Paged Memory Usage: Paused"
         Label25.Text = "Paused"
         Dim result As DialogResult = MessageBox.Show("Do you wish to install builder resource?" + vbNewLine + "Builder will not responding while installing resource." + vbNewLine + "ATTEMPTING TO EXIT THE BUILDER MAY INCOMPLETE RESOURCE", "You sure about this?", MessageBoxButtons.YesNo)
         If (result = DialogResult.Yes) Then
@@ -542,7 +541,6 @@ Public Class Form1
         Dim demround4 As Double = (My.Computer.Info.TotalPhysicalMemory - My.Computer.Info.AvailablePhysicalMemory) / 1024 / 1024 / 1024
         demround4 = Math.Round(demround4, 2)
         Label23.Text = "Memory Usage: " & demround1 & " MB"
-        Label24.Text = "Paged Memory Usage: " & demround2 & " MB"
         ProgressBar3.Value = ((My.Computer.Info.TotalPhysicalMemory - My.Computer.Info.AvailablePhysicalMemory) / My.Computer.Info.TotalPhysicalMemory) * 100
         Label25.Text = "Overall Usage: " & demround3 & " % (" & demround4 & " GB)"
     End Sub
@@ -559,7 +557,6 @@ Public Class Form1
         Button7.Enabled = True
         ProgressBar3.Value = 0
         Label23.Text = "Memory Usage: Paused"
-        Label24.Text = "Paged Memory Usage: Paused"
         Label25.Text = "Paused"
     End Sub
 
