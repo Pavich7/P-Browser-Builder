@@ -13,6 +13,8 @@ Release 4.0.0
 - CHANGED: New about screen design.
 - CHANGED: High DPI Support are obsolute.
 - CHANGED: Combine cache folder into same folder.
+- CHANGED: Require resource 3.0.0 or later.
+- CHANGED: Moved resource sideload into beta menu.
 
 BETA 2 ADDED
 - ADDED: Introduce build with Packaging Ready Mode.
@@ -20,3 +22,5 @@ BETA 2 ADDED
 - ADDED: Release note in help menu.
 - ADDED: Reinitialize resource in dev menu.
 - CHANGED: Open any menu that open browser will now use preview.
+- CHANGED: Require resource 3.0.0 or later.
+- CHANGED: Moved resource sideload into beta menu.

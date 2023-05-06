@@ -67,16 +67,16 @@ Partial Class Form1
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlDark
         Me.Label3.Location = New System.Drawing.Point(255, 53)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(77, 17)
+        Me.Label3.Size = New System.Drawing.Size(79, 17)
         Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Version 2.1.0"
+        Me.Label3.Text = "Version 3.0.0"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(344, 80)
+        Me.ClientSize = New System.Drawing.Size(340, 76)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)

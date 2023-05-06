@@ -250,6 +250,7 @@ Public Class Form1
             Dim headercheck As String = apppath + "\resource\metadata\checkpoint\header.chkp"
             Dim resvcheck As String = apppath + "\resource\metadata\checkpoint\r100.chkp"
             Dim resvcheck2 As String = apppath + "\resource\metadata\checkpoint\r200.chkp"
+            Dim resvcheck3 As String = apppath + "\resource\metadata\checkpoint\r300.chkp"
             If Not System.IO.File.Exists(headercheck) Then
                 MessageBox.Show("Legacy Resource not compatible! You might encounter errors." + vbNewLine + "Please reinstall builder resource via resource menu.", "Resource not compatible!")
             End If
@@ -258,6 +259,19 @@ Public Class Form1
             End If
             If Not System.IO.File.Exists(resvcheck2) Then
                 MessageBox.Show("Old Resource not compatible! You might encounter errors." + vbNewLine + "Please reinstall builder resource via resource menu.", "Resource not compatible!")
+            End If
+            If Not System.IO.File.Exists(resvcheck3) Then
+                MessageBox.Show("Unload required! Old Resource not compatible!" + vbNewLine + "Please reinstall builder resource via preference menu.", "Resource not compatible!")
+                Button1.Enabled = False
+                Button2.Enabled = False
+                RadioButton1.Enabled = False
+                RadioButton2.Enabled = False
+                CheckBox1.Enabled = False
+                CheckBox2.Enabled = False
+                Label6.Enabled = False
+                Label9.Enabled = False
+                Label4.Enabled = False
+                Label8.Enabled = False
             End If
         End If
         'Dim fileReader1 As System.IO.StreamReader
