@@ -301,7 +301,7 @@ Public Class Form1
     End Sub
 
     Private Sub SupportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SupportToolStripMenuItem.Click
-        Process.Start("https://pavichdev.ddns.net/Home.html#feedbackintro")
+        Browser.Load("http://pavichdev.ddns.net/Home.html#feedbackintro")
     End Sub
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
@@ -417,11 +417,11 @@ Public Class Form1
     End Sub
 
     Private Sub InstallationGuideToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InstallationGuideToolStripMenuItem.Click
-        Process.Start("https://github.com/Pavich7/P-Browser-Builder/wiki/P-Browser-Builder-Guild#install-p-browser-builder-beta-030-and-later")
+        Browser.Load("https://github.com/Pavich7/P-Browser-Builder/wiki/P-Browser-Builder-Guild#install-p-browser-builder-beta-030-and-later")
     End Sub
 
     Private Sub SubmitBugsReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SubmitBugsReportToolStripMenuItem.Click
-        Process.Start("https://github.com/Pavich7/P-Browser-Builder/issues/new/choose")
+        Browser.Load("https://github.com/Pavich7/P-Browser-Builder/issues/new/choose")
     End Sub
 
     Private Sub ReloadPreviewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReloadPreviewToolStripMenuItem.Click
@@ -509,11 +509,11 @@ Public Class Form1
     End Sub
 
     Private Sub CustomizingGuildToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CustomizingGuildToolStripMenuItem.Click
-        Process.Start("https://github.com/Pavich7/P-Browser-Builder/wiki/P-Browser-Builder-Guild#customizing-your-p-browser-app")
+        Browser.Load("https://github.com/Pavich7/P-Browser-Builder/wiki/P-Browser-Builder-Guild#customizing-your-p-browser-app")
     End Sub
 
     Private Sub BuildingGuideToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BuildingGuideToolStripMenuItem.Click
-        Process.Start("https://github.com/Pavich7/P-Browser-Builder/wiki/P-Browser-Builder-Guild#building-a-p-browser-app-from-p-browser-builder")
+        Browser.Load("https://github.com/Pavich7/P-Browser-Builder/wiki/P-Browser-Builder-Guild#building-a-p-browser-app-from-p-browser-builder")
     End Sub
 
     <Obsolete>
@@ -606,7 +606,6 @@ Public Class Form1
     End Sub
 
     Private Sub UnlockIncompleteFeatureToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UnlockIncompleteFeatureToolStripMenuItem.Click
-        RadioButton3.Visible = True
         ExtensionsToolStripMenuItem.Visible = True
         UnlockIncompleteFeatureToolStripMenuItem.Enabled = False
     End Sub
@@ -680,5 +679,19 @@ Public Class Form1
     Private Sub OpenPackageDirectoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenPackageDirectoryToolStripMenuItem.Click
         Dim apppath As String = Application.StartupPath()
         Process.Start(apppath + "\binarypkg")
+    End Sub
+
+    Private Sub ReleaseNoteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReleaseNoteToolStripMenuItem.Click
+        Browser.Load("https://github.com/Pavich7/P-Browser-Builder/releases/tag/4.0.0-Beta.1")
+    End Sub
+
+    Private Sub ReinitializeResourceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReinitializeResourceToolStripMenuItem.Click
+        Try
+            Dim apppath As String = Application.StartupPath()
+            Process.Start(apppath + "\resource\resinit.exe")
+        Catch ex As Exception
+            MessageBox.Show("Initialization Failed! dlresCH is not updated!" + vbNewLine + "Please contact PavichDev Support! Click OK to restart.", "Error!")
+            Application.Restart()
+        End Try
     End Sub
 End Class

@@ -36,6 +36,7 @@ Partial Class Form1
         Me.BuilderResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResourceSettingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenBuildDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenPackageDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExtensionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExtensionsNotFoundToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -51,6 +52,7 @@ Partial Class Form1
         Me.BuildingGuideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReleaseNoteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SupportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenBuilderInExplorerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SubmitBugsReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -122,7 +124,7 @@ Partial Class Form1
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
-        Me.OpenPackageDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReinitializeResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -153,14 +155,14 @@ Partial Class Form1
         'ClearAllToolStripMenuItem
         '
         Me.ClearAllToolStripMenuItem.Name = "ClearAllToolStripMenuItem"
-        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
+        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ClearAllToolStripMenuItem.Text = "Clear All"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'PreviewToolStripMenuItem
@@ -215,6 +217,12 @@ Partial Class Form1
         Me.OpenBuildDirectoryToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
         Me.OpenBuildDirectoryToolStripMenuItem.Text = "Open Build Directory"
         '
+        'OpenPackageDirectoryToolStripMenuItem
+        '
+        Me.OpenPackageDirectoryToolStripMenuItem.Name = "OpenPackageDirectoryToolStripMenuItem"
+        Me.OpenPackageDirectoryToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
+        Me.OpenPackageDirectoryToolStripMenuItem.Text = "Open Package Directory"
+        '
         'ExtensionsToolStripMenuItem
         '
         Me.ExtensionsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExtensionsNotFoundToolStripMenuItem})
@@ -225,7 +233,7 @@ Partial Class Form1
         'ExtensionsNotFoundToolStripMenuItem
         '
         Me.ExtensionsNotFoundToolStripMenuItem.Name = "ExtensionsNotFoundToolStripMenuItem"
-        Me.ExtensionsNotFoundToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
+        Me.ExtensionsNotFoundToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ExtensionsNotFoundToolStripMenuItem.Text = "Coming Soon..."
         '
         'WindowToolStripMenuItem
@@ -282,24 +290,24 @@ Partial Class Form1
         'InstallationGuideToolStripMenuItem
         '
         Me.InstallationGuideToolStripMenuItem.Name = "InstallationGuideToolStripMenuItem"
-        Me.InstallationGuideToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.InstallationGuideToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.InstallationGuideToolStripMenuItem.Text = "Installation Guide"
         '
         'CustomizingGuildToolStripMenuItem
         '
         Me.CustomizingGuildToolStripMenuItem.Name = "CustomizingGuildToolStripMenuItem"
-        Me.CustomizingGuildToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.CustomizingGuildToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CustomizingGuildToolStripMenuItem.Text = "Customizing Guild"
         '
         'BuildingGuideToolStripMenuItem
         '
         Me.BuildingGuideToolStripMenuItem.Name = "BuildingGuideToolStripMenuItem"
-        Me.BuildingGuideToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.BuildingGuideToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.BuildingGuideToolStripMenuItem.Text = "Building Guide"
         '
         'HelpToolStripMenuItem
         '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem, Me.SupportToolStripMenuItem, Me.OpenBuilderInExplorerToolStripMenuItem, Me.SubmitBugsReportToolStripMenuItem, Me.UnlockDeveloperMenuToolStripMenuItem})
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem, Me.ReleaseNoteToolStripMenuItem, Me.SupportToolStripMenuItem, Me.OpenBuilderInExplorerToolStripMenuItem, Me.SubmitBugsReportToolStripMenuItem, Me.UnlockDeveloperMenuToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
@@ -309,6 +317,12 @@ Partial Class Form1
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
         Me.AboutToolStripMenuItem.Text = "About"
+        '
+        'ReleaseNoteToolStripMenuItem
+        '
+        Me.ReleaseNoteToolStripMenuItem.Name = "ReleaseNoteToolStripMenuItem"
+        Me.ReleaseNoteToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
+        Me.ReleaseNoteToolStripMenuItem.Text = "Release note"
         '
         'SupportToolStripMenuItem
         '
@@ -336,7 +350,7 @@ Partial Class Form1
         '
         'DevToolStripMenuItem
         '
-        Me.DevToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ShowSplashScreenToolStripMenuItem, Me.UnlockIncompleteFeatureToolStripMenuItem, Me.ForceUnlockDisableButtonToolStripMenuItem, Me.GoBackToDefaultToolStripMenuItem})
+        Me.DevToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ShowSplashScreenToolStripMenuItem, Me.ReinitializeResourceToolStripMenuItem, Me.UnlockIncompleteFeatureToolStripMenuItem, Me.ForceUnlockDisableButtonToolStripMenuItem, Me.GoBackToDefaultToolStripMenuItem})
         Me.DevToolStripMenuItem.Name = "DevToolStripMenuItem"
         Me.DevToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
         Me.DevToolStripMenuItem.Text = "Dev"
@@ -369,13 +383,13 @@ Partial Class Form1
         'ResetExitToolStripMenuItem
         '
         Me.ResetExitToolStripMenuItem.Name = "ResetExitToolStripMenuItem"
-        Me.ResetExitToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.ResetExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ResetExitToolStripMenuItem.Text = "Reset and Exit"
         '
         'ReToolStripMenuItem
         '
         Me.ReToolStripMenuItem.Name = "ReToolStripMenuItem"
-        Me.ReToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.ReToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ReToolStripMenuItem.Text = "Reset and Restart"
         '
         'Button1
@@ -540,7 +554,7 @@ Partial Class Form1
         Me.Label6.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label6.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label6.Location = New System.Drawing.Point(29, 313)
+        Me.Label6.Location = New System.Drawing.Point(29, 343)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(113, 17)
         Me.Label6.TabIndex = 13
@@ -580,7 +594,7 @@ Partial Class Form1
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.Location = New System.Drawing.Point(32, 379)
+        Me.CheckBox1.Location = New System.Drawing.Point(32, 409)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(167, 21)
         Me.CheckBox1.TabIndex = 17
@@ -591,7 +605,7 @@ Partial Class Form1
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label8.Location = New System.Drawing.Point(18, 339)
+        Me.Label8.Location = New System.Drawing.Point(18, 369)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(159, 28)
         Me.Label8.TabIndex = 18
@@ -601,7 +615,7 @@ Partial Class Form1
         '
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox2.Location = New System.Drawing.Point(32, 406)
+        Me.CheckBox2.Location = New System.Drawing.Point(32, 436)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(234, 21)
         Me.CheckBox2.TabIndex = 19
@@ -614,7 +628,7 @@ Partial Class Form1
         Me.Label9.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label9.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label9.Location = New System.Drawing.Point(29, 435)
+        Me.Label9.Location = New System.Drawing.Point(29, 465)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(100, 17)
         Me.Label9.TabIndex = 22
@@ -923,12 +937,12 @@ Partial Class Form1
         '
         Me.RadioButton3.AutoSize = True
         Me.RadioButton3.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton3.Location = New System.Drawing.Point(29, 470)
+        Me.RadioButton3.Location = New System.Drawing.Point(32, 313)
         Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(253, 21)
+        Me.RadioButton3.Size = New System.Drawing.Size(272, 21)
         Me.RadioButton3.TabIndex = 32
         Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "Build with Packaging Ready Mode (Final)"
+        Me.RadioButton3.Text = "Build with Packaging Ready Mode (ZIP Files)"
         Me.RadioButton3.UseVisualStyleBackColor = True
         '
         'Panel8
@@ -996,11 +1010,11 @@ Partial Class Form1
         'Timer3
         '
         '
-        'OpenPackageDirectoryToolStripMenuItem
+        'ReinitializeResourceToolStripMenuItem
         '
-        Me.OpenPackageDirectoryToolStripMenuItem.Name = "OpenPackageDirectoryToolStripMenuItem"
-        Me.OpenPackageDirectoryToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
-        Me.OpenPackageDirectoryToolStripMenuItem.Text = "Open Package Directory"
+        Me.ReinitializeResourceToolStripMenuItem.Name = "ReinitializeResourceToolStripMenuItem"
+        Me.ReinitializeResourceToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.ReinitializeResourceToolStripMenuItem.Text = "Reinitialize resource"
         '
         'Form1
         '
@@ -1155,4 +1169,6 @@ Partial Class Form1
     Friend WithEvents Label30 As Label
     Friend WithEvents ResourceSettingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpenPackageDirectoryToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReleaseNoteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReinitializeResourceToolStripMenuItem As ToolStripMenuItem
 End Class
