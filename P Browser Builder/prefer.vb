@@ -6,9 +6,9 @@ Public Class prefer
         Dim apppath As String = Application.StartupPath()
         Dim rescheck As String = apppath + "\resource"
         If Not System.IO.Directory.Exists(rescheck) Then
-            Label4.Text = "Redist : Resource not installed"
-            Label2.Text = "WinForms : Resource not installed"
-            Label5.Text = "Common : Resource not installed"
+            Label4.Text = "Redist : Not installed"
+            Label2.Text = "WinForms : Not installed"
+            Label5.Text = "Common : Not installed"
             Label23.Text = "Version : Resource not installed"
             Label4.Enabled = False
             Label2.Enabled = False

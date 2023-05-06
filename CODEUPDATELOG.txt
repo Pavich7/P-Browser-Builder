@@ -4,7 +4,13 @@ Release 4.0.0
 - ADDED: Showing percent of current task.
 - ADDED: Resource initialization for lower download size.
 - ADDED: Resource sideload feature.
+- ADDED: Introduce build with Packaging Ready Mode.
+- ADDED: Open Package Directory.
 - CHANGED: New splash screen design.
 - CHANGED: New about screen design.
 - CHANGED: High DPI Support are obsolute.
 - CHANGED: Combine cache folder into same folder.
+
+BETA 2 ADDED
+- ADDED: Introduce build with Packaging Ready Mode.
+- ADDED: Open Package Directory.

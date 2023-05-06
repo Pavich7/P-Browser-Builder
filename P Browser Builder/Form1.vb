@@ -149,6 +149,54 @@ Public Class Form1
                     MessageBox.Show("Build Failed! Incomplete or corrupted Data please reinstall builder.", "Build Failed!")
                     Label7.Text = "Build failed!"
                 End If
+            ElseIf RadioButton3.Checked = True Then
+                Label7.Text = "Building in progress..."
+                Dim apppath As String = Application.StartupPath()
+                System.IO.Directory.Delete(apppath + "\resource\buildspace\cleanmode", True)
+                System.IO.Directory.CreateDirectory(apppath + "\resource\buildspace\cleanmode")
+                Dim zipPath As String = apppath + "\resource\resourcepack\freshapp.zip"
+                Dim extractPath As String = apppath + "\resource\buildspace\cleanmode"
+                ZipFile.ExtractToDirectory(zipPath, extractPath)
+                Dim pbcfg As String = apppath + "\resource\buildspace\cleanmode\builderdata.pbcfg"
+                Dim pbprogcfg As String = apppath + "\resource\buildspace\cleanmode\progdata.pbcfg"
+                System.IO.Directory.Delete(apppath + "\binary", True)
+                System.IO.Directory.CreateDirectory(apppath + "\binary")
+                System.IO.Directory.Delete(apppath + "\binarypkg", True)
+                System.IO.Directory.CreateDirectory(apppath + "\binarypkg")
+                ProgressBar1.Value = 20
+                If System.IO.File.Exists(pbcfg) = True Then
+                    Dim objWriter As New System.IO.StreamWriter(pbcfg)
+                    objWriter.Write(TextBox1.Text)
+                    objWriter.Close()
+                    Dim objWriter2 As New System.IO.StreamWriter(pbprogcfg)
+                    objWriter2.Write(TextBox2.Text)
+                    objWriter2.Close()
+                    ProgressBar1.Value = 50
+                    My.Computer.FileSystem.CopyDirectory(apppath + "\resource\buildspace\cleanmode", apppath + "\binary", True)
+                    My.Computer.FileSystem.RenameFile(apppath + "\binary\P Browser App.exe", TextBox2.Text + ".exe")
+                    Dim icnshave As String = apppath + "\statecache\buildcache\appicns\appicns.ico"
+                    If System.IO.File.Exists(icnshave) Then
+                        My.Computer.FileSystem.CopyFile(apppath + "\statecache\buildcache\appicns\appicns.ico", apppath + "\binary\appicns.ico")
+                    End If
+                    ProgressBar1.Value = 70
+                    System.IO.Directory.Delete(apppath + "\resource\buildspace\cleanmode", True)
+                    System.IO.Directory.CreateDirectory(apppath + "\resource\buildspace\cleanmode")
+                    Dim zipsource As String = apppath + "\binary\"
+                    Dim zipbin As String = apppath + "\binarypkg\" + TextBox2.Text + ".zip"
+                    ZipFile.CreateFromDirectory(zipsource, zipbin, CompressionLevel.Optimal, False)
+                    ProgressBar1.Value = 100
+                    MessageBox.Show("Build Completed! Click OK to continue.", "Build Completed!")
+                    If CheckBox1.Checked = True Then
+                        Process.Start(apppath + "\binary\" + TextBox2.Text + ".exe")
+                    End If
+                    If CheckBox2.Checked Then
+                        Process.Start(apppath + "\binarypkg\")
+                    End If
+                    Label7.Text = "Build completed!"
+                Else
+                    MessageBox.Show("Build Failed! Incomplete or corrupted Data please reinstall builder.", "Build Failed!")
+                    Label7.Text = "Build failed!"
+                End If
             Else
                 MessageBox.Show("Please select Build Mode!", "Build Failed!")
             End If
@@ -163,6 +211,8 @@ Public Class Form1
             System.IO.Directory.Delete(apppath + "\binary", True)
             ProgressBar1.Value = 50
             System.IO.Directory.CreateDirectory(apppath + "\binary")
+            System.IO.Directory.Delete(apppath + "\binarypkg", True)
+            System.IO.Directory.CreateDirectory(apppath + "\binarypkg")
             ProgressBar1.Value = 100
             Label7.Text = "Cleanup completed!"
         Catch ex As Exception
@@ -233,7 +283,6 @@ Public Class Form1
         ExtensionsNotFoundToolStripMenuItem.Enabled = False
         Button7.Enabled = False
         ExtensionsToolStripMenuItem.Visible = False
-        RadioButton3.Visible = False
         DevToolStripMenuItem.Visible = False
         Timer2.Start()
         TextBox3.Enabled = False
@@ -544,8 +593,8 @@ Public Class Form1
 
     Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton3.Click
         Button1.Enabled = False
-        CheckBox1.Text = "Start your installer after build"
-        CheckBox2.Text = "Show your installer in explorer after build"
+        CheckBox1.Text = "Start your app after build (Dedicated)"
+        CheckBox2.Text = "Show your ZIP file in explorer after build"
     End Sub
 
     Private Sub UnlockDeveloperMenuToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UnlockDeveloperMenuToolStripMenuItem.Click
@@ -626,5 +675,10 @@ Public Class Form1
 
     Private Sub ResourceSettingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResourceSettingToolStripMenuItem.Click
         prefer.Show()
+    End Sub
+
+    Private Sub OpenPackageDirectoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenPackageDirectoryToolStripMenuItem.Click
+        Dim apppath As String = Application.StartupPath()
+        Process.Start(apppath + "\binarypkg")
     End Sub
 End Class

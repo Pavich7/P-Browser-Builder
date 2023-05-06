@@ -122,6 +122,7 @@ Partial Class Form1
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
+        Me.OpenPackageDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -152,14 +153,14 @@ Partial Class Form1
         'ClearAllToolStripMenuItem
         '
         Me.ClearAllToolStripMenuItem.Name = "ClearAllToolStripMenuItem"
-        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.ClearAllToolStripMenuItem.Text = "Clear All"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'PreviewToolStripMenuItem
@@ -190,7 +191,7 @@ Partial Class Form1
         '
         'ResourceToolStripMenuItem
         '
-        Me.ResourceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuilderResourceToolStripMenuItem, Me.OpenBuildDirectoryToolStripMenuItem})
+        Me.ResourceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuilderResourceToolStripMenuItem, Me.OpenBuildDirectoryToolStripMenuItem, Me.OpenPackageDirectoryToolStripMenuItem})
         Me.ResourceToolStripMenuItem.Name = "ResourceToolStripMenuItem"
         Me.ResourceToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
         Me.ResourceToolStripMenuItem.Text = "Build"
@@ -199,7 +200,7 @@ Partial Class Form1
         '
         Me.BuilderResourceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ResourceSettingToolStripMenuItem})
         Me.BuilderResourceToolStripMenuItem.Name = "BuilderResourceToolStripMenuItem"
-        Me.BuilderResourceToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
+        Me.BuilderResourceToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
         Me.BuilderResourceToolStripMenuItem.Text = "Builder Resource"
         '
         'ResourceSettingToolStripMenuItem
@@ -211,7 +212,7 @@ Partial Class Form1
         'OpenBuildDirectoryToolStripMenuItem
         '
         Me.OpenBuildDirectoryToolStripMenuItem.Name = "OpenBuildDirectoryToolStripMenuItem"
-        Me.OpenBuildDirectoryToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
+        Me.OpenBuildDirectoryToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
         Me.OpenBuildDirectoryToolStripMenuItem.Text = "Open Build Directory"
         '
         'ExtensionsToolStripMenuItem
@@ -995,6 +996,12 @@ Partial Class Form1
         'Timer3
         '
         '
+        'OpenPackageDirectoryToolStripMenuItem
+        '
+        Me.OpenPackageDirectoryToolStripMenuItem.Name = "OpenPackageDirectoryToolStripMenuItem"
+        Me.OpenPackageDirectoryToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
+        Me.OpenPackageDirectoryToolStripMenuItem.Text = "Open Package Directory"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1147,4 +1154,5 @@ Partial Class Form1
     Friend WithEvents Label29 As Label
     Friend WithEvents Label30 As Label
     Friend WithEvents ResourceSettingToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OpenPackageDirectoryToolStripMenuItem As ToolStripMenuItem
 End Class

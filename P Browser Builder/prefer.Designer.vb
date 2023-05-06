@@ -50,13 +50,16 @@ Partial Class prefer
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label1.Location = New System.Drawing.Point(21, 18)
+        Me.Label1.Location = New System.Drawing.Point(17, 57)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(89, 28)
         Me.Label1.TabIndex = 12
@@ -67,7 +70,7 @@ Partial Class prefer
         Me.Label23.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(39, 154)
+        Me.Label23.Location = New System.Drawing.Point(35, 155)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(30, 17)
         Me.Label23.TabIndex = 33
@@ -78,7 +81,7 @@ Partial Class prefer
         Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(39, 108)
+        Me.Label2.Location = New System.Drawing.Point(174, 127)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(31, 17)
         Me.Label2.TabIndex = 34
@@ -89,7 +92,7 @@ Partial Class prefer
         Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(39, 85)
+        Me.Label4.Location = New System.Drawing.Point(35, 127)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(26, 17)
         Me.Label4.TabIndex = 35
@@ -100,7 +103,7 @@ Partial Class prefer
         Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(39, 131)
+        Me.Label5.Location = New System.Drawing.Point(318, 127)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(32, 17)
         Me.Label5.TabIndex = 36
@@ -111,7 +114,7 @@ Partial Class prefer
         Me.Label11.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(29, 56)
+        Me.Label11.Location = New System.Drawing.Point(25, 95)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(105, 21)
         Me.Label11.TabIndex = 37
@@ -122,7 +125,7 @@ Partial Class prefer
         Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(29, 184)
+        Me.Label6.Location = New System.Drawing.Point(25, 185)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(139, 21)
         Me.Label6.TabIndex = 38
@@ -134,7 +137,7 @@ Partial Class prefer
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.Label7.Location = New System.Drawing.Point(30, 209)
+        Me.Label7.Location = New System.Drawing.Point(26, 210)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(208, 17)
         Me.Label7.TabIndex = 39
@@ -147,7 +150,7 @@ Partial Class prefer
         Me.Label8.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label8.Location = New System.Drawing.Point(407, 184)
+        Me.Label8.Location = New System.Drawing.Point(403, 185)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(71, 21)
         Me.Label8.TabIndex = 40
@@ -160,7 +163,7 @@ Partial Class prefer
         Me.Label9.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label9.Location = New System.Drawing.Point(424, 237)
+        Me.Label9.Location = New System.Drawing.Point(420, 238)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(54, 21)
         Me.Label9.TabIndex = 43
@@ -172,7 +175,7 @@ Partial Class prefer
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.Label10.Location = New System.Drawing.Point(30, 262)
+        Me.Label10.Location = New System.Drawing.Point(26, 263)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(183, 17)
         Me.Label10.TabIndex = 42
@@ -183,7 +186,7 @@ Partial Class prefer
         Me.Label12.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(29, 237)
+        Me.Label12.Location = New System.Drawing.Point(25, 238)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(180, 21)
         Me.Label12.TabIndex = 41
@@ -196,7 +199,7 @@ Partial Class prefer
         Me.Label13.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label13.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label13.Location = New System.Drawing.Point(426, 292)
+        Me.Label13.Location = New System.Drawing.Point(422, 293)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(52, 21)
         Me.Label13.TabIndex = 46
@@ -208,7 +211,7 @@ Partial Class prefer
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.Label14.Location = New System.Drawing.Point(30, 317)
+        Me.Label14.Location = New System.Drawing.Point(26, 318)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(197, 17)
         Me.Label14.TabIndex = 45
@@ -219,7 +222,7 @@ Partial Class prefer
         Me.Label15.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(29, 292)
+        Me.Label15.Location = New System.Drawing.Point(25, 293)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(198, 21)
         Me.Label15.TabIndex = 44
@@ -230,7 +233,7 @@ Partial Class prefer
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label3.Location = New System.Drawing.Point(21, 405)
+        Me.Label3.Location = New System.Drawing.Point(17, 406)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(64, 28)
         Me.Label3.TabIndex = 47
@@ -243,7 +246,7 @@ Partial Class prefer
         Me.Label16.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label16.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label16.Location = New System.Drawing.Point(429, 444)
+        Me.Label16.Location = New System.Drawing.Point(425, 445)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(49, 21)
         Me.Label16.TabIndex = 50
@@ -255,7 +258,7 @@ Partial Class prefer
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.Label17.Location = New System.Drawing.Point(30, 469)
+        Me.Label17.Location = New System.Drawing.Point(26, 470)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(222, 17)
         Me.Label17.TabIndex = 49
@@ -266,7 +269,7 @@ Partial Class prefer
         Me.Label18.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(29, 444)
+        Me.Label18.Location = New System.Drawing.Point(25, 445)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(105, 21)
         Me.Label18.TabIndex = 48
@@ -279,7 +282,7 @@ Partial Class prefer
         Me.Label19.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label19.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label19.Location = New System.Drawing.Point(436, 346)
+        Me.Label19.Location = New System.Drawing.Point(432, 347)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(42, 21)
         Me.Label19.TabIndex = 53
@@ -291,7 +294,7 @@ Partial Class prefer
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.Label20.Location = New System.Drawing.Point(30, 371)
+        Me.Label20.Location = New System.Drawing.Point(26, 372)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(266, 17)
         Me.Label20.TabIndex = 52
@@ -302,7 +305,7 @@ Partial Class prefer
         Me.Label21.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(29, 346)
+        Me.Label21.Location = New System.Drawing.Point(25, 347)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(214, 21)
         Me.Label21.TabIndex = 51
@@ -319,7 +322,7 @@ Partial Class prefer
         Me.Label22.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label22.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label22.Location = New System.Drawing.Point(429, 542)
+        Me.Label22.Location = New System.Drawing.Point(425, 543)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(50, 21)
         Me.Label22.TabIndex = 57
@@ -331,7 +334,7 @@ Partial Class prefer
         Me.Label24.AutoSize = True
         Me.Label24.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.Label24.Location = New System.Drawing.Point(30, 567)
+        Me.Label24.Location = New System.Drawing.Point(26, 568)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(222, 17)
         Me.Label24.TabIndex = 56
@@ -342,7 +345,7 @@ Partial Class prefer
         Me.Label25.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label25.AutoSize = True
         Me.Label25.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(29, 542)
+        Me.Label25.Location = New System.Drawing.Point(25, 543)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(181, 21)
         Me.Label25.TabIndex = 55
@@ -353,7 +356,7 @@ Partial Class prefer
         Me.Label26.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label26.Location = New System.Drawing.Point(21, 503)
+        Me.Label26.Location = New System.Drawing.Point(17, 504)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(103, 28)
         Me.Label26.TabIndex = 54
@@ -361,10 +364,29 @@ Partial Class prefer
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(33, 595)
+        Me.TextBox1.Location = New System.Drawing.Point(29, 600)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(445, 20)
         Me.TextBox1.TabIndex = 58
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
+        Me.Label27.Location = New System.Drawing.Point(201, 6)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(103, 28)
+        Me.Label27.TabIndex = 59
+        Me.Label27.Text = "Preference"
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel1.Controls.Add(Me.Label27)
+        Me.Panel1.Location = New System.Drawing.Point(-1, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(502, 46)
+        Me.Panel1.TabIndex = 60
         '
         'prefer
         '
@@ -372,6 +394,7 @@ Partial Class prefer
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(500, 634)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label22)
         Me.Controls.Add(Me.Label24)
@@ -407,6 +430,8 @@ Partial Class prefer
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Preference"
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -439,4 +464,6 @@ Partial Class prefer
     Friend WithEvents Label25 As Label
     Friend WithEvents Label26 As Label
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label27 As Label
+    Friend WithEvents Panel1 As Panel
 End Class
