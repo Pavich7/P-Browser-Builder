@@ -82,7 +82,7 @@ Public Class prefer
                 System.IO.Directory.Delete(apppath + "\resource\getcache", True)
                 System.IO.Directory.CreateDirectory(apppath + "\resource\getcache")
                 Dim fileReader As System.IO.StreamReader
-                My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/cfuversion/onlineresver.txt", apppath + "\resource\getcache\onlineresver.txt")
+                My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/api/v2-pbb/cfuversion/onlineresver.txt", apppath + "\resource\getcache\onlineresver.txt")
                 Dim fileReader1 As System.IO.StreamReader
                 fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\getcache\onlineresver.txt")
                 Dim stringReader1 As String

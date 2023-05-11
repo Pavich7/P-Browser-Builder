@@ -356,9 +356,9 @@ Public Class Form1
         Try
             ProgressBar1.Value = 10
             Dim apppath As String = Application.StartupPath()
-            My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/newsfeed/nf1_title.txt", apppath + "\statecache\nfcache\nf1_title.txt")
-            My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/newsfeed/nf1_desc.txt", apppath + "\statecache\nfcache\nf1_desc.txt")
-            My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/service/app.pavichdev.pbrowserbuilder/v1/newsfeed/nf1_date.txt", apppath + "\statecache\nfcache\nf1_date.txt")
+            My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_title.txt", apppath + "\statecache\nfcache\nf1_title.txt")
+            My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_desc.txt", apppath + "\statecache\nfcache\nf1_desc.txt")
+            My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_date.txt", apppath + "\statecache\nfcache\nf1_date.txt")
             ProgressBar1.Value = 50
             Dim fileReader1 As System.IO.StreamReader
             Dim fileReader2 As System.IO.StreamReader
@@ -693,7 +693,7 @@ Public Class Form1
     End Sub
 
     Private Sub ReleaseNoteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReleaseNoteToolStripMenuItem.Click
-        Browser.Load("https://github.com/Pavich7/P-Browser-Builder/releases/tag/4.0.0-Beta.1")
+        Browser.Load("https://github.com/Pavich7/P-Browser-Builder/releases/tag/4.0.0-Beta.2")
     End Sub
 
     Private Sub ReinitializeResourceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReinitializeResourceToolStripMenuItem.Click
