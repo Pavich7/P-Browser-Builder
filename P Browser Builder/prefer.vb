@@ -141,11 +141,32 @@ Public Class prefer
     End Sub
 
     Private Sub Label22_Click(sender As Object, e As EventArgs) Handles Label22.Click
+        If TextBox1.Text = "" Then
+            MessageBox.Show("Please Enter URL!", "FAILED!")
+        Else
+            Dim apppath As String = Application.StartupPath()
+            Dim pbcfg As String = apppath + "\statedata\setting.builder.resdlserver.pbcfg"
+            Dim objWriter As New System.IO.StreamWriter(pbcfg)
+            objWriter.Write(TextBox1.Text)
+            objWriter.Close()
+            MessageBox.Show("Successed!", "OK!")
+        End If
+    End Sub
+
+    Private Sub Label28_Click(sender As Object, e As EventArgs) Handles Label28.Click
         Dim apppath As String = Application.StartupPath()
         Dim pbcfg As String = apppath + "\statedata\setting.builder.resdlserver.pbcfg"
         Dim objWriter As New System.IO.StreamWriter(pbcfg)
-        objWriter.Write(TextBox1.Text)
+        objWriter.Write("https://github.com/Pavich7/P-Browser-Builder-Resource/releases/latest/download/pbb-resource.zip")
         objWriter.Close()
-        MessageBox.Show("Successed!", "OK!")
+        MessageBox.Show("Reset!", "OK!")
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        If TextBox1.Text = "" Then
+            Label22.Enabled = False
+        Else
+            Label22.Enabled = True
+        End If
     End Sub
 End Class

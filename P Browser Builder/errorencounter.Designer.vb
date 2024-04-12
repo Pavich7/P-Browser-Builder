@@ -35,7 +35,7 @@ Partial Class errorencounter
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.P_Browser_Builder.My.Resources.Resources.vcsconflicting_93497
+        Me.PictureBox1.ErrorImage = Nothing
         Me.PictureBox1.Location = New System.Drawing.Point(234, 10)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(95, 86)

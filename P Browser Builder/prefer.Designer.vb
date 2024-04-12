@@ -52,6 +52,7 @@ Partial Class prefer
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label28 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -388,12 +389,26 @@ Partial Class prefer
         Me.Panel1.Size = New System.Drawing.Size(502, 46)
         Me.Panel1.TabIndex = 60
         '
+        'Label28
+        '
+        Me.Label28.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label28.AutoSize = True
+        Me.Label28.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label28.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label28.Location = New System.Drawing.Point(371, 486)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(48, 21)
+        Me.Label28.TabIndex = 61
+        Me.Label28.Text = "Reset"
+        '
         'prefer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(500, 635)
+        Me.Controls.Add(Me.Label28)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label22)
@@ -466,4 +481,5 @@ Partial Class prefer
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label27 As Label
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label28 As Label
 End Class

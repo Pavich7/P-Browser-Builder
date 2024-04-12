@@ -237,6 +237,7 @@ Public Class Form1
             Button2.Enabled = False
             RadioButton1.Enabled = False
             RadioButton2.Enabled = False
+            RadioButton3.Enabled = False
             CheckBox1.Enabled = False
             CheckBox2.Enabled = False
             Label6.Enabled = False

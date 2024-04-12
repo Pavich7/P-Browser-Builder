@@ -1,18 +1,5 @@
-Release 4.0.0
-- ADDED: Preference menu
-- ADDED: Status bar in builder
-- ADDED: Showing percent of current task.
-- ADDED: Resource initialization for lower download size.
-- ADDED: Resource sideload feature.
-- ADDED: Introduce build with Packaging Ready Mode.
-- ADDED: Open Package Directory.
-- ADDED: Release note in help menu.
-- ADDED: Reinitialize resource in dev menu.
-- CHANGED: Open any menu that open browser will now use preview.
-- CHANGED: New splash screen design.
-- CHANGED: New about screen design.
-- CHANGED: High DPI Support are obsolute.
-- CHANGED: Combine cache folder into same folder.
-- CHANGED: Require resource 3.0.0 or later.
-- CHANGED: Moved resource sideload into beta menu.
-- REMOVED: Paged Memory Usage diagnostic.
+Release 4.1.0
+- ADDED: Reset Custom Resource Server Button
+- IMPROVED: Updated CefSharp to 123.0.60
+- CHANGED: Apply Button for Custom Resource Server need to have at least a charactor in textbox.
+- FIXED: ZIP Packaging Menu always available even there is no resources.
