@@ -11,7 +11,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("P Browser Builder Tool")>
 <Assembly: AssemblyCompany("PavichDev Software")>
 <Assembly: AssemblyProduct("P Browser Builder")>
-<Assembly: AssemblyCopyright("Copyright © 2023 Pavich Komansil")>
+<Assembly: AssemblyCopyright("Copyright © 2024 Pavich Komansil")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
@@ -30,5 +30,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("4.0.0")>
-<Assembly: AssemblyFileVersion("4.0.0")>
+<Assembly: AssemblyVersion("4.1.0")>
+<Assembly: AssemblyFileVersion("4.1.0")>

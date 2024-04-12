@@ -91,7 +91,7 @@ Public Class Form1
                     My.Computer.FileSystem.RenameFile(apppath + "\binary\P Browser App.exe", TextBox2.Text + ".exe")
                     Dim icnshave As String = apppath + "\statecache\buildcache\appicns\appicns.ico"
                     If System.IO.File.Exists(icnshave) Then
-                        My.Computer.FileSystem.CopyFile(apppath + "\statecache\buildcache\appicns\appicns.ico", apppath + "\binary\appicns.ico")
+                        My.Computer.FileSystem.CopyFile(apppath + "\statecache\buildcache\appicns\appicns.ico", apppath + "\binary\appicns.ico", True)
                     End If
                     ProgressBar1.Value = 100
                     MessageBox.Show("Build Completed! Click OK to continue.", "Build Completed!")
@@ -131,7 +131,7 @@ Public Class Form1
                     My.Computer.FileSystem.RenameFile(apppath + "\binary\P Browser App.exe", TextBox2.Text + ".exe")
                     Dim icnshave As String = apppath + "\statecache\buildcache\appicns\appicns.ico"
                     If System.IO.File.Exists(icnshave) Then
-                        My.Computer.FileSystem.CopyFile(apppath + "\statecache\buildcache\appicns\appicns.ico", apppath + "\binary\appicns.ico")
+                        My.Computer.FileSystem.CopyFile(apppath + "\statecache\buildcache\appicns\appicns.ico", apppath + "\binary\appicns.ico", True)
                     End If
                     ProgressBar1.Value = 70
                     System.IO.Directory.Delete(apppath + "\resource\buildspace\cleanmode", True)
@@ -176,7 +176,7 @@ Public Class Form1
                     My.Computer.FileSystem.RenameFile(apppath + "\binary\P Browser App.exe", TextBox2.Text + ".exe")
                     Dim icnshave As String = apppath + "\statecache\buildcache\appicns\appicns.ico"
                     If System.IO.File.Exists(icnshave) Then
-                        My.Computer.FileSystem.CopyFile(apppath + "\statecache\buildcache\appicns\appicns.ico", apppath + "\binary\appicns.ico")
+                        My.Computer.FileSystem.CopyFile(apppath + "\statecache\buildcache\appicns\appicns.ico", apppath + "\binary\appicns.ico", True)
                     End If
                     ProgressBar1.Value = 70
                     System.IO.Directory.Delete(apppath + "\resource\buildspace\cleanmode", True)

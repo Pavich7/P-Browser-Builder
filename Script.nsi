@@ -47,7 +47,7 @@ Section "P Browser Installer" SecDummy
   SetOutPath "$INSTDIR"
   
   ; ADD YOUR OWN FILES HERE...
-  File /r "C:\Users\Pavich Komansil\Desktop\pbbi\*"
+  File /r "C:\Users\Pavich Komansil\Desktop\inspbb\*"
   ExecWait '"$INSTDIR\packages\VC_redist.x64.exe"  /passive /norestart'
 
   ; Store installation folder
