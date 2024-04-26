@@ -1,9 +1,6 @@
-Release 4.1.0
-- ADDED: Reset Custom Resource Server Button
-- IMPROVED: Updated CefSharp to 123.0.60
-- CHANGED: Apply Button for Custom Resource Server need to have at least a charactor in textbox.
-- CHANGED: Splash screen and about screen.
-- FIXED: ZIP Packaging Menu always available even there is no resources.
-- FIXED: Files exist error during build process. 
+Release 4.2.0
+- ADDED: Set Diagnostic Update Interval.
+- IMPROVED: To reduce CPU usage default Diagnostic Update Interval is set to 1500ms.
+- IMPROVED: Prograss bar after cleanup completed will reset after 3 seconds.
 - ISSUE: Due to big update of CefSharp, App may failed to launch at first time.
 	WORKAROUND: Try to relaunch app again.

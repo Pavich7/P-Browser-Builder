@@ -202,7 +202,12 @@ Public Class Form1
             End If
         End If
     End Sub
-
+    Private Sub Snooze(ByVal seconds As Integer)
+        For i As Integer = 0 To seconds * 100
+            System.Threading.Thread.Sleep(10)
+            Application.DoEvents()
+        Next
+    End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Try
             Label7.Text = "Cleaning in progress..."
@@ -215,10 +220,12 @@ Public Class Form1
             System.IO.Directory.CreateDirectory(apppath + "\binarypkg")
             ProgressBar1.Value = 100
             Label7.Text = "Cleanup completed!"
+            Snooze(3)
+            ProgressBar1.Value = 0
         Catch ex As Exception
             MessageBox.Show("Please close built app first before perform this action.", "Failed!")
             Label7.Text = "Cleanup failed!"
-            ProgressBar1.Value = 100
+            ProgressBar1.Value = 0
         End Try
     End Sub
 
@@ -231,6 +238,12 @@ Public Class Form1
         CefSharp.Cef.Initialize(setting)
         Browser = New ChromiumWebBrowser("")
         Panel2.Controls.Add(Browser)
+        Dim fileReader1 As System.IO.StreamReader
+        fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.usageinterv.pbcfg")
+        Dim stringReader1 As String
+        stringReader1 = fileReader1.ReadLine()
+        Timer2.Interval = stringReader1
+        fileReader1.Close()
         Dim rscheck As String = apppath + "\resource"
         If Not System.IO.Directory.Exists(rscheck) Then
             Button1.Enabled = False
@@ -706,4 +719,9 @@ Public Class Form1
             Application.Restart()
         End Try
     End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        usagesetting.Show()
+    End Sub
+
 End Class
