@@ -9,8 +9,15 @@ P Browser Builder is an open-source Windows application that help you turn your 
 * WebGL and GPU acceleration support
 * Easy to use and best for starter
 ## Build from source
-There is no way to directly build from source because this repository contain only source code.\
-But you can create or using your own resource and using a copy of code based function.
+### Requirements
+* Visual Studio 2022 or newer with .NET & Windows Development installed.
+* .NET Framework Developer Pack installed.
+* NSIS for Packaging Installer (Optional).
+### Building Project
+* Open .sln solution files in Visual Studio.
+* Right click on Project P Brower Builder then click build.
+* After Project build complete, you may need to create some folder and empty files.
+### There is no guarantee that project can build without any problem.
 ## License
 ### Source Code License
 Since P Browser Builder is open-source software. Please read LICENSE.TXT for condition of use on this source code.\
