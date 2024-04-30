@@ -56,15 +56,6 @@ Public Class Form1
         CheckBox2.Text = "Show your app in explorer after build"
     End Sub
 
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
-        RadioButton1.Checked = False
-        RadioButton2.Checked = False
-        RadioButton3.Checked = False
-        CheckBox1.Text = "Start your app after build"
-        CheckBox2.Text = "Show your app in explorer after build"
-        Button1.Enabled = True
-    End Sub
-
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         If TextBox1.Text = "" Then
             MessageBox.Show("Please enter your websites URL.", "Build Failed!")
@@ -92,6 +83,25 @@ Public Class Form1
                     Dim icnshave As String = apppath + "\statecache\buildcache\appicns\appicns.ico"
                     If System.IO.File.Exists(icnshave) Then
                         My.Computer.FileSystem.CopyFile(apppath + "\statecache\buildcache\appicns\appicns.ico", apppath + "\binary\appicns.ico", True)
+                    End If
+                    ProgressBar1.Value = 80
+                    Dim pbfsd As String = apppath + "\binary\fsmsg.desc.pbcfg"
+                    Dim pbfst As String = apppath + "\binary\fsmsg.title.pbcfg"
+                    Dim pbfse As String = apppath + "\binary\fsmsg.enab.pbval"
+                    Dim objWriter3 As New System.IO.StreamWriter(pbfsd)
+                    objWriter3.Write(welcomemessage.TextBox2.Text)
+                    objWriter3.Close()
+                    Dim objWriter4 As New System.IO.StreamWriter(pbfst)
+                    objWriter4.Write(welcomemessage.TextBox1.Text)
+                    objWriter4.Close()
+                    If CheckBox3.Checked = False Then
+                        Dim objWriter5 As New System.IO.StreamWriter(pbfse)
+                        objWriter5.Write("False")
+                        objWriter5.Close()
+                    Else
+                        Dim objWriter5 As New System.IO.StreamWriter(pbfse)
+                        objWriter5.Write("True")
+                        objWriter5.Close()
                     End If
                     ProgressBar1.Value = 100
                     MessageBox.Show("Build Completed! Click OK to continue.", "Build Completed!")
@@ -136,6 +146,25 @@ Public Class Form1
                     ProgressBar1.Value = 70
                     System.IO.Directory.Delete(apppath + "\resource\buildspace\cleanmode", True)
                     System.IO.Directory.CreateDirectory(apppath + "\resource\buildspace\cleanmode")
+                    ProgressBar1.Value = 80
+                    Dim pbfsd As String = apppath + "\binary\fsmsg.desc.pbcfg"
+                    Dim pbfst As String = apppath + "\binary\fsmsg.title.pbcfg"
+                    Dim pbfse As String = apppath + "\binary\fsmsg.enab.pbval"
+                    Dim objWriter3 As New System.IO.StreamWriter(pbfsd)
+                    objWriter3.Write(welcomemessage.TextBox2.Text)
+                    objWriter3.Close()
+                    Dim objWriter4 As New System.IO.StreamWriter(pbfst)
+                    objWriter4.Write(welcomemessage.TextBox1.Text)
+                    objWriter4.Close()
+                    If CheckBox3.Checked = False Then
+                        Dim objWriter5 As New System.IO.StreamWriter(pbfse)
+                        objWriter5.Write("False")
+                        objWriter5.Close()
+                    Else
+                        Dim objWriter5 As New System.IO.StreamWriter(pbfse)
+                        objWriter5.Write("True")
+                        objWriter5.Close()
+                    End If
                     ProgressBar1.Value = 100
                     MessageBox.Show("Build Completed! Click OK to continue.", "Build Completed!")
                     If CheckBox1.Checked = True Then
@@ -181,6 +210,26 @@ Public Class Form1
                     ProgressBar1.Value = 70
                     System.IO.Directory.Delete(apppath + "\resource\buildspace\cleanmode", True)
                     System.IO.Directory.CreateDirectory(apppath + "\resource\buildspace\cleanmode")
+                    ProgressBar1.Value = 80
+                    Dim pbfsd As String = apppath + "\binary\fsmsg.desc.pbcfg"
+                    Dim pbfst As String = apppath + "\binary\fsmsg.title.pbcfg"
+                    Dim pbfse As String = apppath + "\binary\fsmsg.enab.pbval"
+                    Dim objWriter3 As New System.IO.StreamWriter(pbfsd)
+                    objWriter3.Write(welcomemessage.TextBox2.Text)
+                    objWriter3.Close()
+                    Dim objWriter4 As New System.IO.StreamWriter(pbfst)
+                    objWriter4.Write(welcomemessage.TextBox1.Text)
+                    objWriter4.Close()
+                    If CheckBox3.Checked = False Then
+                        Dim objWriter5 As New System.IO.StreamWriter(pbfse)
+                        objWriter5.Write("False")
+                        objWriter5.Close()
+                    Else
+                        Dim objWriter5 As New System.IO.StreamWriter(pbfse)
+                        objWriter5.Write("True")
+                        objWriter5.Close()
+                    End If
+                    ProgressBar1.Value = 90
                     Dim zipsource As String = apppath + "\binary\"
                     Dim zipbin As String = apppath + "\binarypkg\" + TextBox2.Text + ".zip"
                     ZipFile.CreateFromDirectory(zipsource, zipbin, CompressionLevel.Optimal, False)
@@ -244,6 +293,8 @@ Public Class Form1
         stringReader1 = fileReader1.ReadLine()
         Timer2.Interval = stringReader1
         fileReader1.Close()
+        Button4.Enabled = False
+        Button5.Enabled = False
         Dim rscheck As String = apppath + "\resource"
         If Not System.IO.Directory.Exists(rscheck) Then
             Button1.Enabled = False
@@ -253,8 +304,6 @@ Public Class Form1
             RadioButton3.Enabled = False
             CheckBox1.Enabled = False
             CheckBox2.Enabled = False
-            Label6.Enabled = False
-            Label9.Enabled = False
             Label4.Enabled = False
             Label8.Enabled = False
         Else
@@ -282,8 +331,6 @@ Public Class Form1
                 RadioButton2.Enabled = False
                 CheckBox1.Enabled = False
                 CheckBox2.Enabled = False
-                Label6.Enabled = False
-                Label9.Enabled = False
                 Label4.Enabled = False
                 Label8.Enabled = False
             End If
@@ -334,11 +381,6 @@ Public Class Form1
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
         about.Show()
-    End Sub
-
-    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
-        CheckBox1.Checked = False
-        CheckBox2.Checked = False
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
@@ -424,24 +466,6 @@ Public Class Form1
         CheckBox2.Checked = False
         System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
         System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
-    End Sub
-
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        Dim apppath As String = Application.StartupPath()
-        System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
-        System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
-        OpenFileDialog1.Multiselect = False
-        OpenFileDialog1.Title = "Choose your icons file"
-        OpenFileDialog1.Filter = "Icons Files|*.ico"
-        If OpenFileDialog1.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
-            PictureBox1.Image = Image.FromFile(OpenFileDialog1.FileName)
-            TextBox3.Text = OpenFileDialog1.FileName
-            My.Computer.FileSystem.CopyFile(OpenFileDialog1.FileName, apppath + "\statecache\buildcache\appicns\appicns.ico")
-            'Dim pbcfg As String = apppath + "\statedata\usersave.builder.urlsave.pbsf"
-            'Dim objWriter As New System.IO.StreamWriter(pbcfg)
-            'objWriter.Write(OpenFileDialog1)
-            'objWriter.Close()
-        End If
     End Sub
 
     Private Sub InstallationGuideToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InstallationGuideToolStripMenuItem.Click
@@ -643,8 +667,6 @@ Public Class Form1
             Label4.Enabled = True
             TextBox3.Enabled = True
             Label8.Enabled = True
-            Label6.Enabled = True
-            Label9.Enabled = True
             RadioButton1.Enabled = True
             RadioButton2.Enabled = True
             CheckBox1.Enabled = True
@@ -724,4 +746,55 @@ Public Class Form1
         usagesetting.Show()
     End Sub
 
+    Private Sub CheckBox3_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox3.CheckedChanged
+        If CheckBox3.Checked = False Then
+            Button4.Enabled = False
+            Button5.Enabled = False
+            welcomemessage.Close()
+        Else
+            Button4.Enabled = True
+            Button5.Enabled = True
+        End If
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        welcomemessage.Show()
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+
+        MessageBox.Show(welcomemessage.TextBox2.Text, welcomemessage.TextBox1.Text)
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        RadioButton1.Checked = False
+        RadioButton2.Checked = False
+        RadioButton3.Checked = False
+        CheckBox1.Text = "Start your app after build"
+        CheckBox2.Text = "Show your app in explorer after build"
+        Button1.Enabled = True
+    End Sub
+
+    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+        CheckBox1.Checked = False
+        CheckBox2.Checked = False
+    End Sub
+
+    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
+        Dim apppath As String = Application.StartupPath()
+        System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
+        System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
+        OpenFileDialog1.Multiselect = False
+        OpenFileDialog1.Title = "Choose your icons file"
+        OpenFileDialog1.Filter = "Icons Files|*.ico"
+        If OpenFileDialog1.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
+            PictureBox1.Image = Image.FromFile(OpenFileDialog1.FileName)
+            TextBox3.Text = OpenFileDialog1.FileName
+            My.Computer.FileSystem.CopyFile(OpenFileDialog1.FileName, apppath + "\statecache\buildcache\appicns\appicns.ico")
+            'Dim pbcfg As String = apppath + "\statedata\usersave.builder.urlsave.pbsf"
+            'Dim objWriter As New System.IO.StreamWriter(pbcfg)
+            'objWriter.Write(OpenFileDialog1)
+            'objWriter.Close()
+        End If
+    End Sub
 End Class

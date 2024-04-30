@@ -1,6 +1,7 @@
-Release 4.2.0
-- ADDED: Set Diagnostic Update Interval.
-- IMPROVED: To reduce CPU usage default Diagnostic Update Interval is set to 1500ms.
-- IMPROVED: Prograss bar after cleanup completed will reset after 3 seconds.
-- ISSUE: Due to big update of CefSharp, App may failed to launch at first time.
-	WORKAROUND: Try to relaunch app again.
+Release 5.0.0
+- ADDED: Welcome Message Feature.
+- ADDED: Add unlock button in advanced menu in setting so it's locked by default.
+- ADDED: Added icon to preference header menu.
+- IMPROVEMENT: Replace browse button by icon.
+- IMPROVEMENT: Replace reset button by icon.
+- IMPROVEMENT: Delete Installation Cache will disabled if cleaned already.

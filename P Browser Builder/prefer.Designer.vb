@@ -53,7 +53,10 @@ Partial Class prefer
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -359,9 +362,9 @@ Partial Class prefer
         Me.Label26.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
         Me.Label26.Location = New System.Drawing.Point(17, 447)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(103, 28)
+        Me.Label26.Size = New System.Drawing.Size(96, 28)
         Me.Label26.TabIndex = 54
-        Me.Label26.Text = "Beta menu"
+        Me.Label26.Text = "Advanced"
         '
         'TextBox1
         '
@@ -374,7 +377,7 @@ Partial Class prefer
         '
         Me.Label27.AutoSize = True
         Me.Label27.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label27.Location = New System.Drawing.Point(201, 6)
+        Me.Label27.Location = New System.Drawing.Point(210, 6)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(103, 28)
         Me.Label27.TabIndex = 59
@@ -383,6 +386,7 @@ Partial Class prefer
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel1.Controls.Add(Me.PictureBox2)
         Me.Panel1.Controls.Add(Me.Label27)
         Me.Panel1.Location = New System.Drawing.Point(-1, 0)
         Me.Panel1.Name = "Panel1"
@@ -402,12 +406,37 @@ Partial Class prefer
         Me.Label28.TabIndex = 61
         Me.Label28.Text = "Reset"
         '
+        'Label29
+        '
+        Me.Label29.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label29.AutoSize = True
+        Me.Label29.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label29.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.ForeColor = System.Drawing.Color.Red
+        Me.Label29.Location = New System.Drawing.Point(416, 453)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(58, 21)
+        Me.Label29.TabIndex = 62
+        Me.Label29.Text = "Unlock"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox2.Image = Global.P_Browser_Builder.My.Resources.Resources.settings
+        Me.PictureBox2.Location = New System.Drawing.Point(188, 8)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(20, 29)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 63
+        Me.PictureBox2.TabStop = False
+        '
         'prefer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(500, 635)
+        Me.Controls.Add(Me.Label29)
         Me.Controls.Add(Me.Label28)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TextBox1)
@@ -447,6 +476,7 @@ Partial Class prefer
         Me.Text = "Preference"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -482,4 +512,6 @@ Partial Class prefer
     Friend WithEvents Label27 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label28 As Label
+    Friend WithEvents Label29 As Label
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

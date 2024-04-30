@@ -5,6 +5,10 @@ Public Class prefer
     Private Sub prefer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim apppath As String = Application.StartupPath()
         Dim rescheck As String = apppath + "\resource"
+        Dim cachecheck As String = apppath + "\statecache\updatecache\pbb-resource.zip"
+        If Not System.IO.File.Exists(cachecheck) Then
+            Label9.Enabled = False
+        End If
         If Not System.IO.Directory.Exists(rescheck) Then
             Label4.Text = "Redist : Not installed"
             Label2.Text = "WinForms : Not installed"
@@ -45,6 +49,14 @@ Public Class prefer
                 Me.Close()
             End Try
         End If
+        Label22.Enabled = False
+        Label24.Enabled = False
+        Label25.Enabled = False
+        Label28.Enabled = False
+        TextBox1.Enabled = False
+        Label19.Enabled = False
+        Label20.Enabled = False
+        Label21.Enabled = False
     End Sub
 
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
@@ -167,6 +179,21 @@ Public Class prefer
             Label22.Enabled = False
         Else
             Label22.Enabled = True
+        End If
+    End Sub
+
+    Private Sub Label29_Click(sender As Object, e As EventArgs) Handles Label29.Click
+        Dim result As DialogResult = MessageBox.Show("Unlocking the Advanced Menu is dangerous." + vbNewLine + "This menu is used to install or modify builder resouces." + vbNewLine + "" + vbNewLine + "Do you want to process it?", "You sure about this?", MessageBoxButtons.YesNo)
+        If (result = DialogResult.Yes) Then
+            Label29.Enabled = False
+            Label22.Enabled = True
+            Label24.Enabled = True
+            Label25.Enabled = True
+            Label28.Enabled = True
+            TextBox1.Enabled = True
+            Label19.Enabled = True
+            Label20.Enabled = True
+            Label21.Enabled = True
         End If
     End Sub
 End Class

@@ -222,6 +222,12 @@
     <Compile Include="usagesetting.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="welcomemessage.Designer.vb">
+      <DependentUpon>welcomemessage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="welcomemessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="about.resx">
@@ -249,6 +255,9 @@
     <EmbeddedResource Include="usagesetting.resx">
       <DependentUpon>usagesetting.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="welcomemessage.resx">
+      <DependentUpon>welcomemessage.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\app.manifest" />
@@ -265,6 +274,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="p_browser_icon_001_rq2_icon.ico" />
+    <None Include="Resources\more.png" />
+    <None Include="Resources\find.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\undo.png" />
     <None Include="Resources\Screenshot 2024-04-26 152247.png" />
     <None Include="Resources\Screenshot 2024-04-26 152308.png" />
     <None Include="Resources\settings.png" />

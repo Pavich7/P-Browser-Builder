@@ -79,15 +79,12 @@ Partial Class Form1
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label25 = New System.Windows.Forms.Label()
@@ -106,7 +103,6 @@ Partial Class Form1
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
@@ -115,7 +111,6 @@ Partial Class Form1
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.Panel8 = New System.Windows.Forms.Panel()
@@ -124,15 +119,26 @@ Partial Class Form1
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel6.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel8.SuspendLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -155,14 +161,14 @@ Partial Class Form1
         'ClearAllToolStripMenuItem
         '
         Me.ClearAllToolStripMenuItem.Name = "ClearAllToolStripMenuItem"
-        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.ClearAllToolStripMenuItem.Text = "Clear All"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'PreviewToolStripMenuItem
@@ -233,7 +239,7 @@ Partial Class Form1
         'ExtensionsNotFoundToolStripMenuItem
         '
         Me.ExtensionsNotFoundToolStripMenuItem.Name = "ExtensionsNotFoundToolStripMenuItem"
-        Me.ExtensionsNotFoundToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExtensionsNotFoundToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
         Me.ExtensionsNotFoundToolStripMenuItem.Text = "Coming Soon..."
         '
         'WindowToolStripMenuItem
@@ -247,37 +253,37 @@ Partial Class Form1
         '
         Me.BuilderWindowToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NormalToolStripMenuItem, Me.MaximizedToolStripMenuItem, Me.MinimizedToolStripMenuItem})
         Me.BuilderWindowToolStripMenuItem.Name = "BuilderWindowToolStripMenuItem"
-        Me.BuilderWindowToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BuilderWindowToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.BuilderWindowToolStripMenuItem.Text = "Builder Window"
         '
         'NormalToolStripMenuItem
         '
         Me.NormalToolStripMenuItem.Name = "NormalToolStripMenuItem"
-        Me.NormalToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.NormalToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
         Me.NormalToolStripMenuItem.Text = "Normal"
         '
         'MaximizedToolStripMenuItem
         '
         Me.MaximizedToolStripMenuItem.Name = "MaximizedToolStripMenuItem"
-        Me.MaximizedToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.MaximizedToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
         Me.MaximizedToolStripMenuItem.Text = "Maximized"
         '
         'MinimizedToolStripMenuItem
         '
         Me.MinimizedToolStripMenuItem.Name = "MinimizedToolStripMenuItem"
-        Me.MinimizedToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.MinimizedToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
         Me.MinimizedToolStripMenuItem.Text = "Minimized"
         '
         'HideRightPanelToolStripMenuItem
         '
         Me.HideRightPanelToolStripMenuItem.Name = "HideRightPanelToolStripMenuItem"
-        Me.HideRightPanelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.HideRightPanelToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.HideRightPanelToolStripMenuItem.Text = "Hide right panel"
         '
         'ShowRightPanelToolStripMenuItem
         '
         Me.ShowRightPanelToolStripMenuItem.Name = "ShowRightPanelToolStripMenuItem"
-        Me.ShowRightPanelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ShowRightPanelToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.ShowRightPanelToolStripMenuItem.Text = "Show right panel"
         '
         'GuideToolStripMenuItem
@@ -290,19 +296,19 @@ Partial Class Form1
         'InstallationGuideToolStripMenuItem
         '
         Me.InstallationGuideToolStripMenuItem.Name = "InstallationGuideToolStripMenuItem"
-        Me.InstallationGuideToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.InstallationGuideToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.InstallationGuideToolStripMenuItem.Text = "Installation Guide"
         '
         'CustomizingGuildToolStripMenuItem
         '
         Me.CustomizingGuildToolStripMenuItem.Name = "CustomizingGuildToolStripMenuItem"
-        Me.CustomizingGuildToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CustomizingGuildToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.CustomizingGuildToolStripMenuItem.Text = "Customizing Guild"
         '
         'BuildingGuideToolStripMenuItem
         '
         Me.BuildingGuideToolStripMenuItem.Name = "BuildingGuideToolStripMenuItem"
-        Me.BuildingGuideToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BuildingGuideToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.BuildingGuideToolStripMenuItem.Text = "Building Guide"
         '
         'HelpToolStripMenuItem
@@ -441,7 +447,7 @@ Partial Class Form1
         '
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton1.Location = New System.Drawing.Point(32, 258)
+        Me.RadioButton1.Location = New System.Drawing.Point(28, 297)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(278, 21)
         Me.RadioButton1.TabIndex = 6
@@ -453,7 +459,7 @@ Partial Class Form1
         '
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton2.Location = New System.Drawing.Point(32, 285)
+        Me.RadioButton2.Location = New System.Drawing.Point(28, 324)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(265, 21)
         Me.RadioButton2.TabIndex = 7
@@ -475,7 +481,7 @@ Partial Class Form1
         '
         Me.TextBox2.Location = New System.Drawing.Point(20, 142)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(277, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(304, 20)
         Me.TextBox2.TabIndex = 8
         '
         'Label3
@@ -492,7 +498,7 @@ Partial Class Form1
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label4.Location = New System.Drawing.Point(18, 220)
+        Me.Label4.Location = New System.Drawing.Point(16, 259)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(107, 28)
         Me.Label4.TabIndex = 11
@@ -544,28 +550,6 @@ Partial Class Form1
         Me.Label17.TabIndex = 32
         Me.Label17.Text = "example"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(4, 4)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(18, 18)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label6.Location = New System.Drawing.Point(29, 343)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(113, 17)
-        Me.Label6.TabIndex = 13
-        Me.Label6.Text = "Reset Radio Button"
-        '
         'Button3
         '
         Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
@@ -600,7 +584,7 @@ Partial Class Form1
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.Location = New System.Drawing.Point(32, 409)
+        Me.CheckBox1.Location = New System.Drawing.Point(28, 422)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(167, 21)
         Me.CheckBox1.TabIndex = 17
@@ -611,7 +595,7 @@ Partial Class Form1
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label8.Location = New System.Drawing.Point(18, 369)
+        Me.Label8.Location = New System.Drawing.Point(16, 382)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(159, 28)
         Me.Label8.TabIndex = 18
@@ -621,24 +605,12 @@ Partial Class Form1
         '
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox2.Location = New System.Drawing.Point(32, 436)
+        Me.CheckBox2.Location = New System.Drawing.Point(28, 449)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(234, 21)
         Me.CheckBox2.TabIndex = 19
         Me.CheckBox2.Text = "Show your app in explorer after build"
         Me.CheckBox2.UseVisualStyleBackColor = True
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label9.Location = New System.Drawing.Point(29, 465)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(100, 17)
-        Me.Label9.TabIndex = 22
-        Me.Label9.Text = "Reset Check Box"
         '
         'Label5
         '
@@ -840,16 +812,6 @@ Partial Class Form1
         Me.Label16.TabIndex = 30
         Me.Label16.Text = "Application icons (*.ico)"
         '
-        'Button6
-        '
-        Me.Button6.Font = New System.Drawing.Font("Segoe UI Semilight", 8.0!)
-        Me.Button6.Location = New System.Drawing.Point(256, 182)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(68, 29)
-        Me.Button6.TabIndex = 31
-        Me.Button6.Text = "Browse"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
@@ -858,7 +820,7 @@ Partial Class Form1
         '
         Me.TextBox3.Location = New System.Drawing.Point(20, 187)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(230, 20)
+        Me.TextBox3.Size = New System.Drawing.Size(283, 20)
         Me.TextBox3.TabIndex = 29
         '
         'OpenFileDialog2
@@ -907,17 +869,6 @@ Partial Class Form1
         Me.Panel6.Size = New System.Drawing.Size(316, 561)
         Me.Panel6.TabIndex = 16
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox2.Image = Global.P_Browser_Builder.My.Resources.Resources.settings
-        Me.PictureBox2.Location = New System.Drawing.Point(146, 14)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(20, 29)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 35
-        Me.PictureBox2.TabStop = False
-        '
         'Panel7
         '
         Me.Panel7.Anchor = System.Windows.Forms.AnchorStyles.Left
@@ -931,7 +882,7 @@ Partial Class Form1
         '
         Me.RadioButton3.AutoSize = True
         Me.RadioButton3.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton3.Location = New System.Drawing.Point(32, 313)
+        Me.RadioButton3.Location = New System.Drawing.Point(28, 352)
         Me.RadioButton3.Name = "RadioButton3"
         Me.RadioButton3.Size = New System.Drawing.Size(272, 21)
         Me.RadioButton3.TabIndex = 32
@@ -1004,25 +955,113 @@ Partial Class Form1
         'Timer3
         '
         '
+        'Button4
+        '
+        Me.Button4.Font = New System.Drawing.Font("Segoe UI Semilight", 8.0!)
+        Me.Button4.Location = New System.Drawing.Point(256, 221)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(68, 29)
+        Me.Button4.TabIndex = 34
+        Me.Button4.Text = "Edit"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'CheckBox3
+        '
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox3.Location = New System.Drawing.Point(20, 225)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(175, 21)
+        Me.CheckBox3.TabIndex = 35
+        Me.CheckBox3.Text = "Enable Welcome Message"
+        Me.CheckBox3.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Font = New System.Drawing.Font("Segoe UI Semilight", 8.0!)
+        Me.Button5.Location = New System.Drawing.Point(196, 221)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(54, 29)
+        Me.Button5.TabIndex = 36
+        Me.Button5.Text = "Test"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox5.Image = Global.P_Browser_Builder.My.Resources.Resources.more
+        Me.PictureBox5.Location = New System.Drawing.Point(310, 187)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(14, 23)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox5.TabIndex = 38
+        Me.PictureBox5.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox4.Image = Global.P_Browser_Builder.My.Resources.Resources.undo
+        Me.PictureBox4.Location = New System.Drawing.Point(306, 387)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(18, 23)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox4.TabIndex = 37
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox3.Image = Global.P_Browser_Builder.My.Resources.Resources.undo
+        Me.PictureBox3.Location = New System.Drawing.Point(306, 264)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(18, 23)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 33
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(4, 4)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(18, 18)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox2.Image = Global.P_Browser_Builder.My.Resources.Resources.settings
+        Me.PictureBox2.Location = New System.Drawing.Point(146, 14)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(20, 29)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 35
+        Me.PictureBox2.TabStop = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1216, 607)
+        Me.Controls.Add(Me.PictureBox5)
+        Me.Controls.Add(Me.PictureBox4)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.CheckBox3)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.RadioButton3)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -1044,16 +1083,19 @@ Partial Class Form1
         Me.Panel1.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1074,7 +1116,6 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label6 As Label
     Friend WithEvents Button3 As Button
     Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents Label7 As Label
@@ -1084,7 +1125,6 @@ Partial Class Form1
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SupportToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Label9 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label5 As Label
     Friend WithEvents Panel3 As Panel
@@ -1098,7 +1138,6 @@ Partial Class Form1
     Friend WithEvents Label15 As Label
     Friend WithEvents ClearAllToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label16 As Label
-    Friend WithEvents Button6 As Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents Panel5 As Panel
     Friend WithEvents PictureBox1 As PictureBox
@@ -1159,4 +1198,10 @@ Partial Class Form1
     Friend WithEvents ReleaseNoteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReinitializeResourceToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Button4 As Button
+    Friend WithEvents CheckBox3 As CheckBox
+    Friend WithEvents Button5 As Button
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents PictureBox5 As PictureBox
 End Class
