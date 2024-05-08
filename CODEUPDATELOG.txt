@@ -1,7 +1,10 @@
 Release 5.0.0
 - ADDED: Welcome Message Feature.
+- ADDED: Clear URL and App Name Box.
+- ADDED: Save URL and App Name value.
 - ADDED: Add unlock button in advanced menu in setting so it's locked by default.
 - ADDED: Added icon to preference header menu.
 - IMPROVEMENT: Replace browse button by icon.
 - IMPROVEMENT: Replace reset button by icon.
 - IMPROVEMENT: Delete Installation Cache will disabled if cleaned already.
+- CHANGED: Changed splash and about screen.

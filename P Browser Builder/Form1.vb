@@ -335,24 +335,16 @@ Public Class Form1
                 Label8.Enabled = False
             End If
         End If
-        'Dim fileReader1 As System.IO.StreamReader
-        'Dim fileReader2 As System.IO.StreamReader
-        'Dim fileReader3 As System.IO.StreamReader
-        'fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.urlsave.pbsf")
-        'fileReader2 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.anamesave.pbsf")
-        'fileReader3 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.icnpath.pbsf")
-        'Dim stringReader1 As String
-        'Dim stringReader2 As String
-        'Dim stringReader3 As String
-        'stringReader1 = fileReader1.ReadLine()
-        'stringReader2 = fileReader2.ReadLine()
-        'stringReader3 = fileReader3.ReadLine()
-        'TextBox1.Text = stringReader1
-        'TextBox2.Text = stringReader2
-        'TextBox3.Text = stringReader3
-        'If Not TextBox3.Text = "" Then
-        ' PictureBox1.Image = Image.FromFile(stringReader3)
-        'End If
+        Dim fileReader11 As System.IO.StreamReader
+        Dim fileReader21 As System.IO.StreamReader
+        fileReader11 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.urlsave.pbsf")
+        fileReader21 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.anamesave.pbsf")
+        Dim stringReader11 As String
+        Dim stringReader21 As String
+        stringReader11 = fileReader11.ReadLine()
+        stringReader21 = fileReader21.ReadLine()
+        TextBox1.Text = stringReader11
+        TextBox2.Text = stringReader21
         Dim cachecheck As String = apppath + "\statecache\updatecache\pbb-resource.zip"
         ShowRightPanelToolStripMenuItem.Enabled = False
         ExtensionsNotFoundToolStripMenuItem.Enabled = False
@@ -385,11 +377,6 @@ Public Class Form1
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
         Browser.Load(TextBox1.Text)
-        'Dim apppath As String = Application.StartupPath()
-        'Dim pbcfg As String = apppath + "\statedata\usersave.builder.urlsave.pbsf"
-        'Dim objWriter As New System.IO.StreamWriter(pbcfg)
-        'objWriter.Write(TextBox1.Text)
-        'objWriter.Close()
     End Sub
 
     Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
@@ -399,11 +386,6 @@ Public Class Form1
         Else
             Label2.Text = "Application name (" + TextBox2.Text + ".exe)"
             Label17.Text = TextBox2.Text
-            'Dim apppath As String = Application.StartupPath()
-            'Dim pbcfg As String = apppath + "\statedata\usersave.builder.urlsave.pbsf"
-            'Dim objWriter As New System.IO.StreamWriter(pbcfg)
-            'objWriter.Write(TextBox2.Text)
-            'objWriter.Close()
         End If
     End Sub
 
@@ -791,10 +773,37 @@ Public Class Form1
             PictureBox1.Image = Image.FromFile(OpenFileDialog1.FileName)
             TextBox3.Text = OpenFileDialog1.FileName
             My.Computer.FileSystem.CopyFile(OpenFileDialog1.FileName, apppath + "\statecache\buildcache\appicns\appicns.ico")
-            'Dim pbcfg As String = apppath + "\statedata\usersave.builder.urlsave.pbsf"
-            'Dim objWriter As New System.IO.StreamWriter(pbcfg)
-            'objWriter.Write(OpenFileDialog1)
-            'objWriter.Close()
         End If
+    End Sub
+
+    Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
+        Try
+            Dim apppath As String = Application.StartupPath()
+            Dim pbcfg1 As String = apppath + "\statedata\usersave.builder.anamesave.pbsf"
+            Dim objWriter1 As New System.IO.StreamWriter(pbcfg1)
+            objWriter1.Write(TextBox2.Text)
+            objWriter1.Close()
+            Dim pbcfg2 As String = apppath + "\statedata\usersave.builder.urlsave.pbsf"
+            Dim objWriter2 As New System.IO.StreamWriter(pbcfg2)
+            objWriter2.Write(TextBox1.Text)
+            objWriter2.Close()
+            MessageBox.Show("Saved!", "Completed!")
+        Catch ex As Exception
+            MessageBox.Show("Save Failed!", "Error!")
+        End Try
+    End Sub
+
+    Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        Dim apppath As String = Application.StartupPath()
+        Dim pbcfg1 As String = apppath + "\statedata\usersave.builder.anamesave.pbsf"
+        Dim objWriter1 As New System.IO.StreamWriter(pbcfg1)
+        objWriter1.Write(TextBox2.Text)
+        objWriter1.Close()
+        Dim pbcfg2 As String = apppath + "\statedata\usersave.builder.urlsave.pbsf"
+        Dim objWriter2 As New System.IO.StreamWriter(pbcfg2)
+        objWriter2.Write(TextBox1.Text)
+        objWriter2.Close()
     End Sub
 End Class

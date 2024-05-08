@@ -45,7 +45,7 @@ Partial Class splash
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.P_Browser_Builder.My.Resources.Resources.Screenshot_2024_04_26_152247
+        Me.BackgroundImage = Global.P_Browser_Builder.My.Resources.Resources.Screenshot_2024_04_30_150518
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(713, 440)
         Me.Controls.Add(Me.Label1)

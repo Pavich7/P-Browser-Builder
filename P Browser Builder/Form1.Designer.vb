@@ -122,11 +122,13 @@ Partial Class Form1
         Me.Button4 = New System.Windows.Forms.Button()
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -134,11 +136,13 @@ Partial Class Form1
         Me.Panel4.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.Panel8.SuspendLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -986,6 +990,17 @@ Partial Class Form1
         Me.Button5.Text = "Test"
         Me.Button5.UseVisualStyleBackColor = True
         '
+        'PictureBox6
+        '
+        Me.PictureBox6.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox6.Image = Global.P_Browser_Builder.My.Resources.Resources.diskette
+        Me.PictureBox6.Location = New System.Drawing.Point(306, 38)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(18, 23)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox6.TabIndex = 39
+        Me.PictureBox6.TabStop = False
+        '
         'PictureBox5
         '
         Me.PictureBox5.Cursor = System.Windows.Forms.Cursors.Hand
@@ -1040,12 +1055,25 @@ Partial Class Form1
         Me.PictureBox2.TabIndex = 35
         Me.PictureBox2.TabStop = False
         '
+        'PictureBox7
+        '
+        Me.PictureBox7.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox7.Image = Global.P_Browser_Builder.My.Resources.Resources.undo
+        Me.PictureBox7.Location = New System.Drawing.Point(279, 38)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(18, 23)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox7.TabIndex = 40
+        Me.PictureBox7.TabStop = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1216, 607)
+        Me.Controls.Add(Me.PictureBox7)
+        Me.Controls.Add(Me.PictureBox6)
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox3)
@@ -1091,11 +1119,13 @@ Partial Class Form1
         Me.Panel6.PerformLayout()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1204,4 +1234,6 @@ Partial Class Form1
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents PictureBox7 As PictureBox
 End Class
