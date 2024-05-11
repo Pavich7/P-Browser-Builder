@@ -4,7 +4,18 @@ Release 5.0.0
 - ADDED: Save URL and App Name value.
 - ADDED: Add unlock button in advanced menu in setting so it's locked by default.
 - ADDED: Added icon to preference header menu.
+- ADDED: Support new resource versioning system.
+- ADDED: Set application name from current website title.
+- ADDED: (Dev) Fallback first startup state button.
+- UPDATED: CefSharp (124.3.50)
+- UPDATED: Chromium (124.0.6367.119)
 - IMPROVEMENT: Replace browse button by icon.
 - IMPROVEMENT: Replace reset button by icon.
 - IMPROVEMENT: Delete Installation Cache will disabled if cleaned already.
+- IMPROVEMENT: New resource compatible check rules will make app load faster.
+- REMOVED: Old dependencies and will use less space.
+- FIXED: Resource Uninstall may failed and return with weird behaviour.
+- FIXED: ZIP Packaging Menu always available even resource is not compatible.
+- FIXED: (Dev) Force unlock all disabled buttons will now unlock ZIP Packaging.
 - CHANGED: Changed splash and about screen.
+- CHANGED: Visual C++ Redist Installation will running in background.

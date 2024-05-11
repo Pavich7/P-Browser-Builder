@@ -10,11 +10,9 @@ Public Class prefer
             Label9.Enabled = False
         End If
         If Not System.IO.Directory.Exists(rescheck) Then
-            Label4.Text = "Redist : Not installed"
-            Label2.Text = "WinForms : Not installed"
-            Label5.Text = "Common : Not installed"
+            Label2.Text = "Chromium : Not installed"
+            Label5.Text = "CefSharp : Not installed"
             Label23.Text = "Version : Resource not installed"
-            Label4.Enabled = False
             Label2.Enabled = False
             Label5.Enabled = False
             Label23.Enabled = False
@@ -24,26 +22,24 @@ Public Class prefer
             Label13.Enabled = False
         Else
             Try
-                Dim fileReader1 As System.IO.StreamReader
                 Dim fileReader2 As System.IO.StreamReader
                 Dim fileReader3 As System.IO.StreamReader
                 Dim fileReader4 As System.IO.StreamReader
-                fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\buildspace\quickmode\pkgData\cefre.pbad")
-                fileReader2 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\buildspace\quickmode\pkgData\cefwinf.pbad")
-                fileReader3 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\buildspace\quickmode\pkgData\cefcomn.pbad")
+                fileReader2 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\buildspace\quickmode\pkgData\pkgchrome.pbad")
+                fileReader3 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\buildspace\quickmode\pkgData\pkgcef.pbad")
                 fileReader4 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\metadata\version.txt")
-                Dim stringReader1 As String
                 Dim stringReader2 As String
                 Dim stringReader3 As String
                 Dim stringReader4 As String
-                stringReader1 = fileReader1.ReadLine()
                 stringReader2 = fileReader2.ReadLine()
                 stringReader3 = fileReader3.ReadLine()
                 stringReader4 = fileReader4.ReadLine()
-                Label4.Text = "Redist : " + stringReader1
-                Label2.Text = "WinForms : " + stringReader2
-                Label5.Text = "Common : " + stringReader3
+                Label2.Text = "Chromium : " + stringReader2
+                Label5.Text = "CefSharp : " + stringReader3
                 Label23.Text = "Version : " + stringReader4
+                fileReader2.Close()
+                fileReader3.Close()
+                fileReader4.Close()
             Catch ex As Exception
                 MessageBox.Show("Data gather failure!" + vbNewLine + "Error : " + ex.Message, "Fatal Error!")
                 Me.Close()

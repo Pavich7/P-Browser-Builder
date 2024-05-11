@@ -310,25 +310,14 @@ Public Class Form1
             Label19.Visible = False
             Label20.Visible = False
             Label18.Visible = False
-            Dim headercheck As String = apppath + "\resource\metadata\checkpoint\header.chkp"
-            Dim resvcheck As String = apppath + "\resource\metadata\checkpoint\r100.chkp"
-            Dim resvcheck2 As String = apppath + "\resource\metadata\checkpoint\r200.chkp"
-            Dim resvcheck3 As String = apppath + "\resource\metadata\checkpoint\r300.chkp"
-            If Not System.IO.File.Exists(headercheck) Then
-                MessageBox.Show("Legacy Resource not compatible! You might encounter errors." + vbNewLine + "Please reinstall builder resource via resource menu.", "Resource not compatible!")
-            End If
-            If Not System.IO.File.Exists(resvcheck) Then
-                MessageBox.Show("Legacy Resource not compatible! You might encounter errors." + vbNewLine + "Please reinstall builder resource via resource menu.", "Resource not compatible!")
-            End If
-            If Not System.IO.File.Exists(resvcheck2) Then
-                MessageBox.Show("Old Resource not compatible! You might encounter errors." + vbNewLine + "Please reinstall builder resource via resource menu.", "Resource not compatible!")
-            End If
-            If Not System.IO.File.Exists(resvcheck3) Then
-                MessageBox.Show("Unload required! Old Resource not compatible!" + vbNewLine + "Please reinstall builder resource via preference menu.", "Resource not compatible!")
+            Dim resvcheck4 As String = apppath + "\resource\metadata\checkpoint\r400.chkp"
+            If Not System.IO.File.Exists(resvcheck4) Then
+                MessageBox.Show("Unload required! Resource not compatible!" + vbNewLine + "Please reinstall builder resource via preference menu.", "Resource not compatible!")
                 Button1.Enabled = False
                 Button2.Enabled = False
                 RadioButton1.Enabled = False
                 RadioButton2.Enabled = False
+                RadioButton3.Enabled = False
                 CheckBox1.Enabled = False
                 CheckBox2.Enabled = False
                 Label4.Enabled = False
@@ -391,9 +380,18 @@ Public Class Form1
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Timer1.Stop()
+        Dim apppath As String = Application.StartupPath()
+        Dim fileReader0 As System.IO.StreamReader
+        fileReader0 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.infsstate.pbcfg")
+        Dim stringReader0 As String
+        stringReader0 = fileReader0.ReadLine()
+        fileReader0.Close()
+        If stringReader0 = "True" Then
+            Me.Enabled = False
+            fsstate.Show()
+        End If
         Try
             ProgressBar1.Value = 10
-            Dim apppath As String = Application.StartupPath()
             My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_title.txt", apppath + "\statecache\nfcache\nf1_title.txt")
             My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_desc.txt", apppath + "\statecache\nfcache\nf1_desc.txt")
             My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_date.txt", apppath + "\statecache\nfcache\nf1_date.txt")
@@ -651,6 +649,7 @@ Public Class Form1
             Label8.Enabled = True
             RadioButton1.Enabled = True
             RadioButton2.Enabled = True
+            RadioButton3.Enabled = True
             CheckBox1.Enabled = True
             CheckBox2.Enabled = True
             ShowRightPanelToolStripMenuItem.Enabled = True
@@ -681,7 +680,7 @@ Public Class Form1
         MessageBox.Show("You can unhide right panel by click on" + vbNewLine + "Menu Strip: Window > Show right panel", "Notification")
     End Sub
 
-    Private Sub ShowSplashScreenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowSplashScreenToolStripMenuItem.Click
+    Private Sub ShowSplashScreenToolStripMenuItem_Click(sender As Object, e As EventArgs)
         splash.Show()
     End Sub
 
@@ -805,5 +804,29 @@ Public Class Form1
         Dim objWriter2 As New System.IO.StreamWriter(pbcfg2)
         objWriter2.Write(TextBox1.Text)
         objWriter2.Close()
+    End Sub
+
+    Private Sub PictureBox8_Click(sender As Object, e As EventArgs) Handles PictureBox8.Click
+        If TextBox1.Text = "" Then
+            MessageBox.Show("Please enter URL before getting page title.", "Error!")
+        Else
+            If My.Settings.tempWebTitle = "" Then
+                MessageBox.Show("Current websites doesn't have title!", "Error!")
+            Else
+                TextBox2.Text = My.Settings.tempWebTitle
+            End If
+        End If
+    End Sub
+    Public Sub Browser_TitleChanged(sender As Object, e As CefSharp.TitleChangedEventArgs) Handles Browser.TitleChanged
+        Dim currentTitle As String = e.Title
+        My.Settings.tempWebTitle = currentTitle
+    End Sub
+
+    Private Sub FToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FToolStripMenuItem.Click
+        Dim apppath As String = Application.StartupPath()
+        Dim pbcfg As String = apppath + "\statedata\setting.builder.infsstate.pbcfg"
+        Dim objWriter As New System.IO.StreamWriter(pbcfg)
+        objWriter.Write("True")
+        objWriter.Close()
     End Sub
 End Class

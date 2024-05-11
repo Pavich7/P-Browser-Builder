@@ -58,7 +58,6 @@ Partial Class Form1
         Me.SubmitBugsReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UnlockDeveloperMenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DevToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ShowSplashScreenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReinitializeResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UnlockIncompleteFeatureToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ForceUnlockDisableButtonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -122,13 +121,16 @@ Partial Class Form1
         Me.Button4 = New System.Windows.Forms.Button()
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.FToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -136,13 +138,14 @@ Partial Class Form1
         Me.Panel4.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.Panel8.SuspendLayout()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -360,16 +363,10 @@ Partial Class Form1
         '
         'DevToolStripMenuItem
         '
-        Me.DevToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ShowSplashScreenToolStripMenuItem, Me.ReinitializeResourceToolStripMenuItem, Me.UnlockIncompleteFeatureToolStripMenuItem, Me.ForceUnlockDisableButtonToolStripMenuItem, Me.GoBackToDefaultToolStripMenuItem})
+        Me.DevToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReinitializeResourceToolStripMenuItem, Me.UnlockIncompleteFeatureToolStripMenuItem, Me.ForceUnlockDisableButtonToolStripMenuItem, Me.FToolStripMenuItem, Me.ToolStripMenuItem1, Me.GoBackToDefaultToolStripMenuItem})
         Me.DevToolStripMenuItem.Name = "DevToolStripMenuItem"
         Me.DevToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
         Me.DevToolStripMenuItem.Text = "Dev"
-        '
-        'ShowSplashScreenToolStripMenuItem
-        '
-        Me.ShowSplashScreenToolStripMenuItem.Name = "ShowSplashScreenToolStripMenuItem"
-        Me.ShowSplashScreenToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
-        Me.ShowSplashScreenToolStripMenuItem.Text = "Show splash screen"
         '
         'ReinitializeResourceToolStripMenuItem
         '
@@ -485,7 +482,7 @@ Partial Class Form1
         '
         Me.TextBox2.Location = New System.Drawing.Point(20, 142)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(304, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(283, 20)
         Me.TextBox2.TabIndex = 8
         '
         'Label3
@@ -990,6 +987,33 @@ Partial Class Form1
         Me.Button5.Text = "Test"
         Me.Button5.UseVisualStyleBackColor = True
         '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(228, 22)
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox8.Image = Global.P_Browser_Builder.My.Resources.Resources.website
+        Me.PictureBox8.Location = New System.Drawing.Point(310, 141)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(18, 23)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox8.TabIndex = 41
+        Me.PictureBox8.TabStop = False
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox7.Image = Global.P_Browser_Builder.My.Resources.Resources.undo
+        Me.PictureBox7.Location = New System.Drawing.Point(279, 38)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(18, 23)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox7.TabIndex = 40
+        Me.PictureBox7.TabStop = False
+        '
         'PictureBox6
         '
         Me.PictureBox6.Cursor = System.Windows.Forms.Cursors.Hand
@@ -1005,7 +1029,7 @@ Partial Class Form1
         '
         Me.PictureBox5.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox5.Image = Global.P_Browser_Builder.My.Resources.Resources.more
-        Me.PictureBox5.Location = New System.Drawing.Point(310, 187)
+        Me.PictureBox5.Location = New System.Drawing.Point(311, 187)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(14, 23)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -1055,16 +1079,11 @@ Partial Class Form1
         Me.PictureBox2.TabIndex = 35
         Me.PictureBox2.TabStop = False
         '
-        'PictureBox7
+        'FToolStripMenuItem
         '
-        Me.PictureBox7.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox7.Image = Global.P_Browser_Builder.My.Resources.Resources.undo
-        Me.PictureBox7.Location = New System.Drawing.Point(279, 38)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(18, 23)
-        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox7.TabIndex = 40
-        Me.PictureBox7.TabStop = False
+        Me.FToolStripMenuItem.Name = "FToolStripMenuItem"
+        Me.FToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.FToolStripMenuItem.Text = "Fallback first startup state"
         '
         'Form1
         '
@@ -1072,6 +1091,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1216, 607)
+        Me.Controls.Add(Me.PictureBox8)
         Me.Controls.Add(Me.PictureBox7)
         Me.Controls.Add(Me.PictureBox6)
         Me.Controls.Add(Me.PictureBox5)
@@ -1119,13 +1139,14 @@ Partial Class Form1
         Me.Panel6.PerformLayout()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1216,7 +1237,6 @@ Partial Class Form1
     Friend WithEvents ResetExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Panel7 As Panel
-    Friend WithEvents ShowSplashScreenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Panel8 As Panel
     Friend WithEvents Label28 As Label
     Friend WithEvents Label27 As Label
@@ -1236,4 +1256,7 @@ Partial Class Form1
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents PictureBox8 As PictureBox
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents FToolStripMenuItem As ToolStripMenuItem
 End Class
