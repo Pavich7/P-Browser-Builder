@@ -9,7 +9,7 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("P Browser Builder")>
 <Assembly: AssemblyDescription("P Browser Builder Tool")>
-<Assembly: AssemblyCompany("PavichDev Software")>
+<Assembly: AssemblyCompany("MadeByPavich")>
 <Assembly: AssemblyProduct("P Browser Builder")>
 <Assembly: AssemblyCopyright("Copyright © 2024 Pavich Komansil")>
 <Assembly: AssemblyTrademark("")>

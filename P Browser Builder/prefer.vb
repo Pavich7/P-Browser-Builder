@@ -1,5 +1,4 @@
-﻿Imports System.IO
-Imports System.IO.Compression
+﻿Imports System.IO.Compression
 
 Public Class prefer
     Private Sub prefer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
