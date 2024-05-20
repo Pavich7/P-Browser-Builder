@@ -33,10 +33,9 @@ Partial Class Form1
         Me.OpenPreviewLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenRemoteDebuggingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BuilderResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ResourceSettingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenBuildDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenPackageDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ResourceSettingToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExtensionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExtensionsNotFoundToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -205,23 +204,10 @@ Partial Class Form1
         '
         'ResourceToolStripMenuItem
         '
-        Me.ResourceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuilderResourceToolStripMenuItem, Me.OpenBuildDirectoryToolStripMenuItem, Me.OpenPackageDirectoryToolStripMenuItem})
+        Me.ResourceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenBuildDirectoryToolStripMenuItem, Me.OpenPackageDirectoryToolStripMenuItem, Me.ResourceSettingToolStripMenuItem1})
         Me.ResourceToolStripMenuItem.Name = "ResourceToolStripMenuItem"
         Me.ResourceToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
         Me.ResourceToolStripMenuItem.Text = "Build"
-        '
-        'BuilderResourceToolStripMenuItem
-        '
-        Me.BuilderResourceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ResourceSettingToolStripMenuItem})
-        Me.BuilderResourceToolStripMenuItem.Name = "BuilderResourceToolStripMenuItem"
-        Me.BuilderResourceToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
-        Me.BuilderResourceToolStripMenuItem.Text = "Builder Resource"
-        '
-        'ResourceSettingToolStripMenuItem
-        '
-        Me.ResourceSettingToolStripMenuItem.Name = "ResourceSettingToolStripMenuItem"
-        Me.ResourceSettingToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
-        Me.ResourceSettingToolStripMenuItem.Text = "Resource Setting..."
         '
         'OpenBuildDirectoryToolStripMenuItem
         '
@@ -234,6 +220,12 @@ Partial Class Form1
         Me.OpenPackageDirectoryToolStripMenuItem.Name = "OpenPackageDirectoryToolStripMenuItem"
         Me.OpenPackageDirectoryToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
         Me.OpenPackageDirectoryToolStripMenuItem.Text = "Open Package Directory"
+        '
+        'ResourceSettingToolStripMenuItem1
+        '
+        Me.ResourceSettingToolStripMenuItem1.Name = "ResourceSettingToolStripMenuItem1"
+        Me.ResourceSettingToolStripMenuItem1.Size = New System.Drawing.Size(201, 22)
+        Me.ResourceSettingToolStripMenuItem1.Text = "Resource Setting..."
         '
         'ExtensionsToolStripMenuItem
         '
@@ -401,13 +393,13 @@ Partial Class Form1
         'ResetExitToolStripMenuItem
         '
         Me.ResetExitToolStripMenuItem.Name = "ResetExitToolStripMenuItem"
-        Me.ResetExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ResetExitToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.ResetExitToolStripMenuItem.Text = "Reset and Exit"
         '
         'ReToolStripMenuItem
         '
         Me.ReToolStripMenuItem.Name = "ReToolStripMenuItem"
-        Me.ReToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ReToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.ReToolStripMenuItem.Text = "Reset and Restart"
         '
         'Button1
@@ -1212,7 +1204,6 @@ Partial Class Form1
     Friend WithEvents Label26 As Label
     Friend WithEvents Label25 As Label
     Friend WithEvents OpenBuilderInExplorerToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents BuilderResourceToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpenBuildDirectoryToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Panel6 As Panel
     Friend WithEvents WindowToolStripMenuItem As ToolStripMenuItem
@@ -1237,7 +1228,6 @@ Partial Class Form1
     Friend WithEvents Timer3 As Timer
     Friend WithEvents Label29 As Label
     Friend WithEvents Label30 As Label
-    Friend WithEvents ResourceSettingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpenPackageDirectoryToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReleaseNoteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReinitializeResourceToolStripMenuItem As ToolStripMenuItem
@@ -1252,4 +1242,5 @@ Partial Class Form1
     Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents FToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ResourceSettingToolStripMenuItem1 As ToolStripMenuItem
 End Class

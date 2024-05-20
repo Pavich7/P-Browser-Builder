@@ -20,5 +20,27 @@
         stringReader1 = fileReader1.ReadLine()
         TextBox1.Text = stringReader1
         fileReader1.Close()
+        Dim fileReader11 As System.IO.StreamReader
+        fileReader11 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.alwpdiag.pbcfg")
+        Dim stringReader11 As String
+        stringReader11 = fileReader11.ReadLine()
+        If stringReader11 = "True" Then
+            CheckBox1.Checked = True
+        End If
+        fileReader11.Close()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim apppath As String = Application.StartupPath()
+        Dim pbcfg As String = apppath + "\statedata\setting.builder.alwpdiag.pbcfg"
+        Dim objWriter As New System.IO.StreamWriter(pbcfg)
+        If CheckBox1.Checked = True Then
+            objWriter.Write("True")
+            MessageBox.Show("Successed! Diagnostic will be paused when startup.", "OK!")
+        Else
+            objWriter.Write("False")
+            MessageBox.Show("Successed! Diagnostic will be running when startup.", "OK!")
+        End If
+        objWriter.Close()
     End Sub
 End Class

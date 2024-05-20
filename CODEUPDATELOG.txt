@@ -1,24 +1,7 @@
-Release 5.0.0
-- ADDED: Welcome Message Feature.
-- ADDED: Clear URL and App Name Box.
-- ADDED: Save URL and App Name value.
-- ADDED: Add unlock button in advanced menu in setting so it's locked by default.
-- ADDED: Added icon to preference header menu.
-- ADDED: Support new resource versioning system.
-- ADDED: Set application name from current website title.
-- ADDED: Welcome message with EULA.
-- ADDED: (Dev) Fallback first startup state button.
-- UPDATED: CefSharp (124.3.50)
-- UPDATED: Chromium (124.0.6367.119)
-- IMPROVEMENT: Replace browse button by icon.
-- IMPROVEMENT: Replace reset button by icon.
-- IMPROVEMENT: Delete Installation Cache will disabled if cleaned already.
-- IMPROVEMENT: New resource compatible check rules will make app load faster.
-- IMPROVEMENT: Code clean up so small improve overall performance.
-- REMOVED: Old dependencies and will use less space.
-- FIXED: Resource Uninstall may failed and return with weird behaviour.
-- FIXED: ZIP Packaging Menu always available even resource is not compatible.
-- FIXED: Buttons in about page will redirected to "The connection for this site is not secure".
-- FIXED: (Dev) Force unlock all disabled buttons will now unlock ZIP Packaging.
-- CHANGED: Redesign splash and about screen.
-- CHANGED: Visual C++ Redist Installation will running in background.
+Release 5.1.0
+- ADDED: User can paused diagnostic when startup in diagnostic setting.
+- ADDED: More save option in save button to select what to save.
+- IMPROVEMENT: Updated CefSharp to 124.3.80
+- IMPROVEMENT: Updated Chromium to 124.0.6367.207
+- FIXED: Save may error after builder loaded with saved properties.
+- CHANGED: Moved resource setting to build menu.

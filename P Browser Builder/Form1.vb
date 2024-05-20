@@ -334,13 +334,29 @@ Public Class Form1
         stringReader21 = fileReader21.ReadLine()
         TextBox1.Text = stringReader11
         TextBox2.Text = stringReader21
+        fileReader11.Close()
+        fileReader21.Close()
         Dim cachecheck As String = apppath + "\statecache\updatecache\pbb-resource.zip"
         ShowRightPanelToolStripMenuItem.Enabled = False
         ExtensionsNotFoundToolStripMenuItem.Enabled = False
         Button7.Enabled = False
         ExtensionsToolStripMenuItem.Visible = False
         DevToolStripMenuItem.Visible = False
-        Timer2.Start()
+        Dim fileReader111 As System.IO.StreamReader
+        fileReader111 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.alwpdiag.pbcfg")
+        Dim stringReader111 As String
+        stringReader111 = fileReader111.ReadLine()
+        If stringReader111 = "False" Then
+            Timer2.Start()
+        Else
+            Timer2.Stop()
+            Button8.Enabled = False
+            Button7.Enabled = True
+            ProgressBar3.Value = 0
+            Label23.Text = "Memory Usage: Paused"
+            Label25.Text = "Paused"
+        End If
+        fileReader111.Close()
         TextBox3.Enabled = False
         Label15.Visible = False
         Label7.Visible = True
@@ -700,10 +716,6 @@ Public Class Form1
         prefer.Show()
     End Sub
 
-    Private Sub ResourceSettingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResourceSettingToolStripMenuItem.Click
-        prefer.Show()
-    End Sub
-
     Private Sub OpenPackageDirectoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenPackageDirectoryToolStripMenuItem.Click
         Dim apppath As String = Application.StartupPath()
         Process.Start(apppath + "\binarypkg")
@@ -776,20 +788,7 @@ Public Class Form1
     End Sub
 
     Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
-        Try
-            Dim apppath As String = Application.StartupPath()
-            Dim pbcfg1 As String = apppath + "\statedata\usersave.builder.anamesave.pbsf"
-            Dim objWriter1 As New System.IO.StreamWriter(pbcfg1)
-            objWriter1.Write(TextBox2.Text)
-            objWriter1.Close()
-            Dim pbcfg2 As String = apppath + "\statedata\usersave.builder.urlsave.pbsf"
-            Dim objWriter2 As New System.IO.StreamWriter(pbcfg2)
-            objWriter2.Write(TextBox1.Text)
-            objWriter2.Close()
-            MessageBox.Show("Saved!", "Completed!")
-        Catch ex As Exception
-            MessageBox.Show("Save Failed!", "Error!")
-        End Try
+        saveopt.Show()
     End Sub
 
     Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
@@ -828,5 +827,9 @@ Public Class Form1
         Dim objWriter As New System.IO.StreamWriter(pbcfg)
         objWriter.Write("True")
         objWriter.Close()
+    End Sub
+
+    Private Sub ResourceSettingToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ResourceSettingToolStripMenuItem1.Click
+        prefer.Show()
     End Sub
 End Class
