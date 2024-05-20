@@ -1,7 +1,9 @@
 Release 5.1.0
 - ADDED: User can paused diagnostic when startup in diagnostic setting.
 - ADDED: More save option in save button to select what to save.
+- ADDED: Resource update will be check when enter setting.
 - IMPROVEMENT: Updated CefSharp to 124.3.80
 - IMPROVEMENT: Updated Chromium to 124.0.6367.207
 - FIXED: Save may error after builder loaded with saved properties.
 - CHANGED: Moved resource setting to build menu.
+- CHANGED: Remove manual check for resource update menu.

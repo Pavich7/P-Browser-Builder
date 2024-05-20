@@ -1,4 +1,5 @@
-﻿Imports System.IO.Compression
+﻿Imports System.IO
+Imports System.IO.Compression
 
 Public Class prefer
     Private Sub prefer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -16,10 +17,35 @@ Public Class prefer
             Label5.Enabled = False
             Label23.Enabled = False
             Label7.Text = "Delete curerently insatlled resource. (Resource not installed)"
-            Label14.Text = "Online check for resource update. (Resource not installed)"
             Label8.Enabled = False
-            Label13.Enabled = False
+            Label4.Text = "Resource not installed"
         Else
+            Try
+                Dim metacheck As String = apppath + "\resource\metadata\version.txt"
+                If Not System.IO.File.Exists(metacheck) Then
+                    MessageBox.Show("Resource not compatible with this version of P Browser Builder!" + vbNewLine + "Please update resource by uninstall and reinstall via build menu.", "Check for update error!")
+                Else
+                    System.IO.Directory.Delete(apppath + "\resource\getcache", True)
+                    System.IO.Directory.CreateDirectory(apppath + "\resource\getcache")
+                    Dim fileReader As System.IO.StreamReader
+                    My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/api/v2-pbb/cfuversion/onlineresver.txt", apppath + "\resource\getcache\onlineresver.txt")
+                    Dim fileReader1 As System.IO.StreamReader
+                    fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\getcache\onlineresver.txt")
+                    Dim stringReader1 As String
+                    stringReader1 = fileReader1.ReadLine()
+                    fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\metadata\version.txt")
+                    Dim stringReader As String
+                    stringReader = fileReader.ReadLine()
+                    If stringReader1.Contains(stringReader) Then
+                        Label4.Text = "up-to-date!"
+                    Else
+                        Label4.Text = "Update available! (" + stringReader1 + ")"
+                    End If
+                    fileReader1.Close()
+                End If
+            Catch ex As Exception
+                Label4.Text = "Error checking for update!"
+            End Try
             Try
                 Dim fileReader2 As System.IO.StreamReader
                 Dim fileReader3 As System.IO.StreamReader
@@ -52,6 +78,10 @@ Public Class prefer
         Label19.Enabled = False
         Label20.Enabled = False
         Label21.Enabled = False
+        'Disable reset features (incompleted)
+        Label13.Visible = False
+        Label14.Visible = False
+        Label15.Visible = False
     End Sub
 
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
@@ -76,35 +106,6 @@ Public Class prefer
             Label9.Enabled = False
         Catch ex As Exception
             MessageBox.Show("Could not attempt to delete installer cache!" + vbNewLine + ex.Message + vbNewLine + "You may need to restart builder and try again.", "Error!")
-        End Try
-    End Sub
-
-    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
-        Try
-            Dim apppath As String = Application.StartupPath()
-            Dim metacheck As String = apppath + "\resource\metadata\version.txt"
-            If Not System.IO.File.Exists(metacheck) Then
-                MessageBox.Show("Resource not compatible with this version of P Browser Builder!" + vbNewLine + "Please update resource by uninstall and reinstall via build menu.", "Error!")
-            Else
-                System.IO.Directory.Delete(apppath + "\resource\getcache", True)
-                System.IO.Directory.CreateDirectory(apppath + "\resource\getcache")
-                Dim fileReader As System.IO.StreamReader
-                My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/api/v2-pbb/cfuversion/onlineresver.txt", apppath + "\resource\getcache\onlineresver.txt")
-                Dim fileReader1 As System.IO.StreamReader
-                fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\getcache\onlineresver.txt")
-                Dim stringReader1 As String
-                stringReader1 = fileReader1.ReadLine()
-                fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\metadata\version.txt")
-                Dim stringReader As String
-                stringReader = fileReader.ReadLine()
-                If stringReader1.Contains(stringReader) Then
-                    MessageBox.Show("Resource is up-to-date!", "Check for update")
-                Else
-                    MessageBox.Show("New version detected! (" + stringReader1 + ")" + vbNewLine + "Please update by uninstall and reinstall resource via build menu.", "Check for update")
-                End If
-            End If
-        Catch ex As Exception
-            MessageBox.Show("Could not fetch latest online version info!" + vbNewLine + "Please try again later.", "Error!")
         End Try
     End Sub
 
@@ -189,6 +190,23 @@ Public Class prefer
             Label19.Enabled = True
             Label20.Enabled = True
             Label21.Enabled = True
+        End If
+    End Sub
+
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+        MessageBox.Show("To update resource, please uninstall and reinstall resource!" + vbNewLine + "Relaunch preference to recheck for update.", "Info")
+    End Sub
+
+    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
+        Dim result As DialogResult = MessageBox.Show("Do you wish to reset all setting?" + vbNewLine + "This cannot be undone!", "You sure about this?", MessageBoxButtons.YesNo)
+        If (result = DialogResult.Yes) Then
+            Dim result1 As DialogResult = MessageBox.Show("Do you wish to delete resource also?" + vbNewLine + "You can reinstall anytime via news feed.", "Resource setting", MessageBoxButtons.YesNo)
+            Dim apppath As String = Application.StartupPath()
+            System.IO.Directory.Delete(apppath + "\statecache\updatecache", True)
+            System.IO.Directory.CreateDirectory(apppath + "\statecache\updatecache")
+            If (result1 = DialogResult.Yes) Then
+                System.IO.Directory.Delete(apppath + "\resource", True)
+            End If
         End If
     End Sub
 End Class
