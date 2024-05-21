@@ -280,39 +280,112 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim apppath As String = Application.StartupPath()
-        Dim setting As New CefSettings With {
-            .RemoteDebuggingPort = 8088
-        }
-        setting.CachePath = apppath + "\statecache"
-        CefSharp.Cef.Initialize(setting)
-        Browser = New ChromiumWebBrowser("")
-        Panel2.Controls.Add(Browser)
-        Dim fileReader1 As System.IO.StreamReader
-        fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.usageinterv.pbcfg")
-        Dim stringReader1 As String
-        stringReader1 = fileReader1.ReadLine()
-        Timer2.Interval = stringReader1
-        fileReader1.Close()
-        Button4.Enabled = False
-        Button5.Enabled = False
-        Dim rscheck As String = apppath + "\resource"
-        If Not System.IO.Directory.Exists(rscheck) Then
-            Button1.Enabled = False
-            Button2.Enabled = False
-            RadioButton1.Enabled = False
-            RadioButton2.Enabled = False
-            RadioButton3.Enabled = False
-            CheckBox1.Enabled = False
-            CheckBox2.Enabled = False
-            Label4.Enabled = False
-            Label8.Enabled = False
+        'Reset state Check
+        Dim fileReader19 As System.IO.StreamReader
+        fileReader19 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.inrsstate.pbcfg")
+        Dim stringReader19 As String
+        stringReader19 = fileReader19.ReadLine()
+        fileReader19.Close()
+        'Reset
+        If stringReader19 = "True" Then
+            Me.Enabled = False
+            Try
+                splash.Hide()
+                MessageBox.Show("P Browser Builder is in Restore Mode!" + vbNewLine + "This mode will guide you to reset all Builder Settings.", "Warning!")
+                Dim result As DialogResult = MessageBox.Show("Do you wish to reset all setting?" + vbNewLine + "This cannot be undone!", "You sure about this?", MessageBoxButtons.YesNo)
+                If (result = DialogResult.Yes) Then
+                    Dim result1 As DialogResult = MessageBox.Show("Do you wish to delete resource also?" + vbNewLine + "You can reinstall anytime via news feed.", "Resource setting", MessageBoxButtons.YesNo)
+                    splash.Label1.Text = "Resetting Builder Setting..."
+                    splash.Show()
+                    'Delete Res if prompted
+                    If (result1 = DialogResult.Yes) Then
+                        Dim rscheck1 As String = apppath + "\resource"
+                        If System.IO.Directory.Exists(rscheck1) Then
+                            System.IO.Directory.Delete(apppath + "\resource", True)
+                        End If
+                    End If
+                    'Flush Main Cache Dir
+                    System.IO.Directory.Delete(apppath + "\statecache", True)
+                    System.IO.Directory.CreateDirectory(apppath + "\statecache")
+                    'Regen Sub-Cache Dir
+                    System.IO.Directory.CreateDirectory(apppath + "\statecache\updatecache")
+                    System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache")
+                    System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
+                    System.IO.Directory.CreateDirectory(apppath + "\statecache\nfcache")
+                    System.IO.Directory.CreateDirectory(apppath + "\statecache\getcache")
+                    'Flush Build Dir
+                    System.IO.Directory.Delete(apppath + "\binary", True)
+                    System.IO.Directory.CreateDirectory(apppath + "\binary")
+                    System.IO.Directory.Delete(apppath + "\binarypkg", True)
+                    System.IO.Directory.CreateDirectory(apppath + "\binarypkg")
+                    'Flush debug logs
+                    Dim objWriter As New System.IO.StreamWriter(apppath + "\debug.log")
+                    objWriter.Write("")
+                    objWriter.Close()
+                    'Reset Config
+                    Dim objWriter1 As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.alwpdiag.pbcfg")
+                    Dim objWriter2 As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.infsstate.pbcfg")
+                    Dim objWriter3 As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.resdlserver.pbcfg")
+                    Dim objWriter4 As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.usageinterv.pbcfg")
+                    Dim objWriter5 As New System.IO.StreamWriter(apppath + "\statedata\usersave.builder.anamesave.pbsf")
+                    Dim objWriter6 As New System.IO.StreamWriter(apppath + "\statedata\usersave.builder.urlsave.pbsf")
+                    Dim objWriter7 As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.inrsstate.pbcfg")
+                    objWriter1.Write("False")
+                    objWriter1.Close()
+                    objWriter2.Write("True")
+                    objWriter2.Close()
+                    objWriter3.Write("https://github.com/Pavich7/P-Browser-Builder-Resource/releases/latest/download/pbb-resource.zip")
+                    objWriter3.Close()
+                    objWriter4.Write("1500")
+                    objWriter4.Close()
+                    objWriter5.Write("")
+                    objWriter5.Close()
+                    objWriter6.Write("")
+                    objWriter6.Close()
+                    objWriter7.Write("False")
+                    objWriter7.Close()
+                    'Reset Temp setting
+                    My.Settings.tempWebTitle = ""
+                    MessageBox.Show("Operation Completed!", "Success!")
+                    Dim result11 As DialogResult = MessageBox.Show("Do you wish to restart?" + vbNewLine + "YES to restart, NO to shutdown.", "Restart?", MessageBoxButtons.YesNo)
+                    If (result11 = DialogResult.Yes) Then
+                        Application.Restart()
+                    Else
+                        Application.Exit()
+                    End If
+                Else
+                    Dim objWriter11 As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.inrsstate.pbcfg")
+                    objWriter11.Write("False")
+                    objWriter11.Close()
+                    MessageBox.Show("Operation Aborted, Nothing Happened! Builder needs restart.", "Aborted!")
+                    Application.Restart()
+                End If
+            Catch ex As Exception
+                Dim objWriter111 As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.inrsstate.pbcfg")
+                objWriter111.Write("False")
+                objWriter111.Close()
+                MessageBox.Show("Failed to reset. Builder needs restart." + vbNewLine + ex.Message, "Fatal Error!")
+                Application.Restart()
+            End Try
         Else
-            Label19.Visible = False
-            Label20.Visible = False
-            Label18.Visible = False
-            Dim resvcheck4 As String = apppath + "\resource\metadata\checkpoint\r400.chkp"
-            If Not System.IO.File.Exists(resvcheck4) Then
-                MessageBox.Show("Unload required! Resource not compatible!" + vbNewLine + "Please reinstall builder resource via preference menu.", "Resource not compatible!")
+            'Init Cef
+            Dim setting As New CefSettings With {
+                .RemoteDebuggingPort = 8088
+            }
+            setting.CachePath = apppath + "\statecache"
+            CefSharp.Cef.Initialize(setting)
+            Browser = New ChromiumWebBrowser("")
+            Panel2.Controls.Add(Browser)
+            Dim fileReader1 As System.IO.StreamReader
+            fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.usageinterv.pbcfg")
+            Dim stringReader1 As String
+            stringReader1 = fileReader1.ReadLine()
+            Timer2.Interval = stringReader1
+            fileReader1.Close()
+            Button4.Enabled = False
+            Button5.Enabled = False
+            Dim rscheck As String = apppath + "\resource"
+            If Not System.IO.Directory.Exists(rscheck) Then
                 Button1.Enabled = False
                 Button2.Enabled = False
                 RadioButton1.Enabled = False
@@ -322,50 +395,67 @@ Public Class Form1
                 CheckBox2.Enabled = False
                 Label4.Enabled = False
                 Label8.Enabled = False
+            Else
+                Label19.Visible = False
+                Label20.Visible = False
+                Label18.Visible = False
+                Dim resvcheck4 As String = apppath + "\resource\metadata\checkpoint\r400.chkp"
+                If Not System.IO.File.Exists(resvcheck4) Then
+                    MessageBox.Show("Unload required! Resource not compatible!" + vbNewLine + "Please reinstall builder resource via preference menu.", "Resource not compatible!")
+                    Button1.Enabled = False
+                    Button2.Enabled = False
+                    RadioButton1.Enabled = False
+                    RadioButton2.Enabled = False
+                    RadioButton3.Enabled = False
+                    CheckBox1.Enabled = False
+                    CheckBox2.Enabled = False
+                    Label4.Enabled = False
+                    Label8.Enabled = False
+                End If
             End If
+            Dim fileReader11 As System.IO.StreamReader
+            Dim fileReader21 As System.IO.StreamReader
+            fileReader11 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.urlsave.pbsf")
+            fileReader21 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.anamesave.pbsf")
+            Dim stringReader11 As String
+            Dim stringReader21 As String
+            stringReader11 = fileReader11.ReadLine()
+            stringReader21 = fileReader21.ReadLine()
+            TextBox1.Text = stringReader11
+            TextBox2.Text = stringReader21
+            fileReader11.Close()
+            fileReader21.Close()
+            Dim cachecheck As String = apppath + "\statecache\updatecache\pbb-resource.zip"
+            ShowRightPanelToolStripMenuItem.Enabled = False
+            ExtensionsNotFoundToolStripMenuItem.Enabled = False
+            Button7.Enabled = False
+            ExtensionsToolStripMenuItem.Visible = False
+            DevToolStripMenuItem.Visible = False
+            Dim fileReader111 As System.IO.StreamReader
+            fileReader111 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.alwpdiag.pbcfg")
+            Dim stringReader111 As String
+            stringReader111 = fileReader111.ReadLine()
+            If stringReader111 = "False" Then
+                Timer2.Start()
+            Else
+                Timer2.Stop()
+                Button8.Enabled = False
+                Button7.Enabled = True
+                ProgressBar3.Value = 0
+                Label23.Text = "Memory Usage: Paused"
+                Label25.Text = "Paused"
+            End If
+            fileReader111.Close()
+            TextBox3.Enabled = False
+            Label15.Visible = False
+            Label7.Visible = True
+            Label7.Text = "Fetching in progress..."
+            ProgressBar1.Visible = True
+            Timer3.Start()
+            System.IO.Directory.Delete(apppath + "\statecache\nfcache", True)
+            System.IO.Directory.CreateDirectory(apppath + "\statecache\nfcache")
+            Timer1.Start()
         End If
-        Dim fileReader11 As System.IO.StreamReader
-        Dim fileReader21 As System.IO.StreamReader
-        fileReader11 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.urlsave.pbsf")
-        fileReader21 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.anamesave.pbsf")
-        Dim stringReader11 As String
-        Dim stringReader21 As String
-        stringReader11 = fileReader11.ReadLine()
-        stringReader21 = fileReader21.ReadLine()
-        TextBox1.Text = stringReader11
-        TextBox2.Text = stringReader21
-        fileReader11.Close()
-        fileReader21.Close()
-        Dim cachecheck As String = apppath + "\statecache\updatecache\pbb-resource.zip"
-        ShowRightPanelToolStripMenuItem.Enabled = False
-        ExtensionsNotFoundToolStripMenuItem.Enabled = False
-        Button7.Enabled = False
-        ExtensionsToolStripMenuItem.Visible = False
-        DevToolStripMenuItem.Visible = False
-        Dim fileReader111 As System.IO.StreamReader
-        fileReader111 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.alwpdiag.pbcfg")
-        Dim stringReader111 As String
-        stringReader111 = fileReader111.ReadLine()
-        If stringReader111 = "False" Then
-            Timer2.Start()
-        Else
-            Timer2.Stop()
-            Button8.Enabled = False
-            Button7.Enabled = True
-            ProgressBar3.Value = 0
-            Label23.Text = "Memory Usage: Paused"
-            Label25.Text = "Paused"
-        End If
-        fileReader111.Close()
-        TextBox3.Enabled = False
-        Label15.Visible = False
-        Label7.Visible = True
-        Label7.Text = "Fetching in progress..."
-        ProgressBar1.Visible = True
-        Timer3.Start()
-        System.IO.Directory.Delete(apppath + "\statecache\nfcache", True)
-        System.IO.Directory.CreateDirectory(apppath + "\statecache\nfcache")
-        Timer1.Start()
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
@@ -427,6 +517,9 @@ Public Class Form1
             Label12.Text = stringReader1
             Label13.Text = stringReader2
             Label14.Text = stringReader3
+            fileReader1.Close()
+            fileReader2.Close()
+            fileReader3.Close()
             ProgressBar1.Value = 100
             Label7.Text = "Ready to build"
             ProgressBar1.Value = 0

@@ -1,14 +1,40 @@
 ﻿Imports System.IO
 Imports System.IO.Compression
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class prefer
     Private Sub prefer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim apppath As String = Application.StartupPath()
         Dim rescheck As String = apppath + "\resource"
         Dim cachecheck As String = apppath + "\statecache\updatecache\pbb-resource.zip"
+        Me.Size = New Size(516, 486)
         If Not System.IO.File.Exists(cachecheck) Then
             Label9.Enabled = False
         End If
+        Try
+            'Build Ver Check
+            System.IO.Directory.Delete(apppath + "\statecache\getcache", True)
+            System.IO.Directory.CreateDirectory(apppath + "\statecache\getcache")
+            Dim bfileReader As System.IO.StreamReader
+            My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/api/v2-pbb/cfuversion/onlinebuiver.txt", apppath + "\statecache\getcache\onlinebuiver.txt")
+            Dim bfileReader1 As System.IO.StreamReader
+            bfileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statecache\getcache\onlinebuiver.txt")
+            Dim bstringReader1 As String
+            bstringReader1 = bfileReader1.ReadLine()
+            bfileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\metadata\version.txt")
+            Dim bstringReader As String
+            bstringReader = bfileReader.ReadLine()
+            If bstringReader1.Contains(bstringReader) Then
+                Label30.Text = "up-to-date!"
+            Else
+                Label30.Text = "Update available! (" + bstringReader1 + ")"
+            End If
+            bfileReader.Close()
+            bfileReader1.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            Label30.Text = "Error checking for update!"
+        End Try
         If Not System.IO.Directory.Exists(rescheck) Then
             Label2.Text = "Chromium : Not installed"
             Label5.Text = "CefSharp : Not installed"
@@ -25,6 +51,7 @@ Public Class prefer
                 If Not System.IO.File.Exists(metacheck) Then
                     MessageBox.Show("Resource not compatible with this version of P Browser Builder!" + vbNewLine + "Please update resource by uninstall and reinstall via build menu.", "Check for update error!")
                 Else
+                    'Res Ver Check
                     System.IO.Directory.Delete(apppath + "\resource\getcache", True)
                     System.IO.Directory.CreateDirectory(apppath + "\resource\getcache")
                     Dim fileReader As System.IO.StreamReader
@@ -78,10 +105,6 @@ Public Class prefer
         Label19.Enabled = False
         Label20.Enabled = False
         Label21.Enabled = False
-        'Disable reset features (incompleted)
-        Label13.Visible = False
-        Label14.Visible = False
-        Label15.Visible = False
     End Sub
 
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
@@ -181,6 +204,7 @@ Public Class prefer
     Private Sub Label29_Click(sender As Object, e As EventArgs) Handles Label29.Click
         Dim result As DialogResult = MessageBox.Show("Unlocking the Advanced Menu is dangerous." + vbNewLine + "This menu is used to install or modify builder resouces." + vbNewLine + "" + vbNewLine + "Do you want to process it?", "You sure about this?", MessageBoxButtons.YesNo)
         If (result = DialogResult.Yes) Then
+            Me.Size = New Size(516, 631)
             Label29.Enabled = False
             Label22.Enabled = True
             Label24.Enabled = True
@@ -200,13 +224,18 @@ Public Class prefer
     Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
         Dim result As DialogResult = MessageBox.Show("Do you wish to reset all setting?" + vbNewLine + "This cannot be undone!", "You sure about this?", MessageBoxButtons.YesNo)
         If (result = DialogResult.Yes) Then
-            Dim result1 As DialogResult = MessageBox.Show("Do you wish to delete resource also?" + vbNewLine + "You can reinstall anytime via news feed.", "Resource setting", MessageBoxButtons.YesNo)
             Dim apppath As String = Application.StartupPath()
-            System.IO.Directory.Delete(apppath + "\statecache\updatecache", True)
-            System.IO.Directory.CreateDirectory(apppath + "\statecache\updatecache")
+            Dim objWriter As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.inrsstate.pbcfg")
+            objWriter.Write("True")
+            objWriter.Close()
+            Dim result1 As DialogResult = MessageBox.Show("Builder will enter restore mode on next launch." + vbNewLine + "Do you wish to restart now?", "You sure about this?", MessageBoxButtons.YesNo)
             If (result1 = DialogResult.Yes) Then
-                System.IO.Directory.Delete(apppath + "\resource", True)
+                Application.Restart()
             End If
         End If
+    End Sub
+
+    Private Sub Label30_Click(sender As Object, e As EventArgs) Handles Label30.Click
+        MessageBox.Show("To update builder, head to our GitHub repository or where you downloaded!" + vbNewLine + "Relaunch preference to recheck for update.", "Info")
     End Sub
 End Class

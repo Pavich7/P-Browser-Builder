@@ -193,9 +193,9 @@ Partial Class prefer
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
         Me.Label3.Location = New System.Drawing.Point(17, 261)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(64, 28)
+        Me.Label3.Size = New System.Drawing.Size(70, 28)
         Me.Label3.TabIndex = 47
-        Me.Label3.Text = "About"
+        Me.Label3.Text = "Builder"
         '
         'Label16
         '
@@ -388,6 +388,7 @@ Partial Class prefer
         '
         Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
+        Me.Label4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Gray
         Me.Label4.Location = New System.Drawing.Point(112, 63)
@@ -436,13 +437,14 @@ Partial Class prefer
         '
         Me.Label30.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label30.AutoSize = True
+        Me.Label30.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label30.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label30.ForeColor = System.Drawing.Color.Gray
-        Me.Label30.Location = New System.Drawing.Point(25, 311)
+        Me.Label30.Location = New System.Drawing.Point(93, 267)
         Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(328, 21)
+        Me.Label30.Size = New System.Drawing.Size(45, 21)
         Me.Label30.TabIndex = 67
-        Me.Label30.Text = "This feature has been disabled on this version."
+        Me.Label30.Text = "udab"
         '
         'prefer
         '
