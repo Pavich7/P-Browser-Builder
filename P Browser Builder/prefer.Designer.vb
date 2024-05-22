@@ -75,7 +75,7 @@ Partial Class prefer
         Me.Label23.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(372, 127)
+        Me.Label23.Location = New System.Drawing.Point(366, 127)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(30, 17)
         Me.Label23.TabIndex = 33
@@ -97,7 +97,7 @@ Partial Class prefer
         Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(223, 127)
+        Me.Label5.Location = New System.Drawing.Point(217, 127)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(25, 17)
         Me.Label5.TabIndex = 36

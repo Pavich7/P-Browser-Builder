@@ -280,6 +280,61 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim apppath As String = Application.StartupPath()
+        'Init structure check
+        Dim flcheck1 As String = apppath + "\binary"
+        Dim flcheck2 As String = apppath + "\binarypkg"
+        Dim flcheck3 As String = apppath + "\metadata"
+        Dim flcheck4 As String = apppath + "\statecache"
+        Dim flcheck41 As String = apppath + "\statecache\buildcache"
+        Dim flcheck42 As String = apppath + "\statecache\getcache"
+        Dim flcheck43 As String = apppath + "\statecache\nfcache"
+        Dim flcheck44 As String = apppath + "\statecache\updatecache"
+        Dim flcheck5 As String = apppath + "\statedata"
+        If Not System.IO.Directory.Exists(flcheck1) Then
+            Me.Enabled = False
+            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+            errorencounter.Show()
+        End If
+        If Not System.IO.Directory.Exists(flcheck2) Then
+            Me.Enabled = False
+            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+            errorencounter.Show()
+        End If
+        If Not System.IO.Directory.Exists(flcheck3) Then
+            Me.Enabled = False
+            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+            errorencounter.Show()
+        End If
+        If Not System.IO.Directory.Exists(flcheck4) Then
+            Me.Enabled = False
+            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+            errorencounter.Show()
+        End If
+        If Not System.IO.Directory.Exists(flcheck41) Then
+            Me.Enabled = False
+            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+            errorencounter.Show()
+        End If
+        If Not System.IO.Directory.Exists(flcheck42) Then
+            Me.Enabled = False
+            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+            errorencounter.Show()
+        End If
+        If Not System.IO.Directory.Exists(flcheck43) Then
+            Me.Enabled = False
+            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+            errorencounter.Show()
+        End If
+        If Not System.IO.Directory.Exists(flcheck44) Then
+            Me.Enabled = False
+            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+            errorencounter.Show()
+        End If
+        If Not System.IO.Directory.Exists(flcheck5) Then
+            Me.Enabled = False
+            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+            errorencounter.Show()
+        End If
         'Reset state Check
         Dim fileReader19 As System.IO.StreamReader
         fileReader19 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.inrsstate.pbcfg")
@@ -802,7 +857,6 @@ Public Class Form1
             Label29.Visible = True
             Label28.Text = ProgressBar1.Value
         End If
-
     End Sub
 
     Private Sub Label30_Click(sender As Object, e As EventArgs) Handles Label30.Click
@@ -815,7 +869,7 @@ Public Class Form1
     End Sub
 
     Private Sub ReleaseNoteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReleaseNoteToolStripMenuItem.Click
-        Browser.Load("https://github.com/Pavich7/P-Browser-Builder/releases/tag/4.0.0-Beta.2")
+        Browser.Load("https://github.com/Pavich7/P-Browser-Builder/releases/")
     End Sub
 
     Private Sub ReinitializeResourceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReinitializeResourceToolStripMenuItem.Click

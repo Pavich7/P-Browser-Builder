@@ -1,6 +1,4 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
-
-Public Class saveopt
+﻿Public Class saveopt
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Try
             Dim apppath As String = Application.StartupPath()

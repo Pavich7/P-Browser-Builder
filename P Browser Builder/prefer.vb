@@ -1,6 +1,4 @@
-﻿Imports System.IO
-Imports System.IO.Compression
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+﻿Imports System.IO.Compression
 
 Public Class prefer
     Private Sub prefer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -36,9 +34,9 @@ Public Class prefer
             Label30.Text = "Error checking for update!"
         End Try
         If Not System.IO.Directory.Exists(rescheck) Then
-            Label2.Text = "Chromium : Not installed"
-            Label5.Text = "CefSharp : Not installed"
-            Label23.Text = "Version : Resource not installed"
+            Label2.Text = "Chromium : N/A"
+            Label5.Text = "CefSharp : N/A"
+            Label23.Text = "Version : N/A"
             Label2.Enabled = False
             Label5.Enabled = False
             Label23.Enabled = False
