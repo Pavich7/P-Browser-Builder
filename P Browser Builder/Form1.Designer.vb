@@ -129,6 +129,8 @@ Partial Class Form1
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.RestartInRestoreModeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ShowSplashScreenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -354,7 +356,7 @@ Partial Class Form1
         '
         'DevToolStripMenuItem
         '
-        Me.DevToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReinitializeResourceToolStripMenuItem, Me.UnlockIncompleteFeatureToolStripMenuItem, Me.ForceUnlockDisableButtonToolStripMenuItem, Me.FToolStripMenuItem, Me.GoBackToDefaultToolStripMenuItem})
+        Me.DevToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReinitializeResourceToolStripMenuItem, Me.UnlockIncompleteFeatureToolStripMenuItem, Me.ForceUnlockDisableButtonToolStripMenuItem, Me.FToolStripMenuItem, Me.ShowSplashScreenToolStripMenuItem, Me.RestartInRestoreModeToolStripMenuItem, Me.GoBackToDefaultToolStripMenuItem})
         Me.DevToolStripMenuItem.Name = "DevToolStripMenuItem"
         Me.DevToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
         Me.DevToolStripMenuItem.Text = "Dev"
@@ -1071,6 +1073,18 @@ Partial Class Form1
         Me.PictureBox3.TabIndex = 33
         Me.PictureBox3.TabStop = False
         '
+        'RestartInRestoreModeToolStripMenuItem
+        '
+        Me.RestartInRestoreModeToolStripMenuItem.Name = "RestartInRestoreModeToolStripMenuItem"
+        Me.RestartInRestoreModeToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.RestartInRestoreModeToolStripMenuItem.Text = "Restart in Restore Mode"
+        '
+        'ShowSplashScreenToolStripMenuItem
+        '
+        Me.ShowSplashScreenToolStripMenuItem.Name = "ShowSplashScreenToolStripMenuItem"
+        Me.ShowSplashScreenToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.ShowSplashScreenToolStripMenuItem.Text = "Show splash screen"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1243,4 +1257,6 @@ Partial Class Form1
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents FToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ResourceSettingToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents RestartInRestoreModeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ShowSplashScreenToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -1,7 +1,10 @@
 Release 5.2.0
 - ADDED: Implemented app structure check before load everything.
+- ADDED: (Dev) Readd show splash screen.
+- ADDED: (Dev) Restart in Restore Mode button.
 - FIXED: Release note in help might lead to old release.
 - FIXED: Fixed overflow resource info text when there is no resource.
 - IMPROVEMENT: Improved Builder splash screen task to load faster.
 - IMPROVEMENT: Code cleanup will improve Builder performance.
 - CHANGE: Resource info will show as N/A (not available) when there is no resource.
+- CHANGE: Changed some message box text and system in EULA pages.

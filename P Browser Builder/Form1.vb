@@ -979,4 +979,16 @@ Public Class Form1
     Private Sub ResourceSettingToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ResourceSettingToolStripMenuItem1.Click
         prefer.Show()
     End Sub
+
+    Private Sub RestartInRestoreModeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RestartInRestoreModeToolStripMenuItem.Click
+        Dim apppath As String = Application.StartupPath()
+        Dim objWriter As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.inrsstate.pbcfg")
+        objWriter.Write("True")
+        objWriter.Close()
+        Application.Restart()
+    End Sub
+
+    Private Sub ShowSplashScreenToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles ShowSplashScreenToolStripMenuItem.Click
+        splash.Show()
+    End Sub
 End Class
