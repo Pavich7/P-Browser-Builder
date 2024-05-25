@@ -290,6 +290,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="p_browser_icon_001_rq2_icon.ico" />
+    <None Include="Resources\Screenshot 2024-05-25 115040.png" />
+    <None Include="Resources\Screenshot 2024-05-25 115053.png" />
     <None Include="Resources\Screenshot 2024-05-22 160157.png" />
     <None Include="Resources\Screenshot 2024-05-22 130454.png" />
     <None Include="Resources\Screenshot 2024-05-22 130444.png" />

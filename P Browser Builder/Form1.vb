@@ -280,61 +280,6 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim apppath As String = Application.StartupPath()
-        'Init structure check
-        Dim flcheck1 As String = apppath + "\binary"
-        Dim flcheck2 As String = apppath + "\binarypkg"
-        Dim flcheck3 As String = apppath + "\metadata"
-        Dim flcheck4 As String = apppath + "\statecache"
-        Dim flcheck41 As String = apppath + "\statecache\buildcache"
-        Dim flcheck42 As String = apppath + "\statecache\getcache"
-        Dim flcheck43 As String = apppath + "\statecache\nfcache"
-        Dim flcheck44 As String = apppath + "\statecache\updatecache"
-        Dim flcheck5 As String = apppath + "\statedata"
-        If Not System.IO.Directory.Exists(flcheck1) Then
-            Me.Enabled = False
-            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-            errorencounter.Show()
-        End If
-        If Not System.IO.Directory.Exists(flcheck2) Then
-            Me.Enabled = False
-            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-            errorencounter.Show()
-        End If
-        If Not System.IO.Directory.Exists(flcheck3) Then
-            Me.Enabled = False
-            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-            errorencounter.Show()
-        End If
-        If Not System.IO.Directory.Exists(flcheck4) Then
-            Me.Enabled = False
-            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-            errorencounter.Show()
-        End If
-        If Not System.IO.Directory.Exists(flcheck41) Then
-            Me.Enabled = False
-            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-            errorencounter.Show()
-        End If
-        If Not System.IO.Directory.Exists(flcheck42) Then
-            Me.Enabled = False
-            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-            errorencounter.Show()
-        End If
-        If Not System.IO.Directory.Exists(flcheck43) Then
-            Me.Enabled = False
-            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-            errorencounter.Show()
-        End If
-        If Not System.IO.Directory.Exists(flcheck44) Then
-            Me.Enabled = False
-            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-            errorencounter.Show()
-        End If
-        If Not System.IO.Directory.Exists(flcheck5) Then
-            Me.Enabled = False
-            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-            errorencounter.Show()
-        End If
         'Reset state Check
         Dim fileReader19 As System.IO.StreamReader
         fileReader19 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.inrsstate.pbcfg")
@@ -423,6 +368,61 @@ Public Class Form1
                 Application.Restart()
             End Try
         Else
+            'Init structure check
+            Dim flcheck1 As String = apppath + "\binary"
+            Dim flcheck2 As String = apppath + "\binarypkg"
+            Dim flcheck3 As String = apppath + "\metadata"
+            Dim flcheck4 As String = apppath + "\statecache"
+            Dim flcheck41 As String = apppath + "\statecache\buildcache"
+            Dim flcheck42 As String = apppath + "\statecache\getcache"
+            Dim flcheck43 As String = apppath + "\statecache\nfcache"
+            Dim flcheck44 As String = apppath + "\statecache\updatecache"
+            Dim flcheck5 As String = apppath + "\statedata"
+            If Not System.IO.Directory.Exists(flcheck1) Then
+                Me.Enabled = False
+                errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+                errorencounter.Show()
+            End If
+            If Not System.IO.Directory.Exists(flcheck2) Then
+                Me.Enabled = False
+                errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+                errorencounter.Show()
+            End If
+            If Not System.IO.Directory.Exists(flcheck3) Then
+                Me.Enabled = False
+                errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+                errorencounter.Show()
+            End If
+            If Not System.IO.Directory.Exists(flcheck4) Then
+                Me.Enabled = False
+                errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+                errorencounter.Show()
+            End If
+            If Not System.IO.Directory.Exists(flcheck41) Then
+                Me.Enabled = False
+                errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+                errorencounter.Show()
+            End If
+            If Not System.IO.Directory.Exists(flcheck42) Then
+                Me.Enabled = False
+                errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+                errorencounter.Show()
+            End If
+            If Not System.IO.Directory.Exists(flcheck43) Then
+                Me.Enabled = False
+                errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+                errorencounter.Show()
+            End If
+            If Not System.IO.Directory.Exists(flcheck44) Then
+                Me.Enabled = False
+                errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+                errorencounter.Show()
+            End If
+            If Not System.IO.Directory.Exists(flcheck5) Then
+                Me.Enabled = False
+                errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+                errorencounter.Show()
+            End If
             'Init Cef
             Dim setting As New CefSettings With {
                 .RemoteDebuggingPort = 8088
