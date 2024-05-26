@@ -280,6 +280,61 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim apppath As String = Application.StartupPath()
+        'Init structure check
+        Dim flcheck1 As String = apppath + "\binary"
+        Dim flcheck2 As String = apppath + "\binarypkg"
+        Dim flcheck3 As String = apppath + "\metadata"
+        Dim flcheck4 As String = apppath + "\statecache"
+        Dim flcheck41 As String = apppath + "\statecache\buildcache"
+        Dim flcheck42 As String = apppath + "\statecache\getcache"
+        Dim flcheck43 As String = apppath + "\statecache\nfcache"
+        Dim flcheck44 As String = apppath + "\statecache\updatecache"
+        Dim flcheck5 As String = apppath + "\statedata"
+        If Not System.IO.Directory.Exists(flcheck1) Then
+            Me.Enabled = False
+            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+            errorencounter.Show()
+        End If
+        If Not System.IO.Directory.Exists(flcheck2) Then
+            Me.Enabled = False
+            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+            errorencounter.Show()
+        End If
+        If Not System.IO.Directory.Exists(flcheck3) Then
+            Me.Enabled = False
+            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+            errorencounter.Show()
+        End If
+        If Not System.IO.Directory.Exists(flcheck4) Then
+            Me.Enabled = False
+            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+            errorencounter.Show()
+        End If
+        If Not System.IO.Directory.Exists(flcheck41) Then
+            Me.Enabled = False
+            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+            errorencounter.Show()
+        End If
+        If Not System.IO.Directory.Exists(flcheck42) Then
+            Me.Enabled = False
+            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+            errorencounter.Show()
+        End If
+        If Not System.IO.Directory.Exists(flcheck43) Then
+            Me.Enabled = False
+            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+            errorencounter.Show()
+        End If
+        If Not System.IO.Directory.Exists(flcheck44) Then
+            Me.Enabled = False
+            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+            errorencounter.Show()
+        End If
+        If Not System.IO.Directory.Exists(flcheck5) Then
+            Me.Enabled = False
+            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+            errorencounter.Show()
+        End If
         'Reset state Check
         Dim fileReader19 As System.IO.StreamReader
         fileReader19 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.inrsstate.pbcfg")
@@ -330,6 +385,7 @@ Public Class Form1
                     Dim objWriter5 As New System.IO.StreamWriter(apppath + "\statedata\usersave.builder.anamesave.pbsf")
                     Dim objWriter6 As New System.IO.StreamWriter(apppath + "\statedata\usersave.builder.urlsave.pbsf")
                     Dim objWriter7 As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.inrsstate.pbcfg")
+                    Dim objWriter8 As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.datacol.pbcfg")
                     objWriter1.Write("False")
                     objWriter1.Close()
                     objWriter2.Write("True")
@@ -344,6 +400,8 @@ Public Class Form1
                     objWriter6.Close()
                     objWriter7.Write("False")
                     objWriter7.Close()
+                    objWriter8.Write("True")
+                    objWriter8.Close()
                     'Reset Temp setting
                     My.Settings.tempWebTitle = ""
                     MessageBox.Show("Operation Completed!", "Success!")
@@ -368,61 +426,6 @@ Public Class Form1
                 Application.Restart()
             End Try
         Else
-            'Init structure check
-            Dim flcheck1 As String = apppath + "\binary"
-            Dim flcheck2 As String = apppath + "\binarypkg"
-            Dim flcheck3 As String = apppath + "\metadata"
-            Dim flcheck4 As String = apppath + "\statecache"
-            Dim flcheck41 As String = apppath + "\statecache\buildcache"
-            Dim flcheck42 As String = apppath + "\statecache\getcache"
-            Dim flcheck43 As String = apppath + "\statecache\nfcache"
-            Dim flcheck44 As String = apppath + "\statecache\updatecache"
-            Dim flcheck5 As String = apppath + "\statedata"
-            If Not System.IO.Directory.Exists(flcheck1) Then
-                Me.Enabled = False
-                errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-                errorencounter.Show()
-            End If
-            If Not System.IO.Directory.Exists(flcheck2) Then
-                Me.Enabled = False
-                errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-                errorencounter.Show()
-            End If
-            If Not System.IO.Directory.Exists(flcheck3) Then
-                Me.Enabled = False
-                errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-                errorencounter.Show()
-            End If
-            If Not System.IO.Directory.Exists(flcheck4) Then
-                Me.Enabled = False
-                errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-                errorencounter.Show()
-            End If
-            If Not System.IO.Directory.Exists(flcheck41) Then
-                Me.Enabled = False
-                errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-                errorencounter.Show()
-            End If
-            If Not System.IO.Directory.Exists(flcheck42) Then
-                Me.Enabled = False
-                errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-                errorencounter.Show()
-            End If
-            If Not System.IO.Directory.Exists(flcheck43) Then
-                Me.Enabled = False
-                errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-                errorencounter.Show()
-            End If
-            If Not System.IO.Directory.Exists(flcheck44) Then
-                Me.Enabled = False
-                errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-                errorencounter.Show()
-            End If
-            If Not System.IO.Directory.Exists(flcheck5) Then
-                Me.Enabled = False
-                errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-                errorencounter.Show()
-            End If
             'Init Cef
             Dim setting As New CefSettings With {
                 .RemoteDebuggingPort = 8088
@@ -542,6 +545,24 @@ Public Class Form1
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Timer1.Stop()
         Dim apppath As String = Application.StartupPath()
+        Dim fileReader01 As System.IO.StreamReader
+        fileReader01 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.datacol.pbcfg")
+        Dim stringReader01 As String
+        stringReader01 = fileReader01.ReadLine()
+        fileReader01.Close()
+        'Sent analytics
+        Dim regDate As Date = Date.Now()
+        Dim strDate As String = regDate.ToString("ddMMMyyyy")
+        Dim strHostName As String
+        Dim strIPAddress As String
+        strHostName = System.Net.Dns.GetHostName()
+        strIPAddress = System.Net.Dns.GetHostEntry(strHostName).AddressList(0).ToString()
+        If stringReader01 = "True" Then
+            Browser.Load("http://pavichdev.ddns.net/api/v1-act/activate.php?ver=" + "PBrowserBuilder+startup+" + strDate + "+" + Application.ProductVersion + "+" + strHostName + "+" + strIPAddress)
+            Snooze(1)
+            Browser.Load("about:blank")
+        End If
+        'fsstate
         Dim fileReader0 As System.IO.StreamReader
         fileReader0 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.infsstate.pbcfg")
         Dim stringReader0 As String

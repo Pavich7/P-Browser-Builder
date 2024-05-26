@@ -1,5 +1,6 @@
 Release 5.2.0
 - ADDED: Implemented app structure check before load everything.
+- ADDED: Implemented app data collection but user can disable at setup.
 - ADDED: (Dev) Readd show splash screen.
 - ADDED: (Dev) Restart in Restore Mode button.
 - FIXED: Release note in help might lead to old release.
