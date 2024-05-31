@@ -1,18 +1,18 @@
-PAVICHDEV PRIVATE LICENSE (VERSION 1.1)
+MadeByPavich Software License (VERSION 1.2)
 
-PUBLISH DATE: FEB 14, 2022
-EFFECT DATE: FEB 14, 2022
+PUBLISH DATE: MAY 31, 2024
+EFFECT DATE: MAY 31, 2024
 
-Copyright © 2022 PavichDev Software
+Copyright © 2024 Pavich Komansil. All rights reserved.
 
 Everyone is NOT PERMITTED TO EDIT OR DISTRIBUTE this document of license for commecial use.
 
 TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 (1.) Everyone can forks, download a copy, modification the code in your own repository or device,
-but not for commercial use. for company or large group plese contact us pavichdev@gmail.com.
+but not for commercial use. for company or large group plese contact us phavit_k@hotmail.com.
 (2.) Everyone is NOT PERMITTED TO RE-DISTRIBUTE a copy of this code for any of use.
 (3.) Cloning or forking this repository MUST REMAIN COPYRIGHT NOTICE of this
-repository author (PavichDev) and LICENSE (PavichDev Private License).
+repository author (Pavich Komansil) and LICENSE (MadeByPavich Software License).
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. IN NO EVENT SHALL
 THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
