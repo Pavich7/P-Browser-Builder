@@ -1,4 +1,5 @@
 ﻿Imports System.IO.Compression
+Imports System.Net
 
 Public Class prefer
     Private Sub prefer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -11,24 +12,18 @@ Public Class prefer
         End If
         Try
             'Build Ver Check
-            System.IO.Directory.Delete(apppath + "\statecache\getcache", True)
-            System.IO.Directory.CreateDirectory(apppath + "\statecache\getcache")
             Dim bfileReader As System.IO.StreamReader
-            My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/api/v2-pbb/cfuversion/onlinebuiver.txt", apppath + "\statecache\getcache\onlinebuiver.txt")
-            Dim bfileReader1 As System.IO.StreamReader
-            bfileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statecache\getcache\onlinebuiver.txt")
-            Dim bstringReader1 As String
-            bstringReader1 = bfileReader1.ReadLine()
             bfileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\metadata\version.txt")
             Dim bstringReader As String
             bstringReader = bfileReader.ReadLine()
-            If bstringReader1.Contains(bstringReader) Then
+            Dim client As WebClient = New WebClient()
+            Dim obuiver As String = client.DownloadString("http://pavichdev.ddns.net/api/v2-pbb/cfuversion/onlinebuiver.txt")
+            If obuiver.Contains(bstringReader) Then
                 Label30.Text = "up-to-date!"
             Else
-                Label30.Text = "Update available! (" + bstringReader1 + ")"
+                Label30.Text = "Update available! (" + obuiver + ")"
             End If
             bfileReader.Close()
-            bfileReader1.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
             Label30.Text = "Error checking for update!"
@@ -50,23 +45,18 @@ Public Class prefer
                     MessageBox.Show("Resource not compatible with this version of P Browser Builder!" + vbNewLine + "Please update resource by uninstall and reinstall via build menu.", "Check for update error!")
                 Else
                     'Res Ver Check
-                    System.IO.Directory.Delete(apppath + "\resource\getcache", True)
-                    System.IO.Directory.CreateDirectory(apppath + "\resource\getcache")
                     Dim fileReader As System.IO.StreamReader
-                    My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/api/v2-pbb/cfuversion/onlineresver.txt", apppath + "\resource\getcache\onlineresver.txt")
-                    Dim fileReader1 As System.IO.StreamReader
-                    fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\getcache\onlineresver.txt")
-                    Dim stringReader1 As String
-                    stringReader1 = fileReader1.ReadLine()
                     fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\metadata\version.txt")
                     Dim stringReader As String
                     stringReader = fileReader.ReadLine()
-                    If stringReader1.Contains(stringReader) Then
+                    Dim client As WebClient = New WebClient()
+                    Dim oresver As String = client.DownloadString("http://pavichdev.ddns.net/api/v2-pbb/cfuversion/onlineresver.txt")
+                    If oresver.Contains(stringReader) Then
                         Label4.Text = "up-to-date!"
                     Else
-                        Label4.Text = "Update available! (" + stringReader1 + ")"
+                        Label4.Text = "Update available! (" + oresver + ")"
                     End If
-                    fileReader1.Close()
+                    fileReader.Close()
                 End If
             Catch ex As Exception
                 Label4.Text = "Error checking for update!"
@@ -235,5 +225,13 @@ Public Class prefer
 
     Private Sub Label30_Click(sender As Object, e As EventArgs) Handles Label30.Click
         MessageBox.Show("To update builder, head to our GitHub repository or where you downloaded!" + vbNewLine + "Relaunch preference to recheck for update.", "Info")
+    End Sub
+
+    Private Sub Label31_Click(sender As Object, e As EventArgs) Handles Label31.Click
+        MessageBox.Show("In this textbox you can set where to download resources. If you want to host please make sure that resource server is directly pointed to your pbb-resource.zip file (like https://example.com/pbb-resource.zip)", "More informations...")
+    End Sub
+
+    Private Sub Label32_Click(sender As Object, e As EventArgs) Handles Label32.Click
+        MessageBox.Show("If you already have pbb-resource.zip file or your custom one, using this button to install from file rather than download new ones. Please note that custom resource can be risky.", "More informations...")
     End Sub
 End Class

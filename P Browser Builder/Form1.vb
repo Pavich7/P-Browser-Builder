@@ -1,5 +1,7 @@
 ﻿Imports System.IO.Compression
 Imports System.Net
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports CefSharp
 Imports CefSharp.WinForms
 Public Class Form1
     Private WithEvents Browser As ChromiumWebBrowser
@@ -286,8 +288,6 @@ Public Class Form1
         Dim flcheck3 As String = apppath + "\metadata"
         Dim flcheck4 As String = apppath + "\statecache"
         Dim flcheck41 As String = apppath + "\statecache\buildcache"
-        Dim flcheck42 As String = apppath + "\statecache\getcache"
-        Dim flcheck43 As String = apppath + "\statecache\nfcache"
         Dim flcheck44 As String = apppath + "\statecache\updatecache"
         Dim flcheck5 As String = apppath + "\statedata"
         If Not System.IO.Directory.Exists(flcheck1) Then
@@ -311,16 +311,6 @@ Public Class Form1
             errorencounter.Show()
         End If
         If Not System.IO.Directory.Exists(flcheck41) Then
-            Me.Enabled = False
-            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-            errorencounter.Show()
-        End If
-        If Not System.IO.Directory.Exists(flcheck42) Then
-            Me.Enabled = False
-            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-            errorencounter.Show()
-        End If
-        If Not System.IO.Directory.Exists(flcheck43) Then
             Me.Enabled = False
             errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
             errorencounter.Show()
@@ -366,8 +356,6 @@ Public Class Form1
                     System.IO.Directory.CreateDirectory(apppath + "\statecache\updatecache")
                     System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache")
                     System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
-                    System.IO.Directory.CreateDirectory(apppath + "\statecache\nfcache")
-                    System.IO.Directory.CreateDirectory(apppath + "\statecache\getcache")
                     'Flush Build Dir
                     System.IO.Directory.Delete(apppath + "\binary", True)
                     System.IO.Directory.CreateDirectory(apppath + "\binary")
@@ -404,6 +392,7 @@ Public Class Form1
                     objWriter8.Close()
                     'Reset Temp setting
                     My.Settings.tempWebTitle = ""
+                    My.Settings.tempIcoLoc = ""
                     MessageBox.Show("Operation Completed!", "Success!")
                     Dim result11 As DialogResult = MessageBox.Show("Do you wish to restart?" + vbNewLine + "YES to restart, NO to shutdown.", "Restart?", MessageBoxButtons.YesNo)
                     If (result11 = DialogResult.Yes) Then
@@ -504,14 +493,11 @@ Public Class Form1
                 Label25.Text = "Paused"
             End If
             fileReader111.Close()
-            TextBox3.Enabled = False
             Label15.Visible = False
             Label7.Visible = True
             Label7.Text = "Fetching in progress..."
             ProgressBar1.Visible = True
             Timer3.Start()
-            System.IO.Directory.Delete(apppath + "\statecache\nfcache", True)
-            System.IO.Directory.CreateDirectory(apppath + "\statecache\nfcache")
             Timer1.Start()
         End If
     End Sub
@@ -574,28 +560,14 @@ Public Class Form1
         End If
         Try
             ProgressBar1.Value = 10
-            My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_title.txt", apppath + "\statecache\nfcache\nf1_title.txt")
-            My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_desc.txt", apppath + "\statecache\nfcache\nf1_desc.txt")
-            My.Computer.Network.DownloadFile("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_date.txt", apppath + "\statecache\nfcache\nf1_date.txt")
+            Dim client As WebClient = New WebClient()
+            Dim nf1desc As String = client.DownloadString("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_desc.txt")
+            Dim nf1titl As String = client.DownloadString("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_title.txt")
+            Dim nf1date As String = client.DownloadString("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_date.txt")
             ProgressBar1.Value = 50
-            Dim fileReader1 As System.IO.StreamReader
-            Dim fileReader2 As System.IO.StreamReader
-            Dim fileReader3 As System.IO.StreamReader
-            fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statecache\nfcache\nf1_title.txt")
-            fileReader2 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statecache\nfcache\nf1_desc.txt")
-            fileReader3 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statecache\nfcache\nf1_date.txt")
-            Dim stringReader1 As String
-            Dim stringReader2 As String
-            Dim stringReader3 As String
-            stringReader1 = fileReader1.ReadLine()
-            stringReader2 = fileReader2.ReadLine()
-            stringReader3 = fileReader3.ReadLine()
-            Label12.Text = stringReader1
-            Label13.Text = stringReader2
-            Label14.Text = stringReader3
-            fileReader1.Close()
-            fileReader2.Close()
-            fileReader3.Close()
+            Label12.Text = nf1titl
+            Label13.Text = nf1desc
+            Label14.Text = nf1date
             ProgressBar1.Value = 100
             Label7.Text = "Ready to build"
             ProgressBar1.Value = 0
@@ -610,17 +582,28 @@ Public Class Form1
     End Sub
 
     Private Sub Label15_Click(sender As Object, e As EventArgs) Handles Label15.Click
-        Dim result As DialogResult = MessageBox.Show("P Browser Builder need to restart to refetch with server." + vbNewLine + "Do you wish to continue?", "Refetch Warning!", MessageBoxButtons.YesNo)
-        If (result = DialogResult.Yes) Then
-            Application.Restart()
-        End If
+        Try
+            Label15.Text = "Please wait..."
+            Label15.Enabled = False
+            Dim client As WebClient = New WebClient()
+            Dim nf1desc As String = client.DownloadString("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_desc.txt")
+            Dim nf1titl As String = client.DownloadString("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_title.txt")
+            Dim nf1date As String = client.DownloadString("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_date.txt")
+            Label12.Text = nf1titl
+            Label13.Text = nf1desc
+            Label14.Text = nf1date
+            Label15.Visible = False
+        Catch ex As Exception
+            MessageBox.Show("Cannot connect!", "Error!")
+            Label15.Text = "Try again"
+            Label15.Enabled = True
+        End Try
     End Sub
 
     Private Sub ClearAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearAllToolStripMenuItem.Click
         Dim apppath As String = Application.StartupPath()
         TextBox1.Text = ""
         TextBox2.Text = ""
-        TextBox3.Text = ""
         RadioButton1.Checked = False
         RadioButton2.Checked = False
         RadioButton3.Checked = False
@@ -696,6 +679,11 @@ Public Class Form1
                 Label7.Text = "First initializing Resource..."
                 Await Task.Delay(30000)
                 ProgressBar1.Value = 100
+                Dim result0 As DialogResult = MessageBox.Show("Do you want to delete installation cache?" + vbNewLine + "Cache can be used to reinstall using advanced sideload. Delete if you wanted to save space. You can delete it later in preference.", "Delete cache?", MessageBoxButtons.YesNo)
+                If (result0 = DialogResult.Yes) Then
+                    System.IO.Directory.Delete(apppath + "\statecache\updatecache", True)
+                    System.IO.Directory.CreateDirectory(apppath + "\statecache\updatecache")
+                End If
                 Dim result1 As DialogResult = MessageBox.Show("Installation completed but restart required!" + vbNewLine + "Do you want to restart P Browser Builder now?", "Installation completed!", MessageBoxButtons.YesNo)
                 If (result1 = DialogResult.Yes) Then
                     Application.Restart()
@@ -830,7 +818,6 @@ Public Class Form1
             Button1.Enabled = True
             Button2.Enabled = True
             Label4.Enabled = True
-            TextBox3.Enabled = True
             Label8.Enabled = True
             RadioButton1.Enabled = True
             RadioButton2.Enabled = True
@@ -950,7 +937,7 @@ Public Class Form1
         OpenFileDialog1.Filter = "Icons Files|*.ico"
         If OpenFileDialog1.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
             PictureBox1.Image = Image.FromFile(OpenFileDialog1.FileName)
-            TextBox3.Text = OpenFileDialog1.FileName
+            My.Settings.tempIcoLoc = OpenFileDialog1.FileName
             My.Computer.FileSystem.CopyFile(OpenFileDialog1.FileName, apppath + "\statecache\buildcache\appicns\appicns.ico")
         End If
     End Sub
@@ -1011,5 +998,29 @@ Public Class Form1
 
     Private Sub ShowSplashScreenToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles ShowSplashScreenToolStripMenuItem.Click
         splash.Show()
+    End Sub
+
+    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+        Browser.Reload
+    End Sub
+
+    Private Sub Label21_Click(sender As Object, e As EventArgs) Handles Label21.Click
+        Browser.Forward
+    End Sub
+
+    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
+        Browser.Back
+    End Sub
+
+    Private Sub Label22_Click(sender As Object, e As EventArgs) Handles Label22.Click
+        Process.Start("http://127.0.0.1:8088/")
+    End Sub
+
+    Private Sub PictureBox9_Click(sender As Object, e As EventArgs) Handles PictureBox9.Click
+        If My.Settings.tempIcoLoc = "" Then
+            MessageBox.Show("Please choose icon first!", "Error!")
+        Else
+            Process.Start(My.Settings.tempIcoLoc)
+        End If
     End Sub
 End Class
