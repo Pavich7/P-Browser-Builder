@@ -173,6 +173,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="customscript.Designer.vb">
+      <DependentUpon>customscript.vb</DependentUpon>
+    </Compile>
+    <Compile Include="customscript.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="errorencounter.Designer.vb">
       <DependentUpon>errorencounter.vb</DependentUpon>
     </Compile>
@@ -242,6 +248,9 @@
   <ItemGroup>
     <EmbeddedResource Include="about.resx">
       <DependentUpon>about.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customscript.resx">
+      <DependentUpon>customscript.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="errorencounter.resx">
       <DependentUpon>errorencounter.vb</DependentUpon>

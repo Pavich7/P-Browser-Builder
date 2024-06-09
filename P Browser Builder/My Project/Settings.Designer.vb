@@ -77,6 +77,18 @@ Namespace My
                 Me("tempIcoLoc") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property tempScript() As String
+            Get
+                Return CType(Me("tempScript"),String)
+            End Get
+            Set
+                Me("tempScript") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

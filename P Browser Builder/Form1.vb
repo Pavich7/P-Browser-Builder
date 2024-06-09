@@ -2,6 +2,7 @@
 Imports System.Net
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports CefSharp
+Imports CefSharp.DevTools
 Imports CefSharp.WinForms
 Public Class Form1
     Private WithEvents Browser As ChromiumWebBrowser
@@ -113,6 +114,13 @@ Public Class Form1
                     If CheckBox2.Checked Then
                         Process.Start(apppath + "\binary\")
                     End If
+                    If CheckBox4.Checked = True Then
+                        Try
+                            Process.Start(My.Settings.tempScript)
+                        Catch ex As Exception
+                            MessageBox.Show("Cannot run script! Your app is build and ready!", "Failed!")
+                        End Try
+                    End If
                     Label7.Text = "Build completed!"
                 Else
                     MessageBox.Show("Build Failed! Incomplete or corrupted Data please reinstall builder.", "Build Failed!")
@@ -174,6 +182,13 @@ Public Class Form1
                     End If
                     If CheckBox2.Checked Then
                         Process.Start(apppath + "\binary\")
+                    End If
+                    If CheckBox4.Checked = True Then
+                        Try
+                            Process.Start(My.Settings.tempScript)
+                        Catch ex As Exception
+                            MessageBox.Show("Cannot run script! Your app is build and ready!", "Failed!")
+                        End Try
                     End If
                     Label7.Text = "Build completed!"
                 Else
@@ -242,6 +257,13 @@ Public Class Form1
                     End If
                     If CheckBox2.Checked Then
                         Process.Start(apppath + "\binarypkg\")
+                    End If
+                    If CheckBox4.Checked = True Then
+                        Try
+                            Process.Start(My.Settings.tempScript)
+                        Catch ex As Exception
+                            MessageBox.Show("Cannot run script! Your app is build and ready!", "Failed!")
+                        End Try
                     End If
                     Label7.Text = "Build completed!"
                 Else
@@ -331,6 +353,7 @@ Public Class Form1
         Dim stringReader19 As String
         stringReader19 = fileReader19.ReadLine()
         fileReader19.Close()
+        Button6.Enabled = False
         'Reset
         If stringReader19 = "True" Then
             Me.Enabled = False
@@ -440,6 +463,7 @@ Public Class Form1
                 RadioButton3.Enabled = False
                 CheckBox1.Enabled = False
                 CheckBox2.Enabled = False
+                CheckBox3.Enabled = False
                 Label4.Enabled = False
                 Label8.Enabled = False
             Else
@@ -507,7 +531,7 @@ Public Class Form1
     End Sub
 
     Private Sub SupportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SupportToolStripMenuItem.Click
-        Browser.Load("http://pavichdev.ddns.net/Home.html#feedbackintro")
+        Browser.Load("http://pavichdev.ddns.net/old/Home.html#feedbackintro")
     End Sub
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
@@ -1021,6 +1045,18 @@ Public Class Form1
             MessageBox.Show("Please choose icon first!", "Error!")
         Else
             Process.Start(My.Settings.tempIcoLoc)
+        End If
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        customscript.Show()
+    End Sub
+
+    Private Sub CheckBox4_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox4.CheckedChanged
+        If CheckBox4.Checked = True Then
+            Button6.Enabled = True
+        Else
+            Button6.Enabled = False
         End If
     End Sub
 End Class
