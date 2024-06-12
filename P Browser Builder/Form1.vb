@@ -17,16 +17,24 @@ Public Class Form1
             Dim apppath As String = Application.StartupPath()
             Dim pbcfg As String = apppath + "\resource\testspace\builderdata.pbcfg"
             Dim pbprogcfg As String = apppath + "\resource\testspace\progdata.pbcfg"
+            Dim pbprogw As String = apppath + "\resource\testspace\appsizew.pbcfg"
+            Dim pbprogh As String = apppath + "\resource\testspace\appsizeh.pbcfg"
             Dim testapp As String = apppath + "\resource\testspace\P Browser App.exe"
             ProgressBar1.Value = 20
             If System.IO.File.Exists(pbcfg) = True Then
                 ProgressBar1.Value = 50
                 Dim objWriter As New System.IO.StreamWriter(pbcfg)
                 Dim objWriter2 As New System.IO.StreamWriter(pbprogcfg)
+                Dim objWriter3 As New System.IO.StreamWriter(pbprogh)
+                Dim objWriter4 As New System.IO.StreamWriter(pbprogw)
                 objWriter.Write(TextBox1.Text)
                 objWriter.Close()
                 objWriter2.Write(TextBox2.Text)
                 objWriter2.Close()
+                objWriter3.Write(TextBox4.Text)
+                objWriter3.Close()
+                objWriter4.Write(TextBox3.Text)
+                objWriter4.Close()
                 Dim icnexist As String = apppath + "\resource\testspace\appicns.ico"
                 If System.IO.File.Exists(icnexist) Then
                     My.Computer.FileSystem.DeleteFile(apppath + "\resource\testspace\appicns.ico")
@@ -80,6 +88,14 @@ Public Class Form1
                     Dim objWriter2 As New System.IO.StreamWriter(pbprogcfg)
                     objWriter2.Write(TextBox2.Text)
                     objWriter2.Close()
+                    Dim pbprogw As String = apppath + "\resource\buildspace\quickmode\appsizew.pbcfg"
+                    Dim pbprogh As String = apppath + "\resource\buildspace\quickmode\appsizeh.pbcfg"
+                    Dim objWriter13 As New System.IO.StreamWriter(pbprogh)
+                    Dim objWriter14 As New System.IO.StreamWriter(pbprogw)
+                    objWriter13.Write(TextBox4.Text)
+                    objWriter13.Close()
+                    objWriter14.Write(TextBox3.Text)
+                    objWriter14.Close()
                     ProgressBar1.Value = 50
                     My.Computer.FileSystem.CopyDirectory(apppath + "\resource\buildspace\quickmode", apppath + "\binary", True)
                     My.Computer.FileSystem.RenameFile(apppath + "\binary\P Browser App.exe", TextBox2.Text + ".exe")
@@ -146,6 +162,14 @@ Public Class Form1
                     Dim objWriter2 As New System.IO.StreamWriter(pbprogcfg)
                     objWriter2.Write(TextBox2.Text)
                     objWriter2.Close()
+                    Dim pbprogw As String = apppath + "\resource\buildspace\cleanmode\appsizew.pbcfg"
+                    Dim pbprogh As String = apppath + "\resource\buildspace\cleanmode\appsizeh.pbcfg"
+                    Dim objWriter13 As New System.IO.StreamWriter(pbprogh)
+                    Dim objWriter14 As New System.IO.StreamWriter(pbprogw)
+                    objWriter13.Write(TextBox4.Text)
+                    objWriter13.Close()
+                    objWriter14.Write(TextBox3.Text)
+                    objWriter14.Close()
                     ProgressBar1.Value = 50
                     My.Computer.FileSystem.CopyDirectory(apppath + "\resource\buildspace\cleanmode", apppath + "\binary", True)
                     My.Computer.FileSystem.RenameFile(apppath + "\binary\P Browser App.exe", TextBox2.Text + ".exe")
@@ -217,6 +241,14 @@ Public Class Form1
                     Dim objWriter2 As New System.IO.StreamWriter(pbprogcfg)
                     objWriter2.Write(TextBox2.Text)
                     objWriter2.Close()
+                    Dim pbprogw As String = apppath + "\resource\buildspace\cleanmode\appsizew.pbcfg"
+                    Dim pbprogh As String = apppath + "\resource\buildspace\cleanmode\appsizeh.pbcfg"
+                    Dim objWriter13 As New System.IO.StreamWriter(pbprogh)
+                    Dim objWriter14 As New System.IO.StreamWriter(pbprogw)
+                    objWriter13.Write(TextBox4.Text)
+                    objWriter13.Close()
+                    objWriter14.Write(TextBox3.Text)
+                    objWriter14.Close()
                     ProgressBar1.Value = 50
                     My.Computer.FileSystem.CopyDirectory(apppath + "\resource\buildspace\cleanmode", apppath + "\binary", True)
                     My.Computer.FileSystem.RenameFile(apppath + "\binary\P Browser App.exe", TextBox2.Text + ".exe")
@@ -353,6 +385,8 @@ Public Class Form1
         Dim stringReader19 As String
         stringReader19 = fileReader19.ReadLine()
         fileReader19.Close()
+        Button6.Visible = False
+        CheckBox4.Visible = False
         Button6.Enabled = False
         'Reset
         If stringReader19 = "True" Then
@@ -484,18 +518,6 @@ Public Class Form1
                     Label8.Enabled = False
                 End If
             End If
-            Dim fileReader11 As System.IO.StreamReader
-            Dim fileReader21 As System.IO.StreamReader
-            fileReader11 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.urlsave.pbsf")
-            fileReader21 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.anamesave.pbsf")
-            Dim stringReader11 As String
-            Dim stringReader21 As String
-            stringReader11 = fileReader11.ReadLine()
-            stringReader21 = fileReader21.ReadLine()
-            TextBox1.Text = stringReader11
-            TextBox2.Text = stringReader21
-            fileReader11.Close()
-            fileReader21.Close()
             Dim cachecheck As String = apppath + "\statecache\updatecache\pbb-resource.zip"
             ShowRightPanelToolStripMenuItem.Enabled = False
             ExtensionsNotFoundToolStripMenuItem.Enabled = False
@@ -560,6 +582,7 @@ Public Class Form1
         Dim stringReader01 As String
         stringReader01 = fileReader01.ReadLine()
         fileReader01.Close()
+        welcome.Show()
         'Sent analytics
         Dim regDate As Date = Date.Now()
         Dim strDate As String = regDate.ToString("ddMMMyyyy")
@@ -1059,4 +1082,15 @@ Public Class Form1
             Button6.Enabled = False
         End If
     End Sub
+
+    Private Sub Label24_Click(sender As Object, e As EventArgs) Handles Label24.Click
+        Button6.Visible = True
+        CheckBox4.Visible = True
+        Label24.Visible = False
+    End Sub
+
+    Private Sub Label19_Click(sender As Object, e As EventArgs) Handles Label19.Click
+        MessageBox.Show("After fresh install you will need to install resource to build. (Download size: approx. 140 MB)", "Info...")
+    End Sub
+
 End Class

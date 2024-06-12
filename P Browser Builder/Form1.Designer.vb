@@ -112,8 +112,14 @@ Partial Class Form1
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label32 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Label29 = New System.Windows.Forms.Label()
@@ -137,6 +143,7 @@ Partial Class Form1
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.CheckBox4 = New System.Windows.Forms.CheckBox()
         Me.Button6 = New System.Windows.Forms.Button()
+        Me.Label24 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -447,9 +454,10 @@ Partial Class Form1
         '
         'TextBox1
         '
+        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.TextBox1.Location = New System.Drawing.Point(20, 97)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(304, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(304, 22)
         Me.TextBox1.TabIndex = 3
         '
         'Label1
@@ -466,7 +474,7 @@ Partial Class Form1
         '
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton1.Location = New System.Drawing.Point(28, 278)
+        Me.RadioButton1.Location = New System.Drawing.Point(28, 279)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(278, 21)
         Me.RadioButton1.TabIndex = 6
@@ -478,7 +486,7 @@ Partial Class Form1
         '
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton2.Location = New System.Drawing.Point(28, 305)
+        Me.RadioButton2.Location = New System.Drawing.Point(28, 306)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(265, 21)
         Me.RadioButton2.TabIndex = 7
@@ -498,9 +506,10 @@ Partial Class Form1
         '
         'TextBox2
         '
+        Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.TextBox2.Location = New System.Drawing.Point(20, 142)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(283, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(283, 22)
         Me.TextBox2.TabIndex = 8
         '
         'Label3
@@ -517,7 +526,7 @@ Partial Class Form1
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label4.Location = New System.Drawing.Point(16, 240)
+        Me.Label4.Location = New System.Drawing.Point(16, 241)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(107, 28)
         Me.Label4.TabIndex = 11
@@ -613,7 +622,7 @@ Partial Class Form1
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.Location = New System.Drawing.Point(28, 403)
+        Me.CheckBox1.Location = New System.Drawing.Point(28, 405)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(167, 21)
         Me.CheckBox1.TabIndex = 17
@@ -624,7 +633,7 @@ Partial Class Form1
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label8.Location = New System.Drawing.Point(16, 363)
+        Me.Label8.Location = New System.Drawing.Point(16, 365)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(159, 28)
         Me.Label8.TabIndex = 18
@@ -634,7 +643,7 @@ Partial Class Form1
         '
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox2.Location = New System.Drawing.Point(28, 430)
+        Me.CheckBox2.Location = New System.Drawing.Point(28, 432)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(234, 21)
         Me.CheckBox2.TabIndex = 19
@@ -646,7 +655,7 @@ Partial Class Form1
         Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label5.Location = New System.Drawing.Point(21, 10)
+        Me.Label5.Location = New System.Drawing.Point(21, 87)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(100, 28)
         Me.Label5.TabIndex = 23
@@ -661,7 +670,7 @@ Partial Class Form1
         Me.Panel3.Controls.Add(Me.ProgressBar3)
         Me.Panel3.Controls.Add(Me.Label23)
         Me.Panel3.Controls.Add(Me.Label11)
-        Me.Panel3.Location = New System.Drawing.Point(26, 52)
+        Me.Panel3.Location = New System.Drawing.Point(26, 129)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(265, 135)
         Me.Panel3.TabIndex = 24
@@ -723,7 +732,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label10.Location = New System.Drawing.Point(21, 196)
+        Me.Label10.Location = New System.Drawing.Point(21, 273)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(105, 28)
         Me.Label10.TabIndex = 26
@@ -741,9 +750,9 @@ Partial Class Form1
         Me.Panel4.Controls.Add(Me.Label14)
         Me.Panel4.Controls.Add(Me.Label13)
         Me.Panel4.Controls.Add(Me.Label12)
-        Me.Panel4.Location = New System.Drawing.Point(26, 234)
+        Me.Panel4.Location = New System.Drawing.Point(26, 311)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(265, 313)
+        Me.Panel4.Size = New System.Drawing.Size(265, 236)
         Me.Panel4.TabIndex = 28
         '
         'Label18
@@ -753,7 +762,7 @@ Partial Class Form1
         Me.Label18.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label18.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label18.Location = New System.Drawing.Point(15, 195)
+        Me.Label18.Location = New System.Drawing.Point(15, 177)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(125, 17)
         Me.Label18.TabIndex = 32
@@ -768,8 +777,7 @@ Partial Class Form1
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(228, 60)
         Me.Label19.TabIndex = 31
-        Me.Label19.Text = "Test and build feature are disabled. After fresh install you will need to downloa" &
-    "d builder resource."
+        Me.Label19.Text = "Test and build feature are disabled. Click here to lean more..."
         '
         'Label20
         '
@@ -856,7 +864,7 @@ Partial Class Form1
         '
         Me.Button7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button7.Font = New System.Drawing.Font("Segoe UI Semilight", 8.0!)
-        Me.Button7.Location = New System.Drawing.Point(235, 14)
+        Me.Button7.Location = New System.Drawing.Point(235, 91)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(56, 29)
         Me.Button7.TabIndex = 32
@@ -867,7 +875,7 @@ Partial Class Form1
         '
         Me.Button8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button8.Font = New System.Drawing.Font("Segoe UI Semilight", 8.0!)
-        Me.Button8.Location = New System.Drawing.Point(173, 14)
+        Me.Button8.Location = New System.Drawing.Point(173, 91)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(56, 29)
         Me.Button8.TabIndex = 33
@@ -878,9 +886,15 @@ Partial Class Form1
         '
         Me.Panel6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel6.Controls.Add(Me.Label34)
+        Me.Panel6.Controls.Add(Me.Label33)
         Me.Panel6.Controls.Add(Me.PictureBox2)
+        Me.Panel6.Controls.Add(Me.Label32)
         Me.Panel6.Controls.Add(Me.Panel7)
+        Me.Panel6.Controls.Add(Me.TextBox4)
+        Me.Panel6.Controls.Add(Me.Label31)
         Me.Panel6.Controls.Add(Me.Button8)
+        Me.Panel6.Controls.Add(Me.TextBox3)
         Me.Panel6.Controls.Add(Me.Panel3)
         Me.Panel6.Controls.Add(Me.Button7)
         Me.Panel6.Controls.Add(Me.Label5)
@@ -891,16 +905,47 @@ Partial Class Form1
         Me.Panel6.Size = New System.Drawing.Size(316, 561)
         Me.Panel6.TabIndex = 16
         '
+        'Label34
+        '
+        Me.Label34.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label34.AutoSize = True
+        Me.Label34.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
+        Me.Label34.Location = New System.Drawing.Point(21, 14)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(81, 28)
+        Me.Label34.TabIndex = 54
+        Me.Label34.Text = "Window"
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.Location = New System.Drawing.Point(73, 53)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(41, 17)
+        Me.Label33.TabIndex = 53
+        Me.Label33.Text = "Width"
+        '
         'PictureBox2
         '
         Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox2.Image = Global.P_Browser_Builder.My.Resources.Resources.settings
-        Me.PictureBox2.Location = New System.Drawing.Point(146, 14)
+        Me.PictureBox2.Location = New System.Drawing.Point(146, 91)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(20, 29)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 35
         Me.PictureBox2.TabStop = False
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.Location = New System.Drawing.Point(186, 53)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(45, 17)
+        Me.Label32.TabIndex = 52
+        Me.Label32.Text = "Height"
         '
         'Panel7
         '
@@ -911,11 +956,39 @@ Partial Class Form1
         Me.Panel7.Size = New System.Drawing.Size(5, 100)
         Me.Panel7.TabIndex = 34
         '
+        'TextBox4
+        '
+        Me.TextBox4.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.TextBox4.Location = New System.Drawing.Point(235, 53)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(57, 22)
+        Me.TextBox4.TabIndex = 51
+        Me.TextBox4.Text = "573"
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.Location = New System.Drawing.Point(23, 53)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(43, 17)
+        Me.Label31.TabIndex = 50
+        Me.Label31.Text = "Sizes :"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.Location = New System.Drawing.Point(120, 53)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(57, 22)
+        Me.TextBox3.TabIndex = 49
+        Me.TextBox3.Text = "944"
+        '
         'RadioButton3
         '
         Me.RadioButton3.AutoSize = True
         Me.RadioButton3.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton3.Location = New System.Drawing.Point(28, 333)
+        Me.RadioButton3.Location = New System.Drawing.Point(28, 334)
         Me.RadioButton3.Name = "RadioButton3"
         Me.RadioButton3.Size = New System.Drawing.Size(272, 21)
         Me.RadioButton3.TabIndex = 32
@@ -1134,7 +1207,7 @@ Partial Class Form1
         '
         Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox4.Image = Global.P_Browser_Builder.My.Resources.Resources.undo
-        Me.PictureBox4.Location = New System.Drawing.Point(306, 368)
+        Me.PictureBox4.Location = New System.Drawing.Point(306, 370)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(18, 23)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -1145,7 +1218,7 @@ Partial Class Form1
         '
         Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox3.Image = Global.P_Browser_Builder.My.Resources.Resources.undo
-        Me.PictureBox3.Location = New System.Drawing.Point(306, 245)
+        Me.PictureBox3.Location = New System.Drawing.Point(306, 246)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(18, 23)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -1156,7 +1229,7 @@ Partial Class Form1
         '
         Me.CheckBox4.AutoSize = True
         Me.CheckBox4.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox4.Location = New System.Drawing.Point(28, 458)
+        Me.CheckBox4.Location = New System.Drawing.Point(28, 460)
         Me.CheckBox4.Name = "CheckBox4"
         Me.CheckBox4.Size = New System.Drawing.Size(130, 21)
         Me.CheckBox4.TabIndex = 47
@@ -1166,12 +1239,24 @@ Partial Class Form1
         'Button6
         '
         Me.Button6.Font = New System.Drawing.Font("Segoe UI Semilight", 8.0!)
-        Me.Button6.Location = New System.Drawing.Point(256, 456)
+        Me.Button6.Location = New System.Drawing.Point(256, 458)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(68, 25)
         Me.Button6.TabIndex = 48
         Me.Button6.Text = "Edit"
         Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label24.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label24.Location = New System.Drawing.Point(25, 461)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(72, 17)
+        Me.Label24.TabIndex = 33
+        Me.Label24.Text = "Advanced..."
         '
         'Form1
         '
@@ -1179,6 +1264,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1216, 607)
+        Me.Controls.Add(Me.Label24)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.CheckBox4)
         Me.Controls.Add(Me.PictureBox9)
@@ -1218,6 +1304,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Panel6)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.MinimumSize = New System.Drawing.Size(800, 600)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "P Browser Builder"
@@ -1361,4 +1448,11 @@ Partial Class Form1
     Friend WithEvents PictureBox9 As PictureBox
     Friend WithEvents CheckBox4 As CheckBox
     Friend WithEvents Button6 As Button
+    Friend WithEvents Label24 As Label
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Label31 As Label
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Label32 As Label
+    Friend WithEvents Label33 As Label
+    Friend WithEvents Label34 As Label
 End Class

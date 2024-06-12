@@ -11,8 +11,10 @@
             objWriter2.Write(Form1.TextBox1.Text)
             objWriter2.Close()
             MessageBox.Show("Saved!", "Completed!")
+            Me.Close()
         Catch ex As Exception
             MessageBox.Show("Save Failed!", "Error!")
+            Me.Close()
         End Try
     End Sub
 
@@ -28,8 +30,10 @@
             objWriter2.Write("")
             objWriter2.Close()
             MessageBox.Show("Saved!", "Completed!")
+            Me.Close()
         Catch ex As Exception
             MessageBox.Show("Save Failed!", "Error!")
+            Me.Close()
         End Try
     End Sub
 
@@ -45,8 +49,10 @@
             objWriter2.Write(Form1.TextBox1.Text)
             objWriter2.Close()
             MessageBox.Show("Saved!", "Completed!")
+            Me.Close()
         Catch ex As Exception
             MessageBox.Show("Save Failed!", "Error!")
+            Me.Close()
         End Try
     End Sub
 
@@ -61,5 +67,6 @@
         objWriter2.Write("")
         objWriter2.Close()
         MessageBox.Show("Cleared!", "Completed!")
+        Me.Close()
     End Sub
 End Class
