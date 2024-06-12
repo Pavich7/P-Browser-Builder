@@ -89,7 +89,7 @@ Partial Class about
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.BackgroundImage = Global.P_Browser_Builder.My.Resources.Resources.Screenshot_2024_05_25_115040
+        Me.BackgroundImage = Global.P_Browser_Builder.My.Resources.Resources.Screenshot_2024_06_12_211342
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(817, 504)
         Me.Controls.Add(Me.Label3)
