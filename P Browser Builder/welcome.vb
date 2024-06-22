@@ -13,8 +13,13 @@ Public Class welcome
         End Get
     End Property
     Private Sub welcome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Form1.Enabled = False
         Dim apppath As String = Application.StartupPath()
+        Dim rscheck As String = apppath + "\resource"
+        Label7.Visible = False
+        If Not System.IO.Directory.Exists(rscheck) Then
+            Label7.Visible = True
+        End If
+        Form1.Enabled = False
         Dim fileReader11 As System.IO.StreamReader
         Dim fileReader21 As System.IO.StreamReader
         fileReader11 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.urlsave.pbsf")
@@ -134,5 +139,20 @@ Public Class welcome
     Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
         Form1.Enabled = True
         Me.Close()
+    End Sub
+
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+        MessageBox.Show("After fresh install you will need to install resource to build. (Download size: approx. 140 MB)", "Info...")
+    End Sub
+
+    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+        Dim result As DialogResult = MessageBox.Show("Do you wish to reset all setting?" + vbNewLine + "This cannot be undone!", "You sure about this?", MessageBoxButtons.YesNo)
+        If (result = DialogResult.Yes) Then
+            Dim apppath As String = Application.StartupPath()
+            Dim objWriter As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.inrsstate.pbcfg")
+            objWriter.Write("True")
+            objWriter.Close()
+            Application.Restart()
+        End If
     End Sub
 End Class

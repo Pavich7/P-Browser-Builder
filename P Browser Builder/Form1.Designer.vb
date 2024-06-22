@@ -144,6 +144,7 @@ Partial Class Form1
         Me.CheckBox4 = New System.Windows.Forms.CheckBox()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Label24 = New System.Windows.Forms.Label()
+        Me.StartWindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -174,7 +175,7 @@ Partial Class Form1
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClearAllToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartWindowToolStripMenuItem, Me.ClearAllToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
@@ -182,14 +183,14 @@ Partial Class Form1
         'ClearAllToolStripMenuItem
         '
         Me.ClearAllToolStripMenuItem.Name = "ClearAllToolStripMenuItem"
-        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
+        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ClearAllToolStripMenuItem.Text = "Clear All"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'PreviewToolStripMenuItem
@@ -1258,6 +1259,12 @@ Partial Class Form1
         Me.Label24.TabIndex = 33
         Me.Label24.Text = "Advanced..."
         '
+        'StartWindowToolStripMenuItem
+        '
+        Me.StartWindowToolStripMenuItem.Name = "StartWindowToolStripMenuItem"
+        Me.StartWindowToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.StartWindowToolStripMenuItem.Text = "Start Window"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1455,4 +1462,5 @@ Partial Class Form1
     Friend WithEvents Label32 As Label
     Friend WithEvents Label33 As Label
     Friend WithEvents Label34 As Label
+    Friend WithEvents StartWindowToolStripMenuItem As ToolStripMenuItem
 End Class

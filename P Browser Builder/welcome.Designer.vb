@@ -35,6 +35,8 @@ Partial Class welcome
         Me.Label5 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -60,7 +62,7 @@ Partial Class welcome
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel1.Location = New System.Drawing.Point(45, 168)
+        Me.Panel1.Location = New System.Drawing.Point(45, 170)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(504, 53)
         Me.Panel1.TabIndex = 13
@@ -93,7 +95,7 @@ Partial Class welcome
         Me.Panel2.Controls.Add(Me.PictureBox2)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel2.Location = New System.Drawing.Point(45, 237)
+        Me.Panel2.Location = New System.Drawing.Point(45, 241)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(504, 53)
         Me.Panel2.TabIndex = 14
@@ -137,7 +139,7 @@ Partial Class welcome
         Me.Panel3.Controls.Add(Me.PictureBox3)
         Me.Panel3.Controls.Add(Me.Label6)
         Me.Panel3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel3.Location = New System.Drawing.Point(45, 305)
+        Me.Panel3.Location = New System.Drawing.Point(45, 311)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(504, 53)
         Me.Panel3.TabIndex = 15
@@ -175,13 +177,40 @@ Partial Class welcome
         Me.Label6.TabIndex = 11
         Me.Label6.Text = "Quit"
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI Semilight", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(41, 135)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(439, 20)
+        Me.Label7.TabIndex = 70
+        Me.Label7.Text = "Resource is not available and need to install. (Click to learn more...)"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI Semilight", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label8.Location = New System.Drawing.Point(280, 376)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(111, 20)
+        Me.Label8.TabIndex = 71
+        Me.Label8.Text = "Restore mode..."
+        '
         'welcome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.P_Browser_Builder.My.Resources.Resources.Screenshot_2024_06_12_210933
+        Me.BackgroundImage = Global.P_Browser_Builder.My.Resources.Resources.Screenshot_2024_06_14_201649
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(762, 469)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -203,6 +232,7 @@ Partial Class welcome
         Me.Panel3.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -218,4 +248,6 @@ Partial Class welcome
     Friend WithEvents Label5 As Label
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
 End Class

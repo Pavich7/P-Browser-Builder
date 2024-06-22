@@ -308,6 +308,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="p_browser_icon_001_rq2_icon.ico" />
+    <None Include="Resources\Screenshot 2024-06-14 201703.png" />
+    <None Include="Resources\Screenshot 2024-06-14 201649.png" />
     <None Include="packages.config" />
     <None Include="Resources\Screenshot 2024-06-12 211342.png" />
     <None Include="Resources\Screenshot 2024-06-12 210933.png" />

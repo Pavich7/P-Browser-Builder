@@ -335,6 +335,11 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Remove after beta
+        'Label20.Text = "Manually install resources required!"
+        'Label19.Text = "You can download pre-release version at resource GitHub Repository."
+        'Label18.Enabled = False
+        'End Beta
         Dim apppath As String = Application.StartupPath()
         'Init structure check
         Dim flcheck1 As String = apppath + "\binary"
@@ -504,7 +509,7 @@ Public Class Form1
                 Label19.Visible = False
                 Label20.Visible = False
                 Label18.Visible = False
-                Dim resvcheck4 As String = apppath + "\resource\metadata\checkpoint\r400.chkp"
+                Dim resvcheck4 As String = apppath + "\resource\metadata\checkpoint\r500.chkp"
                 If Not System.IO.File.Exists(resvcheck4) Then
                     MessageBox.Show("Unload required! Resource not compatible!" + vbNewLine + "Please reinstall builder resource via preference menu.", "Resource not compatible!")
                     Button1.Enabled = False
@@ -864,6 +869,12 @@ Public Class Form1
         If (result = DialogResult.Yes) Then
             Button1.Enabled = True
             Button2.Enabled = True
+            Button3.Enabled = True
+            Button4.Enabled = True
+            Button5.Enabled = True
+            Button6.Enabled = True
+            Button7.Enabled = True
+            Button8.Enabled = True
             Label4.Enabled = True
             Label8.Enabled = True
             RadioButton1.Enabled = True
@@ -1093,4 +1104,23 @@ Public Class Form1
         MessageBox.Show("After fresh install you will need to install resource to build. (Download size: approx. 140 MB)", "Info...")
     End Sub
 
+    Private Sub StartWindowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StartWindowToolStripMenuItem.Click
+        Dim result As DialogResult = MessageBox.Show("You will lose all data! Please make sure your data is saved.", "You sure about this?", MessageBoxButtons.YesNo)
+        If (result = DialogResult.Yes) Then
+            Dim apppath As String = Application.StartupPath()
+            TextBox1.Text = ""
+            TextBox2.Text = ""
+            RadioButton1.Checked = False
+            RadioButton2.Checked = False
+            RadioButton3.Checked = False
+            CheckBox1.Text = "Start your app after build"
+            CheckBox2.Text = "Show your app in explorer after build"
+            Button1.Enabled = True
+            CheckBox1.Checked = False
+            CheckBox2.Checked = False
+            System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
+            System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
+            welcome.Show()
+        End If
+    End Sub
 End Class

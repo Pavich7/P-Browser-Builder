@@ -1,11 +1,15 @@
-Release 5.3.0
+Builder Release 6.0.0 Beta
+
+** Release Highlights **
 - ADDED: Button set to back, forward, reload, devtools in menubar.
-- ADDED: More info button in advanced preference.
-- ADDED: Button to locate icon files.
 - ADDED: Option to run custom script after build.
-- ADDED: Option to custom app window sizes.
 - ADDED: Add Window customize section.
 - ADDED: Startup project selector window.
+
+** Full Changes **
+- ADDED: More info button in advanced preference.
+- ADDED: Option to custom app window sizes.
+- ADDED: Button to locate icon files.
 - ADDED: Click to learn more button in resource not installed yet.
 - ADDED: You can now choose to delete resource install cache after successful install.
 - IMPROVEMENT: Improved news feed fetching system using downloadstring rather than files download.
@@ -14,7 +18,8 @@ Release 5.3.0
 - IMPROVEMENT: To prevents UI overlapping, builder window have minimum size.
 - IMPROVEMENT: Save option will close after saved.
 - IMPROVEMENT: Improved textbox fonts.
+- IMPROVEMENT: (Dev) Improved Force unlock disabled button.
 - FIXED: Support button will go to wrong page due to websites changes.
 - CHANGED: Moved Setting Button into menubar.
-- CHANGED: Minor main ui changes.
+- CHANGED: Minor main UI changes.
 - CHANGED: Replace icon location textbox with folder button to locate icon files.
