@@ -351,7 +351,7 @@ Partial Class prefer
         '
         'PictureBox2
         '
-        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Default
         Me.PictureBox2.Image = Global.P_Browser_Builder.My.Resources.Resources.settings
         Me.PictureBox2.Location = New System.Drawing.Point(188, 8)
         Me.PictureBox2.Name = "PictureBox2"

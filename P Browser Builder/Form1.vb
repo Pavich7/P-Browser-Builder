@@ -482,6 +482,7 @@ Public Class Form1
                 .RemoteDebuggingPort = 8088
             }
             setting.CachePath = apppath + "\statecache"
+            'setting.UserAgent = "P Browser (x64, Builder Kit, Chromium 126.0.6478.115)"
             CefSharp.Cef.Initialize(setting)
             Browser = New ChromiumWebBrowser("")
             Panel2.Controls.Add(Browser)

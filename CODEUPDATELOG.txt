@@ -1,4 +1,4 @@
-Builder Release 6.0.0 Beta
+Builder Release 6.0.0
 
 ** Release Highlights **
 - ADDED: Button set to back, forward, reload, devtools in menubar.
@@ -18,8 +18,11 @@ Builder Release 6.0.0 Beta
 - IMPROVEMENT: To prevents UI overlapping, builder window have minimum size.
 - IMPROVEMENT: Save option will close after saved.
 - IMPROVEMENT: Improved textbox fonts.
+- IMPROVEMENT: Updated CefSharp to 126.2.70
+- IMPROVEMENT: Updated Chromium to 126.0.6478.115
 - IMPROVEMENT: (Dev) Improved Force unlock disabled button.
 - FIXED: Support button will go to wrong page due to websites changes.
+- FIXED: Preferecnce icon in setting might show hand cursor while hovering.
 - CHANGED: Moved Setting Button into menubar.
 - CHANGED: Minor main UI changes.
 - CHANGED: Replace icon location textbox with folder button to locate icon files.
