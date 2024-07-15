@@ -9,6 +9,7 @@ Builder Release 6.0.0
 ** Full Changes **
 - ADDED: More info button in advanced preference.
 - ADDED: Option to custom app window sizes.
+- ADDED: Button to disable optional data collection in about menu.
 - ADDED: Button to locate icon files.
 - ADDED: Click to learn more button in resource not installed yet.
 - ADDED: You can now choose to delete resource install cache after successful install.
