@@ -1,29 +1,6 @@
-Builder Release 6.0.0
+Builder Release 6.1.0
 
-** Release Highlights **
-- ADDED: Button set to back, forward, reload, devtools in menubar.
-- ADDED: Option to run custom script after build.
-- ADDED: Add Window customize section.
-- ADDED: Startup project selector window.
-
-** Full Changes **
-- ADDED: More info button in advanced preference.
-- ADDED: Option to custom app window sizes.
-- ADDED: Button to disable optional data collection in about menu.
-- ADDED: Button to locate icon files.
-- ADDED: Click to learn more button in resource not installed yet.
-- ADDED: You can now choose to delete resource install cache after successful install.
-- IMPROVEMENT: Improved news feed fetching system using downloadstring rather than files download.
-- IMPROVEMENT: Improved check for update system using downloadstring rather than files download.
-- IMPROVEMENT: News Feed can be refetch without restart builder.
-- IMPROVEMENT: To prevents UI overlapping, builder window have minimum size.
-- IMPROVEMENT: Save option will close after saved.
-- IMPROVEMENT: Improved textbox fonts.
-- IMPROVEMENT: Updated CefSharp to 126.2.70
-- IMPROVEMENT: Updated Chromium to 126.0.6478.115
-- IMPROVEMENT: (Dev) Improved Force unlock disabled button.
-- FIXED: Support button will go to wrong page due to websites changes.
-- FIXED: Preferecnce icon in setting might show hand cursor while hovering.
-- CHANGED: Moved Setting Button into menubar.
-- CHANGED: Minor main UI changes.
-- CHANGED: Replace icon location textbox with folder button to locate icon files.
+** Release notes **
+- ADDED: Redesigned hide side panel button.
+- ADDED: Button to reset window sizes.
+- CHANGED: Replace reload button by icon.

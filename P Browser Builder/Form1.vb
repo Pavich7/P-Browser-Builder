@@ -900,17 +900,6 @@ Public Class Form1
         Application.Restart()
     End Sub
 
-    Private Sub Panel7_Paint(sender As Object, e As EventArgs) Handles Panel7.Click
-        Panel6.Hide()
-        Me.WindowState = FormWindowState.Normal
-        Me.Size = New Size(1232, 646)
-        Panel1.Width = 872
-        HideRightPanelToolStripMenuItem.Enabled = False
-        ShowRightPanelToolStripMenuItem.Enabled = True
-        Timer2.Stop()
-        MessageBox.Show("You can unhide right panel by click on" + vbNewLine + "Menu Strip: Window > Show right panel", "Notification")
-    End Sub
-
     Private Sub ShowSplashScreenToolStripMenuItem_Click(sender As Object, e As EventArgs)
         splash.Show()
     End Sub
@@ -1059,9 +1048,6 @@ Public Class Form1
         splash.Show()
     End Sub
 
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
-        Browser.Reload
-    End Sub
 
     Private Sub Label21_Click(sender As Object, e As EventArgs) Handles Label21.Click
         Browser.Forward
@@ -1123,5 +1109,25 @@ Public Class Form1
             System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
             welcome.Show()
         End If
+    End Sub
+
+    Private Sub Label36_Click(sender As Object, e As EventArgs) Handles Label36.Click
+        Panel6.Hide()
+        Me.WindowState = FormWindowState.Normal
+        Me.Size = New Size(1232, 646)
+        Panel1.Width = 872
+        HideRightPanelToolStripMenuItem.Enabled = False
+        ShowRightPanelToolStripMenuItem.Enabled = True
+        Timer2.Stop()
+        MessageBox.Show("You can unhide right panel by click on" + vbNewLine + "Menu Strip: Window > Show right panel", "Notification")
+    End Sub
+
+    Private Sub PictureBox10_Click(sender As Object, e As EventArgs) Handles PictureBox10.Click
+        TextBox3.Text = "944"
+        TextBox4.Text = "573"
+    End Sub
+
+    Private Sub PictureBox11_Click(sender As Object, e As EventArgs) Handles PictureBox11.Click
+        Browser.Reload
     End Sub
 End Class
