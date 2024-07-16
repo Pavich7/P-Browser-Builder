@@ -1,6 +1,6 @@
 ﻿Public Class fsstate
     Private Sub fsstate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        welcome.Enabled = False
     End Sub
 
     Private Sub Label29_Click(sender As Object, e As EventArgs) Handles Label29.Click
@@ -22,7 +22,7 @@
             Dim objWriter As New System.IO.StreamWriter(pbcfg)
             objWriter.Write("False")
             objWriter.Close()
-            Form1.Enabled = True
+            welcome.Enabled = True
             Me.Close()
         End If
     End Sub

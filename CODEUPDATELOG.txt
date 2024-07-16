@@ -3,4 +3,6 @@ Builder Release 6.1.0
 ** Release notes **
 - ADDED: Redesigned hide side panel button.
 - ADDED: Button to reset window sizes.
+- ADDED: Option to disable News Feed startup fetch.
+- FIXED: Main window can enable while in EULA window by create a project.
 - CHANGED: Replace reload button by icon.

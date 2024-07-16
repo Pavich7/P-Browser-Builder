@@ -185,6 +185,12 @@
     <Compile Include="errorencounter.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="feedsetting.Designer.vb">
+      <DependentUpon>feedsetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="feedsetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -260,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="errorencounter.resx">
       <DependentUpon>errorencounter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="feedsetting.resx">
+      <DependentUpon>feedsetting.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>

@@ -436,6 +436,7 @@ Public Class Form1
                     Dim objWriter6 As New System.IO.StreamWriter(apppath + "\statedata\usersave.builder.urlsave.pbsf")
                     Dim objWriter7 As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.inrsstate.pbcfg")
                     Dim objWriter8 As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.datacol.pbcfg")
+                    Dim objWriter9 As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.nfstartfetch.pbcfg")
                     objWriter1.Write("False")
                     objWriter1.Close()
                     objWriter2.Write("True")
@@ -452,6 +453,8 @@ Public Class Form1
                     objWriter7.Close()
                     objWriter8.Write("True")
                     objWriter8.Close()
+                    objWriter9.Write("True")
+                    objWriter9.Close()
                     'Reset Temp setting
                     My.Settings.tempWebTitle = ""
                     My.Settings.tempIcoLoc = ""
@@ -611,27 +614,40 @@ Public Class Form1
             Me.Enabled = False
             fsstate.Show()
         End If
-        Try
-            ProgressBar1.Value = 10
-            Dim client As WebClient = New WebClient()
-            Dim nf1desc As String = client.DownloadString("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_desc.txt")
-            Dim nf1titl As String = client.DownloadString("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_title.txt")
-            Dim nf1date As String = client.DownloadString("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_date.txt")
-            ProgressBar1.Value = 50
-            Label12.Text = nf1titl
-            Label13.Text = nf1desc
-            Label14.Text = nf1date
-            ProgressBar1.Value = 100
+        Dim fileReader999 As System.IO.StreamReader
+        fileReader999 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.nfstartfetch.pbcfg")
+        Dim stringReader999 As String
+        stringReader999 = fileReader999.ReadLine()
+        If stringReader999 = "True" Then
+            Try
+                ProgressBar1.Value = 10
+                Dim client As WebClient = New WebClient()
+                Dim nf1desc As String = client.DownloadString("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_desc.txt")
+                Dim nf1titl As String = client.DownloadString("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_title.txt")
+                Dim nf1date As String = client.DownloadString("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_date.txt")
+                ProgressBar1.Value = 50
+                Label12.Text = nf1titl
+                Label13.Text = nf1desc
+                Label14.Text = nf1date
+                ProgressBar1.Value = 100
+                Label7.Text = "Ready to build"
+                ProgressBar1.Value = 0
+            Catch ex As Exception
+                Label7.Text = "Ready to build"
+                ProgressBar1.Value = 0
+                Label15.Visible = True
+                Label14.Visible = False
+                Label12.Text = "Running in offline mode"
+                Label13.Text = "Can't establish connection and fetch news feed with PavichDev Server."
+            End Try
+        Else
             Label7.Text = "Ready to build"
             ProgressBar1.Value = 0
-        Catch ex As Exception
-            Label7.Text = "Ready to build"
-            ProgressBar1.Value = 0
-            Label15.Visible = True
+            Label15.Visible = False
             Label14.Visible = False
-            Label12.Text = "Running in offline mode"
-            Label13.Text = "Can't establish connection and fetch news feed with PavichDev Server."
-        End Try
+            Label12.Text = "News Feed disabled"
+            Label13.Text = "News Feed has been disabled. You can re-enable in feed setting."
+        End If
     End Sub
 
     Private Sub Label15_Click(sender As Object, e As EventArgs) Handles Label15.Click
@@ -1129,5 +1145,9 @@ Public Class Form1
 
     Private Sub PictureBox11_Click(sender As Object, e As EventArgs) Handles PictureBox11.Click
         Browser.Reload
+    End Sub
+
+    Private Sub PictureBox12_Click(sender As Object, e As EventArgs) Handles PictureBox12.Click
+        feedsetting.Show()
     End Sub
 End Class
