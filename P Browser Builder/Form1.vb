@@ -6,6 +6,7 @@ Imports CefSharp.DevTools
 Imports CefSharp.WinForms
 Public Class Form1
     Private WithEvents Browser As ChromiumWebBrowser
+    'Private WithEvents BrowserDev As ChromiumWebBrowser
     Public Sub New()
         InitializeComponent()
     End Sub
@@ -342,6 +343,8 @@ Public Class Form1
         'End Beta
         Dim apppath As String = Application.StartupPath()
         'Init structure check
+        TabPage2.Enabled = False
+        TabControl1.TabPages.Remove(TabPage2)
         Dim flcheck1 As String = apppath + "\binary"
         Dim flcheck2 As String = apppath + "\binarypkg"
         Dim flcheck3 As String = apppath + "\metadata"
@@ -488,7 +491,10 @@ Public Class Form1
             'setting.UserAgent = "P Browser (x64, Builder Kit, Chromium 126.0.6478.115)"
             CefSharp.Cef.Initialize(setting)
             Browser = New ChromiumWebBrowser("")
+            'BrowserDev = New ChromiumWebBrowser("")
             Panel2.Controls.Add(Browser)
+            'Panel1.Controls.Add(BrowserDev)
+            'BrowserDev.Load("http://127.0.0.1:8088/")
             Dim fileReader1 As System.IO.StreamReader
             fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.usageinterv.pbcfg")
             Dim stringReader1 As String
@@ -846,7 +852,7 @@ Public Class Form1
         Panel6.Hide()
         Me.WindowState = FormWindowState.Normal
         Me.Size = New Size(1232, 646)
-        Panel1.Width = 872
+        TabControl1.Width = 872
         HideRightPanelToolStripMenuItem.Enabled = False
         ShowRightPanelToolStripMenuItem.Enabled = True
         Timer2.Stop()
@@ -856,7 +862,7 @@ Public Class Form1
         Panel6.Show()
         Me.WindowState = FormWindowState.Normal
         Me.Size = New Size(1232, 646)
-        Panel1.Width = 560
+        TabControl1.Width = 559
         ShowRightPanelToolStripMenuItem.Enabled = False
         HideRightPanelToolStripMenuItem.Enabled = True
         Timer2.Start()
@@ -1131,7 +1137,7 @@ Public Class Form1
         Panel6.Hide()
         Me.WindowState = FormWindowState.Normal
         Me.Size = New Size(1232, 646)
-        Panel1.Width = 872
+        TabControl1.Width = 872
         HideRightPanelToolStripMenuItem.Enabled = False
         ShowRightPanelToolStripMenuItem.Enabled = True
         Timer2.Stop()

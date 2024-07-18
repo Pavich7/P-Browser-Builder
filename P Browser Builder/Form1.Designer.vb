@@ -77,7 +77,6 @@ Partial Class Form1
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label17 = New System.Windows.Forms.Label()
@@ -149,8 +148,12 @@ Partial Class Form1
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
-        Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
@@ -169,6 +172,10 @@ Partial Class Form1
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControl1.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -547,28 +554,15 @@ Partial Class Form1
         Me.Label4.TabIndex = 11
         Me.Label4.Text = "Build Mode"
         '
-        'Panel1
-        '
-        Me.Panel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel1.BackColor = System.Drawing.Color.Silver
-        Me.Panel1.Controls.Add(Me.Panel2)
-        Me.Panel1.Controls.Add(Me.Panel5)
-        Me.Panel1.Location = New System.Drawing.Point(344, 12)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(560, 575)
-        Me.Panel1.TabIndex = 12
-        '
         'Panel2
         '
         Me.Panel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel2.BackColor = System.Drawing.Color.White
-        Me.Panel2.Location = New System.Drawing.Point(18, 124)
+        Me.Panel2.Location = New System.Drawing.Point(29, 110)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(523, 355)
+        Me.Panel2.Size = New System.Drawing.Size(493, 335)
         Me.Panel2.TabIndex = 14
         '
         'Panel5
@@ -578,16 +572,16 @@ Partial Class Form1
         Me.Panel5.BackColor = System.Drawing.SystemColors.Control
         Me.Panel5.Controls.Add(Me.Label17)
         Me.Panel5.Controls.Add(Me.PictureBox1)
-        Me.Panel5.Location = New System.Drawing.Point(18, 100)
+        Me.Panel5.Location = New System.Drawing.Point(29, 82)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(523, 25)
+        Me.Panel5.Size = New System.Drawing.Size(493, 29)
         Me.Panel5.TabIndex = 15
         '
         'Label17
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(26, 3)
+        Me.Label17.Location = New System.Drawing.Point(27, 5)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(56, 17)
         Me.Label17.TabIndex = 32
@@ -596,9 +590,9 @@ Partial Class Form1
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(4, 4)
+        Me.PictureBox1.Location = New System.Drawing.Point(5, 5)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(18, 18)
+        Me.PictureBox1.Size = New System.Drawing.Size(19, 19)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -1324,6 +1318,67 @@ Partial Class Form1
         Me.PictureBox3.TabIndex = 33
         Me.PictureBox3.TabStop = False
         '
+        'TabControl1
+        '
+        Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabControl1.Location = New System.Drawing.Point(344, 24)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(559, 560)
+        Me.TabControl1.TabIndex = 56
+        '
+        'TabPage1
+        '
+        Me.TabPage1.BackColor = System.Drawing.Color.DarkGray
+        Me.TabPage1.Controls.Add(Me.Panel2)
+        Me.TabPage1.Controls.Add(Me.Panel5)
+        Me.TabPage1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabPage1.Location = New System.Drawing.Point(4, 26)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(551, 530)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "Design"
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.Panel1)
+        Me.TabPage2.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 26)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(551, 530)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "DevTools"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Panel1
+        '
+        Me.Panel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(551, 530)
+        Me.Panel1.TabIndex = 0
+        '
+        'Label6
+        '
+        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
+        Me.Label6.Location = New System.Drawing.Point(125, 231)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(304, 28)
+        Me.Label6.TabIndex = 56
+        Me.Label6.Text = "This features will be available soon!"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1351,7 +1406,6 @@ Partial Class Form1
         Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.RadioButton3)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.Label8)
@@ -1368,6 +1422,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Panel6)
+        Me.Controls.Add(Me.TabControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MinimumSize = New System.Drawing.Size(800, 600)
@@ -1376,7 +1431,6 @@ Partial Class Form1
         Me.Text = "P Browser Builder"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1401,6 +1455,11 @@ Partial Class Form1
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControl1.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage2.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1420,7 +1479,6 @@ Partial Class Form1
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents Button3 As Button
     Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents Label7 As Label
@@ -1531,4 +1589,9 @@ Partial Class Form1
     Friend WithEvents PictureBox10 As PictureBox
     Friend WithEvents PictureBox11 As PictureBox
     Friend WithEvents PictureBox12 As PictureBox
+    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label6 As Label
 End Class

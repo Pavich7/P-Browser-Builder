@@ -8,3 +8,4 @@ Builder Release 6.1.0
 - CHANGED: Replace reload button by icon.
 - CHANGED: Rename developer menu from 'Dev' to 'Develop'.
 - CHANGED: Save button is moved into menubar.
+- CHANGED: Redesign App Design section.
