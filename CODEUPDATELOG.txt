@@ -6,3 +6,5 @@ Builder Release 6.1.0
 - ADDED: Option to disable News Feed startup fetch.
 - FIXED: Main window can enable while in EULA window by create a project.
 - CHANGED: Replace reload button by icon.
+- CHANGED: Rename developer menu from 'Dev' to 'Develop'.
+- CHANGED: Save button is moved into menubar.
