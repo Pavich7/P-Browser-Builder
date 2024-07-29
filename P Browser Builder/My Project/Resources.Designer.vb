@@ -143,9 +143,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Screenshot_2024_06_12_210452() As System.Drawing.Bitmap
+        Friend ReadOnly Property Screenshot_2024_07_24_203437() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Screenshot 2024-06-12 210452", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Screenshot 2024-07-24 203437", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -153,9 +153,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Screenshot_2024_07_15_203559() As System.Drawing.Bitmap
+        Friend ReadOnly Property Screenshot_2024_07_24_203447() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Screenshot 2024-07-15 203559", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Screenshot 2024-07-24 203447", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -163,9 +163,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Screenshot_2024_07_15_203613() As System.Drawing.Bitmap
+        Friend ReadOnly Property Screenshot_2024_07_24_203457() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Screenshot 2024-07-15 203613", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Screenshot 2024-07-24 203457", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

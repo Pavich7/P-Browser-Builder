@@ -7,4 +7,8 @@
         Timer1.Stop()
         Label1.Text = "Initializing Core Library..."
     End Sub
+
+    Private Sub Label36_Click(sender As Object, e As EventArgs) Handles Label36.Click
+        Application.Exit()
+    End Sub
 End Class

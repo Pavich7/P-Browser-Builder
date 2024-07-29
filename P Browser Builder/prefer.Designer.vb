@@ -135,9 +135,9 @@ Partial Class prefer
         Me.Label7.ForeColor = System.Drawing.SystemColors.GrayText
         Me.Label7.Location = New System.Drawing.Point(26, 180)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(208, 17)
+        Me.Label7.Size = New System.Drawing.Size(201, 17)
         Me.Label7.TabIndex = 39
-        Me.Label7.Text = "Delete curerently insatlled resource."
+        Me.Label7.Text = "Delete currently installed resource."
         '
         'Label8
         '
