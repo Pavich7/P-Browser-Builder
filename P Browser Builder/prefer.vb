@@ -20,6 +20,7 @@ Public Class prefer
             Dim obuiver As String = client.DownloadString("http://pavichdev.ddns.net/api/v2-pbb/cfuversion/onlinebuiver.txt")
             If obuiver.Contains(bstringReader) Then
                 Label30.Text = "up-to-date!"
+                Label30.Enabled = False
             Else
                 Label30.Text = "Update available! (" + obuiver + ")"
             End If
@@ -53,6 +54,7 @@ Public Class prefer
                     Dim oresver As String = client.DownloadString("http://pavichdev.ddns.net/api/v2-pbb/cfuversion/onlineresver.txt")
                     If oresver.Contains(stringReader) Then
                         Label4.Text = "up-to-date!"
+                        Label4.Enabled = False
                     Else
                         Label4.Text = "Update available! (" + oresver + ")"
                     End If
@@ -60,6 +62,7 @@ Public Class prefer
                 End If
             Catch ex As Exception
                 Label4.Text = "Error checking for update!"
+                Label4.Enabled = False
             End Try
             Try
                 Dim fileReader2 As System.IO.StreamReader
@@ -224,7 +227,8 @@ Public Class prefer
     End Sub
 
     Private Sub Label30_Click(sender As Object, e As EventArgs) Handles Label30.Click
-        MessageBox.Show("To update builder, head to our GitHub repository or where you downloaded!" + vbNewLine + "Relaunch preference to recheck for update.", "Info")
+        MessageBox.Show("Click OK to start download latest version...", "Informations")
+        Process.Start("https://github.com/Pavich7/P-Browser-Builder/releases/latest/download/Install.P.Browser.Builder.exe")
     End Sub
 
     Private Sub Label31_Click(sender As Object, e As EventArgs) Handles Label31.Click

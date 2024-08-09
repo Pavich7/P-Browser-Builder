@@ -1,15 +1,5 @@
-Builder Release 6.1.0
+Builder Release 6.2.0
 
 ** Release notes **
-- ADDED: Redesigned hide side panel button.
-- ADDED: Button to reset window sizes.
-- ADDED: Option to disable News Feed startup fetch.
-- ADDED: Exit button in splash screen.
-- IMPROVEMENT: Updated CefSharp to 126.2.180
-- IMPROVEMENT: Updated Chromium to 126.0.6478.183
-- FIXED: Main window can enable while in EULA window by create a project.
-- FIXED: Incorrect text spelling in preference.
-- CHANGED: Replace reload button by icon.
-- CHANGED: Rename developer menu from 'Dev' to 'Develop'.
-- CHANGED: Save button is moved into menubar.
-- CHANGED: Redesign App Design section.
+- IMPROVEMENT: "Builder Update available" the download process begins directly instead of displaying an update guide.
+- CHANGED: up-to-date button isn't clickable when already up-to-date.
