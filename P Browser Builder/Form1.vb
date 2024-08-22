@@ -383,9 +383,9 @@ Public Class Form1
             errorencounter.Show()
         End If
         If Not System.IO.Directory.Exists(flcheck5) Then
-            Me.Enabled = False
-            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-            errorencounter.Show()
+            Dim zipPath As String = apppath + "\packages\datatemplate.zip"
+            Dim extractPath As String = apppath + "\"
+            ZipFile.ExtractToDirectory(zipPath, extractPath)
         End If
         'Reset state Check
         Dim fileReader19 As System.IO.StreamReader
