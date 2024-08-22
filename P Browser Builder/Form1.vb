@@ -414,6 +414,8 @@ Public Class Form1
                             System.IO.Directory.Delete(apppath + "\resource", True)
                         End If
                     End If
+                    'Delete config files
+                    System.IO.Directory.Delete(apppath + "\statedata", True)
                     'Flush Main Cache Dir
                     System.IO.Directory.Delete(apppath + "\statecache", True)
                     System.IO.Directory.CreateDirectory(apppath + "\statecache")
@@ -430,34 +432,10 @@ Public Class Form1
                     Dim objWriter As New System.IO.StreamWriter(apppath + "\debug.log")
                     objWriter.Write("")
                     objWriter.Close()
-                    'Reset Config
-                    Dim objWriter1 As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.alwpdiag.pbcfg")
-                    Dim objWriter2 As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.infsstate.pbcfg")
-                    Dim objWriter3 As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.resdlserver.pbcfg")
-                    Dim objWriter4 As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.usageinterv.pbcfg")
-                    Dim objWriter5 As New System.IO.StreamWriter(apppath + "\statedata\usersave.builder.anamesave.pbsf")
-                    Dim objWriter6 As New System.IO.StreamWriter(apppath + "\statedata\usersave.builder.urlsave.pbsf")
-                    Dim objWriter7 As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.inrsstate.pbcfg")
-                    Dim objWriter8 As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.datacol.pbcfg")
-                    Dim objWriter9 As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.nfstartfetch.pbcfg")
-                    objWriter1.Write("False")
+                    'Write default whats news state
+                    Dim objWriter1 As New System.IO.StreamWriter(apppath + "\wnannounce.pbstate")
+                    objWriter1.Write("True")
                     objWriter1.Close()
-                    objWriter2.Write("True")
-                    objWriter2.Close()
-                    objWriter3.Write("https://github.com/Pavich7/P-Browser-Builder-Resource/releases/latest/download/pbb-resource.zip")
-                    objWriter3.Close()
-                    objWriter4.Write("1500")
-                    objWriter4.Close()
-                    objWriter5.Write("")
-                    objWriter5.Close()
-                    objWriter6.Write("")
-                    objWriter6.Close()
-                    objWriter7.Write("False")
-                    objWriter7.Close()
-                    objWriter8.Write("True")
-                    objWriter8.Close()
-                    objWriter9.Write("True")
-                    objWriter9.Close()
                     'Reset Temp setting
                     My.Settings.tempWebTitle = ""
                     My.Settings.tempIcoLoc = ""
@@ -620,6 +598,20 @@ Public Class Form1
             Me.Enabled = False
             fsstate.Show()
         End If
+        'wnstate
+        'Dim fileReader110 As System.IO.StreamReader
+        'fileReader110 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\wnannounce.pbstate")
+        'Dim stringReader110 As String
+        'stringReader110 = fileReader110.ReadLine()
+        'fileReader110.Close()
+        'If stringReader110 = "True" Then
+        'whatsnew.Show()
+        'Dim pbcfg111 As String = apppath + "\wnannounce.pbstate"
+        'Dim objWriter111 As New System.IO.StreamWriter(pbcfg111)
+        'objWriter111.Write("False")
+        'objWriter111.Close()
+        'End If
+        'nfstart
         Dim fileReader999 As System.IO.StreamReader
         fileReader999 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.nfstartfetch.pbcfg")
         Dim stringReader999 As String
@@ -1155,5 +1147,13 @@ Public Class Form1
 
     Private Sub PictureBox12_Click(sender As Object, e As EventArgs) Handles PictureBox12.Click
         feedsetting.Show()
+    End Sub
+
+    Private Sub ResetWhatsNewStateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetWhatsNewStateToolStripMenuItem.Click
+        Dim apppath As String = Application.StartupPath()
+        Dim pbcfg1 As String = apppath + "\wnannounce.pbstate"
+        Dim objWriter1 As New System.IO.StreamWriter(pbcfg1)
+        objWriter1.Write("False")
+        objWriter1.Close()
     End Sub
 End Class

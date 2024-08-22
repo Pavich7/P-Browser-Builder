@@ -153,6 +153,7 @@ Partial Class Form1
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.ResetWhatsNewStateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -392,7 +393,7 @@ Partial Class Form1
         '
         'DevToolStripMenuItem
         '
-        Me.DevToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReinitializeResourceToolStripMenuItem, Me.UnlockIncompleteFeatureToolStripMenuItem, Me.ForceUnlockDisableButtonToolStripMenuItem, Me.FToolStripMenuItem, Me.ShowSplashScreenToolStripMenuItem, Me.RestartInRestoreModeToolStripMenuItem, Me.GoBackToDefaultToolStripMenuItem})
+        Me.DevToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReinitializeResourceToolStripMenuItem, Me.UnlockIncompleteFeatureToolStripMenuItem, Me.ForceUnlockDisableButtonToolStripMenuItem, Me.FToolStripMenuItem, Me.ResetWhatsNewStateToolStripMenuItem, Me.ShowSplashScreenToolStripMenuItem, Me.RestartInRestoreModeToolStripMenuItem, Me.GoBackToDefaultToolStripMenuItem})
         Me.DevToolStripMenuItem.Name = "DevToolStripMenuItem"
         Me.DevToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
         Me.DevToolStripMenuItem.Text = "Develop"
@@ -1379,6 +1380,12 @@ Partial Class Form1
         Me.Label6.TabIndex = 56
         Me.Label6.Text = "This features will be available soon!"
         '
+        'ResetWhatsNewStateToolStripMenuItem
+        '
+        Me.ResetWhatsNewStateToolStripMenuItem.Name = "ResetWhatsNewStateToolStripMenuItem"
+        Me.ResetWhatsNewStateToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.ResetWhatsNewStateToolStripMenuItem.Text = "Reset whats new state"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1594,4 +1601,5 @@ Partial Class Form1
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label6 As Label
+    Friend WithEvents ResetWhatsNewStateToolStripMenuItem As ToolStripMenuItem
 End Class
