@@ -36,7 +36,6 @@ Partial Class Form1
         Me.ResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenBuildDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenPackageDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ResourceSettingToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExtensionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExtensionsNotFoundToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -62,6 +61,7 @@ Partial Class Form1
         Me.UnlockIncompleteFeatureToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ForceUnlockDisableButtonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ResetWhatsNewStateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowSplashScreenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RestartInRestoreModeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GoBackToDefaultToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -153,7 +153,6 @@ Partial Class Form1
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.ResetWhatsNewStateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -243,7 +242,7 @@ Partial Class Form1
         '
         'ResourceToolStripMenuItem
         '
-        Me.ResourceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenBuildDirectoryToolStripMenuItem, Me.OpenPackageDirectoryToolStripMenuItem, Me.ResourceSettingToolStripMenuItem1})
+        Me.ResourceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenBuildDirectoryToolStripMenuItem, Me.OpenPackageDirectoryToolStripMenuItem})
         Me.ResourceToolStripMenuItem.Name = "ResourceToolStripMenuItem"
         Me.ResourceToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
         Me.ResourceToolStripMenuItem.Text = "Build"
@@ -259,12 +258,6 @@ Partial Class Form1
         Me.OpenPackageDirectoryToolStripMenuItem.Name = "OpenPackageDirectoryToolStripMenuItem"
         Me.OpenPackageDirectoryToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
         Me.OpenPackageDirectoryToolStripMenuItem.Text = "Open Package Directory"
-        '
-        'ResourceSettingToolStripMenuItem1
-        '
-        Me.ResourceSettingToolStripMenuItem1.Name = "ResourceSettingToolStripMenuItem1"
-        Me.ResourceSettingToolStripMenuItem1.Size = New System.Drawing.Size(201, 22)
-        Me.ResourceSettingToolStripMenuItem1.Text = "Resource Setting..."
         '
         'ExtensionsToolStripMenuItem
         '
@@ -421,6 +414,12 @@ Partial Class Form1
         Me.FToolStripMenuItem.Name = "FToolStripMenuItem"
         Me.FToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
         Me.FToolStripMenuItem.Text = "Fallback first startup state"
+        '
+        'ResetWhatsNewStateToolStripMenuItem
+        '
+        Me.ResetWhatsNewStateToolStripMenuItem.Name = "ResetWhatsNewStateToolStripMenuItem"
+        Me.ResetWhatsNewStateToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.ResetWhatsNewStateToolStripMenuItem.Text = "Reset whats new state"
         '
         'ShowSplashScreenToolStripMenuItem
         '
@@ -1380,12 +1379,6 @@ Partial Class Form1
         Me.Label6.TabIndex = 56
         Me.Label6.Text = "This features will be available soon!"
         '
-        'ResetWhatsNewStateToolStripMenuItem
-        '
-        Me.ResetWhatsNewStateToolStripMenuItem.Name = "ResetWhatsNewStateToolStripMenuItem"
-        Me.ResetWhatsNewStateToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
-        Me.ResetWhatsNewStateToolStripMenuItem.Text = "Reset whats new state"
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1573,7 +1566,6 @@ Partial Class Form1
     Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents FToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ResourceSettingToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents RestartInRestoreModeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ShowSplashScreenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label9 As Label

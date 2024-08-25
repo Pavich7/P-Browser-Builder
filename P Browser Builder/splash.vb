@@ -1,5 +1,7 @@
 ﻿Public Class splash
     Private Sub splash_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim apppath As String = Application.StartupPath()
+        Me.BackgroundImage = Image.FromFile(apppath + "\imgassets\splash.png")
         Timer1.Start()
     End Sub
 

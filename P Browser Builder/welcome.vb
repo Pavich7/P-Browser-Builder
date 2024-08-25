@@ -14,6 +14,7 @@ Public Class welcome
     End Property
     Private Sub welcome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim apppath As String = Application.StartupPath()
+        Me.BackgroundImage = Image.FromFile(apppath + "\imgassets\start.png")
         Dim rscheck As String = apppath + "\resource"
         Label7.Visible = False
         If Not System.IO.Directory.Exists(rscheck) Then

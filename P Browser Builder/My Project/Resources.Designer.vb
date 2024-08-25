@@ -133,46 +133,6 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Screenshot_2024_05_22_160157() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("Screenshot 2024-05-22 160157", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property Screenshot_2024_07_24_203437() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("Screenshot 2024-07-24 203437", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property Screenshot_2024_07_24_203447() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("Screenshot 2024-07-24 203447", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property Screenshot_2024_07_24_203457() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("Screenshot 2024-07-24 203457", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
         Friend ReadOnly Property settings() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("settings", resourceCulture)

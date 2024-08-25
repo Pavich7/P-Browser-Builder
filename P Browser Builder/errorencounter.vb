@@ -18,4 +18,9 @@
             Return param
         End Get
     End Property
+
+    Private Sub errorencounter_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim apppath As String = Application.StartupPath()
+        Me.BackgroundImage = Image.FromFile(apppath + "\imgassets\fatal.png")
+    End Sub
 End Class

@@ -1046,10 +1046,6 @@ Public Class Form1
         objWriter.Close()
     End Sub
 
-    Private Sub ResourceSettingToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ResourceSettingToolStripMenuItem1.Click
-        prefer.Show()
-    End Sub
-
     Private Sub RestartInRestoreModeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RestartInRestoreModeToolStripMenuItem.Click
         Dim apppath As String = Application.StartupPath()
         Dim objWriter As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.inrsstate.pbcfg")
