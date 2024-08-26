@@ -352,6 +352,12 @@ Public Class Form1
         Dim flcheck41 As String = apppath + "\statecache\buildcache"
         Dim flcheck44 As String = apppath + "\statecache\updatecache"
         Dim flcheck5 As String = apppath + "\statedata"
+        Dim flcheck6 As String = apppath + "\imgassets"
+        If Not System.IO.Directory.Exists(flcheck6) Then
+            Me.Enabled = False
+            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
+            errorencounter.Show()
+        End If
         If Not System.IO.Directory.Exists(flcheck1) Then
             Me.Enabled = False
             errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
@@ -405,7 +411,6 @@ Public Class Form1
                 Dim result As DialogResult = MessageBox.Show("Do you wish to reset all setting?" + vbNewLine + "This cannot be undone!", "You sure about this?", MessageBoxButtons.YesNo)
                 If (result = DialogResult.Yes) Then
                     Dim result1 As DialogResult = MessageBox.Show("Do you wish to delete resource also?" + vbNewLine + "You can reinstall anytime via news feed.", "Resource setting", MessageBoxButtons.YesNo)
-                    splash.Label1.Text = "Resetting Builder Setting..."
                     splash.Show()
                     'Delete Res if prompted
                     If (result1 = DialogResult.Yes) Then

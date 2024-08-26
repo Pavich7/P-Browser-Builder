@@ -1,10 +1,8 @@
 Builder Release 6.2.0
 
 ** Release notes **
-- ADDED: Upgrading to this or newer version will not reset all settings.
-- IMPROVEMENT: Updated CefSharp to 127.3.50
-- IMPROVEMENT: Updated Chromium to 127.0.6533.120
-- IMPROVEMENT: Updated Visual C++ Redistributable (14.40.33810.0)
-- CHANGED: up-to-date button isn't clickable when already up-to-date.
-- CHANGED: Resource setting in build menubar is removed.
-- CHANGED: "Builder Update available" the download process begins directly instead of displaying an update guide.
+- CHANGED: Error page button text changing.
+- CHANGED: New modern splash screen design.
+
+** Low-level **
+- ADDED: Additional directory structure check.

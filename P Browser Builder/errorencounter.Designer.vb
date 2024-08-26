@@ -38,7 +38,7 @@ Partial Class errorencounter
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(145, 35)
         Me.Button3.TabIndex = 6
-        Me.Button3.Text = "Report to PavichDev"
+        Me.Button3.Text = "Report problem"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button1
