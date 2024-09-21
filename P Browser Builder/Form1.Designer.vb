@@ -33,9 +33,6 @@ Partial Class Form1
         Me.ReloadPreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenPreviewLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenRemoteDebuggingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OpenBuildDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OpenPackageDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExtensionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExtensionsNotFoundToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -71,7 +68,6 @@ Partial Class Form1
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -153,6 +149,9 @@ Partial Class Form1
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.Panel7 = New System.Windows.Forms.Panel()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -176,12 +175,13 @@ Partial Class Form1
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.Panel7.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.Control
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.PreviewToolStripMenuItem, Me.ResourceToolStripMenuItem, Me.ExtensionsToolStripMenuItem, Me.WindowToolStripMenuItem, Me.GuideToolStripMenuItem, Me.HelpToolStripMenuItem, Me.DevToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.PreviewToolStripMenuItem, Me.ExtensionsToolStripMenuItem, Me.WindowToolStripMenuItem, Me.GuideToolStripMenuItem, Me.HelpToolStripMenuItem, Me.DevToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1216, 24)
@@ -240,25 +240,6 @@ Partial Class Form1
         Me.OpenRemoteDebuggingToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
         Me.OpenRemoteDebuggingToolStripMenuItem.Text = "Open Remote Debugging"
         '
-        'ResourceToolStripMenuItem
-        '
-        Me.ResourceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenBuildDirectoryToolStripMenuItem, Me.OpenPackageDirectoryToolStripMenuItem})
-        Me.ResourceToolStripMenuItem.Name = "ResourceToolStripMenuItem"
-        Me.ResourceToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
-        Me.ResourceToolStripMenuItem.Text = "Build"
-        '
-        'OpenBuildDirectoryToolStripMenuItem
-        '
-        Me.OpenBuildDirectoryToolStripMenuItem.Name = "OpenBuildDirectoryToolStripMenuItem"
-        Me.OpenBuildDirectoryToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
-        Me.OpenBuildDirectoryToolStripMenuItem.Text = "Open Build Directory"
-        '
-        'OpenPackageDirectoryToolStripMenuItem
-        '
-        Me.OpenPackageDirectoryToolStripMenuItem.Name = "OpenPackageDirectoryToolStripMenuItem"
-        Me.OpenPackageDirectoryToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
-        Me.OpenPackageDirectoryToolStripMenuItem.Text = "Open Package Directory"
-        '
         'ExtensionsToolStripMenuItem
         '
         Me.ExtensionsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExtensionsNotFoundToolStripMenuItem})
@@ -269,7 +250,7 @@ Partial Class Form1
         'ExtensionsNotFoundToolStripMenuItem
         '
         Me.ExtensionsNotFoundToolStripMenuItem.Name = "ExtensionsNotFoundToolStripMenuItem"
-        Me.ExtensionsNotFoundToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
+        Me.ExtensionsNotFoundToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ExtensionsNotFoundToolStripMenuItem.Text = "Coming Soon..."
         '
         'WindowToolStripMenuItem
@@ -456,7 +437,7 @@ Partial Class Form1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Button1.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(99, 536)
+        Me.Button1.Location = New System.Drawing.Point(95, 37)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(73, 35)
         Me.Button1.TabIndex = 1
@@ -467,7 +448,7 @@ Partial Class Form1
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Button2.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(20, 536)
+        Me.Button2.Location = New System.Drawing.Point(16, 37)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(73, 35)
         Me.Button2.TabIndex = 2
@@ -492,28 +473,16 @@ Partial Class Form1
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Websites URL"
         '
-        'RadioButton1
-        '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton1.Location = New System.Drawing.Point(28, 279)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(278, 21)
-        Me.RadioButton1.TabIndex = 6
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Build with Quick Build Mode (Best for testing)"
-        Me.RadioButton1.UseVisualStyleBackColor = True
-        '
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton2.Location = New System.Drawing.Point(28, 306)
+        Me.RadioButton2.Location = New System.Drawing.Point(28, 280)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(265, 21)
+        Me.RadioButton2.Size = New System.Drawing.Size(167, 21)
         Me.RadioButton2.TabIndex = 7
         Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Build with Clean Build Mode (Recommend)"
+        Me.RadioButton2.Text = "Build into directory mode"
         Me.RadioButton2.UseVisualStyleBackColor = True
         '
         'Label2
@@ -601,7 +570,7 @@ Partial Class Form1
         '
         Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Button3.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(178, 536)
+        Me.Button3.Location = New System.Drawing.Point(174, 37)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(146, 35)
         Me.Button3.TabIndex = 14
@@ -631,7 +600,7 @@ Partial Class Form1
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.Location = New System.Drawing.Point(28, 405)
+        Me.CheckBox1.Location = New System.Drawing.Point(28, 379)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(167, 21)
         Me.CheckBox1.TabIndex = 17
@@ -642,7 +611,7 @@ Partial Class Form1
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label8.Location = New System.Drawing.Point(16, 365)
+        Me.Label8.Location = New System.Drawing.Point(16, 339)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(159, 28)
         Me.Label8.TabIndex = 18
@@ -652,7 +621,7 @@ Partial Class Form1
         '
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox2.Location = New System.Drawing.Point(28, 432)
+        Me.CheckBox2.Location = New System.Drawing.Point(28, 406)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(234, 21)
         Me.CheckBox2.TabIndex = 19
@@ -1047,12 +1016,12 @@ Partial Class Form1
         '
         Me.RadioButton3.AutoSize = True
         Me.RadioButton3.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton3.Location = New System.Drawing.Point(28, 334)
+        Me.RadioButton3.Location = New System.Drawing.Point(28, 308)
         Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(272, 21)
+        Me.RadioButton3.Size = New System.Drawing.Size(236, 21)
         Me.RadioButton3.TabIndex = 32
         Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "Build with Packaging Ready Mode (ZIP Files)"
+        Me.RadioButton3.Text = "Build into compressed file mode (.zip)"
         Me.RadioButton3.UseVisualStyleBackColor = True
         '
         'Panel8
@@ -1197,17 +1166,17 @@ Partial Class Form1
         '
         Me.CheckBox4.AutoSize = True
         Me.CheckBox4.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox4.Location = New System.Drawing.Point(28, 460)
+        Me.CheckBox4.Location = New System.Drawing.Point(28, 434)
         Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(130, 21)
+        Me.CheckBox4.Size = New System.Drawing.Size(135, 21)
         Me.CheckBox4.TabIndex = 47
-        Me.CheckBox4.Text = "Run custom scripts"
+        Me.CheckBox4.Text = "Run custom actions"
         Me.CheckBox4.UseVisualStyleBackColor = True
         '
         'Button6
         '
         Me.Button6.Font = New System.Drawing.Font("Segoe UI Semilight", 8.0!)
-        Me.Button6.Location = New System.Drawing.Point(256, 458)
+        Me.Button6.Location = New System.Drawing.Point(256, 432)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(68, 25)
         Me.Button6.TabIndex = 48
@@ -1220,7 +1189,7 @@ Partial Class Form1
         Me.Label24.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label24.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label24.Location = New System.Drawing.Point(25, 461)
+        Me.Label24.Location = New System.Drawing.Point(25, 435)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(72, 17)
         Me.Label24.TabIndex = 33
@@ -1300,7 +1269,7 @@ Partial Class Form1
         '
         Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox4.Image = Global.P_Browser_Builder.My.Resources.Resources.undo
-        Me.PictureBox4.Location = New System.Drawing.Point(306, 370)
+        Me.PictureBox4.Location = New System.Drawing.Point(306, 344)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(18, 23)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -1379,6 +1348,44 @@ Partial Class Form1
         Me.Label6.TabIndex = 56
         Me.Label6.Text = "This features will be available soon!"
         '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label37.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.Label37.Location = New System.Drawing.Point(40, 11)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(114, 17)
+        Me.Label37.TabIndex = 57
+        Me.Label37.Text = "Open build folder..."
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label38.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label38.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.Label38.Location = New System.Drawing.Point(160, 11)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(134, 17)
+        Me.Label38.TabIndex = 58
+        Me.Label38.Text = "Open package folder..."
+        '
+        'Panel7
+        '
+        Me.Panel7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Panel7.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel7.Controls.Add(Me.Label38)
+        Me.Panel7.Controls.Add(Me.Label37)
+        Me.Panel7.Controls.Add(Me.Button2)
+        Me.Panel7.Controls.Add(Me.Button1)
+        Me.Panel7.Controls.Add(Me.Button3)
+        Me.Panel7.Location = New System.Drawing.Point(5, 497)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(334, 81)
+        Me.Panel7.TabIndex = 56
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1410,19 +1417,16 @@ Partial Class Form1
         Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.CheckBox1)
-        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.RadioButton2)
-        Me.Controls.Add(Me.RadioButton1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.Panel7)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MinimumSize = New System.Drawing.Size(800, 600)
@@ -1460,6 +1464,8 @@ Partial Class Form1
         Me.TabPage2.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel7.ResumeLayout(False)
+        Me.Panel7.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1473,7 +1479,6 @@ Partial Class Form1
     Friend WithEvents Button2 As Button
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBox2 As TextBox
@@ -1517,7 +1522,6 @@ Partial Class Form1
     Friend WithEvents ReloadPreviewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpenPreviewLogToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label18 As Label
-    Friend WithEvents ResourceToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpenRemoteDebuggingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Timer2 As Timer
     Friend WithEvents Label23 As Label
@@ -1529,7 +1533,6 @@ Partial Class Form1
     Friend WithEvents Label26 As Label
     Friend WithEvents Label25 As Label
     Friend WithEvents OpenBuilderInExplorerToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents OpenBuildDirectoryToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Panel6 As Panel
     Friend WithEvents WindowToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BuilderWindowToolStripMenuItem As ToolStripMenuItem
@@ -1552,7 +1555,6 @@ Partial Class Form1
     Friend WithEvents Timer3 As Timer
     Friend WithEvents Label29 As Label
     Friend WithEvents Label30 As Label
-    Friend WithEvents OpenPackageDirectoryToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReleaseNoteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReinitializeResourceToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox2 As PictureBox
@@ -1594,4 +1596,7 @@ Partial Class Form1
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label6 As Label
     Friend WithEvents ResetWhatsNewStateToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label37 As Label
+    Friend WithEvents Label38 As Label
+    Friend WithEvents Panel7 As Panel
 End Class

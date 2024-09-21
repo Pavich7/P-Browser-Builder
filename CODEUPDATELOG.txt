@@ -1,6 +1,9 @@
 Builder Release 6.2.0
 
 ** Release notes **
+- IMPROVEMENT: Improved app size efficiency.
+- CHANGED: Redesigned main user interfaces.
+- CHANGED: Remove Quick Buid mode and rename clean and packaging mode. [BREAKING]
 - CHANGED: Error page button text changing.
 - CHANGED: New modern splash screen design.
 
