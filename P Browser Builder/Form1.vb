@@ -1076,4 +1076,8 @@ Public Class Form1
         Dim apppath As String = Application.StartupPath()
         Process.Start(apppath + "\binarypkg")
     End Sub
+
+    Private Sub WhatsNewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WhatsNewToolStripMenuItem.Click
+        whatsnew.Show()
+    End Sub
 End Class

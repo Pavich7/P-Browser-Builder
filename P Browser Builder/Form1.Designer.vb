@@ -152,6 +152,8 @@ Partial Class Form1
         Me.Label37 = New System.Windows.Forms.Label()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.WhatsNewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -250,7 +252,7 @@ Partial Class Form1
         'ExtensionsNotFoundToolStripMenuItem
         '
         Me.ExtensionsNotFoundToolStripMenuItem.Name = "ExtensionsNotFoundToolStripMenuItem"
-        Me.ExtensionsNotFoundToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExtensionsNotFoundToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
         Me.ExtensionsNotFoundToolStripMenuItem.Text = "Coming Soon..."
         '
         'WindowToolStripMenuItem
@@ -324,7 +326,7 @@ Partial Class Form1
         '
         'HelpToolStripMenuItem
         '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem, Me.ReleaseNoteToolStripMenuItem, Me.SupportToolStripMenuItem, Me.OpenBuilderInExplorerToolStripMenuItem, Me.SubmitBugsReportToolStripMenuItem, Me.UnlockDeveloperMenuToolStripMenuItem})
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem, Me.WhatsNewToolStripMenuItem, Me.ReleaseNoteToolStripMenuItem, Me.ToolStripSeparator1, Me.SupportToolStripMenuItem, Me.OpenBuilderInExplorerToolStripMenuItem, Me.SubmitBugsReportToolStripMenuItem, Me.UnlockDeveloperMenuToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
@@ -338,8 +340,8 @@ Partial Class Form1
         'ReleaseNoteToolStripMenuItem
         '
         Me.ReleaseNoteToolStripMenuItem.Name = "ReleaseNoteToolStripMenuItem"
-        Me.ReleaseNoteToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
-        Me.ReleaseNoteToolStripMenuItem.Text = "Release note"
+        Me.ReleaseNoteToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
+        Me.ReleaseNoteToolStripMenuItem.Text = "Latest release note"
         '
         'SupportToolStripMenuItem
         '
@@ -1065,10 +1067,10 @@ Partial Class Form1
         '
         Me.Label27.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label27.AutoSize = True
-        Me.Label27.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label27.Location = New System.Drawing.Point(6, 2)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(53, 17)
+        Me.Label27.Size = New System.Drawing.Size(54, 17)
         Me.Label27.TabIndex = 17
         Me.Label27.Text = "Status : "
         '
@@ -1386,6 +1388,17 @@ Partial Class Form1
         Me.Panel7.Size = New System.Drawing.Size(334, 81)
         Me.Panel7.TabIndex = 56
         '
+        'WhatsNewToolStripMenuItem
+        '
+        Me.WhatsNewToolStripMenuItem.Name = "WhatsNewToolStripMenuItem"
+        Me.WhatsNewToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
+        Me.WhatsNewToolStripMenuItem.Text = "What's new in this version"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(208, 6)
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1599,4 +1612,6 @@ Partial Class Form1
     Friend WithEvents Label37 As Label
     Friend WithEvents Label38 As Label
     Friend WithEvents Panel7 As Panel
+    Friend WithEvents WhatsNewToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
 End Class
