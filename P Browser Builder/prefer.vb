@@ -17,7 +17,7 @@ Public Class prefer
             Dim bstringReader As String
             bstringReader = bfileReader.ReadLine()
             Dim client As WebClient = New WebClient()
-            Dim obuiver As String = client.DownloadString("http://pavichdev.ddns.net/api/v2-pbb/cfuversion/onlinebuiver.txt")
+            Dim obuiver As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v1/ver/onlinebuiver.txt")
             If obuiver.Contains(bstringReader) Then
                 Label30.Text = "up-to-date!"
                 Label30.Enabled = False
@@ -51,7 +51,7 @@ Public Class prefer
                     Dim stringReader As String
                     stringReader = fileReader.ReadLine()
                     Dim client As WebClient = New WebClient()
-                    Dim oresver As String = client.DownloadString("http://pavichdev.ddns.net/api/v2-pbb/cfuversion/onlineresver.txt")
+                    Dim oresver As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v1/ver/onlineresver.txt")
                     If oresver.Contains(stringReader) Then
                         Label4.Text = "up-to-date!"
                         Label4.Enabled = False
@@ -68,8 +68,8 @@ Public Class prefer
                 Dim fileReader2 As System.IO.StreamReader
                 Dim fileReader3 As System.IO.StreamReader
                 Dim fileReader4 As System.IO.StreamReader
-                fileReader2 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\buildspace\quickmode\pkgData\pkgchrome.pbad")
-                fileReader3 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\buildspace\quickmode\pkgData\pkgcef.pbad")
+                fileReader2 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\testspace\pkgData\pkgchrome.pbad")
+                fileReader3 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\testspace\pkgData\pkgcef.pbad")
                 fileReader4 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\metadata\version.txt")
                 Dim stringReader2 As String
                 Dim stringReader3 As String

@@ -1,14 +1,17 @@
 Builder Release 6.3.0
 
 ** Release notes **
+- BREAKING: Remove Quick Buid mode and rename clean and packaging mode.
+- BREAKING: This version only support 6.0.0 or newer resource.
 - ADDED: What's new page in Help menu.
-- CHANGED: Remove Quick Buid mode and rename clean and packaging mode. [BREAKING]
 - IMPROVEMENT: Updated CefSharp to 128.4.90
 - IMPROVEMENT: Updated Chromium to 128.0.6613.120
 - IMPROVEMENT: Improved app size efficiency.
 - IMPROVEMENT: Main user interfaces improvements.
 - CHANGED: Error page button text changing.
 - CHANGED: New modern splash screen design.
+- FIXED: Unable to fetch news with server due to server shutdown.
+- FIXED: Some user may unable to enter preference.
 
 ** Low-level **
 - ADDED: Additional directory structure check.

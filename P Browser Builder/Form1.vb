@@ -426,7 +426,7 @@ Public Class Form1
                 Label19.Visible = False
                 Label20.Visible = False
                 Label18.Visible = False
-                Dim resvcheck4 As String = apppath + "\resource\metadata\checkpoint\r500.chkp"
+                Dim resvcheck4 As String = apppath + "\resource\metadata\checkpoint\r600.chkp"
                 If Not System.IO.File.Exists(resvcheck4) Then
                     MessageBox.Show("Unload required! Resource not compatible!" + vbNewLine + "Please reinstall builder resource via preference menu.", "Resource not compatible!")
                     Button1.Enabled = False
@@ -548,9 +548,9 @@ Public Class Form1
             Try
                 ProgressBar1.Value = 10
                 Dim client As WebClient = New WebClient()
-                Dim nf1desc As String = client.DownloadString("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_desc.txt")
-                Dim nf1titl As String = client.DownloadString("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_title.txt")
-                Dim nf1date As String = client.DownloadString("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_date.txt")
+                Dim nf1desc As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v1/nf/nf1_desc.txt")
+                Dim nf1titl As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v1/nf/nf1_title.txt")
+                Dim nf1date As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v1/nf/nf1_date.txt")
                 ProgressBar1.Value = 50
                 Label12.Text = nf1titl
                 Label13.Text = nf1desc
