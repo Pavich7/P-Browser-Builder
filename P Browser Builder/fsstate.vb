@@ -1,6 +1,10 @@
 ﻿Public Class fsstate
     Private Sub fsstate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         welcome.Enabled = False
+        Label2.Visible = False
+        Label4.Visible = False
+        CheckBox1.Visible = False
+        CheckBox2.Visible = False
     End Sub
 
     Private Sub Label29_Click(sender As Object, e As EventArgs) Handles Label29.Click

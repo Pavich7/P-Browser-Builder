@@ -498,24 +498,24 @@ Public Class Form1
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Timer1.Stop()
         Dim apppath As String = Application.StartupPath()
-        Dim fileReader01 As System.IO.StreamReader
-        fileReader01 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.datacol.pbcfg")
-        Dim stringReader01 As String
-        stringReader01 = fileReader01.ReadLine()
-        fileReader01.Close()
+        'Dim fileReader01 As System.IO.StreamReader
+        'fileReader01 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.datacol.pbcfg")
+        'Dim stringReader01 As String
+        'stringReader01 = fileReader01.ReadLine()
+        'fileReader01.Close()
         welcome.Show()
         'Sent analytics
-        Dim regDate As Date = Date.Now()
-        Dim strDate As String = regDate.ToString("ddMMMyyyy")
-        Dim strHostName As String
-        Dim strIPAddress As String
-        strHostName = System.Net.Dns.GetHostName()
-        strIPAddress = System.Net.Dns.GetHostEntry(strHostName).AddressList(0).ToString()
-        If stringReader01 = "True" Then
-            Browser.Load("http://pavichdev.ddns.net/api/v1-act/activate.php?ver=" + "PBrowserBuilder+startup+" + strDate + "+" + Application.ProductVersion + "+" + strHostName + "+" + strIPAddress)
-            Snooze(1)
-            Browser.Load("about:blank")
-        End If
+        'Dim regDate As Date = Date.Now()
+        'Dim strDate As String = regDate.ToString("ddMMMyyyy")
+        'Dim strHostName As String
+        'Dim strIPAddress As String
+        'strHostName = System.Net.Dns.GetHostName()
+        'strIPAddress = System.Net.Dns.GetHostEntry(strHostName).AddressList(0).ToString()
+        'If stringReader01 = "True" Then
+        'Browser.Load("http://pavichdev.ddns.net/api/v1-act/activate.php?ver=" + "PBrowserBuilder+startup+" + strDate + "+" + Application.ProductVersion + "+" + strHostName + "+" + strIPAddress)
+        'Snooze(1)
+        'Browser.Load("about:blank")
+        'End If
         'fsstate
         Dim fileReader0 As System.IO.StreamReader
         fileReader0 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.infsstate.pbcfg")
