@@ -11,6 +11,7 @@ Builder Release 7.0.0
 - CHANGED: Error page button text changing.
 - CHANGED: New modern splash screen design.
 - CHANGED: Temporary disabled user data collections.
+- CHANGED: Changed some buttons inside about page.
 - FIXED: Unable to fetch news with server due to server shutdown.
 - FIXED: Some user may unable to enter preference.
 

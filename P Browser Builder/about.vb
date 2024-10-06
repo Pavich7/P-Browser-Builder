@@ -20,7 +20,7 @@
         Process.Start("http://pavichdev.ddns.net/download/documents/p-browser-builder-eula.pdf")
     End Sub
 
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+    Private Sub Label4_Click(sender As Object, e As EventArgs)
         Dim apppath As String = Application.StartupPath()
         Dim pbcfg1 As String = apppath + "\statedata\setting.builder.datacol.pbcfg"
         Dim objWriter1 As New System.IO.StreamWriter(pbcfg1)
