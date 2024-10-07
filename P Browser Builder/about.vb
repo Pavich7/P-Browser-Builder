@@ -9,15 +9,15 @@
     End Sub
 
     Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-        Process.Start("http://pavichdev.ddns.net/Home.html#feedbackintro")
+        Process.Start("http://github.com/Pavich7/")
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-        Process.Start("http://github.com/Pavich7/P-Browser-Builder/blob/master/LICENSE.txt")
+        Process.Start("http://github.com/Pavich7/P-Browser-Builder/blob/master/LICENSE.md")
     End Sub
 
     Private Sub Label30_Click(sender As Object, e As EventArgs) Handles Label30.Click
-        Process.Start("http://pavichdev.ddns.net/download/documents/p-browser-builder-eula.pdf")
+        Process.Start("https://github.com/Pavich7/P-Browser-Builder/blob/master/EULA.md")
     End Sub
 
     Private Sub Label4_Click(sender As Object, e As EventArgs)

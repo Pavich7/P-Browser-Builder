@@ -8,7 +8,10 @@ Builder Release 7.1.0
 - ADDED: Clear all saves button in file menu.
 - ADDED: You can now save in file menu or using CTRL+S shortcut.
 - ADDED: You can now save window size with save button.
+- ADDED: Warning before exit if url textbox is not empty.
 - FIXED: Clear all function will now reset window size.
 - FIXED: Open Start Window will now reset window size.
+- FIXED: Some buttons in about page leading to wrong URL.
 - CHANGED: Removed save options.
 - CHANGED: Minor user interface adjustments.
+- CHANGED: Updated EULA page to latest version.

@@ -282,6 +282,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fsstate.resx">
       <DependentUpon>fsstate.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

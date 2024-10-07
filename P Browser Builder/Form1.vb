@@ -277,7 +277,13 @@ Public Class Form1
             ProgressBar1.Value = 0
         End Try
     End Sub
-
+    Public Sub MyForm_FormClosing(ByVal sender As Object, ByVal e As FormClosingEventArgs) Handles Me.FormClosing
+        If Not TextBox1.Text = "" Then
+            If MessageBox.Show("Are you sure you want to exit? Make sure you saved your work!", "Confirm", MessageBoxButtons.YesNo) <> DialogResult.Yes Then
+                e.Cancel = True
+            End If
+        End If
+    End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim apppath As String = Application.StartupPath()
         'Init structure check
