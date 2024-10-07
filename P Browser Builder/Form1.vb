@@ -20,6 +20,7 @@ Public Class Form1
             Dim pbprogcfg As String = apppath + "\resource\testspace\progdata.pbcfg"
             Dim pbprogw As String = apppath + "\resource\testspace\appsizew.pbcfg"
             Dim pbprogh As String = apppath + "\resource\testspace\appsizeh.pbcfg"
+            Dim pbprogfw As String = apppath + "\resource\testspace\appfixbs.pbcfg"
             Dim testapp As String = apppath + "\resource\testspace\P Browser App.exe"
             ProgressBar1.Value = 20
             If System.IO.File.Exists(pbcfg) = True Then
@@ -28,6 +29,7 @@ Public Class Form1
                 Dim objWriter2 As New System.IO.StreamWriter(pbprogcfg)
                 Dim objWriter3 As New System.IO.StreamWriter(pbprogh)
                 Dim objWriter4 As New System.IO.StreamWriter(pbprogw)
+                Dim objWriter5 As New System.IO.StreamWriter(pbprogfw)
                 objWriter.Write(TextBox1.Text)
                 objWriter.Close()
                 objWriter2.Write(TextBox2.Text)
@@ -36,6 +38,10 @@ Public Class Form1
                 objWriter3.Close()
                 objWriter4.Write(TextBox3.Text)
                 objWriter4.Close()
+                If CheckBox5.Checked = True Then
+                    objWriter5.Write("True")
+                End If
+                objWriter5.Close()
                 Dim icnexist As String = apppath + "\resource\testspace\appicns.ico"
                 If System.IO.File.Exists(icnexist) Then
                     My.Computer.FileSystem.DeleteFile(apppath + "\resource\testspace\appicns.ico")
@@ -96,6 +102,12 @@ Public Class Form1
                     objWriter13.Close()
                     objWriter14.Write(TextBox3.Text)
                     objWriter14.Close()
+                    Dim pbprogfw As String = apppath + "\resource\buildspace\appfixbs.pbcfg"
+                    Dim objWriter50 As New System.IO.StreamWriter(pbprogfw)
+                    If CheckBox5.Checked = True Then
+                        objWriter50.Write("True")
+                    End If
+                    objWriter50.Close()
                     ProgressBar1.Value = 50
                     My.Computer.FileSystem.CopyDirectory(apppath + "\resource\buildspace", apppath + "\binary", True)
                     My.Computer.FileSystem.RenameFile(apppath + "\binary\P Browser App.exe", TextBox2.Text + ".exe")
@@ -175,6 +187,12 @@ Public Class Form1
                     objWriter13.Close()
                     objWriter14.Write(TextBox3.Text)
                     objWriter14.Close()
+                    Dim pbprogfw As String = apppath + "\resource\buildspace\appfixbs.pbcfg"
+                    Dim objWriter50 As New System.IO.StreamWriter(pbprogfw)
+                    If CheckBox5.Checked = True Then
+                        objWriter50.Write("True")
+                    End If
+                    objWriter50.Close()
                     ProgressBar1.Value = 50
                     My.Computer.FileSystem.CopyDirectory(apppath + "\resource\buildspace", apppath + "\binary", True)
                     My.Computer.FileSystem.RenameFile(apppath + "\binary\P Browser App.exe", TextBox2.Text + ".exe")
@@ -261,11 +279,6 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Remove after beta
-        'Label20.Text = "Manually install resources required!"
-        'Label19.Text = "You can download pre-release version at resource GitHub Repository."
-        'Label18.Enabled = False
-        'End Beta
         Dim apppath As String = Application.StartupPath()
         'Init structure check
         TabPage2.Enabled = False
@@ -419,14 +432,13 @@ Public Class Form1
                 RadioButton3.Enabled = False
                 CheckBox1.Enabled = False
                 CheckBox2.Enabled = False
-                CheckBox3.Enabled = False
                 Label4.Enabled = False
                 Label8.Enabled = False
             Else
-                Label19.Visible = False
                 Label20.Visible = False
                 Label18.Visible = False
-                Dim resvcheck4 As String = apppath + "\resource\metadata\checkpoint\r600.chkp"
+                Panel4.Size = New Size(265, 175)
+                Dim resvcheck4 As String = apppath + "\resource\metadata\checkpoint\r610.chkp"
                 If Not System.IO.File.Exists(resvcheck4) Then
                     MessageBox.Show("Unload required! Resource not compatible!" + vbNewLine + "Please reinstall builder resource via preference menu.", "Resource not compatible!")
                     Button1.Enabled = False
@@ -599,6 +611,8 @@ Public Class Form1
         Dim apppath As String = Application.StartupPath()
         TextBox1.Text = ""
         TextBox2.Text = ""
+        TextBox3.Text = "944"
+        TextBox4.Text = "573"
         RadioButton2.Checked = False
         RadioButton3.Checked = False
         CheckBox1.Text = "Start your app after build"
@@ -606,6 +620,7 @@ Public Class Form1
         Button1.Enabled = True
         CheckBox1.Checked = False
         CheckBox2.Checked = False
+        CheckBox3.Checked = False
         System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
         System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
     End Sub
@@ -683,7 +698,6 @@ Public Class Form1
                     Application.Restart()
                 Else
                     Label18.Visible = False
-                    Label19.Visible = False
                     Label20.Visible = False
                     Label7.Text = "Ready to build"
                 End If
@@ -920,7 +934,28 @@ Public Class Form1
     End Sub
 
     Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
-        saveopt.Show()
+        Try
+            Dim apppath As String = Application.StartupPath()
+            Dim pbcfg1 As String = apppath + "\statedata\usersave.builder.anamesave.pbsf"
+            Dim objWriter1 As New System.IO.StreamWriter(pbcfg1)
+            objWriter1.Write(TextBox2.Text)
+            objWriter1.Close()
+            Dim pbcfg2 As String = apppath + "\statedata\usersave.builder.urlsave.pbsf"
+            Dim objWriter2 As New System.IO.StreamWriter(pbcfg2)
+            objWriter2.Write(TextBox1.Text)
+            objWriter2.Close()
+            Dim pbcfg3 As String = apppath + "\statedata\usersave.builder.wwindow.pbsf"
+            Dim objWriter3 As New System.IO.StreamWriter(pbcfg3)
+            objWriter3.Write(TextBox3.Text)
+            objWriter3.Close()
+            Dim pbcfg4 As String = apppath + "\statedata\usersave.builder.hwindow.pbsf"
+            Dim objWriter4 As New System.IO.StreamWriter(pbcfg4)
+            objWriter4.Write(TextBox4.Text)
+            objWriter4.Close()
+            MessageBox.Show("Saved!", "Completed!")
+        Catch ex As Exception
+            MessageBox.Show("Save Failed!", "Error!")
+        End Try
     End Sub
 
     Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
@@ -1012,7 +1047,7 @@ Public Class Form1
         Label24.Visible = False
     End Sub
 
-    Private Sub Label19_Click(sender As Object, e As EventArgs) Handles Label19.Click
+    Private Sub Label20_Click(sender As Object, e As EventArgs) Handles Label20.Click
         MessageBox.Show("After fresh install you will need to install resource to build. (Download size: approx. 140 MB)", "Info...")
     End Sub
 
@@ -1022,6 +1057,8 @@ Public Class Form1
             Dim apppath As String = Application.StartupPath()
             TextBox1.Text = ""
             TextBox2.Text = ""
+            TextBox3.Text = "944"
+            TextBox4.Text = "573"
             RadioButton2.Checked = False
             RadioButton3.Checked = False
             CheckBox1.Text = "Start your app after build"
@@ -1029,6 +1066,7 @@ Public Class Form1
             Button1.Enabled = True
             CheckBox1.Checked = False
             CheckBox2.Checked = False
+            CheckBox3.Checked = False
             System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
             System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
             welcome.Show()
@@ -1049,6 +1087,7 @@ Public Class Form1
     Private Sub PictureBox10_Click(sender As Object, e As EventArgs) Handles PictureBox10.Click
         TextBox3.Text = "944"
         TextBox4.Text = "573"
+        CheckBox5.Checked = False
     End Sub
 
     Private Sub PictureBox11_Click(sender As Object, e As EventArgs) Handles PictureBox11.Click
@@ -1079,5 +1118,51 @@ Public Class Form1
 
     Private Sub WhatsNewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WhatsNewToolStripMenuItem.Click
         whatsnew.Show()
+    End Sub
+
+    Private Sub ClearAllSavesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearAllSavesToolStripMenuItem.Click
+        Dim apppath As String = Application.StartupPath()
+        Dim pbcfg1 As String = apppath + "\statedata\usersave.builder.anamesave.pbsf"
+        Dim objWriter1 As New System.IO.StreamWriter(pbcfg1)
+        objWriter1.Write("")
+        objWriter1.Close()
+        Dim pbcfg2 As String = apppath + "\statedata\usersave.builder.urlsave.pbsf"
+        Dim objWriter2 As New System.IO.StreamWriter(pbcfg2)
+        objWriter2.Write("")
+        objWriter2.Close()
+        Dim pbcfg3 As String = apppath + "\statedata\usersave.builder.wwindow.pbsf"
+        Dim objWriter3 As New System.IO.StreamWriter(pbcfg3)
+        objWriter3.Write("")
+        objWriter3.Close()
+        Dim pbcfg4 As String = apppath + "\statedata\usersave.builder.hwindow.pbsf"
+        Dim objWriter4 As New System.IO.StreamWriter(pbcfg4)
+        objWriter4.Write("")
+        objWriter4.Close()
+        MessageBox.Show("Cleared!", "Completed!")
+    End Sub
+
+    Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
+        Try
+            Dim apppath As String = Application.StartupPath()
+            Dim pbcfg1 As String = apppath + "\statedata\usersave.builder.anamesave.pbsf"
+            Dim objWriter1 As New System.IO.StreamWriter(pbcfg1)
+            objWriter1.Write(TextBox2.Text)
+            objWriter1.Close()
+            Dim pbcfg2 As String = apppath + "\statedata\usersave.builder.urlsave.pbsf"
+            Dim objWriter2 As New System.IO.StreamWriter(pbcfg2)
+            objWriter2.Write(TextBox1.Text)
+            objWriter2.Close()
+            Dim pbcfg3 As String = apppath + "\statedata\usersave.builder.wwindow.pbsf"
+            Dim objWriter3 As New System.IO.StreamWriter(pbcfg3)
+            objWriter3.Write(TextBox3.Text)
+            objWriter3.Close()
+            Dim pbcfg4 As String = apppath + "\statedata\usersave.builder.hwindow.pbsf"
+            Dim objWriter4 As New System.IO.StreamWriter(pbcfg4)
+            objWriter4.Write(TextBox4.Text)
+            objWriter4.Close()
+            MessageBox.Show("Saved!", "Completed!")
+        Catch ex As Exception
+            MessageBox.Show("Save Failed!", "Error!")
+        End Try
     End Sub
 End Class

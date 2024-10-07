@@ -48,7 +48,9 @@ Partial Class Form1
         Me.BuildingGuideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WhatsNewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReleaseNoteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.SupportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenBuilderInExplorerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SubmitBugsReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -92,13 +94,12 @@ Partial Class Form1
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Label16 = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
@@ -108,6 +109,7 @@ Partial Class Form1
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.Panel9 = New System.Windows.Forms.Panel()
@@ -152,8 +154,9 @@ Partial Class Form1
         Me.Label37 = New System.Windows.Forms.Label()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.WhatsNewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.ClearAllSavesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -192,7 +195,7 @@ Partial Class Form1
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartWindowToolStripMenuItem, Me.ClearAllToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartWindowToolStripMenuItem, Me.SaveToolStripMenuItem, Me.ClearAllToolStripMenuItem, Me.ClearAllSavesToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
@@ -206,8 +209,8 @@ Partial Class Form1
         'ClearAllToolStripMenuItem
         '
         Me.ClearAllToolStripMenuItem.Name = "ClearAllToolStripMenuItem"
-        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
-        Me.ClearAllToolStripMenuItem.Text = "Clear All"
+        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClearAllToolStripMenuItem.Text = "Clear all"
         '
         'ExitToolStripMenuItem
         '
@@ -246,7 +249,7 @@ Partial Class Form1
         '
         Me.ExtensionsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExtensionsNotFoundToolStripMenuItem})
         Me.ExtensionsToolStripMenuItem.Name = "ExtensionsToolStripMenuItem"
-        Me.ExtensionsToolStripMenuItem.Size = New System.Drawing.Size(75, 20)
+        Me.ExtensionsToolStripMenuItem.Size = New System.Drawing.Size(74, 20)
         Me.ExtensionsToolStripMenuItem.Text = "Extensions"
         '
         'ExtensionsNotFoundToolStripMenuItem
@@ -272,19 +275,19 @@ Partial Class Form1
         'NormalToolStripMenuItem
         '
         Me.NormalToolStripMenuItem.Name = "NormalToolStripMenuItem"
-        Me.NormalToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.NormalToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
         Me.NormalToolStripMenuItem.Text = "Normal"
         '
         'MaximizedToolStripMenuItem
         '
         Me.MaximizedToolStripMenuItem.Name = "MaximizedToolStripMenuItem"
-        Me.MaximizedToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.MaximizedToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
         Me.MaximizedToolStripMenuItem.Text = "Maximized"
         '
         'MinimizedToolStripMenuItem
         '
         Me.MinimizedToolStripMenuItem.Name = "MinimizedToolStripMenuItem"
-        Me.MinimizedToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.MinimizedToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
         Me.MinimizedToolStripMenuItem.Text = "Minimized"
         '
         'HideRightPanelToolStripMenuItem
@@ -334,8 +337,14 @@ Partial Class Form1
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
         Me.AboutToolStripMenuItem.Text = "About"
+        '
+        'WhatsNewToolStripMenuItem
+        '
+        Me.WhatsNewToolStripMenuItem.Name = "WhatsNewToolStripMenuItem"
+        Me.WhatsNewToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
+        Me.WhatsNewToolStripMenuItem.Text = "What's new in this version"
         '
         'ReleaseNoteToolStripMenuItem
         '
@@ -343,28 +352,33 @@ Partial Class Form1
         Me.ReleaseNoteToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
         Me.ReleaseNoteToolStripMenuItem.Text = "Latest release note"
         '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(208, 6)
+        '
         'SupportToolStripMenuItem
         '
         Me.SupportToolStripMenuItem.Name = "SupportToolStripMenuItem"
-        Me.SupportToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
+        Me.SupportToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
         Me.SupportToolStripMenuItem.Text = "Support"
         '
         'OpenBuilderInExplorerToolStripMenuItem
         '
         Me.OpenBuilderInExplorerToolStripMenuItem.Name = "OpenBuilderInExplorerToolStripMenuItem"
-        Me.OpenBuilderInExplorerToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
+        Me.OpenBuilderInExplorerToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
         Me.OpenBuilderInExplorerToolStripMenuItem.Text = "Open Builder in Explorer"
         '
         'SubmitBugsReportToolStripMenuItem
         '
         Me.SubmitBugsReportToolStripMenuItem.Name = "SubmitBugsReportToolStripMenuItem"
-        Me.SubmitBugsReportToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
+        Me.SubmitBugsReportToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
         Me.SubmitBugsReportToolStripMenuItem.Text = "Submit Bugs Report"
         '
         'UnlockDeveloperMenuToolStripMenuItem
         '
         Me.UnlockDeveloperMenuToolStripMenuItem.Name = "UnlockDeveloperMenuToolStripMenuItem"
-        Me.UnlockDeveloperMenuToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
+        Me.UnlockDeveloperMenuToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
         Me.UnlockDeveloperMenuToolStripMenuItem.Text = "Unlock Developer Menu"
         '
         'DevToolStripMenuItem
@@ -635,7 +649,7 @@ Partial Class Form1
         Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label5.Location = New System.Drawing.Point(21, 104)
+        Me.Label5.Location = New System.Drawing.Point(21, 136)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(100, 28)
         Me.Label5.TabIndex = 23
@@ -650,7 +664,7 @@ Partial Class Form1
         Me.Panel3.Controls.Add(Me.ProgressBar3)
         Me.Panel3.Controls.Add(Me.Label23)
         Me.Panel3.Controls.Add(Me.Label11)
-        Me.Panel3.Location = New System.Drawing.Point(26, 146)
+        Me.Panel3.Location = New System.Drawing.Point(26, 178)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(265, 135)
         Me.Panel3.TabIndex = 24
@@ -712,7 +726,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label10.Location = New System.Drawing.Point(21, 290)
+        Me.Label10.Location = New System.Drawing.Point(21, 327)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(105, 28)
         Me.Label10.TabIndex = 26
@@ -723,53 +737,14 @@ Partial Class Form1
         Me.Panel4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel4.BackColor = System.Drawing.SystemColors.Control
-        Me.Panel4.Controls.Add(Me.Label18)
-        Me.Panel4.Controls.Add(Me.Label19)
-        Me.Panel4.Controls.Add(Me.Label20)
         Me.Panel4.Controls.Add(Me.Label15)
         Me.Panel4.Controls.Add(Me.Label14)
         Me.Panel4.Controls.Add(Me.Label13)
         Me.Panel4.Controls.Add(Me.Label12)
-        Me.Panel4.Location = New System.Drawing.Point(26, 328)
+        Me.Panel4.Location = New System.Drawing.Point(26, 369)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(265, 213)
+        Me.Panel4.Size = New System.Drawing.Size(265, 153)
         Me.Panel4.TabIndex = 28
-        '
-        'Label18
-        '
-        Me.Label18.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label18.AutoSize = True
-        Me.Label18.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label18.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label18.Location = New System.Drawing.Point(15, 177)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(125, 17)
-        Me.Label18.TabIndex = 32
-        Me.Label18.Text = "Download and Install"
-        '
-        'Label19
-        '
-        Me.Label19.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label19.Font = New System.Drawing.Font("Segoe UI Light", 10.0!)
-        Me.Label19.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label19.Location = New System.Drawing.Point(14, 134)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(228, 60)
-        Me.Label19.TabIndex = 31
-        Me.Label19.Text = "Test and build feature are disabled. Click here to lean more..."
-        '
-        'Label20
-        '
-        Me.Label20.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label20.Location = New System.Drawing.Point(14, 109)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(237, 21)
-        Me.Label20.TabIndex = 30
-        Me.Label20.Text = "Builder resource not installed yet" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'Label15
         '
@@ -816,6 +791,32 @@ Partial Class Form1
         Me.Label12.TabIndex = 27
         Me.Label12.Text = "Fetching News Feed with Server"
         '
+        'Label18
+        '
+        Me.Label18.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label18.AutoSize = True
+        Me.Label18.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label18.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label18.Location = New System.Drawing.Point(228, 532)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(64, 17)
+        Me.Label18.TabIndex = 32
+        Me.Label18.Text = "Download"
+        '
+        'Label20
+        '
+        Me.Label20.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label20.AutoSize = True
+        Me.Label20.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label20.Font = New System.Drawing.Font("Segoe UI Semilight", 9.25!)
+        Me.Label20.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label20.Location = New System.Drawing.Point(23, 532)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(193, 17)
+        Me.Label20.TabIndex = 30
+        Me.Label20.Text = "Builder resource not installed yet." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        '
         'Timer1
         '
         '
@@ -844,7 +845,7 @@ Partial Class Form1
         '
         Me.Button7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button7.Font = New System.Drawing.Font("Segoe UI Semilight", 8.0!)
-        Me.Button7.Location = New System.Drawing.Point(235, 108)
+        Me.Button7.Location = New System.Drawing.Point(235, 140)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(56, 29)
         Me.Button7.TabIndex = 32
@@ -855,7 +856,7 @@ Partial Class Form1
         '
         Me.Button8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button8.Font = New System.Drawing.Font("Segoe UI Semilight", 8.0!)
-        Me.Button8.Location = New System.Drawing.Point(173, 108)
+        Me.Button8.Location = New System.Drawing.Point(173, 140)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(56, 29)
         Me.Button8.TabIndex = 33
@@ -866,6 +867,10 @@ Partial Class Form1
         '
         Me.Panel6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel6.Controls.Add(Me.Label19)
+        Me.Panel6.Controls.Add(Me.CheckBox5)
+        Me.Panel6.Controls.Add(Me.Label18)
+        Me.Panel6.Controls.Add(Me.Label20)
         Me.Panel6.Controls.Add(Me.PictureBox12)
         Me.Panel6.Controls.Add(Me.PictureBox10)
         Me.Panel6.Controls.Add(Me.Panel9)
@@ -887,11 +892,22 @@ Partial Class Form1
         Me.Panel6.Size = New System.Drawing.Size(316, 561)
         Me.Panel6.TabIndex = 16
         '
+        'CheckBox5
+        '
+        Me.CheckBox5.AutoSize = True
+        Me.CheckBox5.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox5.Location = New System.Drawing.Point(76, 101)
+        Me.CheckBox5.Name = "CheckBox5"
+        Me.CheckBox5.Size = New System.Drawing.Size(127, 21)
+        Me.CheckBox5.TabIndex = 57
+        Me.CheckBox5.Text = "Fixed window size"
+        Me.CheckBox5.UseVisualStyleBackColor = True
+        '
         'PictureBox12
         '
         Me.PictureBox12.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox12.Image = Global.P_Browser_Builder.My.Resources.Resources.settings
-        Me.PictureBox12.Location = New System.Drawing.Point(268, 293)
+        Me.PictureBox12.Location = New System.Drawing.Point(268, 330)
         Me.PictureBox12.Name = "PictureBox12"
         Me.PictureBox12.Size = New System.Drawing.Size(20, 29)
         Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -969,7 +985,7 @@ Partial Class Form1
         '
         Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox2.Image = Global.P_Browser_Builder.My.Resources.Resources.settings
-        Me.PictureBox2.Location = New System.Drawing.Point(146, 108)
+        Me.PictureBox2.Location = New System.Drawing.Point(146, 140)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(20, 29)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -1160,7 +1176,7 @@ Partial Class Form1
         Me.Label22.ForeColor = System.Drawing.SystemColors.Desktop
         Me.Label22.Location = New System.Drawing.Point(1109, 4)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(54, 15)
+        Me.Label22.Size = New System.Drawing.Size(55, 15)
         Me.Label22.TabIndex = 45
         Me.Label22.Text = "DevTools"
         '
@@ -1388,16 +1404,28 @@ Partial Class Form1
         Me.Panel7.Size = New System.Drawing.Size(334, 81)
         Me.Panel7.TabIndex = 56
         '
-        'WhatsNewToolStripMenuItem
+        'Label19
         '
-        Me.WhatsNewToolStripMenuItem.Name = "WhatsNewToolStripMenuItem"
-        Me.WhatsNewToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
-        Me.WhatsNewToolStripMenuItem.Text = "What's new in this version"
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(23, 102)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(42, 17)
+        Me.Label19.TabIndex = 58
+        Me.Label19.Text = "Style :"
         '
-        'ToolStripSeparator1
+        'ClearAllSavesToolStripMenuItem
         '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(208, 6)
+        Me.ClearAllSavesToolStripMenuItem.Name = "ClearAllSavesToolStripMenuItem"
+        Me.ClearAllSavesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClearAllSavesToolStripMenuItem.Text = "Clear all saves"
+        '
+        'SaveToolStripMenuItem
+        '
+        Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
+        Me.SaveToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SaveToolStripMenuItem.Text = "Save"
         '
         'Form1
         '
@@ -1524,7 +1552,6 @@ Partial Class Form1
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label17 As Label
     Friend WithEvents OpenFileDialog2 As OpenFileDialog
-    Friend WithEvents Label19 As Label
     Friend WithEvents Label20 As Label
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
     Friend WithEvents InstallationGuideToolStripMenuItem As ToolStripMenuItem
@@ -1614,4 +1641,8 @@ Partial Class Form1
     Friend WithEvents Panel7 As Panel
     Friend WithEvents WhatsNewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents CheckBox5 As CheckBox
+    Friend WithEvents Label19 As Label
+    Friend WithEvents ClearAllSavesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SaveToolStripMenuItem As ToolStripMenuItem
 End Class

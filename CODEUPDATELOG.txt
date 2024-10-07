@@ -1,19 +1,14 @@
-Builder Release 7.0.0
+Builder Release 7.1.0
 
 ** Release notes **
-- BREAKING: Remove Quick Buid mode and rename clean and packaging mode.
-- BREAKING: This version only support 6.0.0 or newer resource.
-- ADDED: What's new page in Help menu.
-- IMPROVEMENT: Updated CefSharp to 128.4.90
-- IMPROVEMENT: Updated Chromium to 128.0.6613.120
-- IMPROVEMENT: Improved app size efficiency.
-- IMPROVEMENT: Main user interfaces improvements.
-- CHANGED: Error page button text changing.
-- CHANGED: New modern splash screen design.
-- CHANGED: Temporary disabled user data collections.
-- CHANGED: Changed some buttons inside about page.
-- FIXED: Unable to fetch news with server due to server shutdown.
-- FIXED: Some user may unable to enter preference.
-
-** Low-level **
-- ADDED: Additional directory structure check.
+- BREAKING: This version only support 6.1.0 or newer resource.
+- BREAKING: Upgrading to this version will reset all settings.
+- ADDED: Add option to make window size fixed.
+- ADDED: Welcome Message can be edit and test even there is no resource.
+- ADDED: Clear all saves button in file menu.
+- ADDED: You can now save in file menu or using CTRL+S shortcut.
+- ADDED: You can now save window size with save button.
+- FIXED: Clear all function will now reset window size.
+- FIXED: Open Start Window will now reset window size.
+- CHANGED: Removed save options.
+- CHANGED: Minor user interface adjustments.

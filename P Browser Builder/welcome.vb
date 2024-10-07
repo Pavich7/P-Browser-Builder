@@ -23,37 +23,63 @@ Public Class welcome
         Form1.Enabled = False
         Dim fileReader11 As System.IO.StreamReader
         Dim fileReader21 As System.IO.StreamReader
+        Dim fileReader31 As System.IO.StreamReader
+        Dim fileReader41 As System.IO.StreamReader
         fileReader11 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.urlsave.pbsf")
         fileReader21 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.anamesave.pbsf")
+        fileReader31 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.wwindow.pbsf")
+        fileReader41 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.hwindow.pbsf")
         Dim stringReader11 As String
         Dim stringReader21 As String
+        Dim stringReader31 As String
+        Dim stringReader41 As String
         stringReader11 = fileReader11.ReadLine()
         stringReader21 = fileReader21.ReadLine()
+        stringReader31 = fileReader31.ReadLine()
+        stringReader41 = fileReader41.ReadLine()
         If stringReader11 = "" Then
             If stringReader21 = "" Then
-                Panel2.Enabled = False
-                Label1.Text = "Load last saved project. (Not Found)"
+                If stringReader31 = "" Then
+                    If stringReader41 = "" Then
+                        Panel2.Enabled = False
+                        Label1.Text = "Load last saved project. (Not Found)"
+                    End If
+                End If
             End If
         End If
         fileReader11.Close()
         fileReader21.Close()
+        fileReader31.Close()
+        fileReader41.Close()
     End Sub
 
     Private Sub Panel2_Paint(sender As Object, e As EventArgs) Handles Panel2.Click
         Dim apppath As String = Application.StartupPath()
         Dim fileReader11 As System.IO.StreamReader
         Dim fileReader21 As System.IO.StreamReader
+        Dim fileReader31 As System.IO.StreamReader
+        Dim fileReader41 As System.IO.StreamReader
         fileReader11 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.urlsave.pbsf")
         fileReader21 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.anamesave.pbsf")
+        fileReader31 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.wwindow.pbsf")
+        fileReader41 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.hwindow.pbsf")
         Dim stringReader11 As String
         Dim stringReader21 As String
+        Dim stringReader31 As String
+        Dim stringReader41 As String
         stringReader11 = fileReader11.ReadLine()
         stringReader21 = fileReader21.ReadLine()
+        stringReader31 = fileReader31.ReadLine()
+        stringReader41 = fileReader41.ReadLine()
         Form1.TextBox1.Text = stringReader11
         Form1.TextBox2.Text = stringReader21
+        Form1.TextBox3.Text = stringReader31
+        Form1.TextBox4.Text = stringReader41
         Form1.Enabled = True
         fileReader11.Close()
         fileReader21.Close()
+        fileReader31.Close()
+        fileReader41.Close()
         Me.Close()
     End Sub
 
@@ -77,17 +103,29 @@ Public Class welcome
         Dim apppath As String = Application.StartupPath()
         Dim fileReader11 As System.IO.StreamReader
         Dim fileReader21 As System.IO.StreamReader
+        Dim fileReader31 As System.IO.StreamReader
+        Dim fileReader41 As System.IO.StreamReader
         fileReader11 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.urlsave.pbsf")
         fileReader21 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.anamesave.pbsf")
+        fileReader31 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.wwindow.pbsf")
+        fileReader41 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.hwindow.pbsf")
         Dim stringReader11 As String
         Dim stringReader21 As String
+        Dim stringReader31 As String
+        Dim stringReader41 As String
         stringReader11 = fileReader11.ReadLine()
         stringReader21 = fileReader21.ReadLine()
+        stringReader31 = fileReader31.ReadLine()
+        stringReader41 = fileReader41.ReadLine()
         Form1.TextBox1.Text = stringReader11
         Form1.TextBox2.Text = stringReader21
+        Form1.TextBox3.Text = stringReader31
+        Form1.TextBox4.Text = stringReader41
         Form1.Enabled = True
         fileReader11.Close()
         fileReader21.Close()
+        fileReader31.Close()
+        fileReader41.Close()
         Me.Close()
     End Sub
 
@@ -95,17 +133,29 @@ Public Class welcome
         Dim apppath As String = Application.StartupPath()
         Dim fileReader11 As System.IO.StreamReader
         Dim fileReader21 As System.IO.StreamReader
+        Dim fileReader31 As System.IO.StreamReader
+        Dim fileReader41 As System.IO.StreamReader
         fileReader11 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.urlsave.pbsf")
         fileReader21 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.anamesave.pbsf")
+        fileReader31 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.wwindow.pbsf")
+        fileReader41 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.hwindow.pbsf")
         Dim stringReader11 As String
         Dim stringReader21 As String
+        Dim stringReader31 As String
+        Dim stringReader41 As String
         stringReader11 = fileReader11.ReadLine()
         stringReader21 = fileReader21.ReadLine()
+        stringReader31 = fileReader31.ReadLine()
+        stringReader41 = fileReader41.ReadLine()
         Form1.TextBox1.Text = stringReader11
         Form1.TextBox2.Text = stringReader21
+        Form1.TextBox3.Text = stringReader31
+        Form1.TextBox4.Text = stringReader41
         Form1.Enabled = True
         fileReader11.Close()
         fileReader21.Close()
+        fileReader31.Close()
+        fileReader41.Close()
         Me.Close()
     End Sub
 
@@ -113,17 +163,29 @@ Public Class welcome
         Dim apppath As String = Application.StartupPath()
         Dim fileReader11 As System.IO.StreamReader
         Dim fileReader21 As System.IO.StreamReader
+        Dim fileReader31 As System.IO.StreamReader
+        Dim fileReader41 As System.IO.StreamReader
         fileReader11 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.urlsave.pbsf")
         fileReader21 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.anamesave.pbsf")
+        fileReader31 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.wwindow.pbsf")
+        fileReader41 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.hwindow.pbsf")
         Dim stringReader11 As String
         Dim stringReader21 As String
+        Dim stringReader31 As String
+        Dim stringReader41 As String
         stringReader11 = fileReader11.ReadLine()
         stringReader21 = fileReader21.ReadLine()
+        stringReader31 = fileReader31.ReadLine()
+        stringReader41 = fileReader41.ReadLine()
         Form1.TextBox1.Text = stringReader11
         Form1.TextBox2.Text = stringReader21
+        Form1.TextBox3.Text = stringReader31
+        Form1.TextBox4.Text = stringReader41
         Form1.Enabled = True
         fileReader11.Close()
         fileReader21.Close()
+        fileReader31.Close()
+        fileReader41.Close()
         Me.Close()
     End Sub
 
