@@ -21,6 +21,7 @@ Public Class Form1
             Dim pbprogw As String = apppath + "\resource\testspace\appsizew.pbcfg"
             Dim pbprogh As String = apppath + "\resource\testspace\appsizeh.pbcfg"
             Dim pbprogfw As String = apppath + "\resource\testspace\appfixbs.pbcfg"
+            Dim pbprogaot As String = apppath + "\resource\testspace\appaot.pbcfg"
             Dim testapp As String = apppath + "\resource\testspace\P Browser App.exe"
             ProgressBar1.Value = 20
             If System.IO.File.Exists(pbcfg) = True Then
@@ -30,6 +31,7 @@ Public Class Form1
                 Dim objWriter3 As New System.IO.StreamWriter(pbprogh)
                 Dim objWriter4 As New System.IO.StreamWriter(pbprogw)
                 Dim objWriter5 As New System.IO.StreamWriter(pbprogfw)
+                Dim objWriter6 As New System.IO.StreamWriter(pbprogaot)
                 objWriter.Write(TextBox1.Text)
                 objWriter.Close()
                 objWriter2.Write(TextBox2.Text)
@@ -42,6 +44,10 @@ Public Class Form1
                     objWriter5.Write("True")
                 End If
                 objWriter5.Close()
+                If CheckBox6.Checked = True Then
+                    objWriter6.Write("True")
+                End If
+                objWriter6.Close()
                 Dim icnexist As String = apppath + "\resource\testspace\appicns.ico"
                 If System.IO.File.Exists(icnexist) Then
                     My.Computer.FileSystem.DeleteFile(apppath + "\resource\testspace\appicns.ico")
@@ -108,6 +114,12 @@ Public Class Form1
                         objWriter50.Write("True")
                     End If
                     objWriter50.Close()
+                    Dim pbprogaot As String = apppath + "\resource\buildspace\appaot.pbcfg"
+                    Dim objWriter51 As New System.IO.StreamWriter(pbprogaot)
+                    If CheckBox6.Checked = True Then
+                        objWriter51.Write("True")
+                    End If
+                    objWriter51.Close()
                     ProgressBar1.Value = 50
                     My.Computer.FileSystem.CopyDirectory(apppath + "\resource\buildspace", apppath + "\binary", True)
                     My.Computer.FileSystem.RenameFile(apppath + "\binary\P Browser App.exe", TextBox2.Text + ".exe")
@@ -193,6 +205,12 @@ Public Class Form1
                         objWriter50.Write("True")
                     End If
                     objWriter50.Close()
+                    Dim pbprogaot As String = apppath + "\resource\buildspace\appaot.pbcfg"
+                    Dim objWriter51 As New System.IO.StreamWriter(pbprogaot)
+                    If CheckBox6.Checked = True Then
+                        objWriter51.Write("True")
+                    End If
+                    objWriter51.Close()
                     ProgressBar1.Value = 50
                     My.Computer.FileSystem.CopyDirectory(apppath + "\resource\buildspace", apppath + "\binary", True)
                     My.Computer.FileSystem.RenameFile(apppath + "\binary\P Browser App.exe", TextBox2.Text + ".exe")
@@ -627,6 +645,9 @@ Public Class Form1
         CheckBox1.Checked = False
         CheckBox2.Checked = False
         CheckBox3.Checked = False
+        CheckBox4.Checked = False
+        CheckBox5.Checked = False
+        CheckBox6.Checked = False
         System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
         System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
     End Sub
@@ -967,15 +988,7 @@ Public Class Form1
     Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
         TextBox1.Text = ""
         TextBox2.Text = ""
-        Dim apppath As String = Application.StartupPath()
-        Dim pbcfg1 As String = apppath + "\statedata\usersave.builder.anamesave.pbsf"
-        Dim objWriter1 As New System.IO.StreamWriter(pbcfg1)
-        objWriter1.Write(TextBox2.Text)
-        objWriter1.Close()
-        Dim pbcfg2 As String = apppath + "\statedata\usersave.builder.urlsave.pbsf"
-        Dim objWriter2 As New System.IO.StreamWriter(pbcfg2)
-        objWriter2.Write(TextBox1.Text)
-        objWriter2.Close()
+        CheckBox3.Checked = False
     End Sub
 
     Private Sub PictureBox8_Click(sender As Object, e As EventArgs) Handles PictureBox8.Click
@@ -1072,7 +1085,9 @@ Public Class Form1
             Button1.Enabled = True
             CheckBox1.Checked = False
             CheckBox2.Checked = False
-            CheckBox3.Checked = False
+            CheckBox4.Checked = False
+            CheckBox5.Checked = False
+            CheckBox6.Checked = False
             System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
             System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
             welcome.Show()
@@ -1094,6 +1109,7 @@ Public Class Form1
         TextBox3.Text = "944"
         TextBox4.Text = "573"
         CheckBox5.Checked = False
+        CheckBox6.Checked = False
     End Sub
 
     Private Sub PictureBox11_Click(sender As Object, e As EventArgs) Handles PictureBox11.Click

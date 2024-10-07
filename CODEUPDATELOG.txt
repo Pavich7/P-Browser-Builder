@@ -1,9 +1,12 @@
 Builder Release 7.1.0
 
+** Release Highlights **
+- HIGHLIGHTS: Add option to make window size fixed.
+- HIGHLIGHTS: Add option to make app always on top.
+
 ** Release notes **
 - BREAKING: This version only support 6.1.0 or newer resource.
 - BREAKING: Upgrading to this version will reset all settings.
-- ADDED: Add option to make window size fixed.
 - ADDED: Welcome Message can be edit and test even there is no resource.
 - ADDED: Clear all saves button in file menu.
 - ADDED: You can now save in file menu or using CTRL+S shortcut.
@@ -12,6 +15,8 @@ Builder Release 7.1.0
 - FIXED: Clear all function will now reset window size.
 - FIXED: Open Start Window will now reset window size.
 - FIXED: Some buttons in about page leading to wrong URL.
+- FIXED: Some buttons still remain checked after using Clear all.
 - CHANGED: Removed save options.
 - CHANGED: Minor user interface adjustments.
 - CHANGED: Updated EULA page to latest version.
+- CHANGED: Clear buttons in section will not delete saves.
