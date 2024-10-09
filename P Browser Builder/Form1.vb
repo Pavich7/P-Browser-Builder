@@ -1,4 +1,5 @@
-﻿Imports System.IO.Compression
+﻿Imports System.ComponentModel
+Imports System.IO.Compression
 Imports System.Net
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports CefSharp
@@ -674,7 +675,8 @@ Public Class Form1
         End Try
     End Sub
 
-    Private Async Sub Label18_Click(sender As Object, e As EventArgs) Handles Label18.Click
+    Private Sub Label18_Click(sender As Object, e As EventArgs) Handles Label18.Click
+
         Label7.Text = "Installing Resource (Waiting for confirmation)"
         Timer2.Stop()
         ProgressBar1.Value = 0
@@ -683,66 +685,57 @@ Public Class Form1
         Label25.Text = "Paused"
         Dim result As DialogResult = MessageBox.Show("Do you wish to install builder resource?" + vbNewLine + "Builder will not responding while installing resource." + vbNewLine + "ATTEMPTING TO EXIT THE BUILDER MAY INCOMPLETE RESOURCE", "You sure about this?", MessageBoxButtons.YesNo)
         If (result = DialogResult.Yes) Then
+            dlworker.RunWorkerAsync()
             Label7.Text = "Installing Resource..."
-            Label18.Text = "Installing..."
-            Try
-                Label18.Enabled = False
-                Dim apppath As String = Application.StartupPath()
-                ProgressBar1.Value = 0
-                System.IO.Directory.Delete(apppath + "\statecache\updatecache", True)
-                System.IO.Directory.CreateDirectory(apppath + "\statecache\updatecache")
-                ProgressBar1.Value = 25
-                Dim fileReader As System.IO.StreamReader
-                fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.resdlserver.pbcfg")
-                Dim stringReader As String
-                stringReader = fileReader.ReadLine()
-                Dim strURL As String = stringReader
-                Using webcli As WebClient = New WebClient()
-                    webcli.DownloadFile(strURL, apppath + "\statecache\updatecache\pbb-resource.zip")
-                End Using
-                ProgressBar1.Value = 50
-                Dim zipPath As String = apppath + "\statecache\updatecache\pbb-resource.zip"
-                Dim extractPath As String = apppath
-                ProgressBar1.Value = 60
-                ZipFile.ExtractToDirectory(zipPath, extractPath)
-                ProgressBar1.Value = 80
-                Try
-                    Process.Start(apppath + "\resource\resinit.exe")
-                Catch ex As Exception
-                    MessageBox.Show("Initialization Failed! dlresCH is not updated!" + vbNewLine + "Please contact PavichDev Support! Click OK to restart.", "Error!")
-                    Application.Restart()
-                End Try
-                Label7.Text = "First initializing Resource..."
-                Await Task.Delay(30000)
-                ProgressBar1.Value = 100
-                Dim result0 As DialogResult = MessageBox.Show("Do you want to delete installation cache?" + vbNewLine + "Cache can be used to reinstall using advanced sideload. Delete if you wanted to save space. You can delete it later in preference.", "Delete cache?", MessageBoxButtons.YesNo)
-                If (result0 = DialogResult.Yes) Then
-                    System.IO.Directory.Delete(apppath + "\statecache\updatecache", True)
-                    System.IO.Directory.CreateDirectory(apppath + "\statecache\updatecache")
-                End If
-                Dim result1 As DialogResult = MessageBox.Show("Installation completed but restart required!" + vbNewLine + "Do you want to restart P Browser Builder now?", "Installation completed!", MessageBoxButtons.YesNo)
-                If (result1 = DialogResult.Yes) Then
-                    Application.Restart()
-                Else
-                    Label18.Visible = False
-                    Label20.Visible = False
-                    Label7.Text = "Ready to build"
-                End If
-            Catch ex As Exception
-                Dim apppath As String = Application.StartupPath()
-                MessageBox.Show("Could not attempt to install resource!" + vbNewLine + ex.Message, "Error!")
-                Label18.Enabled = True
-                Label18.Text = "Try again..."
-                System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
-                System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
-                Label7.Text = "Ready to build"
-            End Try
+            Label18.Enabled = False
+            Label20.Text = "Resource is being installed..."
+            ProgressBar1.Style = ProgressBarStyle.Marquee
+            ProgressBar1.MarqueeAnimationSpeed = 40
         Else
             Timer2.Start()
             Label7.Text = "Ready to build"
         End If
     End Sub
-
+    Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles dlworker.RunWorkerCompleted
+        ProgressBar1.Style = ProgressBarStyle.Blocks
+        Dim apppath As String = Application.StartupPath()
+        Dim result0 As DialogResult = MessageBox.Show("Do you want to delete installation cache?" + vbNewLine + "Cache can be used to reinstall using advanced sideload. Delete if you wanted to save space. You can delete it later in preference.", "Delete cache?", MessageBoxButtons.YesNo)
+        If (result0 = DialogResult.Yes) Then
+            System.IO.Directory.Delete(apppath + "\statecache\updatecache", True)
+            System.IO.Directory.CreateDirectory(apppath + "\statecache\updatecache")
+        End If
+        Dim result1 As DialogResult = MessageBox.Show("Installation completed but restart required for fully functional!" + vbNewLine + "Do you want to restart P Browser Builder now?", "Installation completed!", MessageBoxButtons.YesNo)
+        If (result1 = DialogResult.Yes) Then
+            Application.Restart()
+        Else
+            Label18.Visible = False
+            Label20.Visible = False
+            Label7.Text = "Ready to build"
+        End If
+    End Sub
+    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles dlworker.DoWork
+        Try
+            Dim apppath As String = Application.StartupPath()
+            System.IO.Directory.Delete(apppath + "\statecache\updatecache", True)
+            System.IO.Directory.CreateDirectory(apppath + "\statecache\updatecache")
+            Dim fileReader As System.IO.StreamReader
+            fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.resdlserver.pbcfg")
+            Dim stringReader As String
+            stringReader = fileReader.ReadLine()
+            Dim strURL As String = stringReader
+            Using webcli As WebClient = New WebClient()
+                webcli.DownloadFile(strURL, apppath + "\statecache\updatecache\pbb-resource.zip")
+            End Using
+            Dim zipPath As String = apppath + "\statecache\updatecache\pbb-resource.zip"
+            Dim extractPath As String = apppath
+            ZipFile.ExtractToDirectory(zipPath, extractPath)
+            Process.Start(apppath + "\resource\resinit.exe")
+            System.Threading.Thread.Sleep(30000)
+        Catch ex As Exception
+            MessageBox.Show("Could not attempt to install resource! Builder need to restart!" + vbNewLine + ex.Message, "Error!")
+            Application.Restart()
+        End Try
+    End Sub
     Private Sub OpenRemoteDebuggingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenRemoteDebuggingToolStripMenuItem.Click
         Process.Start("http://127.0.0.1:8088/")
     End Sub

@@ -111,6 +111,7 @@ Partial Class Form1
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.CheckBox5 = New System.Windows.Forms.CheckBox()
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
@@ -157,7 +158,7 @@ Partial Class Form1
         Me.Label37 = New System.Windows.Forms.Label()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
+        Me.dlworker = New System.ComponentModel.BackgroundWorker()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -907,6 +908,17 @@ Partial Class Form1
         Me.Panel6.Size = New System.Drawing.Size(316, 561)
         Me.Panel6.TabIndex = 16
         '
+        'CheckBox6
+        '
+        Me.CheckBox6.AutoSize = True
+        Me.CheckBox6.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox6.Location = New System.Drawing.Point(187, 101)
+        Me.CheckBox6.Name = "CheckBox6"
+        Me.CheckBox6.Size = New System.Drawing.Size(105, 21)
+        Me.CheckBox6.TabIndex = 59
+        Me.CheckBox6.Text = "Always on top"
+        Me.CheckBox6.UseVisualStyleBackColor = True
+        '
         'Label19
         '
         Me.Label19.AutoSize = True
@@ -1429,16 +1441,8 @@ Partial Class Form1
         Me.Panel7.Size = New System.Drawing.Size(334, 81)
         Me.Panel7.TabIndex = 56
         '
-        'CheckBox6
+        'dlworker
         '
-        Me.CheckBox6.AutoSize = True
-        Me.CheckBox6.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox6.Location = New System.Drawing.Point(187, 101)
-        Me.CheckBox6.Name = "CheckBox6"
-        Me.CheckBox6.Size = New System.Drawing.Size(105, 21)
-        Me.CheckBox6.TabIndex = 59
-        Me.CheckBox6.Text = "Always on top"
-        Me.CheckBox6.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -1659,4 +1663,5 @@ Partial Class Form1
     Friend WithEvents ClearAllSavesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SaveToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CheckBox6 As CheckBox
+    Friend WithEvents dlworker As System.ComponentModel.BackgroundWorker
 End Class

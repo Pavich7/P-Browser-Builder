@@ -1,7 +1,9 @@
 ﻿Public Class splash
     Private Sub splash_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Randomize()
+        Dim sprand As Integer = CInt(Math.Ceiling(Rnd() * 3))
         Dim apppath As String = Application.StartupPath()
-        Me.BackgroundImage = Image.FromFile(apppath + "\imgassets\splash.png")
+        Me.BackgroundImage = Image.FromFile(apppath + "\imgassets\splash_collection\splash" & sprand & ".png")
         Timer1.Start()
     End Sub
 
