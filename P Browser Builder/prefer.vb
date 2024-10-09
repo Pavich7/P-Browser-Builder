@@ -6,7 +6,6 @@ Public Class prefer
         Dim apppath As String = Application.StartupPath()
         Dim rescheck As String = apppath + "\resource"
         Dim cachecheck As String = apppath + "\statecache\updatecache\pbb-resource.zip"
-        Me.Size = New Size(516, 486)
         If Not System.IO.File.Exists(cachecheck) Then
             Label9.Enabled = False
         End If
@@ -192,22 +191,6 @@ Public Class prefer
         End If
     End Sub
 
-    Private Sub Label29_Click(sender As Object, e As EventArgs) Handles Label29.Click
-        Dim result As DialogResult = MessageBox.Show("Unlocking the Advanced Menu is dangerous." + vbNewLine + "This menu is used to install or modify builder resouces." + vbNewLine + "" + vbNewLine + "Do you want to process it?", "You sure about this?", MessageBoxButtons.YesNo)
-        If (result = DialogResult.Yes) Then
-            Me.Size = New Size(516, 631)
-            Label29.Enabled = False
-            Label22.Enabled = True
-            Label24.Enabled = True
-            Label25.Enabled = True
-            Label28.Enabled = True
-            TextBox1.Enabled = True
-            Label19.Enabled = True
-            Label20.Enabled = True
-            Label21.Enabled = True
-        End If
-    End Sub
-
     Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
         MessageBox.Show("To update resource, please uninstall and reinstall resource!" + vbNewLine + "Relaunch preference to recheck for update.", "Info")
     End Sub
@@ -237,5 +220,21 @@ Public Class prefer
 
     Private Sub Label32_Click(sender As Object, e As EventArgs) Handles Label32.Click
         MessageBox.Show("If you already have pbb-resource.zip file or your custom one, using this button to install from file rather than download new ones. Please note that custom resource can be risky.", "More informations...")
+    End Sub
+
+    Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Enter
+        Dim result As DialogResult = MessageBox.Show("Unlocking the Advanced Menu is dangerous." + vbNewLine + "This menu is used to install or modify builder resouces." + vbNewLine + "" + vbNewLine + "Do you want to process it?", "You sure about this?", MessageBoxButtons.YesNo)
+        If (result = DialogResult.Yes) Then
+            Label22.Enabled = True
+            Label24.Enabled = True
+            Label25.Enabled = True
+            Label28.Enabled = True
+            TextBox1.Enabled = True
+            Label19.Enabled = True
+            Label20.Enabled = True
+            Label21.Enabled = True
+        Else
+            TabControl1.SelectedTab = TabPage1
+        End If
     End Sub
 End Class

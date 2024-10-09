@@ -683,7 +683,7 @@ Public Class Form1
         ProgressBar3.Value = 0
         Label23.Text = "Memory Usage: Paused"
         Label25.Text = "Paused"
-        Dim result As DialogResult = MessageBox.Show("Do you wish to install builder resource?" + vbNewLine + "Builder will not responding while installing resource." + vbNewLine + "ATTEMPTING TO EXIT THE BUILDER MAY INCOMPLETE RESOURCE", "You sure about this?", MessageBoxButtons.YesNo)
+        Dim result As DialogResult = MessageBox.Show("Do you wish to install builder resource?" + vbNewLine + "Attempting to exit the builder may incomplete resources!", "You sure about this?", MessageBoxButtons.YesNo)
         If (result = DialogResult.Yes) Then
             dlworker.RunWorkerAsync()
             Label7.Text = "Installing Resource..."
