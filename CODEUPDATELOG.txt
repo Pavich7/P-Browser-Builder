@@ -19,6 +19,7 @@ Builder Release 7.1.0
 - FIXED: Some buttons in about page leading to wrong URL.
 - FIXED: Some buttons still remain checked after using Clear all.
 - CHANGED: Removed save options.
+- CHANGED: Introduce new formats of build number.
 - CHANGED: Minor user interface adjustments.
 - CHANGED: Updated EULA page to latest version.
 - CHANGED: Clear buttons in section will not delete saves.

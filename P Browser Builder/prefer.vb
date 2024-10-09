@@ -146,7 +146,7 @@ Public Class prefer
                 Try
                     Process.Start(apppath + "\resource\resinit.exe")
                 Catch ex As Exception
-                    MessageBox.Show("Initialization Failed! dlresCH is not updated!" + vbNewLine + "Please contact PavichDev Support! Click OK to restart.", "Error!")
+                    MessageBox.Show("Initialization Failed!", "Error!")
                     Application.Restart()
                 End Try
                 Label7.Text = "First initializing Resource..."
