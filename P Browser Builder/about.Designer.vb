@@ -35,7 +35,7 @@ Partial Class about
         '
         Me.Label30.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label30.AutoSize = True
-        Me.Label30.BackColor = System.Drawing.Color.White
+        Me.Label30.BackColor = System.Drawing.Color.Transparent
         Me.Label30.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label30.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
         Me.Label30.ForeColor = System.Drawing.SystemColors.HotTrack
@@ -49,7 +49,7 @@ Partial Class about
         '
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.White
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
         Me.Label1.ForeColor = System.Drawing.SystemColors.HotTrack
@@ -63,7 +63,7 @@ Partial Class about
         '
         Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.White
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
         Me.Label2.ForeColor = System.Drawing.SystemColors.HotTrack
@@ -77,7 +77,7 @@ Partial Class about
         '
         Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.White
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
         Me.Label3.ForeColor = System.Drawing.SystemColors.HotTrack
@@ -91,7 +91,7 @@ Partial Class about
         '
         Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.White
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Cursor = System.Windows.Forms.Cursors.Default
         Me.Label6.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
         Me.Label6.ForeColor = System.Drawing.Color.Gray
@@ -105,7 +105,7 @@ Partial Class about
         '
         Me.Label7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.White
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Cursor = System.Windows.Forms.Cursors.Default
         Me.Label7.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
         Me.Label7.ForeColor = System.Drawing.Color.Gray
@@ -119,7 +119,7 @@ Partial Class about
         '
         Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.White
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Cursor = System.Windows.Forms.Cursors.Default
         Me.Label8.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
         Me.Label8.ForeColor = System.Drawing.Color.Gray

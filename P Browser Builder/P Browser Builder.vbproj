@@ -310,6 +310,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="whatsnew.resx">
       <DependentUpon>whatsnew.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

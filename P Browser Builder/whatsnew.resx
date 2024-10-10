@@ -134,6 +134,7 @@
 - ADDED: You can now save window size with save button.
 - ADDED: Warning before exit if url textbox is not empty.
 - ADDED: Release note can now scroll and bigger text.
+- ADDED: Introduce new shuffle splash screen.
 - IMPROVEMENT: Updated CefSharp to 129.0.110
 - IMPROVEMENT: Updated Chromium to 129.0.6668.90
 - IMPROVEMENT: Builder will no longer freeze while installing resource.
