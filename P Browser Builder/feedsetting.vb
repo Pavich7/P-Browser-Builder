@@ -1,4 +1,6 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+﻿Imports System.Net
+Imports System.Reflection.Emit
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class feedsetting
     Private Sub feedsetting_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -26,5 +28,21 @@ Public Class feedsetting
         End If
         Me.Close()
         objWriter.Close()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Try
+            Dim client As WebClient = New WebClient()
+            Dim nf1desc As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v1/nf/nf1_desc.txt")
+            Dim nf1titl As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v1/nf/nf1_title.txt")
+            Dim nf1date As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v1/nf/nf1_date.txt")
+            Form1.Label12.Text = nf1titl
+            Form1.Label13.Text = nf1desc
+            Form1.Label14.Text = nf1date
+            MessageBox.Show("News Feed refreshed!", "OK!")
+            Me.Close()
+        Catch ex As Exception
+            MessageBox.Show("Error while refreshing News Feed", "Error!")
+        End Try
     End Sub
 End Class
