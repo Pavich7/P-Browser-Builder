@@ -33,8 +33,10 @@ Partial Class Form1
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReloadPreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OpenPreviewLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenRemoteDebuggingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DebugLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CefSharpLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ChromiumLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExtensionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExtensionsNotFoundToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -236,7 +238,7 @@ Partial Class Form1
         '
         'PreviewToolStripMenuItem
         '
-        Me.PreviewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReloadPreviewToolStripMenuItem, Me.OpenPreviewLogToolStripMenuItem, Me.OpenRemoteDebuggingToolStripMenuItem})
+        Me.PreviewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReloadPreviewToolStripMenuItem, Me.OpenRemoteDebuggingToolStripMenuItem, Me.DebugLogToolStripMenuItem})
         Me.PreviewToolStripMenuItem.Name = "PreviewToolStripMenuItem"
         Me.PreviewToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
         Me.PreviewToolStripMenuItem.Text = "Preview"
@@ -248,17 +250,30 @@ Partial Class Form1
         Me.ReloadPreviewToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
         Me.ReloadPreviewToolStripMenuItem.Text = "Reload Preview"
         '
-        'OpenPreviewLogToolStripMenuItem
-        '
-        Me.OpenPreviewLogToolStripMenuItem.Name = "OpenPreviewLogToolStripMenuItem"
-        Me.OpenPreviewLogToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
-        Me.OpenPreviewLogToolStripMenuItem.Text = "Open Preview Log"
-        '
         'OpenRemoteDebuggingToolStripMenuItem
         '
         Me.OpenRemoteDebuggingToolStripMenuItem.Name = "OpenRemoteDebuggingToolStripMenuItem"
         Me.OpenRemoteDebuggingToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
         Me.OpenRemoteDebuggingToolStripMenuItem.Text = "Open Remote Debugging"
+        '
+        'DebugLogToolStripMenuItem
+        '
+        Me.DebugLogToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CefSharpLogToolStripMenuItem, Me.ChromiumLogToolStripMenuItem})
+        Me.DebugLogToolStripMenuItem.Name = "DebugLogToolStripMenuItem"
+        Me.DebugLogToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.DebugLogToolStripMenuItem.Text = "Debug Log"
+        '
+        'CefSharpLogToolStripMenuItem
+        '
+        Me.CefSharpLogToolStripMenuItem.Name = "CefSharpLogToolStripMenuItem"
+        Me.CefSharpLogToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CefSharpLogToolStripMenuItem.Text = "CefSharp Log"
+        '
+        'ChromiumLogToolStripMenuItem
+        '
+        Me.ChromiumLogToolStripMenuItem.Name = "ChromiumLogToolStripMenuItem"
+        Me.ChromiumLogToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ChromiumLogToolStripMenuItem.Text = "Chromium Log"
         '
         'ExtensionsToolStripMenuItem
         '
@@ -1577,7 +1592,6 @@ Partial Class Form1
     Friend WithEvents SubmitBugsReportToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PreviewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReloadPreviewToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents OpenPreviewLogToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label18 As Label
     Friend WithEvents OpenRemoteDebuggingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Timer2 As Timer
@@ -1664,4 +1678,7 @@ Partial Class Form1
     Friend WithEvents SaveToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CheckBox6 As CheckBox
     Friend WithEvents dlworker As System.ComponentModel.BackgroundWorker
+    Friend WithEvents DebugLogToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CefSharpLogToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ChromiumLogToolStripMenuItem As ToolStripMenuItem
 End Class

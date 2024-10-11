@@ -666,15 +666,6 @@ Public Class Form1
         Browser.Refresh()
     End Sub
 
-    Private Sub OpenPreviewLogToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenPreviewLogToolStripMenuItem.Click
-        Try
-            Dim apppath As String = Application.StartupPath()
-            Process.Start(apppath + "\debug.log")
-        Catch ex As Exception
-            MessageBox.Show("Log not found! Maybe you can load some web and try again.", "Error!")
-        End Try
-    End Sub
-
     Private Sub Label18_Click(sender As Object, e As EventArgs) Handles Label18.Click
 
         Label7.Text = "Installing Resource (Waiting for confirmation)"
@@ -1178,6 +1169,24 @@ Public Class Form1
             MessageBox.Show("Saved!", "Completed!")
         Catch ex As Exception
             MessageBox.Show("Save Failed!", "Error!")
+        End Try
+    End Sub
+
+    Private Sub CefSharpLogToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CefSharpLogToolStripMenuItem.Click
+        Try
+            Dim apppath As String = Application.StartupPath()
+            Process.Start(apppath + "\debug.log")
+        Catch ex As Exception
+            MessageBox.Show("Log not found! Maybe you can load some web and try again.", "Error!")
+        End Try
+    End Sub
+
+    Private Sub ChromiumLogToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChromiumLogToolStripMenuItem.Click
+        Try
+            Dim apppath As String = Application.StartupPath()
+            Process.Start(apppath + "\statecache\chrome_debug.log")
+        Catch ex As Exception
+            MessageBox.Show("Log not found! Maybe you can load some web and try again.", "Error!")
         End Try
     End Sub
 End Class
