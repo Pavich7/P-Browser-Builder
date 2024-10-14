@@ -23,7 +23,6 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -34,33 +33,24 @@ Partial Class Form1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.cpworker = New System.ComponentModel.BackgroundWorker()
         Me.Panel3.SuspendLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Update_Utility.My.Resources.Resources.Screenshot_2023_02_18_190610
-        Me.PictureBox1.Location = New System.Drawing.Point(-1, -4)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(776, 141)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
         '
         'Label3
         '
@@ -104,7 +94,7 @@ Partial Class Form1
         Me.Label7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(20, 331)
+        Me.Label7.Location = New System.Drawing.Point(20, 312)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(88, 17)
         Me.Label7.TabIndex = 37
@@ -113,7 +103,7 @@ Partial Class Form1
         'ProgressBar1
         '
         Me.ProgressBar1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ProgressBar1.Location = New System.Drawing.Point(20, 351)
+        Me.ProgressBar1.Location = New System.Drawing.Point(20, 332)
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(697, 10)
         Me.ProgressBar1.TabIndex = 36
@@ -122,9 +112,9 @@ Partial Class Form1
         '
         Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Button3.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(20, 372)
+        Me.Button3.Location = New System.Drawing.Point(20, 353)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(384, 35)
+        Me.Button3.Size = New System.Drawing.Size(532, 35)
         Me.Button3.TabIndex = 35
         Me.Button3.Text = "Start"
         Me.Button3.UseVisualStyleBackColor = True
@@ -133,7 +123,7 @@ Partial Class Form1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Button1.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(558, 372)
+        Me.Button1.Location = New System.Drawing.Point(558, 353)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(159, 35)
         Me.Button1.TabIndex = 33
@@ -164,18 +154,6 @@ Partial Class Form1
         Me.RadioButton3.Text = "Update from /binary folder"
         Me.RadioButton3.UseVisualStyleBackColor = True
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label6.Location = New System.Drawing.Point(21, 301)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(110, 17)
-        Me.Label6.TabIndex = 41
-        Me.Label6.Text = "Clear update form"
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -194,14 +172,13 @@ Partial Class Form1
         Me.Panel3.Controls.Add(Me.Label13)
         Me.Panel3.Controls.Add(Me.Label14)
         Me.Panel3.Controls.Add(Me.Label15)
-        Me.Panel3.Controls.Add(Me.Label8)
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Controls.Add(Me.Label4)
         Me.Panel3.Controls.Add(Me.Label22)
         Me.Panel3.Controls.Add(Me.Label11)
         Me.Panel3.Location = New System.Drawing.Point(365, 190)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(352, 128)
+        Me.Panel3.Size = New System.Drawing.Size(352, 106)
         Me.Panel3.TabIndex = 43
         '
         'Label9
@@ -209,11 +186,11 @@ Partial Class Form1
         Me.Label9.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(13, 98)
+        Me.Label9.Location = New System.Drawing.Point(13, 77)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(59, 17)
+        Me.Label9.Size = New System.Drawing.Size(25, 17)
         Me.Label9.TabIndex = 44
-        Me.Label9.Text = "Version : "
+        Me.Label9.Text = "ver"
         '
         'Label13
         '
@@ -248,17 +225,6 @@ Partial Class Form1
         Me.Label15.TabIndex = 41
         Me.Label15.Text = "Redist : "
         '
-        'Label8
-        '
-        Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(13, 77)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(70, 17)
-        Me.Label8.TabIndex = 36
-        Me.Label8.Text = "Common : "
-        '
         'Label5
         '
         Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -266,9 +232,9 @@ Partial Class Form1
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(13, 56)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(74, 17)
+        Me.Label5.Size = New System.Drawing.Size(50, 17)
         Me.Label5.TabIndex = 35
-        Me.Label5.Text = "WinForms : "
+        Me.Label5.Text = "chrome"
         '
         'Label4
         '
@@ -277,9 +243,9 @@ Partial Class Form1
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(13, 35)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(52, 17)
+        Me.Label4.Size = New System.Drawing.Size(25, 17)
         Me.Label4.TabIndex = 34
-        Me.Label4.Text = "Redist : "
+        Me.Label4.Text = "cef"
         '
         'Label22
         '
@@ -303,27 +269,36 @@ Partial Class Form1
         Me.Label11.TabIndex = 27
         Me.Label11.Text = "Resoure info"
         '
-        'Button2
+        'PictureBox7
         '
-        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(410, 372)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(142, 35)
-        Me.Button2.TabIndex = 44
-        Me.Button2.Text = "Test"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.PictureBox7.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox7.Image = Global.Update_Utility.My.Resources.Resources.undo
+        Me.PictureBox7.Location = New System.Drawing.Point(332, 155)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(18, 23)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox7.TabIndex = 45
+        Me.PictureBox7.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Update_Utility.My.Resources.Resources.Screenshot_2023_02_18_190610
+        Me.PictureBox1.Location = New System.Drawing.Point(-1, -4)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(744, 141)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(740, 420)
-        Me.Controls.Add(Me.Button2)
+        Me.ClientSize = New System.Drawing.Size(740, 400)
+        Me.Controls.Add(Me.PictureBox7)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.RadioButton3)
         Me.Controls.Add(Me.RadioButton2)
         Me.Controls.Add(Me.Label7)
@@ -341,9 +316,10 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Update Utility"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -359,18 +335,17 @@ Partial Class Form1
     Friend WithEvents Button1 As Button
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents RadioButton3 As RadioButton
-    Friend WithEvents Label6 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
-    Friend WithEvents Label8 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label22 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents Button2 As Button
     Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
+    Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents cpworker As System.ComponentModel.BackgroundWorker
 End Class
