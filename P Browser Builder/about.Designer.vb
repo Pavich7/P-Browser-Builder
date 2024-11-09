@@ -39,7 +39,7 @@ Partial Class about
         Me.Label30.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label30.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
         Me.Label30.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label30.Location = New System.Drawing.Point(148, 472)
+        Me.Label30.Location = New System.Drawing.Point(78, 382)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(124, 19)
         Me.Label30.TabIndex = 21
@@ -53,7 +53,7 @@ Partial Class about
         Me.Label1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
         Me.Label1.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label1.Location = New System.Drawing.Point(282, 472)
+        Me.Label1.Location = New System.Drawing.Point(212, 382)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(134, 19)
         Me.Label1.TabIndex = 22
@@ -67,7 +67,7 @@ Partial Class about
         Me.Label2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
         Me.Label2.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label2.Location = New System.Drawing.Point(426, 472)
+        Me.Label2.Location = New System.Drawing.Point(356, 382)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(99, 19)
         Me.Label2.TabIndex = 23
@@ -81,7 +81,7 @@ Partial Class about
         Me.Label3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
         Me.Label3.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label3.Location = New System.Drawing.Point(535, 472)
+        Me.Label3.Location = New System.Drawing.Point(465, 382)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(120, 19)
         Me.Label3.TabIndex = 24
@@ -95,7 +95,7 @@ Partial Class about
         Me.Label6.Cursor = System.Windows.Forms.Cursors.Default
         Me.Label6.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
         Me.Label6.ForeColor = System.Drawing.Color.Gray
-        Me.Label6.Location = New System.Drawing.Point(525, 472)
+        Me.Label6.Location = New System.Drawing.Point(455, 382)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(12, 19)
         Me.Label6.TabIndex = 27
@@ -109,7 +109,7 @@ Partial Class about
         Me.Label7.Cursor = System.Windows.Forms.Cursors.Default
         Me.Label7.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
         Me.Label7.ForeColor = System.Drawing.Color.Gray
-        Me.Label7.Location = New System.Drawing.Point(415, 472)
+        Me.Label7.Location = New System.Drawing.Point(345, 382)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(12, 19)
         Me.Label7.TabIndex = 28
@@ -123,7 +123,7 @@ Partial Class about
         Me.Label8.Cursor = System.Windows.Forms.Cursors.Default
         Me.Label8.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
         Me.Label8.ForeColor = System.Drawing.Color.Gray
-        Me.Label8.Location = New System.Drawing.Point(271, 472)
+        Me.Label8.Location = New System.Drawing.Point(201, 382)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(12, 19)
         Me.Label8.TabIndex = 29
@@ -135,7 +135,7 @@ Partial Class about
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(817, 504)
+        Me.ClientSize = New System.Drawing.Size(670, 414)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)

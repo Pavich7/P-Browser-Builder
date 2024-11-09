@@ -2,3 +2,6 @@ Builder Release 7.2.0
 
 ** Release notes **
 - ADDED: Option to open Chromium Debug Log in Preview menu.
+- IMPROVEMENT: Updated CefSharp to 130.1.90
+- IMPROVEMENT: Updated Chromium to 130.0.6723.70
+- CHANGED: Redesign About page.
