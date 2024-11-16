@@ -3,6 +3,8 @@ Builder Release 7.3.0
 ** Release notes **
 - ADDED: News Feed Setting tab in preference.
 - ADDED: Diagnostic Setting tab in preference.
+- ADDED: User can use Ctrl + R to show right panel.
+- ADDED: User can use Ctrl + H to hide right panel.
 - IMPROVEMENT: Improve overall menubar experience.
 - CHANGED: Basics tab in preference renamed to General.
 - CHANGED: Moved News Feed Setting from window to preference.

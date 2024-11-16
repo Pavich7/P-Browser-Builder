@@ -1087,7 +1087,7 @@ Public Class Form1
         HideRightPanelToolStripMenuItem.Enabled = False
         ShowRightPanelToolStripMenuItem.Enabled = True
         Timer2.Stop()
-        MessageBox.Show("You can unhide right panel by click on" + vbNewLine + "Menu Strip: Window > Show right panel", "Notification")
+        MessageBox.Show("You can unhide right panel by click on" + vbNewLine + "Menu Strip: Window > Show right panel" + vbNewLine + "or using Ctrl + R Shortcut", "Notification")
     End Sub
 
     Private Sub PictureBox10_Click(sender As Object, e As EventArgs) Handles PictureBox10.Click

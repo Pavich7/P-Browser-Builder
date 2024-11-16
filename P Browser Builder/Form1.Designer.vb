@@ -330,13 +330,15 @@ Partial Class Form1
         'HideRightPanelToolStripMenuItem
         '
         Me.HideRightPanelToolStripMenuItem.Name = "HideRightPanelToolStripMenuItem"
-        Me.HideRightPanelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.HideRightPanelToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.H), System.Windows.Forms.Keys)
+        Me.HideRightPanelToolStripMenuItem.Size = New System.Drawing.Size(204, 22)
         Me.HideRightPanelToolStripMenuItem.Text = "Hide right panel"
         '
         'ShowRightPanelToolStripMenuItem
         '
         Me.ShowRightPanelToolStripMenuItem.Name = "ShowRightPanelToolStripMenuItem"
-        Me.ShowRightPanelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ShowRightPanelToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
+        Me.ShowRightPanelToolStripMenuItem.Size = New System.Drawing.Size(204, 22)
         Me.ShowRightPanelToolStripMenuItem.Text = "Show right panel"
         '
         'GuideToolStripMenuItem
