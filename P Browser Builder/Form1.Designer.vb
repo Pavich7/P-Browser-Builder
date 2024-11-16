@@ -161,6 +161,10 @@ Partial Class Form1
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.dlworker = New System.ComponentModel.BackgroundWorker()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -199,7 +203,7 @@ Partial Class Form1
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartWindowToolStripMenuItem, Me.SaveToolStripMenuItem, Me.ClearAllToolStripMenuItem, Me.ClearAllSavesToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartWindowToolStripMenuItem, Me.ToolStripSeparator4, Me.SaveToolStripMenuItem, Me.ClearAllToolStripMenuItem, Me.ClearAllSavesToolStripMenuItem, Me.ToolStripSeparator5, Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
@@ -207,44 +211,47 @@ Partial Class Form1
         'StartWindowToolStripMenuItem
         '
         Me.StartWindowToolStripMenuItem.Name = "StartWindowToolStripMenuItem"
-        Me.StartWindowToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
+        Me.StartWindowToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.StartWindowToolStripMenuItem.Text = "Start Window"
         '
         'SaveToolStripMenuItem
         '
+        Me.SaveToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.diskette
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
         Me.SaveToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
         'ClearAllToolStripMenuItem
         '
+        Me.ClearAllToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.remove
         Me.ClearAllToolStripMenuItem.Name = "ClearAllToolStripMenuItem"
-        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
+        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ClearAllToolStripMenuItem.Text = "Clear all"
         '
         'ClearAllSavesToolStripMenuItem
         '
         Me.ClearAllSavesToolStripMenuItem.Name = "ClearAllSavesToolStripMenuItem"
-        Me.ClearAllSavesToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
-        Me.ClearAllSavesToolStripMenuItem.Text = "Clear all saves"
+        Me.ClearAllSavesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClearAllSavesToolStripMenuItem.Text = "Clear saves"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'PreviewToolStripMenuItem
         '
-        Me.PreviewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReloadPreviewToolStripMenuItem, Me.OpenRemoteDebuggingToolStripMenuItem, Me.DebugLogToolStripMenuItem})
+        Me.PreviewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReloadPreviewToolStripMenuItem, Me.OpenRemoteDebuggingToolStripMenuItem, Me.ToolStripSeparator3, Me.DebugLogToolStripMenuItem})
         Me.PreviewToolStripMenuItem.Name = "PreviewToolStripMenuItem"
         Me.PreviewToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
         Me.PreviewToolStripMenuItem.Text = "Preview"
         '
         'ReloadPreviewToolStripMenuItem
         '
+        Me.ReloadPreviewToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.reload
         Me.ReloadPreviewToolStripMenuItem.Name = "ReloadPreviewToolStripMenuItem"
         Me.ReloadPreviewToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5
         Me.ReloadPreviewToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
@@ -266,13 +273,13 @@ Partial Class Form1
         'CefSharpLogToolStripMenuItem
         '
         Me.CefSharpLogToolStripMenuItem.Name = "CefSharpLogToolStripMenuItem"
-        Me.CefSharpLogToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CefSharpLogToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
         Me.CefSharpLogToolStripMenuItem.Text = "CefSharp Log"
         '
         'ChromiumLogToolStripMenuItem
         '
         Me.ChromiumLogToolStripMenuItem.Name = "ChromiumLogToolStripMenuItem"
-        Me.ChromiumLogToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ChromiumLogToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
         Me.ChromiumLogToolStripMenuItem.Text = "Chromium Log"
         '
         'ExtensionsToolStripMenuItem
@@ -285,12 +292,12 @@ Partial Class Form1
         'ExtensionsNotFoundToolStripMenuItem
         '
         Me.ExtensionsNotFoundToolStripMenuItem.Name = "ExtensionsNotFoundToolStripMenuItem"
-        Me.ExtensionsNotFoundToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
+        Me.ExtensionsNotFoundToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ExtensionsNotFoundToolStripMenuItem.Text = "Coming Soon..."
         '
         'WindowToolStripMenuItem
         '
-        Me.WindowToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuilderWindowToolStripMenuItem, Me.HideRightPanelToolStripMenuItem, Me.ShowRightPanelToolStripMenuItem})
+        Me.WindowToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuilderWindowToolStripMenuItem, Me.ToolStripSeparator2, Me.HideRightPanelToolStripMenuItem, Me.ShowRightPanelToolStripMenuItem})
         Me.WindowToolStripMenuItem.Name = "WindowToolStripMenuItem"
         Me.WindowToolStripMenuItem.Size = New System.Drawing.Size(63, 20)
         Me.WindowToolStripMenuItem.Text = "Window"
@@ -299,37 +306,37 @@ Partial Class Form1
         '
         Me.BuilderWindowToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NormalToolStripMenuItem, Me.MaximizedToolStripMenuItem, Me.MinimizedToolStripMenuItem})
         Me.BuilderWindowToolStripMenuItem.Name = "BuilderWindowToolStripMenuItem"
-        Me.BuilderWindowToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.BuilderWindowToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.BuilderWindowToolStripMenuItem.Text = "Builder Window"
         '
         'NormalToolStripMenuItem
         '
         Me.NormalToolStripMenuItem.Name = "NormalToolStripMenuItem"
-        Me.NormalToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.NormalToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.NormalToolStripMenuItem.Text = "Normal"
         '
         'MaximizedToolStripMenuItem
         '
         Me.MaximizedToolStripMenuItem.Name = "MaximizedToolStripMenuItem"
-        Me.MaximizedToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.MaximizedToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.MaximizedToolStripMenuItem.Text = "Maximized"
         '
         'MinimizedToolStripMenuItem
         '
         Me.MinimizedToolStripMenuItem.Name = "MinimizedToolStripMenuItem"
-        Me.MinimizedToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.MinimizedToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.MinimizedToolStripMenuItem.Text = "Minimized"
         '
         'HideRightPanelToolStripMenuItem
         '
         Me.HideRightPanelToolStripMenuItem.Name = "HideRightPanelToolStripMenuItem"
-        Me.HideRightPanelToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.HideRightPanelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.HideRightPanelToolStripMenuItem.Text = "Hide right panel"
         '
         'ShowRightPanelToolStripMenuItem
         '
         Me.ShowRightPanelToolStripMenuItem.Name = "ShowRightPanelToolStripMenuItem"
-        Me.ShowRightPanelToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.ShowRightPanelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ShowRightPanelToolStripMenuItem.Text = "Show right panel"
         '
         'GuideToolStripMenuItem
@@ -342,19 +349,19 @@ Partial Class Form1
         'InstallationGuideToolStripMenuItem
         '
         Me.InstallationGuideToolStripMenuItem.Name = "InstallationGuideToolStripMenuItem"
-        Me.InstallationGuideToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.InstallationGuideToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.InstallationGuideToolStripMenuItem.Text = "Installation Guide"
         '
         'CustomizingGuildToolStripMenuItem
         '
         Me.CustomizingGuildToolStripMenuItem.Name = "CustomizingGuildToolStripMenuItem"
-        Me.CustomizingGuildToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.CustomizingGuildToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CustomizingGuildToolStripMenuItem.Text = "Customizing Guild"
         '
         'BuildingGuideToolStripMenuItem
         '
         Me.BuildingGuideToolStripMenuItem.Name = "BuildingGuideToolStripMenuItem"
-        Me.BuildingGuideToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.BuildingGuideToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.BuildingGuideToolStripMenuItem.Text = "Building Guide"
         '
         'HelpToolStripMenuItem
@@ -378,6 +385,7 @@ Partial Class Form1
         '
         'ReleaseNoteToolStripMenuItem
         '
+        Me.ReleaseNoteToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.website
         Me.ReleaseNoteToolStripMenuItem.Name = "ReleaseNoteToolStripMenuItem"
         Me.ReleaseNoteToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
         Me.ReleaseNoteToolStripMenuItem.Text = "Latest release note"
@@ -395,6 +403,7 @@ Partial Class Form1
         '
         'OpenBuilderInExplorerToolStripMenuItem
         '
+        Me.OpenBuilderInExplorerToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.folder
         Me.OpenBuilderInExplorerToolStripMenuItem.Name = "OpenBuilderInExplorerToolStripMenuItem"
         Me.OpenBuilderInExplorerToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
         Me.OpenBuilderInExplorerToolStripMenuItem.Text = "Open Builder in Explorer"
@@ -1459,6 +1468,26 @@ Partial Class Form1
         'dlworker
         '
         '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(177, 6)
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(206, 6)
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(177, 6)
+        '
+        'ToolStripSeparator5
+        '
+        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(177, 6)
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1681,4 +1710,8 @@ Partial Class Form1
     Friend WithEvents DebugLogToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CefSharpLogToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ChromiumLogToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
+    Friend WithEvents ToolStripSeparator5 As ToolStripSeparator
+    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
 End Class

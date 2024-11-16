@@ -1,8 +1,9 @@
-Builder Release 7.2.0
+Builder Release 7.3.0
 
 ** Release notes **
 - ADDED: News Feed Setting tab in preference.
 - ADDED: Diagnostic Setting tab in preference.
+- IMPROVEMENT: Improve overall menubar experience.
 - CHANGED: Basics tab in preference renamed to General.
 - CHANGED: Moved News Feed Setting from window to preference.
 - CHANGED: Moved Diagnostic Setting from window to preference.
