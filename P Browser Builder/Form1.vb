@@ -894,7 +894,8 @@ Public Class Form1
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-        usagesetting.Show()
+        prefer.Show()
+        prefer.TabControl1.SelectedIndex = 3
     End Sub
 
     Private Sub CheckBox3_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox3.CheckedChanged
@@ -1101,7 +1102,8 @@ Public Class Form1
     End Sub
 
     Private Sub PictureBox12_Click(sender As Object, e As EventArgs) Handles PictureBox12.Click
-        feedsetting.Show()
+        prefer.Show()
+        prefer.TabControl1.SelectedIndex = 2
     End Sub
 
     Private Sub ResetWhatsNewStateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetWhatsNewStateToolStripMenuItem.Click

@@ -95,6 +95,30 @@ Public Class prefer
         Label19.Enabled = False
         Label20.Enabled = False
         Label21.Enabled = False
+        Dim fileReader11 As System.IO.StreamReader
+        fileReader11 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.nfstartfetch.pbcfg")
+        Dim stringReader11 As String
+        stringReader11 = fileReader11.ReadLine()
+        If stringReader11 = "False" Then
+            CheckBox1.Checked = True
+        End If
+        fileReader11.Close()
+
+        Dim fileReader1 As System.IO.StreamReader
+        fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.usageinterv.pbcfg")
+        Dim stringReader1 As String
+        stringReader1 = fileReader1.ReadLine()
+        TextBox2.Text = stringReader1
+        fileReader1.Close()
+
+        Dim fileReader111 As System.IO.StreamReader
+        fileReader111 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.alwpdiag.pbcfg")
+        Dim stringReader111 As String
+        stringReader111 = fileReader111.ReadLine()
+        If stringReader111 = "True" Then
+            CheckBox2.Checked = True
+        End If
+        fileReader111.Close()
     End Sub
 
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
@@ -236,5 +260,62 @@ Public Class prefer
         Else
             TabControl1.SelectedTab = TabPage1
         End If
+    End Sub
+
+    Private Sub Label37_Click(sender As Object, e As EventArgs) Handles Label37.Click
+        Try
+            Dim client As WebClient = New WebClient()
+            Dim nf1desc As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v1/nf/nf1_desc.txt")
+            Dim nf1titl As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v1/nf/nf1_title.txt")
+            Dim nf1date As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v1/nf/nf1_date.txt")
+            Form1.Label12.Text = nf1titl
+            Form1.Label13.Text = nf1desc
+            Form1.Label14.Text = nf1date
+            MessageBox.Show("News Feed refreshed!", "OK!")
+        Catch ex As Exception
+            MessageBox.Show("Error while refreshing News Feed", "Error!")
+        End Try
+    End Sub
+
+    Private Sub Label33_Click(sender As Object, e As EventArgs) Handles Label33.Click
+        Dim apppath As String = Application.StartupPath()
+        Dim pbcfg As String = apppath + "\statedata\setting.builder.nfstartfetch.pbcfg"
+        Dim objWriter As New System.IO.StreamWriter(pbcfg)
+        If CheckBox1.Checked = True Then
+            objWriter.Write("False")
+            MessageBox.Show("Successed! News Feed will fetch on startup. You may need to restart to make change.", "OK!")
+        Else
+            objWriter.Write("True")
+            MessageBox.Show("Successed! News Feed will fetch on startup. You may need to restart to make change.", "OK!")
+        End If
+        Me.Close()
+        objWriter.Close()
+    End Sub
+
+    Private Sub Label39_Click(sender As Object, e As EventArgs) Handles Label39.Click
+        If TextBox2.Text = "" Then
+            MessageBox.Show("Please Enter value!", "FAILED!")
+        Else
+            Dim apppath As String = Application.StartupPath()
+            Dim pbcfg As String = apppath + "\statedata\setting.builder.usageinterv.pbcfg"
+            Dim objWriter As New System.IO.StreamWriter(pbcfg)
+            objWriter.Write(TextBox2.Text)
+            objWriter.Close()
+            MessageBox.Show("Successed! You may need to restart to apply the change.", "OK!")
+        End If
+    End Sub
+
+    Private Sub Label38_Click(sender As Object, e As EventArgs) Handles Label38.Click
+        Dim apppath As String = Application.StartupPath()
+        Dim pbcfg As String = apppath + "\statedata\setting.builder.alwpdiag.pbcfg"
+        Dim objWriter As New System.IO.StreamWriter(pbcfg)
+        If CheckBox2.Checked = True Then
+            objWriter.Write("True")
+            MessageBox.Show("Successed! Diagnostic will be paused when startup.", "OK!")
+        Else
+            objWriter.Write("False")
+            MessageBox.Show("Successed! Diagnostic will be running when startup.", "OK!")
+        End If
+        objWriter.Close()
     End Sub
 End Class

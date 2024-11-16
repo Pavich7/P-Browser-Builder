@@ -185,12 +185,6 @@
     <Compile Include="errorencounter.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="feedsetting.Designer.vb">
-      <DependentUpon>feedsetting.vb</DependentUpon>
-    </Compile>
-    <Compile Include="feedsetting.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -238,12 +232,6 @@
     <Compile Include="splash.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="usagesetting.Designer.vb">
-      <DependentUpon>usagesetting.vb</DependentUpon>
-    </Compile>
-    <Compile Include="usagesetting.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="welcome.Designer.vb">
       <DependentUpon>welcome.vb</DependentUpon>
     </Compile>
@@ -273,9 +261,6 @@
     <EmbeddedResource Include="errorencounter.resx">
       <DependentUpon>errorencounter.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="feedsetting.resx">
-      <DependentUpon>feedsetting.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -298,9 +283,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="splash.resx">
       <DependentUpon>splash.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="usagesetting.resx">
-      <DependentUpon>usagesetting.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="welcome.resx">
       <DependentUpon>welcome.vb</DependentUpon>
