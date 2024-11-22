@@ -109,15 +109,6 @@ Public Class prefer
         stringReader1 = fileReader1.ReadLine()
         TextBox2.Text = stringReader1
         fileReader1.Close()
-
-        Dim fileReader111 As System.IO.StreamReader
-        fileReader111 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.alwpdiag.pbcfg")
-        Dim stringReader111 As String
-        stringReader111 = fileReader111.ReadLine()
-        If stringReader111 = "True" Then
-            CheckBox2.Checked = True
-        End If
-        fileReader111.Close()
     End Sub
 
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
@@ -302,19 +293,5 @@ Public Class prefer
             objWriter.Close()
             MessageBox.Show("Successed! You may need to restart to apply the change.", "OK!")
         End If
-    End Sub
-
-    Private Sub Label38_Click(sender As Object, e As EventArgs) Handles Label38.Click
-        Dim apppath As String = Application.StartupPath()
-        Dim pbcfg As String = apppath + "\statedata\setting.builder.alwpdiag.pbcfg"
-        Dim objWriter As New System.IO.StreamWriter(pbcfg)
-        If CheckBox2.Checked = True Then
-            objWriter.Write("True")
-            MessageBox.Show("Successed! Diagnostic will be paused when startup.", "OK!")
-        Else
-            objWriter.Write("False")
-            MessageBox.Show("Successed! Diagnostic will be running when startup.", "OK!")
-        End If
-        objWriter.Close()
     End Sub
 End Class

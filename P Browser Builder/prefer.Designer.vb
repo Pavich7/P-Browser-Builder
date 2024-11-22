@@ -61,23 +61,23 @@ Partial Class prefer
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Label37 = New System.Windows.Forms.Label()
         Me.Label35 = New System.Windows.Forms.Label()
         Me.Label36 = New System.Windows.Forms.Label()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.Label38 = New System.Windows.Forms.Label()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.Label39 = New System.Windows.Forms.Label()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label40 = New System.Windows.Forms.Label()
         Me.Label41 = New System.Windows.Forms.Label()
-        Me.Label42 = New System.Windows.Forms.Label()
         Me.Label43 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label44 = New System.Windows.Forms.Label()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.Label45 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -567,27 +567,42 @@ Partial Class prefer
         Me.TabPage3.Text = "News Feed"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
-        'Label29
+        'Label33
         '
-        Me.Label29.AutoSize = True
-        Me.Label29.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label29.Location = New System.Drawing.Point(13, 11)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(105, 28)
-        Me.Label29.TabIndex = 38
-        Me.Label29.Text = "News Feed"
+        Me.Label33.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label33.AutoSize = True
+        Me.Label33.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label33.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label33.Location = New System.Drawing.Point(428, 52)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(43, 21)
+        Me.Label33.TabIndex = 46
+        Me.Label33.Text = "Save"
         '
-        'Label34
+        'CheckBox1
         '
-        Me.Label34.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label34.AutoSize = True
-        Me.Label34.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.Label34.Location = New System.Drawing.Point(22, 79)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(202, 17)
-        Me.Label34.TabIndex = 40
-        Me.Label34.Text = "Do not fetch news feed on startup."
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.CheckBox1.Location = New System.Drawing.Point(25, 51)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(171, 25)
+        Me.CheckBox1.TabIndex = 45
+        Me.CheckBox1.Text = "Disable startup fetch"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'Label37
+        '
+        Me.Label37.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label37.AutoSize = True
+        Me.Label37.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label37.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label37.Location = New System.Drawing.Point(408, 111)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(63, 21)
+        Me.Label37.TabIndex = 44
+        Me.Label37.Text = "Refresh"
         '
         'Label35
         '
@@ -612,53 +627,38 @@ Partial Class prefer
         Me.Label36.TabIndex = 41
         Me.Label36.Text = "Refresh feed"
         '
-        'Label37
+        'Label34
         '
-        Me.Label37.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label37.AutoSize = True
-        Me.Label37.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label37.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label37.Location = New System.Drawing.Point(408, 111)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(63, 21)
-        Me.Label37.TabIndex = 44
-        Me.Label37.Text = "Refresh"
+        Me.Label34.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label34.AutoSize = True
+        Me.Label34.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.Label34.Location = New System.Drawing.Point(22, 79)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(202, 17)
+        Me.Label34.TabIndex = 40
+        Me.Label34.Text = "Do not fetch news feed on startup."
         '
-        'CheckBox1
+        'Label29
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.CheckBox1.Location = New System.Drawing.Point(25, 51)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(171, 25)
-        Me.CheckBox1.TabIndex = 45
-        Me.CheckBox1.Text = "Disable startup fetch"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'Label33
-        '
-        Me.Label33.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label33.AutoSize = True
-        Me.Label33.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label33.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label33.Location = New System.Drawing.Point(428, 52)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(43, 21)
-        Me.Label33.TabIndex = 46
-        Me.Label33.Text = "Save"
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
+        Me.Label29.Location = New System.Drawing.Point(13, 11)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(105, 28)
+        Me.Label29.TabIndex = 38
+        Me.Label29.Text = "News Feed"
         '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.Label45)
+        Me.TabPage4.Controls.Add(Me.Label42)
+        Me.TabPage4.Controls.Add(Me.Label38)
         Me.TabPage4.Controls.Add(Me.Label44)
         Me.TabPage4.Controls.Add(Me.TextBox2)
-        Me.TabPage4.Controls.Add(Me.Label38)
-        Me.TabPage4.Controls.Add(Me.CheckBox2)
         Me.TabPage4.Controls.Add(Me.Label39)
         Me.TabPage4.Controls.Add(Me.Label40)
         Me.TabPage4.Controls.Add(Me.Label41)
-        Me.TabPage4.Controls.Add(Me.Label42)
         Me.TabPage4.Controls.Add(Me.Label43)
         Me.TabPage4.Location = New System.Drawing.Point(4, 26)
         Me.TabPage4.Name = "TabPage4"
@@ -668,42 +668,22 @@ Partial Class prefer
         Me.TabPage4.Text = "Diagnostic"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
-        'Label38
+        'Label44
         '
-        Me.Label38.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label38.AutoSize = True
-        Me.Label38.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label38.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label38.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label38.Location = New System.Drawing.Point(428, 52)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(43, 21)
-        Me.Label38.TabIndex = 53
-        Me.Label38.Text = "Save"
+        Me.Label44.AutoSize = True
+        Me.Label44.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label44.Location = New System.Drawing.Point(448, 119)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(21, 13)
+        Me.Label44.TabIndex = 79
+        Me.Label44.Text = "ms"
         '
-        'CheckBox2
+        'TextBox2
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.CheckBox2.Location = New System.Drawing.Point(25, 51)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(227, 25)
-        Me.CheckBox2.TabIndex = 52
-        Me.CheckBox2.Text = "Always paused when startup"
-        Me.CheckBox2.UseVisualStyleBackColor = True
-        '
-        'Label39
-        '
-        Me.Label39.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label39.AutoSize = True
-        Me.Label39.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label39.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label39.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label39.Location = New System.Drawing.Point(419, 111)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(50, 21)
-        Me.Label39.TabIndex = 51
-        Me.Label39.Text = "Apply"
+        Me.TextBox2.Location = New System.Drawing.Point(24, 113)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(418, 25)
+        Me.TextBox2.TabIndex = 78
         '
         'Label40
         '
@@ -711,7 +691,7 @@ Partial Class prefer
         Me.Label40.AutoSize = True
         Me.Label40.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label40.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.Label40.Location = New System.Drawing.Point(22, 138)
+        Me.Label40.Location = New System.Drawing.Point(22, 81)
         Me.Label40.Name = "Label40"
         Me.Label40.Size = New System.Drawing.Size(315, 17)
         Me.Label40.TabIndex = 50
@@ -722,23 +702,11 @@ Partial Class prefer
         Me.Label41.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label41.AutoSize = True
         Me.Label41.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label41.Location = New System.Drawing.Point(21, 111)
+        Me.Label41.Location = New System.Drawing.Point(21, 54)
         Me.Label41.Name = "Label41"
         Me.Label41.Size = New System.Drawing.Size(139, 21)
         Me.Label41.TabIndex = 49
         Me.Label41.Text = "Diagnostic Interval"
-        '
-        'Label42
-        '
-        Me.Label42.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label42.AutoSize = True
-        Me.Label42.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label42.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.Label42.Location = New System.Drawing.Point(22, 79)
-        Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(272, 17)
-        Me.Label42.TabIndex = 48
-        Me.Label42.Text = "Always paused diagnostic update when startup."
         '
         'Label43
         '
@@ -750,22 +718,51 @@ Partial Class prefer
         Me.Label43.TabIndex = 47
         Me.Label43.Text = "Diagnostic"
         '
-        'TextBox2
+        'Label39
         '
-        Me.TextBox2.Location = New System.Drawing.Point(24, 170)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(418, 25)
-        Me.TextBox2.TabIndex = 78
+        Me.Label39.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label39.AutoSize = True
+        Me.Label39.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label39.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label39.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label39.Location = New System.Drawing.Point(419, 54)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(50, 21)
+        Me.Label39.TabIndex = 51
+        Me.Label39.Text = "Apply"
         '
-        'Label44
+        'Label38
         '
-        Me.Label44.AutoSize = True
-        Me.Label44.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label44.Location = New System.Drawing.Point(448, 176)
-        Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(21, 13)
-        Me.Label44.TabIndex = 79
-        Me.Label44.Text = "ms"
+        Me.Label38.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label38.AutoSize = True
+        Me.Label38.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label38.Location = New System.Drawing.Point(21, 155)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(169, 21)
+        Me.Label38.TabIndex = 80
+        Me.Label38.Text = "Diagnostic Information"
+        '
+        'Label42
+        '
+        Me.Label42.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label42.AutoSize = True
+        Me.Label42.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label42.Location = New System.Drawing.Point(33, 212)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(25, 17)
+        Me.Label42.TabIndex = 81
+        Me.Label42.Text = "pid"
+        '
+        'Label45
+        '
+        Me.Label45.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label45.AutoSize = True
+        Me.Label45.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label45.Location = New System.Drawing.Point(33, 187)
+        Me.Label45.Name = "Label45"
+        Me.Label45.Size = New System.Drawing.Size(41, 17)
+        Me.Label45.TabIndex = 82
+        Me.Label45.Text = "diagst"
         '
         'prefer
         '
@@ -845,13 +842,13 @@ Partial Class prefer
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents Label33 As Label
     Friend WithEvents TabPage4 As TabPage
-    Friend WithEvents Label38 As Label
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents Label39 As Label
     Friend WithEvents Label40 As Label
     Friend WithEvents Label41 As Label
-    Friend WithEvents Label42 As Label
     Friend WithEvents Label43 As Label
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label44 As Label
+    Friend WithEvents Label39 As Label
+    Friend WithEvents Label38 As Label
+    Friend WithEvents Label42 As Label
+    Friend WithEvents Label45 As Label
 End Class

@@ -59,9 +59,13 @@ Public Class Form1
                     End If
                 End If
                 ProgressBar1.Value = 100
-                MessageBox.Show("Build Completed! Click continue to test app.", "Build Completed!")
+                MessageBox.Show("Build Completed! Click continue to test app." + vbNewLine + "Some features will not available in Testing.", "Build Completed!")
                 Process.Start(testapp)
                 Label7.Text = "Build completed!"
+                System.Threading.Thread.Sleep(500)
+                Timer2.Start()
+                Button7.Enabled = False
+                Button8.Enabled = True
             Else
                 MessageBox.Show("Build Failed! Incomplete or corrupted Data please reinstall builder.", "Build Failed!")
                 Label7.Text = "Build failed!"
@@ -70,7 +74,6 @@ Public Class Form1
     End Sub
 
     Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.Click
-        Button1.Enabled = False
         CheckBox1.Text = "Start your app after build"
         CheckBox2.Text = "Show your app in explorer after build"
     End Sub
@@ -482,21 +485,13 @@ Public Class Form1
             Button7.Enabled = False
             ExtensionsToolStripMenuItem.Visible = False
             DevToolStripMenuItem.Visible = False
-            Dim fileReader111 As System.IO.StreamReader
-            fileReader111 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.alwpdiag.pbcfg")
-            Dim stringReader111 As String
-            stringReader111 = fileReader111.ReadLine()
-            If stringReader111 = "False" Then
-                Timer2.Start()
-            Else
-                Timer2.Stop()
-                Button8.Enabled = False
-                Button7.Enabled = True
-                ProgressBar3.Value = 0
-                Label23.Text = "Memory Usage: Paused"
-                Label25.Text = "Paused"
-            End If
-            fileReader111.Close()
+            Label23.Text = "Begin Test to start diagnostic..."
+            Label25.Text = "Begin Test to start diagnostic..."
+            prefer.Label42.Text = "Process ID: -"
+            prefer.Label45.Text = "Diagnostic Status: Stopped"
+            Button8.Enabled = False
+            Button7.Enabled = False
+            ProgressBar3.Value = 0
             Label15.Visible = False
             Label7.Visible = True
             Label7.Text = "Fetching in progress..."
@@ -642,7 +637,6 @@ Public Class Form1
         RadioButton3.Checked = False
         CheckBox1.Text = "Start your app after build"
         CheckBox2.Text = "Show your app in explorer after build"
-        Button1.Enabled = True
         CheckBox1.Checked = False
         CheckBox2.Checked = False
         CheckBox3.Checked = False
@@ -669,9 +663,7 @@ Public Class Form1
     Private Sub Label18_Click(sender As Object, e As EventArgs) Handles Label18.Click
 
         Label7.Text = "Installing Resource (Waiting for confirmation)"
-        Timer2.Stop()
         ProgressBar1.Value = 0
-        ProgressBar3.Value = 0
         Label23.Text = "Memory Usage: Paused"
         Label25.Text = "Paused"
         Dim result As DialogResult = MessageBox.Show("Do you wish to install builder resource?" + vbNewLine + "Attempting to exit the builder may incomplete resources!", "You sure about this?", MessageBoxButtons.YesNo)
@@ -683,7 +675,6 @@ Public Class Form1
             ProgressBar1.Style = ProgressBarStyle.Marquee
             ProgressBar1.MarqueeAnimationSpeed = 40
         Else
-            Timer2.Start()
             Label7.Text = "Ready to build"
         End If
     End Sub
@@ -741,18 +732,35 @@ Public Class Form1
 
     <Obsolete>
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
-        Dim pros As Process = Process.GetCurrentProcess()
-        Dim demround1 As Double = pros.WorkingSet / 1024 / 1024
-        demround1 = Math.Round(demround1, 2)
-        Dim demround2 As Double = pros.PagedMemorySize / 1024 / 1024
-        demround2 = Math.Round(demround2, 2)
-        Dim demround3 As Double = ((My.Computer.Info.TotalPhysicalMemory - My.Computer.Info.AvailablePhysicalMemory) / My.Computer.Info.TotalPhysicalMemory) * 100
-        demround3 = Math.Round(demround3, 2)
-        Dim demround4 As Double = (My.Computer.Info.TotalPhysicalMemory - My.Computer.Info.AvailablePhysicalMemory) / 1024 / 1024 / 1024
-        demround4 = Math.Round(demround4, 2)
-        Label23.Text = "Memory Usage: " & demround1 & " MB"
-        ProgressBar3.Value = ((My.Computer.Info.TotalPhysicalMemory - My.Computer.Info.AvailablePhysicalMemory) / My.Computer.Info.TotalPhysicalMemory) * 100
-        Label25.Text = "Overall Usage: " & demround3 & " % (" & demround4 & " GB)"
+        Try
+            Dim apppath As String = Application.StartupPath()
+            Dim fileReader211 As System.IO.StreamReader
+            fileReader211 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\testspace\pidlock.pbs")
+            Dim stringReader211 As String
+            stringReader211 = fileReader211.ReadLine()
+            fileReader211.Close()
+            Dim pros As Process = Process.GetProcessById(stringReader211)
+            Dim demround1 As Double = pros.WorkingSet / 1024 / 1024
+            demround1 = Math.Round(demround1, 2)
+            Label23.Text = "Memory Usage: " & demround1 & " MB"
+            Dim demround3 As Double = ((My.Computer.Info.TotalPhysicalMemory - My.Computer.Info.AvailablePhysicalMemory) / My.Computer.Info.TotalPhysicalMemory) * 100
+            demround3 = Math.Round(demround3, 2)
+            Dim demround4 As Double = (My.Computer.Info.TotalPhysicalMemory - My.Computer.Info.AvailablePhysicalMemory) / 1024 / 1024 / 1024
+            demround4 = Math.Round(demround4, 2)
+            ProgressBar3.Value = ((My.Computer.Info.TotalPhysicalMemory - My.Computer.Info.AvailablePhysicalMemory) / My.Computer.Info.TotalPhysicalMemory) * 100
+            Label25.Text = "Overall Usage: " & demround3 & " % (" & demround4 & " GB)"
+            prefer.Label45.Text = "Diagnostic Status: Running"
+            prefer.Label42.Text = "Process ID: " & stringReader211
+        Catch ex As Exception
+            Label23.Text = "Begin Test to start diagnostic..."
+            Label25.Text = "Begin Test to start diagnostic..."
+            Timer2.Stop()
+            Button8.Enabled = False
+            Button7.Enabled = False
+            ProgressBar3.Value = 0
+            prefer.Label45.Text = "Diagnostic Status: Stopped"
+            prefer.Label42.Text = "Process ID: -"
+        End Try
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
@@ -766,8 +774,9 @@ Public Class Form1
         Button8.Enabled = False
         Button7.Enabled = True
         ProgressBar3.Value = 0
-        Label23.Text = "Memory Usage: Paused"
+        Label23.Text = "Diagnostic Paused"
         Label25.Text = "Paused"
+        prefer.Label45.Text = "Diagnostic Status: Paused"
     End Sub
 
     Private Sub OpenBuilderInExplorerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenBuilderInExplorerToolStripMenuItem.Click
@@ -794,7 +803,6 @@ Public Class Form1
         TabControl1.Width = 872
         HideRightPanelToolStripMenuItem.Enabled = False
         ShowRightPanelToolStripMenuItem.Enabled = True
-        Timer2.Stop()
     End Sub
 
     Private Sub ShowRightPanelToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowRightPanelToolStripMenuItem.Click
@@ -804,11 +812,9 @@ Public Class Form1
         TabControl1.Width = 559
         ShowRightPanelToolStripMenuItem.Enabled = False
         HideRightPanelToolStripMenuItem.Enabled = True
-        Timer2.Start()
     End Sub
 
     Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton3.Click
-        Button1.Enabled = False
         CheckBox1.Text = "Start your app after build (Dedicated)"
         CheckBox2.Text = "Show your ZIP file in explorer after build"
     End Sub
@@ -923,7 +929,6 @@ Public Class Form1
         RadioButton3.Checked = False
         CheckBox1.Text = "Start your app after build"
         CheckBox2.Text = "Show your app in explorer after build"
-        Button1.Enabled = True
     End Sub
 
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
@@ -1067,7 +1072,6 @@ Public Class Form1
             RadioButton3.Checked = False
             CheckBox1.Text = "Start your app after build"
             CheckBox2.Text = "Show your app in explorer after build"
-            Button1.Enabled = True
             CheckBox1.Checked = False
             CheckBox2.Checked = False
             CheckBox4.Checked = False
@@ -1086,7 +1090,6 @@ Public Class Form1
         TabControl1.Width = 872
         HideRightPanelToolStripMenuItem.Enabled = False
         ShowRightPanelToolStripMenuItem.Enabled = True
-        Timer2.Stop()
         MessageBox.Show("You can unhide right panel by click on" + vbNewLine + "Menu Strip: Window > Show right panel" + vbNewLine + "or using Ctrl + R Shortcut", "Notification")
     End Sub
 
