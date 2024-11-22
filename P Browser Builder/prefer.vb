@@ -25,7 +25,6 @@ Public Class prefer
             End If
             bfileReader.Close()
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
             Label30.Text = "Error checking for update!"
         End Try
         If Not System.IO.Directory.Exists(rescheck) Then

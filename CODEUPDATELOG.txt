@@ -9,3 +9,4 @@ Builder Release 7.3.0
 - CHANGED: Basics tab in preference renamed to General.
 - CHANGED: Moved News Feed Setting from window to preference.
 - CHANGED: Moved Diagnostic Setting from window to preference.
+- CHANGED: Remove error popup when enter preference without connection.
