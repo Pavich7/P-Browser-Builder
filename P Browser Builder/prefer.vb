@@ -94,6 +94,8 @@ Public Class prefer
         Label19.Enabled = False
         Label20.Enabled = False
         Label21.Enabled = False
+        Label45.Text = "Diagnostic Status: Stopped"
+        Label42.Text = "Process ID: -"
         Dim fileReader11 As System.IO.StreamReader
         fileReader11 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.nfstartfetch.pbcfg")
         Dim stringReader11 As String

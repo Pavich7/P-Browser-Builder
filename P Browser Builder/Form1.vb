@@ -62,7 +62,7 @@ Public Class Form1
                 MessageBox.Show("Build Completed! Click continue to test app." + vbNewLine + "Some features will not available in Testing.", "Build Completed!")
                 Process.Start(testapp)
                 Label7.Text = "Build completed!"
-                System.Threading.Thread.Sleep(500)
+                System.Threading.Thread.Sleep(1000)
                 Timer2.Start()
                 Button7.Enabled = False
                 Button8.Enabled = True
