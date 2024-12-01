@@ -5,12 +5,16 @@ Builder Release 7.3.0
 - HIGHLIGHTS: Diagnostic process memory usage during test.
 
 ** Release notes **
+- BREAKING: This version only support 6.2.0 or newer resource.
 - ADDED: News Feed Setting tab in preference.
 - ADDED: Diagnostic Setting tab in preference.
 - ADDED: User can use Ctrl + R to show right panel.
 - ADDED: User can use Ctrl + H to hide right panel.
 - ADDED: Able to test after Build Mode are selected.
 - IMPROVEMENT: Improve overall menubar experience.
+- IMPROVEMENT: Updated CefSharp to 131.2.70
+- IMPROVEMENT: Updated Chromium to 131.0.6778.86
+- FIXED: Enable welcome message remain checked after enter Start window.
 - CHANGED: Basics tab in preference renamed to General.
 - CHANGED: Moved News Feed Setting from window to preference.
 - CHANGED: Moved Diagnostic Setting from window to preference.

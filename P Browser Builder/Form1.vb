@@ -466,7 +466,7 @@ Public Class Form1
                 Label20.Visible = False
                 Label18.Visible = False
                 Panel4.Size = New Size(265, 175)
-                Dim resvcheck4 As String = apppath + "\resource\metadata\checkpoint\r610.chkp"
+                Dim resvcheck4 As String = apppath + "\resource\metadata\checkpoint\r620.chkp"
                 If Not System.IO.File.Exists(resvcheck4) Then
                     MessageBox.Show("Unload required! Resource not compatible!" + vbNewLine + "Please reinstall builder resource via preference menu.", "Resource not compatible!")
                     Button1.Enabled = False
@@ -1074,6 +1074,7 @@ Public Class Form1
             CheckBox2.Text = "Show your app in explorer after build"
             CheckBox1.Checked = False
             CheckBox2.Checked = False
+            CheckBox3.Checked = False
             CheckBox4.Checked = False
             CheckBox5.Checked = False
             CheckBox6.Checked = False
