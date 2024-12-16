@@ -22,7 +22,6 @@ Partial Class whatsnew
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(whatsnew))
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.SuspendLayout()
         '
@@ -35,7 +34,8 @@ Partial Class whatsnew
         Me.RichTextBox1.ReadOnly = True
         Me.RichTextBox1.Size = New System.Drawing.Size(522, 238)
         Me.RichTextBox1.TabIndex = 0
-        Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
+        Me.RichTextBox1.Text = "Builder Release 7.3.1" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "** Release notes **" & Global.Microsoft.VisualBasic.ChrW(10) & "- IMPROVEMENT: Updated CefSharp to 131" &
+    ".3.10" & Global.Microsoft.VisualBasic.ChrW(10) & "- IMPROVEMENT: Updated Chromium to 131.0.6778.109"
         '
         'whatsnew
         '

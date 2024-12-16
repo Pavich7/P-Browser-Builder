@@ -1,5 +1,6 @@
 ﻿Imports System.IO.Compression
 Imports System.Net
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class prefer
     Private Sub prefer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -111,6 +112,13 @@ Public Class prefer
         stringReader1 = fileReader1.ReadLine()
         TextBox2.Text = stringReader1
         fileReader1.Close()
+
+        Dim pros As Process = Process.GetCurrentProcess()
+        Dim demround1 As Double = pros.WorkingSet / 1024 / 1024
+        demround1 = Math.Round(demround1, 2)
+        Label48.Text = "Process ID: " & pros.Id
+        Label47.Text = "Memory Usage: " & demround1 & " MB"
+
     End Sub
 
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
