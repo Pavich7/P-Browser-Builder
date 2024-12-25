@@ -35,7 +35,7 @@ Public Class prefer
             Label2.Enabled = False
             Label5.Enabled = False
             Label23.Enabled = False
-            Label7.Text = "Delete curerently insatlled resource. (Resource not installed)"
+            Label7.Text = "Delete currently installed resource. (Resource not installed)"
             Label8.Enabled = False
             Label4.Text = "Resource not installed"
         Else
@@ -194,7 +194,7 @@ Public Class prefer
             Dim objWriter As New System.IO.StreamWriter(pbcfg)
             objWriter.Write(TextBox1.Text)
             objWriter.Close()
-            MessageBox.Show("Successed!", "OK!")
+            MessageBox.Show("Success!", "OK!")
         End If
     End Sub
 
@@ -283,10 +283,10 @@ Public Class prefer
         Dim objWriter As New System.IO.StreamWriter(pbcfg)
         If CheckBox1.Checked = True Then
             objWriter.Write("False")
-            MessageBox.Show("Successed! News Feed will fetch on startup. You may need to restart to make change.", "OK!")
+            MessageBox.Show("Success! News Feed will fetch on startup. You may need to restart to make change.", "OK!")
         Else
             objWriter.Write("True")
-            MessageBox.Show("Successed! News Feed will fetch on startup. You may need to restart to make change.", "OK!")
+            MessageBox.Show("Success! News Feed will fetch on startup. You may need to restart to make change.", "OK!")
         End If
         Me.Close()
         objWriter.Close()
@@ -301,7 +301,7 @@ Public Class prefer
             Dim objWriter As New System.IO.StreamWriter(pbcfg)
             objWriter.Write(TextBox2.Text)
             objWriter.Close()
-            MessageBox.Show("Successed! You may need to restart to apply the change.", "OK!")
+            MessageBox.Show("Success! You may need to restart to apply the change.", "OK!")
         End If
     End Sub
 End Class

@@ -1,10 +1,6 @@
-Builder Release 7.3.1
+Builder Release 7.4.0
 
 ** Release notes **
-- ADDED: System Information in advanced preference.
-- IMPROVEMENT: Updated CefSharp to 131.3.10
-- IMPROVEMENT: Updated Chromium to 131.0.6778.109
-- FIXED: Going back to Start Window won't clear preview.
-
-** Low level **
-- CHANGED: Removed pdb files generation.
+- IMPROVEMENT: Spelling correction in Preference.
+- IMPROVEMENT: Updated CefSharp to 131.3.50
+- IMPROVEMENT: Updated Chromium to 131.0.6778.205
