@@ -117,4 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RichTextBox1.Text" xml:space="preserve">
+    <value>Builder Release 7.3.1
+
+** Release notes **
+- ADDED: System Information in advanced preference.
+- IMPROVEMENT: Updated CefSharp to 131.3.10
+- IMPROVEMENT: Updated Chromium to 131.0.6778.109
+- FIXED: Going back to Start Window won't clear preview.
+
+** Low level **
+- CHANGED: Removed pdb files generation.</value>
+  </data>
 </root>

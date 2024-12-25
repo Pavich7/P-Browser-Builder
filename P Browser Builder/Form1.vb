@@ -1080,6 +1080,7 @@ Public Class Form1
             CheckBox6.Checked = False
             System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
             System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
+            Browser.Load("about:blank")
             welcome.Show()
         End If
     End Sub
