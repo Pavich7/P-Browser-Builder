@@ -132,6 +132,12 @@
 - CHANGED: New interface section in general preference.
 - FIXED: Saving disable startup fetch will close preference.
 - FIXED: Success message confusion in disable startup fetch.
-- FIXED: Cannot save in disable startup fetch.</value>
+- FIXED: Cannot save in disable startup fetch.
+- FIXED: Advance after build action still accessible when no resource.
+- FIXED: Support button will go to wrong page due to server shutdown.
+- FIXED: News Feed cannot try again after fetch failed on startup.
+
+** Low-level **
+- IMPROVEMENT: Updated Visual C++ Redistributable. (14.42.34433.0)</value>
   </data>
 </root>

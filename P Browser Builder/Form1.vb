@@ -523,7 +523,7 @@ Public Class Form1
     End Sub
 
     Private Sub SupportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SupportToolStripMenuItem.Click
-        Browser.Load("http://pavichdev.ddns.net/old/Home.html#feedbackintro")
+        Browser.Load("https://github.com/Pavich7/P-Browser-Builder/issues")
     End Sub
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
@@ -631,13 +631,14 @@ Public Class Form1
             Label15.Text = "Please wait..."
             Label15.Enabled = False
             Dim client As WebClient = New WebClient()
-            Dim nf1desc As String = client.DownloadString("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_desc.txt")
-            Dim nf1titl As String = client.DownloadString("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_title.txt")
-            Dim nf1date As String = client.DownloadString("http://pavichdev.ddns.net/api/v2-pbb/newsfeed/nf1_date.txt")
+            Dim nf1desc As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v1/nf/nf1_desc.txt")
+            Dim nf1titl As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v1/nf/nf1_title.txt")
+            Dim nf1date As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v1/nf/nf1_date.txt")
             Label12.Text = nf1titl
             Label13.Text = nf1desc
             Label14.Text = nf1date
             Label15.Visible = False
+            Label14.Visible = True
         Catch ex As Exception
             MessageBox.Show("Cannot connect!", "Error!")
             Label15.Text = "Try again"
