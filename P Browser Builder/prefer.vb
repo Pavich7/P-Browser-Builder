@@ -3,6 +3,16 @@ Imports System.Net
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class prefer
+    Dim TotalSize As Long = 0
+    Public Function GetDirSize(RootFolder As String) As Long
+        Dim FolderInfo = New IO.DirectoryInfo(RootFolder)
+        For Each File In FolderInfo.GetFiles : TotalSize += File.Length
+        Next
+        For Each SubFolderInfo In FolderInfo.GetDirectories : GetDirSize(SubFolderInfo.FullName)
+        Next
+        Return TotalSize
+    End Function
+
     Private Sub prefer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim apppath As String = Application.StartupPath()
         Dim rescheck As String = apppath + "\resource"
@@ -10,6 +20,9 @@ Public Class prefer
         If Not System.IO.File.Exists(cachecheck) Then
             Label9.Enabled = False
         End If
+        TotalSize = 0
+        Dim TheSize2 As Long = GetDirSize(apppath + "\statecache\updatecache\")
+        Label52.Text = FormatNumber(TheSize2 / 1024 / 1024, 1) & " MB"
         Try
             'Build Ver Check
             Dim bfileReader As System.IO.StreamReader
@@ -32,6 +45,8 @@ Public Class prefer
             Label2.Text = "Chromium : N/A"
             Label5.Text = "CefSharp : N/A"
             Label23.Text = "Version : N/A"
+            Label51.Text = "0 MB"
+            Label52.Text = "0 MB"
             Label2.Enabled = False
             Label5.Enabled = False
             Label23.Enabled = False
@@ -82,6 +97,9 @@ Public Class prefer
                 fileReader2.Close()
                 fileReader3.Close()
                 fileReader4.Close()
+                TotalSize = 0
+                Dim TheSize1 As Long = GetDirSize(rescheck)
+                Label51.Text = FormatNumber(TheSize1 / 1024 / 1024, 1) & " MB"
             Catch ex As Exception
                 MessageBox.Show("Data gather failure!" + vbNewLine + "Error : " + ex.Message, "Fatal Error!")
                 Me.Close()
@@ -105,6 +123,15 @@ Public Class prefer
             CheckBox1.Checked = True
         End If
         fileReader11.Close()
+
+        Dim fileReader111 As System.IO.StreamReader
+        fileReader111 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.hidesp.pbcfg")
+        Dim stringReader111 As String
+        stringReader111 = fileReader111.ReadLine()
+        If stringReader111 = "True" Then
+            CheckBox2.Checked = True
+        End If
+        fileReader111.Close()
 
         Dim fileReader1 As System.IO.StreamReader
         fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.usageinterv.pbcfg")
@@ -141,6 +168,9 @@ Public Class prefer
             System.IO.Directory.Delete(apppath + "\statecache\updatecache", True)
             System.IO.Directory.CreateDirectory(apppath + "\statecache\updatecache")
             Label9.Enabled = False
+            TotalSize = 0
+            Dim TheSize3 As Long = GetDirSize(apppath + "\statecache\updatecache\")
+            Label52.Text = FormatNumber(TheSize3 / 1024 / 1024, 1) & " MB"
         Catch ex As Exception
             MessageBox.Show("Could not attempt to delete installer cache!" + vbNewLine + ex.Message + vbNewLine + "You may need to restart builder and try again.", "Error!")
         End Try
@@ -283,12 +313,11 @@ Public Class prefer
         Dim objWriter As New System.IO.StreamWriter(pbcfg)
         If CheckBox1.Checked = True Then
             objWriter.Write("False")
-            MessageBox.Show("Success! News Feed will fetch on startup. You may need to restart to make change.", "OK!")
+            MessageBox.Show("Success! News Feed will not fetch on startup. You may need to restart to make change.", "OK!")
         Else
             objWriter.Write("True")
             MessageBox.Show("Success! News Feed will fetch on startup. You may need to restart to make change.", "OK!")
         End If
-        Me.Close()
         objWriter.Close()
     End Sub
 
@@ -303,5 +332,19 @@ Public Class prefer
             objWriter.Close()
             MessageBox.Show("Success! You may need to restart to apply the change.", "OK!")
         End If
+    End Sub
+
+    Private Sub Label53_Click(sender As Object, e As EventArgs) Handles Label53.Click
+        Dim apppath As String = Application.StartupPath()
+        Dim pbcfg As String = apppath + "\statedata\setting.builder.hidesp.pbcfg"
+        Dim objWriter As New System.IO.StreamWriter(pbcfg)
+        If CheckBox2.Checked = True Then
+            objWriter.Write("True")
+            MessageBox.Show("Success! Side panel will hide on startup. You may need to restart to make change.", "OK!")
+        Else
+            objWriter.Write("False")
+            MessageBox.Show("Success! Side panel will show on startup. You may need to restart to make change.", "OK!")
+        End If
+        objWriter.Close()
     End Sub
 End Class

@@ -479,6 +479,12 @@ Public Class Form1
                     Label8.Enabled = False
                 End If
             End If
+
+            Dim fileReader111 As System.IO.StreamReader
+            fileReader111 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.hidesp.pbcfg")
+            Dim stringReader111 As String
+            stringReader111 = fileReader111.ReadLine()
+
             Dim cachecheck As String = apppath + "\statecache\updatecache\pbb-resource.zip"
             ShowRightPanelToolStripMenuItem.Enabled = False
             ExtensionsNotFoundToolStripMenuItem.Enabled = False
@@ -496,6 +502,15 @@ Public Class Form1
             Label7.Visible = True
             Label7.Text = "Fetching in progress..."
             ProgressBar1.Visible = True
+            If stringReader111 = "True" Then
+                Panel6.Hide()
+                Me.WindowState = FormWindowState.Normal
+                Me.Size = New Size(1232, 646)
+                TabControl1.Width = 872
+                HideRightPanelToolStripMenuItem.Enabled = False
+                ShowRightPanelToolStripMenuItem.Enabled = True
+            End If
+            fileReader111.Close()
             Timer3.Start()
             Timer1.Start()
         End If
@@ -606,6 +621,7 @@ Public Class Form1
             Label12.Text = "News Feed disabled"
             Label13.Text = "News Feed has been disabled. You can re-enable in feed setting."
         End If
+        fileReader999.Close()
     End Sub
 
     Private Sub Label15_Click(sender As Object, e As EventArgs) Handles Label15.Click

@@ -1,6 +1,13 @@
 Builder Release 7.4.0
 
 ** Release notes **
+- ADDED: Resource size viewer in Resource tab.
+- ADDED: Always hide side panel in preference.
 - IMPROVEMENT: Spelling correction in Preference.
 - IMPROVEMENT: Updated CefSharp to 131.3.50
 - IMPROVEMENT: Updated Chromium to 131.0.6778.205
+- CHANGED: Move Resource section to single tab.
+- CHANGED: New interface section in general preference.
+- FIXED: Saving disable startup fetch will close preference.
+- FIXED: Success message confusion in disable startup fetch.
+- FIXED: Cannot save in disable startup fetch.
