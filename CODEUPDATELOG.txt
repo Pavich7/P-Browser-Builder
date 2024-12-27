@@ -1,8 +1,10 @@
 Builder Release 7.4.0
 
 ** Release notes **
+- BREAKING: Upgrading to this version will reset all settings.
 - ADDED: Resource size viewer in Resource tab.
 - ADDED: Always hide side panel in preference.
+- ADDED: Export save and setting in preference.
 - IMPROVEMENT: Spelling correction in Preference.
 - IMPROVEMENT: Updated CefSharp to 131.3.50
 - IMPROVEMENT: Updated Chromium to 131.0.6778.205
@@ -11,3 +13,4 @@ Builder Release 7.4.0
 - FIXED: Saving disable startup fetch will close preference.
 - FIXED: Success message confusion in disable startup fetch.
 - FIXED: Cannot save in disable startup fetch.
+- FIXED: Advance after build action still accessible when no resource.

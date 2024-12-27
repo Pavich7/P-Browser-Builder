@@ -462,6 +462,7 @@ Public Class Form1
                 CheckBox2.Enabled = False
                 Label4.Enabled = False
                 Label8.Enabled = False
+                Label24.Enabled = False
             Else
                 Label20.Visible = False
                 Label18.Visible = False
@@ -477,6 +478,7 @@ Public Class Form1
                     CheckBox2.Enabled = False
                     Label4.Enabled = False
                     Label8.Enabled = False
+                    Label24.Enabled = False
                 End If
             End If
 

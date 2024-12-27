@@ -347,4 +347,9 @@ Public Class prefer
         End If
         objWriter.Close()
     End Sub
+
+    Private Sub Label56_Click(sender As Object, e As EventArgs) Handles Label56.Click
+        Dim apppath As String = Application.StartupPath()
+        Process.Start(apppath + "/statedata")
+    End Sub
 End Class
