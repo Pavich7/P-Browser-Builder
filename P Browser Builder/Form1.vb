@@ -1,4 +1,5 @@
 ﻿Imports System.ComponentModel
+Imports System.IO
 Imports System.IO.Compression
 Imports System.Net
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
@@ -11,6 +12,7 @@ Public Class Form1
     Public Sub New()
         InitializeComponent()
     End Sub
+    Public logpath
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If TextBox1.Text = "" Then
             MessageBox.Show("Please enter your websites URL.", "Build Failed!")
@@ -72,7 +74,19 @@ Public Class Form1
                 MessageBox.Show("Build Completed! Click continue to test app." + vbNewLine + "Some features will not available in Testing.", "Build Completed!")
                 Process.Start(testapp)
                 Label7.Text = "Build completed!"
-                System.Threading.Thread.Sleep(1000)
+                Snooze(1)
+                Dim dir = New System.IO.DirectoryInfo(apppath + "\resource\testspace\startlog")
+                Dim logf = dir.EnumerateFiles("*.txt").
+                OrderByDescending(Function(f) f.LastWriteTime).
+                FirstOrDefault()
+                If logf IsNot Nothing Then
+                    logpath = logf.FullName
+                    RichTextBox1.Text = File.ReadAllText(logpath)
+                    Dim logname = logf.Name
+                    Label39.Text = logname
+                    Label39.Visible = True
+                    PictureBox14.Enabled = True
+                End If
                 Timer2.Start()
                 Button7.Enabled = False
                 Button8.Enabled = True
@@ -339,8 +353,6 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim apppath As String = Application.StartupPath()
         'Init structure check
-        TabPage2.Enabled = False
-        TabControl1.TabPages.Remove(TabPage2)
         Dim flcheck1 As String = apppath + "\binary"
         Dim flcheck2 As String = apppath + "\binarypkg"
         Dim flcheck3 As String = apppath + "\metadata"
@@ -397,6 +409,8 @@ Public Class Form1
         fileReader19.Close()
         Button6.Visible = False
         CheckBox4.Visible = False
+        PictureBox14.Enabled = False
+        Label39.Visible = False
         Button6.Enabled = False
         'Reset
         If stringReader19 = "True" Then
@@ -493,6 +507,7 @@ Public Class Form1
                 Label4.Enabled = False
                 Label8.Enabled = False
                 Label24.Enabled = False
+                Button9.Enabled = False
             Else
                 Label20.Visible = False
                 Label18.Visible = False
@@ -509,6 +524,7 @@ Public Class Form1
                     Label4.Enabled = False
                     Label8.Enabled = False
                     Label24.Enabled = False
+                    Button9.Enabled = False
                 End If
             End If
 
@@ -1135,6 +1151,7 @@ Public Class Form1
             CheckBox5.Checked = False
             CheckBox6.Checked = False
             CheckBox7.Checked = False
+            TabControl1.SelectedTab = TabPage1
             System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
             System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
             Browser.Load("about:blank")
@@ -1281,6 +1298,36 @@ Public Class Form1
             Process.Start(apppath + "\statecache\chrome_debug.log")
         Catch ex As Exception
             MessageBox.Show("Log not found! Maybe you can load some web and try again.", "Error!")
+        End Try
+    End Sub
+
+    Private Sub Label39_Click(sender As Object, e As EventArgs) Handles Label39.Click
+        Process.Start(logpath)
+    End Sub
+
+    Private Sub PictureBox13_Click(sender As Object, e As EventArgs) Handles PictureBox13.Click
+        Clipboard.SetText(RichTextBox1.Text)
+    End Sub
+
+    Private Sub PictureBox14_Click(sender As Object, e As EventArgs) Handles PictureBox14.Click
+        RichTextBox1.Text = File.ReadAllText(logpath)
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        Try
+            Label7.Text = "Flushing in progress..."
+            ProgressBar1.Value = 20
+            Dim apppath As String = Application.StartupPath()
+            System.IO.Directory.Delete(apppath + "\resource\testspace\startlog", True)
+            System.IO.Directory.CreateDirectory(apppath + "\resource\testspace\startlog")
+            ProgressBar1.Value = 100
+            Label7.Text = "Log flush completed!"
+            Snooze(3)
+            ProgressBar1.Value = 0
+        Catch ex As Exception
+            MessageBox.Show("Please close built app first before perform this action.", "Failed!")
+            Label7.Text = "Log flush failed!"
+            ProgressBar1.Value = 0
         End Try
     End Sub
 End Class

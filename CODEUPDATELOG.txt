@@ -1,8 +1,9 @@
-Builder Release 7.4.0
+Builder Release 8.0.0
 
 ** Release Highlights **
 - HIGHLIGHTS: New option to customize app window opacity.
 - HIGHLIGHTS: New option to hide app icon in title bar.
+- HIGHLIGHTS: Start Log Viewer feature to view app start log.
 
 ** Breaking Changes **
 - BREAKING: Upgrading to this version will reset all settings.
@@ -27,6 +28,6 @@ Builder Release 7.4.0
 - FIXED: Support button will go to wrong page due to server shutdown.
 - FIXED: News Feed cannot try again after fetch failed on startup.
 - FIXED: Reset After Build Action won't reset advanced option.
-
+- FIXED: App might freeze for short period after test build completed.
 ** Low-level **
 - IMPROVEMENT: Updated Visual C++ Redistributable. (14.42.34433.0)
