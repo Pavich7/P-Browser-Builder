@@ -23,6 +23,7 @@ Public Class Form1
             Dim pbprogh As String = apppath + "\resource\testspace\appsizeh.pbcfg"
             Dim pbprogfw As String = apppath + "\resource\testspace\appfixbs.pbcfg"
             Dim pbprogaot As String = apppath + "\resource\testspace\appaot.pbcfg"
+            Dim pbopval As String = apppath + "\resource\testspace\appopval.pbcfg"
             Dim testapp As String = apppath + "\resource\testspace\P Browser App.exe"
             ProgressBar1.Value = 20
             If System.IO.File.Exists(pbcfg) = True Then
@@ -33,6 +34,7 @@ Public Class Form1
                 Dim objWriter4 As New System.IO.StreamWriter(pbprogw)
                 Dim objWriter5 As New System.IO.StreamWriter(pbprogfw)
                 Dim objWriter6 As New System.IO.StreamWriter(pbprogaot)
+                Dim objWriter7 As New System.IO.StreamWriter(pbopval)
                 objWriter.Write(TextBox1.Text)
                 objWriter.Close()
                 objWriter2.Write(TextBox2.Text)
@@ -58,6 +60,8 @@ Public Class Form1
                         My.Computer.FileSystem.CopyFile(apppath + "\statecache\buildcache\appicns\appicns.ico", apppath + "\resource\testspace\appicns.ico")
                     End If
                 End If
+                objWriter7.Write(TextBox5.Text)
+                objWriter7.Close()
                 ProgressBar1.Value = 100
                 MessageBox.Show("Build Completed! Click continue to test app." + vbNewLine + "Some features will not available in Testing.", "Build Completed!")
                 Process.Start(testapp)
@@ -124,6 +128,10 @@ Public Class Form1
                         objWriter51.Write("True")
                     End If
                     objWriter51.Close()
+                    Dim pbopval As String = apppath + "\resource\buildspace\appopval.pbcfg"
+                    Dim objWriter511 As New System.IO.StreamWriter(pbopval)
+                    objWriter511.Write(TextBox5.Text)
+                    objWriter511.Close()
                     ProgressBar1.Value = 50
                     My.Computer.FileSystem.CopyDirectory(apppath + "\resource\buildspace", apppath + "\binary", True)
                     My.Computer.FileSystem.RenameFile(apppath + "\binary\P Browser App.exe", TextBox2.Text + ".exe")
@@ -214,6 +222,10 @@ Public Class Form1
                     If CheckBox6.Checked = True Then
                         objWriter51.Write("True")
                     End If
+                    Dim pbopval As String = apppath + "\resource\buildspace\appopval.pbcfg"
+                    Dim objWriter511 As New System.IO.StreamWriter(pbopval)
+                    objWriter511.Write(TextBox5.Text)
+                    objWriter511.Close()
                     objWriter51.Close()
                     ProgressBar1.Value = 50
                     My.Computer.FileSystem.CopyDirectory(apppath + "\resource\buildspace", apppath + "\binary", True)
@@ -466,8 +478,8 @@ Public Class Form1
             Else
                 Label20.Visible = False
                 Label18.Visible = False
-                Panel4.Size = New Size(265, 175)
-                Dim resvcheck4 As String = apppath + "\resource\metadata\checkpoint\r620.chkp"
+                Panel4.Size = New Size(265, 148)
+                Dim resvcheck4 As String = apppath + "\resource\metadata\checkpoint\r640.chkp"
                 If Not System.IO.File.Exists(resvcheck4) Then
                     MessageBox.Show("Unload required! Resource not compatible!" + vbNewLine + "Please reinstall builder resource via preference menu.", "Resource not compatible!")
                     Button1.Enabled = False
@@ -652,6 +664,7 @@ Public Class Form1
         TextBox2.Text = ""
         TextBox3.Text = "944"
         TextBox4.Text = "573"
+        TextBox5.Text = "100"
         RadioButton2.Checked = False
         RadioButton3.Checked = False
         CheckBox1.Text = "Start your app after build"
@@ -1087,6 +1100,7 @@ Public Class Form1
             TextBox2.Text = ""
             TextBox3.Text = "944"
             TextBox4.Text = "573"
+            TextBox5.Text = "100"
             RadioButton2.Checked = False
             RadioButton3.Checked = False
             CheckBox1.Text = "Start your app after build"
@@ -1117,6 +1131,7 @@ Public Class Form1
     Private Sub PictureBox10_Click(sender As Object, e As EventArgs) Handles PictureBox10.Click
         TextBox3.Text = "944"
         TextBox4.Text = "573"
+        TextBox5.Text = "100"
         CheckBox5.Checked = False
         CheckBox6.Checked = False
     End Sub
