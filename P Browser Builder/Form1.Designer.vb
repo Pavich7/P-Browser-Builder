@@ -168,6 +168,7 @@ Partial Class Form1
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.dlworker = New System.ComponentModel.BackgroundWorker()
+        Me.CheckBox7 = New System.Windows.Forms.CheckBox()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -214,45 +215,45 @@ Partial Class Form1
         'StartWindowToolStripMenuItem
         '
         Me.StartWindowToolStripMenuItem.Name = "StartWindowToolStripMenuItem"
-        Me.StartWindowToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.StartWindowToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
         Me.StartWindowToolStripMenuItem.Text = "Start Window"
         '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(177, 6)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(142, 6)
         '
         'SaveToolStripMenuItem
         '
         Me.SaveToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.diskette
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
         Me.SaveToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
         'ClearAllToolStripMenuItem
         '
         Me.ClearAllToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.remove
         Me.ClearAllToolStripMenuItem.Name = "ClearAllToolStripMenuItem"
-        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
         Me.ClearAllToolStripMenuItem.Text = "Clear all"
         '
         'ClearAllSavesToolStripMenuItem
         '
         Me.ClearAllSavesToolStripMenuItem.Name = "ClearAllSavesToolStripMenuItem"
-        Me.ClearAllSavesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClearAllSavesToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
         Me.ClearAllSavesToolStripMenuItem.Text = "Clear saves"
         '
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(177, 6)
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(142, 6)
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'PreviewToolStripMenuItem
@@ -931,6 +932,7 @@ Partial Class Form1
         '
         Me.Panel6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel6.Controls.Add(Me.CheckBox7)
         Me.Panel6.Controls.Add(Me.Label41)
         Me.Panel6.Controls.Add(Me.TextBox5)
         Me.Panel6.Controls.Add(Me.Label40)
@@ -964,7 +966,7 @@ Partial Class Form1
         '
         Me.Label41.AutoSize = True
         Me.Label41.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label41.Location = New System.Drawing.Point(169, 133)
+        Me.Label41.Location = New System.Drawing.Point(185, 133)
         Me.Label41.Name = "Label41"
         Me.Label41.Size = New System.Drawing.Size(18, 17)
         Me.Label41.TabIndex = 63
@@ -973,10 +975,10 @@ Partial Class Form1
         'TextBox5
         '
         Me.TextBox5.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(128, 132)
+        Me.TextBox5.Location = New System.Drawing.Point(129, 132)
         Me.TextBox5.MaxLength = 3
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(38, 22)
+        Me.TextBox5.Size = New System.Drawing.Size(54, 22)
         Me.TextBox5.TabIndex = 62
         Me.TextBox5.Text = "100"
         Me.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1529,6 +1531,17 @@ Partial Class Form1
         'dlworker
         '
         '
+        'CheckBox7
+        '
+        Me.CheckBox7.AutoSize = True
+        Me.CheckBox7.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox7.Location = New System.Drawing.Point(211, 133)
+        Me.CheckBox7.Name = "CheckBox7"
+        Me.CheckBox7.Size = New System.Drawing.Size(80, 21)
+        Me.CheckBox7.TabIndex = 64
+        Me.CheckBox7.Text = "Hide icon"
+        Me.CheckBox7.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1758,4 +1771,5 @@ Partial Class Form1
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Label40 As Label
     Friend WithEvents Label41 As Label
+    Friend WithEvents CheckBox7 As CheckBox
 End Class

@@ -59,27 +59,39 @@ Public Class welcome
         Dim fileReader21 As System.IO.StreamReader
         Dim fileReader31 As System.IO.StreamReader
         Dim fileReader41 As System.IO.StreamReader
+        Dim fileReader51 As System.IO.StreamReader
+        Dim fileReader61 As System.IO.StreamReader
         fileReader11 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.urlsave.pbsf")
         fileReader21 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.anamesave.pbsf")
         fileReader31 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.wwindow.pbsf")
         fileReader41 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.hwindow.pbsf")
+        fileReader51 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.fixwin.pbsf")
+        fileReader61 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.aotwin.pbsf")
         Dim stringReader11 As String
         Dim stringReader21 As String
         Dim stringReader31 As String
         Dim stringReader41 As String
+        Dim stringReader51 As String
+        Dim stringReader61 As String
         stringReader11 = fileReader11.ReadLine()
         stringReader21 = fileReader21.ReadLine()
         stringReader31 = fileReader31.ReadLine()
         stringReader41 = fileReader41.ReadLine()
+        stringReader51 = fileReader51.ReadLine()
+        stringReader61 = fileReader61.ReadLine()
         Form1.TextBox1.Text = stringReader11
         Form1.TextBox2.Text = stringReader21
         Form1.TextBox3.Text = stringReader31
         Form1.TextBox4.Text = stringReader41
+        Form1.CheckBox5.Checked = stringReader51
+        Form1.CheckBox6.Checked = stringReader61
         Form1.Enabled = True
         fileReader11.Close()
         fileReader21.Close()
         fileReader31.Close()
         fileReader41.Close()
+        fileReader51.Close()
+        fileReader61.Close()
         Me.Close()
     End Sub
 
@@ -105,27 +117,39 @@ Public Class welcome
         Dim fileReader21 As System.IO.StreamReader
         Dim fileReader31 As System.IO.StreamReader
         Dim fileReader41 As System.IO.StreamReader
+        Dim fileReader51 As System.IO.StreamReader
+        Dim fileReader61 As System.IO.StreamReader
         fileReader11 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.urlsave.pbsf")
         fileReader21 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.anamesave.pbsf")
         fileReader31 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.wwindow.pbsf")
         fileReader41 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.hwindow.pbsf")
+        fileReader51 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.fixwin.pbsf")
+        fileReader61 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.aotwin.pbsf")
         Dim stringReader11 As String
         Dim stringReader21 As String
         Dim stringReader31 As String
         Dim stringReader41 As String
+        Dim stringReader51 As String
+        Dim stringReader61 As String
         stringReader11 = fileReader11.ReadLine()
         stringReader21 = fileReader21.ReadLine()
         stringReader31 = fileReader31.ReadLine()
         stringReader41 = fileReader41.ReadLine()
+        stringReader51 = fileReader51.ReadLine()
+        stringReader61 = fileReader61.ReadLine()
         Form1.TextBox1.Text = stringReader11
         Form1.TextBox2.Text = stringReader21
         Form1.TextBox3.Text = stringReader31
         Form1.TextBox4.Text = stringReader41
+        Form1.CheckBox5.Checked = stringReader51
+        Form1.CheckBox6.Checked = stringReader61
         Form1.Enabled = True
         fileReader11.Close()
         fileReader21.Close()
         fileReader31.Close()
         fileReader41.Close()
+        fileReader51.Close()
+        fileReader61.Close()
         Me.Close()
     End Sub
 
@@ -135,27 +159,39 @@ Public Class welcome
         Dim fileReader21 As System.IO.StreamReader
         Dim fileReader31 As System.IO.StreamReader
         Dim fileReader41 As System.IO.StreamReader
+        Dim fileReader51 As System.IO.StreamReader
+        Dim fileReader61 As System.IO.StreamReader
         fileReader11 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.urlsave.pbsf")
         fileReader21 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.anamesave.pbsf")
         fileReader31 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.wwindow.pbsf")
         fileReader41 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.hwindow.pbsf")
+        fileReader51 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.fixwin.pbsf")
+        fileReader61 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.aotwin.pbsf")
         Dim stringReader11 As String
         Dim stringReader21 As String
         Dim stringReader31 As String
         Dim stringReader41 As String
+        Dim stringReader51 As String
+        Dim stringReader61 As String
         stringReader11 = fileReader11.ReadLine()
         stringReader21 = fileReader21.ReadLine()
         stringReader31 = fileReader31.ReadLine()
         stringReader41 = fileReader41.ReadLine()
+        stringReader51 = fileReader51.ReadLine()
+        stringReader61 = fileReader61.ReadLine()
         Form1.TextBox1.Text = stringReader11
         Form1.TextBox2.Text = stringReader21
         Form1.TextBox3.Text = stringReader31
         Form1.TextBox4.Text = stringReader41
+        Form1.CheckBox5.Checked = stringReader51
+        Form1.CheckBox6.Checked = stringReader61
         Form1.Enabled = True
         fileReader11.Close()
         fileReader21.Close()
         fileReader31.Close()
         fileReader41.Close()
+        fileReader51.Close()
+        fileReader61.Close()
         Me.Close()
     End Sub
 
@@ -165,27 +201,39 @@ Public Class welcome
         Dim fileReader21 As System.IO.StreamReader
         Dim fileReader31 As System.IO.StreamReader
         Dim fileReader41 As System.IO.StreamReader
+        Dim fileReader51 As System.IO.StreamReader
+        Dim fileReader61 As System.IO.StreamReader
         fileReader11 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.urlsave.pbsf")
         fileReader21 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.anamesave.pbsf")
         fileReader31 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.wwindow.pbsf")
         fileReader41 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.hwindow.pbsf")
+        fileReader51 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.fixwin.pbsf")
+        fileReader61 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\usersave.builder.aotwin.pbsf")
         Dim stringReader11 As String
         Dim stringReader21 As String
         Dim stringReader31 As String
         Dim stringReader41 As String
+        Dim stringReader51 As String
+        Dim stringReader61 As String
         stringReader11 = fileReader11.ReadLine()
         stringReader21 = fileReader21.ReadLine()
         stringReader31 = fileReader31.ReadLine()
         stringReader41 = fileReader41.ReadLine()
+        stringReader51 = fileReader51.ReadLine()
+        stringReader61 = fileReader61.ReadLine()
         Form1.TextBox1.Text = stringReader11
         Form1.TextBox2.Text = stringReader21
         Form1.TextBox3.Text = stringReader31
         Form1.TextBox4.Text = stringReader41
+        Form1.CheckBox5.Checked = stringReader51
+        Form1.CheckBox6.Checked = stringReader61
         Form1.Enabled = True
         fileReader11.Close()
         fileReader21.Close()
         fileReader31.Close()
         fileReader41.Close()
+        fileReader51.Close()
+        fileReader61.Close()
         Me.Close()
     End Sub
 

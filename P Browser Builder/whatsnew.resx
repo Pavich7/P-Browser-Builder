@@ -120,22 +120,33 @@
   <data name="RichTextBox1.Text" xml:space="preserve">
     <value>Builder Release 7.4.0
 
-** Release notes **
+** Release Highlights **
+- HIGHLIGHTS: New option to customize app window opacity.
+- HIGHLIGHTS: New option to hide app icon in title bar.
+
+** Breaking Changes **
 - BREAKING: Upgrading to this version will reset all settings.
+- BREAKING: This version only support 6.4.0 or newer resource.
+
+** Release notes **
 - ADDED: Resource size viewer in Resource tab.
+- ADDED: Fixed window and always on top option can be saved.
 - ADDED: Always hide side panel in preference.
 - ADDED: Export save and setting in preference.
 - IMPROVEMENT: Spelling correction in Preference.
 - IMPROVEMENT: Updated CefSharp to 131.3.50
 - IMPROVEMENT: Updated Chromium to 131.0.6778.205
 - CHANGED: Move Resource section to single tab.
+- CHANGED: Max window size now limit to 0-9999.
 - CHANGED: New interface section in general preference.
+- CHANGED: Saving project now required Website URL.
 - FIXED: Saving disable startup fetch will close preference.
 - FIXED: Success message confusion in disable startup fetch.
 - FIXED: Cannot save in disable startup fetch.
 - FIXED: Advance after build action still accessible when no resource.
 - FIXED: Support button will go to wrong page due to server shutdown.
 - FIXED: News Feed cannot try again after fetch failed on startup.
+- FIXED: Reset After Build Action won't reset advanced option.
 
 ** Low-level **
 - IMPROVEMENT: Updated Visual C++ Redistributable. (14.42.34433.0)</value>

@@ -24,6 +24,7 @@ Public Class Form1
             Dim pbprogfw As String = apppath + "\resource\testspace\appfixbs.pbcfg"
             Dim pbprogaot As String = apppath + "\resource\testspace\appaot.pbcfg"
             Dim pbopval As String = apppath + "\resource\testspace\appopval.pbcfg"
+            Dim pbhico As String = apppath + "\resource\testspace\apphico.pbcfg"
             Dim testapp As String = apppath + "\resource\testspace\P Browser App.exe"
             ProgressBar1.Value = 20
             If System.IO.File.Exists(pbcfg) = True Then
@@ -35,6 +36,7 @@ Public Class Form1
                 Dim objWriter5 As New System.IO.StreamWriter(pbprogfw)
                 Dim objWriter6 As New System.IO.StreamWriter(pbprogaot)
                 Dim objWriter7 As New System.IO.StreamWriter(pbopval)
+                Dim objWriter8 As New System.IO.StreamWriter(pbhico)
                 objWriter.Write(TextBox1.Text)
                 objWriter.Close()
                 objWriter2.Write(TextBox2.Text)
@@ -62,6 +64,10 @@ Public Class Form1
                 End If
                 objWriter7.Write(TextBox5.Text)
                 objWriter7.Close()
+                If CheckBox7.Checked = True Then
+                    objWriter8.Write("True")
+                End If
+                objWriter8.Close()
                 ProgressBar1.Value = 100
                 MessageBox.Show("Build Completed! Click continue to test app." + vbNewLine + "Some features will not available in Testing.", "Build Completed!")
                 Process.Start(testapp)
@@ -128,6 +134,12 @@ Public Class Form1
                         objWriter51.Write("True")
                     End If
                     objWriter51.Close()
+                    Dim pbhico As String = apppath + "\resource\buildspace\apphico.pbcfg"
+                    Dim objWriter52 As New System.IO.StreamWriter(pbhico)
+                    If CheckBox7.Checked = True Then
+                        objWriter52.Write("True")
+                    End If
+                    objWriter52.Close()
                     Dim pbopval As String = apppath + "\resource\buildspace\appopval.pbcfg"
                     Dim objWriter511 As New System.IO.StreamWriter(pbopval)
                     objWriter511.Write(TextBox5.Text)
@@ -222,6 +234,12 @@ Public Class Form1
                     If CheckBox6.Checked = True Then
                         objWriter51.Write("True")
                     End If
+                    Dim pbhico As String = apppath + "\resource\buildspace\apphico.pbcfg"
+                    Dim objWriter52 As New System.IO.StreamWriter(pbhico)
+                    If CheckBox7.Checked = True Then
+                        objWriter52.Write("True")
+                    End If
+                    objWriter52.Close()
                     Dim pbopval As String = apppath + "\resource\buildspace\appopval.pbcfg"
                     Dim objWriter511 As New System.IO.StreamWriter(pbopval)
                     objWriter511.Write(TextBox5.Text)
@@ -675,6 +693,7 @@ Public Class Form1
         CheckBox4.Checked = False
         CheckBox5.Checked = False
         CheckBox6.Checked = False
+        CheckBox7.Checked = False
         System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
         System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
     End Sub
@@ -966,6 +985,10 @@ Public Class Form1
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
         CheckBox1.Checked = False
         CheckBox2.Checked = False
+        CheckBox4.Checked = False
+        Button6.Visible = False
+        CheckBox4.Visible = False
+        Label24.Visible = True
     End Sub
 
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
@@ -1111,6 +1134,7 @@ Public Class Form1
             CheckBox4.Checked = False
             CheckBox5.Checked = False
             CheckBox6.Checked = False
+            CheckBox7.Checked = False
             System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
             System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
             Browser.Load("about:blank")
@@ -1134,6 +1158,7 @@ Public Class Form1
         TextBox5.Text = "100"
         CheckBox5.Checked = False
         CheckBox6.Checked = False
+        CheckBox7.Checked = False
     End Sub
 
     Private Sub PictureBox11_Click(sender As Object, e As EventArgs) Handles PictureBox11.Click
@@ -1185,32 +1210,60 @@ Public Class Form1
         Dim objWriter4 As New System.IO.StreamWriter(pbcfg4)
         objWriter4.Write("")
         objWriter4.Close()
+        Dim pbcfg5 As String = apppath + "\statedata\usersave.builder.fixwin.pbsf"
+        Dim objWriter5 As New System.IO.StreamWriter(pbcfg5)
+        objWriter5.Write("False")
+        objWriter5.Close()
+        Dim pbcfg6 As String = apppath + "\statedata\usersave.builder.aotwin.pbsf"
+        Dim objWriter6 As New System.IO.StreamWriter(pbcfg6)
+        objWriter6.Write("False")
+        objWriter6.Close()
         MessageBox.Show("Cleared!", "Completed!")
     End Sub
 
     Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
-        Try
-            Dim apppath As String = Application.StartupPath()
-            Dim pbcfg1 As String = apppath + "\statedata\usersave.builder.anamesave.pbsf"
-            Dim objWriter1 As New System.IO.StreamWriter(pbcfg1)
-            objWriter1.Write(TextBox2.Text)
-            objWriter1.Close()
-            Dim pbcfg2 As String = apppath + "\statedata\usersave.builder.urlsave.pbsf"
-            Dim objWriter2 As New System.IO.StreamWriter(pbcfg2)
-            objWriter2.Write(TextBox1.Text)
-            objWriter2.Close()
-            Dim pbcfg3 As String = apppath + "\statedata\usersave.builder.wwindow.pbsf"
-            Dim objWriter3 As New System.IO.StreamWriter(pbcfg3)
-            objWriter3.Write(TextBox3.Text)
-            objWriter3.Close()
-            Dim pbcfg4 As String = apppath + "\statedata\usersave.builder.hwindow.pbsf"
-            Dim objWriter4 As New System.IO.StreamWriter(pbcfg4)
-            objWriter4.Write(TextBox4.Text)
-            objWriter4.Close()
-            MessageBox.Show("Saved!", "Completed!")
-        Catch ex As Exception
-            MessageBox.Show("Save Failed!", "Error!")
-        End Try
+        If TextBox1.Text = "" Then
+            MessageBox.Show("To save project, please enter Website URL.", "Error!")
+        Else
+            Try
+                Dim apppath As String = Application.StartupPath()
+                Dim pbcfg1 As String = apppath + "\statedata\usersave.builder.anamesave.pbsf"
+                Dim objWriter1 As New System.IO.StreamWriter(pbcfg1)
+                objWriter1.Write(TextBox2.Text)
+                objWriter1.Close()
+                Dim pbcfg2 As String = apppath + "\statedata\usersave.builder.urlsave.pbsf"
+                Dim objWriter2 As New System.IO.StreamWriter(pbcfg2)
+                objWriter2.Write(TextBox1.Text)
+                objWriter2.Close()
+                Dim pbcfg3 As String = apppath + "\statedata\usersave.builder.wwindow.pbsf"
+                Dim objWriter3 As New System.IO.StreamWriter(pbcfg3)
+                objWriter3.Write(TextBox3.Text)
+                objWriter3.Close()
+                Dim pbcfg4 As String = apppath + "\statedata\usersave.builder.hwindow.pbsf"
+                Dim objWriter4 As New System.IO.StreamWriter(pbcfg4)
+                objWriter4.Write(TextBox4.Text)
+                objWriter4.Close()
+                Dim pbcfg5 As String = apppath + "\statedata\usersave.builder.fixwin.pbsf"
+                Dim objWriter5 As New System.IO.StreamWriter(pbcfg5)
+                If CheckBox5.Checked Then
+                    objWriter5.Write("True")
+                Else
+                    objWriter5.Write("False")
+                End If
+                objWriter5.Close()
+                Dim pbcfg6 As String = apppath + "\statedata\usersave.builder.aotwin.pbsf"
+                Dim objWriter6 As New System.IO.StreamWriter(pbcfg6)
+                If CheckBox6.Checked Then
+                    objWriter6.Write("True")
+                Else
+                    objWriter6.Write("False")
+                End If
+                objWriter6.Close()
+                MessageBox.Show("Saved!", "Completed!")
+            Catch ex As Exception
+                MessageBox.Show("Save Failed!", "Error!")
+            End Try
+        End If
     End Sub
 
     Private Sub CefSharpLogToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CefSharpLogToolStripMenuItem.Click
