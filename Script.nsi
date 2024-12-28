@@ -1,6 +1,3 @@
-; NSIS Modern User Interface
-
-; Include Modern UI
 !include "MUI2.nsh"
 
 ; General
@@ -27,6 +24,7 @@
 ; --------------------------------
 ; Pages
   !insertmacro MUI_PAGE_WELCOME
+  !insertmacro MUI_PAGE_LICENSE "C:\Users\Pavich Komansil\Desktop\inspbb\eula.txt"
   !insertmacro MUI_PAGE_DIRECTORY
   !insertmacro MUI_PAGE_INSTFILES
   !insertmacro MUI_PAGE_FINISH

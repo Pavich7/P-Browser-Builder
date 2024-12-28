@@ -26,23 +26,23 @@ Partial Class welcome
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label3
@@ -79,16 +79,6 @@ Partial Class welcome
         Me.Label4.TabIndex = 14
         Me.Label4.Text = "Create fresh new project."
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.P_Browser_Builder.My.Resources.Resources.file
-        Me.PictureBox1.Location = New System.Drawing.Point(20, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(36, 31)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 12
-        Me.PictureBox1.TabStop = False
-        '
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.Label1)
@@ -111,16 +101,6 @@ Partial Class welcome
         Me.Label1.Size = New System.Drawing.Size(139, 17)
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "Load last saved project."
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.P_Browser_Builder.My.Resources.Resources.diskette
-        Me.PictureBox2.Location = New System.Drawing.Point(24, 12)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(32, 28)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 12
-        Me.PictureBox2.TabStop = False
         '
         'Label2
         '
@@ -156,16 +136,6 @@ Partial Class welcome
         Me.Label5.TabIndex = 13
         Me.Label5.Text = "Exit builder."
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.P_Browser_Builder.My.Resources.Resources.remove
-        Me.PictureBox3.Location = New System.Drawing.Point(24, 12)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(32, 28)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 12
-        Me.PictureBox3.TabStop = False
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -196,11 +166,41 @@ Partial Class welcome
         Me.Label8.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label8.Font = New System.Drawing.Font("Segoe UI Semilight", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label8.Location = New System.Drawing.Point(240, 376)
+        Me.Label8.Location = New System.Drawing.Point(314, 377)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(111, 20)
         Me.Label8.TabIndex = 71
         Me.Label8.Text = "Restore mode..."
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.P_Browser_Builder.My.Resources.Resources.remove
+        Me.PictureBox3.Location = New System.Drawing.Point(24, 12)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(32, 28)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 12
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.P_Browser_Builder.My.Resources.Resources.diskette
+        Me.PictureBox2.Location = New System.Drawing.Point(24, 12)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(32, 28)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 12
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.P_Browser_Builder.My.Resources.Resources.file
+        Me.PictureBox1.Location = New System.Drawing.Point(20, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(36, 31)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 12
+        Me.PictureBox1.TabStop = False
         '
         'welcome
         '
@@ -223,13 +223,13 @@ Partial Class welcome
         Me.Text = "P Browser Builder"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
