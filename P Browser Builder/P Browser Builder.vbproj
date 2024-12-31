@@ -310,6 +310,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="p_browser_icon_001_rq2_icon.ico" />
+    <None Include="Resources\bug.png" />
+    <None Include="Resources\house.png" />
     <None Include="Resources\copy.png" />
     <None Include="packages.config" />
     <None Include="Resources\u.img_assets_placeholder.png" />

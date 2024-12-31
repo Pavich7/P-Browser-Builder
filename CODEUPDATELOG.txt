@@ -18,6 +18,7 @@ Builder Release 8.0.0
 - IMPROVEMENT: Spelling correction in Preference.
 - IMPROVEMENT: Updated CefSharp to 131.3.50
 - IMPROVEMENT: Updated Chromium to 131.0.6778.205
+- IMPROVEMENT: Minor main user interface improvements.
 - CHANGED: Move Resource section to single tab.
 - CHANGED: Max window size now limit to 0-9999.
 - CHANGED: New interface section in general preference.

@@ -26,7 +26,6 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StartWindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.ClearAllSavesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
@@ -34,9 +33,6 @@ Partial Class Form1
         Me.PreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenRemoteDebuggingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.DebugLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CefSharpLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ChromiumLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExtensionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExtensionsNotFoundToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -146,13 +142,14 @@ Partial Class Form1
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Label37 = New System.Windows.Forms.Label()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.dlworker = New System.ComponentModel.BackgroundWorker()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label39 = New System.Windows.Forms.Label()
         Me.PictureBox11 = New System.Windows.Forms.PictureBox()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
@@ -161,18 +158,21 @@ Partial Class Form1
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.StartWindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClearAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReloadPreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DebugLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CefSharpLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ChromiumLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReleaseNoteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenBuilderInExplorerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.PictureBox14 = New System.Windows.Forms.PictureBox()
-        Me.Button9 = New System.Windows.Forms.Button()
+        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -196,8 +196,8 @@ Partial Class Form1
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -216,12 +216,6 @@ Partial Class Form1
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
-        '
-        'StartWindowToolStripMenuItem
-        '
-        Me.StartWindowToolStripMenuItem.Name = "StartWindowToolStripMenuItem"
-        Me.StartWindowToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
-        Me.StartWindowToolStripMenuItem.Text = "Start Window"
         '
         'ToolStripSeparator4
         '
@@ -263,25 +257,6 @@ Partial Class Form1
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
         Me.ToolStripSeparator3.Size = New System.Drawing.Size(206, 6)
-        '
-        'DebugLogToolStripMenuItem
-        '
-        Me.DebugLogToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CefSharpLogToolStripMenuItem, Me.ChromiumLogToolStripMenuItem})
-        Me.DebugLogToolStripMenuItem.Name = "DebugLogToolStripMenuItem"
-        Me.DebugLogToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
-        Me.DebugLogToolStripMenuItem.Text = "Debug Log"
-        '
-        'CefSharpLogToolStripMenuItem
-        '
-        Me.CefSharpLogToolStripMenuItem.Name = "CefSharpLogToolStripMenuItem"
-        Me.CefSharpLogToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
-        Me.CefSharpLogToolStripMenuItem.Text = "CefSharp Log"
-        '
-        'ChromiumLogToolStripMenuItem
-        '
-        Me.ChromiumLogToolStripMenuItem.Name = "ChromiumLogToolStripMenuItem"
-        Me.ChromiumLogToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
-        Me.ChromiumLogToolStripMenuItem.Text = "Chromium Log"
         '
         'ExtensionsToolStripMenuItem
         '
@@ -404,6 +379,7 @@ Partial Class Form1
         '
         'SubmitBugsReportToolStripMenuItem
         '
+        Me.SubmitBugsReportToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.bug
         Me.SubmitBugsReportToolStripMenuItem.Name = "SubmitBugsReportToolStripMenuItem"
         Me.SubmitBugsReportToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
         Me.SubmitBugsReportToolStripMenuItem.Text = "Submit Bugs Report"
@@ -486,9 +462,9 @@ Partial Class Form1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Button1.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(95, 37)
+        Me.Button1.Location = New System.Drawing.Point(111, 37)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(73, 35)
+        Me.Button1.Size = New System.Drawing.Size(93, 35)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "Test"
         Me.Button1.UseVisualStyleBackColor = True
@@ -497,9 +473,9 @@ Partial Class Form1
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Button2.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(16, 37)
+        Me.Button2.Location = New System.Drawing.Point(12, 37)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(73, 35)
+        Me.Button2.Size = New System.Drawing.Size(93, 35)
         Me.Button2.TabIndex = 2
         Me.Button2.Text = "Build"
         Me.Button2.UseVisualStyleBackColor = True
@@ -610,9 +586,9 @@ Partial Class Form1
         '
         Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Button3.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(174, 37)
+        Me.Button3.Location = New System.Drawing.Point(210, 37)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(146, 35)
+        Me.Button3.Size = New System.Drawing.Size(112, 35)
         Me.Button3.TabIndex = 14
         Me.Button3.Text = "Cleanup"
         Me.Button3.UseVisualStyleBackColor = True
@@ -1304,11 +1280,11 @@ Partial Class Form1
         'TabPage2
         '
         Me.TabPage2.Controls.Add(Me.Button9)
-        Me.TabPage2.Controls.Add(Me.PictureBox14)
-        Me.TabPage2.Controls.Add(Me.PictureBox13)
         Me.TabPage2.Controls.Add(Me.Label39)
         Me.TabPage2.Controls.Add(Me.Label6)
         Me.TabPage2.Controls.Add(Me.RichTextBox1)
+        Me.TabPage2.Controls.Add(Me.PictureBox14)
+        Me.TabPage2.Controls.Add(Me.PictureBox13)
         Me.TabPage2.Font = New System.Drawing.Font("Segoe UI", 9.75!)
         Me.TabPage2.Location = New System.Drawing.Point(4, 26)
         Me.TabPage2.Name = "TabPage2"
@@ -1317,6 +1293,53 @@ Partial Class Form1
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Start Log"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Button9
+        '
+        Me.Button9.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Button9.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button9.Location = New System.Drawing.Point(18, 499)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(98, 24)
+        Me.Button9.TabIndex = 65
+        Me.Button9.Text = "Flush logs"
+        Me.Button9.UseVisualStyleBackColor = True
+        '
+        'Label39
+        '
+        Me.Label39.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label39.AutoSize = True
+        Me.Label39.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label39.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label39.Location = New System.Drawing.Point(349, 21)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(29, 17)
+        Me.Label39.TabIndex = 57
+        Me.Label39.Text = "logf"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
+        Me.Label6.Location = New System.Drawing.Point(13, 14)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(149, 28)
+        Me.Label6.TabIndex = 57
+        Me.Label6.Text = "Start Log Viewer"
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox1.Font = New System.Drawing.Font("Cascadia Mono SemiLight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox1.Location = New System.Drawing.Point(18, 57)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ReadOnly = True
+        Me.RichTextBox1.Size = New System.Drawing.Size(513, 434)
+        Me.RichTextBox1.TabIndex = 0
+        Me.RichTextBox1.Text = "Welcome to Start Log Viewer!" & Global.Microsoft.VisualBasic.ChrW(10) & "Please start a test to view app start log..."
         '
         'Label37
         '
@@ -1358,42 +1381,6 @@ Partial Class Form1
         '
         'dlworker
         '
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.RichTextBox1.Font = New System.Drawing.Font("Cascadia Mono SemiLight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox1.Location = New System.Drawing.Point(18, 57)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.ReadOnly = True
-        Me.RichTextBox1.Size = New System.Drawing.Size(513, 434)
-        Me.RichTextBox1.TabIndex = 0
-        Me.RichTextBox1.Text = "Welcome to Start Log Viewer!" & Global.Microsoft.VisualBasic.ChrW(10) & "Please start a test to view app start log..."
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label6.Location = New System.Drawing.Point(13, 14)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(149, 28)
-        Me.Label6.TabIndex = 57
-        Me.Label6.Text = "Start Log Viewer"
-        '
-        'Label39
-        '
-        Me.Label39.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label39.AutoSize = True
-        Me.Label39.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label39.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label39.Location = New System.Drawing.Point(349, 21)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(29, 17)
-        Me.Label39.TabIndex = 57
-        Me.Label39.Text = "logf"
         '
         'PictureBox11
         '
@@ -1487,6 +1474,13 @@ Partial Class Form1
         Me.PictureBox3.TabIndex = 33
         Me.PictureBox3.TabStop = False
         '
+        'StartWindowToolStripMenuItem
+        '
+        Me.StartWindowToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.house
+        Me.StartWindowToolStripMenuItem.Name = "StartWindowToolStripMenuItem"
+        Me.StartWindowToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
+        Me.StartWindowToolStripMenuItem.Text = "Start Window"
+        '
         'SaveToolStripMenuItem
         '
         Me.SaveToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.diskette
@@ -1509,6 +1503,26 @@ Partial Class Form1
         Me.ReloadPreviewToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5
         Me.ReloadPreviewToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
         Me.ReloadPreviewToolStripMenuItem.Text = "Reload Preview"
+        '
+        'DebugLogToolStripMenuItem
+        '
+        Me.DebugLogToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CefSharpLogToolStripMenuItem, Me.ChromiumLogToolStripMenuItem})
+        Me.DebugLogToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.bug
+        Me.DebugLogToolStripMenuItem.Name = "DebugLogToolStripMenuItem"
+        Me.DebugLogToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.DebugLogToolStripMenuItem.Text = "Debug Log"
+        '
+        'CefSharpLogToolStripMenuItem
+        '
+        Me.CefSharpLogToolStripMenuItem.Name = "CefSharpLogToolStripMenuItem"
+        Me.CefSharpLogToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CefSharpLogToolStripMenuItem.Text = "CefSharp Log"
+        '
+        'ChromiumLogToolStripMenuItem
+        '
+        Me.ChromiumLogToolStripMenuItem.Name = "ChromiumLogToolStripMenuItem"
+        Me.ChromiumLogToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ChromiumLogToolStripMenuItem.Text = "Chromium Log"
         '
         'ReleaseNoteToolStripMenuItem
         '
@@ -1567,19 +1581,6 @@ Partial Class Form1
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'PictureBox13
-        '
-        Me.PictureBox13.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox13.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox13.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox13.Image = Global.P_Browser_Builder.My.Resources.Resources.copy
-        Me.PictureBox13.Location = New System.Drawing.Point(515, 499)
-        Me.PictureBox13.Name = "PictureBox13"
-        Me.PictureBox13.Size = New System.Drawing.Size(16, 23)
-        Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox13.TabIndex = 58
-        Me.PictureBox13.TabStop = False
-        '
         'PictureBox14
         '
         Me.PictureBox14.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -1593,16 +1594,18 @@ Partial Class Form1
         Me.PictureBox14.TabIndex = 57
         Me.PictureBox14.TabStop = False
         '
-        'Button9
+        'PictureBox13
         '
-        Me.Button9.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Button9.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button9.Location = New System.Drawing.Point(18, 499)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(98, 24)
-        Me.Button9.TabIndex = 65
-        Me.Button9.Text = "Flush logs"
-        Me.Button9.UseVisualStyleBackColor = True
+        Me.PictureBox13.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox13.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox13.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox13.Image = Global.P_Browser_Builder.My.Resources.Resources.copy
+        Me.PictureBox13.Location = New System.Drawing.Point(515, 499)
+        Me.PictureBox13.Name = "PictureBox13"
+        Me.PictureBox13.Size = New System.Drawing.Size(16, 23)
+        Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox13.TabIndex = 58
+        Me.PictureBox13.TabStop = False
         '
         'Form1
         '
@@ -1683,8 +1686,8 @@ Partial Class Form1
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
