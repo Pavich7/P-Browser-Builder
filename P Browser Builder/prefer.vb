@@ -20,6 +20,9 @@ Public Class prefer
         If Not System.IO.File.Exists(cachecheck) Then
             Label9.Enabled = False
         End If
+        If Form1.DevToolStripMenuItem.Visible = True Then
+            Label60.Enabled = False
+        End If
         TotalSize = 0
         Dim TheSize2 As Long = GetDirSize(apppath + "\statecache\updatecache\")
         Label52.Text = FormatNumber(TheSize2 / 1024 / 1024, 1) & " MB"
@@ -351,5 +354,13 @@ Public Class prefer
     Private Sub Label56_Click(sender As Object, e As EventArgs) Handles Label56.Click
         Dim apppath As String = Application.StartupPath()
         Process.Start(apppath + "/statedata")
+    End Sub
+
+    Private Sub Label60_Click(sender As Object, e As EventArgs) Handles Label60.Click
+        Dim result As DialogResult = MessageBox.Show("Unlocking the Dev Menu is dangerous." + vbNewLine + "It is used to test incomplete features at runtime." + vbNewLine + "Some incomplete or faulty features can damage your Builder!" + vbNewLine + "For developers, you can go check the code in the repository." + vbNewLine + "Do you want to process it?", "You sure about this?", MessageBoxButtons.YesNo)
+        If (result = DialogResult.Yes) Then
+            Form1.DevToolStripMenuItem.Visible = True
+            Label60.Enabled = False
+        End If
     End Sub
 End Class

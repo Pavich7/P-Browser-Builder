@@ -143,6 +143,8 @@
 - CHANGED: Max window size now limit to 0-9999.
 - CHANGED: New interface section in general preference.
 - CHANGED: Saving project now required Website URL.
+- CHANGED: Removed Build Mode and After Build Action reset buttons.
+- CHANGED: Moved Unlock Developer Menu to Advanced Preference.
 - FIXED: Saving disable startup fetch will close preference.
 - FIXED: Success message confusion in disable startup fetch.
 - FIXED: Cannot save in disable startup fetch.

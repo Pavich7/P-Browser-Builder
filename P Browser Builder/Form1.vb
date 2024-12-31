@@ -440,6 +440,8 @@ Public Class Form1
         PictureBox14.Enabled = False
         Label39.Visible = False
         Button6.Enabled = False
+        RadioButton2.Checked = True
+        CheckBox1.Checked = True
         'Reset
         If stringReader19 = "True" Then
             Me.Enabled = False
@@ -914,14 +916,6 @@ Public Class Form1
         CheckBox2.Text = "Show your ZIP file in explorer after build"
     End Sub
 
-    Private Sub UnlockDeveloperMenuToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UnlockDeveloperMenuToolStripMenuItem.Click
-        Dim result As DialogResult = MessageBox.Show("Unlocking the Dev Menu is dangerous." + vbNewLine + "It is used to test incomplete features at runtime." + vbNewLine + "Some incomplete or faulty features can damage your Builder!" + vbNewLine + "For developers, you can go check the code in the repository." + vbNewLine + "Do you want to process it?", "You sure about this?", MessageBoxButtons.YesNo)
-        If (result = DialogResult.Yes) Then
-            DevToolStripMenuItem.Visible = True
-            UnlockDeveloperMenuToolStripMenuItem.Enabled = False
-        End If
-    End Sub
-
     Private Sub UnlockIncompleteFeatureToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UnlockIncompleteFeatureToolStripMenuItem.Click
         ExtensionsToolStripMenuItem.Visible = True
         UnlockIncompleteFeatureToolStripMenuItem.Enabled = False
@@ -949,7 +943,6 @@ Public Class Form1
             ExtensionsNotFoundToolStripMenuItem.Enabled = True
             ForceUnlockDisableButtonToolStripMenuItem.Enabled = True
             UnlockIncompleteFeatureToolStripMenuItem.Enabled = True
-            UnlockDeveloperMenuToolStripMenuItem.Enabled = True
         End If
     End Sub
 
@@ -1017,22 +1010,6 @@ Public Class Form1
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
 
         MessageBox.Show(welcomemessage.TextBox2.Text, welcomemessage.TextBox1.Text)
-    End Sub
-
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
-        RadioButton2.Checked = False
-        RadioButton3.Checked = False
-        CheckBox1.Text = "Start your app after build"
-        CheckBox2.Text = "Show your app in explorer after build"
-    End Sub
-
-    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
-        CheckBox1.Checked = False
-        CheckBox2.Checked = False
-        CheckBox4.Checked = False
-        Button6.Visible = False
-        CheckBox4.Visible = False
-        Label24.Visible = True
     End Sub
 
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
@@ -1168,11 +1145,11 @@ Public Class Form1
             TextBox3.Text = "944"
             TextBox4.Text = "573"
             TextBox5.Text = "100"
-            RadioButton2.Checked = False
+            RadioButton2.Checked = True
             RadioButton3.Checked = False
             CheckBox1.Text = "Start your app after build"
             CheckBox2.Text = "Show your app in explorer after build"
-            CheckBox1.Checked = False
+            CheckBox1.Checked = True
             CheckBox2.Checked = False
             CheckBox3.Checked = False
             CheckBox4.Checked = False
