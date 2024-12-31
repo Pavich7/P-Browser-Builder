@@ -155,6 +155,7 @@
 - FIXED: App might freeze for short period after test build completed.
 - FIXED: Builder crashed when testing more than one app at the same time.
 - FIXED: Improved special character check in app names to prevent crashes.
+- FIXED: Application file name preview overlap with design panel.
 
 ** Low-level **
 - IMPROVEMENT: Updated Visual C++ Redistributable. (14.42.34433.0)</value>

@@ -62,7 +62,7 @@ Partial Class welcome
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel1.Location = New System.Drawing.Point(45, 170)
+        Me.Panel1.Location = New System.Drawing.Point(45, 165)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(504, 53)
         Me.Panel1.TabIndex = 13
@@ -85,7 +85,7 @@ Partial Class welcome
         Me.Panel2.Controls.Add(Me.PictureBox2)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel2.Location = New System.Drawing.Point(45, 241)
+        Me.Panel2.Location = New System.Drawing.Point(45, 236)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(504, 53)
         Me.Panel2.TabIndex = 14
@@ -119,7 +119,7 @@ Partial Class welcome
         Me.Panel3.Controls.Add(Me.PictureBox3)
         Me.Panel3.Controls.Add(Me.Label6)
         Me.Panel3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel3.Location = New System.Drawing.Point(45, 311)
+        Me.Panel3.Location = New System.Drawing.Point(45, 306)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(504, 53)
         Me.Panel3.TabIndex = 15
@@ -153,7 +153,7 @@ Partial Class welcome
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label7.Font = New System.Drawing.Font("Segoe UI Semilight", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(41, 135)
+        Me.Label7.Location = New System.Drawing.Point(41, 130)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(439, 20)
         Me.Label7.TabIndex = 70

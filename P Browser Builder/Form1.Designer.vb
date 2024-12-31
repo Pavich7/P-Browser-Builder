@@ -557,7 +557,7 @@ Partial Class Form1
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.Checked = True
         Me.RadioButton2.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton2.Location = New System.Drawing.Point(28, 280)
+        Me.RadioButton2.Location = New System.Drawing.Point(28, 284)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(167, 21)
         Me.RadioButton2.TabIndex = 7
@@ -569,7 +569,7 @@ Partial Class Form1
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(20, 120)
+        Me.Label2.Location = New System.Drawing.Point(20, 124)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(189, 17)
         Me.Label2.TabIndex = 9
@@ -578,7 +578,7 @@ Partial Class Form1
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        Me.TextBox2.Location = New System.Drawing.Point(20, 142)
+        Me.TextBox2.Location = New System.Drawing.Point(20, 146)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(283, 22)
         Me.TextBox2.TabIndex = 8
@@ -597,7 +597,7 @@ Partial Class Form1
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label4.Location = New System.Drawing.Point(16, 241)
+        Me.Label4.Location = New System.Drawing.Point(16, 245)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(107, 28)
         Me.Label4.TabIndex = 11
@@ -680,7 +680,7 @@ Partial Class Form1
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.Location = New System.Drawing.Point(28, 379)
+        Me.CheckBox1.Location = New System.Drawing.Point(28, 383)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(167, 21)
         Me.CheckBox1.TabIndex = 17
@@ -691,7 +691,7 @@ Partial Class Form1
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label8.Location = New System.Drawing.Point(16, 339)
+        Me.Label8.Location = New System.Drawing.Point(16, 343)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(159, 28)
         Me.Label8.TabIndex = 18
@@ -701,7 +701,7 @@ Partial Class Form1
         '
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox2.Location = New System.Drawing.Point(28, 406)
+        Me.CheckBox2.Location = New System.Drawing.Point(28, 410)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(234, 21)
         Me.CheckBox2.TabIndex = 19
@@ -888,7 +888,7 @@ Partial Class Form1
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(17, 175)
+        Me.Label16.Location = New System.Drawing.Point(17, 179)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(138, 17)
         Me.Label16.TabIndex = 30
@@ -1168,7 +1168,7 @@ Partial Class Form1
         '
         Me.RadioButton3.AutoSize = True
         Me.RadioButton3.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton3.Location = New System.Drawing.Point(28, 308)
+        Me.RadioButton3.Location = New System.Drawing.Point(28, 312)
         Me.RadioButton3.Name = "RadioButton3"
         Me.RadioButton3.Size = New System.Drawing.Size(236, 21)
         Me.RadioButton3.TabIndex = 32
@@ -1244,7 +1244,7 @@ Partial Class Form1
         'Button4
         '
         Me.Button4.Font = New System.Drawing.Font("Segoe UI Semilight", 8.0!)
-        Me.Button4.Location = New System.Drawing.Point(256, 203)
+        Me.Button4.Location = New System.Drawing.Point(256, 207)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(68, 29)
         Me.Button4.TabIndex = 34
@@ -1255,7 +1255,7 @@ Partial Class Form1
         '
         Me.CheckBox3.AutoSize = True
         Me.CheckBox3.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox3.Location = New System.Drawing.Point(20, 207)
+        Me.CheckBox3.Location = New System.Drawing.Point(20, 211)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(175, 21)
         Me.CheckBox3.TabIndex = 35
@@ -1265,7 +1265,7 @@ Partial Class Form1
         'Button5
         '
         Me.Button5.Font = New System.Drawing.Font("Segoe UI Semilight", 8.0!)
-        Me.Button5.Location = New System.Drawing.Point(196, 203)
+        Me.Button5.Location = New System.Drawing.Point(196, 207)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(54, 29)
         Me.Button5.TabIndex = 36
@@ -1318,7 +1318,7 @@ Partial Class Form1
         '
         Me.CheckBox4.AutoSize = True
         Me.CheckBox4.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox4.Location = New System.Drawing.Point(28, 434)
+        Me.CheckBox4.Location = New System.Drawing.Point(28, 438)
         Me.CheckBox4.Name = "CheckBox4"
         Me.CheckBox4.Size = New System.Drawing.Size(135, 21)
         Me.CheckBox4.TabIndex = 47
@@ -1328,7 +1328,7 @@ Partial Class Form1
         'Button6
         '
         Me.Button6.Font = New System.Drawing.Font("Segoe UI Semilight", 8.0!)
-        Me.Button6.Location = New System.Drawing.Point(256, 432)
+        Me.Button6.Location = New System.Drawing.Point(256, 436)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(68, 25)
         Me.Button6.TabIndex = 48
@@ -1341,7 +1341,7 @@ Partial Class Form1
         Me.Label24.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label24.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label24.Location = New System.Drawing.Point(25, 435)
+        Me.Label24.Location = New System.Drawing.Point(25, 439)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(72, 17)
         Me.Label24.TabIndex = 33
@@ -1522,7 +1522,7 @@ Partial Class Form1
         '
         Me.PictureBox9.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox9.Image = Global.P_Browser_Builder.My.Resources.Resources.folder
-        Me.PictureBox9.Location = New System.Drawing.Point(286, 173)
+        Me.PictureBox9.Location = New System.Drawing.Point(286, 177)
         Me.PictureBox9.Name = "PictureBox9"
         Me.PictureBox9.Size = New System.Drawing.Size(15, 23)
         Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -1533,7 +1533,7 @@ Partial Class Form1
         '
         Me.PictureBox8.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox8.Image = Global.P_Browser_Builder.My.Resources.Resources.website
-        Me.PictureBox8.Location = New System.Drawing.Point(310, 141)
+        Me.PictureBox8.Location = New System.Drawing.Point(310, 145)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(18, 23)
         Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -1568,7 +1568,7 @@ Partial Class Form1
         '
         Me.PictureBox5.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox5.Image = Global.P_Browser_Builder.My.Resources.Resources.more
-        Me.PictureBox5.Location = New System.Drawing.Point(312, 173)
+        Me.PictureBox5.Location = New System.Drawing.Point(312, 177)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(14, 23)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -1606,7 +1606,6 @@ Partial Class Form1
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.RadioButton2)
         Me.Controls.Add(Me.Label1)
@@ -1614,6 +1613,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Panel7)
+        Me.Controls.Add(Me.Label2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MinimumSize = New System.Drawing.Size(800, 600)
