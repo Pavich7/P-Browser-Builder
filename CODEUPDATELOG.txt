@@ -4,6 +4,7 @@ Builder Release 8.0.0
 - HIGHLIGHTS: New option to customize app window opacity.
 - HIGHLIGHTS: New option to hide app icon in title bar.
 - HIGHLIGHTS: Start Log Viewer feature to view app start log.
+- HIGHLIGHTS: Launch and uninstall shortcut in Start Menu.
 
 ** Breaking Changes **
 - BREAKING: Upgrading to this version will reset all settings.

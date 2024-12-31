@@ -54,6 +54,10 @@ Section "P Browser Installer" SecDummy
   ; Create uninstaller
   WriteUninstaller "$INSTDIR\Uninstall P Browser Builder.exe"
 
+  CreateDirectory "$SMPROGRAMS\MadeByPavich"
+  CreateShortCut "$SMPROGRAMS\MadeByPavich\P Browser Builder.lnk" "$INSTDIR\P Browser Builder.exe"
+  CreateShortCut "$SMPROGRAMS\MadeByPavich\Uninstall P Browser Builder.lnk" "$INSTDIR\Uninstall P Browser Builder.exe"
+
 SectionEnd
 
 ; --------------------------------
@@ -72,9 +76,10 @@ SectionEnd
 
 Section "Uninstall"
 
-  ; ADD YOUR OWN FILES HERE...
   Delete "$INSTDIR\*.*"
   RmDir /r "$INSTDIR"
+  Delete "$SMPROGRAMS\MadeByPavich\*.*"
+  RmDir /r "$SMPROGRAMS\MadeByPavich"
 
   DeleteRegKey /ifempty HKCU "Software\P Browser Builder"
 
