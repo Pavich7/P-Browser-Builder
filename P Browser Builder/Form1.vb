@@ -689,7 +689,7 @@ Public Class Form1
                 Label15.Visible = True
                 Label14.Visible = False
                 Label12.Text = "Running in offline mode"
-                Label13.Text = "Can't establish connection and fetch news feed with PavichDev Server."
+                Label13.Text = "Can't establish connection and fetch news feed with server."
             End Try
         Else
             Label7.Text = "Ready to build"
