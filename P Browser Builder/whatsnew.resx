@@ -124,6 +124,7 @@
 - HIGHLIGHTS: New option to customize app window opacity.
 - HIGHLIGHTS: New option to hide app icon in title bar.
 - HIGHLIGHTS: Start Log Viewer feature to view app start log.
+- HIGHLIGHTS: Launch and uninstall shortcut in Start Menu.
 
 ** Breaking Changes **
 - BREAKING: Upgrading to this version will reset all settings.
@@ -137,6 +138,7 @@
 - IMPROVEMENT: Spelling correction in Preference.
 - IMPROVEMENT: Updated CefSharp to 131.3.50
 - IMPROVEMENT: Updated Chromium to 131.0.6778.205
+- IMPROVEMENT: Minor main user interface improvements.
 - CHANGED: Move Resource section to single tab.
 - CHANGED: Max window size now limit to 0-9999.
 - CHANGED: New interface section in general preference.
@@ -149,6 +151,8 @@
 - FIXED: News Feed cannot try again after fetch failed on startup.
 - FIXED: Reset After Build Action won't reset advanced option.
 - FIXED: App might freeze for short period after test build completed.
+- FIXED: Builder crashed when testing more than one app at the same time.
+- FIXED: Improved special character check in app names to prevent crashes.
 
 ** Low-level **
 - IMPROVEMENT: Updated Visual C++ Redistributable. (14.42.34433.0)</value>

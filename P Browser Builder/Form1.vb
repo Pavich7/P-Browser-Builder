@@ -14,8 +14,19 @@ Public Class Form1
     End Sub
     Public logpath
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim spechk As Boolean = False
+        Dim text As String = TextBox2.Text
+        Dim specialCharacters As String = "\/:*?""<>|"
+        For Each ch As Char In specialCharacters
+            If text.Contains(ch) Then
+                spechk = True
+                Exit For
+            End If
+        Next
         If TextBox1.Text = "" Then
             MessageBox.Show("Please enter your websites URL.", "Build Failed!")
+        ElseIf spechk = True Then
+            MessageBox.Show("App name cannot contain any of these characters: \ / : * ? "" < > |", "Build Failed!")
         Else
             Label7.Text = "Building in progress..."
             Dim apppath As String = Application.StartupPath()
@@ -30,66 +41,72 @@ Public Class Form1
             Dim testapp As String = apppath + "\resource\testspace\P Browser App.exe"
             ProgressBar1.Value = 20
             If System.IO.File.Exists(pbcfg) = True Then
-                ProgressBar1.Value = 50
-                Dim objWriter As New System.IO.StreamWriter(pbcfg)
-                Dim objWriter2 As New System.IO.StreamWriter(pbprogcfg)
-                Dim objWriter3 As New System.IO.StreamWriter(pbprogh)
-                Dim objWriter4 As New System.IO.StreamWriter(pbprogw)
-                Dim objWriter5 As New System.IO.StreamWriter(pbprogfw)
-                Dim objWriter6 As New System.IO.StreamWriter(pbprogaot)
-                Dim objWriter7 As New System.IO.StreamWriter(pbopval)
-                Dim objWriter8 As New System.IO.StreamWriter(pbhico)
-                objWriter.Write(TextBox1.Text)
-                objWriter.Close()
-                objWriter2.Write(TextBox2.Text)
-                objWriter2.Close()
-                objWriter3.Write(TextBox4.Text)
-                objWriter3.Close()
-                objWriter4.Write(TextBox3.Text)
-                objWriter4.Close()
-                If CheckBox5.Checked = True Then
-                    objWriter5.Write("True")
-                End If
-                objWriter5.Close()
-                If CheckBox6.Checked = True Then
-                    objWriter6.Write("True")
-                End If
-                objWriter6.Close()
-                Dim icnexist As String = apppath + "\resource\testspace\appicns.ico"
-                If System.IO.File.Exists(icnexist) Then
-                    My.Computer.FileSystem.DeleteFile(apppath + "\resource\testspace\appicns.ico")
-                Else
-                    Dim icnshave As String = apppath + "\statecache\buildcache\appicns\appicns.ico"
-                    If System.IO.File.Exists(icnshave) Then
-                        My.Computer.FileSystem.CopyFile(apppath + "\statecache\buildcache\appicns\appicns.ico", apppath + "\resource\testspace\appicns.ico")
+                Try
+                    ProgressBar1.Value = 50
+                    Dim objWriter As New System.IO.StreamWriter(pbcfg)
+                    Dim objWriter2 As New System.IO.StreamWriter(pbprogcfg)
+                    Dim objWriter3 As New System.IO.StreamWriter(pbprogh)
+                    Dim objWriter4 As New System.IO.StreamWriter(pbprogw)
+                    Dim objWriter5 As New System.IO.StreamWriter(pbprogfw)
+                    Dim objWriter6 As New System.IO.StreamWriter(pbprogaot)
+                    Dim objWriter7 As New System.IO.StreamWriter(pbopval)
+                    Dim objWriter8 As New System.IO.StreamWriter(pbhico)
+                    objWriter.Write(TextBox1.Text)
+                    objWriter.Close()
+                    objWriter2.Write(TextBox2.Text)
+                    objWriter2.Close()
+                    objWriter3.Write(TextBox4.Text)
+                    objWriter3.Close()
+                    objWriter4.Write(TextBox3.Text)
+                    objWriter4.Close()
+                    If CheckBox5.Checked = True Then
+                        objWriter5.Write("True")
                     End If
-                End If
-                objWriter7.Write(TextBox5.Text)
-                objWriter7.Close()
-                If CheckBox7.Checked = True Then
-                    objWriter8.Write("True")
-                End If
-                objWriter8.Close()
-                ProgressBar1.Value = 100
-                MessageBox.Show("Build Completed! Click continue to test app." + vbNewLine + "Some features will not available in Testing.", "Build Completed!")
-                Process.Start(testapp)
-                Label7.Text = "Build completed!"
-                Snooze(1)
-                Dim dir = New System.IO.DirectoryInfo(apppath + "\resource\testspace\startlog")
-                Dim logf = dir.EnumerateFiles("*.txt").
-                OrderByDescending(Function(f) f.LastWriteTime).
-                FirstOrDefault()
-                If logf IsNot Nothing Then
-                    logpath = logf.FullName
-                    RichTextBox1.Text = File.ReadAllText(logpath)
-                    Dim logname = logf.Name
-                    Label39.Text = logname
-                    Label39.Visible = True
-                    PictureBox14.Enabled = True
-                End If
-                Timer2.Start()
-                Button7.Enabled = False
-                Button8.Enabled = True
+                    objWriter5.Close()
+                    If CheckBox6.Checked = True Then
+                        objWriter6.Write("True")
+                    End If
+                    objWriter6.Close()
+                    Dim icnexist As String = apppath + "\resource\testspace\appicns.ico"
+                    If System.IO.File.Exists(icnexist) Then
+                        My.Computer.FileSystem.DeleteFile(apppath + "\resource\testspace\appicns.ico")
+                    Else
+                        Dim icnshave As String = apppath + "\statecache\buildcache\appicns\appicns.ico"
+                        If System.IO.File.Exists(icnshave) Then
+                            My.Computer.FileSystem.CopyFile(apppath + "\statecache\buildcache\appicns\appicns.ico", apppath + "\resource\testspace\appicns.ico")
+                        End If
+                    End If
+                    objWriter7.Write(TextBox5.Text)
+                    objWriter7.Close()
+                    If CheckBox7.Checked = True Then
+                        objWriter8.Write("True")
+                    End If
+                    objWriter8.Close()
+                    ProgressBar1.Value = 100
+                    MessageBox.Show("Build Completed! Click continue to test app." + vbNewLine + "Some features will not available in Testing.", "Build Completed!")
+                    Process.Start(testapp)
+                    Label7.Text = "Build completed!"
+                    Snooze(1)
+                    Dim dir = New System.IO.DirectoryInfo(apppath + "\resource\testspace\startlog")
+                    Dim logf = dir.EnumerateFiles("*.txt").
+                    OrderByDescending(Function(f) f.LastWriteTime).
+                    FirstOrDefault()
+                    If logf IsNot Nothing Then
+                        logpath = logf.FullName
+                        RichTextBox1.Text = File.ReadAllText(logpath)
+                        Dim logname = logf.Name
+                        Label39.Text = logname
+                        Label39.Visible = True
+                        PictureBox14.Enabled = True
+                    End If
+                    Timer2.Start()
+                    Button7.Enabled = False
+                    Button8.Enabled = True
+                Catch ex As Exception
+                    MessageBox.Show("Please close previous test app first before perform this action.", "Failed!")
+                    Label7.Text = "Test failed!"
+                    ProgressBar1.Value = 0
+                End Try
             Else
                 MessageBox.Show("Build Failed! Incomplete or corrupted Data please reinstall builder.", "Build Failed!")
                 Label7.Text = "Build failed!"
@@ -103,10 +120,21 @@ Public Class Form1
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim spechk As Boolean = False
+        Dim text As String = TextBox2.Text
+        Dim specialCharacters As String = "\/:*?""<>|"
+        For Each ch As Char In specialCharacters
+            If text.Contains(ch) Then
+                spechk = True
+                Exit For
+            End If
+        Next
         If TextBox1.Text = "" Then
             MessageBox.Show("Please enter your websites URL.", "Build Failed!")
         ElseIf TextBox2.Text = "" Then
             MessageBox.Show("Please enter your application name.", "Build Failed!")
+        ElseIf spechk = True Then
+            MessageBox.Show("App name cannot contain any of these characters: \ / : * ? "" < > |", "Build Failed!")
         Else
             If RadioButton2.Checked = True Then
                 Label7.Text = "Building in progress..."

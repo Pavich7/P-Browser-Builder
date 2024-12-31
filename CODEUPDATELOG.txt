@@ -31,6 +31,8 @@ Builder Release 8.0.0
 - FIXED: News Feed cannot try again after fetch failed on startup.
 - FIXED: Reset After Build Action won't reset advanced option.
 - FIXED: App might freeze for short period after test build completed.
+- FIXED: Builder crashed when testing more than one app at the same time.
+- FIXED: Improved special character check in app names to prevent crashes.
 
 ** Low-level **
 - IMPROVEMENT: Updated Visual C++ Redistributable. (14.42.34433.0)
