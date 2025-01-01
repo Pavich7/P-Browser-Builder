@@ -259,10 +259,7 @@ Public Class prefer
             Dim objWriter As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.inrsstate.pbcfg")
             objWriter.Write("True")
             objWriter.Close()
-            Dim result1 As DialogResult = MessageBox.Show("Builder will enter restore mode on next launch." + vbNewLine + "Do you wish to restart now?", "You sure about this?", MessageBoxButtons.YesNo)
-            If (result1 = DialogResult.Yes) Then
-                Application.Restart()
-            End If
+            Application.Restart()
         End If
     End Sub
 

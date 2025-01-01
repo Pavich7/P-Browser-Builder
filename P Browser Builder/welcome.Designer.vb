@@ -195,13 +195,13 @@ Partial Class welcome
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI Semilight", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.HotTrack
         Me.Label8.Location = New System.Drawing.Point(239, 377)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(111, 20)
+        Me.Label8.Size = New System.Drawing.Size(88, 20)
         Me.Label8.TabIndex = 71
-        Me.Label8.Text = "Restore mode..."
+        Me.Label8.Text = "Preference..."
         '
         'OpenFileDialog1
         '

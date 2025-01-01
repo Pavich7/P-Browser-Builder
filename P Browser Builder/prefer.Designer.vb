@@ -44,6 +44,9 @@ Partial Class prefer
         Me.Label54 = New System.Windows.Forms.Label()
         Me.Label55 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label60 = New System.Windows.Forms.Label()
+        Me.Label61 = New System.Windows.Forms.Label()
+        Me.Label62 = New System.Windows.Forms.Label()
         Me.Label48 = New System.Windows.Forms.Label()
         Me.Label47 = New System.Windows.Forms.Label()
         Me.Label46 = New System.Windows.Forms.Label()
@@ -94,9 +97,6 @@ Partial Class prefer
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label60 = New System.Windows.Forms.Label()
-        Me.Label61 = New System.Windows.Forms.Label()
-        Me.Label62 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -310,9 +310,9 @@ Partial Class prefer
         Me.Label58.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label58.Location = New System.Drawing.Point(21, 147)
         Me.Label58.Name = "Label58"
-        Me.Label58.Size = New System.Drawing.Size(170, 21)
+        Me.Label58.Size = New System.Drawing.Size(165, 21)
         Me.Label58.TabIndex = 72
-        Me.Label58.Text = "Export save and setting"
+        Me.Label58.Text = "Export builder settings"
         '
         'Label53
         '
@@ -386,6 +386,42 @@ Partial Class prefer
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Advanced"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Label60
+        '
+        Me.Label60.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label60.AutoSize = True
+        Me.Label60.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label60.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label60.ForeColor = System.Drawing.Color.Red
+        Me.Label60.Location = New System.Drawing.Point(412, 200)
+        Me.Label60.Name = "Label60"
+        Me.Label60.Size = New System.Drawing.Size(58, 21)
+        Me.Label60.TabIndex = 87
+        Me.Label60.Text = "Unlock"
+        '
+        'Label61
+        '
+        Me.Label61.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label61.AutoSize = True
+        Me.Label61.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label61.Location = New System.Drawing.Point(21, 200)
+        Me.Label61.Name = "Label61"
+        Me.Label61.Size = New System.Drawing.Size(177, 21)
+        Me.Label61.TabIndex = 85
+        Me.Label61.Text = "Unlock Developer Menu"
+        '
+        'Label62
+        '
+        Me.Label62.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label62.AutoSize = True
+        Me.Label62.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label62.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.Label62.Location = New System.Drawing.Point(22, 225)
+        Me.Label62.Name = "Label62"
+        Me.Label62.Size = New System.Drawing.Size(250, 17)
+        Me.Label62.TabIndex = 86
+        Me.Label62.Text = "Developer Menu is for testing purpose only."
         '
         'Label48
         '
@@ -980,42 +1016,6 @@ Partial Class prefer
         Me.Label9.Size = New System.Drawing.Size(54, 21)
         Me.Label9.TabIndex = 74
         Me.Label9.Text = "Delete"
-        '
-        'Label60
-        '
-        Me.Label60.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label60.AutoSize = True
-        Me.Label60.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label60.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label60.ForeColor = System.Drawing.Color.Red
-        Me.Label60.Location = New System.Drawing.Point(412, 200)
-        Me.Label60.Name = "Label60"
-        Me.Label60.Size = New System.Drawing.Size(58, 21)
-        Me.Label60.TabIndex = 87
-        Me.Label60.Text = "Unlock"
-        '
-        'Label61
-        '
-        Me.Label61.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label61.AutoSize = True
-        Me.Label61.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label61.Location = New System.Drawing.Point(21, 200)
-        Me.Label61.Name = "Label61"
-        Me.Label61.Size = New System.Drawing.Size(177, 21)
-        Me.Label61.TabIndex = 85
-        Me.Label61.Text = "Unlock Developer Menu"
-        '
-        'Label62
-        '
-        Me.Label62.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label62.AutoSize = True
-        Me.Label62.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label62.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.Label62.Location = New System.Drawing.Point(22, 225)
-        Me.Label62.Name = "Label62"
-        Me.Label62.Size = New System.Drawing.Size(250, 17)
-        Me.Label62.TabIndex = 86
-        Me.Label62.Text = "Developer Menu is for testing purpose only."
         '
         'prefer
         '

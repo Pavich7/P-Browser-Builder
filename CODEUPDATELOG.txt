@@ -13,3 +13,6 @@ Builder Release 8.1.0
 - ADDED: Open Project in File menu.
 - CHANGED: Completely Removed Quick Save Features.
 - CHANGED: Removed Clear All in File menu.
+- CHANGED: Main window will automatically minimize on startup.
+- CHANGED: Change Restore mode button to preference in Start Window.
+- CHANGED: To prevent startup error Restore mode will enter immediately.

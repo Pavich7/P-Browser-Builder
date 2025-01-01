@@ -590,6 +590,7 @@ Public Class Form1
                 ShowRightPanelToolStripMenuItem.Enabled = True
             End If
             fileReader111.Close()
+            Me.WindowState = FormWindowState.Minimized
             Timer3.Start()
             Timer1.Start()
         End If

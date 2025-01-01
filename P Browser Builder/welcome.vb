@@ -3,6 +3,7 @@
 Public Class welcome
     Private Sub Panel1_Paint(sender As Object, e As EventArgs) Handles Panel1.Click
         Form1.Enabled = True
+        Form1.WindowState = FormWindowState.Normal
         Me.Close()
     End Sub
     Protected Overrides ReadOnly Property CreateParams() As CreateParams
@@ -43,6 +44,7 @@ Public Class welcome
             'aotwin
             Form1.Enabled = True
             Form1.ProjnameToolStripMenuItem.Text = Form1.TextBox2.Text
+            Form1.WindowState = FormWindowState.Normal
             Me.Close()
         End If
     End Sub
@@ -80,16 +82,19 @@ Public Class welcome
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         Form1.Enabled = True
+        Form1.WindowState = FormWindowState.Normal
         Me.Close()
     End Sub
 
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
         Form1.Enabled = True
+        Form1.WindowState = FormWindowState.Normal
         Me.Close()
     End Sub
 
     Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
         Form1.Enabled = True
+        Form1.WindowState = FormWindowState.Normal
         Me.Close()
     End Sub
 
@@ -98,13 +103,6 @@ Public Class welcome
     End Sub
 
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
-        Dim result As DialogResult = MessageBox.Show("Do you wish to reset all setting?" + vbNewLine + "This cannot be undone!", "You sure about this?", MessageBoxButtons.YesNo)
-        If (result = DialogResult.Yes) Then
-            Dim apppath As String = Application.StartupPath()
-            Dim objWriter As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.inrsstate.pbcfg")
-            objWriter.Write("True")
-            objWriter.Close()
-            Application.Restart()
-        End If
+        prefer.Show()
     End Sub
 End Class
