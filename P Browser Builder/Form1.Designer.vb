@@ -22,14 +22,14 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StartWindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
-        Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveToFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClearAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ClearAllSavesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -106,12 +106,11 @@ Partial Class Form1
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.Timer1 = New System.Windows.Forms.Timer()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Label16 = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
-        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
-        Me.Timer2 = New System.Windows.Forms.Timer()
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Panel6 = New System.Windows.Forms.Panel()
@@ -140,7 +139,7 @@ Partial Class Form1
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
-        Me.Timer3 = New System.Windows.Forms.Timer()
+        Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.Button4 = New System.Windows.Forms.Button()
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
         Me.Button5 = New System.Windows.Forms.Button()
@@ -167,8 +166,9 @@ Partial Class Form1
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.OpenProjectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProjnameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -190,14 +190,13 @@ Partial Class Form1
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.Control
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.PreviewToolStripMenuItem, Me.ExtensionsToolStripMenuItem, Me.WindowToolStripMenuItem, Me.GuideToolStripMenuItem, Me.HelpToolStripMenuItem, Me.DevToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.PreviewToolStripMenuItem, Me.ExtensionsToolStripMenuItem, Me.WindowToolStripMenuItem, Me.GuideToolStripMenuItem, Me.HelpToolStripMenuItem, Me.DevToolStripMenuItem, Me.ProjnameToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1216, 24)
@@ -206,7 +205,7 @@ Partial Class Form1
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartWindowToolStripMenuItem, Me.ToolStripSeparator4, Me.SaveToolStripMenuItem, Me.ClearAllToolStripMenuItem, Me.ClearAllSavesToolStripMenuItem, Me.ToolStripSeparator5, Me.ExitToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClearAllToolStripMenuItem, Me.OpenProjectToolStripMenuItem, Me.StartWindowToolStripMenuItem, Me.ToolStripSeparator4, Me.SaveToFileToolStripMenuItem, Me.ToolStripSeparator5, Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
@@ -215,45 +214,39 @@ Partial Class Form1
         '
         Me.StartWindowToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.house
         Me.StartWindowToolStripMenuItem.Name = "StartWindowToolStripMenuItem"
-        Me.StartWindowToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
+        Me.StartWindowToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.StartWindowToolStripMenuItem.Text = "Start Window"
         '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(142, 6)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(160, 6)
         '
-        'SaveToolStripMenuItem
+        'SaveToFileToolStripMenuItem
         '
-        Me.SaveToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.diskette
-        Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
-        Me.SaveToolStripMenuItem.Text = "Save"
+        Me.SaveToFileToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.diskette
+        Me.SaveToFileToolStripMenuItem.Name = "SaveToFileToolStripMenuItem"
+        Me.SaveToFileToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
+        Me.SaveToFileToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.SaveToFileToolStripMenuItem.Text = "Save As..."
         '
         'ClearAllToolStripMenuItem
         '
-        Me.ClearAllToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.remove
+        Me.ClearAllToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.file
         Me.ClearAllToolStripMenuItem.Name = "ClearAllToolStripMenuItem"
-        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
-        Me.ClearAllToolStripMenuItem.Text = "Clear all"
-        '
-        'ClearAllSavesToolStripMenuItem
-        '
-        Me.ClearAllSavesToolStripMenuItem.Name = "ClearAllSavesToolStripMenuItem"
-        Me.ClearAllSavesToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
-        Me.ClearAllSavesToolStripMenuItem.Text = "Clear saves"
+        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClearAllToolStripMenuItem.Text = "New Project"
         '
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(142, 6)
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(160, 6)
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'PreviewToolStripMenuItem
@@ -1279,7 +1272,7 @@ Partial Class Form1
         Me.Label9.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label9.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.Label9.Location = New System.Drawing.Point(1009, 0)
+        Me.Label9.Location = New System.Drawing.Point(1035, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(19, 20)
         Me.Label9.TabIndex = 43
@@ -1293,7 +1286,7 @@ Partial Class Form1
         Me.Label21.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label21.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label21.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.Label21.Location = New System.Drawing.Point(1034, 0)
+        Me.Label21.Location = New System.Drawing.Point(1060, 0)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(19, 20)
         Me.Label21.TabIndex = 44
@@ -1510,7 +1503,7 @@ Partial Class Form1
         Me.PictureBox11.BackColor = System.Drawing.SystemColors.Control
         Me.PictureBox11.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox11.Image = Global.P_Browser_Builder.My.Resources.Resources.reload
-        Me.PictureBox11.Location = New System.Drawing.Point(1061, 0)
+        Me.PictureBox11.Location = New System.Drawing.Point(1087, 0)
         Me.PictureBox11.Name = "PictureBox11"
         Me.PictureBox11.Size = New System.Drawing.Size(13, 23)
         Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -1550,19 +1543,6 @@ Partial Class Form1
         Me.PictureBox7.TabIndex = 40
         Me.PictureBox7.TabStop = False
         '
-        'PictureBox6
-        '
-        Me.PictureBox6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox6.BackColor = System.Drawing.SystemColors.Control
-        Me.PictureBox6.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox6.Image = Global.P_Browser_Builder.My.Resources.Resources.diskette
-        Me.PictureBox6.Location = New System.Drawing.Point(1086, 0)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(15, 23)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox6.TabIndex = 39
-        Me.PictureBox6.TabStop = False
-        '
         'PictureBox5
         '
         Me.PictureBox5.Cursor = System.Windows.Forms.Cursors.Hand
@@ -1573,6 +1553,20 @@ Partial Class Form1
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox5.TabIndex = 38
         Me.PictureBox5.TabStop = False
+        '
+        'OpenProjectToolStripMenuItem
+        '
+        Me.OpenProjectToolStripMenuItem.Name = "OpenProjectToolStripMenuItem"
+        Me.OpenProjectToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.OpenProjectToolStripMenuItem.Text = "Open Project..."
+        '
+        'ProjnameToolStripMenuItem
+        '
+        Me.ProjnameToolStripMenuItem.BackColor = System.Drawing.SystemColors.Highlight
+        Me.ProjnameToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.ProjnameToolStripMenuItem.Name = "ProjnameToolStripMenuItem"
+        Me.ProjnameToolStripMenuItem.Size = New System.Drawing.Size(101, 20)
+        Me.ProjnameToolStripMenuItem.Text = "Untitled Project"
         '
         'Form1
         '
@@ -1591,7 +1585,6 @@ Partial Class Form1
         Me.Controls.Add(Me.Label30)
         Me.Controls.Add(Me.PictureBox8)
         Me.Controls.Add(Me.PictureBox7)
-        Me.Controls.Add(Me.PictureBox6)
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.CheckBox3)
@@ -1649,7 +1642,6 @@ Partial Class Form1
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -1697,7 +1689,6 @@ Partial Class Form1
     Friend WithEvents Label17 As Label
     Friend WithEvents OpenFileDialog2 As OpenFileDialog
     Friend WithEvents Label20 As Label
-    Friend WithEvents SaveFileDialog1 As SaveFileDialog
     Friend WithEvents InstallationGuideToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CustomizingGuildToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BuildingGuideToolStripMenuItem As ToolStripMenuItem
@@ -1744,7 +1735,6 @@ Partial Class Form1
     Friend WithEvents CheckBox3 As CheckBox
     Friend WithEvents Button5 As Button
     Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents FToolStripMenuItem As ToolStripMenuItem
@@ -1781,8 +1771,6 @@ Partial Class Form1
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents CheckBox5 As CheckBox
     Friend WithEvents Label19 As Label
-    Friend WithEvents ClearAllSavesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents SaveToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CheckBox6 As CheckBox
     Friend WithEvents dlworker As System.ComponentModel.BackgroundWorker
     Friend WithEvents DebugLogToolStripMenuItem As ToolStripMenuItem
@@ -1802,4 +1790,7 @@ Partial Class Form1
     Friend WithEvents PictureBox13 As PictureBox
     Friend WithEvents PictureBox14 As PictureBox
     Friend WithEvents Button9 As Button
+    Friend WithEvents SaveToFileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OpenProjectToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ProjnameToolStripMenuItem As ToolStripMenuItem
 End Class

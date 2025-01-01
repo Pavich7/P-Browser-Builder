@@ -2,6 +2,7 @@
 Imports System.IO
 Imports System.IO.Compression
 Imports System.Net
+Imports System.Text
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports CefSharp
 Imports CefSharp.DevTools
@@ -723,25 +724,29 @@ Public Class Form1
     End Sub
 
     Private Sub ClearAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearAllToolStripMenuItem.Click
-        Dim apppath As String = Application.StartupPath()
-        TextBox1.Text = ""
-        TextBox2.Text = ""
-        TextBox3.Text = "944"
-        TextBox4.Text = "573"
-        TextBox5.Text = "100"
-        RadioButton2.Checked = False
-        RadioButton3.Checked = False
-        CheckBox1.Text = "Start your app after build"
-        CheckBox2.Text = "Show your app in explorer after build"
-        CheckBox1.Checked = False
-        CheckBox2.Checked = False
-        CheckBox3.Checked = False
-        CheckBox4.Checked = False
-        CheckBox5.Checked = False
-        CheckBox6.Checked = False
-        CheckBox7.Checked = False
-        System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
-        System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
+        Dim result As DialogResult = MessageBox.Show("You will lose all data! Please make sure your data is saved.", "You sure about this?", MessageBoxButtons.YesNo)
+        If (result = DialogResult.Yes) Then
+            Dim apppath As String = Application.StartupPath()
+            TextBox1.Text = ""
+            TextBox2.Text = ""
+            TextBox3.Text = "944"
+            TextBox4.Text = "573"
+            TextBox5.Text = "100"
+            RadioButton2.Checked = False
+            RadioButton3.Checked = False
+            CheckBox1.Text = "Start your app after build"
+            CheckBox2.Text = "Show your app in explorer after build"
+            CheckBox1.Checked = False
+            CheckBox2.Checked = False
+            CheckBox3.Checked = False
+            CheckBox4.Checked = False
+            CheckBox5.Checked = False
+            CheckBox6.Checked = False
+            CheckBox7.Checked = False
+            System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
+            System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
+            ProjnameToolStripMenuItem.Text = "Untitled Project"
+        End If
     End Sub
 
     Private Sub InstallationGuideToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InstallationGuideToolStripMenuItem.Click
@@ -1026,31 +1031,6 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
-        Try
-            Dim apppath As String = Application.StartupPath()
-            Dim pbcfg1 As String = apppath + "\statedata\usersave.builder.anamesave.pbsf"
-            Dim objWriter1 As New System.IO.StreamWriter(pbcfg1)
-            objWriter1.Write(TextBox2.Text)
-            objWriter1.Close()
-            Dim pbcfg2 As String = apppath + "\statedata\usersave.builder.urlsave.pbsf"
-            Dim objWriter2 As New System.IO.StreamWriter(pbcfg2)
-            objWriter2.Write(TextBox1.Text)
-            objWriter2.Close()
-            Dim pbcfg3 As String = apppath + "\statedata\usersave.builder.wwindow.pbsf"
-            Dim objWriter3 As New System.IO.StreamWriter(pbcfg3)
-            objWriter3.Write(TextBox3.Text)
-            objWriter3.Close()
-            Dim pbcfg4 As String = apppath + "\statedata\usersave.builder.hwindow.pbsf"
-            Dim objWriter4 As New System.IO.StreamWriter(pbcfg4)
-            objWriter4.Write(TextBox4.Text)
-            objWriter4.Close()
-            MessageBox.Show("Saved!", "Completed!")
-        Catch ex As Exception
-            MessageBox.Show("Save Failed!", "Error!")
-        End Try
-    End Sub
-
     Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
         TextBox1.Text = ""
         TextBox2.Text = ""
@@ -1159,6 +1139,7 @@ Public Class Form1
             TabControl1.SelectedTab = TabPage1
             System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
             System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
+            ProjnameToolStripMenuItem.Text = "Untitled Project"
             Browser.Load("about:blank")
             welcome.Show()
         End If
@@ -1214,80 +1195,6 @@ Public Class Form1
         whatsnew.Show()
     End Sub
 
-    Private Sub ClearAllSavesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearAllSavesToolStripMenuItem.Click
-        Dim apppath As String = Application.StartupPath()
-        Dim pbcfg1 As String = apppath + "\statedata\usersave.builder.anamesave.pbsf"
-        Dim objWriter1 As New System.IO.StreamWriter(pbcfg1)
-        objWriter1.Write("")
-        objWriter1.Close()
-        Dim pbcfg2 As String = apppath + "\statedata\usersave.builder.urlsave.pbsf"
-        Dim objWriter2 As New System.IO.StreamWriter(pbcfg2)
-        objWriter2.Write("")
-        objWriter2.Close()
-        Dim pbcfg3 As String = apppath + "\statedata\usersave.builder.wwindow.pbsf"
-        Dim objWriter3 As New System.IO.StreamWriter(pbcfg3)
-        objWriter3.Write("")
-        objWriter3.Close()
-        Dim pbcfg4 As String = apppath + "\statedata\usersave.builder.hwindow.pbsf"
-        Dim objWriter4 As New System.IO.StreamWriter(pbcfg4)
-        objWriter4.Write("")
-        objWriter4.Close()
-        Dim pbcfg5 As String = apppath + "\statedata\usersave.builder.fixwin.pbsf"
-        Dim objWriter5 As New System.IO.StreamWriter(pbcfg5)
-        objWriter5.Write("False")
-        objWriter5.Close()
-        Dim pbcfg6 As String = apppath + "\statedata\usersave.builder.aotwin.pbsf"
-        Dim objWriter6 As New System.IO.StreamWriter(pbcfg6)
-        objWriter6.Write("False")
-        objWriter6.Close()
-        MessageBox.Show("Cleared!", "Completed!")
-    End Sub
-
-    Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
-        If TextBox1.Text = "" Then
-            MessageBox.Show("To save project, please enter Website URL.", "Error!")
-        Else
-            Try
-                Dim apppath As String = Application.StartupPath()
-                Dim pbcfg1 As String = apppath + "\statedata\usersave.builder.anamesave.pbsf"
-                Dim objWriter1 As New System.IO.StreamWriter(pbcfg1)
-                objWriter1.Write(TextBox2.Text)
-                objWriter1.Close()
-                Dim pbcfg2 As String = apppath + "\statedata\usersave.builder.urlsave.pbsf"
-                Dim objWriter2 As New System.IO.StreamWriter(pbcfg2)
-                objWriter2.Write(TextBox1.Text)
-                objWriter2.Close()
-                Dim pbcfg3 As String = apppath + "\statedata\usersave.builder.wwindow.pbsf"
-                Dim objWriter3 As New System.IO.StreamWriter(pbcfg3)
-                objWriter3.Write(TextBox3.Text)
-                objWriter3.Close()
-                Dim pbcfg4 As String = apppath + "\statedata\usersave.builder.hwindow.pbsf"
-                Dim objWriter4 As New System.IO.StreamWriter(pbcfg4)
-                objWriter4.Write(TextBox4.Text)
-                objWriter4.Close()
-                Dim pbcfg5 As String = apppath + "\statedata\usersave.builder.fixwin.pbsf"
-                Dim objWriter5 As New System.IO.StreamWriter(pbcfg5)
-                If CheckBox5.Checked Then
-                    objWriter5.Write("True")
-                Else
-                    objWriter5.Write("False")
-                End If
-                objWriter5.Close()
-                Dim pbcfg6 As String = apppath + "\statedata\usersave.builder.aotwin.pbsf"
-                Dim objWriter6 As New System.IO.StreamWriter(pbcfg6)
-                If CheckBox6.Checked Then
-                    objWriter6.Write("True")
-                Else
-                    objWriter6.Write("False")
-                End If
-                objWriter6.Close()
-                MessageBox.Show("Saved!", "Completed!")
-            Catch ex As Exception
-                MessageBox.Show("Save Failed!", "Error!")
-            End Try
-        End If
-    End Sub
-
     Private Sub CefSharpLogToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CefSharpLogToolStripMenuItem.Click
         Try
             Dim apppath As String = Application.StartupPath()
@@ -1334,5 +1241,96 @@ Public Class Form1
             Label7.Text = "Log flush failed!"
             ProgressBar1.Value = 0
         End Try
+    End Sub
+
+    Private Sub SaveToFileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToFileToolStripMenuItem.Click
+        If TextBox1.Text = "" And TextBox2.Text = "" Then
+            MessageBox.Show("To save project, please enter Website URL and App Name.", "Error!")
+        Else
+            Try
+                Dim myStream As Stream
+                Dim saveFileDialog1 As New SaveFileDialog()
+                saveFileDialog1.Filter = "P Browser Builder Project (*.pbproj)|*.pbproj"
+                saveFileDialog1.RestoreDirectory = True
+                If saveFileDialog1.ShowDialog() = DialogResult.OK Then
+                    myStream = saveFileDialog1.OpenFile()
+                    If (myStream IsNot Nothing) Then
+                        Using writer As New StreamWriter(myStream)
+                            writer.WriteLine(TextBox2.Text)
+                            writer.WriteLine(TextBox1.Text)
+                            writer.WriteLine(TextBox3.Text)
+                            writer.WriteLine(TextBox4.Text)
+                            If CheckBox5.Checked Then
+                                writer.WriteLine("True")
+                            Else
+                                writer.WriteLine("False")
+                            End If
+                            If CheckBox6.Checked Then
+                                writer.WriteLine("True")
+                            Else
+                                writer.WriteLine("False")
+                            End If
+                        End Using
+                        myStream.Close()
+                        MessageBox.Show("Saved to file!", "Completed!")
+                    End If
+                End If
+                'aname
+                'url
+                'wwin
+                'hwin
+                'fixwin
+                'aotwin
+                ProjnameToolStripMenuItem.Text = TextBox2.Text
+            Catch ex As Exception
+                MessageBox.Show("Save Failed!" & vbNewLine & ex.Message, "Error!")
+            End Try
+        End If
+    End Sub
+
+    Private Sub OpenProjectToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenProjectToolStripMenuItem.Click
+        Dim result As DialogResult = MessageBox.Show("You will lose all data! Please make sure your data is saved.", "You sure about this?", MessageBoxButtons.YesNo)
+        If (result = DialogResult.Yes) Then
+            Dim apppath As String = Application.StartupPath()
+            OpenFileDialog1.Multiselect = False
+            OpenFileDialog1.Title = "Open P Browser Builder Project"
+            OpenFileDialog1.Filter = "P Browser Builder Project|*.pbproj"
+            If OpenFileDialog1.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
+                Dim fileReader As System.IO.StreamReader = My.Computer.FileSystem.OpenTextFileReader(OpenFileDialog1.FileName)
+                TextBox1.Text = ""
+                TextBox2.Text = ""
+                TextBox3.Text = "944"
+                TextBox4.Text = "573"
+                TextBox5.Text = "100"
+                RadioButton2.Checked = True
+                RadioButton3.Checked = False
+                CheckBox1.Text = "Start your app after build"
+                CheckBox2.Text = "Show your app in explorer after build"
+                CheckBox1.Checked = True
+                CheckBox2.Checked = False
+                CheckBox3.Checked = False
+                CheckBox4.Checked = False
+                CheckBox5.Checked = False
+                CheckBox6.Checked = False
+                CheckBox7.Checked = False
+                TabControl1.SelectedTab = TabPage1
+                System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
+                System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
+                Browser.Load("about:blank")
+                TextBox2.Text = fileReader.ReadLine()
+                TextBox1.Text = fileReader.ReadLine()
+                TextBox3.Text = fileReader.ReadLine()
+                TextBox4.Text = fileReader.ReadLine()
+                CheckBox5.Checked = fileReader.ReadLine()
+                CheckBox6.Checked = fileReader.ReadLine()
+                'aname
+                'url
+                'wwin
+                'hwin
+                'fixwin
+                'aotwin
+                ProjnameToolStripMenuItem.Text = TextBox2.Text
+            End If
+        End If
     End Sub
 End Class

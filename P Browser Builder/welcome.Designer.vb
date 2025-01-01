@@ -37,6 +37,7 @@ Partial Class welcome
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -73,7 +74,7 @@ Partial Class welcome
         Me.Label4.BackColor = System.Drawing.SystemColors.Control
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(270, 17)
+        Me.Label4.Location = New System.Drawing.Point(270, 18)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(148, 17)
         Me.Label4.TabIndex = 14
@@ -106,11 +107,11 @@ Partial Class welcome
         Me.Label1.BackColor = System.Drawing.SystemColors.Control
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(281, 17)
+        Me.Label1.Location = New System.Drawing.Point(222, 18)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(139, 17)
+        Me.Label1.Size = New System.Drawing.Size(147, 17)
         Me.Label1.TabIndex = 13
-        Me.Label1.Text = "Load last saved project."
+        Me.Label1.Text = "Open .pbproj project file."
         '
         'PictureBox2
         '
@@ -129,9 +130,9 @@ Partial Class welcome
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
         Me.Label2.Location = New System.Drawing.Point(79, 9)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(196, 28)
+        Me.Label2.Size = New System.Drawing.Size(137, 28)
         Me.Label2.TabIndex = 11
-        Me.Label2.Text = "Load from Quick Save"
+        Me.Label2.Text = "Open a project"
         '
         'Panel3
         '
@@ -202,6 +203,10 @@ Partial Class welcome
         Me.Label8.TabIndex = 71
         Me.Label8.Text = "Restore mode..."
         '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
         'welcome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -249,4 +254,5 @@ Partial Class welcome
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class
