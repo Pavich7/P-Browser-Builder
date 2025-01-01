@@ -132,6 +132,7 @@
 - ADDED: New Project in File menu.
 - ADDED: Open Project in File menu.
 - ADDED: Project Name in main menu bar.
+- ADDED: Hide icon will also hide icon in Design View.
 - IMPROVEMENT: Minimal user interface improvements.
 - CHANGED: Completely Removed Quick Save Features.
 - CHANGED: Removed Clear All in File menu.

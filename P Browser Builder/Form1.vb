@@ -1351,4 +1351,18 @@ Public Class Form1
         ShowRightPanelToolStripMenuItem.Enabled = True
         MessageBox.Show("You can unhide right panel by click on" + vbNewLine + "Menu Strip: Window > Show right panel" + vbNewLine + "or using Ctrl + R Shortcut", "Notification")
     End Sub
+
+    Private Sub CheckBox7_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox7.CheckedChanged
+        If CheckBox7.Checked = False Then
+            PictureBox1.Visible = True
+            Dim x As Integer = Label17.Location.X
+            Dim y As Integer = Label17.Location.Y
+            Label17.Location = New Point(x + 22, y)
+        Else
+            PictureBox1.Visible = False
+            Dim x As Integer = Label17.Location.X
+            Dim y As Integer = Label17.Location.Y
+            Label17.Location = New Point(x - 22, y)
+        End If
+    End Sub
 End Class

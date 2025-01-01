@@ -61,6 +61,7 @@ Partial Class fsstate
         '
         'RichTextBox1
         '
+        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.RichTextBox1.Location = New System.Drawing.Point(26, 59)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ReadOnly = True
