@@ -36,15 +36,20 @@ Public Class welcome
             Form1.TextBox4.Text = fileReader.ReadLine()
             Form1.CheckBox5.Checked = fileReader.ReadLine()
             Form1.CheckBox6.Checked = fileReader.ReadLine()
+            Form1.CheckBox7.Checked = fileReader.ReadLine()
+            Form1.TextBox5.Text = fileReader.ReadLine()
             'aname
             'url
             'wwin
             'hwin
             'fixwin
             'aotwin
+            'hwico
+            'opaval
             Form1.Enabled = True
             Form1.ProjnameToolStripMenuItem.Text = Form1.TextBox2.Text
             Form1.WindowState = FormWindowState.Normal
+            fileReader.Close()
             Me.Close()
         End If
     End Sub

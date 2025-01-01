@@ -118,46 +118,24 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="RichTextBox1.Text" xml:space="preserve">
-    <value>Builder Release 8.0.0
+    <value>Builder Release 8.1.0
 
 ** Release Highlights **
-- HIGHLIGHTS: New option to customize app window opacity.
-- HIGHLIGHTS: New option to hide app icon in title bar.
-- HIGHLIGHTS: Start Log Viewer feature to view app start log.
-- HIGHLIGHTS: Launch and uninstall shortcut in Start Menu.
+- HIGHLIGHTS: Introduce all new way to save and load projects using .pbproj file.
+- HIGHLIGHTS: Hide icon option and opacity can now be saved.
 
 ** Breaking Changes **
-- BREAKING: Upgrading to this version will reset all settings.
-- BREAKING: This version only support 6.4.0 or newer resource.
+- BREAKING: Upgrade to this version will not able to load old save.
+  &gt; MIGRATION: You can still access save using Notepad in statedata/usersave.*.
 
 ** Release notes **
-- ADDED: Resource size viewer in Resource tab.
-- ADDED: Fixed window and always on top option can be saved.
-- ADDED: Always hide side panel in preference.
-- ADDED: Export save and setting in preference.
-- IMPROVEMENT: Spelling correction in Preference.
-- IMPROVEMENT: Updated CefSharp to 131.3.50
-- IMPROVEMENT: Updated Chromium to 131.0.6778.205
-- IMPROVEMENT: Minor main user interface improvements.
-- CHANGED: Move Resource section to single tab.
-- CHANGED: Max window size now limit to 0-9999.
-- CHANGED: New interface section in general preference.
-- CHANGED: Saving project now required Website URL.
-- CHANGED: Removed Build Mode and After Build Action reset buttons.
-- CHANGED: Moved Unlock Developer Menu to Advanced Preference.
-- FIXED: Saving disable startup fetch will close preference.
-- FIXED: Success message confusion in disable startup fetch.
-- FIXED: Cannot save in disable startup fetch.
-- FIXED: Advance after build action still accessible when no resource.
-- FIXED: Support button will go to wrong page due to server shutdown.
-- FIXED: News Feed cannot try again after fetch failed on startup.
-- FIXED: Reset After Build Action won't reset advanced option.
-- FIXED: App might freeze for short period after test build completed.
-- FIXED: Builder crashed when testing more than one app at the same time.
-- FIXED: Improved special character check in app names to prevent crashes.
-- FIXED: Application file name preview overlap with design panel.
-
-** Low-level **
-- IMPROVEMENT: Updated Visual C++ Redistributable. (14.42.34433.0)</value>
+- ADDED: New Project in File menu.
+- ADDED: Open Project in File menu.
+- ADDED: Project Name in main menu bar.
+- CHANGED: Completely Removed Quick Save Features.
+- CHANGED: Removed Clear All in File menu.
+- CHANGED: Main window will automatically minimize on startup.
+- CHANGED: Change Restore mode button to preference in Start Window.
+- CHANGED: To prevent startup error Restore mode will enter immediately.</value>
   </data>
 </root>

@@ -1271,6 +1271,12 @@ Public Class Form1
                             Else
                                 writer.WriteLine("False")
                             End If
+                            If CheckBox7.Checked Then
+                                writer.WriteLine("True")
+                            Else
+                                writer.WriteLine("False")
+                            End If
+                            writer.WriteLine(TextBox5.Text)
                         End Using
                         myStream.Close()
                         MessageBox.Show("Saved to file!", "Completed!")
@@ -1282,6 +1288,8 @@ Public Class Form1
                 'hwin
                 'fixwin
                 'aotwin
+                'hwico
+                'opaval
                 ProjnameToolStripMenuItem.Text = TextBox2.Text
             Catch ex As Exception
                 MessageBox.Show("Save Failed!" & vbNewLine & ex.Message, "Error!")
@@ -1324,13 +1332,18 @@ Public Class Form1
                 TextBox4.Text = fileReader.ReadLine()
                 CheckBox5.Checked = fileReader.ReadLine()
                 CheckBox6.Checked = fileReader.ReadLine()
+                CheckBox7.Checked = fileReader.ReadLine()
+                TextBox5.Text = fileReader.ReadLine()
                 'aname
                 'url
                 'wwin
                 'hwin
                 'fixwin
                 'aotwin
+                'hwico
+                'opaval
                 ProjnameToolStripMenuItem.Text = TextBox2.Text
+                fileReader.Close()
             End If
         End If
     End Sub

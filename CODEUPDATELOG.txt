@@ -2,6 +2,7 @@ Builder Release 8.1.0
 
 ** Release Highlights **
 - HIGHLIGHTS: Introduce all new way to save and load projects using .pbproj file.
+- HIGHLIGHTS: Hide icon option and opacity can now be saved.
 
 ** Breaking Changes **
 - BREAKING: Upgrade to this version will not able to load old save.
@@ -9,8 +10,8 @@ Builder Release 8.1.0
 
 ** Release notes **
 - ADDED: New Project in File menu.
-- ADDED: Project Name in main menu bar.
 - ADDED: Open Project in File menu.
+- ADDED: Project Name in main menu bar.
 - CHANGED: Completely Removed Quick Save Features.
 - CHANGED: Removed Clear All in File menu.
 - CHANGED: Main window will automatically minimize on startup.
