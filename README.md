@@ -43,4 +43,4 @@ An EULA document is available for download to clarify the permissions associated
 
 ### MadeByPavich, A Pavich Komansil Project
 
-© 2022-2024 Pavich Komansil. All rights reserved. All code, MadeByPavich logos, P Browser Builder logos, and all assets associated with this project are the property and copyright of Pavich Komansil.
+© 2022-2025 Pavich Komansil. All rights reserved. All code, MadeByPavich logos, P Browser Builder logos, and all assets associated with this project are the property and copyright of Pavich Komansil.
