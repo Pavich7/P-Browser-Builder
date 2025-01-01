@@ -33,7 +33,7 @@ Public Class prefer
             Dim bstringReader As String
             bstringReader = bfileReader.ReadLine()
             Dim client As WebClient = New WebClient()
-            Dim obuiver As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v1/ver/onlinebuiver.txt")
+            Dim obuiver As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v2/ver/onlinebuiver.txt")
             If obuiver.Contains(bstringReader) Then
                 Label30.Text = "up-to-date!"
                 Label30.Enabled = False
@@ -68,7 +68,7 @@ Public Class prefer
                     Dim stringReader As String
                     stringReader = fileReader.ReadLine()
                     Dim client As WebClient = New WebClient()
-                    Dim oresver As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v1/ver/onlineresver.txt")
+                    Dim oresver As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v2/ver/onlineresver.txt")
                     If oresver.Contains(stringReader) Then
                         Label4.Text = "up-to-date!"
                         Label4.Enabled = False
@@ -298,9 +298,9 @@ Public Class prefer
     Private Sub Label37_Click(sender As Object, e As EventArgs) Handles Label37.Click
         Try
             Dim client As WebClient = New WebClient()
-            Dim nf1desc As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v1/nf/nf1_desc.txt")
-            Dim nf1titl As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v1/nf/nf1_title.txt")
-            Dim nf1date As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v1/nf/nf1_date.txt")
+            Dim nf1desc As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v2/nf/nf1_desc.txt")
+            Dim nf1titl As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v2/nf/nf1_title.txt")
+            Dim nf1date As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v2/nf/nf1_date.txt")
             Form1.Label12.Text = nf1titl
             Form1.Label13.Text = nf1desc
             Form1.Label14.Text = nf1date

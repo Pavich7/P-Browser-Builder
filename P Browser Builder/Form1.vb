@@ -673,9 +673,9 @@ Public Class Form1
             Try
                 ProgressBar1.Value = 10
                 Dim client As WebClient = New WebClient()
-                Dim nf1desc As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v1/nf/nf1_desc.txt")
-                Dim nf1titl As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v1/nf/nf1_title.txt")
-                Dim nf1date As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v1/nf/nf1_date.txt")
+                Dim nf1desc As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v2/nf/nf1_desc.txt")
+                Dim nf1titl As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v2/nf/nf1_title.txt")
+                Dim nf1date As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v2/nf/nf1_date.txt")
                 ProgressBar1.Value = 50
                 Label12.Text = nf1titl
                 Label13.Text = nf1desc
@@ -707,9 +707,9 @@ Public Class Form1
             Label15.Text = "Please wait..."
             Label15.Enabled = False
             Dim client As WebClient = New WebClient()
-            Dim nf1desc As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v1/nf/nf1_desc.txt")
-            Dim nf1titl As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v1/nf/nf1_title.txt")
-            Dim nf1date As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v1/nf/nf1_date.txt")
+            Dim nf1desc As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v2/nf/nf1_desc.txt")
+            Dim nf1titl As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v2/nf/nf1_title.txt")
+            Dim nf1date As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v2/nf/nf1_date.txt")
             Label12.Text = nf1titl
             Label13.Text = nf1desc
             Label14.Text = nf1date
