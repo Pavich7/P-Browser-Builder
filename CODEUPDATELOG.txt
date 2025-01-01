@@ -12,6 +12,7 @@ Builder Release 8.1.0
 - ADDED: New Project in File menu.
 - ADDED: Open Project in File menu.
 - ADDED: Project Name in main menu bar.
+- IMPROVEMENT: Minimal user interface improvements.
 - CHANGED: Completely Removed Quick Save Features.
 - CHANGED: Removed Clear All in File menu.
 - CHANGED: Main window will automatically minimize on startup.

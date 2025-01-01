@@ -301,6 +301,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="p_browser_icon_001_rq2_icon.ico" />
+    <None Include="Resources\close.png" />
     <None Include="Resources\folder1.png" />
     <None Include="Resources\window.png" />
     <None Include="Resources\bug.png" />

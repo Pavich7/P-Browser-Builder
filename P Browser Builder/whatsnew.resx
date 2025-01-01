@@ -122,7 +122,7 @@
 
 ** Release Highlights **
 - HIGHLIGHTS: Introduce all new way to save and load projects using .pbproj file.
-- HIGHLIGHTS: Hide icon option and opacity can now be saved.
+- HIGHLIGHTS: Hide icon, opacity, and Welcome Message can now be saved.
 
 ** Breaking Changes **
 - BREAKING: Upgrade to this version will not able to load old save.
@@ -132,6 +132,7 @@
 - ADDED: New Project in File menu.
 - ADDED: Open Project in File menu.
 - ADDED: Project Name in main menu bar.
+- IMPROVEMENT: Minimal user interface improvements.
 - CHANGED: Completely Removed Quick Save Features.
 - CHANGED: Removed Clear All in File menu.
 - CHANGED: Main window will automatically minimize on startup.

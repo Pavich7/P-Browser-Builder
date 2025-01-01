@@ -1146,16 +1146,6 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub Label36_Click(sender As Object, e As EventArgs) Handles Label36.Click
-        Panel6.Hide()
-        Me.WindowState = FormWindowState.Normal
-        Me.Size = New Size(1232, 646)
-        TabControl1.Width = 872
-        HideRightPanelToolStripMenuItem.Enabled = False
-        ShowRightPanelToolStripMenuItem.Enabled = True
-        MessageBox.Show("You can unhide right panel by click on" + vbNewLine + "Menu Strip: Window > Show right panel" + vbNewLine + "or using Ctrl + R Shortcut", "Notification")
-    End Sub
-
     Private Sub PictureBox10_Click(sender As Object, e As EventArgs) Handles PictureBox10.Click
         TextBox3.Text = "944"
         TextBox4.Text = "573"
@@ -1350,5 +1340,15 @@ Public Class Form1
                 'msgde
             End If
         End If
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        Panel6.Hide()
+        Me.WindowState = FormWindowState.Normal
+        Me.Size = New Size(1232, 646)
+        TabControl1.Width = 872
+        HideRightPanelToolStripMenuItem.Enabled = False
+        ShowRightPanelToolStripMenuItem.Enabled = True
+        MessageBox.Show("You can unhide right panel by click on" + vbNewLine + "Menu Strip: Window > Show right panel" + vbNewLine + "or using Ctrl + R Shortcut", "Notification")
     End Sub
 End Class
