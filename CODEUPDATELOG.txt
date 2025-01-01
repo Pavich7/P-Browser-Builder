@@ -2,7 +2,7 @@ Builder Release 8.1.0
 
 ** Release Highlights **
 - HIGHLIGHTS: Introduce all new way to save and load projects using .pbproj file.
-- HIGHLIGHTS: Hide icon option and opacity can now be saved.
+- HIGHLIGHTS: Hide icon, opacity, and Welcome Message can now be saved.
 
 ** Breaking Changes **
 - BREAKING: Upgrade to this version will not able to load old save.

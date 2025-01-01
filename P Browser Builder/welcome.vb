@@ -1,4 +1,5 @@
 ﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Button
 
 Public Class welcome
     Private Sub Panel1_Paint(sender As Object, e As EventArgs) Handles Panel1.Click
@@ -29,28 +30,38 @@ Public Class welcome
         OpenFileDialog1.Title = "Open P Browser Builder Project"
         OpenFileDialog1.Filter = "P Browser Builder Project|*.pbproj"
         If OpenFileDialog1.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
-            Dim fileReader As System.IO.StreamReader = My.Computer.FileSystem.OpenTextFileReader(OpenFileDialog1.FileName)
-            Form1.TextBox2.Text = fileReader.ReadLine()
-            Form1.TextBox1.Text = fileReader.ReadLine()
-            Form1.TextBox3.Text = fileReader.ReadLine()
-            Form1.TextBox4.Text = fileReader.ReadLine()
-            Form1.CheckBox5.Checked = fileReader.ReadLine()
-            Form1.CheckBox6.Checked = fileReader.ReadLine()
-            Form1.CheckBox7.Checked = fileReader.ReadLine()
-            Form1.TextBox5.Text = fileReader.ReadLine()
-            'aname
-            'url
-            'wwin
-            'hwin
-            'fixwin
-            'aotwin
-            'hwico
-            'opaval
-            Form1.Enabled = True
-            Form1.ProjnameToolStripMenuItem.Text = Form1.TextBox2.Text
-            Form1.WindowState = FormWindowState.Normal
-            fileReader.Close()
-            Me.Close()
+            Try
+                Dim fileReader As System.IO.StreamReader = My.Computer.FileSystem.OpenTextFileReader(OpenFileDialog1.FileName)
+                Form1.TextBox2.Text = fileReader.ReadLine()
+                Form1.TextBox1.Text = fileReader.ReadLine()
+                Form1.TextBox3.Text = fileReader.ReadLine()
+                Form1.TextBox4.Text = fileReader.ReadLine()
+                Form1.CheckBox5.Checked = fileReader.ReadLine()
+                Form1.CheckBox6.Checked = fileReader.ReadLine()
+                Form1.CheckBox7.Checked = fileReader.ReadLine()
+                Form1.TextBox5.Text = fileReader.ReadLine()
+                Form1.CheckBox3.Checked = fileReader.ReadLine()
+                welcomemessage.TextBox1.Text = fileReader.ReadLine()
+                welcomemessage.TextBox2.Text = fileReader.ReadLine()
+                'aname
+                'url
+                'wwin
+                'hwin
+                'fixwin
+                'aotwin
+                'hwico
+                'opaval
+                'welena
+                'msgti
+                'msgde
+                Form1.Enabled = True
+                Form1.ProjnameToolStripMenuItem.Text = Form1.TextBox2.Text
+                Form1.WindowState = FormWindowState.Normal
+                fileReader.Close()
+                Me.Close()
+            Catch ex As Exception
+                MessageBox.Show("Load Failed!" & vbNewLine & "Project is not compatiable or corrupt!" & vbNewLine & ex.Message, "Error!")
+            End Try
         End If
     End Sub
     Private Sub Panel2_Paint(sender As Object, e As EventArgs) Handles Panel2.Click

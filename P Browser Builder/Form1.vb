@@ -1261,22 +1261,13 @@ Public Class Form1
                             writer.WriteLine(TextBox1.Text)
                             writer.WriteLine(TextBox3.Text)
                             writer.WriteLine(TextBox4.Text)
-                            If CheckBox5.Checked Then
-                                writer.WriteLine("True")
-                            Else
-                                writer.WriteLine("False")
-                            End If
-                            If CheckBox6.Checked Then
-                                writer.WriteLine("True")
-                            Else
-                                writer.WriteLine("False")
-                            End If
-                            If CheckBox7.Checked Then
-                                writer.WriteLine("True")
-                            Else
-                                writer.WriteLine("False")
-                            End If
+                            writer.WriteLine(CheckBox5.CheckState)
+                            writer.WriteLine(CheckBox6.CheckState)
+                            writer.WriteLine(CheckBox7.CheckState)
                             writer.WriteLine(TextBox5.Text)
+                            writer.WriteLine(CheckBox3.CheckState)
+                            writer.WriteLine(welcomemessage.TextBox1.Text)
+                            writer.WriteLine(welcomemessage.TextBox2.Text)
                         End Using
                         myStream.Close()
                         MessageBox.Show("Saved to file!", "Completed!")
@@ -1290,6 +1281,9 @@ Public Class Form1
                 'aotwin
                 'hwico
                 'opaval
+                'welena
+                'msgti
+                'msgde
                 ProjnameToolStripMenuItem.Text = TextBox2.Text
             Catch ex As Exception
                 MessageBox.Show("Save Failed!" & vbNewLine & ex.Message, "Error!")
@@ -1305,35 +1299,44 @@ Public Class Form1
             OpenFileDialog1.Title = "Open P Browser Builder Project"
             OpenFileDialog1.Filter = "P Browser Builder Project|*.pbproj"
             If OpenFileDialog1.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
-                Dim fileReader As System.IO.StreamReader = My.Computer.FileSystem.OpenTextFileReader(OpenFileDialog1.FileName)
-                TextBox1.Text = ""
-                TextBox2.Text = ""
-                TextBox3.Text = "944"
-                TextBox4.Text = "573"
-                TextBox5.Text = "100"
-                RadioButton2.Checked = True
-                RadioButton3.Checked = False
-                CheckBox1.Text = "Start your app after build"
-                CheckBox2.Text = "Show your app in explorer after build"
-                CheckBox1.Checked = True
-                CheckBox2.Checked = False
-                CheckBox3.Checked = False
-                CheckBox4.Checked = False
-                CheckBox5.Checked = False
-                CheckBox6.Checked = False
-                CheckBox7.Checked = False
-                TabControl1.SelectedTab = TabPage1
-                System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
-                System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
-                Browser.Load("about:blank")
-                TextBox2.Text = fileReader.ReadLine()
-                TextBox1.Text = fileReader.ReadLine()
-                TextBox3.Text = fileReader.ReadLine()
-                TextBox4.Text = fileReader.ReadLine()
-                CheckBox5.Checked = fileReader.ReadLine()
-                CheckBox6.Checked = fileReader.ReadLine()
-                CheckBox7.Checked = fileReader.ReadLine()
-                TextBox5.Text = fileReader.ReadLine()
+                Try
+                    Dim fileReader As System.IO.StreamReader = My.Computer.FileSystem.OpenTextFileReader(OpenFileDialog1.FileName)
+                    TextBox1.Text = ""
+                    TextBox2.Text = ""
+                    TextBox3.Text = "944"
+                    TextBox4.Text = "573"
+                    TextBox5.Text = "100"
+                    RadioButton2.Checked = True
+                    RadioButton3.Checked = False
+                    CheckBox1.Text = "Start your app after build"
+                    CheckBox2.Text = "Show your app in explorer after build"
+                    CheckBox1.Checked = True
+                    CheckBox2.Checked = False
+                    CheckBox3.Checked = False
+                    CheckBox4.Checked = False
+                    CheckBox5.Checked = False
+                    CheckBox6.Checked = False
+                    CheckBox7.Checked = False
+                    TabControl1.SelectedTab = TabPage1
+                    System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
+                    System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
+                    Browser.Load("about:blank")
+                    TextBox2.Text = fileReader.ReadLine()
+                    TextBox1.Text = fileReader.ReadLine()
+                    TextBox3.Text = fileReader.ReadLine()
+                    TextBox4.Text = fileReader.ReadLine()
+                    CheckBox5.Checked = fileReader.ReadLine()
+                    CheckBox6.Checked = fileReader.ReadLine()
+                    CheckBox7.Checked = fileReader.ReadLine()
+                    TextBox5.Text = fileReader.ReadLine()
+                    CheckBox3.Checked = fileReader.ReadLine()
+                    welcomemessage.TextBox1.Text = fileReader.ReadLine()
+                    welcomemessage.TextBox2.Text = fileReader.ReadLine()
+                    ProjnameToolStripMenuItem.Text = TextBox2.Text
+                    fileReader.Close()
+                Catch ex As Exception
+                    MessageBox.Show("Load Failed!" & vbNewLine & "Project is not compatiable or corrupt!" & vbNewLine & ex.Message, "Error!")
+                End Try
                 'aname
                 'url
                 'wwin
@@ -1342,8 +1345,9 @@ Public Class Form1
                 'aotwin
                 'hwico
                 'opaval
-                ProjnameToolStripMenuItem.Text = TextBox2.Text
-                fileReader.Close()
+                'welena
+                'msgti
+                'msgde
             End If
         End If
     End Sub
