@@ -48,8 +48,7 @@ Public Class prefer
             Label2.Text = "Chromium : N/A"
             Label5.Text = "CefSharp : N/A"
             Label23.Text = "Version : N/A"
-            Label51.Text = "0 MB"
-            Label52.Text = "0 MB"
+            Label51.Text = "0.0 MB"
             Label2.Enabled = False
             Label5.Enabled = False
             Label23.Enabled = False

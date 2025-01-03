@@ -2,18 +2,15 @@
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Button
 
 Public Class welcome
+    Dim realclose As Boolean
     Private Sub Panel1_Paint(sender As Object, e As EventArgs) Handles Panel1.Click
-        Form1.Enabled = True
-        Form1.WindowState = FormWindowState.Normal
-        Me.Close()
+        newproj()
     End Sub
-    Protected Overrides ReadOnly Property CreateParams() As CreateParams
-        Get
-            Dim param As CreateParams = MyBase.CreateParams
-            param.ClassStyle = param.ClassStyle Or &H200
-            Return param
-        End Get
-    End Property
+    Public Sub MyForm_FormClosing(ByVal sender As Object, ByVal e As FormClosingEventArgs) Handles Me.FormClosing
+        If realclose = True Then
+            Application.Exit()
+        End If
+    End Sub
     Private Sub welcome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim apppath As String = Application.StartupPath()
         Me.BackgroundImage = Image.FromFile(apppath + "\imgassets\start.png")
@@ -23,6 +20,7 @@ Public Class welcome
             Label7.Visible = True
         End If
         Form1.Enabled = False
+        realclose = True
     End Sub
     Private Sub loadsave()
         Dim apppath As String = Application.StartupPath()
@@ -58,11 +56,18 @@ Public Class welcome
                 Form1.ProjnameToolStripMenuItem.Text = Form1.TextBox2.Text
                 Form1.WindowState = FormWindowState.Normal
                 fileReader.Close()
+                realclose = False
                 Me.Close()
             Catch ex As Exception
                 MessageBox.Show("Load Failed!" & vbNewLine & "Project is not compatiable or corrupt!" & vbNewLine & ex.Message, "Error!")
             End Try
         End If
+    End Sub
+    Private Sub newproj()
+        Form1.Enabled = True
+        Form1.WindowState = FormWindowState.Normal
+        realclose = False
+        Me.Close()
     End Sub
     Private Sub Panel2_Paint(sender As Object, e As EventArgs) Handles Panel2.Click
         loadsave()
@@ -97,21 +102,15 @@ Public Class welcome
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        Form1.Enabled = True
-        Form1.WindowState = FormWindowState.Normal
-        Me.Close()
+        newproj()
     End Sub
 
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
-        Form1.Enabled = True
-        Form1.WindowState = FormWindowState.Normal
-        Me.Close()
+        newproj()
     End Sub
 
     Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
-        Form1.Enabled = True
-        Form1.WindowState = FormWindowState.Normal
-        Me.Close()
+        newproj()
     End Sub
 
     Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click

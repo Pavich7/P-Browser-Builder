@@ -241,6 +241,7 @@ Partial Class prefer
         '
         'TabControl1
         '
+        Me.TabControl1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
@@ -250,7 +251,7 @@ Partial Class prefer
         Me.TabControl1.Location = New System.Drawing.Point(0, 48)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(501, 398)
+        Me.TabControl1.Size = New System.Drawing.Size(501, 380)
         Me.TabControl1.TabIndex = 70
         '
         'TabPage1
@@ -382,7 +383,7 @@ Partial Class prefer
         Me.TabPage2.Location = New System.Drawing.Point(4, 26)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(493, 368)
+        Me.TabPage2.Size = New System.Drawing.Size(493, 350)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Advanced"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -1022,7 +1023,7 @@ Partial Class prefer
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(501, 445)
+        Me.ClientSize = New System.Drawing.Size(501, 427)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle

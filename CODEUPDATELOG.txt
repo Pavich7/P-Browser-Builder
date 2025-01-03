@@ -13,7 +13,9 @@ Builder Release 8.1.0
 - ADDED: Open Project in File menu.
 - ADDED: Project Name in main menu bar.
 - ADDED: Hide icon will also hide icon in Design View.
+- ADDED: You can now exit app in Start Window using X button.
 - IMPROVEMENT: Minimal user interface improvements.
+- FIXED: Size Viewer show incorrect cache size when has no resource.
 - CHANGED: Completely Removed Quick Save Features.
 - CHANGED: Removed Clear All in File menu.
 - CHANGED: Main window will automatically minimize on startup.

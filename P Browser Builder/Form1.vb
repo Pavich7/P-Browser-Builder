@@ -630,7 +630,43 @@ Public Class Form1
         'Dim stringReader01 As String
         'stringReader01 = fileReader01.ReadLine()
         'fileReader01.Close()
-        welcome.Show()
+        If My.Application.CommandLineArgs.Count > 0 Then
+            Dim FileNameOpenWith As String = My.Application.CommandLineArgs(0)
+            Try
+                Dim fileReader As System.IO.StreamReader = My.Computer.FileSystem.OpenTextFileReader(FileNameOpenWith)
+                TextBox2.Text = fileReader.ReadLine()
+                TextBox1.Text = fileReader.ReadLine()
+                TextBox3.Text = fileReader.ReadLine()
+                TextBox4.Text = fileReader.ReadLine()
+                CheckBox5.Checked = fileReader.ReadLine()
+                CheckBox6.Checked = fileReader.ReadLine()
+                CheckBox7.Checked = fileReader.ReadLine()
+                TextBox5.Text = fileReader.ReadLine()
+                CheckBox3.Checked = fileReader.ReadLine()
+                welcomemessage.TextBox1.Text = fileReader.ReadLine()
+                welcomemessage.TextBox2.Text = fileReader.ReadLine()
+                'aname
+                'url
+                'wwin
+                'hwin
+                'fixwin
+                'aotwin
+                'hwico
+                'opaval
+                'welena
+                'msgti
+                'msgde
+                Me.Enabled = True
+                ProjnameToolStripMenuItem.Text = TextBox2.Text
+                Me.WindowState = FormWindowState.Normal
+                fileReader.Close()
+            Catch ex As Exception
+                MessageBox.Show("Load Failed!" & vbNewLine & "Project is not compatiable or corrupt!" & vbNewLine & ex.Message, "Error!")
+                Application.Restart()
+            End Try
+        Else
+            welcome.Show()
+        End If
         'Sent analytics
         'Dim regDate As Date = Date.Now()
         'Dim strDate As String = regDate.ToString("ddMMMyyyy")
