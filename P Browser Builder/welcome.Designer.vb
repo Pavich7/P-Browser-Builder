@@ -151,15 +151,15 @@ Partial Class welcome
         Me.Label5.BackColor = System.Drawing.SystemColors.Control
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(133, 17)
+        Me.Label5.Location = New System.Drawing.Point(192, 18)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(72, 17)
+        Me.Label5.Size = New System.Drawing.Size(136, 17)
         Me.Label5.TabIndex = 13
-        Me.Label5.Text = "Exit builder."
+        Me.Label5.Text = "Explore the user guide."
         '
         'PictureBox3
         '
-        Me.PictureBox3.Image = Global.P_Browser_Builder.My.Resources.Resources.remove
+        Me.PictureBox3.Image = Global.P_Browser_Builder.My.Resources.Resources.compass__1_
         Me.PictureBox3.Location = New System.Drawing.Point(24, 12)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(32, 28)
@@ -174,9 +174,9 @@ Partial Class welcome
         Me.Label6.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
         Me.Label6.Location = New System.Drawing.Point(79, 9)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(48, 28)
+        Me.Label6.Size = New System.Drawing.Size(107, 28)
         Me.Label6.TabIndex = 11
-        Me.Label6.Text = "Quit"
+        Me.Label6.Text = "Get Started"
         '
         'Label7
         '

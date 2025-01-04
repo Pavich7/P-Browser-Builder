@@ -2,7 +2,7 @@
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Button
 
 Public Class welcome
-    Dim realclose As Boolean
+    Public realclose As Boolean
     Private Sub Panel1_Paint(sender As Object, e As EventArgs) Handles Panel1.Click
         newproj()
     End Sub
@@ -74,19 +74,19 @@ Public Class welcome
     End Sub
 
     Private Sub Panel3_Paint(sender As Object, e As EventArgs) Handles Panel3.Click
-        Application.Exit()
+        getstart.Show()
     End Sub
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
-        Application.Exit()
+        getstart.Show()
     End Sub
 
     Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
-        Application.Exit()
+        getstart.Show()
     End Sub
 
     Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-        Application.Exit()
+        getstart.Show()
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
