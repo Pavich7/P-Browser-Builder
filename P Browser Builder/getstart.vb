@@ -9,6 +9,10 @@
 
     Private Sub Label56_Click(sender As Object, e As EventArgs) Handles Label56.Click
         Dim apppath As String = Application.StartupPath()
+        Dim rscheck As String = apppath + "\resource"
+        If Not System.IO.Directory.Exists(rscheck) Then
+            MessageBox.Show("Download resource for full experience." & vbNewLine & "You can download by click Download button below News Feed.", "Recommendation")
+        End If
         Try
             Dim fileReader As System.IO.StreamReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\sample\sample1.pbproj")
             Form1.TextBox2.Text = fileReader.ReadLine()

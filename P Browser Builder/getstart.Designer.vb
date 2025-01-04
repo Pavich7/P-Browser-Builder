@@ -32,13 +32,15 @@ Partial Class getstart
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label3.Location = New System.Drawing.Point(14, 15)
+        Me.Label3.Location = New System.Drawing.Point(57, 15)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(107, 28)
         Me.Label3.TabIndex = 11
@@ -152,12 +154,23 @@ Partial Class getstart
         Me.Label7.TabIndex = 81
         Me.Label7.Text = "Get some help"
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.P_Browser_Builder.My.Resources.Resources.compass__1_
+        Me.PictureBox3.Location = New System.Drawing.Point(20, 19)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(35, 25)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 84
+        Me.PictureBox3.TabStop = False
+        '
         'getstart
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(431, 237)
+        Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label7)
@@ -176,6 +189,7 @@ Partial Class getstart
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Get Started"
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -191,4 +205,5 @@ Partial Class getstart
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
+    Friend WithEvents PictureBox3 As PictureBox
 End Class
