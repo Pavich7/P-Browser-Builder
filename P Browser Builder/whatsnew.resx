@@ -123,7 +123,7 @@
 ** Release Highlights **
 - HIGHLIGHTS: Introduce all new way to save and load projects using .pbproj file.
 - HIGHLIGHTS: Hide icon, opacity, and Welcome Message can now be saved.
-- HIGHLIGHTS: New Get Started feature for sample and leaning resources.
+- HIGHLIGHTS: New Get Started feature for sample and learning resources.
 
 ** Breaking Changes **
 - BREAKING: Upgrade to this version will not able to load old save.
