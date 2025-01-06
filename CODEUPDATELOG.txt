@@ -1,25 +1,8 @@
 Builder Release 8.1.0
 
-** Release Highlights **
-- HIGHLIGHTS: Introduce all new way to save and load projects using .pbproj file.
-- HIGHLIGHTS: Hide icon, opacity, and Welcome Message can now be saved.
-- HIGHLIGHTS: New Get Started feature for sample and learning resources.
-
-** Breaking Changes **
-- BREAKING: Upgrade to this version will not able to load old save.
-  > MIGRATION: You can still access save using Notepad in statedata/usersave.*.
-
 ** Release notes **
-- ADDED: New Project in File menu.
-- ADDED: Open Project in File menu.
-- ADDED: Project Name in main menu bar.
-- ADDED: Hide icon will also hide icon in Design View.
-- ADDED: You can now exit app in Start Window using X button.
-- IMPROVEMENT: Minimal user interface improvements.
-- FIXED: Size Viewer show incorrect cache size when has no resource.
-- CHANGED: Completely Removed Quick Save Features.
-- CHANGED: Removed Clear All in File menu.
-- CHANGED: Removed Exit Builder in Start Window.
-- CHANGED: Main window will automatically minimize on startup.
-- CHANGED: Change Restore mode button to preference in Start Window.
-- CHANGED: To prevent startup error Restore mode will enter immediately.
+- IMPROVEMENT: News Feed now fetches using a single file, thus improving startup speed.
+- IMPROVEMENT: Enhance the startup time of the Preferences window.
+
+** Low-level **
+- IMPROVEMENT: Low-level code optimizations.

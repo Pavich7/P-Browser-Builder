@@ -27,13 +27,18 @@ Public Class prefer
         Dim TheSize2 As Long = GetDirSize(apppath + "\statecache\updatecache\")
         Label52.Text = FormatNumber(TheSize2 / 1024 / 1024, 1) & " MB"
         Try
+            Dim obuiver As String
+            Dim oresver As String
+            Dim client As WebClient = New WebClient()
+            Dim nf1cont As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v3/cfuver.txt")
+            Dim lines As String() = nf1cont.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
+            If lines.Length > 0 Then obuiver = lines(0)
+            If lines.Length > 1 Then oresver = lines(1)
+
             'Build Ver Check
             Dim bfileReader As System.IO.StreamReader
             bfileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\metadata\version.txt")
-            Dim bstringReader As String
-            bstringReader = bfileReader.ReadLine()
-            Dim client As WebClient = New WebClient()
-            Dim obuiver As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v2/ver/onlinebuiver.txt")
+            Dim bstringReader As String = bfileReader.ReadLine()
             If obuiver.Contains(bstringReader) Then
                 Label30.Text = "up-to-date!"
                 Label30.Enabled = False
@@ -41,6 +46,20 @@ Public Class prefer
                 Label30.Text = "Update available! (" + obuiver + ")"
             End If
             bfileReader.Close()
+
+            'Res Ver Check
+            If System.IO.Directory.Exists(rescheck) Then
+                Dim fileReader As System.IO.StreamReader
+                fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\metadata\version.txt")
+                Dim stringReader As String = fileReader.ReadLine()
+                If oresver.Contains(stringReader) Then
+                    Label4.Text = "up-to-date!"
+                    Label4.Enabled = False
+                Else
+                    Label4.Text = "Update available! (" + oresver + ")"
+                End If
+                fileReader.Close()
+            End If
         Catch ex As Exception
             Label30.Text = "Error checking for update!"
         End Try
@@ -56,30 +75,6 @@ Public Class prefer
             Label8.Enabled = False
             Label4.Text = "Resource not installed"
         Else
-            Try
-                Dim metacheck As String = apppath + "\resource\metadata\version.txt"
-                If Not System.IO.File.Exists(metacheck) Then
-                    MessageBox.Show("Resource not compatible with this version of P Browser Builder!" + vbNewLine + "Please update resource by uninstall and reinstall via build menu.", "Check for update error!")
-                Else
-                    'Res Ver Check
-                    Dim fileReader As System.IO.StreamReader
-                    fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\metadata\version.txt")
-                    Dim stringReader As String
-                    stringReader = fileReader.ReadLine()
-                    Dim client As WebClient = New WebClient()
-                    Dim oresver As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v2/ver/onlineresver.txt")
-                    If oresver.Contains(stringReader) Then
-                        Label4.Text = "up-to-date!"
-                        Label4.Enabled = False
-                    Else
-                        Label4.Text = "Update available! (" + oresver + ")"
-                    End If
-                    fileReader.Close()
-                End If
-            Catch ex As Exception
-                Label4.Text = "Error checking for update!"
-                Label4.Enabled = False
-            End Try
             Try
                 Dim fileReader2 As System.IO.StreamReader
                 Dim fileReader3 As System.IO.StreamReader
@@ -294,12 +289,11 @@ Public Class prefer
     Private Sub Label37_Click(sender As Object, e As EventArgs) Handles Label37.Click
         Try
             Dim client As WebClient = New WebClient()
-            Dim nf1desc As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v2/nf/nf1_desc.txt")
-            Dim nf1titl As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v2/nf/nf1_title.txt")
-            Dim nf1date As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v2/nf/nf1_date.txt")
-            Form1.Label12.Text = nf1titl
-            Form1.Label13.Text = nf1desc
-            Form1.Label14.Text = nf1date
+            Dim nf1cont As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v3/feedcontent.txt")
+            Dim lines As String() = nf1cont.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
+            If lines.Length > 0 Then Form1.Label12.Text = lines(0)
+            If lines.Length > 1 Then Form1.Label13.Text = lines(1)
+            If lines.Length > 2 Then Form1.Label14.Text = lines(2)
             MessageBox.Show("News Feed refreshed!", "OK!")
         Catch ex As Exception
             MessageBox.Show("Error while refreshing News Feed", "Error!")

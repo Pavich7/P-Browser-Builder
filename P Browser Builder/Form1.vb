@@ -14,6 +14,7 @@ Public Class Form1
         InitializeComponent()
     End Sub
     Public logpath
+    Public apppath As String
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim spechk As Boolean = False
         Dim text As String = TextBox2.Text
@@ -30,7 +31,6 @@ Public Class Form1
             MessageBox.Show("App name cannot contain any of these characters: \ / : * ? "" < > |", "Build Failed!")
         Else
             Label7.Text = "Building in progress..."
-            Dim apppath As String = Application.StartupPath()
             Dim pbcfg As String = apppath + "\resource\testspace\builderdata.pbcfg"
             Dim pbprogcfg As String = apppath + "\resource\testspace\progdata.pbcfg"
             Dim pbprogw As String = apppath + "\resource\testspace\appsizew.pbcfg"
@@ -139,7 +139,6 @@ Public Class Form1
         Else
             If RadioButton2.Checked = True Then
                 Label7.Text = "Building in progress..."
-                Dim apppath As String = Application.StartupPath()
                 System.IO.Directory.Delete(apppath + "\resource\buildspace", True)
                 System.IO.Directory.CreateDirectory(apppath + "\resource\buildspace")
                 Dim zipPath As String = apppath + "\resource\resourcepack\freshapp.zip"
@@ -238,7 +237,6 @@ Public Class Form1
                 End If
             ElseIf RadioButton3.Checked = True Then
                 Label7.Text = "Building in progress..."
-                Dim apppath As String = Application.StartupPath()
                 System.IO.Directory.Delete(apppath + "\resource\buildspace", True)
                 System.IO.Directory.CreateDirectory(apppath + "\resource\buildspace")
                 Dim zipPath As String = apppath + "\resource\resourcepack\freshapp.zip"
@@ -356,7 +354,6 @@ Public Class Form1
         Try
             Label7.Text = "Cleaning in progress..."
             ProgressBar1.Value = 20
-            Dim apppath As String = Application.StartupPath()
             System.IO.Directory.Delete(apppath + "\binary", True)
             ProgressBar1.Value = 50
             System.IO.Directory.CreateDirectory(apppath + "\binary")
@@ -380,7 +377,7 @@ Public Class Form1
         End If
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim apppath As String = Application.StartupPath()
+        apppath = Application.StartupPath()
         'Init structure check
         Dim flcheck1 As String = apppath + "\binary"
         Dim flcheck2 As String = apppath + "\binarypkg"
@@ -624,7 +621,6 @@ Public Class Form1
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Timer1.Stop()
-        Dim apppath As String = Application.StartupPath()
         'Dim fileReader01 As System.IO.StreamReader
         'fileReader01 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.datacol.pbcfg")
         'Dim stringReader01 As String
@@ -711,13 +707,12 @@ Public Class Form1
             Try
                 ProgressBar1.Value = 10
                 Dim client As WebClient = New WebClient()
-                Dim nf1desc As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v2/nf/nf1_desc.txt")
-                Dim nf1titl As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v2/nf/nf1_title.txt")
-                Dim nf1date As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v2/nf/nf1_date.txt")
+                Dim nf1cont As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v3/feedcontent.txt")
+                Dim lines As String() = nf1cont.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
                 ProgressBar1.Value = 50
-                Label12.Text = nf1titl
-                Label13.Text = nf1desc
-                Label14.Text = nf1date
+                If lines.Length > 0 Then Label12.Text = lines(0)
+                If lines.Length > 1 Then Label13.Text = lines(1)
+                If lines.Length > 2 Then Label14.Text = lines(2)
                 ProgressBar1.Value = 100
                 Label7.Text = "Ready to build"
                 ProgressBar1.Value = 0
@@ -745,12 +740,11 @@ Public Class Form1
             Label15.Text = "Please wait..."
             Label15.Enabled = False
             Dim client As WebClient = New WebClient()
-            Dim nf1desc As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v2/nf/nf1_desc.txt")
-            Dim nf1titl As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v2/nf/nf1_title.txt")
-            Dim nf1date As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v2/nf/nf1_date.txt")
-            Label12.Text = nf1titl
-            Label13.Text = nf1desc
-            Label14.Text = nf1date
+            Dim nf1cont As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v3/feedcontent.txt")
+            Dim lines As String() = nf1cont.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
+            If lines.Length > 0 Then Label12.Text = lines(0)
+            If lines.Length > 1 Then Label13.Text = lines(1)
+            If lines.Length > 2 Then Label14.Text = lines(2)
             Label15.Visible = False
             Label14.Visible = True
         Catch ex As Exception
@@ -763,7 +757,6 @@ Public Class Form1
     Private Sub ClearAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearAllToolStripMenuItem.Click
         Dim result As DialogResult = MessageBox.Show("You will lose all data! Please make sure your data is saved.", "You sure about this?", MessageBoxButtons.YesNo)
         If (result = DialogResult.Yes) Then
-            Dim apppath As String = Application.StartupPath()
             TextBox1.Text = ""
             TextBox2.Text = ""
             TextBox3.Text = "944"
@@ -819,7 +812,6 @@ Public Class Form1
     End Sub
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles dlworker.RunWorkerCompleted
         ProgressBar1.Style = ProgressBarStyle.Blocks
-        Dim apppath As String = Application.StartupPath()
         Dim result0 As DialogResult = MessageBox.Show("Do you want to delete installation cache?" + vbNewLine + "Cache can be used to reinstall using advanced sideload. Delete if you wanted to save space. You can delete it later in preference.", "Delete cache?", MessageBoxButtons.YesNo)
         If (result0 = DialogResult.Yes) Then
             System.IO.Directory.Delete(apppath + "\statecache\updatecache", True)
@@ -836,7 +828,6 @@ Public Class Form1
     End Sub
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles dlworker.DoWork
         Try
-            Dim apppath As String = Application.StartupPath()
             System.IO.Directory.Delete(apppath + "\statecache\updatecache", True)
             System.IO.Directory.CreateDirectory(apppath + "\statecache\updatecache")
             Dim fileReader As System.IO.StreamReader
@@ -872,7 +863,6 @@ Public Class Form1
     <Obsolete>
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
         Try
-            Dim apppath As String = Application.StartupPath()
             Dim fileReader211 As System.IO.StreamReader
             fileReader211 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\testspace\pidlock.pbs")
             Dim stringReader211 As String
@@ -919,7 +909,6 @@ Public Class Form1
     End Sub
 
     Private Sub OpenBuilderInExplorerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenBuilderInExplorerToolStripMenuItem.Click
-        Dim apppath As String = Application.StartupPath()
         Process.Start(apppath)
     End Sub
 
@@ -1021,7 +1010,6 @@ Public Class Form1
 
     Private Sub ReinitializeResourceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReinitializeResourceToolStripMenuItem.Click
         Try
-            Dim apppath As String = Application.StartupPath()
             Process.Start(apppath + "\resource\resinit.exe")
         Catch ex As Exception
             MessageBox.Show("Initialization Failed! dlresCH is not updated!" + vbNewLine + "Please contact PavichDev Support! Click OK to restart.", "Error!")
@@ -1055,7 +1043,6 @@ Public Class Form1
     End Sub
 
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
-        Dim apppath As String = Application.StartupPath()
         System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
         System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
         OpenFileDialog1.Multiselect = False
@@ -1091,7 +1078,6 @@ Public Class Form1
     End Sub
 
     Private Sub FToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FToolStripMenuItem.Click
-        Dim apppath As String = Application.StartupPath()
         Dim pbcfg As String = apppath + "\statedata\setting.builder.infsstate.pbcfg"
         Dim objWriter As New System.IO.StreamWriter(pbcfg)
         objWriter.Write("True")
@@ -1099,7 +1085,6 @@ Public Class Form1
     End Sub
 
     Private Sub RestartInRestoreModeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RestartInRestoreModeToolStripMenuItem.Click
-        Dim apppath As String = Application.StartupPath()
         Dim objWriter As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.inrsstate.pbcfg")
         objWriter.Write("True")
         objWriter.Close()
@@ -1156,7 +1141,6 @@ Public Class Form1
     Private Sub StartWindowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StartWindowToolStripMenuItem.Click
         Dim result As DialogResult = MessageBox.Show("You will lose all data! Please make sure your data is saved.", "You sure about this?", MessageBoxButtons.YesNo)
         If (result = DialogResult.Yes) Then
-            Dim apppath As String = Application.StartupPath()
             TextBox1.Text = ""
             TextBox2.Text = ""
             TextBox3.Text = "944"
@@ -1201,7 +1185,6 @@ Public Class Form1
     End Sub
 
     Private Sub ResetWhatsNewStateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetWhatsNewStateToolStripMenuItem.Click
-        Dim apppath As String = Application.StartupPath()
         Dim pbcfg1 As String = apppath + "\wnannounce.pbstate"
         Dim objWriter1 As New System.IO.StreamWriter(pbcfg1)
         objWriter1.Write("False")
@@ -1209,12 +1192,10 @@ Public Class Form1
     End Sub
 
     Private Sub Label37_Click(sender As Object, e As EventArgs) Handles Label37.Click
-        Dim apppath As String = Application.StartupPath()
         Process.Start(apppath + "\binary")
     End Sub
 
     Private Sub Label38_Click(sender As Object, e As EventArgs) Handles Label38.Click
-        Dim apppath As String = Application.StartupPath()
         Process.Start(apppath + "\binarypkg")
     End Sub
 
@@ -1224,7 +1205,6 @@ Public Class Form1
 
     Private Sub CefSharpLogToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CefSharpLogToolStripMenuItem.Click
         Try
-            Dim apppath As String = Application.StartupPath()
             Process.Start(apppath + "\debug.log")
         Catch ex As Exception
             MessageBox.Show("Log not found! Maybe you can load some web and try again.", "Error!")
@@ -1233,7 +1213,6 @@ Public Class Form1
 
     Private Sub ChromiumLogToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChromiumLogToolStripMenuItem.Click
         Try
-            Dim apppath As String = Application.StartupPath()
             Process.Start(apppath + "\statecache\chrome_debug.log")
         Catch ex As Exception
             MessageBox.Show("Log not found! Maybe you can load some web and try again.", "Error!")
@@ -1256,7 +1235,6 @@ Public Class Form1
         Try
             Label7.Text = "Flushing in progress..."
             ProgressBar1.Value = 20
-            Dim apppath As String = Application.StartupPath()
             System.IO.Directory.Delete(apppath + "\resource\testspace\startlog", True)
             System.IO.Directory.CreateDirectory(apppath + "\resource\testspace\startlog")
             ProgressBar1.Value = 100
@@ -1320,7 +1298,6 @@ Public Class Form1
     Private Sub OpenProjectToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenProjectToolStripMenuItem.Click
         Dim result As DialogResult = MessageBox.Show("You will lose all data! Please make sure your data is saved.", "You sure about this?", MessageBoxButtons.YesNo)
         If (result = DialogResult.Yes) Then
-            Dim apppath As String = Application.StartupPath()
             OpenFileDialog1.Multiselect = False
             OpenFileDialog1.Title = "Open P Browser Builder Project"
             OpenFileDialog1.Filter = "P Browser Builder Project|*.pbproj"
