@@ -173,6 +173,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="buildmanage.Designer.vb">
+      <DependentUpon>buildmanage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="buildmanage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="customscript.Designer.vb">
       <DependentUpon>customscript.vb</DependentUpon>
     </Compile>
@@ -255,6 +261,9 @@
     <EmbeddedResource Include="about.resx">
       <DependentUpon>about.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="buildmanage.resx">
+      <DependentUpon>buildmanage.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="customscript.resx">
       <DependentUpon>customscript.vb</DependentUpon>
     </EmbeddedResource>
@@ -310,6 +319,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="p_browser_icon_001_rq2_icon.ico" />
+    <None Include="Resources\hammer.png" />
     <None Include="Resources\compass %281%29.png" />
     <None Include="Resources\close.png" />
     <None Include="Resources\folder1.png" />

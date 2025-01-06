@@ -351,23 +351,7 @@ Public Class Form1
         Next
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Try
-            Label7.Text = "Cleaning in progress..."
-            ProgressBar1.Value = 20
-            System.IO.Directory.Delete(apppath + "\binary", True)
-            ProgressBar1.Value = 50
-            System.IO.Directory.CreateDirectory(apppath + "\binary")
-            System.IO.Directory.Delete(apppath + "\binarypkg", True)
-            System.IO.Directory.CreateDirectory(apppath + "\binarypkg")
-            ProgressBar1.Value = 100
-            Label7.Text = "Cleanup completed!"
-            Snooze(3)
-            ProgressBar1.Value = 0
-        Catch ex As Exception
-            MessageBox.Show("Please close built app first before perform this action.", "Failed!")
-            Label7.Text = "Cleanup failed!"
-            ProgressBar1.Value = 0
-        End Try
+        buildmanage.Show()
     End Sub
     Public Sub MyForm_FormClosing(ByVal sender As Object, ByVal e As FormClosingEventArgs) Handles Me.FormClosing
         If Not TextBox1.Text = "" Then
@@ -1015,6 +999,7 @@ Public Class Form1
             PictureBox1.Image = Image.FromFile(OpenFileDialog1.FileName)
             My.Settings.tempIcoLoc = OpenFileDialog1.FileName
             My.Computer.FileSystem.CopyFile(OpenFileDialog1.FileName, apppath + "\statecache\buildcache\appicns\appicns.ico")
+            Label16.Text = "Application icons (" + Path.GetFileName(OpenFileDialog1.FileName) + ")"
         End If
     End Sub
 
@@ -1381,5 +1366,60 @@ Public Class Form1
 
     Private Sub MinimizedToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles MinimizedToolStripMenuItem1.Click
         Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub LoadSampleProjectToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoadSampleProjectToolStripMenuItem.Click
+        Dim result As DialogResult = MessageBox.Show("You will lose all data! Please make sure your data is saved.", "You sure about this?", MessageBoxButtons.YesNo)
+        If (result = DialogResult.Yes) Then
+            Try
+                Dim fileReader As System.IO.StreamReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\sample\sample1.pbproj")
+                TextBox1.Text = ""
+                TextBox2.Text = ""
+                TextBox3.Text = "944"
+                TextBox4.Text = "573"
+                TextBox5.Text = "100"
+                RadioButton2.Checked = True
+                RadioButton3.Checked = False
+                CheckBox1.Text = "Start your app after build"
+                CheckBox2.Text = "Show your app in explorer after build"
+                CheckBox1.Checked = True
+                CheckBox2.Checked = False
+                CheckBox3.Checked = False
+                CheckBox4.Checked = False
+                CheckBox5.Checked = False
+                CheckBox6.Checked = False
+                CheckBox7.Checked = False
+                TabControl1.SelectedTab = TabPage1
+                System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
+                System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
+                Browser.Load("about:blank")
+                TextBox2.Text = fileReader.ReadLine()
+                TextBox1.Text = fileReader.ReadLine()
+                TextBox3.Text = fileReader.ReadLine()
+                TextBox4.Text = fileReader.ReadLine()
+                CheckBox5.Checked = fileReader.ReadLine()
+                CheckBox6.Checked = fileReader.ReadLine()
+                CheckBox7.Checked = fileReader.ReadLine()
+                TextBox5.Text = fileReader.ReadLine()
+                CheckBox3.Checked = fileReader.ReadLine()
+                welcomemessage.TextBox1.Text = fileReader.ReadLine()
+                welcomemessage.TextBox2.Text = fileReader.ReadLine()
+                ProjnameToolStripMenuItem.Text = TextBox2.Text
+                fileReader.Close()
+            Catch ex As Exception
+                MessageBox.Show("Load Failed!" & vbNewLine & "Project is not compatiable or corrupt!" & vbNewLine & ex.Message, "Error!")
+            End Try
+            'aname
+            'url
+            'wwin
+            'hwin
+            'fixwin
+            'aotwin
+            'hwico
+            'opaval
+            'welena
+            'msgti
+            'msgde
+        End If
     End Sub
 End Class
