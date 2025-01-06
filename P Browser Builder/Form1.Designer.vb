@@ -61,6 +61,7 @@ Partial Class Form1
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.GettingStartedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoadSampleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.SupportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenBuilderInExplorerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SubmitBugsReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -165,6 +166,7 @@ Partial Class Form1
         Me.Label37 = New System.Windows.Forms.Label()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Label42 = New System.Windows.Forms.Label()
         Me.Label36 = New System.Windows.Forms.Label()
         Me.dlworker = New System.ComponentModel.BackgroundWorker()
         Me.PictureBox11 = New System.Windows.Forms.PictureBox()
@@ -172,7 +174,8 @@ Partial Class Form1
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ActionToolboxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -196,6 +199,7 @@ Partial Class Form1
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -265,7 +269,7 @@ Partial Class Form1
         '
         'ViewToolStripMenuItem
         '
-        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SidePanelToolStripMenuItem, Me.DesignViewToolStripMenuItem, Me.StartLogToolStripMenuItem})
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SidePanelToolStripMenuItem, Me.DesignViewToolStripMenuItem, Me.StartLogToolStripMenuItem, Me.ActionToolboxToolStripMenuItem})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
         Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.ViewToolStripMenuItem.Text = "View"
@@ -275,7 +279,7 @@ Partial Class Form1
         Me.SidePanelToolStripMenuItem.CheckOnClick = True
         Me.SidePanelToolStripMenuItem.Name = "SidePanelToolStripMenuItem"
         Me.SidePanelToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
-        Me.SidePanelToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.SidePanelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SidePanelToolStripMenuItem.Text = "Side Panel"
         '
         'DesignViewToolStripMenuItem
@@ -284,7 +288,7 @@ Partial Class Form1
         Me.DesignViewToolStripMenuItem.CheckOnClick = True
         Me.DesignViewToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.DesignViewToolStripMenuItem.Name = "DesignViewToolStripMenuItem"
-        Me.DesignViewToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.DesignViewToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.DesignViewToolStripMenuItem.Text = "Design View"
         '
         'StartLogToolStripMenuItem
@@ -293,7 +297,7 @@ Partial Class Form1
         Me.StartLogToolStripMenuItem.CheckOnClick = True
         Me.StartLogToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.StartLogToolStripMenuItem.Name = "StartLogToolStripMenuItem"
-        Me.StartLogToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.StartLogToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.StartLogToolStripMenuItem.Text = "Start Log"
         '
         'BuildToolStripMenuItem
@@ -391,19 +395,19 @@ Partial Class Form1
         'NormalToolStripMenuItem1
         '
         Me.NormalToolStripMenuItem1.Name = "NormalToolStripMenuItem1"
-        Me.NormalToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.NormalToolStripMenuItem1.Size = New System.Drawing.Size(131, 22)
         Me.NormalToolStripMenuItem1.Text = "Normal"
         '
         'MaximizeToolStripMenuItem
         '
         Me.MaximizeToolStripMenuItem.Name = "MaximizeToolStripMenuItem"
-        Me.MaximizeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.MaximizeToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
         Me.MaximizeToolStripMenuItem.Text = "Maximized"
         '
         'MinimizedToolStripMenuItem1
         '
         Me.MinimizedToolStripMenuItem1.Name = "MinimizedToolStripMenuItem1"
-        Me.MinimizedToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.MinimizedToolStripMenuItem1.Size = New System.Drawing.Size(131, 22)
         Me.MinimizedToolStripMenuItem1.Text = "Minimized"
         '
         'HelpToolStripMenuItem
@@ -449,6 +453,11 @@ Partial Class Form1
         Me.LoadSampleToolStripMenuItem.Name = "LoadSampleToolStripMenuItem"
         Me.LoadSampleToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
         Me.LoadSampleToolStripMenuItem.Text = "Load Sample Project"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(208, 6)
         '
         'SupportToolStripMenuItem
         '
@@ -550,7 +559,7 @@ Partial Class Form1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Button1.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(123, 37)
+        Me.Button1.Location = New System.Drawing.Point(122, 8)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(104, 35)
         Me.Button1.TabIndex = 1
@@ -561,7 +570,7 @@ Partial Class Form1
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Button2.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(13, 37)
+        Me.Button2.Location = New System.Drawing.Point(12, 8)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(104, 35)
         Me.Button2.TabIndex = 2
@@ -682,7 +691,7 @@ Partial Class Form1
         '
         Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Button3.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(233, 37)
+        Me.Button3.Location = New System.Drawing.Point(232, 8)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(89, 35)
         Me.Button3.TabIndex = 14
@@ -1499,7 +1508,7 @@ Partial Class Form1
         Me.Label37.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label37.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label37.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label37.Location = New System.Drawing.Point(172, 11)
+        Me.Label37.Location = New System.Drawing.Point(126, 8)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(43, 17)
         Me.Label37.TabIndex = 57
@@ -1511,7 +1520,7 @@ Partial Class Form1
         Me.Label38.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label38.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label38.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label38.Location = New System.Drawing.Point(221, 11)
+        Me.Label38.Location = New System.Drawing.Point(171, 8)
         Me.Label38.Name = "Label38"
         Me.Label38.Size = New System.Drawing.Size(55, 17)
         Me.Label38.TabIndex = 58
@@ -1521,16 +1530,26 @@ Partial Class Form1
         '
         Me.Panel7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Panel7.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel7.Controls.Add(Me.Label42)
         Me.Panel7.Controls.Add(Me.Label36)
         Me.Panel7.Controls.Add(Me.Label38)
         Me.Panel7.Controls.Add(Me.Label37)
-        Me.Panel7.Controls.Add(Me.Button2)
-        Me.Panel7.Controls.Add(Me.Button1)
-        Me.Panel7.Controls.Add(Me.Button3)
-        Me.Panel7.Location = New System.Drawing.Point(5, 497)
+        Me.Panel7.Location = New System.Drawing.Point(5, 487)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(334, 81)
+        Me.Panel7.Size = New System.Drawing.Size(334, 35)
         Me.Panel7.TabIndex = 56
+        '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label42.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label42.ForeColor = System.Drawing.Color.Red
+        Me.Label42.Location = New System.Drawing.Point(256, 8)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(65, 17)
+        Me.Label42.TabIndex = 92
+        Me.Label42.Text = "Terminate"
         '
         'Label36
         '
@@ -1538,7 +1557,7 @@ Partial Class Form1
         Me.Label36.Cursor = System.Windows.Forms.Cursors.Default
         Me.Label36.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label36.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label36.Location = New System.Drawing.Point(56, 11)
+        Me.Label36.Location = New System.Drawing.Point(15, 8)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(110, 17)
         Me.Label36.TabIndex = 91
@@ -1604,10 +1623,26 @@ Partial Class Form1
         Me.PictureBox5.TabIndex = 38
         Me.PictureBox5.TabStop = False
         '
-        'ToolStripSeparator2
+        'Panel1
         '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(208, 6)
+        Me.Panel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.Panel1.Controls.Add(Me.Button3)
+        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.Button2)
+        Me.Panel1.Location = New System.Drawing.Point(5, 528)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(334, 50)
+        Me.Panel1.TabIndex = 57
+        '
+        'ActionToolboxToolStripMenuItem
+        '
+        Me.ActionToolboxToolStripMenuItem.Checked = True
+        Me.ActionToolboxToolStripMenuItem.CheckOnClick = True
+        Me.ActionToolboxToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ActionToolboxToolStripMenuItem.Name = "ActionToolboxToolStripMenuItem"
+        Me.ActionToolboxToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ActionToolboxToolStripMenuItem.Text = "Action Toolbox"
         '
         'Form1
         '
@@ -1615,6 +1650,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1216, 607)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox11)
         Me.Controls.Add(Me.Label24)
         Me.Controls.Add(Me.Button6)
@@ -1649,7 +1685,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.MinimumSize = New System.Drawing.Size(800, 600)
+        Me.MinimumSize = New System.Drawing.Size(800, 630)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "P Browser Builder"
@@ -1685,6 +1721,7 @@ Partial Class Form1
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1839,4 +1876,7 @@ Partial Class Form1
     Friend WithEvents GettingStartedToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LoadSampleToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+    Friend WithEvents Label42 As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents ActionToolboxToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -14,8 +14,11 @@ Public Class Form1
     Public Sub New()
         InitializeComponent()
     End Sub
+
     Public logpath
     Public apppath As String
+    Dim pros As Process
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click, TestProjectToolStripMenuItem.Click
         Dim spechk As Boolean = False
         Dim text As String = TextBox2.Text
@@ -44,6 +47,8 @@ Public Class Form1
             ProgressBar1.Value = 20
             If System.IO.File.Exists(pbcfg) = True Then
                 Try
+                    Button2.Enabled = False
+                    Button1.Enabled = False
                     ProgressBar1.Value = 50
                     Dim objWriter As New System.IO.StreamWriter(pbcfg)
                     Dim objWriter2 As New System.IO.StreamWriter(pbprogcfg)
@@ -88,7 +93,7 @@ Public Class Form1
                     MessageBox.Show("Build Completed! Click continue to test app." + vbNewLine + "Some features will not available in Testing.", "Build Completed!")
                     Process.Start(testapp)
                     Label7.Text = "Build completed!"
-                    Snooze(1)
+                    Snooze(2)
                     Dim dir = New System.IO.DirectoryInfo(apppath + "\resource\testspace\startlog")
                     Dim logf = dir.EnumerateFiles("*.txt").
                     OrderByDescending(Function(f) f.LastWriteTime).
@@ -102,11 +107,14 @@ Public Class Form1
                         PictureBox14.Enabled = True
                     End If
                     Timer2.Start()
+                    Label42.Enabled = True
                     Button7.Enabled = False
                     Button8.Enabled = True
                 Catch ex As Exception
                     MessageBox.Show("Please close previous test app first before perform this action.", "Failed!")
                     Label7.Text = "Test failed!"
+                    Button2.Enabled = True
+                    Button1.Enabled = True
                     ProgressBar1.Value = 0
                 End Try
             Else
@@ -425,6 +433,7 @@ Public Class Form1
         Button6.Enabled = False
         RadioButton2.Checked = True
         CheckBox1.Checked = True
+        Label42.Enabled = False
         'Reset
         If stringReader19 = "True" Then
             Me.Enabled = False
@@ -829,16 +838,14 @@ Public Class Form1
     Private Sub OpenRemoteDebuggingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenRemoteDebuggingToolStripMenuItem.Click
         Process.Start("http://127.0.0.1:8088/")
     End Sub
-
     <Obsolete>
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
         Try
             Dim fileReader211 As System.IO.StreamReader
             fileReader211 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\testspace\pidlock.pbs")
-            Dim stringReader211 As String
-            stringReader211 = fileReader211.ReadLine()
+            Dim stringReader211 As String = fileReader211.ReadLine()
             fileReader211.Close()
-            Dim pros As Process = Process.GetProcessById(stringReader211)
+            pros = Process.GetProcessById(stringReader211)
             Dim demround1 As Double = pros.WorkingSet / 1024 / 1024
             demround1 = Math.Round(demround1, 2)
             Label23.Text = "Memory Usage: " & demround1 & " MB"
@@ -853,6 +860,9 @@ Public Class Form1
         Catch ex As Exception
             Label23.Text = "Begin Test to start diagnostic..."
             Label25.Text = "Begin Test to start diagnostic..."
+            Label42.Enabled = False
+            Button2.Enabled = True
+            Button1.Enabled = True
             Timer2.Stop()
             Button8.Enabled = False
             Button7.Enabled = False
@@ -1292,13 +1302,17 @@ Public Class Form1
         End If
     End Sub
 
+    Dim hidenoti As Boolean = True
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
         Panel6.Hide()
         SidePanelToolStripMenuItem.Checked = False
         Me.WindowState = FormWindowState.Normal
         Me.Size = New Size(1232, 646)
         TabControl1.Width = 872
-        MessageBox.Show("You can unhide side panel by click on View > Side Panel" + vbNewLine + "or using Ctrl + R Shortcut", "Notification")
+        If hidenoti = True Then
+            MessageBox.Show("You can unhide side panel by click on View > Side Panel" + vbNewLine + "or using Ctrl + R Shortcut", "Notification")
+            hidenoti = False
+        End If
     End Sub
 
     Private Sub CheckBox7_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox7.CheckedChanged
@@ -1433,6 +1447,22 @@ Public Class Form1
             'welena
             'msgti
             'msgde
+        End If
+    End Sub
+
+    Private Sub Label42_Click(sender As Object, e As EventArgs) Handles Label42.Click
+        Try
+            pros.Kill()
+        Catch ex As Exception
+            MessageBox.Show("Process require Administrator to kill" & vbNewLine & "Please run as admin for full functional", "Error!")
+        End Try
+    End Sub
+
+    Private Sub ActionToolboxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ActionToolboxToolStripMenuItem.Click
+        If ActionToolboxToolStripMenuItem.Checked = False Then
+            Panel7.Visible = False
+        Else
+            Panel7.Visible = True
         End If
     End Sub
 End Class
