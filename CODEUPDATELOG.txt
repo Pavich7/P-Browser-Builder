@@ -1,8 +1,11 @@
 Builder Release 8.1.0
 
 ** Release notes **
+- ADDED: Side Panel can be toggled using Ctrl+R or in View > Side Panel.
+- ADDED: Ability to hide and show Design View and Start Log tabs. 
 - IMPROVEMENT: News Feed now fetches using a single file, thus improving startup speed.
 - IMPROVEMENT: Enhance the startup time of the Preferences window.
+- CHANGED: Replace Hide and Show Side Panel buttons with Side Panel toggle in view menu.
 
 ** Low-level **
 - IMPROVEMENT: Low-level code optimizations.

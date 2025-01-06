@@ -558,14 +558,10 @@ Public Class Form1
 
             Dim fileReader111 As System.IO.StreamReader
             fileReader111 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.hidesp.pbcfg")
-            Dim stringReader111 As String
-            stringReader111 = fileReader111.ReadLine()
+            Dim stringReader111 As String = fileReader111.ReadLine()
 
             Dim cachecheck As String = apppath + "\statecache\updatecache\pbb-resource.zip"
-            ShowRightPanelToolStripMenuItem.Enabled = False
-            ExtensionsNotFoundToolStripMenuItem.Enabled = False
             Button7.Enabled = False
-            ExtensionsToolStripMenuItem.Visible = False
             DevToolStripMenuItem.Visible = False
             Label23.Text = "Begin Test to start diagnostic..."
             Label25.Text = "Begin Test to start diagnostic..."
@@ -579,12 +575,13 @@ Public Class Form1
             Label7.Text = "Fetching in progress..."
             ProgressBar1.Visible = True
             If stringReader111 = "True" Then
+                SidePanelToolStripMenuItem.Checked = False
                 Panel6.Hide()
                 Me.WindowState = FormWindowState.Normal
                 Me.Size = New Size(1232, 646)
                 TabControl1.Width = 872
-                HideRightPanelToolStripMenuItem.Enabled = False
-                ShowRightPanelToolStripMenuItem.Enabled = True
+            Else
+                SidePanelToolStripMenuItem.Checked = True
             End If
             fileReader111.Close()
             Me.WindowState = FormWindowState.Minimized
@@ -912,43 +909,12 @@ Public Class Form1
         Process.Start(apppath)
     End Sub
 
-    Private Sub MaximizedToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MaximizedToolStripMenuItem.Click
-        Me.WindowState = FormWindowState.Maximized
-    End Sub
-
-    Private Sub NormalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NormalToolStripMenuItem.Click
-        Me.WindowState = FormWindowState.Normal
-    End Sub
-
-    Private Sub MinimizedToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MinimizedToolStripMenuItem.Click
-        Me.WindowState = FormWindowState.Minimized
-    End Sub
-
-    Private Sub HideRightPanelToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HideRightPanelToolStripMenuItem.Click
-        Panel6.Hide()
-        Me.WindowState = FormWindowState.Normal
-        Me.Size = New Size(1232, 646)
-        TabControl1.Width = 872
-        HideRightPanelToolStripMenuItem.Enabled = False
-        ShowRightPanelToolStripMenuItem.Enabled = True
-    End Sub
-
-    Private Sub ShowRightPanelToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowRightPanelToolStripMenuItem.Click
-        Panel6.Show()
-        Me.WindowState = FormWindowState.Normal
-        Me.Size = New Size(1232, 646)
-        TabControl1.Width = 559
-        ShowRightPanelToolStripMenuItem.Enabled = False
-        HideRightPanelToolStripMenuItem.Enabled = True
-    End Sub
-
     Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton3.Click
         CheckBox1.Text = "Start your app after build (Dedicated)"
         CheckBox2.Text = "Show your ZIP file in explorer after build"
     End Sub
 
     Private Sub UnlockIncompleteFeatureToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UnlockIncompleteFeatureToolStripMenuItem.Click
-        ExtensionsToolStripMenuItem.Visible = True
         UnlockIncompleteFeatureToolStripMenuItem.Enabled = False
     End Sub
 
@@ -969,9 +935,6 @@ Public Class Form1
             RadioButton3.Enabled = True
             CheckBox1.Enabled = True
             CheckBox2.Enabled = True
-            ShowRightPanelToolStripMenuItem.Enabled = True
-            HideRightPanelToolStripMenuItem.Enabled = True
-            ExtensionsNotFoundToolStripMenuItem.Enabled = True
             ForceUnlockDisableButtonToolStripMenuItem.Enabled = True
             UnlockIncompleteFeatureToolStripMenuItem.Enabled = True
         End If
@@ -1357,12 +1320,11 @@ Public Class Form1
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
         Panel6.Hide()
+        SidePanelToolStripMenuItem.Checked = False
         Me.WindowState = FormWindowState.Normal
         Me.Size = New Size(1232, 646)
         TabControl1.Width = 872
-        HideRightPanelToolStripMenuItem.Enabled = False
-        ShowRightPanelToolStripMenuItem.Enabled = True
-        MessageBox.Show("You can unhide right panel by click on" + vbNewLine + "Menu Strip: Window > Show right panel" + vbNewLine + "or using Ctrl + R Shortcut", "Notification")
+        MessageBox.Show("You can unhide side panel by click on View > Side Panel" + vbNewLine + "or using Ctrl + R Shortcut", "Notification")
     End Sub
 
     Private Sub CheckBox7_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox7.CheckedChanged
@@ -1377,5 +1339,47 @@ Public Class Form1
             Dim y As Integer = Label17.Location.Y
             Label17.Location = New Point(x - 22, y)
         End If
+    End Sub
+
+    Private Sub SidePanelToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SidePanelToolStripMenuItem.CheckedChanged
+        If SidePanelToolStripMenuItem.Checked = True Then
+            Panel6.Show()
+            Me.WindowState = FormWindowState.Normal
+            Me.Size = New Size(1232, 646)
+            TabControl1.Width = 559
+        Else
+            Panel6.Hide()
+            Me.WindowState = FormWindowState.Normal
+            Me.Size = New Size(1232, 646)
+            TabControl1.Width = 872
+        End If
+    End Sub
+
+    Private Sub DesignViewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DesignViewToolStripMenuItem.Click
+        If DesignViewToolStripMenuItem.Checked = False Then
+            TabControl1.TabPages.Remove(TabPage1)
+        Else
+            TabControl1.TabPages.Add(TabPage1)
+        End If
+    End Sub
+
+    Private Sub StartLogToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StartLogToolStripMenuItem.Click
+        If StartLogToolStripMenuItem.Checked = False Then
+            TabControl1.TabPages.Remove(TabPage2)
+        Else
+            TabControl1.TabPages.Add(TabPage2)
+        End If
+    End Sub
+
+    Private Sub NormalToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles NormalToolStripMenuItem1.Click
+        Me.WindowState = FormWindowState.Normal
+    End Sub
+
+    Private Sub MaximizeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MaximizeToolStripMenuItem.Click
+        Me.WindowState = FormWindowState.Maximized
+    End Sub
+
+    Private Sub MinimizedToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles MinimizedToolStripMenuItem1.Click
+        Me.WindowState = FormWindowState.Minimized
     End Sub
 End Class
