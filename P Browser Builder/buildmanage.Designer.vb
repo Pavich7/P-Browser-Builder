@@ -63,7 +63,7 @@ Partial Class buildmanage
         '
         Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Button3.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(16, 197)
+        Me.Button3.Location = New System.Drawing.Point(16, 174)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(153, 35)
         Me.Button3.TabIndex = 87
@@ -80,7 +80,7 @@ Partial Class buildmanage
         Me.Panel2.Controls.Add(Me.Label49)
         Me.Panel2.Location = New System.Drawing.Point(16, 79)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(383, 109)
+        Me.Panel2.Size = New System.Drawing.Size(383, 86)
         Me.Panel2.TabIndex = 88
         '
         'Label52
@@ -144,7 +144,7 @@ Partial Class buildmanage
         Me.Label37.Cursor = System.Windows.Forms.Cursors.Default
         Me.Label37.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label37.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label37.Location = New System.Drawing.Point(181, 205)
+        Me.Label37.Location = New System.Drawing.Point(181, 182)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(110, 17)
         Me.Label37.TabIndex = 90
@@ -155,8 +155,8 @@ Partial Class buildmanage
         Me.Label1.AutoSize = True
         Me.Label1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.MenuHighlight
-        Me.Label1.Location = New System.Drawing.Point(297, 205)
+        Me.Label1.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label1.Location = New System.Drawing.Point(297, 182)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(43, 17)
         Me.Label1.TabIndex = 91
@@ -167,8 +167,8 @@ Partial Class buildmanage
         Me.Label2.AutoSize = True
         Me.Label2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.MenuHighlight
-        Me.Label2.Location = New System.Drawing.Point(346, 205)
+        Me.Label2.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label2.Location = New System.Drawing.Point(346, 182)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(55, 17)
         Me.Label2.TabIndex = 92
@@ -191,7 +191,7 @@ Partial Class buildmanage
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(414, 242)
+        Me.ClientSize = New System.Drawing.Size(414, 219)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label37)

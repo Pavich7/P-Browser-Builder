@@ -2,6 +2,7 @@
 Imports System.IO
 Imports System.IO.Compression
 Imports System.Net
+Imports System.Reflection.Emit
 Imports System.Text
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports CefSharp
@@ -15,7 +16,7 @@ Public Class Form1
     End Sub
     Public logpath
     Public apppath As String
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click, TestProjectToolStripMenuItem.Click
         Dim spechk As Boolean = False
         Dim text As String = TextBox2.Text
         Dim specialCharacters As String = "\/:*?""<>|"
@@ -120,7 +121,7 @@ Public Class Form1
         CheckBox2.Text = "Show your app in explorer after build"
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click, BuildProjectToolStripMenuItem.Click
         Dim spechk As Boolean = False
         Dim text As String = TextBox2.Text
         Dim specialCharacters As String = "\/:*?""<>|"
@@ -350,7 +351,7 @@ Public Class Form1
             Application.DoEvents()
         Next
     End Sub
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click, BuildManagerToolStripMenuItem.Click
         buildmanage.Show()
     End Sub
     Public Sub MyForm_FormClosing(ByVal sender As Object, ByVal e As FormClosingEventArgs) Handles Me.FormClosing
@@ -760,10 +761,6 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub InstallationGuideToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InstallationGuideToolStripMenuItem.Click
-        Browser.Load("https://github.com/Pavich7/P-Browser-Builder/wiki/P-Browser-Builder-Guild#install-p-browser-builder-beta-030-and-later")
-    End Sub
-
     Private Sub SubmitBugsReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SubmitBugsReportToolStripMenuItem.Click
         Browser.Load("https://github.com/Pavich7/P-Browser-Builder/issues/new/choose")
     End Sub
@@ -831,14 +828,6 @@ Public Class Form1
     End Sub
     Private Sub OpenRemoteDebuggingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenRemoteDebuggingToolStripMenuItem.Click
         Process.Start("http://127.0.0.1:8088/")
-    End Sub
-
-    Private Sub CustomizingGuildToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CustomizingGuildToolStripMenuItem.Click
-        Browser.Load("https://github.com/Pavich7/P-Browser-Builder/wiki/P-Browser-Builder-Guild#customizing-your-p-browser-app")
-    End Sub
-
-    Private Sub BuildingGuideToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BuildingGuideToolStripMenuItem.Click
-        Browser.Load("https://github.com/Pavich7/P-Browser-Builder/wiki/P-Browser-Builder-Guild#building-a-p-browser-app-from-p-browser-builder")
     End Sub
 
     <Obsolete>
@@ -1368,7 +1357,31 @@ Public Class Form1
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub LoadSampleProjectToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoadSampleProjectToolStripMenuItem.Click
+    Private Sub CleanBinaryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CleanBinaryToolStripMenuItem.Click
+        Try
+            Label7.Text = "Cleaning in progress..."
+            ProgressBar1.Value = 20
+            System.IO.Directory.Delete(apppath + "\binary", True)
+            ProgressBar1.Value = 50
+            System.IO.Directory.CreateDirectory(apppath + "\binary")
+            System.IO.Directory.Delete(apppath + "\binarypkg", True)
+            System.IO.Directory.CreateDirectory(apppath + "\binarypkg")
+            ProgressBar1.Value = 100
+            Label7.Text = "Cleanup completed!"
+        Catch ex As Exception
+            MessageBox.Show("Please close built app first before perform this action.", "Failed!")
+            Label7.Text = "Cleanup failed!"
+            ProgressBar1.Value = 0
+        End Try
+    End Sub
+
+    Private Sub GettingStartedToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GettingStartedToolStripMenuItem.Click
+        getstart.Show()
+        getstart.Label56.Enabled = False
+        getstart.Label57.Text = "Please load from Help menu."
+    End Sub
+
+    Private Sub LoadSampleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoadSampleToolStripMenuItem.Click
         Dim result As DialogResult = MessageBox.Show("You will lose all data! Please make sure your data is saved.", "You sure about this?", MessageBoxButtons.YesNo)
         If (result = DialogResult.Yes) Then
             Try

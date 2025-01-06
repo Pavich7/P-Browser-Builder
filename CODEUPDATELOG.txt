@@ -5,15 +5,16 @@ Builder Release 8.2.0
 
 ** Release notes **
 - ADDED: Side Panel can be toggled using Ctrl+R or in View > Side Panel.
+- ADDED: Build menu with more keyboard shortcut supported.
 - ADDED: Ability to hide and show Design View and Start Log tabs.
-- ADDED: Load Sample Project button in Guide menu.
+- ADDED: Getting Started and Load Sample Project in Help menu.
 - ADDED: Icon file name will be displayed after adding the application icon.
 - IMPROVEMENT: News Feed now fetches using a single file, thus improving startup speed.
 - IMPROVEMENT: Enhance the startup time of the Preferences window.
 - IMPROVEMENT: Minor User Interface improvements.
 - CHANGED: Replace Hide and Show Side Panel buttons with Side Panel toggle in view menu.
 - CHANGED: Move Clean Up button to Build Manager.
-- CHANGED: Clean Up will automatically disable when found no build binary.
+- CHANGED: Replace Guild Menu with Getting Started in help menu.
 
 ** Low-level **
 - IMPROVEMENT: Low-level code optimizations.

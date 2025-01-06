@@ -3,14 +3,12 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Button
 
 Public Class welcome
     Public realclose As Boolean
-    Private Sub Panel1_Paint(sender As Object, e As EventArgs) Handles Panel1.Click
-        newproj()
-    End Sub
     Public Sub MyForm_FormClosing(ByVal sender As Object, ByVal e As FormClosingEventArgs) Handles Me.FormClosing
         If realclose = True Then
             Application.Exit()
         End If
     End Sub
+
     Private Sub welcome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim apppath As String = Application.StartupPath()
         Me.BackgroundImage = Image.FromFile(apppath + "\imgassets\start.png")
@@ -22,7 +20,12 @@ Public Class welcome
         Form1.Enabled = False
         realclose = True
     End Sub
-    Private Sub loadsave()
+
+    Private Sub getstarted(sender As Object, e As EventArgs) Handles Panel3.Click, PictureBox3.Click, Label6.Click, Label5.Click
+        getstart.Show()
+    End Sub
+
+    Private Sub loadsavebtn(sender As Object, e As EventArgs) Handles PictureBox2.Click, Label2.Click, Label1.Click, Panel2.Click
         Dim apppath As String = Application.StartupPath()
         OpenFileDialog1.Multiselect = False
         OpenFileDialog1.Title = "Open P Browser Builder Project"
@@ -63,54 +66,12 @@ Public Class welcome
             End Try
         End If
     End Sub
-    Private Sub newproj()
+
+    Private Sub newproj(sender As Object, e As EventArgs) Handles PictureBox1.Click, Label3.Click, Label4.Click, Panel1.Click
         Form1.Enabled = True
         Form1.WindowState = FormWindowState.Normal
         realclose = False
         Me.Close()
-    End Sub
-    Private Sub Panel2_Paint(sender As Object, e As EventArgs) Handles Panel2.Click
-        loadsave()
-    End Sub
-
-    Private Sub Panel3_Paint(sender As Object, e As EventArgs) Handles Panel3.Click
-        getstart.Show()
-    End Sub
-
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
-        getstart.Show()
-    End Sub
-
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
-        getstart.Show()
-    End Sub
-
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-        getstart.Show()
-    End Sub
-
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-        loadsave()
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-        loadsave()
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-        loadsave()
-    End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        newproj()
-    End Sub
-
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
-        newproj()
-    End Sub
-
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
-        newproj()
     End Sub
 
     Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click

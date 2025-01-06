@@ -44,9 +44,6 @@ Public Class buildmanage
         TotalSize = 0
         Dim TheSize1 As Long = GetDirSize(apppath + "\binarypkg")
         Label52.Text = FormatNumber(TheSize1 / 1024 / 1024, 1) & " MB"
-        If TheSize1 + TheSize2 = 0 Then
-            Button3.Enabled = False
-        End If
         If TheSize2 / 1024 / 1024 > 100 Then
             Dim fileReader19 As System.IO.StreamReader
             fileReader19 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\binary\progdata.pbcfg")
