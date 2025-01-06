@@ -531,9 +531,31 @@ Public Class Form1
                 Label24.Enabled = False
                 Button9.Enabled = False
             Else
-                Label20.Visible = False
-                Label18.Visible = False
-                Panel4.Size = New Size(265, 148)
+                'reschk
+                Try
+                    Dim oresver As String
+                    Dim client As WebClient = New WebClient()
+                    Dim nf1cont As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v3/cfuver.txt")
+                    Dim lines As String() = nf1cont.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
+                    If lines.Length > 1 Then oresver = lines(1)
+                    Dim fileReader As System.IO.StreamReader
+                    fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\metadata\version.txt")
+                    Dim stringReader As String = fileReader.ReadLine()
+                    If oresver.Contains(stringReader) Then
+                        Label20.Visible = False
+                        Label18.Visible = False
+                        Panel4.Size = New Size(265, 148)
+                    Else
+                        Label20.Text = "Resource update available! (" + oresver + ")"
+                        Label18.Text = "    Update"
+                    End If
+                    fileReader.Close()
+                Catch ex As Exception
+                    Label20.Visible = False
+                    Label18.Visible = False
+                    Panel4.Size = New Size(265, 148)
+                End Try
+                'chkpoint
                 Dim resvcheck4 As String = apppath + "\resource\metadata\checkpoint\r640.chkp"
                 If Not System.IO.File.Exists(resvcheck4) Then
                     MessageBox.Show("Unload required! Resource not compatible!" + vbNewLine + "Please reinstall builder resource via preference menu.", "Resource not compatible!")
@@ -780,7 +802,6 @@ Public Class Form1
     End Sub
 
     Private Sub Label18_Click(sender As Object, e As EventArgs) Handles Label18.Click
-
         Label7.Text = "Installing Resource (Waiting for confirmation)"
         ProgressBar1.Value = 0
         Label23.Text = "Memory Usage: Paused"
@@ -815,6 +836,10 @@ Public Class Form1
     End Sub
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles dlworker.DoWork
         Try
+            Dim resc As String = apppath + "\resource"
+            If System.IO.Directory.Exists(resc) Then
+                System.IO.Directory.Delete(apppath + "\resource", True)
+            End If
             System.IO.Directory.Delete(apppath + "\statecache\updatecache", True)
             System.IO.Directory.CreateDirectory(apppath + "\statecache\updatecache")
             Dim fileReader As System.IO.StreamReader
