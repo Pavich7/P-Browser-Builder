@@ -274,7 +274,7 @@ Partial Class prefer
         Me.TabPage1.Location = New System.Drawing.Point(4, 26)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(493, 368)
+        Me.TabPage1.Size = New System.Drawing.Size(493, 350)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "General"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -598,7 +598,7 @@ Partial Class prefer
         Me.TabPage3.Location = New System.Drawing.Point(4, 26)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(493, 368)
+        Me.TabPage3.Size = New System.Drawing.Size(493, 350)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "News Feed"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -699,7 +699,7 @@ Partial Class prefer
         Me.TabPage4.Location = New System.Drawing.Point(4, 26)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(493, 368)
+        Me.TabPage4.Size = New System.Drawing.Size(493, 350)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Diagnostic"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -818,7 +818,7 @@ Partial Class prefer
         Me.TabPage5.Location = New System.Drawing.Point(4, 26)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage5.Size = New System.Drawing.Size(493, 368)
+        Me.TabPage5.Size = New System.Drawing.Size(493, 350)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Resource"
         Me.TabPage5.UseVisualStyleBackColor = True
@@ -883,10 +883,10 @@ Partial Class prefer
         '
         Me.Label23.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label23.AutoSize = True
-        Me.Label23.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(364, 184)
+        Me.Label23.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.Label23.Location = New System.Drawing.Point(34, 181)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(30, 17)
+        Me.Label23.Size = New System.Drawing.Size(33, 19)
         Me.Label23.TabIndex = 65
         Me.Label23.Text = "rver"
         '
@@ -905,7 +905,8 @@ Partial Class prefer
         Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(33, 184)
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label2.Location = New System.Drawing.Point(299, 182)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(32, 17)
         Me.Label2.TabIndex = 66
@@ -916,7 +917,8 @@ Partial Class prefer
         Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(215, 184)
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label5.Location = New System.Drawing.Point(152, 182)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(25, 17)
         Me.Label5.TabIndex = 67

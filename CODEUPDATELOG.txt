@@ -2,6 +2,7 @@ Builder Release 8.2.0
 
 ** Release Highlights **
 - HIGHLIGHTS: New Build Manager for view and manage build app.
+- HIGHLIGHTS: Redesign Welcome Page with more friendly steps.
 
 ** Release notes **
 - ADDED: Side Panel can be toggled using Ctrl+R or in View > Side Panel.
