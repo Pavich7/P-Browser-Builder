@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5FDA3569-7756-4D3A-AE71-347D47473EBF}"
 	ProjectSection(SolutionItems) = preProject
 		CODEUPDATELOG.txt = CODEUPDATELOG.txt
+		Patch.nsi = Patch.nsi
 		Script.nsi = Script.nsi
 	EndProjectSection
 EndProject
