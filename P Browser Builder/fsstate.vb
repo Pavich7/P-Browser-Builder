@@ -13,7 +13,7 @@
     End Sub
 
     Private Sub Label29_Click(sender As Object, e As EventArgs) Handles Label29.Click
-        Dim result As DialogResult = MessageBox.Show("Accept EULA?", "You sure about this?", MessageBoxButtons.YesNo)
+        Dim result As DialogResult = MessageBox.Show("I have read and agree with the end user license agreement.", "Agreement", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
         If (result = DialogResult.Yes) Then
             stage = 2
             TabPage3.Enabled = True
@@ -38,7 +38,7 @@
     End Sub
 
     Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-        Dim result As DialogResult = MessageBox.Show("Do you wish to exit P Browser Builder?", "You sure about this?", MessageBoxButtons.YesNo)
+        Dim result As DialogResult = MessageBox.Show("Do you wish to exit P Browser Builder?", "Confirm exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If (result = DialogResult.Yes) Then
             Application.Exit()
         End If

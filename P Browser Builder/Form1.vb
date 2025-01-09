@@ -364,7 +364,7 @@ Public Class Form1
     End Sub
     Public Sub MyForm_FormClosing(ByVal sender As Object, ByVal e As FormClosingEventArgs) Handles Me.FormClosing
         If Not TextBox1.Text = "" Then
-            If MessageBox.Show("Are you sure you want to exit? Make sure you saved your work!", "Confirm", MessageBoxButtons.YesNo) <> DialogResult.Yes Then
+            If MessageBox.Show("Are you sure you want to exit? Make sure you saved your work!", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) <> DialogResult.Yes Then
                 e.Cancel = True
             End If
         End If
@@ -440,9 +440,9 @@ Public Class Form1
             Try
                 splash.Hide()
                 MessageBox.Show("P Browser Builder is in Restore Mode!" + vbNewLine + "This mode will guide you to reset all Builder Settings.", "Warning!")
-                Dim result As DialogResult = MessageBox.Show("Do you wish to reset all setting?" + vbNewLine + "This cannot be undone!", "You sure about this?", MessageBoxButtons.YesNo)
+                Dim result As DialogResult = MessageBox.Show("Do you wish to reset all setting?" + vbNewLine + "This cannot be undone!", "You sure about this?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
                 If (result = DialogResult.Yes) Then
-                    Dim result1 As DialogResult = MessageBox.Show("Do you wish to delete resource also?" + vbNewLine + "You can reinstall anytime via news feed.", "Resource setting", MessageBoxButtons.YesNo)
+                    Dim result1 As DialogResult = MessageBox.Show("Do you wish to delete resource also?" + vbNewLine + "You can reinstall anytime via news feed.", "Resource setting", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                     splash.Show()
                     'Delete Res if prompted
                     If (result1 = DialogResult.Yes) Then
@@ -477,7 +477,7 @@ Public Class Form1
                     My.Settings.tempWebTitle = ""
                     My.Settings.tempIcoLoc = ""
                     MessageBox.Show("Operation Completed!", "Success!")
-                    Dim result11 As DialogResult = MessageBox.Show("Do you wish to restart?" + vbNewLine + "YES to restart, NO to shutdown.", "Restart?", MessageBoxButtons.YesNo)
+                    Dim result11 As DialogResult = MessageBox.Show("Do you wish to restart?" + vbNewLine + "YES to restart, NO to shutdown.", "Restart?", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                     If (result11 = DialogResult.Yes) Then
                         Application.Restart()
                     Else
@@ -768,7 +768,7 @@ Public Class Form1
     End Sub
 
     Private Sub ClearAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearAllToolStripMenuItem.Click
-        Dim result As DialogResult = MessageBox.Show("You will lose all data! Please make sure your data is saved.", "You sure about this?", MessageBoxButtons.YesNo)
+        Dim result As DialogResult = MessageBox.Show("You will lose all data! Please make sure your data is saved.", "You sure about this?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If (result = DialogResult.Yes) Then
             TextBox1.Text = ""
             TextBox2.Text = ""
@@ -806,7 +806,7 @@ Public Class Form1
         ProgressBar1.Value = 0
         Label23.Text = "Memory Usage: Paused"
         Label25.Text = "Paused"
-        Dim result As DialogResult = MessageBox.Show("Do you wish to install builder resource?" + vbNewLine + "Attempting to exit the builder may incomplete resources!", "You sure about this?", MessageBoxButtons.YesNo)
+        Dim result As DialogResult = MessageBox.Show("Do you wish to install builder resource?" + vbNewLine + "Attempting to exit the builder may incomplete resources!", "You sure about this?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If (result = DialogResult.Yes) Then
             dlworker.RunWorkerAsync()
             Label7.Text = "Installing Resource..."
@@ -820,12 +820,12 @@ Public Class Form1
     End Sub
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles dlworker.RunWorkerCompleted
         ProgressBar1.Style = ProgressBarStyle.Blocks
-        Dim result0 As DialogResult = MessageBox.Show("Do you want to delete installation cache?" + vbNewLine + "Cache can be used to reinstall using advanced sideload. Delete if you wanted to save space. You can delete it later in preference.", "Delete cache?", MessageBoxButtons.YesNo)
+        Dim result0 As DialogResult = MessageBox.Show("Do you want to delete installation cache?" + vbNewLine + "Cache can be used to reinstall using advanced sideload. Delete if you wanted to save space. You can delete it later in preference.", "Delete cache?", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If (result0 = DialogResult.Yes) Then
             System.IO.Directory.Delete(apppath + "\statecache\updatecache", True)
             System.IO.Directory.CreateDirectory(apppath + "\statecache\updatecache")
         End If
-        Dim result1 As DialogResult = MessageBox.Show("Installation completed but restart required for fully functional!" + vbNewLine + "Do you want to restart P Browser Builder now?", "Installation completed!", MessageBoxButtons.YesNo)
+        Dim result1 As DialogResult = MessageBox.Show("Installation completed but restart required for fully functional!" + vbNewLine + "Do you want to restart P Browser Builder now?", "Installation completed!", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If (result1 = DialogResult.Yes) Then
             Application.Restart()
         Else
@@ -1111,7 +1111,7 @@ Public Class Form1
     End Sub
 
     Private Sub StartWindowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StartWindowToolStripMenuItem.Click
-        Dim result As DialogResult = MessageBox.Show("You will lose all data! Please make sure your data is saved.", "You sure about this?", MessageBoxButtons.YesNo)
+        Dim result As DialogResult = MessageBox.Show("You will lose all data! Please make sure your data is saved.", "You sure about this?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If (result = DialogResult.Yes) Then
             TextBox1.Text = ""
             TextBox2.Text = ""
@@ -1268,7 +1268,7 @@ Public Class Form1
     End Sub
 
     Private Sub OpenProjectToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenProjectToolStripMenuItem.Click
-        Dim result As DialogResult = MessageBox.Show("You will lose all data! Please make sure your data is saved.", "You sure about this?", MessageBoxButtons.YesNo)
+        Dim result As DialogResult = MessageBox.Show("You will lose all data! Please make sure your data is saved.", "You sure about this?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If (result = DialogResult.Yes) Then
             OpenFileDialog1.Multiselect = False
             OpenFileDialog1.Title = "Open P Browser Builder Project"
@@ -1421,7 +1421,7 @@ Public Class Form1
     End Sub
 
     Private Sub LoadSampleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoadSampleToolStripMenuItem.Click
-        Dim result As DialogResult = MessageBox.Show("You will lose all data! Please make sure your data is saved.", "You sure about this?", MessageBoxButtons.YesNo)
+        Dim result As DialogResult = MessageBox.Show("You will lose all data! Please make sure your data is saved.", "You sure about this?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If (result = DialogResult.Yes) Then
             Try
                 Dim fileReader As System.IO.StreamReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\sample\sample1.pbproj")

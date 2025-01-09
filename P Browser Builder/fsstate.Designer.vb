@@ -39,10 +39,13 @@ Partial Class fsstate
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabPage3.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label29
@@ -206,6 +209,8 @@ Partial Class fsstate
         '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.PictureBox1)
+        Me.TabPage3.Controls.Add(Me.Label9)
         Me.TabPage3.Controls.Add(Me.Label8)
         Me.TabPage3.Controls.Add(Me.Label7)
         Me.TabPage3.Location = New System.Drawing.Point(4, 26)
@@ -220,11 +225,11 @@ Partial Class fsstate
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI Light", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(158, 136)
+        Me.Label8.Location = New System.Drawing.Point(169, 148)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(222, 37)
+        Me.Label8.Size = New System.Drawing.Size(199, 37)
         Me.Label8.TabIndex = 67
-        Me.Label8.Text = "Setup Completed!"
+        Me.Label8.Text = "Setup Complete"
         '
         'Label7
         '
@@ -237,6 +242,26 @@ Partial Class fsstate
         Me.Label7.Size = New System.Drawing.Size(130, 25)
         Me.Label7.TabIndex = 64
         Me.Label7.Text = "Start Building!"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI Semilight", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(70, 198)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(402, 25)
+        Me.Label9.TabIndex = 68
+        Me.Label9.Text = "Let's make it easier to build apps from websites!"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.P_Browser_Builder.My.Resources.Resources.check
+        Me.PictureBox1.Location = New System.Drawing.Point(217, 86)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(100, 50)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 69
+        Me.PictureBox1.TabStop = False
         '
         'fsstate
         '
@@ -259,6 +284,7 @@ Partial Class fsstate
         Me.TabPage2.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -279,4 +305,6 @@ Partial Class fsstate
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

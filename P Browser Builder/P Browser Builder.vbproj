@@ -319,6 +319,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="p_browser_icon_001_rq2_icon.ico" />
+    <None Include="Resources\check.png" />
     <None Include="Resources\hammer.png" />
     <None Include="Resources\compass %281%29.png" />
     <None Include="Resources\close.png" />
