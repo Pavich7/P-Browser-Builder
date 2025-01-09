@@ -13,6 +13,7 @@ Builder Release 8.2.0
 - ADDED: Icon file name will be displayed after adding the application icon.
 - ADDED: Terminate Test Process button in Action Box.
 - ADDED: Resource will check for update on startup and show if update are available.
+- ADDED: Confirmation message before download new update in preference.
 - IMPROVEMENT: News Feed now fetches using a single file, thus improving startup speed.
 - IMPROVEMENT: Enhance the startup time of the Preferences window.
 - IMPROVEMENT: Minor User Interface improvements.

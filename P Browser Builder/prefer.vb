@@ -258,8 +258,10 @@ Public Class prefer
     End Sub
 
     Private Sub Label30_Click(sender As Object, e As EventArgs) Handles Label30.Click
-        MessageBox.Show("Click OK to start download latest version...", "Informations")
-        Process.Start("https://github.com/Pavich7/P-Browser-Builder/releases/latest/download/Install.P.Browser.Builder.exe")
+        Dim result As DialogResult = MessageBox.Show("Do you wish to download an update to the latest version?", "Confirmation?", MessageBoxButtons.YesNo)
+        If (result = DialogResult.Yes) Then
+            Process.Start("https://github.com/Pavich7/P-Browser-Builder/releases/latest/download/Update.P.Browser.Builder.exe")
+        End If
     End Sub
 
     Private Sub Label31_Click(sender As Object, e As EventArgs) Handles Label31.Click
