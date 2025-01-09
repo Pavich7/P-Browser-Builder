@@ -20,6 +20,7 @@
 
   !define MUI_ABORTWARNING
   !define MUI_FINISHPAGE_RUN "P Browser Builder.exe"
+  BrandingText "MadeByPavich"
 
 ; --------------------------------
 ; Pages

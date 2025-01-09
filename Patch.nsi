@@ -1,11 +1,9 @@
-; TEST ONLY!!!!
-
 !include "MUI2.nsh"
 
 ; General
 
   ; Name and output file
-  Name "P Browser Builder (Update)"
+  Name "Update P Browser Builder"
   OutFile "Output\Update P Browser Builder.exe"
 
   ; Default installation folder
@@ -22,11 +20,12 @@
 
   !define MUI_ABORTWARNING
   !define MUI_FINISHPAGE_RUN "P Browser Builder.exe"
+  BrandingText "MadeByPavich"
 
 ; --------------------------------
 ; Pages
   !insertmacro MUI_PAGE_WELCOME
-  !insertmacro MUI_PAGE_LICENSE "C:\Users\Pavich Komansil\Desktop\inspbb\eula.txt"
+  !insertmacro MUI_PAGE_LICENSE "C:\Users\Pavich Komansil\Desktop\updpbb\eula.txt"
   !insertmacro MUI_PAGE_DIRECTORY
   !insertmacro MUI_PAGE_INSTFILES
   !insertmacro MUI_PAGE_FINISH
@@ -47,21 +46,17 @@ Section "P Browser Installer" SecDummy
   SetOutPath "$INSTDIR"
   
   ; Check version.txt
-  ReadEnvStr $0 $INSTDIR\metadata\version.txt
-  StrCmp $0 "8.1.0" +2
-  MessageBox MB_OK "Error! Patching not supported in current installed version."
+  FileOpen $0 "$INSTDIR\metadata\version.txt" r
+  FileRead $0 $1
+  FileClose $0
+  StrCmp $1 "8.1.0" +3
+  MessageBox MB_OK "Error! Patch is not supported in the currently installed version."
   Abort
 
   ; ADD YOUR OWN FILES HERE...
-  File /r "C:\Users\Pavich Komansil\Desktop\inspbb\*"
-  ExecWait '"$INSTDIR\packages\VC_redist.x64.exe"  /install /quiet /norestart'
-  
-  ; Create uninstaller
-  WriteUninstaller "$INSTDIR\Uninstall P Browser Builder.exe"
+  File /r "C:\Users\Pavich Komansil\Desktop\updpbb\*"
 
-  CreateDirectory "$SMPROGRAMS\MadeByPavich"
-  CreateShortCut "$SMPROGRAMS\MadeByPavich\P Browser Builder.lnk" "$INSTDIR\P Browser Builder.exe"
-  CreateShortCut "$SMPROGRAMS\MadeByPavich\Uninstall P Browser Builder.lnk" "$INSTDIR\Uninstall P Browser Builder.exe"
+  ; ExecWait '"$INSTDIR\packages\VC_redist.x64.exe"  /install /quiet /norestart'
 
 SectionEnd
 
