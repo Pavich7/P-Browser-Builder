@@ -271,7 +271,7 @@ Public Class prefer
     End Sub
 
     Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Enter
-        Dim result As DialogResult = MessageBox.Show("Unlocking the Advanced Menu is dangerous." + vbNewLine + "This menu is used to install or modify builder resouces." + vbNewLine + "" + vbNewLine + "Do you want to process it?", "You sure about this?", MessageBoxButtons.YesNo)
+        Dim result As DialogResult = MessageBox.Show("Unlocking the Advanced Menu is dangerous." + vbNewLine + "This menu is used to install or modify builder resources." + vbNewLine + "" + vbNewLine + "Do you want to process it?", "Confirmation?", MessageBoxButtons.YesNo)
         If (result = DialogResult.Yes) Then
             Label22.Enabled = True
             Label24.Enabled = True
