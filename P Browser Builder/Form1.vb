@@ -1,5 +1,4 @@
 ﻿Imports System.ComponentModel
-Imports System.Drawing.Imaging
 Imports System.IO
 Imports System.IO.Compression
 Imports System.Net
@@ -19,15 +18,6 @@ Public Class Form1
     Public logpath
     Public apppath As String
     Dim pros As Process
-
-    Public Function ImageToBase64(ByVal img As Image,
-                                  ByVal fmt As System.Drawing.Imaging.ImageFormat) As String
-        Using ms As New System.IO.MemoryStream()
-            img.Save(ms, fmt)
-            Dim b = ms.ToArray()
-            Return Convert.ToBase64String(b)
-        End Using
-    End Function
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click, TestProjectToolStripMenuItem.Click
         Dim spechk As Boolean = False
@@ -509,7 +499,6 @@ Public Class Form1
             End Try
         Else
             'Init Cef
-            My.Settings.tempIcoLoc = ""
             Dim setting As New CefSettings With {
                 .RemoteDebuggingPort = 8088
             }
@@ -654,8 +643,6 @@ Public Class Form1
             Dim FileNameOpenWith As String = My.Application.CommandLineArgs(0)
             Try
                 Dim fileReader As System.IO.StreamReader = My.Computer.FileSystem.OpenTextFileReader(FileNameOpenWith)
-                System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
-                System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
                 TextBox2.Text = fileReader.ReadLine()
                 TextBox1.Text = fileReader.ReadLine()
                 TextBox3.Text = fileReader.ReadLine()
@@ -667,15 +654,6 @@ Public Class Form1
                 CheckBox3.Checked = fileReader.ReadLine()
                 welcomemessage.TextBox1.Text = fileReader.ReadLine()
                 welcomemessage.TextBox2.Text = fileReader.ReadLine()
-                Dim icon64 = fileReader.ReadLine()
-                If icon64 IsNot Nothing Then
-                    Dim imageBytes() As Byte = Convert.FromBase64String(icon64)
-                    Dim filePath As String = apppath + "\statecache\buildcache\appicns\appicns.ico"
-                    File.WriteAllBytes(filePath, imageBytes)
-                    PictureBox1.Image = Image.FromFile(apppath + "\statecache\buildcache\appicns\appicns.ico")
-                    My.Settings.tempIcoLoc = apppath + "\statecache\buildcache\appicns\appicns.ico"
-                    Label16.Text = "Application icons (appicns.ico)"
-                End If
                 'aname
                 'url
                 'wwin
@@ -687,7 +665,6 @@ Public Class Form1
                 'welena
                 'msgti
                 'msgde
-                'icon
                 Me.Enabled = True
                 ProjnameToolStripMenuItem.Text = TextBox2.Text
                 Me.WindowState = FormWindowState.Normal
@@ -809,8 +786,6 @@ Public Class Form1
             CheckBox5.Checked = False
             CheckBox6.Checked = False
             CheckBox7.Checked = False
-            PictureBox1.Image.Dispose()
-            PictureBox1.Image = PictureBox1.InitialImage
             System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
             System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
             ProjnameToolStripMenuItem.Text = "Untitled Project"
@@ -1039,13 +1014,12 @@ Public Class Form1
     End Sub
 
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
+        System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
+        System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
         OpenFileDialog1.Multiselect = False
         OpenFileDialog1.Title = "Choose your icons file"
         OpenFileDialog1.Filter = "Icons Files|*.ico"
         If OpenFileDialog1.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
-            PictureBox1.Image.Dispose()
-            System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
-            System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
             PictureBox1.Image = Image.FromFile(OpenFileDialog1.FileName)
             My.Settings.tempIcoLoc = OpenFileDialog1.FileName
             My.Computer.FileSystem.CopyFile(OpenFileDialog1.FileName, apppath + "\statecache\buildcache\appicns\appicns.ico")
@@ -1156,8 +1130,6 @@ Public Class Form1
             CheckBox6.Checked = False
             CheckBox7.Checked = False
             TabControl1.SelectedTab = TabPage1
-            PictureBox1.Image.Dispose()
-            PictureBox1.Image = PictureBox1.InitialImage
             System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
             System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
             ProjnameToolStripMenuItem.Text = "Untitled Project"
@@ -1258,13 +1230,6 @@ Public Class Form1
                 saveFileDialog1.Filter = "P Browser Builder Project (*.pbproj)|*.pbproj"
                 saveFileDialog1.RestoreDirectory = True
                 If saveFileDialog1.ShowDialog() = DialogResult.OK Then
-                    Dim str
-                    If My.Settings.tempIcoLoc = "" Then
-                        str = ""
-                    Else
-                        Dim img As Image = Image.FromFile(apppath + "\statecache\buildcache\appicns\appicns.ico")
-                        str = ImageToBase64(img, ImageFormat.Jpeg)
-                    End If
                     myStream = saveFileDialog1.OpenFile()
                     If (myStream IsNot Nothing) Then
                         Using writer As New StreamWriter(myStream)
@@ -1279,7 +1244,6 @@ Public Class Form1
                             writer.WriteLine(CheckBox3.CheckState)
                             writer.WriteLine(welcomemessage.TextBox1.Text)
                             writer.WriteLine(welcomemessage.TextBox2.Text)
-                            writer.WriteLine(str)
                         End Using
                         myStream.Close()
                         MessageBox.Show("Saved to file!", "Completed!")
@@ -1296,7 +1260,6 @@ Public Class Form1
                 'welena
                 'msgti
                 'msgde
-                'icon
                 ProjnameToolStripMenuItem.Text = TextBox2.Text
             Catch ex As Exception
                 MessageBox.Show("Save Failed!" & vbNewLine & ex.Message, "Error!")
@@ -1330,7 +1293,6 @@ Public Class Form1
                     CheckBox6.Checked = False
                     CheckBox7.Checked = False
                     TabControl1.SelectedTab = TabPage1
-                    PictureBox1.Image.Dispose()
                     System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
                     System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
                     Browser.Load("about:blank")
@@ -1345,17 +1307,6 @@ Public Class Form1
                     CheckBox3.Checked = fileReader.ReadLine()
                     welcomemessage.TextBox1.Text = fileReader.ReadLine()
                     welcomemessage.TextBox2.Text = fileReader.ReadLine()
-                    Dim icon64 = fileReader.ReadLine()
-                    If icon64 IsNot Nothing Then
-                        Dim imageBytes() As Byte = Convert.FromBase64String(icon64)
-                        Dim filePath As String = apppath + "\statecache\buildcache\appicns\appicns.ico"
-                        File.WriteAllBytes(filePath, imageBytes)
-                        PictureBox1.Image = Image.FromFile(apppath + "\statecache\buildcache\appicns\appicns.ico")
-                        My.Settings.tempIcoLoc = apppath + "\statecache\buildcache\appicns\appicns.ico"
-                        Label16.Text = "Application icons (appicns.ico)"
-                    Else
-                        PictureBox1.Image = PictureBox1.InitialImage
-                    End If
                     ProjnameToolStripMenuItem.Text = TextBox2.Text
                     fileReader.Close()
                 Catch ex As Exception
@@ -1372,7 +1323,6 @@ Public Class Form1
                 'welena
                 'msgti
                 'msgde
-                'icon
             End If
         End If
     End Sub
@@ -1492,8 +1442,6 @@ Public Class Form1
                 CheckBox6.Checked = False
                 CheckBox7.Checked = False
                 TabControl1.SelectedTab = TabPage1
-                PictureBox1.Image.Dispose()
-                PictureBox1.Image = PictureBox1.InitialImage
                 System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
                 System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
                 Browser.Load("about:blank")

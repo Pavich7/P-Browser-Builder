@@ -1,6 +1,4 @@
-﻿Imports System.IO
-Imports System.Reflection.Emit
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Button
 
 Public Class welcome
@@ -33,8 +31,6 @@ Public Class welcome
         OpenFileDialog1.Title = "Open P Browser Builder Project"
         OpenFileDialog1.Filter = "P Browser Builder Project|*.pbproj"
         If OpenFileDialog1.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
-            System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
-            System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
             Try
                 Dim fileReader As System.IO.StreamReader = My.Computer.FileSystem.OpenTextFileReader(OpenFileDialog1.FileName)
                 Form1.TextBox2.Text = fileReader.ReadLine()
@@ -48,18 +44,6 @@ Public Class welcome
                 Form1.CheckBox3.Checked = fileReader.ReadLine()
                 welcomemessage.TextBox1.Text = fileReader.ReadLine()
                 welcomemessage.TextBox2.Text = fileReader.ReadLine()
-                Dim icon64 = fileReader.ReadLine()
-                If icon64 IsNot Nothing Then
-                    PictureBox1.Image.Dispose()
-                    Dim imageBytes() As Byte = Convert.FromBase64String(icon64)
-                    Dim filePath As String = apppath + "\statecache\buildcache\appicns\appicns.ico"
-                    File.WriteAllBytes(filePath, imageBytes)
-                    Form1.PictureBox1.Image = Image.FromFile(apppath + "\statecache\buildcache\appicns\appicns.ico")
-                    My.Settings.tempIcoLoc = apppath + "\statecache\buildcache\appicns\appicns.ico"
-                    Form1.Label16.Text = "Application icons (appicns.ico)"
-                Else
-                    PictureBox1.Image = PictureBox1.InitialImage
-                End If
                 'aname
                 'url
                 'wwin
@@ -71,7 +55,6 @@ Public Class welcome
                 'welena
                 'msgti
                 'msgde
-                'icon
                 Form1.Enabled = True
                 Form1.ProjnameToolStripMenuItem.Text = Form1.TextBox2.Text
                 Form1.WindowState = FormWindowState.Normal
@@ -88,8 +71,6 @@ Public Class welcome
         Form1.Enabled = True
         Form1.WindowState = FormWindowState.Normal
         realclose = False
-        PictureBox1.Image.Dispose()
-        PictureBox1.Image = PictureBox1.InitialImage
         Me.Close()
     End Sub
 
