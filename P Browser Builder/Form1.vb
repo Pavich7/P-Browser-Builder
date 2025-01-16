@@ -790,6 +790,9 @@ Public Class Form1
             CheckBox5.Checked = False
             CheckBox6.Checked = False
             CheckBox7.Checked = False
+            Button6.Visible = False
+            CheckBox4.Visible = False
+            Label24.Visible = True
             PictureBox1.Image = My.Resources.p_browser_icon_001_rq2_icon
             Label16.Text = "Application icons (*.ico)"
             My.Settings.tempIcoLoc = ""
@@ -1136,6 +1139,9 @@ Public Class Form1
             CheckBox5.Checked = False
             CheckBox6.Checked = False
             CheckBox7.Checked = False
+            Button6.Visible = False
+            CheckBox4.Visible = False
+            Label24.Visible = True
             TabControl1.SelectedTab = TabPage1
             PictureBox1.Image = My.Resources.p_browser_icon_001_rq2_icon
             Label16.Text = "Application icons (*.ico)"
@@ -1302,6 +1308,9 @@ Public Class Form1
                     CheckBox5.Checked = False
                     CheckBox6.Checked = False
                     CheckBox7.Checked = False
+                    Button6.Visible = False
+                    CheckBox4.Visible = False
+                    Label24.Visible = True
                     TabControl1.SelectedTab = TabPage1
                     PictureBox1.Image = My.Resources.p_browser_icon_001_rq2_icon
                     Label16.Text = "Application icons (*.ico)"
@@ -1454,6 +1463,9 @@ Public Class Form1
                 CheckBox5.Checked = False
                 CheckBox6.Checked = False
                 CheckBox7.Checked = False
+                Button6.Visible = False
+                CheckBox4.Visible = False
+                Label24.Visible = True
                 TabControl1.SelectedTab = TabPage1
                 PictureBox1.Image = My.Resources.p_browser_icon_001_rq2_icon
                 Label16.Text = "Application icons (*.ico)"
