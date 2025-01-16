@@ -1,4 +1,7 @@
 Builder Release 8.2.1
 
 ** Release notes **
+- ADDED: Added more icons to various message boxes.
 - FIXED: Any attempt to unload save will not reset the app icon in Design View.
+- FIXED: Open icon file still open old icon after load new project or save.
+- FIXED: Project can build without resource via Build menubar.

@@ -118,32 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="RichTextBox1.Text" xml:space="preserve">
-    <value>Builder Release 8.2.0
-
-** Release Highlights **
-- HIGHLIGHTS: New Build Manager for view and manage build app.
-- HIGHLIGHTS: Redesign Welcome Page with more friendly steps.
-- HIGHLIGHTS: Reduce update file size using files patch system.
+    <value>Builder Release 8.2.1
 
 ** Release notes **
-- ADDED: Side Panel can be toggled using Ctrl+R or in View &gt; Side Panel.
-- ADDED: Build menu with more keyboard shortcut supported.
-- ADDED: Ability to hide and show Design View and Start Log tabs.
-- ADDED: Getting Started and Load Sample Project in Help menu.
-- ADDED: Icon file name will be displayed after adding the application icon.
-- ADDED: Terminate Test Process button in Action Box.
-- ADDED: Resource will check for update on startup and show if update are available.
-- ADDED: Confirmation message before download new update in preference.
-- IMPROVEMENT: News Feed now fetches using a single file, thus improving startup speed.
-- IMPROVEMENT: Enhance the startup time of the Preferences window.
-- IMPROVEMENT: Minor User Interface improvements.
-- IMPROVEMENT: Hide Side Panel Button Notification will only show in first time.
-- CHANGED: Replace Hide and Show Side Panel buttons with Side Panel toggle in view menu.
-- CHANGED: Move Clean Up button to Build Manager.
-- CHANGED: Replace Guild Menu with Getting Started in help menu.
-- CHANGED: Build and Test buttons will disabled while testing.
-
-** Low-level **
-- IMPROVEMENT: Low-level code optimizations.</value>
+- ADDED: Added more icons to various message boxes.
+- FIXED: Any attempt to unload save will not reset the app icon in Design View.
+- FIXED: Open icon file still open old icon after load new project or save.
+- FIXED: Project can build without resource via Build menubar.</value>
   </data>
 </root>

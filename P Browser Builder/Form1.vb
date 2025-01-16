@@ -530,6 +530,8 @@ Public Class Form1
                 Label8.Enabled = False
                 Label24.Enabled = False
                 Button9.Enabled = False
+                BuildProjectToolStripMenuItem.Enabled = False
+                TestProjectToolStripMenuItem.Enabled = False
             Else
                 'reschk
                 Try
@@ -569,6 +571,8 @@ Public Class Form1
                     Label8.Enabled = False
                     Label24.Enabled = False
                     Button9.Enabled = False
+                    BuildProjectToolStripMenuItem.Enabled = False
+                    TestProjectToolStripMenuItem.Enabled = False
                 End If
             End If
 
@@ -788,6 +792,7 @@ Public Class Form1
             CheckBox7.Checked = False
             PictureBox1.Image = My.Resources.p_browser_icon_001_rq2_icon
             Label16.Text = "Application icons (*.ico)"
+            My.Settings.tempIcoLoc = ""
             System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
             System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
             ProjnameToolStripMenuItem.Text = "Untitled Project"
@@ -1084,7 +1089,7 @@ Public Class Form1
 
     Private Sub PictureBox9_Click(sender As Object, e As EventArgs) Handles PictureBox9.Click
         If My.Settings.tempIcoLoc = "" Then
-            MessageBox.Show("Please choose icon first!", "Error!")
+            MessageBox.Show("Please choose icon first!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
             Process.Start(My.Settings.tempIcoLoc)
         End If
@@ -1134,6 +1139,7 @@ Public Class Form1
             TabControl1.SelectedTab = TabPage1
             PictureBox1.Image = My.Resources.p_browser_icon_001_rq2_icon
             Label16.Text = "Application icons (*.ico)"
+            My.Settings.tempIcoLoc = ""
             System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
             System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
             ProjnameToolStripMenuItem.Text = "Untitled Project"
@@ -1299,6 +1305,7 @@ Public Class Form1
                     TabControl1.SelectedTab = TabPage1
                     PictureBox1.Image = My.Resources.p_browser_icon_001_rq2_icon
                     Label16.Text = "Application icons (*.ico)"
+                    My.Settings.tempIcoLoc = ""
                     System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
                     System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
                     Browser.Load("about:blank")
@@ -1450,6 +1457,7 @@ Public Class Form1
                 TabControl1.SelectedTab = TabPage1
                 PictureBox1.Image = My.Resources.p_browser_icon_001_rq2_icon
                 Label16.Text = "Application icons (*.ico)"
+                My.Settings.tempIcoLoc = ""
                 System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
                 System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
                 Browser.Load("about:blank")
