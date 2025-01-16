@@ -6,3 +6,4 @@ Builder Release 8.2.1
 - FIXED: Open icon file still open old icon after load new project or save.
 - FIXED: Project can build without resource via Build menubar.
 - FIXED: Advanced After Build Actions menu still show up after load new project or save.
+- FIXED: Start log can still accessable leading to crash after logs flushed.

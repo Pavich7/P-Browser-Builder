@@ -1226,6 +1226,7 @@ Public Class Form1
             System.IO.Directory.Delete(apppath + "\resource\testspace\startlog", True)
             System.IO.Directory.CreateDirectory(apppath + "\resource\testspace\startlog")
             ProgressBar1.Value = 100
+            Label39.Visible = False
             Label7.Text = "Log flush completed!"
             Snooze(3)
             ProgressBar1.Value = 0

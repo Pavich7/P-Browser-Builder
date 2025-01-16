@@ -125,6 +125,7 @@
 - FIXED: Any attempt to unload save will not reset the app icon in Design View.
 - FIXED: Open icon file still open old icon after load new project or save.
 - FIXED: Project can build without resource via Build menubar.
-- FIXED: Advanced After Build Actions menu still show up after load new project or save.</value>
+- FIXED: Advanced After Build Actions menu still show up after load new project or save.
+- FIXED: Start log can still accessable leading to crash after logs flushed.</value>
   </data>
 </root>
