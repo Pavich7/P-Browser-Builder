@@ -232,7 +232,7 @@ Partial Class prefer
         Me.Label30.AutoSize = True
         Me.Label30.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label30.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.ForeColor = System.Drawing.Color.Gray
+        Me.Label30.ForeColor = System.Drawing.SystemColors.HotTrack
         Me.Label30.Location = New System.Drawing.Point(89, 115)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(45, 21)
@@ -952,7 +952,7 @@ Partial Class prefer
         Me.Label4.AutoSize = True
         Me.Label4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Gray
+        Me.Label4.ForeColor = System.Drawing.SystemColors.HotTrack
         Me.Label4.Location = New System.Drawing.Point(110, 17)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(36, 21)

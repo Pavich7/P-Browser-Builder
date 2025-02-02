@@ -260,7 +260,12 @@ Public Class prefer
     Private Sub Label30_Click(sender As Object, e As EventArgs) Handles Label30.Click
         Dim result As DialogResult = MessageBox.Show("Do you wish to download an update to the latest version?", "Confirmation?", MessageBoxButtons.YesNo)
         If (result = DialogResult.Yes) Then
-            Process.Start("https://github.com/Pavich7/P-Browser-Builder/releases/latest/download/Update.P.Browser.Builder.exe")
+            Dim patchr As DialogResult = MessageBox.Show("Would you Like to download the patch? It's smaller, as it only replaces changed files. A full download provides a fresh install. Both keeps your settings. " + vbNewLine + "Note: Patch updates are only supported for the latest release before the new one. " + vbNewLine + "Select YES for the patch or NO for the full download.", "Update options...", MessageBoxButtons.YesNoCancel)
+            If (patchr = DialogResult.Yes) Then
+                Process.Start("https://github.com/Pavich7/P-Browser-Builder/releases/latest/download/Update.P.Browser.Builder.exe")
+            ElseIf (patchr = DialogResult.No) Then
+                Process.Start("https://github.com/Pavich7/P-Browser-Builder/releases/latest/download/Install.P.Browser.Builder.exe")
+            End If
         End If
     End Sub
 
@@ -273,8 +278,22 @@ Public Class prefer
     End Sub
 
     Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Enter
-        Dim result As DialogResult = MessageBox.Show("Unlocking the Advanced Menu is dangerous." + vbNewLine + "This menu is used to install or modify builder resources." + vbNewLine + "" + vbNewLine + "Do you want to process it?", "Confirmation?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-        If (result = DialogResult.Yes) Then
+        If My.Settings.advWarnState = False Then
+            Dim result As DialogResult = MessageBox.Show("Unlocking the Advanced Menu is dangerous." + vbNewLine + "This menu is used to install or modify builder resources." + vbNewLine + "" + vbNewLine + "Do you want to process it?", "Confirmation?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+            If (result = DialogResult.Yes) Then
+                Label22.Enabled = True
+                Label24.Enabled = True
+                Label25.Enabled = True
+                Label28.Enabled = True
+                TextBox1.Enabled = True
+                Label19.Enabled = True
+                Label20.Enabled = True
+                Label21.Enabled = True
+                My.Settings.advWarnState = True
+            Else
+                TabControl1.SelectedTab = TabPage1
+            End If
+        Else
             Label22.Enabled = True
             Label24.Enabled = True
             Label25.Enabled = True
@@ -283,8 +302,6 @@ Public Class prefer
             Label19.Enabled = True
             Label20.Enabled = True
             Label21.Enabled = True
-        Else
-            TabControl1.SelectedTab = TabPage1
         End If
     End Sub
 

@@ -118,14 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="RichTextBox1.Text" xml:space="preserve">
-    <value>Builder Release 8.2.1
+    <value>Builder Release 8.3.0
 
 ** Release notes **
-- ADDED: Added more icons to various message boxes.
-- FIXED: Any attempt to unload save will not reset the app icon in Design View.
-- FIXED: Open icon file still open old icon after load new project or save.
-- FIXED: Project can build without resource via Build menubar.
-- FIXED: Advanced After Build Actions menu still show up after load new project or save.
-- FIXED: Start log can still accessable leading to crash after logs flushed.</value>
+- ADDED: Option to choose for full installer or patch installer in update section.
+- IMPROVEMENT: Updated CefSharp to 132.3.11
+- IMPROVEMENT: Updated Chromium to 132.0.6834.83
+- IMPROVEMENT: Update button will turn blue when a new version is available.
+- IMPROVEMENT: In Preference, Advanced Menu warning will only appear once per session.</value>
   </data>
 </root>

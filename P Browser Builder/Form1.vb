@@ -476,6 +476,7 @@ Public Class Form1
                     'Reset Temp setting
                     My.Settings.tempWebTitle = ""
                     My.Settings.tempIcoLoc = ""
+                    My.Settings.advWarnState = False
                     MessageBox.Show("Operation Completed!", "Success!")
                     Dim result11 As DialogResult = MessageBox.Show("Do you wish to restart?" + vbNewLine + "YES to restart, NO to shutdown.", "Restart?", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                     If (result11 = DialogResult.Yes) Then
