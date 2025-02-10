@@ -37,6 +37,7 @@ Partial Class Form1
         Me.SidePanelToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DesignViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StartLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ActionToolboxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BuildToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BuildProjectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TestProjectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -66,7 +67,6 @@ Partial Class Form1
         Me.OpenBuilderInExplorerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SubmitBugsReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DevToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReinitializeResourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UnlockIncompleteFeatureToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ForceUnlockDisableButtonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -175,7 +175,6 @@ Partial Class Form1
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ActionToolboxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -279,7 +278,7 @@ Partial Class Form1
         Me.SidePanelToolStripMenuItem.CheckOnClick = True
         Me.SidePanelToolStripMenuItem.Name = "SidePanelToolStripMenuItem"
         Me.SidePanelToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
-        Me.SidePanelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SidePanelToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
         Me.SidePanelToolStripMenuItem.Text = "Side Panel"
         '
         'DesignViewToolStripMenuItem
@@ -288,7 +287,7 @@ Partial Class Form1
         Me.DesignViewToolStripMenuItem.CheckOnClick = True
         Me.DesignViewToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.DesignViewToolStripMenuItem.Name = "DesignViewToolStripMenuItem"
-        Me.DesignViewToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DesignViewToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
         Me.DesignViewToolStripMenuItem.Text = "Design View"
         '
         'StartLogToolStripMenuItem
@@ -297,8 +296,17 @@ Partial Class Form1
         Me.StartLogToolStripMenuItem.CheckOnClick = True
         Me.StartLogToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.StartLogToolStripMenuItem.Name = "StartLogToolStripMenuItem"
-        Me.StartLogToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.StartLogToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
         Me.StartLogToolStripMenuItem.Text = "Start Log"
+        '
+        'ActionToolboxToolStripMenuItem
+        '
+        Me.ActionToolboxToolStripMenuItem.Checked = True
+        Me.ActionToolboxToolStripMenuItem.CheckOnClick = True
+        Me.ActionToolboxToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ActionToolboxToolStripMenuItem.Name = "ActionToolboxToolStripMenuItem"
+        Me.ActionToolboxToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.ActionToolboxToolStripMenuItem.Text = "Action Toolbox"
         '
         'BuildToolStripMenuItem
         '
@@ -481,16 +489,10 @@ Partial Class Form1
         '
         'DevToolStripMenuItem
         '
-        Me.DevToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReinitializeResourceToolStripMenuItem, Me.UnlockIncompleteFeatureToolStripMenuItem, Me.ForceUnlockDisableButtonToolStripMenuItem, Me.FToolStripMenuItem, Me.ResetWhatsNewStateToolStripMenuItem, Me.ShowSplashScreenToolStripMenuItem, Me.RestartInRestoreModeToolStripMenuItem, Me.GoBackToDefaultToolStripMenuItem})
+        Me.DevToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UnlockIncompleteFeatureToolStripMenuItem, Me.ForceUnlockDisableButtonToolStripMenuItem, Me.FToolStripMenuItem, Me.ResetWhatsNewStateToolStripMenuItem, Me.ShowSplashScreenToolStripMenuItem, Me.RestartInRestoreModeToolStripMenuItem, Me.GoBackToDefaultToolStripMenuItem})
         Me.DevToolStripMenuItem.Name = "DevToolStripMenuItem"
         Me.DevToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
         Me.DevToolStripMenuItem.Text = "Develop"
-        '
-        'ReinitializeResourceToolStripMenuItem
-        '
-        Me.ReinitializeResourceToolStripMenuItem.Name = "ReinitializeResourceToolStripMenuItem"
-        Me.ReinitializeResourceToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
-        Me.ReinitializeResourceToolStripMenuItem.Text = "Reinitialize resource"
         '
         'UnlockIncompleteFeatureToolStripMenuItem
         '
@@ -1635,15 +1637,6 @@ Partial Class Form1
         Me.Panel1.Size = New System.Drawing.Size(334, 50)
         Me.Panel1.TabIndex = 57
         '
-        'ActionToolboxToolStripMenuItem
-        '
-        Me.ActionToolboxToolStripMenuItem.Checked = True
-        Me.ActionToolboxToolStripMenuItem.CheckOnClick = True
-        Me.ActionToolboxToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.ActionToolboxToolStripMenuItem.Name = "ActionToolboxToolStripMenuItem"
-        Me.ActionToolboxToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ActionToolboxToolStripMenuItem.Text = "Action Toolbox"
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1796,7 +1789,6 @@ Partial Class Form1
     Friend WithEvents Label29 As Label
     Friend WithEvents Label30 As Label
     Friend WithEvents ReleaseNoteToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ReinitializeResourceToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Button4 As Button
     Friend WithEvents CheckBox3 As CheckBox

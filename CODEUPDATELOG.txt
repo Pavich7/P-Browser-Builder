@@ -1,8 +1,5 @@
-Builder Release 8.3.0
+Builder Release 8.3.1
 
 ** Release notes **
-- ADDED: Option to choose for full installer or patch installer in update section.
-- IMPROVEMENT: Updated CefSharp to 132.3.11
-- IMPROVEMENT: Updated Chromium to 132.0.6834.83
-- IMPROVEMENT: Update button will turn blue when a new version is available.
-- IMPROVEMENT: In Preference, Advanced Menu warning will only appear once per session.
+- IMPROVEMENT: Improved resource initialization, thereby speeding up installation.
+- CHANGED: (Dev) Removed Reinitialize Resource function.

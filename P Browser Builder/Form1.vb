@@ -864,8 +864,9 @@ Public Class Form1
             Dim zipPath As String = apppath + "\statecache\updatecache\pbb-resource.zip"
             Dim extractPath As String = apppath
             ZipFile.ExtractToDirectory(zipPath, extractPath)
-            Process.Start(apppath + "\resource\resinit.exe")
-            System.Threading.Thread.Sleep(30000)
+            Dim zipPath1 As String = apppath + "\resource\resourcepack\freshapp.zip"
+            Dim extractPath1 As String = apppath + "\resource\testspace"
+            ZipFile.ExtractToDirectory(zipPath1, extractPath1)
         Catch ex As Exception
             MessageBox.Show("Could not attempt to install resource! Builder need to restart!" + vbNewLine + ex.Message, "Error!")
             Application.Restart()
@@ -988,15 +989,6 @@ Public Class Form1
 
     Private Sub ReleaseNoteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReleaseNoteToolStripMenuItem.Click
         Browser.Load("https://github.com/Pavich7/P-Browser-Builder/releases/")
-    End Sub
-
-    Private Sub ReinitializeResourceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReinitializeResourceToolStripMenuItem.Click
-        Try
-            Process.Start(apppath + "\resource\resinit.exe")
-        Catch ex As Exception
-            MessageBox.Show("Initialization Failed! dlresCH is not updated!" + vbNewLine + "Please contact PavichDev Support! Click OK to restart.", "Error!")
-            Application.Restart()
-        End Try
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click

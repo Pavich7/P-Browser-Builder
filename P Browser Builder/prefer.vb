@@ -193,12 +193,9 @@ Public Class prefer
                 Dim zipPath As String = OpenFileDialog1.FileName
                 Dim extractPath As String = apppath
                 ZipFile.ExtractToDirectory(zipPath, extractPath)
-                Try
-                    Process.Start(apppath + "\resource\resinit.exe")
-                Catch ex As Exception
-                    MessageBox.Show("Initialization Failed!", "Error!")
-                    Application.Restart()
-                End Try
+                Dim zipPath1 As String = apppath + "\resource\resourcepack\freshapp.zip"
+                Dim extractPath1 As String = apppath + "\resource\testspace"
+                ZipFile.ExtractToDirectory(zipPath1, extractPath1)
                 Label7.Text = "First initializing Resource..."
                 Dim result1 As DialogResult = MessageBox.Show("Installation completed but restart required!" + vbNewLine + "Do you want to restart P Browser Builder now?", "Installation completed!", MessageBoxButtons.YesNo)
                 If (result1 = DialogResult.Yes) Then
