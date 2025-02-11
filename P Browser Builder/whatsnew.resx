@@ -123,6 +123,7 @@
 ** Release notes **
 - BREAKING: This version only support 6.5.0 or newer resource.
 - IMPROVEMENT: Improved resource initialization and structures for faster installation.
-- CHANGED: (Dev) Removed Reinitialize Resource function.</value>
+- CHANGED: (Dev) Removed Reinitialize Resource function.
+- CHANGED: Redesign what's new page design.</value>
   </data>
 </root>
