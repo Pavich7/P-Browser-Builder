@@ -50,7 +50,7 @@ Public Class prefer
             'Res Ver Check
             If System.IO.Directory.Exists(rescheck) Then
                 Dim fileReader As System.IO.StreamReader
-                fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\metadata\version.txt")
+                fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\version.txt")
                 Dim stringReader As String = fileReader.ReadLine()
                 If oresver.Contains(stringReader) Then
                     Label4.Text = "up-to-date!"
@@ -81,13 +81,10 @@ Public Class prefer
                 Dim fileReader4 As System.IO.StreamReader
                 fileReader2 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\testspace\pkgData\pkgchrome.pbad")
                 fileReader3 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\testspace\pkgData\pkgcef.pbad")
-                fileReader4 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\metadata\version.txt")
-                Dim stringReader2 As String
-                Dim stringReader3 As String
-                Dim stringReader4 As String
-                stringReader2 = fileReader2.ReadLine()
-                stringReader3 = fileReader3.ReadLine()
-                stringReader4 = fileReader4.ReadLine()
+                fileReader4 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\version.txt")
+                Dim stringReader2 As String = fileReader2.ReadLine()
+                Dim stringReader3 As String = fileReader3.ReadLine()
+                Dim stringReader4 As String = fileReader4.ReadLine()
                 Label2.Text = "Chromium : " + stringReader2
                 Label5.Text = "CefSharp : " + stringReader3
                 Label23.Text = "Version : " + stringReader4

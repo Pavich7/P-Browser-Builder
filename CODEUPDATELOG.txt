@@ -1,5 +1,6 @@
 Builder Release 8.3.1
 
 ** Release notes **
-- IMPROVEMENT: Improved resource initialization, thereby speeding up installation.
+- BREAKING: This version only support 6.5.0 or newer resource.
+- IMPROVEMENT: Improved resource initialization and structures for faster installation.
 - CHANGED: (Dev) Removed Reinitialize Resource function.

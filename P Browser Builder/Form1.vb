@@ -542,7 +542,7 @@ Public Class Form1
                     Dim lines As String() = nf1cont.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
                     If lines.Length > 1 Then oresver = lines(1)
                     Dim fileReader As System.IO.StreamReader
-                    fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\metadata\version.txt")
+                    fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\version.txt")
                     Dim stringReader As String = fileReader.ReadLine()
                     If oresver.Contains(stringReader) Then
                         Label20.Visible = False
@@ -559,7 +559,7 @@ Public Class Form1
                     Panel4.Size = New Size(265, 148)
                 End Try
                 'chkpoint
-                Dim resvcheck4 As String = apppath + "\resource\metadata\checkpoint\r640.chkp"
+                Dim resvcheck4 As String = apppath + "\resource\cpd650"
                 If Not System.IO.File.Exists(resvcheck4) Then
                     MessageBox.Show("Unload required! Resource not compatible!" + vbNewLine + "Please reinstall builder resource via preference menu.", "Resource not compatible!")
                     Button1.Enabled = False

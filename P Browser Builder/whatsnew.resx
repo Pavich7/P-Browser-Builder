@@ -118,13 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="RichTextBox1.Text" xml:space="preserve">
-    <value>Builder Release 8.3.0
+    <value>Builder Release 8.3.1
 
 ** Release notes **
-- ADDED: Option to choose for full installer or patch installer in update section.
-- IMPROVEMENT: Updated CefSharp to 132.3.11
-- IMPROVEMENT: Updated Chromium to 132.0.6834.83
-- IMPROVEMENT: Update button will turn blue when a new version is available.
-- IMPROVEMENT: In Preference, Advanced Menu warning will only appear once per session.</value>
+- BREAKING: This version only support 6.5.0 or newer resource.
+- IMPROVEMENT: Improved resource initialization and structures for faster installation.
+- CHANGED: (Dev) Removed Reinitialize Resource function.</value>
   </data>
 </root>
