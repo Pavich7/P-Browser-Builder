@@ -44,6 +44,7 @@ Public Class welcome
                 Form1.CheckBox3.Checked = fileReader.ReadLine()
                 welcomemessage.TextBox1.Text = fileReader.ReadLine()
                 welcomemessage.TextBox2.Text = fileReader.ReadLine()
+                Form1.CheckBox8.Checked = fileReader.ReadLine()
                 'aname
                 'url
                 'wwin
@@ -55,6 +56,7 @@ Public Class welcome
                 'welena
                 'msgti
                 'msgde
+                'conxme
                 Form1.Enabled = True
                 Form1.ProjnameToolStripMenuItem.Text = Form1.TextBox2.Text
                 Form1.WindowState = FormWindowState.Normal

@@ -43,6 +43,7 @@ Public Class Form1
             Dim pbprogaot As String = apppath + "\resource\testspace\appaot.pbcfg"
             Dim pbopval As String = apppath + "\resource\testspace\appopval.pbcfg"
             Dim pbhico As String = apppath + "\resource\testspace\apphico.pbcfg"
+            Dim pbcxm As String = apppath + "\resource\testspace\contextmenu.pbcfg"
             Dim testapp As String = apppath + "\resource\testspace\P Browser App.exe"
             ProgressBar1.Value = 20
             If System.IO.File.Exists(pbcfg) = True Then
@@ -58,6 +59,7 @@ Public Class Form1
                     Dim objWriter6 As New System.IO.StreamWriter(pbprogaot)
                     Dim objWriter7 As New System.IO.StreamWriter(pbopval)
                     Dim objWriter8 As New System.IO.StreamWriter(pbhico)
+                    Dim objWriter9 As New System.IO.StreamWriter(pbcxm)
                     objWriter.Write(TextBox1.Text)
                     objWriter.Close()
                     objWriter2.Write(TextBox2.Text)
@@ -89,6 +91,10 @@ Public Class Form1
                         objWriter8.Write("True")
                     End If
                     objWriter8.Close()
+                    If CheckBox8.Checked = True Then
+                        objWriter9.Write("True")
+                    End If
+                    objWriter9.Close()
                     ProgressBar1.Value = 100
                     MessageBox.Show("Build Completed! Click continue to test app." + vbNewLine + "Some features will not available in Testing.", "Build Completed!")
                     Process.Start(testapp)
@@ -191,6 +197,12 @@ Public Class Form1
                         objWriter52.Write("True")
                     End If
                     objWriter52.Close()
+                    Dim pbcxm As String = apppath + "\resource\buildspace\contextmenu.pbcfg"
+                    Dim objWriter53 As New System.IO.StreamWriter(pbcxm)
+                    If CheckBox8.Checked = True Then
+                        objWriter53.Write("True")
+                    End If
+                    objWriter53.Close()
                     Dim pbopval As String = apppath + "\resource\buildspace\appopval.pbcfg"
                     Dim objWriter511 As New System.IO.StreamWriter(pbopval)
                     objWriter511.Write(TextBox5.Text)
@@ -290,6 +302,12 @@ Public Class Form1
                         objWriter52.Write("True")
                     End If
                     objWriter52.Close()
+                    Dim pbcxm As String = apppath + "\resource\buildspace\contextmenu.pbcfg"
+                    Dim objWriter53 As New System.IO.StreamWriter(pbcxm)
+                    If CheckBox8.Checked = True Then
+                        objWriter53.Write("True")
+                    End If
+                    objWriter53.Close()
                     Dim pbopval As String = apppath + "\resource\buildspace\appopval.pbcfg"
                     Dim objWriter511 As New System.IO.StreamWriter(pbopval)
                     objWriter511.Write(TextBox5.Text)
@@ -559,7 +577,7 @@ Public Class Form1
                     Panel4.Size = New Size(265, 148)
                 End Try
                 'chkpoint
-                Dim resvcheck4 As String = apppath + "\resource\cpd650"
+                Dim resvcheck4 As String = apppath + "\resource\cpd660"
                 If Not System.IO.File.Exists(resvcheck4) Then
                     MessageBox.Show("Unload required! Resource not compatible!" + vbNewLine + "Please reinstall builder resource via preference menu.", "Resource not compatible!")
                     Button1.Enabled = False
@@ -659,6 +677,7 @@ Public Class Form1
                 CheckBox3.Checked = fileReader.ReadLine()
                 welcomemessage.TextBox1.Text = fileReader.ReadLine()
                 welcomemessage.TextBox2.Text = fileReader.ReadLine()
+                CheckBox8.Checked = fileReader.ReadLine()
                 'aname
                 'url
                 'wwin
@@ -670,6 +689,7 @@ Public Class Form1
                 'welena
                 'msgti
                 'msgde
+                'conxme
                 Me.Enabled = True
                 ProjnameToolStripMenuItem.Text = TextBox2.Text
                 Me.WindowState = FormWindowState.Normal
@@ -791,6 +811,7 @@ Public Class Form1
             CheckBox5.Checked = False
             CheckBox6.Checked = False
             CheckBox7.Checked = False
+            CheckBox8.Checked = False
             Button6.Visible = False
             CheckBox4.Visible = False
             Label24.Visible = True
@@ -1132,6 +1153,7 @@ Public Class Form1
             CheckBox5.Checked = False
             CheckBox6.Checked = False
             CheckBox7.Checked = False
+            CheckBox8.Checked = False
             Button6.Visible = False
             CheckBox4.Visible = False
             Label24.Visible = True
@@ -1254,6 +1276,7 @@ Public Class Form1
                             writer.WriteLine(CheckBox3.CheckState)
                             writer.WriteLine(welcomemessage.TextBox1.Text)
                             writer.WriteLine(welcomemessage.TextBox2.Text)
+                            writer.WriteLine(CheckBox8.CheckState)
                         End Using
                         myStream.Close()
                         MessageBox.Show("Saved to file!", "Completed!")
@@ -1270,6 +1293,7 @@ Public Class Form1
                 'welena
                 'msgti
                 'msgde
+                'conxme
                 ProjnameToolStripMenuItem.Text = TextBox2.Text
             Catch ex As Exception
                 MessageBox.Show("Save Failed!" & vbNewLine & ex.Message, "Error!")
@@ -1302,6 +1326,7 @@ Public Class Form1
                     CheckBox5.Checked = False
                     CheckBox6.Checked = False
                     CheckBox7.Checked = False
+                    CheckBox8.Checked = False
                     Button6.Visible = False
                     CheckBox4.Visible = False
                     Label24.Visible = True
@@ -1323,6 +1348,7 @@ Public Class Form1
                     CheckBox3.Checked = fileReader.ReadLine()
                     welcomemessage.TextBox1.Text = fileReader.ReadLine()
                     welcomemessage.TextBox2.Text = fileReader.ReadLine()
+                    CheckBox8.Checked = fileReader.ReadLine()
                     ProjnameToolStripMenuItem.Text = TextBox2.Text
                     fileReader.Close()
                 Catch ex As Exception
@@ -1339,6 +1365,7 @@ Public Class Form1
                 'welena
                 'msgti
                 'msgde
+                'conxme
             End If
         End If
     End Sub
@@ -1457,6 +1484,7 @@ Public Class Form1
                 CheckBox5.Checked = False
                 CheckBox6.Checked = False
                 CheckBox7.Checked = False
+                CheckBox8.Checked = False
                 Button6.Visible = False
                 CheckBox4.Visible = False
                 Label24.Visible = True
@@ -1478,6 +1506,7 @@ Public Class Form1
                 CheckBox3.Checked = fileReader.ReadLine()
                 welcomemessage.TextBox1.Text = fileReader.ReadLine()
                 welcomemessage.TextBox2.Text = fileReader.ReadLine()
+                CheckBox8.Checked = fileReader.ReadLine()
                 ProjnameToolStripMenuItem.Text = TextBox2.Text
                 fileReader.Close()
             Catch ex As Exception
@@ -1494,6 +1523,7 @@ Public Class Form1
             'welena
             'msgti
             'msgde
+            'conxme
         End If
     End Sub
 

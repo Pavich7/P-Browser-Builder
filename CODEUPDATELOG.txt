@@ -1,7 +1,11 @@
-Builder Release 8.3.1
+Builder Release 8.4.0
+
+** Release Highlights **
+- HIGHLIGHTS: New option to disable browser context menu.
+
+** Breaking Changes **
+- BREAKING: This version will not support saves from previous versions..
 
 ** Release notes **
-- BREAKING: This version only support 6.5.0 or newer resource.
-- IMPROVEMENT: Improved resource initialization and structures for faster installation.
-- CHANGED: (Dev) Removed Reinitialize Resource function.
-- CHANGED: Redesign what's new page design.
+- IMPROVEMENT: Updated CefSharp to 133.4.21
+- IMPROVEMENT: Updated Chromium to 133.0.6943.127
