@@ -4,7 +4,8 @@ Builder Release 8.4.0
 - HIGHLIGHTS: New option to disable browser context menu.
 
 ** Breaking Changes **
-- BREAKING: This version will not support saves from previous versions..
+- BREAKING: This version will not support saves from previous versions.
+- BREAKING: This version only support 6.6.0 or newer resource.
 
 ** Release notes **
 - IMPROVEMENT: Updated CefSharp to 133.4.21
