@@ -770,6 +770,10 @@ Public Class Form1
             Label12.Text = "News Feed disabled"
             Label13.Text = "News Feed has been disabled. You can re-enable in feed setting."
         End If
+        Dim rscheck As String = apppath + "\resource"
+        If Not System.IO.Directory.Exists(rscheck) Then
+            Label7.Text = "Not ready, resources required."
+        End If
         fileReader999.Close()
     End Sub
 

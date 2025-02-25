@@ -1286,9 +1286,9 @@ Partial Class Form1
         'Button4
         '
         Me.Button4.Font = New System.Drawing.Font("Segoe UI Semilight", 8.0!)
-        Me.Button4.Location = New System.Drawing.Point(256, 205)
+        Me.Button4.Location = New System.Drawing.Point(274, 205)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(68, 29)
+        Me.Button4.Size = New System.Drawing.Size(54, 29)
         Me.Button4.TabIndex = 34
         Me.Button4.Text = "Edit"
         Me.Button4.UseVisualStyleBackColor = True
@@ -1307,7 +1307,7 @@ Partial Class Form1
         'Button5
         '
         Me.Button5.Font = New System.Drawing.Font("Segoe UI Semilight", 8.0!)
-        Me.Button5.Location = New System.Drawing.Point(196, 205)
+        Me.Button5.Location = New System.Drawing.Point(214, 205)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(54, 29)
         Me.Button5.TabIndex = 36
