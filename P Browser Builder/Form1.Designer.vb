@@ -176,6 +176,7 @@ Partial Class Form1
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.CheckBox8 = New System.Windows.Forms.CheckBox()
+        Me.NavigationBarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -269,7 +270,7 @@ Partial Class Form1
         '
         'ViewToolStripMenuItem
         '
-        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SidePanelToolStripMenuItem, Me.DesignViewToolStripMenuItem, Me.StartLogToolStripMenuItem, Me.ActionToolboxToolStripMenuItem})
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SidePanelToolStripMenuItem, Me.DesignViewToolStripMenuItem, Me.StartLogToolStripMenuItem, Me.ActionToolboxToolStripMenuItem, Me.NavigationBarToolStripMenuItem})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
         Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.ViewToolStripMenuItem.Text = "View"
@@ -1649,6 +1650,15 @@ Partial Class Form1
         Me.CheckBox8.Text = "Disable browser context menu"
         Me.CheckBox8.UseVisualStyleBackColor = True
         '
+        'NavigationBarToolStripMenuItem
+        '
+        Me.NavigationBarToolStripMenuItem.Checked = True
+        Me.NavigationBarToolStripMenuItem.CheckOnClick = True
+        Me.NavigationBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.NavigationBarToolStripMenuItem.Name = "NavigationBarToolStripMenuItem"
+        Me.NavigationBarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.NavigationBarToolStripMenuItem.Text = "Navigation Bar"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1885,4 +1895,5 @@ Partial Class Form1
     Friend WithEvents Panel1 As Panel
     Friend WithEvents ActionToolboxToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CheckBox8 As CheckBox
+    Friend WithEvents NavigationBarToolStripMenuItem As ToolStripMenuItem
 End Class

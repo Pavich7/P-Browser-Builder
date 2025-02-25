@@ -8,5 +8,7 @@ Builder Release 8.4.0
 - BREAKING: This version only support 6.6.0 or newer resource.
 
 ** Release notes **
+- ADDED: Flush log will also clear current logged content.
+- ADDED: New option to hide Navigation Bar in View Menu.
 - IMPROVEMENT: Updated CefSharp to 133.4.21
 - IMPROVEMENT: Updated Chromium to 133.0.6943.127

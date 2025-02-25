@@ -1242,6 +1242,7 @@ Public Class Form1
             System.IO.Directory.CreateDirectory(apppath + "\resource\testspace\startlog")
             ProgressBar1.Value = 100
             Label39.Visible = False
+            RichTextBox1.Text = "Logs flushed! Start a test again to view app start log..."
             Label7.Text = "Log flush completed!"
             Snooze(3)
             ProgressBar1.Value = 0
@@ -1540,6 +1541,20 @@ Public Class Form1
             Panel7.Visible = False
         Else
             Panel7.Visible = True
+        End If
+    End Sub
+
+    Private Sub NavigationBarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NavigationBarToolStripMenuItem.Click
+        If NavigationBarToolStripMenuItem.Checked = False Then
+            Label9.Visible = False
+            Label21.Visible = False
+            Label22.Visible = False
+            PictureBox11.Visible = False
+        Else
+            Label9.Visible = True
+            Label21.Visible = True
+            Label22.Visible = True
+            PictureBox11.Visible = True
         End If
     End Sub
 End Class

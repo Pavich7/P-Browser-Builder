@@ -118,12 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="RichTextBox1.Text" xml:space="preserve">
-    <value>Builder Release 8.3.1
+    <value>Builder Release 8.4.0
+
+** Release Highlights **
+- HIGHLIGHTS: New option to disable browser context menu.
+
+** Breaking Changes **
+- BREAKING: This version will not support saves from previous versions.
+- BREAKING: This version only support 6.6.0 or newer resource.
 
 ** Release notes **
-- BREAKING: This version only support 6.5.0 or newer resource.
-- IMPROVEMENT: Improved resource initialization and structures for faster installation.
-- CHANGED: (Dev) Removed Reinitialize Resource function.
-- CHANGED: Redesign what's new page design.</value>
+- ADDED: Flush log will also clear current logged content.
+- ADDED: New option to hide Navigation Bar in View Menu.
+- IMPROVEMENT: Updated CefSharp to 133.4.21
+- IMPROVEMENT: Updated Chromium to 133.0.6943.127</value>
   </data>
 </root>
