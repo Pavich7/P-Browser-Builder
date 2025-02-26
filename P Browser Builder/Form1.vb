@@ -1290,7 +1290,7 @@ Public Class Form1
                             writer.WriteLine(RadioButton3.Checked)
                         End Using
                         myStream.Close()
-                        MessageBox.Show("Saved to file!", "Completed!")
+                        MessageBox.Show("Saved to file!", "Completed!", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     End If
                 End If
                 'aname

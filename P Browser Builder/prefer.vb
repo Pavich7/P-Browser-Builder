@@ -237,7 +237,7 @@ Public Class prefer
     End Sub
 
     Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
-        MessageBox.Show("To update resource, please uninstall and reinstall resource!" + vbNewLine + "Relaunch preference to recheck for update.", "Info")
+        MessageBox.Show("You can update resource by clicking update button below News Feed section.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click

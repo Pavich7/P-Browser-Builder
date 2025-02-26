@@ -134,6 +134,7 @@
 - IMPROVEMENT: Updated CefSharp to 133.4.21
 - IMPROVEMENT: Updated Chromium to 133.0.6943.127
 - IMPROVEMENT: Minimal User Interface improvements.
-- FIXED: Status will show as not ready when resource not available.</value>
+- FIXED: Status will show as not ready when resource not available.
+- FIXED: Fixed outdated update instruction in Resource Preference.</value>
   </data>
 </root>
