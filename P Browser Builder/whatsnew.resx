@@ -122,6 +122,7 @@
 
 ** Release Highlights **
 - HIGHLIGHTS: New option to disable browser context menu.
+- HIGHLIGHTS: Build Mode selection can now be saved.
 
 ** Breaking Changes **
 - BREAKING: This version will not support saves from previous versions.

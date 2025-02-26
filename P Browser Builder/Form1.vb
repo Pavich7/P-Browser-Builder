@@ -678,6 +678,8 @@ Public Class Form1
                 welcomemessage.TextBox1.Text = fileReader.ReadLine()
                 welcomemessage.TextBox2.Text = fileReader.ReadLine()
                 CheckBox8.Checked = fileReader.ReadLine()
+                RadioButton2.Checked = fileReader.ReadLine()
+                RadioButton3.Checked = fileReader.ReadLine()
                 'aname
                 'url
                 'wwin
@@ -690,6 +692,8 @@ Public Class Form1
                 'msgti
                 'msgde
                 'conxme
+                'm1chk
+                'm2chk
                 Me.Enabled = True
                 ProjnameToolStripMenuItem.Text = TextBox2.Text
                 Me.WindowState = FormWindowState.Normal
@@ -1282,6 +1286,8 @@ Public Class Form1
                             writer.WriteLine(welcomemessage.TextBox1.Text)
                             writer.WriteLine(welcomemessage.TextBox2.Text)
                             writer.WriteLine(CheckBox8.CheckState)
+                            writer.WriteLine(RadioButton2.Checked)
+                            writer.WriteLine(RadioButton3.Checked)
                         End Using
                         myStream.Close()
                         MessageBox.Show("Saved to file!", "Completed!")
@@ -1299,6 +1305,8 @@ Public Class Form1
                 'msgti
                 'msgde
                 'conxme
+                'm1chk
+                'm2chk
                 ProjnameToolStripMenuItem.Text = TextBox2.Text
             Catch ex As Exception
                 MessageBox.Show("Save Failed!" & vbNewLine & ex.Message, "Error!")
@@ -1354,6 +1362,8 @@ Public Class Form1
                     welcomemessage.TextBox1.Text = fileReader.ReadLine()
                     welcomemessage.TextBox2.Text = fileReader.ReadLine()
                     CheckBox8.Checked = fileReader.ReadLine()
+                    RadioButton2.Checked = fileReader.ReadLine()
+                    RadioButton3.Checked = fileReader.ReadLine()
                     ProjnameToolStripMenuItem.Text = TextBox2.Text
                     fileReader.Close()
                 Catch ex As Exception
@@ -1371,6 +1381,8 @@ Public Class Form1
                 'msgti
                 'msgde
                 'conxme
+                'm1chk
+                'm2chk
             End If
         End If
     End Sub
@@ -1512,6 +1524,8 @@ Public Class Form1
                 welcomemessage.TextBox1.Text = fileReader.ReadLine()
                 welcomemessage.TextBox2.Text = fileReader.ReadLine()
                 CheckBox8.Checked = fileReader.ReadLine()
+                RadioButton2.Checked = fileReader.ReadLine()
+                RadioButton3.Checked = fileReader.ReadLine()
                 ProjnameToolStripMenuItem.Text = TextBox2.Text
                 fileReader.Close()
             Catch ex As Exception
@@ -1529,6 +1543,8 @@ Public Class Form1
             'msgti
             'msgde
             'conxme
+            'm1chk
+            'm2chk
         End If
     End Sub
 

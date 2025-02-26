@@ -27,6 +27,8 @@
             welcomemessage.TextBox1.Text = fileReader.ReadLine()
             welcomemessage.TextBox2.Text = fileReader.ReadLine()
             Form1.CheckBox8.Checked = fileReader.ReadLine()
+            Form1.RadioButton2.Checked = fileReader.ReadLine()
+            Form1.RadioButton3.Checked = fileReader.ReadLine()
             'aname
             'url
             'wwin
@@ -39,6 +41,8 @@
             'msgti
             'msgde
             'conxme
+            'm1chk
+            'm2chk
             Form1.Enabled = True
             Form1.ProjnameToolStripMenuItem.Text = Form1.TextBox2.Text
             Form1.WindowState = FormWindowState.Normal
