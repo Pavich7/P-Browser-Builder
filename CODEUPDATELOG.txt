@@ -17,5 +17,6 @@ Builder Release 8.4.0
 - IMPROVEMENT: Minor User Interface improvements.
 - FIXED: Status will show as not ready when resource not available.
 - FIXED: Fixed outdated update instruction in Resource Preference.
+- FIXED: Width, Height, Opacity values will now only accept numbers.
 - CHANGED: Replace Setting text button in menubar with Setting icon.
 - CHANGED: Removed Diagnostic Setting and News Feed Setting buttons.

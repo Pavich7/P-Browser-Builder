@@ -1054,6 +1054,7 @@ Public Class Form1
         TextBox1.Text = ""
         TextBox2.Text = ""
         CheckBox3.Checked = False
+        CheckBox8.Checked = False
     End Sub
 
     Private Sub PictureBox8_Click(sender As Object, e As EventArgs) Handles PictureBox8.Click
@@ -1566,5 +1567,13 @@ Public Class Form1
 
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click, PreferenceToolStripMenuItem.Click
         prefer.Show()
+    End Sub
+
+    Private Sub TextBox_KeyPress_Check(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox3.KeyPress, TextBox4.KeyPress, TextBox5.KeyPress
+        If Asc(e.KeyChar) <> 8 Then
+            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
+                e.Handled = True
+            End If
+        End If
     End Sub
 End Class
