@@ -1012,17 +1012,8 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub Label30_Click(sender As Object, e As EventArgs) Handles Label30.Click
-        prefer.Show()
-    End Sub
-
     Private Sub ReleaseNoteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReleaseNoteToolStripMenuItem.Click
         Browser.Load("https://github.com/Pavich7/P-Browser-Builder/releases/")
-    End Sub
-
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-        prefer.Show()
-        prefer.TabControl1.SelectedIndex = 3
     End Sub
 
     Private Sub CheckBox3_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox3.CheckedChanged
@@ -1188,11 +1179,6 @@ Public Class Form1
 
     Private Sub PictureBox11_Click(sender As Object, e As EventArgs) Handles PictureBox11.Click
         Browser.Reload
-    End Sub
-
-    Private Sub PictureBox12_Click(sender As Object, e As EventArgs) Handles PictureBox12.Click
-        prefer.Show()
-        prefer.TabControl1.SelectedIndex = 2
     End Sub
 
     Private Sub ResetWhatsNewStateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetWhatsNewStateToolStripMenuItem.Click
@@ -1576,5 +1562,9 @@ Public Class Form1
             Label22.Visible = True
             PictureBox11.Visible = True
         End If
+    End Sub
+
+    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click, PreferenceToolStripMenuItem.Click
+        prefer.Show()
     End Sub
 End Class

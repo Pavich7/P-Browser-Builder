@@ -11,8 +11,11 @@ Builder Release 8.4.0
 ** Release notes **
 - ADDED: Flush log will also clear current logged content.
 - ADDED: New option to hide Navigation Bar in View Menu.
+- ADDED: Open Preference Menu in file option.
 - IMPROVEMENT: Updated CefSharp to 133.4.21
 - IMPROVEMENT: Updated Chromium to 133.0.6943.127
-- IMPROVEMENT: Minimal User Interface improvements.
+- IMPROVEMENT: Minor User Interface improvements.
 - FIXED: Status will show as not ready when resource not available.
 - FIXED: Fixed outdated update instruction in Resource Preference.
+- CHANGED: Replace Setting text button in menubar with Setting icon.
+- CHANGED: Removed Diagnostic Setting and News Feed Setting buttons.
