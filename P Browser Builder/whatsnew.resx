@@ -117,28 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RichTextBox1.Text" xml:space="preserve">
-    <value>Builder Release 8.4.0
-
-** Release Highlights **
-- HIGHLIGHTS: New option to disable browser context menu.
-- HIGHLIGHTS: Build Mode selection can now be saved.
-
-** Breaking Changes **
-- BREAKING: This version will not support saves from previous versions.
-- BREAKING: This version only support 6.6.0 or newer resource.
-
-** Release notes **
-- ADDED: Flush log will also clear current logged content.
-- ADDED: New option to hide Navigation Bar in View Menu.
-- ADDED: Open Preference Menu in file option.
-- IMPROVEMENT: Updated CefSharp to 133.4.21
-- IMPROVEMENT: Updated Chromium to 133.0.6943.127
-- IMPROVEMENT: Minor User Interface improvements.
-- FIXED: Status will show as not ready when resource not available.
-- FIXED: Fixed outdated update instruction in Resource Preference.
-- FIXED: Width, Height, Opacity values will now only accept numbers.
-- CHANGED: Replace Setting text button in menubar with Setting icon.
-- CHANGED: Removed Diagnostic Setting and News Feed Setting buttons.</value>
-  </data>
 </root>

@@ -319,6 +319,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="p_browser_icon_001_rq2_icon.ico" />
+    <None Include="Resources\welmsgins.png" />
     <None Include="packages.config" />
     <None Include="Resources\check.png" />
     <None Include="Resources\hammer.png" />
