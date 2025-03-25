@@ -117,4 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RichTextBox1.Text" xml:space="preserve">
+    <value>Builder Release 8.5.0
+
+** Release notes **
+- ADDED: New instruction with picture in Welcome Message Setting.
+- IMPROVEMENT: Updated CefSharp to 134.3.60
+- IMPROVEMENT: Updated Chromium to 134.0.6998.118</value>
+  </data>
 </root>
