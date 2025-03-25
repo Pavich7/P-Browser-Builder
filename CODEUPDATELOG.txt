@@ -2,5 +2,6 @@ Builder Release 8.5.0
 
 ** Release notes **
 - ADDED: New instruction with picture in Welcome Message Setting.
+- IMPROVEMENT: Redesign Agreement Tab in Welcome to P Browser Builder.
 - IMPROVEMENT: Updated CefSharp to 134.3.60
 - IMPROVEMENT: Updated Chromium to 134.0.6998.118

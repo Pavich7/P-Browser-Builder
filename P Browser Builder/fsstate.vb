@@ -13,12 +13,16 @@
     End Sub
 
     Private Sub Label29_Click(sender As Object, e As EventArgs) Handles Label29.Click
-        Dim result As DialogResult = MessageBox.Show("I have read and agree with the end user license agreement.", "Agreement", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
-        If (result = DialogResult.Yes) Then
-            stage = 2
-            TabPage3.Enabled = True
-            TabControl1.SelectedTab = TabPage3
-            TabPage2.Enabled = False
+        If CheckBox3.Checked = True And CheckBox4.Checked = True Then
+            Dim result As DialogResult = MessageBox.Show("I have read and agree with these agreement.", "Agreement", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+            If (result = DialogResult.Yes) Then
+                stage = 2
+                TabPage3.Enabled = True
+                TabControl1.SelectedTab = TabPage3
+                TabPage2.Enabled = False
+            End If
+        Else
+            MessageBox.Show("You need to agree to both agreement!", "Agreement")
         End If
     End Sub
     Protected Overrides ReadOnly Property CreateParams() As CreateParams
@@ -84,5 +88,13 @@
         ElseIf stage = 1 Then
             TabControl1.SelectedTab = TabPage2
         End If
+    End Sub
+
+    Private Sub Label11_Click(sender As Object, e As EventArgs) Handles Label11.Click
+        Process.Start("https://github.com/Pavich7/P-Browser-Builder/blob/master/EULA.md")
+    End Sub
+
+    Private Sub Label12_Click(sender As Object, e As EventArgs) Handles Label12.Click
+        Process.Start("https://github.com/Pavich7/P-Browser-Builder/blob/master/LICENSE.md")
     End Sub
 End Class
