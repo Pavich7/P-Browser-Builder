@@ -1471,4 +1471,29 @@ Public Class Form1
             End If
         End If
     End Sub
+
+    Private Sub CheckForUpdatesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CheckForUpdatesToolStripMenuItem.Click
+        Dim obuiver As String
+        Dim client As WebClient = New WebClient()
+        Dim nf1cont As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v3/cfuver.txt")
+        Dim lines As String() = nf1cont.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
+        If lines.Length > 0 Then obuiver = lines(0)
+        Dim bfileReader As System.IO.StreamReader
+        bfileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\metadata\version.txt")
+        Dim bstringReader As String = bfileReader.ReadLine()
+        If obuiver.Contains(bstringReader) Then
+            MessageBox.Show("Latest version installed!", "Update Utility", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Else
+            Dim result As DialogResult = MessageBox.Show("Update available! Do you wish to download an update to the latest version?", "Confirmation?", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If (result = DialogResult.Yes) Then
+                Dim patchr As DialogResult = MessageBox.Show("Would you Like to download the patch? It's smaller, as it only replaces changed files. A full download provides a fresh install. Both keeps your settings. " + vbNewLine + "Note: Patch updates are only supported for the latest release before the new one. " + vbNewLine + "Select YES for the patch or NO for the full download.", "Update options...", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
+                If (patchr = DialogResult.Yes) Then
+                    Process.Start("https://github.com/Pavich7/P-Browser-Builder/releases/latest/download/Update.P.Browser.Builder.exe")
+                ElseIf (patchr = DialogResult.No) Then
+                    Process.Start("https://github.com/Pavich7/P-Browser-Builder/releases/latest/download/Install.P.Browser.Builder.exe")
+                End If
+            End If
+        End If
+        bfileReader.Close()
+    End Sub
 End Class

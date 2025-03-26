@@ -26,43 +26,6 @@ Public Class prefer
         TotalSize = 0
         Dim TheSize2 As Long = GetDirSize(apppath + "\statecache\updatecache\")
         Label52.Text = FormatNumber(TheSize2 / 1024 / 1024, 1) & " MB"
-        Try
-            Dim obuiver As String
-            Dim oresver As String
-            Dim client As WebClient = New WebClient()
-            Dim nf1cont As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v3/cfuver.txt")
-            Dim lines As String() = nf1cont.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
-            If lines.Length > 0 Then obuiver = lines(0)
-            If lines.Length > 1 Then oresver = lines(1)
-
-            'Build Ver Check
-            Dim bfileReader As System.IO.StreamReader
-            bfileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\metadata\version.txt")
-            Dim bstringReader As String = bfileReader.ReadLine()
-            If obuiver.Contains(bstringReader) Then
-                Label30.Text = "up-to-date!"
-                Label30.Enabled = False
-            Else
-                Label30.Text = "Update available! (" + obuiver + ")"
-            End If
-            bfileReader.Close()
-
-            'Res Ver Check
-            If System.IO.Directory.Exists(rescheck) Then
-                Dim fileReader As System.IO.StreamReader
-                fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\version.txt")
-                Dim stringReader As String = fileReader.ReadLine()
-                If oresver.Contains(stringReader) Then
-                    Label4.Text = "up-to-date!"
-                    Label4.Enabled = False
-                Else
-                    Label4.Text = "Update available! (" + oresver + ")"
-                End If
-                fileReader.Close()
-            End If
-        Catch ex As Exception
-            Label30.Text = "Error checking for update!"
-        End Try
         If Not System.IO.Directory.Exists(rescheck) Then
             Label2.Text = "Chromium : N/A"
             Label5.Text = "CefSharp : N/A"
@@ -73,7 +36,6 @@ Public Class prefer
             Label23.Enabled = False
             Label7.Text = "Delete currently installed resource. (Resource not installed)"
             Label8.Enabled = False
-            Label4.Text = "Resource not installed"
         Else
             Try
                 Dim fileReader2 As System.IO.StreamReader
@@ -236,10 +198,6 @@ Public Class prefer
         End If
     End Sub
 
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
-        MessageBox.Show("You can update resource by clicking update button below News Feed section.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
-    End Sub
-
     Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
         Dim result As DialogResult = MessageBox.Show("Do you wish to reset all setting?" + vbNewLine + "This cannot be undone!", "You sure about this?", MessageBoxButtons.YesNo)
         If (result = DialogResult.Yes) Then
@@ -248,18 +206,6 @@ Public Class prefer
             objWriter.Write("True")
             objWriter.Close()
             Application.Restart()
-        End If
-    End Sub
-
-    Private Sub Label30_Click(sender As Object, e As EventArgs) Handles Label30.Click
-        Dim result As DialogResult = MessageBox.Show("Do you wish to download an update to the latest version?", "Confirmation?", MessageBoxButtons.YesNo)
-        If (result = DialogResult.Yes) Then
-            Dim patchr As DialogResult = MessageBox.Show("Would you Like to download the patch? It's smaller, as it only replaces changed files. A full download provides a fresh install. Both keeps your settings. " + vbNewLine + "Note: Patch updates are only supported for the latest release before the new one. " + vbNewLine + "Select YES for the patch or NO for the full download.", "Update options...", MessageBoxButtons.YesNoCancel)
-            If (patchr = DialogResult.Yes) Then
-                Process.Start("https://github.com/Pavich7/P-Browser-Builder/releases/latest/download/Update.P.Browser.Builder.exe")
-            ElseIf (patchr = DialogResult.No) Then
-                Process.Start("https://github.com/Pavich7/P-Browser-Builder/releases/latest/download/Install.P.Browser.Builder.exe")
-            End If
         End If
     End Sub
 

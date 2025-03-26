@@ -33,7 +33,6 @@ Partial Class prefer
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label30 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Label56 = New System.Windows.Forms.Label()
@@ -91,7 +90,6 @@ Partial Class prefer
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -226,19 +224,6 @@ Partial Class prefer
         Me.Label15.TabIndex = 64
         Me.Label15.Text = "Reset builder setting"
         '
-        'Label30
-        '
-        Me.Label30.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label30.AutoSize = True
-        Me.Label30.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label30.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label30.Location = New System.Drawing.Point(89, 115)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(45, 21)
-        Me.Label30.TabIndex = 67
-        Me.Label30.Text = "udab"
-        '
         'TabControl1
         '
         Me.TabControl1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
@@ -263,7 +248,6 @@ Partial Class prefer
         Me.TabPage1.Controls.Add(Me.CheckBox2)
         Me.TabPage1.Controls.Add(Me.Label54)
         Me.TabPage1.Controls.Add(Me.Label55)
-        Me.TabPage1.Controls.Add(Me.Label30)
         Me.TabPage1.Controls.Add(Me.Label13)
         Me.TabPage1.Controls.Add(Me.Label14)
         Me.TabPage1.Controls.Add(Me.Label15)
@@ -809,7 +793,6 @@ Partial Class prefer
         Me.TabPage5.Controls.Add(Me.Label5)
         Me.TabPage5.Controls.Add(Me.Label11)
         Me.TabPage5.Controls.Add(Me.Label6)
-        Me.TabPage5.Controls.Add(Me.Label4)
         Me.TabPage5.Controls.Add(Me.Label7)
         Me.TabPage5.Controls.Add(Me.Label8)
         Me.TabPage5.Controls.Add(Me.Label12)
@@ -946,19 +929,6 @@ Partial Class prefer
         Me.Label6.TabIndex = 69
         Me.Label6.Text = "Uninstall Resource"
         '
-        'Label4
-        '
-        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label4.AutoSize = True
-        Me.Label4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label4.Location = New System.Drawing.Point(110, 17)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(36, 21)
-        Me.Label4.TabIndex = 75
-        Me.Label4.Text = "uda"
-        '
         'Label7
         '
         Me.Label7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -1066,7 +1036,6 @@ Partial Class prefer
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
-    Friend WithEvents Label30 As Label
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
@@ -1102,7 +1071,6 @@ Partial Class prefer
     Friend WithEvents Label5 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label4 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label12 As Label
