@@ -1446,7 +1446,7 @@ Partial Class Form1
         Me.TabPage2.Location = New System.Drawing.Point(4, 26)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(551, 647)
+        Me.TabPage2.Size = New System.Drawing.Size(551, 634)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Start Log"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -1455,11 +1455,12 @@ Partial Class Form1
         '
         Me.Button9.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Button9.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button9.Location = New System.Drawing.Point(18, 499)
+        Me.Button9.Location = New System.Drawing.Point(18, 597)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(98, 24)
         Me.Button9.TabIndex = 65
         Me.Button9.Text = "Flush logs"
+        Me.ToolTip1.SetToolTip(Me.Button9, "Delete all log files.")
         Me.Button9.UseVisualStyleBackColor = True
         '
         'Label39
@@ -1473,6 +1474,7 @@ Partial Class Form1
         Me.Label39.Size = New System.Drawing.Size(29, 17)
         Me.Label39.TabIndex = 57
         Me.Label39.Text = "logf"
+        Me.ToolTip1.SetToolTip(Me.Label39, "Open log in Notepad.")
         '
         'Label6
         '
@@ -1494,7 +1496,7 @@ Partial Class Form1
         Me.RichTextBox1.Location = New System.Drawing.Point(18, 57)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ReadOnly = True
-        Me.RichTextBox1.Size = New System.Drawing.Size(513, 434)
+        Me.RichTextBox1.Size = New System.Drawing.Size(513, 534)
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = "Welcome to Start Log Viewer!" & Global.Microsoft.VisualBasic.ChrW(10) & "Please start a test to view app start log..."
         '
@@ -1504,12 +1506,13 @@ Partial Class Form1
         Me.PictureBox14.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox14.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox14.Image = Global.P_Browser_Builder.My.Resources.Resources.reload
-        Me.PictureBox14.Location = New System.Drawing.Point(489, 499)
+        Me.PictureBox14.Location = New System.Drawing.Point(489, 597)
         Me.PictureBox14.Name = "PictureBox14"
         Me.PictureBox14.Size = New System.Drawing.Size(15, 23)
         Me.PictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox14.TabIndex = 57
         Me.PictureBox14.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox14, "Reload log.")
         '
         'PictureBox13
         '
@@ -1517,12 +1520,13 @@ Partial Class Form1
         Me.PictureBox13.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox13.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox13.Image = Global.P_Browser_Builder.My.Resources.Resources.copy
-        Me.PictureBox13.Location = New System.Drawing.Point(515, 499)
+        Me.PictureBox13.Location = New System.Drawing.Point(515, 597)
         Me.PictureBox13.Name = "PictureBox13"
         Me.PictureBox13.Size = New System.Drawing.Size(16, 23)
         Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox13.TabIndex = 58
         Me.PictureBox13.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox13, "Copy log to clipboard.")
         '
         'Label37
         '
@@ -1802,7 +1806,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Panel10)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.MinimumSize = New System.Drawing.Size(800, 630)
+        Me.MinimumSize = New System.Drawing.Size(900, 630)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "P Browser Builder"

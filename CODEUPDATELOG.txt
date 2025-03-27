@@ -16,6 +16,7 @@ Builder Release 9.0.0
 - ADDED: Added more icons to various message boxes.
 - ADDED: New simulated Window Control in Design View.
 - ADDED: Enable Fixed Window will now disable maximize button in Design View.
+- ADDED: Window width can be narrowed down more when the side panels are hidden.
 - ADDED: Builder now able to remember window size.
 - ADDED: Ability to generate missing folder during structure verification process.
 - IMPROVEMENT: Redesign Agreement Tab in Welcome to P Browser Builder.

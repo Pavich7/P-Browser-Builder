@@ -463,6 +463,7 @@ Public Class Form1
             ProgressBar1.Visible = True
             If stringReader111 = "True" Then
                 SidePanelToolStripMenuItem.Checked = False
+                Me.MinimumSize = New Size(580, 630)
                 Panel6.Hide()
                 Me.WindowState = FormWindowState.Normal
                 Me.Size = New Size(1232, 646)
@@ -1246,6 +1247,7 @@ Public Class Form1
         SidePanelToolStripMenuItem.Checked = False
         Me.WindowState = FormWindowState.Normal
         Me.Size = New Size(1232, 646)
+        Me.MinimumSize = New Size(580, 630)
         TabControl1.Width = 872
         If hidenoti = True Then
             MessageBox.Show("You can unhide side panel by click on View > Side Panel" + vbNewLine + "or using Ctrl + R Shortcut", "Notification")
@@ -1270,11 +1272,13 @@ Public Class Form1
     Private Sub SidePanelToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SidePanelToolStripMenuItem.CheckedChanged
         If SidePanelToolStripMenuItem.Checked = True Then
             Panel6.Show()
+            Me.MinimumSize = New Size(900, 630)
             Me.WindowState = FormWindowState.Normal
             Me.Size = New Size(1232, 646)
             TabControl1.Width = 559
         Else
             Panel6.Hide()
+            Me.MinimumSize = New Size(580, 630)
             Me.WindowState = FormWindowState.Normal
             Me.Size = New Size(1232, 646)
             TabControl1.Width = 872
