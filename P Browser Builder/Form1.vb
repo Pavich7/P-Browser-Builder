@@ -1489,4 +1489,12 @@ Public Class Form1
             TextBox6.Visible = False
         End If
     End Sub
+
+    Private Sub CheckBox5_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox5.CheckedChanged
+        If CheckBox5.Checked = True Then
+            Label43.Enabled = False
+        Else
+            Label43.Enabled = True
+        End If
+    End Sub
 End Class

@@ -134,6 +134,8 @@
 - ADDED: New instruction with picture in Welcome Message Setting.
 - ADDED: New manual Check for Updates in Help menu.
 - ADDED: Added more icons to various message boxes.
+- ADDED: New simulated Window Control in Design View.
+- ADDED: Enable Fixed Window will now disable maximize button in Design View.
 - ADDED: Builder now able to remember window size.
 - ADDED: Ability to generate missing folder during structure verification process.
 - IMPROVEMENT: Redesign Agreement Tab in Welcome to P Browser Builder.
