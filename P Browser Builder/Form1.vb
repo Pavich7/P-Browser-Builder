@@ -1422,8 +1422,14 @@ Public Class Form1
     Private Sub ActionToolboxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ActionToolboxToolStripMenuItem.Click
         If ActionToolboxToolStripMenuItem.Checked = False Then
             Panel7.Visible = False
+            Me.WindowState = FormWindowState.Normal
+            Me.Size = New Size(1232, 646)
+            Panel10.Height = 500
         Else
             Panel7.Visible = True
+            Me.WindowState = FormWindowState.Normal
+            Me.Size = New Size(1232, 646)
+            Panel10.Height = 450
         End If
     End Sub
 

@@ -92,8 +92,11 @@ Partial Class Form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Label44 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.Label45 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -182,9 +185,6 @@ Partial Class Form1
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Label43 = New System.Windows.Forms.Label()
-        Me.Label44 = New System.Windows.Forms.Label()
-        Me.Label45 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -299,7 +299,7 @@ Partial Class Form1
         Me.SidePanelToolStripMenuItem.CheckOnClick = True
         Me.SidePanelToolStripMenuItem.Name = "SidePanelToolStripMenuItem"
         Me.SidePanelToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
-        Me.SidePanelToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.SidePanelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SidePanelToolStripMenuItem.Text = "Side Panel"
         '
         'DesignViewToolStripMenuItem
@@ -308,7 +308,7 @@ Partial Class Form1
         Me.DesignViewToolStripMenuItem.CheckOnClick = True
         Me.DesignViewToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.DesignViewToolStripMenuItem.Name = "DesignViewToolStripMenuItem"
-        Me.DesignViewToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.DesignViewToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.DesignViewToolStripMenuItem.Text = "Design View"
         '
         'StartLogToolStripMenuItem
@@ -317,7 +317,7 @@ Partial Class Form1
         Me.StartLogToolStripMenuItem.CheckOnClick = True
         Me.StartLogToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.StartLogToolStripMenuItem.Name = "StartLogToolStripMenuItem"
-        Me.StartLogToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.StartLogToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.StartLogToolStripMenuItem.Text = "Start Log"
         '
         'ActionToolboxToolStripMenuItem
@@ -326,7 +326,7 @@ Partial Class Form1
         Me.ActionToolboxToolStripMenuItem.CheckOnClick = True
         Me.ActionToolboxToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.ActionToolboxToolStripMenuItem.Name = "ActionToolboxToolStripMenuItem"
-        Me.ActionToolboxToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.ActionToolboxToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ActionToolboxToolStripMenuItem.Text = "Action Toolbox"
         '
         'NavigationBarToolStripMenuItem
@@ -335,7 +335,7 @@ Partial Class Form1
         Me.NavigationBarToolStripMenuItem.CheckOnClick = True
         Me.NavigationBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.NavigationBarToolStripMenuItem.Name = "NavigationBarToolStripMenuItem"
-        Me.NavigationBarToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.NavigationBarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.NavigationBarToolStripMenuItem.Text = "Navigation Bar"
         '
         'BuildToolStripMenuItem
@@ -714,6 +714,17 @@ Partial Class Form1
         Me.Panel5.Size = New System.Drawing.Size(493, 29)
         Me.Panel5.TabIndex = 15
         '
+        'Label44
+        '
+        Me.Label44.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label44.AutoSize = True
+        Me.Label44.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label44.Location = New System.Drawing.Point(472, 5)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(15, 17)
+        Me.Label44.TabIndex = 34
+        Me.Label44.Text = "X"
+        '
         'Label17
         '
         Me.Label17.AutoSize = True
@@ -733,6 +744,28 @@ Partial Class Form1
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
+        '
+        'Label43
+        '
+        Me.Label43.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label43.AutoSize = True
+        Me.Label43.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label43.Location = New System.Drawing.Point(446, 2)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(19, 20)
+        Me.Label43.TabIndex = 33
+        Me.Label43.Text = "□"
+        '
+        'Label45
+        '
+        Me.Label45.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label45.AutoSize = True
+        Me.Label45.Font = New System.Drawing.Font("Segoe UI Semilight", 11.75!)
+        Me.Label45.Location = New System.Drawing.Point(423, -4)
+        Me.Label45.Name = "Label45"
+        Me.Label45.Size = New System.Drawing.Size(17, 21)
+        Me.Label45.TabIndex = 35
+        Me.Label45.Text = "_"
         '
         'Button3
         '
@@ -1752,39 +1785,6 @@ Partial Class Form1
         Me.Label30.Size = New System.Drawing.Size(80, 28)
         Me.Label30.TabIndex = 65
         Me.Label30.Text = "Browser"
-        '
-        'Label43
-        '
-        Me.Label43.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label43.AutoSize = True
-        Me.Label43.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label43.Location = New System.Drawing.Point(446, 2)
-        Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(19, 20)
-        Me.Label43.TabIndex = 33
-        Me.Label43.Text = "□"
-        '
-        'Label44
-        '
-        Me.Label44.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label44.AutoSize = True
-        Me.Label44.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label44.Location = New System.Drawing.Point(472, 5)
-        Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(15, 17)
-        Me.Label44.TabIndex = 34
-        Me.Label44.Text = "X"
-        '
-        'Label45
-        '
-        Me.Label45.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label45.AutoSize = True
-        Me.Label45.Font = New System.Drawing.Font("Segoe UI Semilight", 11.75!)
-        Me.Label45.Location = New System.Drawing.Point(423, -4)
-        Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(17, 21)
-        Me.Label45.TabIndex = 35
-        Me.Label45.Text = "_"
         '
         'Form1
         '
