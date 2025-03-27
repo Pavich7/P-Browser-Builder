@@ -127,11 +127,13 @@
 
 ** Breaking Changes **
 - BREAKING: This version only support 7.0.0 or newer resource.
+- BREAKING: Upgrading to this version will reset all settings.
 
 ** Release notes **
 - ADDED: New instruction with picture in Welcome Message Setting.
 - ADDED: New manual Check for Updates in Help menu.
 - ADDED: Added more icons to various message boxes.
+- ADDED: Builder now able to remember window size.
 - ADDED: Ability to generate missing folder during structure verification process.
 - IMPROVEMENT: Redesign Agreement Tab in Welcome to P Browser Builder.
 - IMPROVEMENT: Updated CefSharp to 134.3.60
