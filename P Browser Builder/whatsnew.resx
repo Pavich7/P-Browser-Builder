@@ -135,6 +135,7 @@
 - IMPROVEMENT: Updated CefSharp to 134.3.60
 - IMPROVEMENT: Updated Chromium to 134.0.6998.118
 - FIXED: Fixed outdated instruction when resource not compatible.
-- CHANGED: Removed auto check for update for performance improvements.</value>
+- CHANGED: Removed auto check for update for performance improvements.
+- CHANGED: Select App Icon via folder icon and view App Icon via clicking on file name.</value>
   </data>
 </root>

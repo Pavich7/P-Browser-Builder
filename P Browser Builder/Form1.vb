@@ -869,20 +869,6 @@ Public Class Form1
         MessageBox.Show(welcomemessage.TextBox2.Text, welcomemessage.TextBox1.Text)
     End Sub
 
-    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
-        System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
-        System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
-        OpenFileDialog1.Multiselect = False
-        OpenFileDialog1.Title = "Choose your icons file"
-        OpenFileDialog1.Filter = "Icons Files|*.ico"
-        If OpenFileDialog1.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
-            PictureBox1.Image = Image.FromFile(OpenFileDialog1.FileName)
-            My.Settings.tempIcoLoc = OpenFileDialog1.FileName
-            My.Computer.FileSystem.CopyFile(OpenFileDialog1.FileName, apppath + "\statecache\buildcache\appicns\appicns.ico")
-            Label16.Text = "Application icons (" + Path.GetFileName(OpenFileDialog1.FileName) + ")"
-        End If
-    End Sub
-
     Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
         TextBox1.Text = ""
         TextBox2.Text = ""
@@ -938,10 +924,16 @@ Public Class Form1
     End Sub
 
     Private Sub PictureBox9_Click(sender As Object, e As EventArgs) Handles PictureBox9.Click
-        If My.Settings.tempIcoLoc = "" Then
-            MessageBox.Show("Please choose icon first!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        Else
-            Process.Start(My.Settings.tempIcoLoc)
+        System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
+        System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
+        OpenFileDialog1.Multiselect = False
+        OpenFileDialog1.Title = "Choose your icons file"
+        OpenFileDialog1.Filter = "Icons Files|*.ico"
+        If OpenFileDialog1.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
+            PictureBox1.Image = Image.FromFile(OpenFileDialog1.FileName)
+            My.Settings.tempIcoLoc = OpenFileDialog1.FileName
+            My.Computer.FileSystem.CopyFile(OpenFileDialog1.FileName, apppath + "\statecache\buildcache\appicns\appicns.ico")
+            Label16.Text = "Application icons (" + Path.GetFileName(OpenFileDialog1.FileName) + ")"
         End If
     End Sub
 
@@ -1433,5 +1425,13 @@ Public Class Form1
             End If
         End If
         bfileReader.Close()
+    End Sub
+
+    Private Sub Label16_Click(sender As Object, e As EventArgs) Handles Label16.Click
+        If My.Settings.tempIcoLoc = "" Then
+            MessageBox.Show("Please choose icon first!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        Else
+            Process.Start(My.Settings.tempIcoLoc)
+        End If
     End Sub
 End Class
