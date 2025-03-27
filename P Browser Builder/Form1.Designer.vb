@@ -123,6 +123,12 @@ Partial Class Form1
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.CheckBox7 = New System.Windows.Forms.CheckBox()
         Me.Label41 = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
@@ -131,9 +137,6 @@ Partial Class Form1
         Me.Label19 = New System.Windows.Forms.Label()
         Me.CheckBox5 = New System.Windows.Forms.CheckBox()
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
-        Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.Label35 = New System.Windows.Forms.Label()
         Me.Label34 = New System.Windows.Forms.Label()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
@@ -152,9 +155,6 @@ Partial Class Form1
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Label24 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
@@ -178,18 +178,19 @@ Partial Class Form1
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.CheckBox9 = New System.Windows.Forms.CheckBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel6.SuspendLayout()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel9.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel8.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -599,6 +600,7 @@ Partial Class Form1
         Me.Button1.Size = New System.Drawing.Size(104, 35)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "Test"
+        Me.ToolTip1.SetToolTip(Me.Button1, "Quickly launch App for testing.")
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
@@ -610,6 +612,7 @@ Partial Class Form1
         Me.Button2.Size = New System.Drawing.Size(104, 35)
         Me.Button2.TabIndex = 2
         Me.Button2.Text = "Build"
+        Me.ToolTip1.SetToolTip(Me.Button2, "Build Project")
         Me.Button2.UseVisualStyleBackColor = True
         '
         'TextBox1
@@ -619,6 +622,7 @@ Partial Class Form1
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(289, 22)
         Me.TextBox1.TabIndex = 3
+        Me.ToolTip1.SetToolTip(Me.TextBox1, "Enter your websites URL.")
         '
         'Label1
         '
@@ -639,6 +643,7 @@ Partial Class Form1
         Me.RadioButton2.Size = New System.Drawing.Size(167, 21)
         Me.RadioButton2.TabIndex = 7
         Me.RadioButton2.Text = "Build into directory mode"
+        Me.ToolTip1.SetToolTip(Me.RadioButton2, "Build into \binary folder.")
         Me.RadioButton2.UseVisualStyleBackColor = True
         '
         'Label2
@@ -658,6 +663,7 @@ Partial Class Form1
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(265, 22)
         Me.TextBox2.TabIndex = 8
+        Me.ToolTip1.SetToolTip(Me.TextBox2, "Enter your application name.")
         '
         'Label3
         '
@@ -762,6 +768,7 @@ Partial Class Form1
         Me.CheckBox1.Size = New System.Drawing.Size(167, 21)
         Me.CheckBox1.TabIndex = 17
         Me.CheckBox1.Text = "Start your app after build"
+        Me.ToolTip1.SetToolTip(Me.CheckBox1, "Start your App after build completed.")
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'Label8
@@ -785,6 +792,7 @@ Partial Class Form1
         Me.CheckBox2.Size = New System.Drawing.Size(234, 21)
         Me.CheckBox2.TabIndex = 19
         Me.CheckBox2.Text = "Show your app in explorer after build"
+        Me.ToolTip1.SetToolTip(Me.CheckBox2, "Show App in Explorer after build completed.")
         Me.CheckBox2.UseVisualStyleBackColor = True
         '
         'Label5
@@ -1031,91 +1039,6 @@ Partial Class Form1
         Me.Panel6.Size = New System.Drawing.Size(316, 678)
         Me.Panel6.TabIndex = 16
         '
-        'CheckBox7
-        '
-        Me.CheckBox7.AutoSize = True
-        Me.CheckBox7.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox7.Location = New System.Drawing.Point(142, 420)
-        Me.CheckBox7.Name = "CheckBox7"
-        Me.CheckBox7.Size = New System.Drawing.Size(80, 21)
-        Me.CheckBox7.TabIndex = 64
-        Me.CheckBox7.Text = "Hide icon"
-        Me.CheckBox7.UseVisualStyleBackColor = True
-        '
-        'Label41
-        '
-        Me.Label41.AutoSize = True
-        Me.Label41.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label41.Location = New System.Drawing.Point(117, 421)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(18, 17)
-        Me.Label41.TabIndex = 63
-        Me.Label41.Text = "%"
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(80, 419)
-        Me.TextBox5.MaxLength = 3
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(34, 22)
-        Me.TextBox5.TabIndex = 62
-        Me.TextBox5.Text = "100"
-        Me.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label40
-        '
-        Me.Label40.AutoSize = True
-        Me.Label40.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label40.Location = New System.Drawing.Point(23, 420)
-        Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(51, 17)
-        Me.Label40.TabIndex = 61
-        Me.Label40.Text = "Opacity"
-        '
-        'CheckBox6
-        '
-        Me.CheckBox6.AutoSize = True
-        Me.CheckBox6.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox6.Location = New System.Drawing.Point(210, 389)
-        Me.CheckBox6.Name = "CheckBox6"
-        Me.CheckBox6.Size = New System.Drawing.Size(105, 21)
-        Me.CheckBox6.TabIndex = 59
-        Me.CheckBox6.Text = "Always on top"
-        Me.CheckBox6.UseVisualStyleBackColor = True
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(23, 391)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(42, 17)
-        Me.Label19.TabIndex = 58
-        Me.Label19.Text = "Style :"
-        '
-        'CheckBox5
-        '
-        Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox5.Location = New System.Drawing.Point(84, 389)
-        Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(102, 21)
-        Me.CheckBox5.TabIndex = 57
-        Me.CheckBox5.Text = "Fixed window"
-        Me.CheckBox5.UseVisualStyleBackColor = True
-        '
-        'PictureBox10
-        '
-        Me.PictureBox10.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox10.Image = Global.P_Browser_Builder.My.Resources.Resources.undo
-        Me.PictureBox10.Location = New System.Drawing.Point(297, 318)
-        Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.Size = New System.Drawing.Size(18, 23)
-        Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox10.TabIndex = 49
-        Me.PictureBox10.TabStop = False
-        '
         'Panel9
         '
         Me.Panel9.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -1148,6 +1071,134 @@ Partial Class Form1
         Me.Label35.Size = New System.Drawing.Size(67, 17)
         Me.Label35.TabIndex = 55
         Me.Label35.Text = "Side Panel"
+        '
+        'Label24
+        '
+        Me.Label24.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label24.AutoSize = True
+        Me.Label24.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label24.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label24.Location = New System.Drawing.Point(23, 130)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(72, 17)
+        Me.Label24.TabIndex = 33
+        Me.Label24.Text = "Advanced..."
+        Me.ToolTip1.SetToolTip(Me.Label24, "Reveal advance action.")
+        '
+        'CheckBox4
+        '
+        Me.CheckBox4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CheckBox4.AutoSize = True
+        Me.CheckBox4.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox4.Location = New System.Drawing.Point(26, 129)
+        Me.CheckBox4.Name = "CheckBox4"
+        Me.CheckBox4.Size = New System.Drawing.Size(135, 21)
+        Me.CheckBox4.TabIndex = 47
+        Me.CheckBox4.Text = "Run custom actions"
+        Me.ToolTip1.SetToolTip(Me.CheckBox4, "Run custom command using Process.Start() method.")
+        Me.CheckBox4.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button6.Font = New System.Drawing.Font("Segoe UI Semilight", 8.0!)
+        Me.Button6.Location = New System.Drawing.Point(224, 125)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(68, 25)
+        Me.Button6.TabIndex = 48
+        Me.Button6.Text = "Edit"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'CheckBox7
+        '
+        Me.CheckBox7.AutoSize = True
+        Me.CheckBox7.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox7.Location = New System.Drawing.Point(142, 420)
+        Me.CheckBox7.Name = "CheckBox7"
+        Me.CheckBox7.Size = New System.Drawing.Size(80, 21)
+        Me.CheckBox7.TabIndex = 64
+        Me.CheckBox7.Text = "Hide icon"
+        Me.ToolTip1.SetToolTip(Me.CheckBox7, "Hide app icon in title bar.")
+        Me.CheckBox7.UseVisualStyleBackColor = True
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label41.Location = New System.Drawing.Point(117, 421)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(18, 17)
+        Me.Label41.TabIndex = 63
+        Me.Label41.Text = "%"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox5.Location = New System.Drawing.Point(80, 419)
+        Me.TextBox5.MaxLength = 3
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(34, 22)
+        Me.TextBox5.TabIndex = 62
+        Me.TextBox5.Text = "100"
+        Me.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.ToolTip1.SetToolTip(Me.TextBox5, "Window opacity (0 for completly transparent).")
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label40.Location = New System.Drawing.Point(23, 420)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(51, 17)
+        Me.Label40.TabIndex = 61
+        Me.Label40.Text = "Opacity"
+        '
+        'CheckBox6
+        '
+        Me.CheckBox6.AutoSize = True
+        Me.CheckBox6.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox6.Location = New System.Drawing.Point(210, 389)
+        Me.CheckBox6.Name = "CheckBox6"
+        Me.CheckBox6.Size = New System.Drawing.Size(105, 21)
+        Me.CheckBox6.TabIndex = 59
+        Me.CheckBox6.Text = "Always on top"
+        Me.ToolTip1.SetToolTip(Me.CheckBox6, "Make your app always on top of others.")
+        Me.CheckBox6.UseVisualStyleBackColor = True
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(23, 391)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(42, 17)
+        Me.Label19.TabIndex = 58
+        Me.Label19.Text = "Style :"
+        '
+        'CheckBox5
+        '
+        Me.CheckBox5.AutoSize = True
+        Me.CheckBox5.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox5.Location = New System.Drawing.Point(84, 389)
+        Me.CheckBox5.Name = "CheckBox5"
+        Me.CheckBox5.Size = New System.Drawing.Size(102, 21)
+        Me.CheckBox5.TabIndex = 57
+        Me.CheckBox5.Text = "Fixed window"
+        Me.ToolTip1.SetToolTip(Me.CheckBox5, "Make window size fixed.")
+        Me.CheckBox5.UseVisualStyleBackColor = True
+        '
+        'PictureBox10
+        '
+        Me.PictureBox10.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox10.Image = Global.P_Browser_Builder.My.Resources.Resources.undo
+        Me.PictureBox10.Location = New System.Drawing.Point(297, 318)
+        Me.PictureBox10.Name = "PictureBox10"
+        Me.PictureBox10.Size = New System.Drawing.Size(18, 23)
+        Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox10.TabIndex = 49
+        Me.PictureBox10.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox10, "Reset all preference in Window Section.")
         '
         'Label34
         '
@@ -1188,6 +1239,7 @@ Partial Class Form1
         Me.TextBox4.Size = New System.Drawing.Size(66, 22)
         Me.TextBox4.TabIndex = 51
         Me.TextBox4.Text = "573"
+        Me.ToolTip1.SetToolTip(Me.TextBox4, "Window Heigh")
         '
         'Label31
         '
@@ -1208,6 +1260,7 @@ Partial Class Form1
         Me.TextBox3.Size = New System.Drawing.Size(66, 22)
         Me.TextBox3.TabIndex = 49
         Me.TextBox3.Text = "944"
+        Me.ToolTip1.SetToolTip(Me.TextBox3, "Window Width")
         '
         'RadioButton3
         '
@@ -1218,6 +1271,7 @@ Partial Class Form1
         Me.RadioButton3.Size = New System.Drawing.Size(236, 21)
         Me.RadioButton3.TabIndex = 32
         Me.RadioButton3.Text = "Build into compressed file mode (.zip)"
+        Me.ToolTip1.SetToolTip(Me.RadioButton3, "Build and compress into \binarypkg folder")
         Me.RadioButton3.UseVisualStyleBackColor = True
         '
         'Panel8
@@ -1279,6 +1333,7 @@ Partial Class Form1
         Me.Button4.Size = New System.Drawing.Size(50, 29)
         Me.Button4.TabIndex = 34
         Me.Button4.Text = "Edit"
+        Me.ToolTip1.SetToolTip(Me.Button4, "Edit your Welcome Message")
         Me.Button4.UseVisualStyleBackColor = True
         '
         'CheckBox3
@@ -1290,6 +1345,7 @@ Partial Class Form1
         Me.CheckBox3.Size = New System.Drawing.Size(175, 21)
         Me.CheckBox3.TabIndex = 35
         Me.CheckBox3.Text = "Enable Welcome Message"
+        Me.ToolTip1.SetToolTip(Me.CheckBox3, "Enable message that will show in first launch.")
         Me.CheckBox3.UseVisualStyleBackColor = True
         '
         'Button5
@@ -1300,6 +1356,7 @@ Partial Class Form1
         Me.Button5.Size = New System.Drawing.Size(50, 29)
         Me.Button5.TabIndex = 36
         Me.Button5.Text = "Test"
+        Me.ToolTip1.SetToolTip(Me.Button5, "Test your Welcome Message.")
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Label9
@@ -1344,42 +1401,6 @@ Partial Class Form1
         Me.Label22.TabIndex = 45
         Me.Label22.Text = "DevTools"
         '
-        'CheckBox4
-        '
-        Me.CheckBox4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox4.Location = New System.Drawing.Point(26, 129)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(135, 21)
-        Me.CheckBox4.TabIndex = 47
-        Me.CheckBox4.Text = "Run custom actions"
-        Me.CheckBox4.UseVisualStyleBackColor = True
-        '
-        'Button6
-        '
-        Me.Button6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button6.Font = New System.Drawing.Font("Segoe UI Semilight", 8.0!)
-        Me.Button6.Location = New System.Drawing.Point(224, 125)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(68, 25)
-        Me.Button6.TabIndex = 48
-        Me.Button6.Text = "Edit"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
-        'Label24
-        '
-        Me.Label24.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label24.AutoSize = True
-        Me.Label24.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label24.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label24.Location = New System.Drawing.Point(23, 130)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(72, 17)
-        Me.Label24.TabIndex = 33
-        Me.Label24.Text = "Advanced..."
-        '
         'TabControl1
         '
         Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -1419,7 +1440,7 @@ Partial Class Form1
         Me.TabPage2.Location = New System.Drawing.Point(4, 26)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(551, 530)
+        Me.TabPage2.Size = New System.Drawing.Size(551, 647)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Start Log"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -1508,6 +1529,7 @@ Partial Class Form1
         Me.Label37.Size = New System.Drawing.Size(43, 17)
         Me.Label37.TabIndex = 57
         Me.Label37.Text = "Binary"
+        Me.ToolTip1.SetToolTip(Me.Label37, "Show App build folder in Explorer.")
         '
         'Label38
         '
@@ -1520,6 +1542,7 @@ Partial Class Form1
         Me.Label38.Size = New System.Drawing.Size(55, 17)
         Me.Label38.TabIndex = 58
         Me.Label38.Text = "Package"
+        Me.ToolTip1.SetToolTip(Me.Label38, "Show App ZIP build folder in Explorer.")
         '
         'Panel7
         '
@@ -1545,6 +1568,7 @@ Partial Class Form1
         Me.Label42.Size = New System.Drawing.Size(65, 17)
         Me.Label42.TabIndex = 92
         Me.Label42.Text = "Terminate"
+        Me.ToolTip1.SetToolTip(Me.Label42, "Close current testing App.")
         '
         'Label36
         '
@@ -1582,6 +1606,7 @@ Partial Class Form1
         Me.CheckBox8.Size = New System.Drawing.Size(196, 21)
         Me.CheckBox8.TabIndex = 58
         Me.CheckBox8.Text = "Disable browser context menu"
+        Me.ToolTip1.SetToolTip(Me.CheckBox8, "Disable context menu (aka. Right Click Menu).")
         Me.CheckBox8.UseVisualStyleBackColor = True
         '
         'PictureBox4
@@ -1620,6 +1645,7 @@ Partial Class Form1
         Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox9.TabIndex = 46
         Me.PictureBox9.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox9, "Choose your application icon from files.")
         '
         'PictureBox8
         '
@@ -1642,6 +1668,7 @@ Partial Class Form1
         Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox7.TabIndex = 40
         Me.PictureBox7.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox7, "Reset all preference in Properties Section.")
         '
         'Panel10
         '
@@ -1686,24 +1713,6 @@ Partial Class Form1
         Me.Panel10.Size = New System.Drawing.Size(344, 567)
         Me.Panel10.TabIndex = 74
         '
-        'Label30
-        '
-        Me.Label30.AutoSize = True
-        Me.Label30.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label30.Location = New System.Drawing.Point(15, 212)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(80, 28)
-        Me.Label30.TabIndex = 65
-        Me.Label30.Text = "Browser"
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        Me.TextBox6.Location = New System.Drawing.Point(167, 280)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(149, 22)
-        Me.TextBox6.TabIndex = 66
-        '
         'CheckBox9
         '
         Me.CheckBox9.AutoSize = True
@@ -1713,7 +1722,26 @@ Partial Class Form1
         Me.CheckBox9.Size = New System.Drawing.Size(135, 21)
         Me.CheckBox9.TabIndex = 67
         Me.CheckBox9.Text = "Custom User Agent"
+        Me.ToolTip1.SetToolTip(Me.CheckBox9, "Enable Custom Browser User Agent for better websites detection.")
         Me.CheckBox9.UseVisualStyleBackColor = True
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.TextBox6.Location = New System.Drawing.Point(167, 280)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(149, 22)
+        Me.TextBox6.TabIndex = 66
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
+        Me.Label30.Location = New System.Drawing.Point(15, 212)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(80, 28)
+        Me.Label30.TabIndex = 65
+        Me.Label30.Text = "Browser"
         '
         'Form1
         '
@@ -1750,10 +1778,10 @@ Partial Class Form1
         Me.Panel4.PerformLayout()
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel9.ResumeLayout(False)
         Me.Panel9.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
@@ -1934,4 +1962,5 @@ Partial Class Form1
     Friend WithEvents Label30 As Label
     Friend WithEvents CheckBox9 As CheckBox
     Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

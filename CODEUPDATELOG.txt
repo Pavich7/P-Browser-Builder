@@ -1,9 +1,10 @@
-Builder Release 8.5.0
+Builder Release 9.0.0
 
 ** Release Highlights **
 - HIGHLIGHTS: Introducing App 7.0 build and run faster with new build system.
 - HIGHLIGHTS: Option to customize Browser Agent for better web detection.
 - HIGHLIGHTS: Major User Interface improvements.
+- HIGHLIGHTS: New tooltip for features informations.
 
 ** Breaking Changes **
 - BREAKING: This version only support 7.0.0 or newer resource.

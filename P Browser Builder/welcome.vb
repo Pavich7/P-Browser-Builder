@@ -86,7 +86,7 @@ Public Class welcome
     End Sub
 
     Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
-        MessageBox.Show("After fresh install you will need to install resource to build. (Download size: approx. 140 MB)", "Info...")
+        MessageBox.Show("After fresh install you will need to install resource to build. (Download size: approx. 150 MB)", "Info...")
     End Sub
 
     Private Sub PictureBox12_Click(sender As Object, e As EventArgs) Handles PictureBox12.Click

@@ -118,12 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="RichTextBox1.Text" xml:space="preserve">
-    <value>Builder Release 8.5.0
+    <value>Builder Release 9.0.0
 
 ** Release Highlights **
 - HIGHLIGHTS: Introducing App 7.0 build and run faster with new build system.
 - HIGHLIGHTS: Option to customize Browser Agent for better web detection.
 - HIGHLIGHTS: Major User Interface improvements.
+- HIGHLIGHTS: New tooltip for features informations.
 
 ** Breaking Changes **
 - BREAKING: This version only support 7.0.0 or newer resource.
