@@ -122,6 +122,8 @@
 
 ** Release Highlights **
 - HIGHLIGHTS: Introducing App 7.0 build and run faster with new build system.
+- HIGHLIGHTS: Option to customize Browser Agent for better web detection.
+- HIGHLIGHTS: Major User Interface improvements.
 
 ** Breaking Changes **
 - BREAKING: This version only support 7.0.0 or newer resource.

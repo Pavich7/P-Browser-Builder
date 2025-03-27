@@ -1,4 +1,7 @@
-﻿Public Class getstart
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Button
+
+Public Class getstart
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
         Process.Start("https://github.com/Pavich7/P-Browser-Builder/wiki/P-Browser-Builder-Guild")
     End Sub
@@ -29,6 +32,10 @@
             Form1.CheckBox8.Checked = fileReader.ReadLine()
             Form1.RadioButton2.Checked = fileReader.ReadLine()
             Form1.RadioButton3.Checked = fileReader.ReadLine()
+            Form1.TextBox6.Text = fileReader.ReadLine()
+            If Form1.TextBox6.Text IsNot "" Then
+                Form1.CheckBox9.Checked = True
+            End If
             'aname
             'url
             'wwin
@@ -43,6 +50,7 @@
             'conxme
             'm1chk
             'm2chk
+            'userag
             Form1.Enabled = True
             Form1.ProjnameToolStripMenuItem.Text = Form1.TextBox2.Text
             Form1.WindowState = FormWindowState.Normal

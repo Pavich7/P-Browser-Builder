@@ -55,6 +55,7 @@ Public Class Form1
                         'appopval
                         'appaot
                         'apphico
+                        'useragent
                         writer.WriteLine(TextBox1.Text)
                         writer.WriteLine(TextBox2.Text)
                         If CheckBox8.Checked = True Then
@@ -82,6 +83,9 @@ Public Class Form1
                             writer.WriteLine("True")
                         Else
                             writer.WriteLine("False")
+                        End If
+                        If CheckBox9.Checked = True Then
+                            writer.WriteLine(TextBox6.Text)
                         End If
                     End Using
                     Dim icnexist As String = apppath + "\resource\testspace\appicns.ico"
@@ -171,6 +175,7 @@ Public Class Form1
                     'appopval
                     'appaot
                     'apphico
+                    'useragent
                     writer.WriteLine(TextBox1.Text)
                     writer.WriteLine(TextBox2.Text)
                     If CheckBox8.Checked = True Then
@@ -202,6 +207,9 @@ Public Class Form1
                         writer.WriteLine("True")
                     Else
                         writer.WriteLine("False")
+                    End If
+                    If CheckBox9.Checked = True Then
+                        writer.WriteLine(TextBox6.Text)
                     End If
                 End Using
                 ProgressBar1.Value = 50
@@ -299,6 +307,7 @@ Public Class Form1
         RadioButton2.Checked = True
         CheckBox1.Checked = True
         Label42.Enabled = False
+        TextBox6.Visible = False
         'Reset
         If stringReader19 = "True" Then
             Me.Enabled = False
@@ -513,6 +522,10 @@ Public Class Form1
                 CheckBox8.Checked = fileReader.ReadLine()
                 RadioButton2.Checked = fileReader.ReadLine()
                 RadioButton3.Checked = fileReader.ReadLine()
+                TextBox6.Text = fileReader.ReadLine()
+                If TextBox6.Text IsNot "" Then
+                    CheckBox9.Checked = True
+                End If
                 'aname
                 'url
                 'wwin
@@ -527,6 +540,7 @@ Public Class Form1
                 'conxme
                 'm1chk
                 'm2chk
+                'userag
                 Me.Enabled = True
                 ProjnameToolStripMenuItem.Text = TextBox2.Text
                 Me.WindowState = FormWindowState.Normal
@@ -653,6 +667,7 @@ Public Class Form1
             CheckBox6.Checked = False
             CheckBox7.Checked = False
             CheckBox8.Checked = False
+            CheckBox9.Checked = False
             Button6.Visible = False
             CheckBox4.Visible = False
             Label24.Visible = True
@@ -979,6 +994,7 @@ Public Class Form1
             CheckBox6.Checked = False
             CheckBox7.Checked = False
             CheckBox8.Checked = False
+            CheckBox9.Checked = False
             Button6.Visible = False
             CheckBox4.Visible = False
             Label24.Visible = True
@@ -1100,6 +1116,11 @@ Public Class Form1
                             writer.WriteLine(CheckBox8.CheckState)
                             writer.WriteLine(RadioButton2.Checked)
                             writer.WriteLine(RadioButton3.Checked)
+                            If CheckBox9.Checked = True Then
+                                writer.WriteLine(TextBox6.Text)
+                            Else
+                                writer.WriteLine("")
+                            End If
                         End Using
                         myStream.Close()
                         MessageBox.Show("Saved to file!", "Completed!", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -1119,6 +1140,7 @@ Public Class Form1
                 'conxme
                 'm1chk
                 'm2chk
+                'userag
                 ProjnameToolStripMenuItem.Text = TextBox2.Text
             Catch ex As Exception
                 MessageBox.Show("Save Failed!" & vbNewLine & ex.Message, "Error!")
@@ -1152,6 +1174,7 @@ Public Class Form1
                     CheckBox6.Checked = False
                     CheckBox7.Checked = False
                     CheckBox8.Checked = False
+                    CheckBox9.Checked = False
                     Button6.Visible = False
                     CheckBox4.Visible = False
                     Label24.Visible = True
@@ -1176,6 +1199,10 @@ Public Class Form1
                     CheckBox8.Checked = fileReader.ReadLine()
                     RadioButton2.Checked = fileReader.ReadLine()
                     RadioButton3.Checked = fileReader.ReadLine()
+                    TextBox6.Text = fileReader.ReadLine()
+                    If TextBox6.Text IsNot "" Then
+                        CheckBox9.Checked = True
+                    End If
                     ProjnameToolStripMenuItem.Text = TextBox2.Text
                     fileReader.Close()
                 Catch ex As Exception
@@ -1195,6 +1222,7 @@ Public Class Form1
                 'conxme
                 'm1chk
                 'm2chk
+                'userag
             End If
         End If
     End Sub
@@ -1314,6 +1342,7 @@ Public Class Form1
                 CheckBox6.Checked = False
                 CheckBox7.Checked = False
                 CheckBox8.Checked = False
+                CheckBox9.Checked = False
                 Button6.Visible = False
                 CheckBox4.Visible = False
                 Label24.Visible = True
@@ -1338,6 +1367,10 @@ Public Class Form1
                 CheckBox8.Checked = fileReader.ReadLine()
                 RadioButton2.Checked = fileReader.ReadLine()
                 RadioButton3.Checked = fileReader.ReadLine()
+                TextBox6.Text = fileReader.ReadLine()
+                If TextBox6.Text IsNot "" Then
+                    CheckBox9.Checked = True
+                End If
                 ProjnameToolStripMenuItem.Text = TextBox2.Text
                 fileReader.Close()
             Catch ex As Exception
@@ -1357,6 +1390,7 @@ Public Class Form1
             'conxme
             'm1chk
             'm2chk
+            'userag
         End If
     End Sub
 
@@ -1432,6 +1466,14 @@ Public Class Form1
             MessageBox.Show("Please choose icon first!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
             Process.Start(My.Settings.tempIcoLoc)
+        End If
+    End Sub
+
+    Private Sub CheckBox9_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox9.CheckedChanged
+        If CheckBox9.Checked = True Then
+            TextBox6.Visible = True
+        Else
+            TextBox6.Visible = False
         End If
     End Sub
 End Class
