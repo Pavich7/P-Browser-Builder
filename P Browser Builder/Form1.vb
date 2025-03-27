@@ -264,50 +264,23 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         apppath = Application.StartupPath()
         'Init structure check
-        Dim flcheck1 As String = apppath + "\binary"
-        Dim flcheck2 As String = apppath + "\binarypkg"
-        Dim flcheck3 As String = apppath + "\metadata"
-        Dim flcheck4 As String = apppath + "\statecache"
-        Dim flcheck41 As String = apppath + "\statecache\buildcache"
-        Dim flcheck44 As String = apppath + "\statecache\updatecache"
-        Dim flcheck5 As String = apppath + "\statedata"
-        Dim flcheck6 As String = apppath + "\imgassets"
-        If Not System.IO.Directory.Exists(flcheck6) Then
+        If Not System.IO.Directory.Exists(apppath + "\imgassets") Then
             Me.Enabled = False
             errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
             errorencounter.Show()
         End If
-        If Not System.IO.Directory.Exists(flcheck1) Then
+        If Not System.IO.Directory.Exists(apppath + "\binary") Then System.IO.Directory.CreateDirectory(apppath + "\binary")
+        If Not System.IO.Directory.Exists(apppath + "\binarypkg") Then System.IO.Directory.CreateDirectory(apppath + "\binarypkg")
+        If Not System.IO.Directory.Exists(apppath + "\metadata") Then
             Me.Enabled = False
             errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
             errorencounter.Show()
         End If
-        If Not System.IO.Directory.Exists(flcheck2) Then
-            Me.Enabled = False
-            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-            errorencounter.Show()
-        End If
-        If Not System.IO.Directory.Exists(flcheck3) Then
-            Me.Enabled = False
-            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-            errorencounter.Show()
-        End If
-        If Not System.IO.Directory.Exists(flcheck4) Then
-            Me.Enabled = False
-            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-            errorencounter.Show()
-        End If
-        If Not System.IO.Directory.Exists(flcheck41) Then
-            Me.Enabled = False
-            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-            errorencounter.Show()
-        End If
-        If Not System.IO.Directory.Exists(flcheck44) Then
-            Me.Enabled = False
-            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-            errorencounter.Show()
-        End If
-        If Not System.IO.Directory.Exists(flcheck5) Then
+        If Not System.IO.Directory.Exists(apppath + "\statecache") Then System.IO.Directory.CreateDirectory(apppath + "\statecache")
+        If Not System.IO.Directory.Exists(apppath + "\statecache\buildcache") Then System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache")
+        If Not System.IO.Directory.Exists(apppath + "\statecache\buildcache\appicns") Then System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
+        If Not System.IO.Directory.Exists(apppath + "\statecache\updatecache") Then System.IO.Directory.CreateDirectory(apppath + "\statecache\updatecache")
+        If Not System.IO.Directory.Exists(apppath + "\statedata") Then
             Dim zipPath As String = apppath + "\packages\datatemplate.zip"
             Dim extractPath As String = apppath + "\"
             ZipFile.ExtractToDirectory(zipPath, extractPath)
@@ -345,18 +318,11 @@ Public Class Form1
                     End If
                     'Delete config files
                     System.IO.Directory.Delete(apppath + "\statedata", True)
-                    'Flush Main Cache Dir
+                    'Delete Main Cache Dir
                     System.IO.Directory.Delete(apppath + "\statecache", True)
-                    System.IO.Directory.CreateDirectory(apppath + "\statecache")
-                    'Regen Sub-Cache Dir
-                    System.IO.Directory.CreateDirectory(apppath + "\statecache\updatecache")
-                    System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache")
-                    System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
-                    'Flush Build Dir
+                    'Delete Build Dir
                     System.IO.Directory.Delete(apppath + "\binary", True)
-                    System.IO.Directory.CreateDirectory(apppath + "\binary")
                     System.IO.Directory.Delete(apppath + "\binarypkg", True)
-                    System.IO.Directory.CreateDirectory(apppath + "\binarypkg")
                     'Flush debug logs
                     Dim objWriter As New System.IO.StreamWriter(apppath + "\debug.log")
                     objWriter.Write("")
@@ -365,10 +331,6 @@ Public Class Form1
                     Dim objWriter1 As New System.IO.StreamWriter(apppath + "\wnannounce.pbstate")
                     objWriter1.Write("True")
                     objWriter1.Close()
-                    'Reset Temp setting
-                    My.Settings.tempWebTitle = ""
-                    My.Settings.tempIcoLoc = ""
-                    My.Settings.advWarnState = False
                     MessageBox.Show("Operation Completed!", "Success!")
                     Dim result11 As DialogResult = MessageBox.Show("Do you wish to restart?" + vbNewLine + "YES to restart, NO to shutdown.", "Restart?", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                     If (result11 = DialogResult.Yes) Then
