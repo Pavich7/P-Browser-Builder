@@ -403,10 +403,8 @@ Public Class Form1
             Panel2.Controls.Add(Browser)
             'Panel1.Controls.Add(BrowserDev)
             'BrowserDev.Load("http://127.0.0.1:8088/")
-            Dim fileReader1 As System.IO.StreamReader
-            fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.usageinterv.pbcfg")
-            Dim stringReader1 As String
-            stringReader1 = fileReader1.ReadLine()
+            Dim fileReader1 As System.IO.StreamReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.usageinterv.pbcfg")
+            Dim stringReader1 As String = fileReader1.ReadLine()
             Timer2.Interval = stringReader1
             fileReader1.Close()
             Button4.Enabled = False
@@ -451,9 +449,8 @@ Public Class Form1
                     Panel4.Size = New Size(265, 148)
                 End Try
                 'chkpoint
-                Dim resvcheck4 As String = apppath + "\resource\cpd660"
-                If Not System.IO.File.Exists(resvcheck4) Then
-                    MessageBox.Show("Unload required! Resource not compatible!" + vbNewLine + "Please reinstall builder resource via preference menu.", "Resource not compatible!")
+                If Not System.IO.File.Exists(apppath + "\resource\cpd700") Then
+                    MessageBox.Show("Resource not compatible to this version of Builder!" + vbNewLine + "Please update Builder and Resource to ensure compatibility.", "Resource not compatible!", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Button1.Enabled = False
                     Button2.Enabled = False
                     RadioButton2.Enabled = False

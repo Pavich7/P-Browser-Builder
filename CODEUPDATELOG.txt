@@ -13,4 +13,5 @@ Builder Release 8.5.0
 - IMPROVEMENT: Redesign Agreement Tab in Welcome to P Browser Builder.
 - IMPROVEMENT: Updated CefSharp to 134.3.60
 - IMPROVEMENT: Updated Chromium to 134.0.6998.118
+- FIXED: Fixed outdated instruction when resource not compatible.
 - CHANGED: Removed auto check for update for performance improvements.

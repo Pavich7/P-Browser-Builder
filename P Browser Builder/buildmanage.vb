@@ -45,11 +45,11 @@ Public Class buildmanage
         Dim TheSize1 As Long = GetDirSize(apppath + "\binarypkg")
         Label52.Text = FormatNumber(TheSize1 / 1024 / 1024, 1) & " MB"
         If TheSize2 / 1024 / 1024 > 100 Then
-            Dim fileReader19 As System.IO.StreamReader
-            fileReader19 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\binary\progdata.pbcfg")
-            Dim stringReader19 As String = fileReader19.ReadLine()
-            Label4.Text = "Application name: " + stringReader19
-            fileReader19.Close()
+            Dim filePath As String = Path.Combine(apppath, "binary\manifest.pbcfg")
+            Dim lines As String() = File.ReadAllLines(filePath)
+            If lines.Length >= 2 Then
+                Label4.Text = "Application name: " + lines(1)
+            End If
         Else
             Label4.Text = "Application name: N/A"
             Label4.Enabled = False
