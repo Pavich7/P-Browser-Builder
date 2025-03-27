@@ -120,9 +120,16 @@
   <data name="RichTextBox1.Text" xml:space="preserve">
     <value>Builder Release 8.5.0
 
+** Release Highlights **
+- HIGHLIGHTS: Introducing App 7.0 build and run faster with new build system.
+
+** Breaking Changes **
+- BREAKING: This version only support 7.0.0 or newer resource.
+
 ** Release notes **
 - ADDED: New instruction with picture in Welcome Message Setting.
 - ADDED: New manual Check for Updates in Help menu.
+- ADDED: Added more icons to various message boxes.
 - IMPROVEMENT: Redesign Agreement Tab in Welcome to P Browser Builder.
 - IMPROVEMENT: Updated CefSharp to 134.3.60
 - IMPROVEMENT: Updated Chromium to 134.0.6998.118

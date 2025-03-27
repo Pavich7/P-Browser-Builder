@@ -30,52 +30,60 @@ Public Class Form1
             End If
         Next
         If TextBox1.Text = "" Then
-            MessageBox.Show("Please enter your websites URL.", "Build Failed!")
+            MessageBox.Show("Please enter your websites URL.", "Build Failed!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         ElseIf spechk = True Then
-            MessageBox.Show("App name cannot contain any of these characters: \ / : * ? "" < > |", "Build Failed!")
+            MessageBox.Show("App name cannot contain any of these characters: \ / : * ? "" < > |", "Build Failed!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
             Label7.Text = "Building in progress..."
-            Dim pbcfg As String = apppath + "\resource\testspace\builderdata.pbcfg"
-            Dim pbprogcfg As String = apppath + "\resource\testspace\progdata.pbcfg"
-            Dim pbprogw As String = apppath + "\resource\testspace\appsizew.pbcfg"
-            Dim pbprogh As String = apppath + "\resource\testspace\appsizeh.pbcfg"
-            Dim pbprogfw As String = apppath + "\resource\testspace\appfixbs.pbcfg"
-            Dim pbprogaot As String = apppath + "\resource\testspace\appaot.pbcfg"
-            Dim pbopval As String = apppath + "\resource\testspace\appopval.pbcfg"
-            Dim pbhico As String = apppath + "\resource\testspace\apphico.pbcfg"
-            Dim pbcxm As String = apppath + "\resource\testspace\contextmenu.pbcfg"
-            Dim testapp As String = apppath + "\resource\testspace\P Browser App.exe"
+            Dim pbcfg As String = apppath + "\resource\testspace\manifest.pbcfg"
             ProgressBar1.Value = 20
             If System.IO.File.Exists(pbcfg) = True Then
                 Try
                     Button2.Enabled = False
                     Button1.Enabled = False
                     ProgressBar1.Value = 50
-                    Dim objWriter As New System.IO.StreamWriter(pbcfg)
-                    Dim objWriter2 As New System.IO.StreamWriter(pbprogcfg)
-                    Dim objWriter3 As New System.IO.StreamWriter(pbprogh)
-                    Dim objWriter4 As New System.IO.StreamWriter(pbprogw)
-                    Dim objWriter5 As New System.IO.StreamWriter(pbprogfw)
-                    Dim objWriter6 As New System.IO.StreamWriter(pbprogaot)
-                    Dim objWriter7 As New System.IO.StreamWriter(pbopval)
-                    Dim objWriter8 As New System.IO.StreamWriter(pbhico)
-                    Dim objWriter9 As New System.IO.StreamWriter(pbcxm)
-                    objWriter.Write(TextBox1.Text)
-                    objWriter.Close()
-                    objWriter2.Write(TextBox2.Text)
-                    objWriter2.Close()
-                    objWriter3.Write(TextBox4.Text)
-                    objWriter3.Close()
-                    objWriter4.Write(TextBox3.Text)
-                    objWriter4.Close()
-                    If CheckBox5.Checked = True Then
-                        objWriter5.Write("True")
-                    End If
-                    objWriter5.Close()
-                    If CheckBox6.Checked = True Then
-                        objWriter6.Write("True")
-                    End If
-                    objWriter6.Close()
+                    Using writer As New StreamWriter(apppath + "\resource\testspace\manifest.pbcfg", False)
+                        'builderdata
+                        'progdata
+                        'contextmenu
+                        'fsmsg.title
+                        'fsmsg.desc
+                        'fsmsg.enab
+                        'appsizew
+                        'appsizeh
+                        'appfixbs
+                        'appopval
+                        'appaot
+                        'apphico
+                        writer.WriteLine(TextBox1.Text)
+                        writer.WriteLine(TextBox2.Text)
+                        If CheckBox8.Checked = True Then
+                            writer.WriteLine("True")
+                        Else
+                            writer.WriteLine("False")
+                        End If
+                        writer.WriteLine("")
+                        writer.WriteLine("")
+                        writer.WriteLine("False")
+                        writer.WriteLine(TextBox3.Text)
+                        writer.WriteLine(TextBox4.Text)
+                        If CheckBox5.Checked = True Then
+                            writer.WriteLine("True")
+                        Else
+                            writer.WriteLine("False")
+                        End If
+                        writer.WriteLine(TextBox5.Text)
+                        If CheckBox6.Checked = True Then
+                            writer.WriteLine("True")
+                        Else
+                            writer.WriteLine("False")
+                        End If
+                        If CheckBox7.Checked = True Then
+                            writer.WriteLine("True")
+                        Else
+                            writer.WriteLine("False")
+                        End If
+                    End Using
                     Dim icnexist As String = apppath + "\resource\testspace\appicns.ico"
                     If System.IO.File.Exists(icnexist) Then
                         My.Computer.FileSystem.DeleteFile(apppath + "\resource\testspace\appicns.ico")
@@ -85,25 +93,15 @@ Public Class Form1
                             My.Computer.FileSystem.CopyFile(apppath + "\statecache\buildcache\appicns\appicns.ico", apppath + "\resource\testspace\appicns.ico")
                         End If
                     End If
-                    objWriter7.Write(TextBox5.Text)
-                    objWriter7.Close()
-                    If CheckBox7.Checked = True Then
-                        objWriter8.Write("True")
-                    End If
-                    objWriter8.Close()
-                    If CheckBox8.Checked = True Then
-                        objWriter9.Write("True")
-                    End If
-                    objWriter9.Close()
                     ProgressBar1.Value = 100
-                    MessageBox.Show("Build Completed! Click continue to test app." + vbNewLine + "Some features will not available in Testing.", "Build Completed!")
-                    Process.Start(testapp)
+                    MessageBox.Show("Build Completed! Click continue to test app." + vbNewLine + "Some features will not available in Testing.", "Build Completed!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Process.Start(apppath + "\resource\testspace\P Browser App.exe")
                     Label7.Text = "Build completed!"
                     Snooze(2)
                     Dim dir = New System.IO.DirectoryInfo(apppath + "\resource\testspace\startlog")
                     Dim logf = dir.EnumerateFiles("*.txt").
-                    OrderByDescending(Function(f) f.LastWriteTime).
-                    FirstOrDefault()
+                        OrderByDescending(Function(f) f.LastWriteTime).
+                        FirstOrDefault()
                     If logf IsNot Nothing Then
                         logpath = logf.FullName
                         RichTextBox1.Text = File.ReadAllText(logpath)
@@ -117,14 +115,14 @@ Public Class Form1
                     Button7.Enabled = False
                     Button8.Enabled = True
                 Catch ex As Exception
-                    MessageBox.Show("Please close previous test app first before perform this action.", "Failed!")
+                    MessageBox.Show("Please close previous test app first before perform this action.", "Failed!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                     Label7.Text = "Test failed!"
                     Button2.Enabled = True
                     Button1.Enabled = True
                     ProgressBar1.Value = 0
                 End Try
             Else
-                MessageBox.Show("Build Failed! Incomplete or corrupted Data please reinstall builder.", "Build Failed!")
+                MessageBox.Show("Build Failed! Unable to find manifest data! Please reinstall resource.", "Build Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Label7.Text = "Build failed!"
             End If
         End If
@@ -146,102 +144,83 @@ Public Class Form1
             End If
         Next
         If TextBox1.Text = "" Then
-            MessageBox.Show("Please enter your websites URL.", "Build Failed!")
+            MessageBox.Show("Please enter your websites URL.", "Build Failed!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         ElseIf TextBox2.Text = "" Then
-            MessageBox.Show("Please enter your application name.", "Build Failed!")
+            MessageBox.Show("Please enter your application name.", "Build Failed!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         ElseIf spechk = True Then
-            MessageBox.Show("App name cannot contain any of these characters: \ / : * ? "" < > |", "Build Failed!")
+            MessageBox.Show("App name cannot contain any of these characters: \ / : * ? "" < > |", "Build Failed!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
             Try
                 Label7.Text = "Building in progress..."
-                System.IO.Directory.Delete(apppath + "\resource\buildspace", True)
-                System.IO.Directory.CreateDirectory(apppath + "\resource\buildspace")
-                Dim zipPath As String = apppath + "\resource\resourcepack\freshapp.zip"
-                Dim extractPath As String = apppath + "\resource\buildspace"
-                ZipFile.ExtractToDirectory(zipPath, extractPath)
-                Dim pbcfg As String = apppath + "\resource\buildspace\builderdata.pbcfg"
-                Dim pbprogcfg As String = apppath + "\resource\buildspace\progdata.pbcfg"
                 System.IO.Directory.Delete(apppath + "\binary", True)
                 System.IO.Directory.CreateDirectory(apppath + "\binary")
+                Dim zipPath As String = apppath + "\resource\resourcepack\freshapp.zip"
+                Dim extractPath As String = apppath + "\binary"
+                ZipFile.ExtractToDirectory(zipPath, extractPath)
                 ProgressBar1.Value = 20
-                Dim objWriter As New System.IO.StreamWriter(pbcfg)
-                objWriter.Write(TextBox1.Text)
-                objWriter.Close()
-                Dim objWriter2 As New System.IO.StreamWriter(pbprogcfg)
-                objWriter2.Write(TextBox2.Text)
-                objWriter2.Close()
-                Dim pbprogw As String = apppath + "\resource\buildspace\appsizew.pbcfg"
-                Dim pbprogh As String = apppath + "\resource\buildspace\appsizeh.pbcfg"
-                Dim objWriter13 As New System.IO.StreamWriter(pbprogh)
-                Dim objWriter14 As New System.IO.StreamWriter(pbprogw)
-                objWriter13.Write(TextBox4.Text)
-                objWriter13.Close()
-                objWriter14.Write(TextBox3.Text)
-                objWriter14.Close()
-                Dim pbprogfw As String = apppath + "\resource\buildspace\appfixbs.pbcfg"
-                Dim objWriter50 As New System.IO.StreamWriter(pbprogfw)
-                If CheckBox5.Checked = True Then
-                    objWriter50.Write("True")
-                End If
-                objWriter50.Close()
-                Dim pbprogaot As String = apppath + "\resource\buildspace\appaot.pbcfg"
-                Dim objWriter51 As New System.IO.StreamWriter(pbprogaot)
-                If CheckBox6.Checked = True Then
-                    objWriter51.Write("True")
-                End If
-                objWriter51.Close()
-                Dim pbhico As String = apppath + "\resource\buildspace\apphico.pbcfg"
-                Dim objWriter52 As New System.IO.StreamWriter(pbhico)
-                If CheckBox7.Checked = True Then
-                    objWriter52.Write("True")
-                End If
-                objWriter52.Close()
-                Dim pbcxm As String = apppath + "\resource\buildspace\contextmenu.pbcfg"
-                Dim objWriter53 As New System.IO.StreamWriter(pbcxm)
-                If CheckBox8.Checked = True Then
-                    objWriter53.Write("True")
-                End If
-                objWriter53.Close()
-                Dim pbopval As String = apppath + "\resource\buildspace\appopval.pbcfg"
-                Dim objWriter511 As New System.IO.StreamWriter(pbopval)
-                objWriter511.Write(TextBox5.Text)
-                objWriter511.Close()
+                Using writer As New StreamWriter(apppath + "\binary\manifest.pbcfg", False)
+                    'builderdata
+                    'progdata
+                    'contextmenu
+                    'fsmsg.title
+                    'fsmsg.desc
+                    'fsmsg.enab
+                    'appsizew
+                    'appsizeh
+                    'appfixbs
+                    'appopval
+                    'appaot
+                    'apphico
+                    writer.WriteLine(TextBox1.Text)
+                    writer.WriteLine(TextBox2.Text)
+                    If CheckBox8.Checked = True Then
+                        writer.WriteLine("True")
+                    Else
+                        writer.WriteLine("False")
+                    End If
+                    writer.WriteLine(welcomemessage.TextBox1.Text)
+                    writer.WriteLine(welcomemessage.TextBox2.Text)
+                    If CheckBox3.Checked = True Then
+                        writer.WriteLine("True")
+                    Else
+                        writer.WriteLine("False")
+                    End If
+                    writer.WriteLine(TextBox3.Text)
+                    writer.WriteLine(TextBox4.Text)
+                    If CheckBox5.Checked = True Then
+                        writer.WriteLine("True")
+                    Else
+                        writer.WriteLine("False")
+                    End If
+                    writer.WriteLine(TextBox5.Text)
+                    If CheckBox6.Checked = True Then
+                        writer.WriteLine("True")
+                    Else
+                        writer.WriteLine("False")
+                    End If
+                    If CheckBox7.Checked = True Then
+                        writer.WriteLine("True")
+                    Else
+                        writer.WriteLine("False")
+                    End If
+                End Using
                 ProgressBar1.Value = 50
-                My.Computer.FileSystem.CopyDirectory(apppath + "\resource\buildspace", apppath + "\binary", True)
                 My.Computer.FileSystem.RenameFile(apppath + "\binary\P Browser App.exe", TextBox2.Text + ".exe")
                 Dim icnshave As String = apppath + "\statecache\buildcache\appicns\appicns.ico"
                 If System.IO.File.Exists(icnshave) Then
                     My.Computer.FileSystem.CopyFile(apppath + "\statecache\buildcache\appicns\appicns.ico", apppath + "\binary\appicns.ico", True)
                 End If
                 ProgressBar1.Value = 70
-                System.IO.Directory.Delete(apppath + "\resource\buildspace", True)
-                System.IO.Directory.CreateDirectory(apppath + "\resource\buildspace")
                 ProgressBar1.Value = 80
-                Dim pbfsd As String = apppath + "\binary\fsmsg.desc.pbcfg"
-                Dim pbfst As String = apppath + "\binary\fsmsg.title.pbcfg"
-                Dim pbfse As String = apppath + "\binary\fsmsg.enab.pbval"
-                Dim objWriter3 As New System.IO.StreamWriter(pbfsd)
-                objWriter3.Write(welcomemessage.TextBox2.Text)
-                objWriter3.Close()
-                Dim objWriter4 As New System.IO.StreamWriter(pbfst)
-                objWriter4.Write(welcomemessage.TextBox1.Text)
-                objWriter4.Close()
-                If CheckBox3.Checked = False Then
-                    Dim objWriter5 As New System.IO.StreamWriter(pbfse)
-                    objWriter5.Write("False")
-                    objWriter5.Close()
-                Else
-                    Dim objWriter5 As New System.IO.StreamWriter(pbfse)
-                    objWriter5.Write("True")
-                    objWriter5.Close()
-                End If
                 ProgressBar1.Value = 100
                 If RadioButton3.Checked = True Then
+                    System.IO.Directory.Delete(apppath + "\binarypkg", True)
+                    System.IO.Directory.CreateDirectory(apppath + "\binarypkg")
                     Dim zipsource As String = apppath + "\binary\"
                     Dim zipbin As String = apppath + "\binarypkg\" + TextBox2.Text + ".zip"
                     ZipFile.CreateFromDirectory(zipsource, zipbin, CompressionLevel.Optimal, False)
                 End If
-                MessageBox.Show("Build Completed! Click OK to continue.", "Build Completed!")
+                MessageBox.Show("Build Completed! Click OK to continue.", "Build Completed!", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 If CheckBox1.Checked = True Then
                     Process.Start(apppath + "\binary\" + TextBox2.Text + ".exe")
                 End If
@@ -256,12 +235,12 @@ Public Class Form1
                     Try
                         Process.Start(My.Settings.tempScript)
                     Catch ex As Exception
-                        MessageBox.Show("Cannot run script! Your app is build and ready!", "Failed!")
+                        MessageBox.Show("Cannot run script! Your app is build and ready!", "Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End Try
                 End If
                 Label7.Text = "Build completed!"
             Catch ex As Exception
-                MessageBox.Show("Build Failed! Incomplete or corrupted Data please reinstall builder.", "Build Failed!")
+                MessageBox.Show("Build Failed! Incomplete or corrupted Data please reinstall builder.", "Build Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Label7.Text = "Build failed!"
             End Try
         End If
