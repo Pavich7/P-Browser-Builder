@@ -33,7 +33,7 @@ Partial Class splash
         Me.PictureBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox3.Image = Global.P_Browser_Builder.My.Resources.Resources.close
-        Me.PictureBox3.Location = New System.Drawing.Point(804, 11)
+        Me.PictureBox3.Location = New System.Drawing.Point(699, 11)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(10, 10)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -45,7 +45,7 @@ Partial Class splash
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(827, 445)
+        Me.ClientSize = New System.Drawing.Size(722, 445)
         Me.Controls.Add(Me.PictureBox3)
         Me.Cursor = System.Windows.Forms.Cursors.WaitCursor
         Me.DoubleBuffered = True
