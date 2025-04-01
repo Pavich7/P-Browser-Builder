@@ -147,6 +147,9 @@
 - FIXED: Reload button in Preview Menu reload to Website URL.
 - CHANGED: Removed auto check for update for performance improvements.
 - CHANGED: Select App Icon via folder icon and view App Icon via clicking on file name.
-- CHANGED: New set of Builder 9 Splash Screen Design.</value>
+- CHANGED: New set of Builder 9 Splash Screen Design.
+
+** Low-level **
+- IMPROVEMENT: Updated Visual C++ Redistributable. (14.42.34438.0)</value>
   </data>
 </root>
