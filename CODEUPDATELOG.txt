@@ -19,9 +19,11 @@ Builder Release 9.0.0
 - ADDED: Window width can be narrowed down more when the side panels are hidden.
 - ADDED: Builder now able to remember window size.
 - ADDED: Ability to generate missing folder during structure verification process.
+- ADDED: Press Enter key in Website URL to force reload to Website URL.
 - IMPROVEMENT: Redesign Agreement Tab in Welcome to P Browser Builder.
 - IMPROVEMENT: Updated CefSharp to 134.3.60
 - IMPROVEMENT: Updated Chromium to 134.0.6998.118
 - FIXED: Fixed outdated instruction when resource not compatible.
+- FIXED: Reload button in Preview Menu reload to Website URL.
 - CHANGED: Removed auto check for update for performance improvements.
 - CHANGED: Select App Icon via folder icon and view App Icon via clicking on file name.

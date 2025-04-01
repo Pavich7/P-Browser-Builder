@@ -501,6 +501,12 @@ Public Class Form1
         Browser.Load(TextBox1.Text)
     End Sub
 
+    Private Sub TextBox1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox1.KeyPress
+        If e.KeyChar = Chr(13) Then
+            Browser.Load(TextBox1.Text)
+        End If
+    End Sub
+
     Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
         If TextBox2.Text = "" Then
             Label2.Text = "Application name (example.exe)"
@@ -669,6 +675,7 @@ Public Class Form1
             TextBox3.Text = "944"
             TextBox4.Text = "573"
             TextBox5.Text = "100"
+            TextBox6.Text = ""
             RadioButton2.Checked = False
             RadioButton3.Checked = False
             CheckBox1.Text = "Start your app after build"
@@ -698,8 +705,7 @@ Public Class Form1
         Browser.Load("https://github.com/Pavich7/P-Browser-Builder/issues/new/choose")
     End Sub
 
-    Private Sub ReloadPreviewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReloadPreviewToolStripMenuItem.Click
-        Browser.Load(TextBox1.Text)
+    Private Sub ReloadPreviewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReloadPreviewToolStripMenuItem.Click, PictureBox11.Click
         Browser.Refresh()
     End Sub
 
@@ -996,6 +1002,7 @@ Public Class Form1
             TextBox3.Text = "944"
             TextBox4.Text = "573"
             TextBox5.Text = "100"
+            TextBox6.Text = ""
             RadioButton2.Checked = True
             RadioButton3.Checked = False
             CheckBox1.Text = "Start your app after build"
@@ -1031,10 +1038,6 @@ Public Class Form1
         CheckBox5.Checked = False
         CheckBox6.Checked = False
         CheckBox7.Checked = False
-    End Sub
-
-    Private Sub PictureBox11_Click(sender As Object, e As EventArgs) Handles PictureBox11.Click
-        Browser.Reload
     End Sub
 
     Private Sub ResetWhatsNewStateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetWhatsNewStateToolStripMenuItem.Click
@@ -1176,6 +1179,7 @@ Public Class Form1
                     TextBox3.Text = "944"
                     TextBox4.Text = "573"
                     TextBox5.Text = "100"
+                    TextBox6.Text = ""
                     RadioButton2.Checked = True
                     RadioButton3.Checked = False
                     CheckBox1.Text = "Start your app after build"
@@ -1347,6 +1351,7 @@ Public Class Form1
                 TextBox3.Text = "944"
                 TextBox4.Text = "573"
                 TextBox5.Text = "100"
+                TextBox6.Text = ""
                 RadioButton2.Checked = True
                 RadioButton3.Checked = False
                 CheckBox1.Text = "Start your app after build"

@@ -299,7 +299,7 @@ Partial Class Form1
         Me.SidePanelToolStripMenuItem.CheckOnClick = True
         Me.SidePanelToolStripMenuItem.Name = "SidePanelToolStripMenuItem"
         Me.SidePanelToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
-        Me.SidePanelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SidePanelToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
         Me.SidePanelToolStripMenuItem.Text = "Side Panel"
         '
         'DesignViewToolStripMenuItem
@@ -308,7 +308,7 @@ Partial Class Form1
         Me.DesignViewToolStripMenuItem.CheckOnClick = True
         Me.DesignViewToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.DesignViewToolStripMenuItem.Name = "DesignViewToolStripMenuItem"
-        Me.DesignViewToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DesignViewToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
         Me.DesignViewToolStripMenuItem.Text = "Design View"
         '
         'StartLogToolStripMenuItem
@@ -317,7 +317,7 @@ Partial Class Form1
         Me.StartLogToolStripMenuItem.CheckOnClick = True
         Me.StartLogToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.StartLogToolStripMenuItem.Name = "StartLogToolStripMenuItem"
-        Me.StartLogToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.StartLogToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
         Me.StartLogToolStripMenuItem.Text = "Start Log"
         '
         'ActionToolboxToolStripMenuItem
@@ -326,7 +326,7 @@ Partial Class Form1
         Me.ActionToolboxToolStripMenuItem.CheckOnClick = True
         Me.ActionToolboxToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.ActionToolboxToolStripMenuItem.Name = "ActionToolboxToolStripMenuItem"
-        Me.ActionToolboxToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ActionToolboxToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
         Me.ActionToolboxToolStripMenuItem.Text = "Action Toolbox"
         '
         'NavigationBarToolStripMenuItem
@@ -335,7 +335,7 @@ Partial Class Form1
         Me.NavigationBarToolStripMenuItem.CheckOnClick = True
         Me.NavigationBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.NavigationBarToolStripMenuItem.Name = "NavigationBarToolStripMenuItem"
-        Me.NavigationBarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.NavigationBarToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
         Me.NavigationBarToolStripMenuItem.Text = "Navigation Bar"
         '
         'BuildToolStripMenuItem
@@ -993,6 +993,7 @@ Partial Class Form1
         Me.Label18.Size = New System.Drawing.Size(64, 17)
         Me.Label18.TabIndex = 32
         Me.Label18.Text = "Download"
+        Me.ToolTip1.SetToolTip(Me.Label18, "Download/Update Builder Resource.")
         '
         'Label20
         '
@@ -1100,6 +1101,7 @@ Partial Class Form1
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox3.TabIndex = 65
         Me.PictureBox3.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox3, "Close Side Panel. (Ctrl+R)")
         '
         'Label35
         '
@@ -1411,6 +1413,7 @@ Partial Class Form1
         Me.Label9.Size = New System.Drawing.Size(19, 20)
         Me.Label9.TabIndex = 43
         Me.Label9.Text = "<"
+        Me.ToolTip1.SetToolTip(Me.Label9, "Go back browser in Design View")
         '
         'Label21
         '
@@ -1425,6 +1428,7 @@ Partial Class Form1
         Me.Label21.Size = New System.Drawing.Size(19, 20)
         Me.Label21.TabIndex = 44
         Me.Label21.Text = ">"
+        Me.ToolTip1.SetToolTip(Me.Label21, "Go forward browser in Design View")
         '
         'Label22
         '
@@ -1439,6 +1443,7 @@ Partial Class Form1
         Me.Label22.Size = New System.Drawing.Size(55, 15)
         Me.Label22.TabIndex = 45
         Me.Label22.Text = "DevTools"
+        Me.ToolTip1.SetToolTip(Me.Label22, "Open browser DevTools.")
         '
         'TabControl1
         '
@@ -1664,6 +1669,7 @@ Partial Class Form1
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox4.TabIndex = 73
         Me.PictureBox4.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox4, "Preference")
         '
         'PictureBox11
         '
@@ -1677,6 +1683,7 @@ Partial Class Form1
         Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox11.TabIndex = 55
         Me.PictureBox11.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox11, "Reload browser in Design View. (F5)")
         '
         'PictureBox9
         '
