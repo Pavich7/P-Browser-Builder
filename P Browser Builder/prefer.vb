@@ -248,7 +248,7 @@ Public Class prefer
     Private Sub Label37_Click(sender As Object, e As EventArgs) Handles Label37.Click
         Try
             Dim client As WebClient = New WebClient()
-            Dim nf1cont As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v3/feedcontent.txt")
+            Dim nf1cont As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v4/feedcontent.txt")
             Dim lines As String() = nf1cont.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
             If lines.Length > 0 Then Form1.Label12.Text = lines(0)
             If lines.Length > 1 Then Form1.Label13.Text = lines(1)

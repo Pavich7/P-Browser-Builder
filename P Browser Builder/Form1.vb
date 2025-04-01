@@ -403,18 +403,15 @@ Public Class Form1
             Else
                 'reschk
                 Try
-                    Dim oresver As String
                     Dim client As WebClient = New WebClient()
-                    Dim nf1cont As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v3/cfuver.txt")
-                    Dim lines As String() = nf1cont.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
-                    If lines.Length > 1 Then oresver = lines(1)
+                    Dim oresver As String = client.DownloadString("https://github.com/Pavich7/P-Browser-Builder-Resource/releases/latest/download/release_manifest.txt")
                     Dim fileReader As System.IO.StreamReader
                     fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\version.txt")
                     Dim stringReader As String = fileReader.ReadLine()
                     If oresver.Contains(stringReader) Then
                         Label20.Visible = False
                         Label18.Visible = False
-                        Panel4.Size = New Size(265, 148)
+                        Panel4.Size = New Size(265, 264)
                     Else
                         Label20.Text = "Resource update available! (" + oresver + ")"
                         Label18.Text = "    Update"
@@ -423,7 +420,7 @@ Public Class Form1
                 Catch ex As Exception
                     Label20.Visible = False
                     Label18.Visible = False
-                    Panel4.Size = New Size(265, 148)
+                    Panel4.Size = New Size(265, 264)
                 End Try
                 'chkpoint
                 If Not System.IO.File.Exists(apppath + "\resource\cpd700") Then
@@ -616,7 +613,7 @@ Public Class Form1
             Try
                 ProgressBar1.Value = 10
                 Dim client As WebClient = New WebClient()
-                Dim nf1cont As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v3/feedcontent.txt")
+                Dim nf1cont As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v4/feedcontent.txt")
                 Dim lines As String() = nf1cont.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
                 ProgressBar1.Value = 50
                 If lines.Length > 0 Then Label12.Text = lines(0)
@@ -653,7 +650,7 @@ Public Class Form1
             Label15.Text = "Please wait..."
             Label15.Enabled = False
             Dim client As WebClient = New WebClient()
-            Dim nf1cont As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v3/feedcontent.txt")
+            Dim nf1cont As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v4/feedcontent.txt")
             Dim lines As String() = nf1cont.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
             If lines.Length > 0 Then Label12.Text = lines(0)
             If lines.Length > 1 Then Label13.Text = lines(1)
@@ -1465,11 +1462,8 @@ Public Class Form1
     End Sub
 
     Private Sub CheckForUpdatesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CheckForUpdatesToolStripMenuItem.Click
-        Dim obuiver As String
         Dim client As WebClient = New WebClient()
-        Dim nf1cont As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v3/cfuver.txt")
-        Dim lines As String() = nf1cont.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
-        If lines.Length > 0 Then obuiver = lines(0)
+        Dim obuiver As String = client.DownloadString("https://github.com/Pavich7/P-Browser-Builder/releases/latest/download/release_manifest.txt")
         Dim bfileReader As System.IO.StreamReader
         bfileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\metadata\version.txt")
         Dim bstringReader As String = bfileReader.ReadLine()
