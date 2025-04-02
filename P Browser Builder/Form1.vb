@@ -894,19 +894,12 @@ Public Class Form1
         MessageBox.Show(welcomemessage.TextBox2.Text, welcomemessage.TextBox1.Text)
     End Sub
 
-    Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
-        TextBox1.Text = ""
-        TextBox2.Text = ""
-        CheckBox3.Checked = False
-        CheckBox8.Checked = False
-    End Sub
-
     Private Sub PictureBox8_Click(sender As Object, e As EventArgs) Handles PictureBox8.Click
         If TextBox1.Text = "" Then
-            MessageBox.Show("Please enter URL before getting page title.", "Error!")
+            MessageBox.Show("Please enter URL before getting page title.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
             If My.Settings.tempWebTitle = "" Then
-                MessageBox.Show("Current websites doesn't have title!", "Error!")
+                MessageBox.Show("Current websites doesn't have title!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
                 TextBox2.Text = My.Settings.tempWebTitle
             End If
@@ -981,7 +974,7 @@ Public Class Form1
     End Sub
 
     Private Sub Label20_Click(sender As Object, e As EventArgs) Handles Label20.Click
-        MessageBox.Show("After fresh install you will need to install resource to build. (Download size: approx. 140 MB)", "Info...")
+        MessageBox.Show("After fresh install you will need to install resource to build. (Download size: approx. 150 MB)", "Info...", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Private Sub StartWindowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StartWindowToolStripMenuItem.Click

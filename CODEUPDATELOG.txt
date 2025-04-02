@@ -1,6 +1,8 @@
 Builder Release 9.1.0
 
 ** Release notes **
+- ADDED: Added more icons to various message boxes.
 - IMPROVEMENT: Build Mode are selectable while resource isn't available.
 - IMPROVEMENT: Hide/Show Side Panel won't reset to default window size.
 - FIXED: UI bugs in After Build Action while Build Mode is compressed mode.
+- CHANGED: Removed reset button in Properties Section.

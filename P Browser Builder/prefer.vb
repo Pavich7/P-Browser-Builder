@@ -106,15 +106,15 @@ Public Class prefer
 
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
         Try
-            Dim result As DialogResult = MessageBox.Show("Do you wish to completely uninstall builder resource?" + vbNewLine + "You can reinstall resource later via notification box", "You sure about this?", MessageBoxButtons.YesNo)
+            Dim result As DialogResult = MessageBox.Show("Do you wish to completely uninstall builder resource?" + vbNewLine + "You can reinstall resource later via notification box", "You sure about this?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
             If (result = DialogResult.Yes) Then
                 Dim apppath As String = Application.StartupPath()
                 System.IO.Directory.Delete(apppath + "\resource", True)
-                MessageBox.Show("P Browser Builder need to restart app", "Uninstall Completed!")
+                MessageBox.Show("P Browser Builder need to restart app", "Uninstall Completed!", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Application.Restart()
             End If
         Catch ex As Exception
-            MessageBox.Show("Could not attempt to uninstall resource!" + vbNewLine + ex.Message + vbNewLine + "You may need to restart builder and try again.", "Error!")
+            MessageBox.Show("Could not attempt to uninstall resource!" + vbNewLine + ex.Message + vbNewLine + "You may need to restart builder and try again.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -128,7 +128,7 @@ Public Class prefer
             Dim TheSize3 As Long = GetDirSize(apppath + "\statecache\updatecache\")
             Label52.Text = FormatNumber(TheSize3 / 1024 / 1024, 1) & " MB"
         Catch ex As Exception
-            MessageBox.Show("Could not attempt to delete installer cache!" + vbNewLine + ex.Message + vbNewLine + "You may need to restart builder and try again.", "Error!")
+            MessageBox.Show("Could not attempt to delete installer cache!" + vbNewLine + ex.Message + vbNewLine + "You may need to restart builder and try again.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -170,14 +170,14 @@ Public Class prefer
 
     Private Sub Label22_Click(sender As Object, e As EventArgs) Handles Label22.Click
         If TextBox1.Text = "" Then
-            MessageBox.Show("Please Enter URL!", "FAILED!")
+            MessageBox.Show("Please Enter URL!", "FAILED!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
             Dim apppath As String = Application.StartupPath()
             Dim pbcfg As String = apppath + "\statedata\setting.builder.resdlserver.pbcfg"
             Dim objWriter As New System.IO.StreamWriter(pbcfg)
             objWriter.Write(TextBox1.Text)
             objWriter.Close()
-            MessageBox.Show("Success!", "OK!")
+            MessageBox.Show("Success!", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
 
@@ -187,7 +187,7 @@ Public Class prefer
         Dim objWriter As New System.IO.StreamWriter(pbcfg)
         objWriter.Write("https://github.com/Pavich7/P-Browser-Builder-Resource/releases/latest/download/pbb-resource.zip")
         objWriter.Close()
-        MessageBox.Show("Reset!", "OK!")
+        MessageBox.Show("Reset!", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
@@ -199,7 +199,7 @@ Public Class prefer
     End Sub
 
     Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
-        Dim result As DialogResult = MessageBox.Show("Do you wish to reset all setting?" + vbNewLine + "This cannot be undone!", "You sure about this?", MessageBoxButtons.YesNo)
+        Dim result As DialogResult = MessageBox.Show("Do you wish to reset all setting?" + vbNewLine + "This cannot be undone!", "You sure about this?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If (result = DialogResult.Yes) Then
             Dim apppath As String = Application.StartupPath()
             Dim objWriter As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.inrsstate.pbcfg")
@@ -210,11 +210,11 @@ Public Class prefer
     End Sub
 
     Private Sub Label31_Click(sender As Object, e As EventArgs) Handles Label31.Click
-        MessageBox.Show("In this textbox you can set where to download resources. If you want to host please make sure that resource server is directly pointed to your pbb-resource.zip file (like https://example.com/pbb-resource.zip)", "More informations...")
+        MessageBox.Show("In this textbox you can set where to download resources. If you want to host please make sure that resource server is directly pointed to your pbb-resource.zip file (like https://example.com/pbb-resource.zip)", "More informations...", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Private Sub Label32_Click(sender As Object, e As EventArgs) Handles Label32.Click
-        MessageBox.Show("If you already have pbb-resource.zip file or your custom one, using this button to install from file rather than download new ones. Please note that custom resource can be risky.", "More informations...")
+        MessageBox.Show("If you already have pbb-resource.zip file or your custom one, using this button to install from file rather than download new ones. Please note that custom resource can be risky.", "More informations...", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Enter
@@ -253,9 +253,9 @@ Public Class prefer
             If lines.Length > 0 Then Form1.Label12.Text = lines(0)
             If lines.Length > 1 Then Form1.Label13.Text = lines(1)
             If lines.Length > 2 Then Form1.Label14.Text = lines(2)
-            MessageBox.Show("News Feed refreshed!", "OK!")
+            MessageBox.Show("News Feed refreshed!", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Catch ex As Exception
-            MessageBox.Show("Error while refreshing News Feed", "Error!")
+            MessageBox.Show("Error while refreshing News Feed", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -265,24 +265,24 @@ Public Class prefer
         Dim objWriter As New System.IO.StreamWriter(pbcfg)
         If CheckBox1.Checked = True Then
             objWriter.Write("False")
-            MessageBox.Show("Success! News Feed will not fetch on startup. You may need to restart to make change.", "OK!")
+            MessageBox.Show("Success! News Feed will not fetch on startup. You may need to restart to make change.", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Else
             objWriter.Write("True")
-            MessageBox.Show("Success! News Feed will fetch on startup. You may need to restart to make change.", "OK!")
+            MessageBox.Show("Success! News Feed will fetch on startup. You may need to restart to make change.", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
         objWriter.Close()
     End Sub
 
     Private Sub Label39_Click(sender As Object, e As EventArgs) Handles Label39.Click
         If TextBox2.Text = "" Then
-            MessageBox.Show("Please Enter value!", "FAILED!")
+            MessageBox.Show("Please Enter value!", "FAILED!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
             Dim apppath As String = Application.StartupPath()
             Dim pbcfg As String = apppath + "\statedata\setting.builder.usageinterv.pbcfg"
             Dim objWriter As New System.IO.StreamWriter(pbcfg)
             objWriter.Write(TextBox2.Text)
             objWriter.Close()
-            MessageBox.Show("Success! You may need to restart to apply the change.", "OK!")
+            MessageBox.Show("Success! You may need to restart to apply the change.", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
 
@@ -292,10 +292,10 @@ Public Class prefer
         Dim objWriter As New System.IO.StreamWriter(pbcfg)
         If CheckBox2.Checked = True Then
             objWriter.Write("True")
-            MessageBox.Show("Success! Side panel will hide on startup. You may need to restart to make change.", "OK!")
+            MessageBox.Show("Success! Side panel will hide on startup. You may need to restart to make change.", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Else
             objWriter.Write("False")
-            MessageBox.Show("Success! Side panel will show on startup. You may need to restart to make change.", "OK!")
+            MessageBox.Show("Success! Side panel will show on startup. You may need to restart to make change.", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
         objWriter.Close()
     End Sub
@@ -306,7 +306,7 @@ Public Class prefer
     End Sub
 
     Private Sub Label60_Click(sender As Object, e As EventArgs) Handles Label60.Click
-        Dim result As DialogResult = MessageBox.Show("Unlocking the Dev Menu is dangerous." + vbNewLine + "It is used to test incomplete features at runtime." + vbNewLine + "Some incomplete or faulty features can damage your Builder!" + vbNewLine + "For developers, you can go check the code in the repository." + vbNewLine + "Do you want to process it?", "You sure about this?", MessageBoxButtons.YesNo)
+        Dim result As DialogResult = MessageBox.Show("Unlocking the Dev Menu is dangerous." + vbNewLine + "It is used to test incomplete features at runtime." + vbNewLine + "Some incomplete or faulty features can damage your Builder!" + vbNewLine + "For developers, you can go check the code in the repository." + vbNewLine + "Do you want to process it?", "You sure about this?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If (result = DialogResult.Yes) Then
             Form1.DevToolStripMenuItem.Visible = True
             Label60.Enabled = False
