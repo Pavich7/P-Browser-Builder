@@ -299,7 +299,7 @@ Partial Class Form1
         Me.SidePanelToolStripMenuItem.CheckOnClick = True
         Me.SidePanelToolStripMenuItem.Name = "SidePanelToolStripMenuItem"
         Me.SidePanelToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
-        Me.SidePanelToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.SidePanelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SidePanelToolStripMenuItem.Text = "Side Panel"
         '
         'DesignViewToolStripMenuItem
@@ -308,7 +308,7 @@ Partial Class Form1
         Me.DesignViewToolStripMenuItem.CheckOnClick = True
         Me.DesignViewToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.DesignViewToolStripMenuItem.Name = "DesignViewToolStripMenuItem"
-        Me.DesignViewToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.DesignViewToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.DesignViewToolStripMenuItem.Text = "Design View"
         '
         'StartLogToolStripMenuItem
@@ -317,7 +317,7 @@ Partial Class Form1
         Me.StartLogToolStripMenuItem.CheckOnClick = True
         Me.StartLogToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.StartLogToolStripMenuItem.Name = "StartLogToolStripMenuItem"
-        Me.StartLogToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.StartLogToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.StartLogToolStripMenuItem.Text = "Start Log"
         '
         'ActionToolboxToolStripMenuItem
@@ -326,7 +326,7 @@ Partial Class Form1
         Me.ActionToolboxToolStripMenuItem.CheckOnClick = True
         Me.ActionToolboxToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.ActionToolboxToolStripMenuItem.Name = "ActionToolboxToolStripMenuItem"
-        Me.ActionToolboxToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.ActionToolboxToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ActionToolboxToolStripMenuItem.Text = "Action Toolbox"
         '
         'NavigationBarToolStripMenuItem
@@ -335,7 +335,7 @@ Partial Class Form1
         Me.NavigationBarToolStripMenuItem.CheckOnClick = True
         Me.NavigationBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.NavigationBarToolStripMenuItem.Name = "NavigationBarToolStripMenuItem"
-        Me.NavigationBarToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.NavigationBarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.NavigationBarToolStripMenuItem.Text = "Navigation Bar"
         '
         'BuildToolStripMenuItem
@@ -799,7 +799,8 @@ Partial Class Form1
         '
         'CheckBox1
         '
-        Me.CheckBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CheckBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox1.Location = New System.Drawing.Point(26, 74)
@@ -823,7 +824,8 @@ Partial Class Form1
         '
         'CheckBox2
         '
-        Me.CheckBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CheckBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox2.Location = New System.Drawing.Point(26, 101)

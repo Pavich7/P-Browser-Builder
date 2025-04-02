@@ -118,38 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="RichTextBox1.Text" xml:space="preserve">
-    <value>Builder Release 9.0.0
-
-** Release Highlights **
-- HIGHLIGHTS: Introducing App 7.0 build and run faster with new build system.
-- HIGHLIGHTS: Option to customize Browser Agent for better web detection.
-- HIGHLIGHTS: Major User Interface improvements.
-- HIGHLIGHTS: New tooltip for features informations.
-
-** Breaking Changes **
-- BREAKING: This version only support 7.0.0 or newer resource.
-- BREAKING: Upgrading to this version will reset all settings.
+    <value>Builder Release 9.1.0
 
 ** Release notes **
-- ADDED: New instruction with picture in Welcome Message Setting.
-- ADDED: New manual Check for Updates in Help menu.
-- ADDED: Added more icons to various message boxes.
-- ADDED: New simulated Window Control in Design View.
-- ADDED: Enable Fixed Window will now disable maximize button in Design View.
-- ADDED: Window width can be narrowed down more when the side panels are hidden.
-- ADDED: Builder now able to remember window size.
-- ADDED: Ability to generate missing folder during structure verification process.
-- ADDED: Press Enter key in Website URL to force reload to Website URL.
-- IMPROVEMENT: Redesign Agreement Tab in Welcome to P Browser Builder.
-- IMPROVEMENT: Updated CefSharp to 134.3.60
-- IMPROVEMENT: Updated Chromium to 134.0.6998.118
-- FIXED: Fixed outdated instruction when resource not compatible.
-- FIXED: Reload button in Preview Menu reload to Website URL.
-- CHANGED: Removed auto check for update for performance improvements.
-- CHANGED: Select App Icon via folder icon and view App Icon via clicking on file name.
-- CHANGED: New set of Builder 9 Splash Screen Design.
-
-** Low-level **
-- IMPROVEMENT: Updated Visual C++ Redistributable. (14.42.34438.0)</value>
+- IMPROVEMENT: Build Mode are selectable while resource isn't available.
+- IMPROVEMENT: Hide/Show Side Panel won't reset to default window size.
+- FIXED: UI bugs in After Build Action while Build Mode is compressed mode.</value>
   </data>
 </root>

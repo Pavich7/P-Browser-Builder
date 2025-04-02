@@ -390,11 +390,8 @@ Public Class Form1
             If Not System.IO.Directory.Exists(rscheck) Then
                 Button1.Enabled = False
                 Button2.Enabled = False
-                RadioButton2.Enabled = False
-                RadioButton3.Enabled = False
                 CheckBox1.Enabled = False
                 CheckBox2.Enabled = False
-                Label4.Enabled = False
                 Label8.Enabled = False
                 Label24.Enabled = False
                 Button9.Enabled = False
@@ -427,11 +424,8 @@ Public Class Form1
                     MessageBox.Show("Resource not compatible to this version of Builder!" + vbNewLine + "Please update Builder and Resource to ensure compatibility.", "Resource not compatible!", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Button1.Enabled = False
                     Button2.Enabled = False
-                    RadioButton2.Enabled = False
-                    RadioButton3.Enabled = False
                     CheckBox1.Enabled = False
                     CheckBox2.Enabled = False
-                    Label4.Enabled = False
                     Label8.Enabled = False
                     Label24.Enabled = False
                     Button9.Enabled = False
@@ -462,11 +456,10 @@ Public Class Form1
                 SidePanelToolStripMenuItem.Checked = False
                 Me.MinimumSize = New Size(580, 630)
                 Panel6.Hide()
-                Me.WindowState = FormWindowState.Normal
-                Me.Size = New Size(1232, 646)
-                TabControl1.Width = 872
+                TabControl1.Width = TabControl1.Width + 313
             Else
                 SidePanelToolStripMenuItem.Checked = True
+                TabControl1.Width = TabControl1.Width + 313
             End If
             fileReader111.Close()
             Dim fileReaderw As System.IO.StreamReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\state.builder.winstatew.pbcfg")
@@ -1244,14 +1237,9 @@ Public Class Form1
 
     Dim hidenoti As Boolean = True
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
-        Panel6.Hide()
         SidePanelToolStripMenuItem.Checked = False
-        Me.WindowState = FormWindowState.Normal
-        Me.Size = New Size(1232, 646)
-        Me.MinimumSize = New Size(580, 630)
-        TabControl1.Width = 872
         If hidenoti = True Then
-            MessageBox.Show("You can unhide side panel by click on View > Side Panel" + vbNewLine + "or using Ctrl + R Shortcut", "Notification")
+            MessageBox.Show("You can unhide side panel by click on View > Side Panel" + vbNewLine + "or using Ctrl + R Shortcut", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
             hidenoti = False
         End If
     End Sub
@@ -1274,15 +1262,11 @@ Public Class Form1
         If SidePanelToolStripMenuItem.Checked = True Then
             Panel6.Show()
             Me.MinimumSize = New Size(900, 630)
-            Me.WindowState = FormWindowState.Normal
-            Me.Size = New Size(1232, 646)
-            TabControl1.Width = 559
+            TabControl1.Width = TabControl1.Width - 313
         Else
             Panel6.Hide()
             Me.MinimumSize = New Size(580, 630)
-            Me.WindowState = FormWindowState.Normal
-            Me.Size = New Size(1232, 646)
-            TabControl1.Width = 872
+            TabControl1.Width = TabControl1.Width + 313
         End If
     End Sub
 
