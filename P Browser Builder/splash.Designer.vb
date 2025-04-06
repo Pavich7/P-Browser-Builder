@@ -22,8 +22,6 @@ Partial Class splash
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -61,6 +59,5 @@ Partial Class splash
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Timer1 As Timer
     Friend WithEvents PictureBox3 As PictureBox
 End Class
