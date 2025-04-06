@@ -30,6 +30,11 @@ P Browser Builder is an open-source Windows application that helps you convert y
 
 **Note:** There is no guarantee that the project will build without any issues.
 
+## Builder Resource
+
+Resources are essential for building your application, and Builder provides automated updates and installations through update notifications located below the News Feed section.
+For manual installation, you can download the resource from the [dedicated repository release](https://github.com/Pavich7/P-Browser-Builder-Resource/releases). To manually install a resource, use the Resource Sideloader, which can be launched via `Preference > Advanced > Install resource from local files`.
+
 ## License
 
 ### Source Code License
