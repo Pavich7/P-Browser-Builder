@@ -25,7 +25,7 @@ Module savemanager
         Form1.TextBox4.Text = "573"
         Form1.TextBox5.Text = "100"
         Form1.TextBox6.Text = ""
-        Form1.RadioButton2.Checked = False
+        Form1.RadioButton2.Checked = True
         Form1.RadioButton3.Checked = False
         Form1.CheckBox1.Text = "Start your app after build"
         Form1.CheckBox2.Text = "Show your app in explorer after build"

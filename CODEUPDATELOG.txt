@@ -9,6 +9,6 @@ Builder Release 9.1.0
 - IMPROVEMENT: Updated CefSharp to 134.3.90
 - IMPROVEMENT: Updated Chromium to 134.0.6998.178
 - FIXED: UI bugs in After Build Action while Build Mode is compressed mode.
-- FIXED: New Project in File menu won't clear webpage in Design View.
+- FIXED: New Project in File menu won't clear some elements to default values.
 - FIXED: In some functions, loading save won't reset tab back to Design View.
 - CHANGED: Removed reset button in Properties Section.
