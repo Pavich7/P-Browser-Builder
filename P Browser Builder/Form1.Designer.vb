@@ -1707,6 +1707,7 @@ Partial Class Form1
         Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox8.TabIndex = 41
         Me.PictureBox8.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox8, "Use your website title as Application name.")
         '
         'Panel10
         '

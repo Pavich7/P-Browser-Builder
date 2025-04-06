@@ -4,5 +4,7 @@ Builder Release 9.1.0
 - ADDED: Added more icons to various message boxes.
 - IMPROVEMENT: Build Mode are selectable while resource isn't available.
 - IMPROVEMENT: Hide/Show Side Panel won't reset to default window size.
+- IMPROVEMENT: Updated CefSharp to 134.3.90
+- IMPROVEMENT: Updated Chromium to 134.0.6998.178
 - FIXED: UI bugs in After Build Action while Build Mode is compressed mode.
 - CHANGED: Removed reset button in Properties Section.
