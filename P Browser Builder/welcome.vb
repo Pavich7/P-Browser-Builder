@@ -31,50 +31,11 @@ Public Class welcome
         OpenFileDialog1.Title = "Open P Browser Builder Project"
         OpenFileDialog1.Filter = "P Browser Builder Project|*.pbproj"
         If OpenFileDialog1.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
-            Try
-                Dim fileReader As System.IO.StreamReader = My.Computer.FileSystem.OpenTextFileReader(OpenFileDialog1.FileName)
-                Form1.TextBox2.Text = fileReader.ReadLine()
-                Form1.TextBox1.Text = fileReader.ReadLine()
-                Form1.TextBox3.Text = fileReader.ReadLine()
-                Form1.TextBox4.Text = fileReader.ReadLine()
-                Form1.CheckBox5.Checked = fileReader.ReadLine()
-                Form1.CheckBox6.Checked = fileReader.ReadLine()
-                Form1.CheckBox7.Checked = fileReader.ReadLine()
-                Form1.TextBox5.Text = fileReader.ReadLine()
-                Form1.CheckBox3.Checked = fileReader.ReadLine()
-                welcomemessage.TextBox1.Text = fileReader.ReadLine()
-                welcomemessage.TextBox2.Text = fileReader.ReadLine()
-                Form1.CheckBox8.Checked = fileReader.ReadLine()
-                Form1.RadioButton2.Checked = fileReader.ReadLine()
-                Form1.RadioButton3.Checked = fileReader.ReadLine()
-                Form1.TextBox6.Text = fileReader.ReadLine()
-                If Form1.TextBox6.Text IsNot "" Then
-                    Form1.CheckBox9.Checked = True
-                End If
-                'aname
-                'url
-                'wwin
-                'hwin
-                'fixwin
-                'aotwin
-                'hwico
-                'opaval
-                'welena
-                'msgti
-                'msgde
-                'conxme
-                'm1chk
-                'm2chk
-                'userag
-                Form1.Enabled = True
-                Form1.ProjnameToolStripMenuItem.Text = Form1.TextBox2.Text
-                Form1.WindowState = FormWindowState.Normal
-                fileReader.Close()
-                realclose = False
-                Me.Close()
-            Catch ex As Exception
-                MessageBox.Show("Load Failed!" & vbNewLine & "Project is not compatiable or corrupt!" & vbNewLine & ex.Message, "Error!")
-            End Try
+            savemanager.loadsave(OpenFileDialog1.FileName)
+            Form1.Enabled = True
+            Form1.WindowState = FormWindowState.Normal
+            realclose = False
+            Me.Close()
         End If
     End Sub
 

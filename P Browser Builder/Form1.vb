@@ -9,7 +9,7 @@ Imports CefSharp
 Imports CefSharp.DevTools
 Imports CefSharp.WinForms
 Public Class Form1
-    Private WithEvents Browser As ChromiumWebBrowser
+    Public WithEvents Browser As ChromiumWebBrowser
     'Private WithEvents BrowserDev As ChromiumWebBrowser
     Public Sub New()
         InitializeComponent()
@@ -516,49 +516,9 @@ Public Class Form1
         'fileReader01.Close()
         If My.Application.CommandLineArgs.Count > 0 Then
             Dim FileNameOpenWith As String = My.Application.CommandLineArgs(0)
-            Try
-                Dim fileReader As System.IO.StreamReader = My.Computer.FileSystem.OpenTextFileReader(FileNameOpenWith)
-                TextBox2.Text = fileReader.ReadLine()
-                TextBox1.Text = fileReader.ReadLine()
-                TextBox3.Text = fileReader.ReadLine()
-                TextBox4.Text = fileReader.ReadLine()
-                CheckBox5.Checked = fileReader.ReadLine()
-                CheckBox6.Checked = fileReader.ReadLine()
-                CheckBox7.Checked = fileReader.ReadLine()
-                TextBox5.Text = fileReader.ReadLine()
-                CheckBox3.Checked = fileReader.ReadLine()
-                welcomemessage.TextBox1.Text = fileReader.ReadLine()
-                welcomemessage.TextBox2.Text = fileReader.ReadLine()
-                CheckBox8.Checked = fileReader.ReadLine()
-                RadioButton2.Checked = fileReader.ReadLine()
-                RadioButton3.Checked = fileReader.ReadLine()
-                TextBox6.Text = fileReader.ReadLine()
-                If TextBox6.Text IsNot "" Then
-                    CheckBox9.Checked = True
-                End If
-                'aname
-                'url
-                'wwin
-                'hwin
-                'fixwin
-                'aotwin
-                'hwico
-                'opaval
-                'welena
-                'msgti
-                'msgde
-                'conxme
-                'm1chk
-                'm2chk
-                'userag
-                Me.Enabled = True
-                ProjnameToolStripMenuItem.Text = TextBox2.Text
-                Me.WindowState = FormWindowState.Normal
-                fileReader.Close()
-            Catch ex As Exception
-                MessageBox.Show("Load Failed!" & vbNewLine & "Project is not compatiable or corrupt!" & vbNewLine & ex.Message, "Error!")
-                Application.Restart()
-            End Try
+            savemanager.loadsave(FileNameOpenWith)
+            Me.Enabled = True
+            Me.WindowState = FormWindowState.Normal
         Else
             welcome.Show()
         End If
@@ -660,34 +620,7 @@ Public Class Form1
     Private Sub ClearAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearAllToolStripMenuItem.Click
         Dim result As DialogResult = MessageBox.Show("You will lose all data! Please make sure your data is saved.", "You sure about this?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If (result = DialogResult.Yes) Then
-            TextBox1.Text = ""
-            TextBox2.Text = ""
-            TextBox3.Text = "944"
-            TextBox4.Text = "573"
-            TextBox5.Text = "100"
-            TextBox6.Text = ""
-            RadioButton2.Checked = False
-            RadioButton3.Checked = False
-            CheckBox1.Text = "Start your app after build"
-            CheckBox2.Text = "Show your app in explorer after build"
-            CheckBox1.Checked = False
-            CheckBox2.Checked = False
-            CheckBox3.Checked = False
-            CheckBox4.Checked = False
-            CheckBox5.Checked = False
-            CheckBox6.Checked = False
-            CheckBox7.Checked = False
-            CheckBox8.Checked = False
-            CheckBox9.Checked = False
-            Button6.Visible = False
-            CheckBox4.Visible = False
-            Label24.Visible = True
-            PictureBox1.Image = My.Resources.p_browser_icon_001_rq2_icon
-            Label16.Text = "Application icons (*.ico)"
-            My.Settings.tempIcoLoc = ""
-            System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
-            System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
-            ProjnameToolStripMenuItem.Text = "Untitled Project"
+            savemanager.loadsave("")
         End If
     End Sub
 
@@ -980,36 +913,7 @@ Public Class Form1
     Private Sub StartWindowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StartWindowToolStripMenuItem.Click
         Dim result As DialogResult = MessageBox.Show("You will lose all data! Please make sure your data is saved.", "You sure about this?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If (result = DialogResult.Yes) Then
-            TextBox1.Text = ""
-            TextBox2.Text = ""
-            TextBox3.Text = "944"
-            TextBox4.Text = "573"
-            TextBox5.Text = "100"
-            TextBox6.Text = ""
-            RadioButton2.Checked = True
-            RadioButton3.Checked = False
-            CheckBox1.Text = "Start your app after build"
-            CheckBox2.Text = "Show your app in explorer after build"
-            CheckBox1.Checked = True
-            CheckBox2.Checked = False
-            CheckBox3.Checked = False
-            CheckBox4.Checked = False
-            CheckBox5.Checked = False
-            CheckBox6.Checked = False
-            CheckBox7.Checked = False
-            CheckBox8.Checked = False
-            CheckBox9.Checked = False
-            Button6.Visible = False
-            CheckBox4.Visible = False
-            Label24.Visible = True
-            TabControl1.SelectedTab = TabPage1
-            PictureBox1.Image = My.Resources.p_browser_icon_001_rq2_icon
-            Label16.Text = "Application icons (*.ico)"
-            My.Settings.tempIcoLoc = ""
-            System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
-            System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
-            ProjnameToolStripMenuItem.Text = "Untitled Project"
-            Browser.Load("about:blank")
+            savemanager.loadsave("")
             welcome.Show()
         End If
     End Sub
@@ -1093,58 +997,7 @@ Public Class Form1
         If TextBox1.Text = "" And TextBox2.Text = "" Then
             MessageBox.Show("To save project, please enter Website URL and App Name.", "Error!")
         Else
-            Try
-                Dim myStream As Stream
-                Dim saveFileDialog1 As New SaveFileDialog()
-                saveFileDialog1.Filter = "P Browser Builder Project (*.pbproj)|*.pbproj"
-                saveFileDialog1.RestoreDirectory = True
-                If saveFileDialog1.ShowDialog() = DialogResult.OK Then
-                    myStream = saveFileDialog1.OpenFile()
-                    If (myStream IsNot Nothing) Then
-                        Using writer As New StreamWriter(myStream)
-                            writer.WriteLine(TextBox2.Text)
-                            writer.WriteLine(TextBox1.Text)
-                            writer.WriteLine(TextBox3.Text)
-                            writer.WriteLine(TextBox4.Text)
-                            writer.WriteLine(CheckBox5.CheckState)
-                            writer.WriteLine(CheckBox6.CheckState)
-                            writer.WriteLine(CheckBox7.CheckState)
-                            writer.WriteLine(TextBox5.Text)
-                            writer.WriteLine(CheckBox3.CheckState)
-                            writer.WriteLine(welcomemessage.TextBox1.Text)
-                            writer.WriteLine(welcomemessage.TextBox2.Text)
-                            writer.WriteLine(CheckBox8.CheckState)
-                            writer.WriteLine(RadioButton2.Checked)
-                            writer.WriteLine(RadioButton3.Checked)
-                            If CheckBox9.Checked = True Then
-                                writer.WriteLine(TextBox6.Text)
-                            Else
-                                writer.WriteLine("")
-                            End If
-                        End Using
-                        myStream.Close()
-                        MessageBox.Show("Saved to file!", "Completed!", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    End If
-                End If
-                'aname
-                'url
-                'wwin
-                'hwin
-                'fixwin
-                'aotwin
-                'hwico
-                'opaval
-                'welena
-                'msgti
-                'msgde
-                'conxme
-                'm1chk
-                'm2chk
-                'userag
-                ProjnameToolStripMenuItem.Text = TextBox2.Text
-            Catch ex As Exception
-                MessageBox.Show("Save Failed!" & vbNewLine & ex.Message, "Error!")
-            End Try
+            savemanager.savetofile()
         End If
     End Sub
 
@@ -1155,75 +1008,7 @@ Public Class Form1
             OpenFileDialog1.Title = "Open P Browser Builder Project"
             OpenFileDialog1.Filter = "P Browser Builder Project|*.pbproj"
             If OpenFileDialog1.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
-                Try
-                    Dim fileReader As System.IO.StreamReader = My.Computer.FileSystem.OpenTextFileReader(OpenFileDialog1.FileName)
-                    TextBox1.Text = ""
-                    TextBox2.Text = ""
-                    TextBox3.Text = "944"
-                    TextBox4.Text = "573"
-                    TextBox5.Text = "100"
-                    TextBox6.Text = ""
-                    RadioButton2.Checked = True
-                    RadioButton3.Checked = False
-                    CheckBox1.Text = "Start your app after build"
-                    CheckBox2.Text = "Show your app in explorer after build"
-                    CheckBox1.Checked = True
-                    CheckBox2.Checked = False
-                    CheckBox3.Checked = False
-                    CheckBox4.Checked = False
-                    CheckBox5.Checked = False
-                    CheckBox6.Checked = False
-                    CheckBox7.Checked = False
-                    CheckBox8.Checked = False
-                    CheckBox9.Checked = False
-                    Button6.Visible = False
-                    CheckBox4.Visible = False
-                    Label24.Visible = True
-                    TabControl1.SelectedTab = TabPage1
-                    PictureBox1.Image = My.Resources.p_browser_icon_001_rq2_icon
-                    Label16.Text = "Application icons (*.ico)"
-                    My.Settings.tempIcoLoc = ""
-                    System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
-                    System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
-                    Browser.Load("about:blank")
-                    TextBox2.Text = fileReader.ReadLine()
-                    TextBox1.Text = fileReader.ReadLine()
-                    TextBox3.Text = fileReader.ReadLine()
-                    TextBox4.Text = fileReader.ReadLine()
-                    CheckBox5.Checked = fileReader.ReadLine()
-                    CheckBox6.Checked = fileReader.ReadLine()
-                    CheckBox7.Checked = fileReader.ReadLine()
-                    TextBox5.Text = fileReader.ReadLine()
-                    CheckBox3.Checked = fileReader.ReadLine()
-                    welcomemessage.TextBox1.Text = fileReader.ReadLine()
-                    welcomemessage.TextBox2.Text = fileReader.ReadLine()
-                    CheckBox8.Checked = fileReader.ReadLine()
-                    RadioButton2.Checked = fileReader.ReadLine()
-                    RadioButton3.Checked = fileReader.ReadLine()
-                    TextBox6.Text = fileReader.ReadLine()
-                    If TextBox6.Text IsNot "" Then
-                        CheckBox9.Checked = True
-                    End If
-                    ProjnameToolStripMenuItem.Text = TextBox2.Text
-                    fileReader.Close()
-                Catch ex As Exception
-                    MessageBox.Show("Load Failed!" & vbNewLine & "Project is not compatiable or corrupt!" & vbNewLine & ex.Message, "Error!")
-                End Try
-                'aname
-                'url
-                'wwin
-                'hwin
-                'fixwin
-                'aotwin
-                'hwico
-                'opaval
-                'welena
-                'msgti
-                'msgde
-                'conxme
-                'm1chk
-                'm2chk
-                'userag
+                savemanager.loadsave(OpenFileDialog1.FileName)
             End If
         End If
     End Sub
@@ -1311,82 +1096,12 @@ Public Class Form1
 
     Private Sub GettingStartedToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GettingStartedToolStripMenuItem.Click
         getstart.Show()
-        getstart.Label56.Enabled = False
-        getstart.Label57.Text = "Please load from Help menu."
     End Sub
 
     Private Sub LoadSampleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoadSampleToolStripMenuItem.Click
         Dim result As DialogResult = MessageBox.Show("You will lose all data! Please make sure your data is saved.", "You sure about this?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If (result = DialogResult.Yes) Then
-            Try
-                Dim fileReader As System.IO.StreamReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\sample\sample1.pbproj")
-                TextBox1.Text = ""
-                TextBox2.Text = ""
-                TextBox3.Text = "944"
-                TextBox4.Text = "573"
-                TextBox5.Text = "100"
-                TextBox6.Text = ""
-                RadioButton2.Checked = True
-                RadioButton3.Checked = False
-                CheckBox1.Text = "Start your app after build"
-                CheckBox2.Text = "Show your app in explorer after build"
-                CheckBox1.Checked = True
-                CheckBox2.Checked = False
-                CheckBox3.Checked = False
-                CheckBox4.Checked = False
-                CheckBox5.Checked = False
-                CheckBox6.Checked = False
-                CheckBox7.Checked = False
-                CheckBox8.Checked = False
-                CheckBox9.Checked = False
-                Button6.Visible = False
-                CheckBox4.Visible = False
-                Label24.Visible = True
-                TabControl1.SelectedTab = TabPage1
-                PictureBox1.Image = My.Resources.p_browser_icon_001_rq2_icon
-                Label16.Text = "Application icons (*.ico)"
-                My.Settings.tempIcoLoc = ""
-                System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
-                System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
-                Browser.Load("about:blank")
-                TextBox2.Text = fileReader.ReadLine()
-                TextBox1.Text = fileReader.ReadLine()
-                TextBox3.Text = fileReader.ReadLine()
-                TextBox4.Text = fileReader.ReadLine()
-                CheckBox5.Checked = fileReader.ReadLine()
-                CheckBox6.Checked = fileReader.ReadLine()
-                CheckBox7.Checked = fileReader.ReadLine()
-                TextBox5.Text = fileReader.ReadLine()
-                CheckBox3.Checked = fileReader.ReadLine()
-                welcomemessage.TextBox1.Text = fileReader.ReadLine()
-                welcomemessage.TextBox2.Text = fileReader.ReadLine()
-                CheckBox8.Checked = fileReader.ReadLine()
-                RadioButton2.Checked = fileReader.ReadLine()
-                RadioButton3.Checked = fileReader.ReadLine()
-                TextBox6.Text = fileReader.ReadLine()
-                If TextBox6.Text IsNot "" Then
-                    CheckBox9.Checked = True
-                End If
-                ProjnameToolStripMenuItem.Text = TextBox2.Text
-                fileReader.Close()
-            Catch ex As Exception
-                MessageBox.Show("Load Failed!" & vbNewLine & "Project is not compatiable or corrupt!" & vbNewLine & ex.Message, "Error!")
-            End Try
-            'aname
-            'url
-            'wwin
-            'hwin
-            'fixwin
-            'aotwin
-            'hwico
-            'opaval
-            'welena
-            'msgti
-            'msgde
-            'conxme
-            'm1chk
-            'm2chk
-            'userag
+            savemanager.loadsave(apppath + "\sample\sample1.pbproj")
         End If
     End Sub
 

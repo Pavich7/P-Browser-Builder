@@ -3,8 +3,12 @@ Builder Release 9.1.0
 ** Release notes **
 - ADDED: Added more icons to various message boxes.
 - IMPROVEMENT: Build Mode are selectable while resource isn't available.
+- IMPROVEMENT: If loading save by double click from file failed, Builder will no longer restart.
+- IMPROVEMENT: You can load Sample Project from Get Started window while in Main window.
 - IMPROVEMENT: Hide/Show Side Panel won't reset to default window size.
 - IMPROVEMENT: Updated CefSharp to 134.3.90
 - IMPROVEMENT: Updated Chromium to 134.0.6998.178
 - FIXED: UI bugs in After Build Action while Build Mode is compressed mode.
+- FIXED: New Project in File menu won't clear webpage in Design View.
+- FIXED: In some functions, loading save won't reset tab back to Design View.
 - CHANGED: Removed reset button in Properties Section.
