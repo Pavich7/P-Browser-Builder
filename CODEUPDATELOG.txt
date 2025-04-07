@@ -2,6 +2,7 @@ Builder Release 9.1.0
 
 ** Release notes **
 - ADDED: Added more icons to various message boxes.
+- ADDED: Check for Update confirmation box will show current and latest version.
 - IMPROVEMENT: Build Mode are selectable while resource isn't available.
 - IMPROVEMENT: If loading save by double click from file failed, Builder will no longer restart.
 - IMPROVEMENT: You can load Sample Project from Get Started window while in Main window.

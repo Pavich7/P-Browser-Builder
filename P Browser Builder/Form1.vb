@@ -319,7 +319,7 @@ Public Class Form1
             Me.Enabled = False
             Try
                 splash.Hide()
-                MessageBox.Show("P Browser Builder is in Restore Mode!" + vbNewLine + "This mode will guide you to reset all Builder Settings.", "Warning!")
+                MessageBox.Show("P Browser Builder is in Restore Mode!" + vbNewLine + "This mode will guide you to reset all Builder Settings.", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Dim result As DialogResult = MessageBox.Show("Do you wish to reset all setting?" + vbNewLine + "This cannot be undone!", "You sure about this?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
                 If (result = DialogResult.Yes) Then
                     Dim result1 As DialogResult = MessageBox.Show("Do you wish to delete resource also?" + vbNewLine + "You can reinstall anytime via news feed.", "Resource setting", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -357,14 +357,14 @@ Public Class Form1
                     Dim objWriter11 As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.inrsstate.pbcfg")
                     objWriter11.Write("False")
                     objWriter11.Close()
-                    MessageBox.Show("Operation Aborted, Nothing Happened! Builder needs restart.", "Aborted!")
+                    MessageBox.Show("Operation Aborted, Nothing Happened! Builder needs restart.", "Aborted!", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Application.Restart()
                 End If
             Catch ex As Exception
                 Dim objWriter111 As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.inrsstate.pbcfg")
                 objWriter111.Write("False")
                 objWriter111.Close()
-                MessageBox.Show("Failed to reset. Builder needs restart." + vbNewLine + ex.Message, "Fatal Error!")
+                MessageBox.Show("Failed to reset. Builder needs restart." + vbNewLine + ex.Message, "Fatal Error!", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Application.Restart()
             End Try
         Else
@@ -611,7 +611,7 @@ Public Class Form1
             Label15.Visible = False
             Label14.Visible = True
         Catch ex As Exception
-            MessageBox.Show("Cannot connect!", "Error!")
+            MessageBox.Show("Cannot connect!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Label15.Text = "Try again"
             Label15.Enabled = True
         End Try
@@ -1162,7 +1162,7 @@ Public Class Form1
         If obuiver.Contains(bstringReader) Then
             MessageBox.Show("Latest version installed!", "Update Utility", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Else
-            Dim result As DialogResult = MessageBox.Show("Update available! Do you wish to download an update to the latest version?", "Confirmation?", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            Dim result As DialogResult = MessageBox.Show("Update available! Do you wish to download an update to the latest version?" + vbNewLine + vbNewLine + "Current version: " + bstringReader + vbNewLine + "Latest version: " + obuiver, "Confirmation?", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             If (result = DialogResult.Yes) Then
                 Dim patchr As DialogResult = MessageBox.Show("Would you Like to download the patch? It's smaller, as it only replaces changed files. A full download provides a fresh install. Both keeps your settings. " + vbNewLine + "Note: Patch updates are only supported for the latest release before the new one. " + vbNewLine + "Select YES for the patch or NO for the full download.", "Update options...", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
                 If (patchr = DialogResult.Yes) Then
