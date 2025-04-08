@@ -117,16 +117,24 @@ Public Class Form1
                     Label42.Enabled = True
                     Button7.Enabled = False
                     Button8.Enabled = True
+                    Snooze(5)
+                    ProgressBar1.Value = 0
+                    Label7.Text = "Ready to build"
                 Catch ex As Exception
                     MessageBox.Show("Please close previous test app first before perform this action.", "Failed!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                     Label7.Text = "Test failed!"
                     Button2.Enabled = True
                     Button1.Enabled = True
                     ProgressBar1.Value = 0
+                    Snooze(5)
+                    Label7.Text = "Ready to build"
                 End Try
             Else
                 MessageBox.Show("Build Failed! Unable to find manifest data! Please reinstall resource.", "Build Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Label7.Text = "Build failed!"
+                Snooze(5)
+                ProgressBar1.Value = 0
+                Label7.Text = "Ready to build"
             End If
         End If
     End Sub
@@ -216,7 +224,7 @@ Public Class Form1
                 If System.IO.File.Exists(apppath + "\statecache\buildcache\appicns\appicns.ico") Then
                     My.Computer.FileSystem.CopyFile(apppath + "\statecache\buildcache\appicns\appicns.ico", apppath + "\binary\appicns.ico", True)
                 End If
-                My.Computer.FileSystem.CopyDirectory(apppath + "\statecache\buildcache\offlineweb\", apppath + "\resource\testspace\assets\localfiles\", True)
+                My.Computer.FileSystem.CopyDirectory(apppath + "\statecache\buildcache\offlineweb\", apppath + "\binary\assets\localfiles\", True)
                 ProgressBar1.Value = 70
                 ProgressBar1.Value = 80
                 ProgressBar1.Value = 100
@@ -246,9 +254,15 @@ Public Class Form1
                     End Try
                 End If
                 Label7.Text = "Build completed!"
+                Snooze(5)
+                ProgressBar1.Value = 0
+                Label7.Text = "Ready to build"
             Catch ex As Exception
                 MessageBox.Show("Build Failed! Incomplete or corrupted Data please reinstall builder.", "Build Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Label7.Text = "Build failed!"
+                Snooze(5)
+                ProgressBar1.Value = 0
+                Label7.Text = "Ready to build"
             End Try
         End If
     End Sub
@@ -989,6 +1003,7 @@ Public Class Form1
             Label7.Text = "Log flush completed!"
             Snooze(3)
             ProgressBar1.Value = 0
+            Label7.Text = "Ready to build"
         Catch ex As Exception
             MessageBox.Show("Please close built app first before perform this action.", "Failed!")
             Label7.Text = "Log flush failed!"

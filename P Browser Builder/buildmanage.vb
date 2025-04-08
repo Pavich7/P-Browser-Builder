@@ -13,6 +13,13 @@ Public Class buildmanage
         Return TotalSize
     End Function
 
+    Private Sub Snooze(ByVal seconds As Integer)
+        For i As Integer = 0 To seconds * 100
+            System.Threading.Thread.Sleep(10)
+            Application.DoEvents()
+        Next
+    End Sub
+
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Dim apppath As String = Application.StartupPath()
         Try
@@ -29,6 +36,9 @@ Public Class buildmanage
             Label4.Text = "Application name: N/A"
             Label4.Enabled = False
             Form1.Label7.Text = "Cleanup completed!"
+            Snooze(3)
+            Form1.ProgressBar1.Value = 0
+            Form1.Label7.Text = "Ready to build"
         Catch ex As Exception
             MessageBox.Show("Please close built app first before perform this action.", "Failed!")
             Form1.Label7.Text = "Cleanup failed!"
