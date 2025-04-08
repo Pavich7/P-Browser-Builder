@@ -117,21 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RichTextBox1.Text" xml:space="preserve">
-    <value>Builder Release 9.1.0
-
-** Release notes **
-- ADDED: Added more icons to various message boxes.
-- ADDED: Check for Update confirmation box will show current and latest version.
-- IMPROVEMENT: Build Mode are selectable while resource isn't available.
-- IMPROVEMENT: If loading save by double click from file failed, Builder will no longer restart.
-- IMPROVEMENT: You can load Sample Project from Get Started window while in Main window.
-- IMPROVEMENT: Hide/Show Side Panel won't reset to default window size.
-- IMPROVEMENT: Updated CefSharp to 134.3.90
-- IMPROVEMENT: Updated Chromium to 134.0.6998.178
-- FIXED: UI bugs in After Build Action while Build Mode is compressed mode.
-- FIXED: New Project in File menu won't clear some elements to default values.
-- FIXED: In some functions, loading save won't reset tab back to Design View.
-- CHANGED: Removed reset button in Properties Section.</value>
-  </data>
 </root>
