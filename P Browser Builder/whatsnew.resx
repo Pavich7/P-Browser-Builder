@@ -130,6 +130,7 @@
 - ADDED: Status bar message now automatically resets after the build is completed.
 - IMPROVEMENT: Updated CefSharp to 135.0.170
 - IMPROVEMENT: Updated Chromium to 135.0.7049.52
-- FIXED: The icon from the previous project persisted after a restart.</value>
+- FIXED: The icon from the previous project persisted after a restart.
+- FIXED: Project name in menu changed after cancel save dialog.</value>
   </data>
 </root>

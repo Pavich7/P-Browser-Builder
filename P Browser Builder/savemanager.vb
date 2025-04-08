@@ -81,7 +81,6 @@ Module savemanager
         End If
     End Sub
     Sub savetofile()
-
         Try
             Dim myStream As Stream
             Dim saveFileDialog1 As New SaveFileDialog()
@@ -113,9 +112,9 @@ Module savemanager
                     End Using
                     myStream.Close()
                     MessageBox.Show("Saved to file!", "Completed!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Form1.ProjnameToolStripMenuItem.Text = Form1.TextBox2.Text
                 End If
             End If
-            Form1.ProjnameToolStripMenuItem.Text = Form1.TextBox2.Text
         Catch ex As Exception
             MessageBox.Show("Save Failed!" & vbNewLine & ex.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
