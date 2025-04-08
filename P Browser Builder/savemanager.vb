@@ -45,6 +45,7 @@ Module savemanager
         Form1.PictureBox1.Image = My.Resources.p_browser_icon_001_rq2_icon
         Form1.Browser.Load("about:blank")
         Form1.Label16.Text = "Application icons (*.ico)"
+        Form1.Label46.Text = "Offline websites (Not set)"
         My.Settings.tempIcoLoc = ""
         System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
         System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
