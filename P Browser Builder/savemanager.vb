@@ -48,6 +48,8 @@ Module savemanager
         My.Settings.tempIcoLoc = ""
         System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
         System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
+        System.IO.Directory.Delete(apppath + "\statecache\buildcache\offlineweb", True)
+        System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\offlineweb")
         Form1.ProjnameToolStripMenuItem.Text = "Untitled Project"
         If savloc IsNot "" Then
             Try

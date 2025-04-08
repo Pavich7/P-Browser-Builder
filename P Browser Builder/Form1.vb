@@ -88,15 +88,14 @@ Public Class Form1
                             writer.WriteLine(TextBox6.Text)
                         End If
                     End Using
-                    Dim icnexist As String = apppath + "\resource\testspace\appicns.ico"
-                    If System.IO.File.Exists(icnexist) Then
+                    If System.IO.File.Exists(apppath + "\resource\testspace\appicns.ico") Then
                         My.Computer.FileSystem.DeleteFile(apppath + "\resource\testspace\appicns.ico")
                     Else
-                        Dim icnshave As String = apppath + "\statecache\buildcache\appicns\appicns.ico"
-                        If System.IO.File.Exists(icnshave) Then
+                        If System.IO.File.Exists(apppath + "\statecache\buildcache\appicns\appicns.ico") Then
                             My.Computer.FileSystem.CopyFile(apppath + "\statecache\buildcache\appicns\appicns.ico", apppath + "\resource\testspace\appicns.ico")
                         End If
                     End If
+                    My.Computer.FileSystem.CopyDirectory(apppath + "\statecache\buildcache\offlineweb\", apppath + "\resource\testspace\assets\localfiles\", True)
                     ProgressBar1.Value = 100
                     MessageBox.Show("Build Completed! Click continue to test app." + vbNewLine + "Some features will not available in Testing.", "Build Completed!", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Process.Start(apppath + "\resource\testspace\P Browser App.exe")
@@ -214,10 +213,10 @@ Public Class Form1
                 End Using
                 ProgressBar1.Value = 50
                 My.Computer.FileSystem.RenameFile(apppath + "\binary\P Browser App.exe", TextBox2.Text + ".exe")
-                Dim icnshave As String = apppath + "\statecache\buildcache\appicns\appicns.ico"
-                If System.IO.File.Exists(icnshave) Then
+                If System.IO.File.Exists(apppath + "\statecache\buildcache\appicns\appicns.ico") Then
                     My.Computer.FileSystem.CopyFile(apppath + "\statecache\buildcache\appicns\appicns.ico", apppath + "\binary\appicns.ico", True)
                 End If
+                My.Computer.FileSystem.CopyDirectory(apppath + "\statecache\buildcache\offlineweb\", apppath + "\resource\testspace\assets\localfiles\", True)
                 ProgressBar1.Value = 70
                 ProgressBar1.Value = 80
                 ProgressBar1.Value = 100
@@ -293,6 +292,7 @@ Public Class Form1
         If Not System.IO.Directory.Exists(apppath + "\statecache") Then System.IO.Directory.CreateDirectory(apppath + "\statecache")
         If Not System.IO.Directory.Exists(apppath + "\statecache\buildcache") Then System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache")
         If Not System.IO.Directory.Exists(apppath + "\statecache\buildcache\appicns") Then System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
+        If Not System.IO.Directory.Exists(apppath + "\statecache\buildcache\offlineweb") Then System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\offlineweb")
         If Not System.IO.Directory.Exists(apppath + "\statecache\updatecache") Then System.IO.Directory.CreateDirectory(apppath + "\statecache\updatecache")
         If Not System.IO.Directory.Exists(apppath + "\statedata") Then
             Dim zipPath As String = apppath + "\packages\datatemplate.zip"
@@ -380,6 +380,10 @@ Public Class Form1
             Panel2.Controls.Add(Browser)
             'Panel1.Controls.Add(BrowserDev)
             'BrowserDev.Load("http://127.0.0.1:8088/")
+            System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
+            System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
+            System.IO.Directory.Delete(apppath + "\statecache\buildcache\offlineweb", True)
+            System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\offlineweb")
             Dim fileReader1 As System.IO.StreamReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.usageinterv.pbcfg")
             Dim stringReader1 As String = fileReader1.ReadLine()
             Timer2.Interval = stringReader1
@@ -420,7 +424,7 @@ Public Class Form1
                     Panel4.Size = New Size(265, 264)
                 End Try
                 'chkpoint
-                If Not System.IO.File.Exists(apppath + "\resource\cpd700") Then
+                If Not System.IO.File.Exists(apppath + "\resource\cpd720") Then
                     MessageBox.Show("Resource not compatible to this version of Builder!" + vbNewLine + "Please update Builder and Resource to ensure compatibility.", "Resource not compatible!", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Button1.Enabled = False
                     Button2.Enabled = False
@@ -437,7 +441,6 @@ Public Class Form1
             Dim fileReader111 As System.IO.StreamReader
             fileReader111 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.hidesp.pbcfg")
             Dim stringReader111 As String = fileReader111.ReadLine()
-
             Dim cachecheck As String = apppath + "\statecache\updatecache\pbb-resource.zip"
             Button7.Enabled = False
             DevToolStripMenuItem.Visible = False
@@ -1196,6 +1199,24 @@ Public Class Form1
             Label43.Enabled = False
         Else
             Label43.Enabled = True
+        End If
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        System.IO.Directory.Delete(apppath + "\statecache\buildcache\offlineweb", True)
+        System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\offlineweb")
+        If (FolderBrowserDialog1.ShowDialog() = DialogResult.OK) Then
+            My.Settings.tempOffWebLoc = FolderBrowserDialog1.SelectedPath
+            My.Computer.FileSystem.CopyDirectory(FolderBrowserDialog1.SelectedPath, apppath + "\statecache\buildcache\offlineweb\")
+            Label46.Text = "Offline websites (Ready)"
+        End If
+    End Sub
+
+    Private Sub Label46_Click(sender As Object, e As EventArgs) Handles Label46.Click
+        If My.Settings.tempOffWebLoc = "" Then
+            MessageBox.Show("Please choose your offline web folder first!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        Else
+            Process.Start(My.Settings.tempOffWebLoc)
         End If
     End Sub
 End Class
