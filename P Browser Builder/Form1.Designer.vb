@@ -188,6 +188,8 @@ Partial Class Form1
         Me.Label30 = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
+        Me.buildworker = New System.ComponentModel.BackgroundWorker()
+        Me.buildfinalworker = New System.ComponentModel.BackgroundWorker()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1830,6 +1832,9 @@ Partial Class Form1
         '
         Me.FolderBrowserDialog1.Description = "Browse folder that contains website html files for offline support."
         '
+        'buildworker
+        '
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2056,4 +2061,6 @@ Partial Class Form1
     Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
     Friend WithEvents Label46 As Label
     Friend WithEvents CheckBox10 As CheckBox
+    Friend WithEvents buildworker As System.ComponentModel.BackgroundWorker
+    Friend WithEvents buildfinalworker As System.ComponentModel.BackgroundWorker
 End Class

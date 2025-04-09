@@ -3,6 +3,7 @@ Builder Release 9.2.0
 ** Release Highlights **
 - HIGHLIGHTS: Introducing offline web support, app can load local web while no connection.
 - HIGHLIGHTS: Support for high DPI screens (e.g., laptop displays), mostly fixes scaling issues.
+- HIGHLIGHTS: Builder interface will no longer freeze while building an app.
 
 ** Breaking Changes **
 - BREAKING: This version only support 7.2.0 or newer resource.
@@ -10,6 +11,7 @@ Builder Release 9.2.0
 ** Release notes **
 - ADDED: Status bar message now automatically resets after the build is completed.
 - ADDED: New option to force offline websites to load while testing.
+- ADDED: Show detailed building process in status bar message.
 - IMPROVEMENT: Updated CefSharp to 135.0.170
 - IMPROVEMENT: Updated Chromium to 135.0.7049.52
 - FIXED: The icon from the previous project persisted after a restart.

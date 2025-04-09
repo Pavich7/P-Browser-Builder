@@ -148,6 +148,9 @@ Public Class Form1
         CheckBox2.Text = "Show your app in explorer after build"
     End Sub
 
+    Dim stage1finish As Boolean
+    Dim stage2finish As Boolean
+
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click, BuildProjectToolStripMenuItem.Click
         Dim spechk As Boolean = False
         Dim text As String = TextBox2.Text
@@ -166,13 +169,22 @@ Public Class Form1
             MessageBox.Show("App name cannot contain any of these characters: \ / : * ? "" < > |", "Build Failed!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
             Try
+                Panel10.Enabled = False
+                Panel1.Enabled = False
+                BuildToolStripMenuItem.Enabled = False
+                stage1finish = False
+                stage2finish = False
                 Label7.Text = "Building in progress..."
                 System.IO.Directory.Delete(apppath + "\binary", True)
                 System.IO.Directory.CreateDirectory(apppath + "\binary")
-                Dim zipPath As String = apppath + "\resource\resourcepack\freshapp.zip"
-                Dim extractPath As String = apppath + "\binary"
-                ZipFile.ExtractToDirectory(zipPath, extractPath)
                 ProgressBar1.Value = 20
+                Label7.Text = "Building in progress... (Preparing resource...)"
+                buildworker.RunWorkerAsync()
+                While stage1finish = False
+                    Application.DoEvents()
+                End While
+                ProgressBar1.Value = 40
+                Label7.Text = "Building in progress... (Applying configurations...)"
                 Using writer As New StreamWriter(apppath + "\binary\manifest.pbcfg", False)
                     'builderdata
                     'progdata
@@ -230,15 +242,17 @@ Public Class Form1
                 End If
                 My.Computer.FileSystem.CopyDirectory(apppath + "\statecache\buildcache\offlineweb\", apppath + "\binary\assets\localfiles\", True)
                 ProgressBar1.Value = 70
-                ProgressBar1.Value = 80
-                ProgressBar1.Value = 100
                 If RadioButton3.Checked = True Then
                     System.IO.Directory.Delete(apppath + "\binarypkg", True)
                     System.IO.Directory.CreateDirectory(apppath + "\binarypkg")
-                    Dim zipsource As String = apppath + "\binary\"
-                    Dim zipbin As String = apppath + "\binarypkg\" + TextBox2.Text + ".zip"
-                    ZipFile.CreateFromDirectory(zipsource, zipbin, CompressionLevel.Optimal, False)
+                    Label7.Text = "Building in progress... (Compressing App...)"
+                    buildfinalworker.RunWorkerAsync()
+                    While stage2finish = False
+                        Application.DoEvents()
+                    End While
                 End If
+                ProgressBar1.Value = 100
+                Label7.Text = "Build completed!"
                 MessageBox.Show("Build Completed! Click OK to continue.", "Build Completed!", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 If CheckBox1.Checked = True Then
                     Process.Start(apppath + "\binary\" + TextBox2.Text + ".exe")
@@ -257,18 +271,35 @@ Public Class Form1
                         MessageBox.Show("Cannot run script! Your app is build and ready!", "Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End Try
                 End If
-                Label7.Text = "Build completed!"
+                Panel10.Enabled = True
+                Panel1.Enabled = True
+                BuildToolStripMenuItem.Enabled = True
                 Snooze(5)
                 ProgressBar1.Value = 0
                 Label7.Text = "Ready to build"
             Catch ex As Exception
-                MessageBox.Show("Build Failed! Incomplete or corrupted Data please reinstall builder.", "Build Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Build Failed! Incomplete or corrupted Data please reinstall builder." + vbNewLine + ex.Message, "Build Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Label7.Text = "Build failed!"
+                Panel10.Enabled = True
+                Panel1.Enabled = True
+                BuildToolStripMenuItem.Enabled = True
                 Snooze(5)
                 ProgressBar1.Value = 0
                 Label7.Text = "Ready to build"
             End Try
         End If
+    End Sub
+    Private Sub buildworker_DoWork(sender As Object, e As DoWorkEventArgs) Handles buildworker.DoWork
+        Dim zipPath As String = apppath + "\resource\resourcepack\freshapp.zip"
+        Dim extractPath As String = apppath + "\binary"
+        ZipFile.ExtractToDirectory(zipPath, extractPath)
+        stage1finish = True
+    End Sub
+    Private Sub buildfinalworker_DoWork(sender As Object, e As DoWorkEventArgs) Handles buildfinalworker.DoWork
+        Dim zipsource As String = apppath + "\binary\"
+        Dim zipbin As String = apppath + "\binarypkg\" + TextBox2.Text + ".zip"
+        ZipFile.CreateFromDirectory(zipsource, zipbin, CompressionLevel.Optimal, False)
+        stage2finish = True
     End Sub
     Private Sub Snooze(ByVal seconds As Integer)
         For i As Integer = 0 To seconds * 100
