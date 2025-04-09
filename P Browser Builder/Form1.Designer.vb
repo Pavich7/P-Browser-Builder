@@ -168,6 +168,12 @@ Partial Class Form1
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.PictureBox14 = New System.Windows.Forms.PictureBox()
         Me.PictureBox13 = New System.Windows.Forms.PictureBox()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Label49 = New System.Windows.Forms.Label()
+        Me.Label48 = New System.Windows.Forms.Label()
+        Me.Label47 = New System.Windows.Forms.Label()
+        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.Label37 = New System.Windows.Forms.Label()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
@@ -190,6 +196,8 @@ Partial Class Form1
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.buildworker = New System.ComponentModel.BackgroundWorker()
         Me.buildfinalworker = New System.ComponentModel.BackgroundWorker()
+        Me.Label50 = New System.Windows.Forms.Label()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -205,6 +213,8 @@ Partial Class Form1
         Me.TabPage2.SuspendLayout()
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage3.SuspendLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel7.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -213,6 +223,7 @@ Partial Class Form1
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel10.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -438,19 +449,19 @@ Partial Class Form1
         'NormalToolStripMenuItem1
         '
         Me.NormalToolStripMenuItem1.Name = "NormalToolStripMenuItem1"
-        Me.NormalToolStripMenuItem1.Size = New System.Drawing.Size(131, 22)
+        Me.NormalToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.NormalToolStripMenuItem1.Text = "Normal"
         '
         'MaximizeToolStripMenuItem
         '
         Me.MaximizeToolStripMenuItem.Name = "MaximizeToolStripMenuItem"
-        Me.MaximizeToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.MaximizeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.MaximizeToolStripMenuItem.Text = "Maximized"
         '
         'MinimizedToolStripMenuItem1
         '
         Me.MinimizedToolStripMenuItem1.Name = "MinimizedToolStripMenuItem1"
-        Me.MinimizedToolStripMenuItem1.Size = New System.Drawing.Size(131, 22)
+        Me.MinimizedToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.MinimizedToolStripMenuItem1.Text = "Minimized"
         '
         'HelpToolStripMenuItem
@@ -1098,7 +1109,7 @@ Partial Class Form1
         Me.CheckBox10.Size = New System.Drawing.Size(221, 21)
         Me.CheckBox10.TabIndex = 49
         Me.CheckBox10.Text = "Force offline websites while testing"
-        Me.ToolTip1.SetToolTip(Me.CheckBox10, "Show App in Explorer after build completed.")
+        Me.ToolTip1.SetToolTip(Me.CheckBox10, "Force app into offline mode while testing.")
         Me.CheckBox10.UseVisualStyleBackColor = True
         '
         'Panel9
@@ -1474,6 +1485,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.Location = New System.Drawing.Point(344, 24)
         Me.TabControl1.Name = "TabControl1"
@@ -1515,7 +1527,7 @@ Partial Class Form1
         '
         Me.Button9.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Button9.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button9.Location = New System.Drawing.Point(18, 597)
+        Me.Button9.Location = New System.Drawing.Point(18, 620)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(98, 24)
         Me.Button9.TabIndex = 65
@@ -1553,10 +1565,10 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.RichTextBox1.Font = New System.Drawing.Font("Cascadia Mono SemiLight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox1.Location = New System.Drawing.Point(18, 57)
+        Me.RichTextBox1.Location = New System.Drawing.Point(18, 60)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ReadOnly = True
-        Me.RichTextBox1.Size = New System.Drawing.Size(513, 534)
+        Me.RichTextBox1.Size = New System.Drawing.Size(513, 548)
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = "Welcome to Start Log Viewer!" & Global.Microsoft.VisualBasic.ChrW(10) & "Please start a test to view app start log..."
         '
@@ -1566,7 +1578,7 @@ Partial Class Form1
         Me.PictureBox14.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox14.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox14.Image = Global.P_Browser_Builder.My.Resources.Resources.reload
-        Me.PictureBox14.Location = New System.Drawing.Point(489, 597)
+        Me.PictureBox14.Location = New System.Drawing.Point(489, 620)
         Me.PictureBox14.Name = "PictureBox14"
         Me.PictureBox14.Size = New System.Drawing.Size(15, 23)
         Me.PictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -1580,13 +1592,95 @@ Partial Class Form1
         Me.PictureBox13.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox13.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox13.Image = Global.P_Browser_Builder.My.Resources.Resources.copy
-        Me.PictureBox13.Location = New System.Drawing.Point(515, 597)
+        Me.PictureBox13.Location = New System.Drawing.Point(515, 620)
         Me.PictureBox13.Name = "PictureBox13"
         Me.PictureBox13.Size = New System.Drawing.Size(16, 23)
         Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox13.TabIndex = 58
         Me.PictureBox13.TabStop = False
         Me.ToolTip1.SetToolTip(Me.PictureBox13, "Copy log to clipboard.")
+        '
+        'TabPage3
+        '
+        Me.TabPage3.Controls.Add(Me.PictureBox6)
+        Me.TabPage3.Controls.Add(Me.Label50)
+        Me.TabPage3.Controls.Add(Me.Label49)
+        Me.TabPage3.Controls.Add(Me.Label48)
+        Me.TabPage3.Controls.Add(Me.Label47)
+        Me.TabPage3.Controls.Add(Me.RichTextBox2)
+        Me.TabPage3.Controls.Add(Me.PictureBox5)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 26)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(551, 657)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "What's new"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'Label49
+        '
+        Me.Label49.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label49.AutoSize = True
+        Me.Label49.BackColor = System.Drawing.Color.Transparent
+        Me.Label49.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label49.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
+        Me.Label49.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label49.Location = New System.Drawing.Point(176, 623)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(114, 19)
+        Me.Label49.TabIndex = 70
+        Me.Label49.Text = "Check for Update"
+        '
+        'Label48
+        '
+        Me.Label48.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label48.AutoSize = True
+        Me.Label48.BackColor = System.Drawing.Color.Transparent
+        Me.Label48.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label48.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
+        Me.Label48.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label48.Location = New System.Drawing.Point(39, 623)
+        Me.Label48.Name = "Label48"
+        Me.Label48.Size = New System.Drawing.Size(121, 19)
+        Me.Label48.TabIndex = 69
+        Me.Label48.Text = "Latest release note"
+        '
+        'Label47
+        '
+        Me.Label47.AutoSize = True
+        Me.Label47.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
+        Me.Label47.Location = New System.Drawing.Point(13, 14)
+        Me.Label47.Name = "Label47"
+        Me.Label47.Size = New System.Drawing.Size(227, 28)
+        Me.Label47.TabIndex = 68
+        Me.Label47.Text = "What's new in this version"
+        '
+        'RichTextBox2
+        '
+        Me.RichTextBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.RichTextBox2.Location = New System.Drawing.Point(18, 63)
+        Me.RichTextBox2.Name = "RichTextBox2"
+        Me.RichTextBox2.ReadOnly = True
+        Me.RichTextBox2.Size = New System.Drawing.Size(516, 549)
+        Me.RichTextBox2.TabIndex = 67
+        Me.RichTextBox2.Text = resources.GetString("RichTextBox2.Text")
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox5.Image = Global.P_Browser_Builder.My.Resources.Resources.close
+        Me.PictureBox5.Location = New System.Drawing.Point(519, 23)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(15, 15)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox5.TabIndex = 66
+        Me.PictureBox5.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox5, "Close tab.")
         '
         'Label37
         '
@@ -1835,6 +1929,35 @@ Partial Class Form1
         'buildworker
         '
         '
+        'buildfinalworker
+        '
+        '
+        'Label50
+        '
+        Me.Label50.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label50.AutoSize = True
+        Me.Label50.BackColor = System.Drawing.Color.Transparent
+        Me.Label50.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label50.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
+        Me.Label50.ForeColor = System.Drawing.Color.Gray
+        Me.Label50.Location = New System.Drawing.Point(162, 623)
+        Me.Label50.Name = "Label50"
+        Me.Label50.Size = New System.Drawing.Size(12, 19)
+        Me.Label50.TabIndex = 71
+        Me.Label50.Text = "|"
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox6.Cursor = System.Windows.Forms.Cursors.Default
+        Me.PictureBox6.Image = Global.P_Browser_Builder.My.Resources.Resources.website
+        Me.PictureBox6.Location = New System.Drawing.Point(18, 625)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(17, 17)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox6.TabIndex = 72
+        Me.PictureBox6.TabStop = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1882,6 +2005,9 @@ Partial Class Form1
         Me.TabPage2.PerformLayout()
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
         Me.Panel1.ResumeLayout(False)
@@ -1892,6 +2018,7 @@ Partial Class Form1
         Me.Panel10.ResumeLayout(False)
         Me.Panel10.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2063,4 +2190,12 @@ Partial Class Form1
     Friend WithEvents CheckBox10 As CheckBox
     Friend WithEvents buildworker As System.ComponentModel.BackgroundWorker
     Friend WithEvents buildfinalworker As System.ComponentModel.BackgroundWorker
+    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents Label47 As Label
+    Friend WithEvents RichTextBox2 As RichTextBox
+    Friend WithEvents Label48 As Label
+    Friend WithEvents Label49 As Label
+    Friend WithEvents Label50 As Label
+    Friend WithEvents PictureBox6 As PictureBox
 End Class

@@ -251,12 +251,6 @@
     <Compile Include="welcomemessage.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="whatsnew.Designer.vb">
-      <DependentUpon>whatsnew.vb</DependentUpon>
-    </Compile>
-    <Compile Include="whatsnew.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="about.resx">
@@ -299,10 +293,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="welcomemessage.resx">
       <DependentUpon>welcomemessage.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="whatsnew.resx">
-      <DependentUpon>whatsnew.vb</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -363,6 +363,7 @@ Public Class Form1
         CheckBox1.Checked = True
         Label42.Enabled = False
         TextBox6.Visible = False
+        TabControl1.TabPages.Remove(TabPage3)
         'Reset
         If stringReader19 = "True" Then
             Me.Enabled = False
@@ -855,8 +856,9 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub ReleaseNoteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReleaseNoteToolStripMenuItem.Click
+    Private Sub ReleaseNoteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReleaseNoteToolStripMenuItem.Click, Label48.Click
         Browser.Load("https://github.com/Pavich7/P-Browser-Builder/releases/")
+        TabControl1.SelectedTab = TabPage1
     End Sub
 
     Private Sub CheckBox3_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox3.CheckedChanged
@@ -995,7 +997,8 @@ Public Class Form1
     End Sub
 
     Private Sub WhatsNewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WhatsNewToolStripMenuItem.Click
-        whatsnew.Show()
+        TabControl1.TabPages.Add(TabPage3)
+        TabControl1.SelectedTab = TabPage3
     End Sub
 
     Private Sub CefSharpLogToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CefSharpLogToolStripMenuItem.Click
@@ -1206,7 +1209,7 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub CheckForUpdatesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CheckForUpdatesToolStripMenuItem.Click
+    Private Sub CheckForUpdatesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CheckForUpdatesToolStripMenuItem.Click, Label49.Click
         Dim client As WebClient = New WebClient()
         Dim obuiver As String = client.DownloadString("https://github.com/Pavich7/P-Browser-Builder/releases/latest/download/release_manifest.txt")
         Dim bfileReader As System.IO.StreamReader
@@ -1268,5 +1271,9 @@ Public Class Form1
         Else
             Process.Start(My.Settings.tempOffWebLoc)
         End If
+    End Sub
+
+    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
+        TabControl1.TabPages.Remove(TabPage3)
     End Sub
 End Class

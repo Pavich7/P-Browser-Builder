@@ -43,6 +43,7 @@ Module savemanager
         Form1.CheckBox4.Visible = False
         Form1.Label24.Visible = True
         Form1.TabControl1.SelectedTab = Form1.TabPage1
+        Form1.TabControl1.TabPages.Remove(Form1.TabPage3)
         Form1.PictureBox1.Image = My.Resources.p_browser_icon_001_rq2_icon
         Form1.Browser.Load("about:blank")
         Form1.Label16.Text = "Application icons (*.ico)"
