@@ -98,7 +98,11 @@ Public Class Form1
                     My.Computer.FileSystem.CopyDirectory(apppath + "\statecache\buildcache\offlineweb\", apppath + "\resource\testspace\assets\localfiles\", True)
                     ProgressBar1.Value = 100
                     MessageBox.Show("Build Completed! Click continue to test app." + vbNewLine + "Some features will not available in Testing.", "Build Completed!", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    Process.Start(apppath + "\resource\testspace\P Browser App.exe")
+                    If CheckBox10.Checked = True Then
+                        Process.Start(apppath + "\resource\testspace\P Browser App.exe", "--forceoffline")
+                    Else
+                        Process.Start(apppath + "\resource\testspace\P Browser App.exe")
+                    End If
                     Label7.Text = "Build completed!"
                     Snooze(2)
                     Dim dir = New System.IO.DirectoryInfo(apppath + "\resource\testspace\startlog")

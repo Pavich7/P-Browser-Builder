@@ -128,6 +128,7 @@
 
 ** Release notes **
 - ADDED: Status bar message now automatically resets after the build is completed.
+- ADDED: New option to force offline websites to load while testing.
 - IMPROVEMENT: Updated CefSharp to 135.0.170
 - IMPROVEMENT: Updated Chromium to 135.0.7049.52
 - FIXED: The icon from the previous project persisted after a restart.

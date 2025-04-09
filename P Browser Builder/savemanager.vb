@@ -38,6 +38,7 @@ Module savemanager
         Form1.CheckBox7.Checked = False
         Form1.CheckBox8.Checked = False
         Form1.CheckBox9.Checked = False
+        Form1.CheckBox10.Checked = False
         Form1.Button6.Visible = False
         Form1.CheckBox4.Visible = False
         Form1.Label24.Visible = True

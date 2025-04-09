@@ -180,13 +180,14 @@ Partial Class Form1
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.Label46 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.CheckBox9 = New System.Windows.Forms.CheckBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
-        Me.Label46 = New System.Windows.Forms.Label()
+        Me.CheckBox10 = New System.Windows.Forms.CheckBox()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -843,7 +844,7 @@ Partial Class Form1
         Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label5.Location = New System.Drawing.Point(21, 157)
+        Me.Label5.Location = New System.Drawing.Point(21, 188)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(100, 28)
         Me.Label5.TabIndex = 23
@@ -858,7 +859,7 @@ Partial Class Form1
         Me.Panel3.Controls.Add(Me.ProgressBar3)
         Me.Panel3.Controls.Add(Me.Label23)
         Me.Panel3.Controls.Add(Me.Label11)
-        Me.Panel3.Location = New System.Drawing.Point(26, 199)
+        Me.Panel3.Location = New System.Drawing.Point(26, 230)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(265, 135)
         Me.Panel3.TabIndex = 24
@@ -920,7 +921,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label10.Location = New System.Drawing.Point(21, 348)
+        Me.Label10.Location = New System.Drawing.Point(21, 375)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(105, 28)
         Me.Label10.TabIndex = 26
@@ -935,9 +936,9 @@ Partial Class Form1
         Me.Panel4.Controls.Add(Me.Label14)
         Me.Panel4.Controls.Add(Me.Label13)
         Me.Panel4.Controls.Add(Me.Label12)
-        Me.Panel4.Location = New System.Drawing.Point(26, 387)
+        Me.Panel4.Location = New System.Drawing.Point(26, 416)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(265, 264)
+        Me.Panel4.Size = New System.Drawing.Size(265, 235)
         Me.Panel4.TabIndex = 28
         '
         'Label15
@@ -1041,7 +1042,7 @@ Partial Class Form1
         '
         Me.Button7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button7.Font = New System.Drawing.Font("Segoe UI Semilight", 8.0!)
-        Me.Button7.Location = New System.Drawing.Point(235, 161)
+        Me.Button7.Location = New System.Drawing.Point(235, 192)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(56, 29)
         Me.Button7.TabIndex = 32
@@ -1052,7 +1053,7 @@ Partial Class Form1
         '
         Me.Button8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button8.Font = New System.Drawing.Font("Segoe UI Semilight", 8.0!)
-        Me.Button8.Location = New System.Drawing.Point(173, 161)
+        Me.Button8.Location = New System.Drawing.Point(173, 192)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(56, 29)
         Me.Button8.TabIndex = 33
@@ -1063,6 +1064,7 @@ Partial Class Form1
         '
         Me.Panel6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel6.Controls.Add(Me.CheckBox10)
         Me.Panel6.Controls.Add(Me.Label18)
         Me.Panel6.Controls.Add(Me.Label20)
         Me.Panel6.Controls.Add(Me.Panel9)
@@ -1488,7 +1490,7 @@ Partial Class Form1
         Me.TabPage2.Location = New System.Drawing.Point(4, 26)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(551, 634)
+        Me.TabPage2.Size = New System.Drawing.Size(551, 657)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Start Log"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -1757,6 +1759,29 @@ Partial Class Form1
         Me.Panel10.Size = New System.Drawing.Size(344, 577)
         Me.Panel10.TabIndex = 74
         '
+        'Label46
+        '
+        Me.Label46.AutoSize = True
+        Me.Label46.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label46.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label46.Location = New System.Drawing.Point(23, 181)
+        Me.Label46.Name = "Label46"
+        Me.Label46.Size = New System.Drawing.Size(149, 17)
+        Me.Label46.TabIndex = 69
+        Me.Label46.Text = "Offline websites (Not set)"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox2.Image = Global.P_Browser_Builder.My.Resources.Resources.folder
+        Me.PictureBox2.Location = New System.Drawing.Point(300, 179)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(15, 23)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 68
+        Me.PictureBox2.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox2, "Choose your offline web folder.")
+        '
         'CheckBox9
         '
         Me.CheckBox9.AutoSize = True
@@ -1787,32 +1812,23 @@ Partial Class Form1
         Me.Label30.TabIndex = 65
         Me.Label30.Text = "Browser"
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox2.Image = Global.P_Browser_Builder.My.Resources.Resources.folder
-        Me.PictureBox2.Location = New System.Drawing.Point(300, 179)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(15, 23)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 68
-        Me.PictureBox2.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.PictureBox2, "Choose your offline web folder.")
-        '
         'FolderBrowserDialog1
         '
         Me.FolderBrowserDialog1.Description = "Browse folder that contains website html files for offline support."
         '
-        'Label46
+        'CheckBox10
         '
-        Me.Label46.AutoSize = True
-        Me.Label46.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label46.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label46.Location = New System.Drawing.Point(23, 181)
-        Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(149, 17)
-        Me.Label46.TabIndex = 69
-        Me.Label46.Text = "Offline websites (Not set)"
+        Me.CheckBox10.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CheckBox10.AutoSize = True
+        Me.CheckBox10.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox10.Location = New System.Drawing.Point(26, 157)
+        Me.CheckBox10.Name = "CheckBox10"
+        Me.CheckBox10.Size = New System.Drawing.Size(221, 21)
+        Me.CheckBox10.TabIndex = 49
+        Me.CheckBox10.Text = "Force offline websites while testing"
+        Me.ToolTip1.SetToolTip(Me.CheckBox10, "Show App in Explorer after build completed.")
+        Me.CheckBox10.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -2039,4 +2055,5 @@ Partial Class Form1
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
     Friend WithEvents Label46 As Label
+    Friend WithEvents CheckBox10 As CheckBox
 End Class
