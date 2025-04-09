@@ -2,6 +2,7 @@ Builder Release 9.2.0
 
 ** Release Highlights **
 - HIGHLIGHTS: Introducing offline web support, app can load local web while no connection.
+- HIGHLIGHTS: Support for high DPI screens (e.g., laptop displays), mostly fixes scaling issues.
 
 ** Breaking Changes **
 - BREAKING: This version only support 7.2.0 or newer resource.
