@@ -126,6 +126,7 @@ Partial Class Form1
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.CheckBox10 = New System.Windows.Forms.CheckBox()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label35 = New System.Windows.Forms.Label()
@@ -187,7 +188,6 @@ Partial Class Form1
         Me.Label30 = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
-        Me.CheckBox10 = New System.Windows.Forms.CheckBox()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1085,6 +1085,20 @@ Partial Class Form1
         Me.Panel6.Size = New System.Drawing.Size(316, 688)
         Me.Panel6.TabIndex = 16
         '
+        'CheckBox10
+        '
+        Me.CheckBox10.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CheckBox10.AutoSize = True
+        Me.CheckBox10.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox10.Location = New System.Drawing.Point(26, 157)
+        Me.CheckBox10.Name = "CheckBox10"
+        Me.CheckBox10.Size = New System.Drawing.Size(221, 21)
+        Me.CheckBox10.TabIndex = 49
+        Me.CheckBox10.Text = "Force offline websites while testing"
+        Me.ToolTip1.SetToolTip(Me.CheckBox10, "Show App in Explorer after build completed.")
+        Me.CheckBox10.UseVisualStyleBackColor = True
+        '
         'Panel9
         '
         Me.Panel9.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -1816,20 +1830,6 @@ Partial Class Form1
         '
         Me.FolderBrowserDialog1.Description = "Browse folder that contains website html files for offline support."
         '
-        'CheckBox10
-        '
-        Me.CheckBox10.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CheckBox10.AutoSize = True
-        Me.CheckBox10.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox10.Location = New System.Drawing.Point(26, 157)
-        Me.CheckBox10.Name = "CheckBox10"
-        Me.CheckBox10.Size = New System.Drawing.Size(221, 21)
-        Me.CheckBox10.TabIndex = 49
-        Me.CheckBox10.Text = "Force offline websites while testing"
-        Me.ToolTip1.SetToolTip(Me.CheckBox10, "Show App in Explorer after build completed.")
-        Me.CheckBox10.UseVisualStyleBackColor = True
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1850,7 +1850,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Panel10)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.MinimumSize = New System.Drawing.Size(900, 630)
+        Me.MinimumSize = New System.Drawing.Size(900, 650)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "P Browser Builder"
