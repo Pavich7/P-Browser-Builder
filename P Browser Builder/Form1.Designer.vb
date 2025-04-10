@@ -169,6 +169,7 @@ Partial Class Form1
         Me.PictureBox14 = New System.Windows.Forms.PictureBox()
         Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Label50 = New System.Windows.Forms.Label()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.Label48 = New System.Windows.Forms.Label()
         Me.Label47 = New System.Windows.Forms.Label()
@@ -196,8 +197,7 @@ Partial Class Form1
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.buildworker = New System.ComponentModel.BackgroundWorker()
         Me.buildfinalworker = New System.ComponentModel.BackgroundWorker()
-        Me.Label50 = New System.Windows.Forms.Label()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.cfuworker = New System.ComponentModel.BackgroundWorker()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -223,7 +223,6 @@ Partial Class Form1
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel10.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -449,19 +448,19 @@ Partial Class Form1
         'NormalToolStripMenuItem1
         '
         Me.NormalToolStripMenuItem1.Name = "NormalToolStripMenuItem1"
-        Me.NormalToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.NormalToolStripMenuItem1.Size = New System.Drawing.Size(131, 22)
         Me.NormalToolStripMenuItem1.Text = "Normal"
         '
         'MaximizeToolStripMenuItem
         '
         Me.MaximizeToolStripMenuItem.Name = "MaximizeToolStripMenuItem"
-        Me.MaximizeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.MaximizeToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
         Me.MaximizeToolStripMenuItem.Text = "Maximized"
         '
         'MinimizedToolStripMenuItem1
         '
         Me.MinimizedToolStripMenuItem1.Name = "MinimizedToolStripMenuItem1"
-        Me.MinimizedToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.MinimizedToolStripMenuItem1.Size = New System.Drawing.Size(131, 22)
         Me.MinimizedToolStripMenuItem1.Text = "Minimized"
         '
         'HelpToolStripMenuItem
@@ -1602,7 +1601,6 @@ Partial Class Form1
         '
         'TabPage3
         '
-        Me.TabPage3.Controls.Add(Me.PictureBox6)
         Me.TabPage3.Controls.Add(Me.Label50)
         Me.TabPage3.Controls.Add(Me.Label49)
         Me.TabPage3.Controls.Add(Me.Label48)
@@ -1617,6 +1615,20 @@ Partial Class Form1
         Me.TabPage3.Text = "What's new"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
+        'Label50
+        '
+        Me.Label50.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label50.AutoSize = True
+        Me.Label50.BackColor = System.Drawing.Color.Transparent
+        Me.Label50.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label50.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
+        Me.Label50.ForeColor = System.Drawing.Color.Gray
+        Me.Label50.Location = New System.Drawing.Point(137, 623)
+        Me.Label50.Name = "Label50"
+        Me.Label50.Size = New System.Drawing.Size(12, 19)
+        Me.Label50.TabIndex = 71
+        Me.Label50.Text = "|"
+        '
         'Label49
         '
         Me.Label49.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
@@ -1625,7 +1637,7 @@ Partial Class Form1
         Me.Label49.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label49.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
         Me.Label49.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label49.Location = New System.Drawing.Point(176, 623)
+        Me.Label49.Location = New System.Drawing.Point(151, 623)
         Me.Label49.Name = "Label49"
         Me.Label49.Size = New System.Drawing.Size(114, 19)
         Me.Label49.TabIndex = 70
@@ -1639,7 +1651,7 @@ Partial Class Form1
         Me.Label48.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label48.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
         Me.Label48.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label48.Location = New System.Drawing.Point(39, 623)
+        Me.Label48.Location = New System.Drawing.Point(14, 623)
         Me.Label48.Name = "Label48"
         Me.Label48.Size = New System.Drawing.Size(121, 19)
         Me.Label48.TabIndex = 69
@@ -1932,31 +1944,8 @@ Partial Class Form1
         'buildfinalworker
         '
         '
-        'Label50
+        'cfuworker
         '
-        Me.Label50.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label50.AutoSize = True
-        Me.Label50.BackColor = System.Drawing.Color.Transparent
-        Me.Label50.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Label50.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
-        Me.Label50.ForeColor = System.Drawing.Color.Gray
-        Me.Label50.Location = New System.Drawing.Point(162, 623)
-        Me.Label50.Name = "Label50"
-        Me.Label50.Size = New System.Drawing.Size(12, 19)
-        Me.Label50.TabIndex = 71
-        Me.Label50.Text = "|"
-        '
-        'PictureBox6
-        '
-        Me.PictureBox6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox6.Cursor = System.Windows.Forms.Cursors.Default
-        Me.PictureBox6.Image = Global.P_Browser_Builder.My.Resources.Resources.website
-        Me.PictureBox6.Location = New System.Drawing.Point(18, 625)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(17, 17)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox6.TabIndex = 72
-        Me.PictureBox6.TabStop = False
         '
         'Form1
         '
@@ -2018,7 +2007,6 @@ Partial Class Form1
         Me.Panel10.ResumeLayout(False)
         Me.Panel10.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2197,5 +2185,5 @@ Partial Class Form1
     Friend WithEvents Label48 As Label
     Friend WithEvents Label49 As Label
     Friend WithEvents Label50 As Label
-    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents cfuworker As System.ComponentModel.BackgroundWorker
 End Class
