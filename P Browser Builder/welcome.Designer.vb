@@ -203,7 +203,7 @@ Partial Class welcome
         Me.PictureBox12.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox12.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox12.Image = Global.P_Browser_Builder.My.Resources.Resources.settings
-        Me.PictureBox12.Location = New System.Drawing.Point(220, 380)
+        Me.PictureBox12.Location = New System.Drawing.Point(228, 380)
         Me.PictureBox12.Name = "PictureBox12"
         Me.PictureBox12.Size = New System.Drawing.Size(17, 17)
         Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
