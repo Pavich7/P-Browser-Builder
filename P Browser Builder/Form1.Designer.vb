@@ -176,6 +176,8 @@ Partial Class Form1
         Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label54 = New System.Windows.Forms.Label()
         Me.Label51 = New System.Windows.Forms.Label()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Label52 = New System.Windows.Forms.Label()
@@ -206,7 +208,7 @@ Partial Class Form1
         Me.buildworker = New System.ComponentModel.BackgroundWorker()
         Me.buildfinalworker = New System.ComponentModel.BackgroundWorker()
         Me.cfuworker = New System.ComponentModel.BackgroundWorker()
-        Me.Label54 = New System.Windows.Forms.Label()
+        Me.Label55 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1691,9 +1693,7 @@ Partial Class Form1
         Me.RichTextBox2.ReadOnly = True
         Me.RichTextBox2.Size = New System.Drawing.Size(516, 549)
         Me.RichTextBox2.TabIndex = 67
-        Me.RichTextBox2.Text = "Builder Release 9.3.0" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "** Release Highlights **" & Global.Microsoft.VisualBasic.ChrW(10) & "- HIGHLIGHTS: " & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "** Release notes " &
-    "**" & Global.Microsoft.VisualBasic.ChrW(10) & "- ADDED: Redesigned Welcome Message Editor and moved to main window as a tab." &
-    ""
+        Me.RichTextBox2.Text = resources.GetString("RichTextBox2.Text")
         '
         'PictureBox5
         '
@@ -1710,6 +1710,8 @@ Partial Class Form1
         '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.Label55)
+        Me.TabPage4.Controls.Add(Me.ComboBox1)
         Me.TabPage4.Controls.Add(Me.Label54)
         Me.TabPage4.Controls.Add(Me.Label51)
         Me.TabPage4.Controls.Add(Me.PictureBox6)
@@ -1725,6 +1727,28 @@ Partial Class Form1
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Welcome Message"
         Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Information", "Warning"})
+        Me.ComboBox1.Location = New System.Drawing.Point(17, 579)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(517, 25)
+        Me.ComboBox1.TabIndex = 59
+        Me.ComboBox1.Text = "Information"
+        '
+        'Label54
+        '
+        Me.Label54.AutoSize = True
+        Me.Label54.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
+        Me.Label54.Location = New System.Drawing.Point(13, 14)
+        Me.Label54.Name = "Label54"
+        Me.Label54.Size = New System.Drawing.Size(224, 28)
+        Me.Label54.TabIndex = 58
+        Me.Label54.Text = "Welcome Message Editor"
         '
         'Label51
         '
@@ -1754,11 +1778,11 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label52.AutoSize = True
         Me.Label52.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label52.Location = New System.Drawing.Point(15, 556)
+        Me.Label52.Location = New System.Drawing.Point(15, 503)
         Me.Label52.Name = "Label52"
-        Me.Label52.Size = New System.Drawing.Size(123, 17)
+        Me.Label52.Size = New System.Drawing.Size(147, 17)
         Me.Label52.TabIndex = 40
-        Me.Label52.Text = "Message Description"
+        Me.Label52.Text = "Message Box Description"
         '
         'Label53
         '
@@ -1766,17 +1790,17 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label53.AutoSize = True
         Me.Label53.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label53.Location = New System.Drawing.Point(15, 504)
+        Me.Label53.Location = New System.Drawing.Point(15, 451)
         Me.Label53.Name = "Label53"
-        Me.Label53.Size = New System.Drawing.Size(85, 17)
+        Me.Label53.Size = New System.Drawing.Size(109, 17)
         Me.Label53.TabIndex = 39
-        Me.Label53.Text = "Message Title"
+        Me.Label53.Text = "Message Box Title"
         '
         'TextBox7
         '
         Me.TextBox7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox7.Location = New System.Drawing.Point(18, 580)
+        Me.TextBox7.Location = New System.Drawing.Point(18, 527)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(516, 25)
         Me.TextBox7.TabIndex = 38
@@ -1785,7 +1809,7 @@ Partial Class Form1
         '
         Me.TextBox8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox8.Location = New System.Drawing.Point(18, 528)
+        Me.TextBox8.Location = New System.Drawing.Point(18, 475)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(516, 25)
         Me.TextBox8.TabIndex = 37
@@ -2054,15 +2078,17 @@ Partial Class Form1
         'cfuworker
         '
         '
-        'Label54
+        'Label55
         '
-        Me.Label54.AutoSize = True
-        Me.Label54.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label54.Location = New System.Drawing.Point(13, 14)
-        Me.Label54.Name = "Label54"
-        Me.Label54.Size = New System.Drawing.Size(224, 28)
-        Me.Label54.TabIndex = 58
-        Me.Label54.Text = "Welcome Message Editor"
+        Me.Label55.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label55.AutoSize = True
+        Me.Label55.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label55.Location = New System.Drawing.Point(15, 555)
+        Me.Label55.Name = "Label55"
+        Me.Label55.Size = New System.Drawing.Size(108, 17)
+        Me.Label55.TabIndex = 60
+        Me.Label55.Text = "Message Box Icon"
         '
         'Form1
         '
@@ -2315,4 +2341,6 @@ Partial Class Form1
     Friend WithEvents TextBox8 As TextBox
     Friend WithEvents Button11 As Button
     Friend WithEvents Label54 As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label55 As Label
 End Class

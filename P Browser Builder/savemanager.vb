@@ -15,6 +15,7 @@
 'm1chk
 'm2chk
 'userag
+'msgico
 
 Module savemanager
     Sub loadsave(ByVal savloc As String)
@@ -27,6 +28,7 @@ Module savemanager
         Form1.TextBox6.Text = ""
         Form1.TextBox8.Text = ""
         Form1.TextBox7.Text = ""
+        Form1.ComboBox1.Text = "Information"
         Form1.RadioButton2.Checked = True
         Form1.RadioButton3.Checked = False
         Form1.CheckBox1.Text = "Start your app after build"
@@ -75,6 +77,7 @@ Module savemanager
                 Form1.RadioButton2.Checked = fileReader.ReadLine()
                 Form1.RadioButton3.Checked = fileReader.ReadLine()
                 Form1.TextBox6.Text = fileReader.ReadLine()
+                Form1.ComboBox1.Text = fileReader.ReadLine()
                 If Form1.TextBox6.Text IsNot "" Then
                     Form1.CheckBox9.Checked = True
                 End If
@@ -114,6 +117,7 @@ Module savemanager
                         Else
                             writer.WriteLine("")
                         End If
+                        writer.WriteLine(Form1.ComboBox1.Text)
                     End Using
                     myStream.Close()
                     MessageBox.Show("Saved to file!", "Completed!", MessageBoxButtons.OK, MessageBoxIcon.Information)

@@ -191,6 +191,7 @@ Public Class Form1
                     'contextmenu
                     'fsmsg.title
                     'fsmsg.desc
+                    'fsmsg.icon
                     'fsmsg.enab
                     'appsizew
                     'appsizeh
@@ -208,6 +209,7 @@ Public Class Form1
                     End If
                     writer.WriteLine(TextBox8.Text)
                     writer.WriteLine(TextBox7.Text)
+                    writer.WriteLine(ComboBox1.Text)
                     If CheckBox3.Checked = True Then
                         writer.WriteLine("True")
                     Else
@@ -475,7 +477,7 @@ Public Class Form1
                     Panel4.Size = New Size(265, 264)
                 End Try
                 'chkpoint
-                If Not System.IO.File.Exists(apppath + "\resource\cpd720") Then
+                If Not System.IO.File.Exists(apppath + "\resource\cpd730") Then
                     MessageBox.Show("Resource not compatible to this version of Builder!" + vbNewLine + "Please update Builder and Resource to ensure compatibility.", "Resource not compatible!", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Button1.Enabled = False
                     Button2.Enabled = False
@@ -1291,6 +1293,10 @@ Public Class Form1
     End Sub
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click, Button5.Click
-        MessageBox.Show(TextBox8.Text, TextBox7.Text)
+        If ComboBox1.Text = "Warning" Then
+            MessageBox.Show(TextBox8.Text, TextBox7.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        Else
+            MessageBox.Show(TextBox8.Text, TextBox7.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
     End Sub
 End Class
