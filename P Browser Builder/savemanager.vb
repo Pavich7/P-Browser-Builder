@@ -25,6 +25,8 @@ Module savemanager
         Form1.TextBox4.Text = "573"
         Form1.TextBox5.Text = "100"
         Form1.TextBox6.Text = ""
+        Form1.TextBox8.Text = ""
+        Form1.TextBox7.Text = ""
         Form1.RadioButton2.Checked = True
         Form1.RadioButton3.Checked = False
         Form1.CheckBox1.Text = "Start your app after build"
@@ -44,6 +46,7 @@ Module savemanager
         Form1.Label24.Visible = True
         Form1.TabControl1.SelectedTab = Form1.TabPage1
         Form1.TabControl1.TabPages.Remove(Form1.TabPage3)
+        Form1.TabControl1.TabPages.Remove(Form1.TabPage4)
         Form1.PictureBox1.Image = My.Resources.p_browser_icon_001_rq2_icon
         Form1.Browser.Load("about:blank")
         Form1.Label16.Text = "Application icons (*.ico)"
@@ -66,8 +69,8 @@ Module savemanager
                 Form1.CheckBox7.Checked = fileReader.ReadLine()
                 Form1.TextBox5.Text = fileReader.ReadLine()
                 Form1.CheckBox3.Checked = fileReader.ReadLine()
-                welcomemessage.TextBox1.Text = fileReader.ReadLine()
-                welcomemessage.TextBox2.Text = fileReader.ReadLine()
+                Form1.TextBox8.Text = fileReader.ReadLine()
+                Form1.TextBox7.Text = fileReader.ReadLine()
                 Form1.CheckBox8.Checked = fileReader.ReadLine()
                 Form1.RadioButton2.Checked = fileReader.ReadLine()
                 Form1.RadioButton3.Checked = fileReader.ReadLine()
@@ -101,8 +104,8 @@ Module savemanager
                         writer.WriteLine(Form1.CheckBox7.CheckState)
                         writer.WriteLine(Form1.TextBox5.Text)
                         writer.WriteLine(Form1.CheckBox3.CheckState)
-                        writer.WriteLine(welcomemessage.TextBox1.Text)
-                        writer.WriteLine(welcomemessage.TextBox2.Text)
+                        writer.WriteLine(Form1.TextBox8.Text)
+                        writer.WriteLine(Form1.TextBox7.Text)
                         writer.WriteLine(Form1.CheckBox8.CheckState)
                         writer.WriteLine(Form1.RadioButton2.Checked)
                         writer.WriteLine(Form1.RadioButton3.Checked)

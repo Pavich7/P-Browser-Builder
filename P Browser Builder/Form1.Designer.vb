@@ -175,6 +175,14 @@ Partial Class Form1
         Me.Label47 = New System.Windows.Forms.Label()
         Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Label51 = New System.Windows.Forms.Label()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.Label52 = New System.Windows.Forms.Label()
+        Me.Label53 = New System.Windows.Forms.Label()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.Button11 = New System.Windows.Forms.Button()
         Me.Label37 = New System.Windows.Forms.Label()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
@@ -198,6 +206,7 @@ Partial Class Form1
         Me.buildworker = New System.ComponentModel.BackgroundWorker()
         Me.buildfinalworker = New System.ComponentModel.BackgroundWorker()
         Me.cfuworker = New System.ComponentModel.BackgroundWorker()
+        Me.Label54 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -215,6 +224,8 @@ Partial Class Form1
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage4.SuspendLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel7.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1485,6 +1496,7 @@ Partial Class Form1
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
+        Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.Location = New System.Drawing.Point(344, 24)
         Me.TabControl1.Name = "TabControl1"
@@ -1679,7 +1691,9 @@ Partial Class Form1
         Me.RichTextBox2.ReadOnly = True
         Me.RichTextBox2.Size = New System.Drawing.Size(516, 549)
         Me.RichTextBox2.TabIndex = 67
-        Me.RichTextBox2.Text = resources.GetString("RichTextBox2.Text")
+        Me.RichTextBox2.Text = "Builder Release 9.3.0" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "** Release Highlights **" & Global.Microsoft.VisualBasic.ChrW(10) & "- HIGHLIGHTS: " & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "** Release notes " &
+    "**" & Global.Microsoft.VisualBasic.ChrW(10) & "- ADDED: Redesigned Welcome Message Editor and moved to main window as a tab." &
+    ""
         '
         'PictureBox5
         '
@@ -1693,6 +1707,99 @@ Partial Class Form1
         Me.PictureBox5.TabIndex = 66
         Me.PictureBox5.TabStop = False
         Me.ToolTip1.SetToolTip(Me.PictureBox5, "Close tab.")
+        '
+        'TabPage4
+        '
+        Me.TabPage4.Controls.Add(Me.Label54)
+        Me.TabPage4.Controls.Add(Me.Label51)
+        Me.TabPage4.Controls.Add(Me.PictureBox6)
+        Me.TabPage4.Controls.Add(Me.Label52)
+        Me.TabPage4.Controls.Add(Me.Label53)
+        Me.TabPage4.Controls.Add(Me.TextBox7)
+        Me.TabPage4.Controls.Add(Me.TextBox8)
+        Me.TabPage4.Controls.Add(Me.Button11)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 26)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(551, 657)
+        Me.TabPage4.TabIndex = 3
+        Me.TabPage4.Text = "Welcome Message"
+        Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'Label51
+        '
+        Me.Label51.AutoSize = True
+        Me.Label51.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label51.Location = New System.Drawing.Point(15, 49)
+        Me.Label51.Name = "Label51"
+        Me.Label51.Size = New System.Drawing.Size(357, 34)
+        Me.Label51.TabIndex = 43
+        Me.Label51.Text = "Show a welcome message the first time the user runs the app." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "You can configure i" &
+    "t to greet the user."
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PictureBox6.Image = Global.P_Browser_Builder.My.Resources.Resources.welmsgins
+        Me.PictureBox6.Location = New System.Drawing.Point(156, 216)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(235, 133)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox6.TabIndex = 42
+        Me.PictureBox6.TabStop = False
+        '
+        'Label52
+        '
+        Me.Label52.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label52.AutoSize = True
+        Me.Label52.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label52.Location = New System.Drawing.Point(15, 556)
+        Me.Label52.Name = "Label52"
+        Me.Label52.Size = New System.Drawing.Size(123, 17)
+        Me.Label52.TabIndex = 40
+        Me.Label52.Text = "Message Description"
+        '
+        'Label53
+        '
+        Me.Label53.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label53.AutoSize = True
+        Me.Label53.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label53.Location = New System.Drawing.Point(15, 504)
+        Me.Label53.Name = "Label53"
+        Me.Label53.Size = New System.Drawing.Size(85, 17)
+        Me.Label53.TabIndex = 39
+        Me.Label53.Text = "Message Title"
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox7.Location = New System.Drawing.Point(18, 580)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(516, 25)
+        Me.TextBox7.TabIndex = 38
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox8.Location = New System.Drawing.Point(18, 528)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(516, 25)
+        Me.TextBox8.TabIndex = 37
+        '
+        'Button11
+        '
+        Me.Button11.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Button11.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button11.Location = New System.Drawing.Point(18, 617)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(88, 26)
+        Me.Button11.TabIndex = 36
+        Me.Button11.Text = "Test"
+        Me.Button11.UseVisualStyleBackColor = True
         '
         'Label37
         '
@@ -1947,6 +2054,16 @@ Partial Class Form1
         'cfuworker
         '
         '
+        'Label54
+        '
+        Me.Label54.AutoSize = True
+        Me.Label54.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
+        Me.Label54.Location = New System.Drawing.Point(13, 14)
+        Me.Label54.Name = "Label54"
+        Me.Label54.Size = New System.Drawing.Size(224, 28)
+        Me.Label54.TabIndex = 58
+        Me.Label54.Text = "Welcome Message Editor"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1997,6 +2114,9 @@ Partial Class Form1
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage4.ResumeLayout(False)
+        Me.TabPage4.PerformLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
         Me.Panel1.ResumeLayout(False)
@@ -2186,4 +2306,13 @@ Partial Class Form1
     Friend WithEvents Label49 As Label
     Friend WithEvents Label50 As Label
     Friend WithEvents cfuworker As System.ComponentModel.BackgroundWorker
+    Friend WithEvents TabPage4 As TabPage
+    Friend WithEvents Label51 As Label
+    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents Label52 As Label
+    Friend WithEvents Label53 As Label
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents Button11 As Button
+    Friend WithEvents Label54 As Label
 End Class

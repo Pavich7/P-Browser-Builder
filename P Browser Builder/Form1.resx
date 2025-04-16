@@ -687,29 +687,6 @@
   <metadata name="Timer3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>575, 9</value>
   </metadata>
-  <data name="RichTextBox2.Text" xml:space="preserve">
-    <value>Builder Release 9.2.0
-
-** Release Highlights **
-- HIGHLIGHTS: Introducing offline web support, app can load local web while no connection.
-- HIGHLIGHTS: Support for high DPI screens (e.g., laptop displays), mostly fixes scaling issues.
-- HIGHLIGHTS: Builder interface will no longer freeze while building an app.
-
-** Breaking Changes **
-- BREAKING: This version only support 7.2.0 or newer resource.
-
-** Release notes **
-- ADDED: Status bar message now automatically resets after the build is completed.
-- ADDED: New option to force offline websites to load while testing.
-- ADDED: Show detailed building process in status bar message.
-- ADDED: Redesigned what's new in this version and moved to main window as a tab.
-- ADDED: Check for update will show in status bar and no longer freeze Builder.
-- IMPROVEMENT: Updated CefSharp to 135.0.170
-- IMPROVEMENT: Updated Chromium to 135.0.7049.52
-- FIXED: The icon from the previous project persisted after a restart.
-- FIXED: Project name in menu changed after cancel save dialog.
-- FIXED: Update result not showing up after check for update failed.</value>
-  </data>
   <metadata name="dlworker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>666, 9</value>
   </metadata>

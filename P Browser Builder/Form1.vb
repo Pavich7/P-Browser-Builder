@@ -206,8 +206,8 @@ Public Class Form1
                     Else
                         writer.WriteLine("False")
                     End If
-                    writer.WriteLine(welcomemessage.TextBox1.Text)
-                    writer.WriteLine(welcomemessage.TextBox2.Text)
+                    writer.WriteLine(TextBox8.Text)
+                    writer.WriteLine(TextBox7.Text)
                     If CheckBox3.Checked = True Then
                         writer.WriteLine("True")
                     Else
@@ -364,6 +364,7 @@ Public Class Form1
         Label42.Enabled = False
         TextBox6.Visible = False
         TabControl1.TabPages.Remove(TabPage3)
+        TabControl1.TabPages.Remove(TabPage4)
         'Reset
         If stringReader19 = "True" Then
             Me.Enabled = False
@@ -865,20 +866,16 @@ Public Class Form1
         If CheckBox3.Checked = False Then
             Button4.Enabled = False
             Button5.Enabled = False
-            welcomemessage.Close()
+            TabControl1.TabPages.Remove(TabPage4)
         Else
             Button4.Enabled = True
             Button5.Enabled = True
+            TabControl1.TabPages.Add(TabPage4)
         End If
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        welcomemessage.Show()
-    End Sub
-
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-
-        MessageBox.Show(welcomemessage.TextBox2.Text, welcomemessage.TextBox1.Text)
+        TabControl1.SelectedTab = TabPage4
     End Sub
 
     Private Sub PictureBox8_Click(sender As Object, e As EventArgs) Handles PictureBox8.Click
@@ -1291,5 +1288,9 @@ Public Class Form1
 
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
         TabControl1.TabPages.Remove(TabPage3)
+    End Sub
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click, Button5.Click
+        MessageBox.Show(TextBox8.Text, TextBox7.Text)
     End Sub
 End Class

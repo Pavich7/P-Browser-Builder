@@ -245,12 +245,6 @@
     <Compile Include="welcome.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="welcomemessage.Designer.vb">
-      <DependentUpon>welcomemessage.vb</DependentUpon>
-    </Compile>
-    <Compile Include="welcomemessage.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="about.resx">
@@ -290,9 +284,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="welcome.resx">
       <DependentUpon>welcome.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="welcomemessage.resx">
-      <DependentUpon>welcomemessage.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
