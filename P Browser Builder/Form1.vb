@@ -964,10 +964,15 @@ Public Class Form1
     End Sub
 
     Private Sub StartWindowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StartWindowToolStripMenuItem.Click
-        Dim result As DialogResult = MessageBox.Show("You will lose all data! Please make sure your data is saved.", "You sure about this?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-        If (result = DialogResult.Yes) Then
+        If TextBox1.Text = "" And TextBox2.Text = "" Then
             savemanager.loadsave("")
             welcome.Show()
+        Else
+            Dim result As DialogResult = MessageBox.Show("You will lose all data! Please make sure your data is saved.", "You sure about this?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+            If (result = DialogResult.Yes) Then
+                savemanager.loadsave("")
+                welcome.Show()
+            End If
         End If
     End Sub
 
@@ -1057,13 +1062,22 @@ Public Class Form1
     End Sub
 
     Private Sub OpenProjectToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenProjectToolStripMenuItem.Click
-        Dim result As DialogResult = MessageBox.Show("You will lose all data! Please make sure your data is saved.", "You sure about this?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-        If (result = DialogResult.Yes) Then
+        If TextBox1.Text = "" And TextBox2.Text = "" Then
             OpenFileDialog1.Multiselect = False
             OpenFileDialog1.Title = "Open P Browser Builder Project"
             OpenFileDialog1.Filter = "P Browser Builder Project|*.pbproj"
             If OpenFileDialog1.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
                 savemanager.loadsave(OpenFileDialog1.FileName)
+            End If
+        Else
+            Dim result As DialogResult = MessageBox.Show("You will lose all data! Please make sure your data is saved.", "You sure about this?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+            If (result = DialogResult.Yes) Then
+                OpenFileDialog1.Multiselect = False
+                OpenFileDialog1.Title = "Open P Browser Builder Project"
+                OpenFileDialog1.Filter = "P Browser Builder Project|*.pbproj"
+                If OpenFileDialog1.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
+                    savemanager.loadsave(OpenFileDialog1.FileName)
+                End If
             End If
         End If
     End Sub
