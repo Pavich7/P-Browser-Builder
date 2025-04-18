@@ -176,6 +176,7 @@ Partial Class Form1
         Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Label55 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label54 = New System.Windows.Forms.Label()
         Me.Label51 = New System.Windows.Forms.Label()
@@ -208,7 +209,6 @@ Partial Class Form1
         Me.buildworker = New System.ComponentModel.BackgroundWorker()
         Me.buildfinalworker = New System.ComponentModel.BackgroundWorker()
         Me.cfuworker = New System.ComponentModel.BackgroundWorker()
-        Me.Label55 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1728,6 +1728,18 @@ Partial Class Form1
         Me.TabPage4.Text = "Welcome Message"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
+        'Label55
+        '
+        Me.Label55.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label55.AutoSize = True
+        Me.Label55.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label55.Location = New System.Drawing.Point(15, 555)
+        Me.Label55.Name = "Label55"
+        Me.Label55.Size = New System.Drawing.Size(108, 17)
+        Me.Label55.TabIndex = 60
+        Me.Label55.Text = "Message Box Icon"
+        '
         'ComboBox1
         '
         Me.ComboBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
@@ -2077,18 +2089,6 @@ Partial Class Form1
         '
         'cfuworker
         '
-        '
-        'Label55
-        '
-        Me.Label55.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label55.AutoSize = True
-        Me.Label55.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label55.Location = New System.Drawing.Point(15, 555)
-        Me.Label55.Name = "Label55"
-        Me.Label55.Size = New System.Drawing.Size(108, 17)
-        Me.Label55.TabIndex = 60
-        Me.Label55.Text = "Message Box Icon"
         '
         'Form1
         '

@@ -11,3 +11,4 @@ Builder Release 9.3.0
 ** Release notes **
 - ADDED: Redesigned Welcome Message Editor and moved to main window as a tab.
 - ADDED: Welcome Message will remain saved even if it's not enabled.
+- FIXED: Closing project won't clear previous Custom Actions.

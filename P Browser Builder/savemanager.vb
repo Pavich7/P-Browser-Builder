@@ -54,6 +54,7 @@ Module savemanager
         Form1.Label16.Text = "Application icons (*.ico)"
         Form1.Label46.Text = "Offline websites (Not set)"
         My.Settings.tempIcoLoc = ""
+        My.Settings.tempScript = ""
         System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
         System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
         System.IO.Directory.Delete(apppath + "\statecache\buildcache\offlineweb", True)
