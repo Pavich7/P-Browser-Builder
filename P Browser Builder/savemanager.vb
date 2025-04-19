@@ -1,4 +1,5 @@
 ﻿Imports System.IO
+Imports System.Reflection.Emit
 
 'aname
 'url
@@ -16,6 +17,8 @@
 'm2chk
 'userag
 'msgico
+'appico
+'offweb
 
 Module savemanager
     Sub loadsave(ByVal savloc As String)
@@ -55,6 +58,7 @@ Module savemanager
         Form1.Label46.Text = "Offline websites (Not set)"
         My.Settings.tempIcoLoc = ""
         My.Settings.tempScript = ""
+        My.Settings.tempOffWebLoc = ""
         System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
         System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
         System.IO.Directory.Delete(apppath + "\statecache\buildcache\offlineweb", True)
@@ -83,6 +87,27 @@ Module savemanager
                     Form1.CheckBox9.Checked = True
                 End If
                 Form1.ProjnameToolStripMenuItem.Text = Form1.TextBox2.Text
+                Dim IcoLoc As String = fileReader.ReadLine()
+                If IcoLoc IsNot "" Then
+                    Try
+                        Form1.PictureBox1.Image = Image.FromFile(IcoLoc)
+                        My.Settings.tempIcoLoc = IcoLoc
+                        My.Computer.FileSystem.CopyFile(IcoLoc, apppath + "\statecache\buildcache\appicns\appicns.ico")
+                        Form1.Label16.Text = "Application icons (" + Path.GetFileName(IcoLoc) + ")"
+                    Catch ex As Exception
+                        MessageBox.Show("Cannot load icon. File may have been deleted or moved.", "Load error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End Try
+                End If
+                Dim offwebLoc As String = fileReader.ReadLine()
+                If offwebLoc IsNot "" Then
+                    Try
+                        My.Settings.tempOffWebLoc = offwebLoc
+                        My.Computer.FileSystem.CopyDirectory(offwebLoc, apppath + "\statecache\buildcache\offlineweb\")
+                        Form1.Label46.Text = "Offline websites (Ready)"
+                    Catch ex As Exception
+                        MessageBox.Show("Cannot load offline websites. Folder may have been deleted or moved.", "Load error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End Try
+                End If
                 fileReader.Close()
             Catch ex As Exception
                 MessageBox.Show("Load Failed!" & vbNewLine & "Project is not compatiable or corrupt!" & vbNewLine & ex.Message, "Load error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -119,6 +144,16 @@ Module savemanager
                             writer.WriteLine("")
                         End If
                         writer.WriteLine(Form1.ComboBox1.Text)
+                        If My.Settings.tempIcoLoc = "" Then
+                            writer.WriteLine("")
+                        Else
+                            writer.WriteLine(My.Settings.tempIcoLoc)
+                        End If
+                        If My.Settings.tempOffWebLoc = "" Then
+                            writer.WriteLine("")
+                        Else
+                            writer.WriteLine(My.Settings.tempOffWebLoc)
+                        End If
                     End Using
                     myStream.Close()
                     MessageBox.Show("Saved to file!", "Completed!", MessageBoxButtons.OK, MessageBoxIcon.Information)

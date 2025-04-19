@@ -48,6 +48,7 @@ Public Class Form1
                         'contextmenu
                         'fsmsg.title
                         'fsmsg.desc
+                        'fsmsg.icon
                         'fsmsg.enab
                         'appsizew
                         'appsizeh
@@ -65,6 +66,7 @@ Public Class Form1
                         End If
                         writer.WriteLine("")
                         writer.WriteLine("")
+                        writer.WriteLine("Information")
                         writer.WriteLine("False")
                         writer.WriteLine(TextBox3.Text)
                         writer.WriteLine(TextBox4.Text)
