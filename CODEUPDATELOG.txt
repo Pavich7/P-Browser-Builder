@@ -11,6 +11,7 @@ Builder Release 9.3.0
 
 ** Release notes **
 - ADDED: Redesigned Welcome Message Editor and moved to main window as a tab.
+- ADDED: Saving project status will show in Status Bar instead of message box.
 - IMPROVEMENT: Welcome Message will remain saved even if it's not enabled.
 - IMPROVEMENT: Entering Start Window or opening a project over blank project won't warn.
 - FIXED: Closing project won't clear previous Custom Actions.

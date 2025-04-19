@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 Imports System.Reflection.Emit
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 'aname
 'url
@@ -21,6 +22,12 @@ Imports System.Reflection.Emit
 'offweb
 
 Module savemanager
+    Private Sub Snooze(ByVal seconds As Integer)
+        For i As Integer = 0 To seconds * 100
+            System.Threading.Thread.Sleep(10)
+            Application.DoEvents()
+        Next
+    End Sub
     Sub loadsave(ByVal savloc As String)
         Dim apppath = Application.StartupPath
         Form1.TextBox1.Text = ""
@@ -123,6 +130,8 @@ Module savemanager
             If saveFileDialog1.ShowDialog() = DialogResult.OK Then
                 myStream = saveFileDialog1.OpenFile()
                 If (myStream IsNot Nothing) Then
+                    Form1.ProgressBar1.Value = 0
+                    Form1.Label7.Text = "Saving project..."
                     Using writer As New StreamWriter(myStream)
                         writer.WriteLine(Form1.TextBox2.Text)
                         writer.WriteLine(Form1.TextBox1.Text)
@@ -156,7 +165,11 @@ Module savemanager
                         End If
                     End Using
                     myStream.Close()
-                    MessageBox.Show("Saved to file!", "Completed!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Form1.ProgressBar1.Value = 100
+                    Form1.Label7.Text = "Project saved to file!"
+                    Snooze(3)
+                    Form1.ProgressBar1.Value = 0
+                    Form1.Label7.Text = "Ready to build"
                     Form1.ProjnameToolStripMenuItem.Text = Form1.TextBox2.Text
                 End If
             End If
