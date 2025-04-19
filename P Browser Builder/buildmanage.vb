@@ -43,6 +43,8 @@ Public Class buildmanage
             MessageBox.Show("Please close built app first before perform this action.", "Failed!")
             Form1.Label7.Text = "Cleanup failed!"
             Form1.ProgressBar1.Value = 0
+            Snooze(3)
+            Form1.Label7.Text = "Ready to build"
         End Try
     End Sub
 

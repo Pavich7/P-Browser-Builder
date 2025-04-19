@@ -1158,10 +1158,15 @@ Public Class Form1
             System.IO.Directory.CreateDirectory(apppath + "\binarypkg")
             ProgressBar1.Value = 100
             Label7.Text = "Cleanup completed!"
+            Snooze(3)
+            ProgressBar1.Value = 0
+            Label7.Text = "Ready to build"
         Catch ex As Exception
             MessageBox.Show("Please close built app first before perform this action.", "Failed!")
             Label7.Text = "Cleanup failed!"
             ProgressBar1.Value = 0
+            Snooze(3)
+            Label7.Text = "Ready to build"
         End Try
     End Sub
 
