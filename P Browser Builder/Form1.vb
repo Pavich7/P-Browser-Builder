@@ -693,8 +693,6 @@ Public Class Form1
     Private Sub Label18_Click(sender As Object, e As EventArgs) Handles Label18.Click
         Label7.Text = "Installing Resource (Waiting for confirmation)"
         ProgressBar1.Value = 0
-        Label23.Text = "Memory Usage: Paused"
-        Label25.Text = "Paused"
         Dim result As DialogResult = MessageBox.Show("Do you wish to install builder resource?" + vbNewLine + "Attempting to exit the builder may incomplete resources!", "You sure about this?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If (result = DialogResult.Yes) Then
             dlworker.RunWorkerAsync()
