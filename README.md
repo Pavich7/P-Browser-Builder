@@ -1,3 +1,5 @@
+<img src="https://github.com/Pavich7/P-Browser-Builder/blob/master/p_browser_icon_001_rq2_icon.png?raw=true" width="180">
+
 # P Browser Builder
 
 Open-source software that transforms your online websites into standalone applications.
