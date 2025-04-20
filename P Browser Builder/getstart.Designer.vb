@@ -114,9 +114,9 @@ Partial Class getstart
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(17, 118)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(138, 21)
+        Me.Label4.Size = New System.Drawing.Size(94, 21)
         Me.Label4.TabIndex = 78
-        Me.Label4.Text = "GitHub Wiki (Beta)"
+        Me.Label4.Text = "GitHub Wiki"
         '
         'Label5
         '

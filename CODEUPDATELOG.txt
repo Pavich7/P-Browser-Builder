@@ -17,3 +17,4 @@ Builder Release 9.3.0
 - IMPROVEMENT: Entering Start Window or opening a project over blank project won't warn.
 - FIXED: Closing project won't clear previous Custom Actions.
 - FIXED: Status Bar message won't automatically resets after the cleanup is finished.
+- CHANGED: Guides is GitHub wiki is completed and out of beta.
