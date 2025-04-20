@@ -17,4 +17,3 @@ Builder Release 9.3.0
 - IMPROVEMENT: Entering Start Window or opening a project over blank project won't warn.
 - FIXED: Closing project won't clear previous Custom Actions.
 - FIXED: Status Bar message won't automatically resets after the cleanup is finished.
-- FIXED: Enforced single-instance execution to prevent multiple instances error.
