@@ -1,4 +1,4 @@
-<img src="https://github.com/Pavich7/P-Browser-Builder/blob/master/p_browser_icon_001_rq2_icon.png?raw=true" width="180">
+<img src="https://github.com/Pavich7/P-Browser-Builder/blob/master/p_browser_icon_001_rq2_icon.png?raw=true" width="150">
 
 # P Browser Builder
 
