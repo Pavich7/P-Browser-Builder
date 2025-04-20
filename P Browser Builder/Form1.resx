@@ -706,7 +706,8 @@
 - IMPROVEMENT: Welcome Message will remain saved even if it's not enabled.
 - IMPROVEMENT: Entering Start Window or opening a project over blank project won't warn.
 - FIXED: Closing project won't clear previous Custom Actions.
-- FIXED: Status Bar message won't automatically resets after the cleanup is finished.</value>
+- FIXED: Status Bar message won't automatically resets after the cleanup is finished.
+- FIXED: Enforced single-instance execution to prevent multiple instances error.</value>
   </data>
   <metadata name="dlworker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>666, 9</value>
