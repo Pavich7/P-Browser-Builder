@@ -16,6 +16,29 @@ P Browser Builder is an open-source Windows application that helps you convert y
 * WebGL and GPU Acceleration Support
 * User-Friendly Interface, Perfect for Beginners
 
+## Guides
+
+Explore the comprehensive user guides available in the [Wiki Tab](https://github.com/Pavich7/P-Browser-Builder/wiki). These guides are designed to help both new and experienced users make the most out of P Browser Builder.  
+
+### What You’ll Find in the Wiki Tab:
+- **Installation Instructions**  
+  Learn step-by-step how to install P Browser Builder and set up the necessary resources for smooth functionality.  
+  [Install P Browser Builder](https://github.com/Pavich7/P-Browser-Builder/wiki/Installing-P-Browser-Builder)
+
+- **Customization Tips**  
+  Explore the options for personalizing your P Browser App, from changing icons to adding offline website support.  
+  [Customizing Your P Browser App](https://github.com/Pavich7/P-Browser-Builder/wiki/Customizing-your-App)
+
+- **Building Your App**  
+  Understand the testing process, build modes, and advanced building options to create your app efficiently.  
+  [Building Your P Browser App](https://github.com/Pavich7/P-Browser-Builder/wiki/Building-your-App)
+
+## Builder Resource
+
+Resources are crucial for building your application. Builder streamlines updates and installations by providing automated notifications located below the News Feed section.  
+
+For manual installation, you can download the resource from the [dedicated repository release](https://github.com/Pavich7/P-Browser-Builder-Resource/releases). To manually install a resource, use the Resource Sideloader, accessible via `Preference > Advanced > Install resource from local files`.
+
 ## Building from Source
 
 ### Requirements
@@ -31,11 +54,6 @@ P Browser Builder is an open-source Windows application that helps you convert y
 3. Once the build is complete, you may need to create some folders and empty files as needed.
 
 **Note:** There is no guarantee that the project will build without any issues.
-
-## Builder Resource
-
-Resources are essential for building your application, and Builder provides automated updates and installations through update notifications located below the News Feed section.
-For manual installation, you can download the resource from the [dedicated repository release](https://github.com/Pavich7/P-Browser-Builder-Resource/releases). To manually install a resource, use the Resource Sideloader, which can be launched via `Preference > Advanced > Install resource from local files`.
 
 ## License
 
