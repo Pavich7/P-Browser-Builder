@@ -748,9 +748,6 @@ Public Class Form1
             Application.Restart()
         End Try
     End Sub
-    Private Sub OpenRemoteDebuggingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenRemoteDebuggingToolStripMenuItem.Click
-        Process.Start("http://127.0.0.1:8088/")
-    End Sub
     <Obsolete>
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
         Try
@@ -923,8 +920,8 @@ Public Class Form1
         Browser.Back
     End Sub
 
-    Private Sub Label22_Click(sender As Object, e As EventArgs) Handles Label22.Click
-        Process.Start("http://127.0.0.1:8088/")
+    Private Sub Label22_Click(sender As Object, e As EventArgs) Handles Label22.Click, OpenRemoteDebuggingToolStripMenuItem.Click
+        Browser.ShowDevTools
     End Sub
 
     Private Sub PictureBox9_Click(sender As Object, e As EventArgs) Handles PictureBox9.Click

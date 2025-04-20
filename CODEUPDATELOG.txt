@@ -3,6 +3,7 @@ Builder Release 9.3.0
 ** Release Highlights **
 - HIGHLIGHTS: New option to choose various Welcome Message Box icon.
 - HIGHLIGHTS: Application Icon and Offline Websites can now be saved.
+- HIGHLIGHTS: DevTools are now fixed and will open as a standalone window rather than in Edge.
 
 ** Breaking Changes **
 - BREAKING: This version only support 7.3.0 or newer resource.
