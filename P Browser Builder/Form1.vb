@@ -3,6 +3,7 @@ Imports System.IO
 Imports System.IO.Compression
 Imports System.Net
 Imports System.Reflection.Emit
+Imports System.Security.Cryptography
 Imports System.Text
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports CefSharp
@@ -90,6 +91,24 @@ Public Class Form1
                             writer.WriteLine(TextBox6.Text)
                         End If
                     End Using
+                    'create hash
+                    Dim lines As List(Of String) = File.ReadAllLines(apppath + "\resource\testspace\manifest.pbcfg").ToList()
+                    If lines.Count >= 7 Then
+                        lines.RemoveAt(6)
+                    End If
+                    Dim combinedString As String = String.Join(Environment.NewLine, lines)
+                    Dim md5 As MD5 = MD5.Create()
+                    Dim inputBytes As Byte() = Encoding.UTF8.GetBytes(combinedString)
+                    Dim hashBytes As Byte() = md5.ComputeHash(inputBytes)
+                    Dim hash As New StringBuilder()
+                    For Each b As Byte In hashBytes
+                        hash.Append(b.ToString("X2"))
+                    Next
+                    Dim calchash As String = hash.ToString()
+                    Dim hashWriter As New System.IO.StreamWriter(apppath + "\resource\testspace\checksum.pbcfg")
+                    hashWriter.Write(calchash)
+                    hashWriter.Close()
+                    'end create hash
                     If System.IO.File.Exists(apppath + "\resource\testspace\appicns.ico") Then
                         My.Computer.FileSystem.DeleteFile(apppath + "\resource\testspace\appicns.ico")
                     Else
@@ -239,6 +258,24 @@ Public Class Form1
                         writer.WriteLine(TextBox6.Text)
                     End If
                 End Using
+                'create hash
+                Dim lines As List(Of String) = File.ReadAllLines(apppath + "\binary\manifest.pbcfg").ToList()
+                If lines.Count >= 7 Then
+                    lines.RemoveAt(6)
+                End If
+                Dim combinedString As String = String.Join(Environment.NewLine, lines)
+                Dim md5 As MD5 = MD5.Create()
+                Dim inputBytes As Byte() = Encoding.UTF8.GetBytes(combinedString)
+                Dim hashBytes As Byte() = md5.ComputeHash(inputBytes)
+                Dim hash As New StringBuilder()
+                For Each b As Byte In hashBytes
+                    hash.Append(b.ToString("X2"))
+                Next
+                Dim calchash As String = hash.ToString()
+                Dim hashWriter As New System.IO.StreamWriter(apppath + "\binary\checksum.pbcfg")
+                hashWriter.Write(calchash)
+                hashWriter.Close()
+                'end create hash
                 ProgressBar1.Value = 50
                 My.Computer.FileSystem.RenameFile(apppath + "\binary\P Browser App.exe", TextBox2.Text + ".exe")
                 If System.IO.File.Exists(apppath + "\statecache\buildcache\appicns\appicns.ico") Then
@@ -479,7 +516,7 @@ Public Class Form1
                     Panel4.Size = New Size(265, 264)
                 End Try
                 'chkpoint
-                If Not System.IO.File.Exists(apppath + "\resource\cpd730") Then
+                If Not System.IO.File.Exists(apppath + "\resource\cpd740") Then
                     MessageBox.Show("Resource not compatible to this version of Builder!" + vbNewLine + "Please update Builder and Resource to ensure compatibility.", "Resource not compatible!", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Button1.Enabled = False
                     Button2.Enabled = False
