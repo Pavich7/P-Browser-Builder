@@ -7,3 +7,4 @@ Builder Release 9.4.0
 - BREAKING: This version only support 7.4.0 or newer resource.
 
 ** Release notes **
+- FIXED: GitHub Wiki in Get Started lead to wrong websites.

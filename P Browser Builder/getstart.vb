@@ -3,7 +3,7 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Button
 
 Public Class getstart
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-        Process.Start("https://github.com/Pavich7/P-Browser-Builder/wiki/P-Browser-Builder-Guild")
+        Process.Start("https://github.com/Pavich7/P-Browser-Builder/wiki")
     End Sub
 
     Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
