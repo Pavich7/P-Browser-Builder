@@ -10,10 +10,9 @@ P Browser Builder is an open-source Windows application that helps you convert y
 
 ## Features
 
-* Zero Percent Coding Required
-* Support for Online Game Web Applications
-* Quick Build Mode
-* WebGL and GPU Acceleration Support
+* No Coding Skills Required
+* Supported Offline Websites
+* Supported Games and GPU Acceleration
 * User-Friendly Interface, Perfect for Beginners
 
 ## Guides
