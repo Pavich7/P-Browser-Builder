@@ -1667,7 +1667,7 @@ Partial Class Form1
         Me.Label50.Cursor = System.Windows.Forms.Cursors.Default
         Me.Label50.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
         Me.Label50.ForeColor = System.Drawing.Color.Gray
-        Me.Label50.Location = New System.Drawing.Point(137, 623)
+        Me.Label50.Location = New System.Drawing.Point(137, 649)
         Me.Label50.Name = "Label50"
         Me.Label50.Size = New System.Drawing.Size(12, 19)
         Me.Label50.TabIndex = 71
@@ -1681,7 +1681,7 @@ Partial Class Form1
         Me.Label49.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label49.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
         Me.Label49.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label49.Location = New System.Drawing.Point(151, 623)
+        Me.Label49.Location = New System.Drawing.Point(151, 649)
         Me.Label49.Name = "Label49"
         Me.Label49.Size = New System.Drawing.Size(114, 19)
         Me.Label49.TabIndex = 70
@@ -1695,7 +1695,7 @@ Partial Class Form1
         Me.Label48.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label48.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
         Me.Label48.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label48.Location = New System.Drawing.Point(14, 623)
+        Me.Label48.Location = New System.Drawing.Point(14, 649)
         Me.Label48.Name = "Label48"
         Me.Label48.Size = New System.Drawing.Size(121, 19)
         Me.Label48.TabIndex = 69
@@ -1721,7 +1721,7 @@ Partial Class Form1
         Me.RichTextBox2.Location = New System.Drawing.Point(18, 63)
         Me.RichTextBox2.Name = "RichTextBox2"
         Me.RichTextBox2.ReadOnly = True
-        Me.RichTextBox2.Size = New System.Drawing.Size(516, 549)
+        Me.RichTextBox2.Size = New System.Drawing.Size(516, 574)
         Me.RichTextBox2.TabIndex = 67
         Me.RichTextBox2.Text = resources.GetString("RichTextBox2.Text")
         '
@@ -1764,7 +1764,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label55.AutoSize = True
         Me.Label55.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label55.Location = New System.Drawing.Point(15, 555)
+        Me.Label55.Location = New System.Drawing.Point(15, 577)
         Me.Label55.Name = "Label55"
         Me.Label55.Size = New System.Drawing.Size(108, 17)
         Me.Label55.TabIndex = 60
@@ -1776,7 +1776,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Information", "Warning"})
-        Me.ComboBox1.Location = New System.Drawing.Point(17, 579)
+        Me.ComboBox1.Location = New System.Drawing.Point(17, 601)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(517, 25)
         Me.ComboBox1.TabIndex = 59
@@ -1820,7 +1820,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label52.AutoSize = True
         Me.Label52.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label52.Location = New System.Drawing.Point(15, 503)
+        Me.Label52.Location = New System.Drawing.Point(15, 525)
         Me.Label52.Name = "Label52"
         Me.Label52.Size = New System.Drawing.Size(147, 17)
         Me.Label52.TabIndex = 40
@@ -1832,7 +1832,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label53.AutoSize = True
         Me.Label53.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label53.Location = New System.Drawing.Point(15, 451)
+        Me.Label53.Location = New System.Drawing.Point(15, 473)
         Me.Label53.Name = "Label53"
         Me.Label53.Size = New System.Drawing.Size(109, 17)
         Me.Label53.TabIndex = 39
@@ -1842,7 +1842,7 @@ Partial Class Form1
         '
         Me.TextBox7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox7.Location = New System.Drawing.Point(18, 527)
+        Me.TextBox7.Location = New System.Drawing.Point(18, 549)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(516, 25)
         Me.TextBox7.TabIndex = 38
@@ -1851,7 +1851,7 @@ Partial Class Form1
         '
         Me.TextBox8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox8.Location = New System.Drawing.Point(18, 475)
+        Me.TextBox8.Location = New System.Drawing.Point(18, 497)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(516, 25)
         Me.TextBox8.TabIndex = 37
@@ -1860,7 +1860,7 @@ Partial Class Form1
         '
         Me.Button11.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Button11.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button11.Location = New System.Drawing.Point(18, 617)
+        Me.Button11.Location = New System.Drawing.Point(18, 639)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(88, 26)
         Me.Button11.TabIndex = 36
