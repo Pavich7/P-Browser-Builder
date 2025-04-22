@@ -119,24 +119,45 @@ Public Class Form1
                     My.Computer.FileSystem.CopyDirectory(apppath + "\statecache\buildcache\offlineweb\", apppath + "\resource\testspace\assets\localfiles\", True)
                     ProgressBar1.Value = 100
                     MessageBox.Show("Build Completed! Click continue to test app." + vbNewLine + "Some features will not available in Testing.", "Build Completed!", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    If CheckBox10.Checked = True Then
-                        Process.Start(apppath + "\resource\testspace\P Browser App.exe", "--forceoffline")
-                    Else
-                        Process.Start(apppath + "\resource\testspace\P Browser App.exe")
-                    End If
+                    'bootbit
+                    Using bitwriter As New StreamWriter(apppath + "\resource\testspace\bootbit.pbcfg", False)
+                        'offweb
+                        'devtools
+                        'nologs
+                        If CheckBox10.Checked = True Then
+                            bitwriter.WriteLine("True")
+                        Else
+                            bitwriter.WriteLine("False")
+                        End If
+                        If CheckBox11.Checked = True Then
+                            bitwriter.WriteLine("True")
+                        Else
+                            bitwriter.WriteLine("False")
+                        End If
+                        If CheckBox12.Checked = True Then
+                            bitwriter.WriteLine("True")
+                        Else
+                            bitwriter.WriteLine("False")
+                        End If
+                    End Using
+                    Process.Start(apppath + "\resource\testspace\P Browser App.exe")
                     Label7.Text = "Build completed!"
                     Snooze(2)
-                    Dim dir = New System.IO.DirectoryInfo(apppath + "\resource\testspace\startlog")
-                    Dim logf = dir.EnumerateFiles("*.txt").
-                        OrderByDescending(Function(f) f.LastWriteTime).
-                        FirstOrDefault()
-                    If logf IsNot Nothing Then
-                        logpath = logf.FullName
-                        RichTextBox1.Text = File.ReadAllText(logpath)
-                        Dim logname = logf.Name
-                        Label39.Text = logname
-                        Label39.Visible = True
-                        PictureBox14.Enabled = True
+                    If CheckBox12.Checked = False Then
+                        Dim dir = New System.IO.DirectoryInfo(apppath + "\resource\testspace\startlog")
+                        Dim logf = dir.EnumerateFiles("*.txt").
+                            OrderByDescending(Function(f) f.LastWriteTime).
+                            FirstOrDefault()
+                        If logf IsNot Nothing Then
+                            logpath = logf.FullName
+                            RichTextBox1.Text = File.ReadAllText(logpath)
+                            Dim logname = logf.Name
+                            Label39.Text = logname
+                            Label39.Visible = True
+                            PictureBox14.Enabled = True
+                        End If
+                    Else
+                        RichTextBox1.Text = "Logging has been disabled. Please enable it to view log."
                     End If
                     Timer2.Start()
                     Label42.Enabled = True
@@ -256,6 +277,19 @@ Public Class Form1
                     End If
                     If CheckBox9.Checked = True Then
                         writer.WriteLine(TextBox6.Text)
+                    End If
+                End Using
+                'bootbit
+                Using bitwriter As New StreamWriter(apppath + "\binary\bootbit.pbcfg", False)
+                    'offweb
+                    'devtools
+                    'nologs
+                    bitwriter.WriteLine("False")
+                    bitwriter.WriteLine("False")
+                    If CheckBox12.Checked = True Then
+                        bitwriter.WriteLine("True")
+                    Else
+                        bitwriter.WriteLine("False")
                     End If
                 End Using
                 'create hash

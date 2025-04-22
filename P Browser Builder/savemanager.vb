@@ -20,6 +20,7 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 'msgico
 'appico
 'offweb
+'dislog
 
 Module savemanager
     Private Sub Snooze(ByVal seconds As Integer)
@@ -53,6 +54,8 @@ Module savemanager
         Form1.CheckBox8.Checked = False
         Form1.CheckBox9.Checked = False
         Form1.CheckBox10.Checked = False
+        Form1.CheckBox11.Checked = False
+        Form1.CheckBox12.Checked = False
         Form1.Button6.Visible = False
         Form1.CheckBox4.Visible = False
         Form1.Label24.Visible = True
@@ -115,6 +118,7 @@ Module savemanager
                         MessageBox.Show("Cannot load offline websites. Folder may have been deleted or moved.", "Load error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End Try
                 End If
+                Form1.CheckBox12.Checked = fileReader.ReadLine()
                 fileReader.Close()
             Catch ex As Exception
                 MessageBox.Show("Load Failed!" & vbNewLine & "Project is not compatiable or corrupt!" & vbNewLine & ex.Message, "Load error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -163,6 +167,7 @@ Module savemanager
                         Else
                             writer.WriteLine(My.Settings.tempOffWebLoc)
                         End If
+                        writer.WriteLine(Form1.CheckBox12.CheckState)
                     End Using
                     myStream.Close()
                     Form1.ProgressBar1.Value = 100

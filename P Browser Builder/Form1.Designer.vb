@@ -209,6 +209,8 @@ Partial Class Form1
         Me.buildworker = New System.ComponentModel.BackgroundWorker()
         Me.buildfinalworker = New System.ComponentModel.BackgroundWorker()
         Me.cfuworker = New System.ComponentModel.BackgroundWorker()
+        Me.CheckBox11 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox12 = New System.Windows.Forms.CheckBox()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1089,6 +1091,7 @@ Partial Class Form1
         '
         Me.Panel6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel6.Controls.Add(Me.CheckBox11)
         Me.Panel6.Controls.Add(Me.CheckBox10)
         Me.Panel6.Controls.Add(Me.Label18)
         Me.Panel6.Controls.Add(Me.Label20)
@@ -1985,6 +1988,7 @@ Partial Class Form1
         Me.Panel10.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Panel10.AutoScroll = True
+        Me.Panel10.Controls.Add(Me.CheckBox12)
         Me.Panel10.Controls.Add(Me.Label46)
         Me.Panel10.Controls.Add(Me.PictureBox2)
         Me.Panel10.Controls.Add(Me.TextBox5)
@@ -2089,6 +2093,32 @@ Partial Class Form1
         '
         'cfuworker
         '
+        '
+        'CheckBox11
+        '
+        Me.CheckBox11.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CheckBox11.AutoSize = True
+        Me.CheckBox11.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox11.Location = New System.Drawing.Point(26, 180)
+        Me.CheckBox11.Name = "CheckBox11"
+        Me.CheckBox11.Size = New System.Drawing.Size(193, 21)
+        Me.CheckBox11.TabIndex = 50
+        Me.CheckBox11.Text = "Enable DevTools while testing"
+        Me.ToolTip1.SetToolTip(Me.CheckBox11, "Force app into offline mode while testing.")
+        Me.CheckBox11.UseVisualStyleBackColor = True
+        '
+        'CheckBox12
+        '
+        Me.CheckBox12.AutoSize = True
+        Me.CheckBox12.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox12.Location = New System.Drawing.Point(26, 230)
+        Me.CheckBox12.Name = "CheckBox12"
+        Me.CheckBox12.Size = New System.Drawing.Size(155, 21)
+        Me.CheckBox12.TabIndex = 70
+        Me.CheckBox12.Text = "Disable startup logging"
+        Me.ToolTip1.SetToolTip(Me.CheckBox12, "Enable message that will show in first launch.")
+        Me.CheckBox12.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -2343,4 +2373,6 @@ Partial Class Form1
     Friend WithEvents Label54 As Label
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label55 As Label
+    Friend WithEvents CheckBox11 As CheckBox
+    Friend WithEvents CheckBox12 As CheckBox
 End Class

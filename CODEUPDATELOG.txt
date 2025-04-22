@@ -2,9 +2,13 @@ Builder Release 9.4.0
 
 ** Release Highlights **
 - HIGHLIGHTS: Introducing App 7.4, preventing external configuration modification.
+- HIGHLIGHTS: New options to enable DevTools while testing.
+- HIGHLIGHTS: New options to disable startup logging.
 
 ** Breaking Changes **
 - BREAKING: This version only support 7.4.0 or newer resource.
+- BREAKING: This version will not support saves from previous versions.
+  -MIGRATION: You can still load your old saves with some errors.
 
 ** Release notes **
 - FIXED: GitHub Wiki in Get Started lead to wrong websites.
