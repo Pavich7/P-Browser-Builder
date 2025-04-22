@@ -126,6 +126,8 @@ Partial Class Form1
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Label56 = New System.Windows.Forms.Label()
+        Me.CheckBox11 = New System.Windows.Forms.CheckBox()
         Me.CheckBox10 = New System.Windows.Forms.CheckBox()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
@@ -199,6 +201,7 @@ Partial Class Form1
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.CheckBox12 = New System.Windows.Forms.CheckBox()
         Me.Label46 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.CheckBox9 = New System.Windows.Forms.CheckBox()
@@ -209,9 +212,6 @@ Partial Class Form1
         Me.buildworker = New System.ComponentModel.BackgroundWorker()
         Me.buildfinalworker = New System.ComponentModel.BackgroundWorker()
         Me.cfuworker = New System.ComponentModel.BackgroundWorker()
-        Me.CheckBox11 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox12 = New System.Windows.Forms.CheckBox()
-        Me.Label56 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -330,7 +330,7 @@ Partial Class Form1
         Me.SidePanelToolStripMenuItem.CheckOnClick = True
         Me.SidePanelToolStripMenuItem.Name = "SidePanelToolStripMenuItem"
         Me.SidePanelToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
-        Me.SidePanelToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.SidePanelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SidePanelToolStripMenuItem.Text = "Side Panel"
         '
         'DesignViewToolStripMenuItem
@@ -339,7 +339,7 @@ Partial Class Form1
         Me.DesignViewToolStripMenuItem.CheckOnClick = True
         Me.DesignViewToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.DesignViewToolStripMenuItem.Name = "DesignViewToolStripMenuItem"
-        Me.DesignViewToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.DesignViewToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.DesignViewToolStripMenuItem.Text = "Design View"
         '
         'StartLogToolStripMenuItem
@@ -348,7 +348,7 @@ Partial Class Form1
         Me.StartLogToolStripMenuItem.CheckOnClick = True
         Me.StartLogToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.StartLogToolStripMenuItem.Name = "StartLogToolStripMenuItem"
-        Me.StartLogToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.StartLogToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.StartLogToolStripMenuItem.Text = "Start Log"
         '
         'ActionToolboxToolStripMenuItem
@@ -357,7 +357,7 @@ Partial Class Form1
         Me.ActionToolboxToolStripMenuItem.CheckOnClick = True
         Me.ActionToolboxToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.ActionToolboxToolStripMenuItem.Name = "ActionToolboxToolStripMenuItem"
-        Me.ActionToolboxToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.ActionToolboxToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ActionToolboxToolStripMenuItem.Text = "Action Toolbox"
         '
         'NavigationBarToolStripMenuItem
@@ -366,7 +366,7 @@ Partial Class Form1
         Me.NavigationBarToolStripMenuItem.CheckOnClick = True
         Me.NavigationBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.NavigationBarToolStripMenuItem.Name = "NavigationBarToolStripMenuItem"
-        Me.NavigationBarToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.NavigationBarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.NavigationBarToolStripMenuItem.Text = "Navigation Bar"
         '
         'BuildToolStripMenuItem
@@ -464,19 +464,19 @@ Partial Class Form1
         'NormalToolStripMenuItem1
         '
         Me.NormalToolStripMenuItem1.Name = "NormalToolStripMenuItem1"
-        Me.NormalToolStripMenuItem1.Size = New System.Drawing.Size(131, 22)
+        Me.NormalToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.NormalToolStripMenuItem1.Text = "Normal"
         '
         'MaximizeToolStripMenuItem
         '
         Me.MaximizeToolStripMenuItem.Name = "MaximizeToolStripMenuItem"
-        Me.MaximizeToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.MaximizeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.MaximizeToolStripMenuItem.Text = "Maximized"
         '
         'MinimizedToolStripMenuItem1
         '
         Me.MinimizedToolStripMenuItem1.Name = "MinimizedToolStripMenuItem1"
-        Me.MinimizedToolStripMenuItem1.Size = New System.Drawing.Size(131, 22)
+        Me.MinimizedToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.MinimizedToolStripMenuItem1.Text = "Minimized"
         '
         'HelpToolStripMenuItem
@@ -1115,6 +1115,31 @@ Partial Class Form1
         Me.Panel6.Size = New System.Drawing.Size(316, 713)
         Me.Panel6.TabIndex = 16
         '
+        'Label56
+        '
+        Me.Label56.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label56.AutoSize = True
+        Me.Label56.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
+        Me.Label56.Location = New System.Drawing.Point(21, 157)
+        Me.Label56.Name = "Label56"
+        Me.Label56.Size = New System.Drawing.Size(115, 28)
+        Me.Label56.TabIndex = 51
+        Me.Label56.Text = "Test Options"
+        '
+        'CheckBox11
+        '
+        Me.CheckBox11.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CheckBox11.AutoSize = True
+        Me.CheckBox11.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox11.Location = New System.Drawing.Point(26, 226)
+        Me.CheckBox11.Name = "CheckBox11"
+        Me.CheckBox11.Size = New System.Drawing.Size(193, 21)
+        Me.CheckBox11.TabIndex = 50
+        Me.CheckBox11.Text = "Enable DevTools while testing"
+        Me.ToolTip1.SetToolTip(Me.CheckBox11, "Force app into offline mode while testing.")
+        Me.CheckBox11.UseVisualStyleBackColor = True
+        '
         'CheckBox10
         '
         Me.CheckBox10.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -1629,7 +1654,7 @@ Partial Class Form1
         Me.TabPage3.Location = New System.Drawing.Point(4, 26)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(551, 657)
+        Me.TabPage3.Size = New System.Drawing.Size(551, 682)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "What's new"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -1728,7 +1753,7 @@ Partial Class Form1
         Me.TabPage4.Location = New System.Drawing.Point(4, 26)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(551, 657)
+        Me.TabPage4.Size = New System.Drawing.Size(551, 682)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Welcome Message"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -2030,6 +2055,18 @@ Partial Class Form1
         Me.Panel10.Size = New System.Drawing.Size(344, 602)
         Me.Panel10.TabIndex = 74
         '
+        'CheckBox12
+        '
+        Me.CheckBox12.AutoSize = True
+        Me.CheckBox12.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox12.Location = New System.Drawing.Point(26, 240)
+        Me.CheckBox12.Name = "CheckBox12"
+        Me.CheckBox12.Size = New System.Drawing.Size(155, 21)
+        Me.CheckBox12.TabIndex = 70
+        Me.CheckBox12.Text = "Disable startup logging"
+        Me.ToolTip1.SetToolTip(Me.CheckBox12, "Enable message that will show in first launch.")
+        Me.CheckBox12.UseVisualStyleBackColor = True
+        '
         'Label46
         '
         Me.Label46.AutoSize = True
@@ -2095,43 +2132,6 @@ Partial Class Form1
         '
         'cfuworker
         '
-        '
-        'CheckBox11
-        '
-        Me.CheckBox11.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CheckBox11.AutoSize = True
-        Me.CheckBox11.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox11.Location = New System.Drawing.Point(26, 226)
-        Me.CheckBox11.Name = "CheckBox11"
-        Me.CheckBox11.Size = New System.Drawing.Size(193, 21)
-        Me.CheckBox11.TabIndex = 50
-        Me.CheckBox11.Text = "Enable DevTools while testing"
-        Me.ToolTip1.SetToolTip(Me.CheckBox11, "Force app into offline mode while testing.")
-        Me.CheckBox11.UseVisualStyleBackColor = True
-        '
-        'CheckBox12
-        '
-        Me.CheckBox12.AutoSize = True
-        Me.CheckBox12.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox12.Location = New System.Drawing.Point(26, 240)
-        Me.CheckBox12.Name = "CheckBox12"
-        Me.CheckBox12.Size = New System.Drawing.Size(155, 21)
-        Me.CheckBox12.TabIndex = 70
-        Me.CheckBox12.Text = "Disable startup logging"
-        Me.ToolTip1.SetToolTip(Me.CheckBox12, "Enable message that will show in first launch.")
-        Me.CheckBox12.UseVisualStyleBackColor = True
-        '
-        'Label56
-        '
-        Me.Label56.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label56.AutoSize = True
-        Me.Label56.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label56.Location = New System.Drawing.Point(21, 157)
-        Me.Label56.Name = "Label56"
-        Me.Label56.Size = New System.Drawing.Size(115, 28)
-        Me.Label56.TabIndex = 51
-        Me.Label56.Text = "Test Options"
         '
         'Form1
         '

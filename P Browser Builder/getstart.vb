@@ -16,7 +16,7 @@ Public Class getstart
         If Not System.IO.Directory.Exists(rscheck) Then
             MessageBox.Show("Download resource for full experience." & vbNewLine & "You can download by click Download button below News Feed.", "Recommendation")
         End If
-        savemanager.loadsave(apppath + "\sample\sample1.pbproj")
+        savemanager.loadsave(apppath + "\assets\sample\sample1.pbproj")
         Form1.Enabled = True
         Form1.WindowState = FormWindowState.Normal
         welcome.realclose = False

@@ -401,7 +401,7 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         apppath = Application.StartupPath()
         'Init structure check
-        If Not System.IO.Directory.Exists(apppath + "\imgassets") Then
+        If Not System.IO.Directory.Exists(apppath + "\assets") Then
             Me.Enabled = False
             errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
             errorencounter.Show()
@@ -419,7 +419,7 @@ Public Class Form1
         If Not System.IO.Directory.Exists(apppath + "\statecache\buildcache\offlineweb") Then System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\offlineweb")
         If Not System.IO.Directory.Exists(apppath + "\statecache\updatecache") Then System.IO.Directory.CreateDirectory(apppath + "\statecache\updatecache")
         If Not System.IO.Directory.Exists(apppath + "\statedata") Then
-            Dim zipPath As String = apppath + "\packages\datatemplate.zip"
+            Dim zipPath As String = apppath + "\assets\packages\datatemplate.zip"
             Dim extractPath As String = apppath + "\"
             ZipFile.ExtractToDirectory(zipPath, extractPath)
         End If
@@ -1243,7 +1243,7 @@ Public Class Form1
     Private Sub LoadSampleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoadSampleToolStripMenuItem.Click
         Dim result As DialogResult = MessageBox.Show("You will lose all data! Please make sure your data is saved.", "You sure about this?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If (result = DialogResult.Yes) Then
-            savemanager.loadsave(apppath + "\sample\sample1.pbproj")
+            savemanager.loadsave(apppath + "\assets\sample\sample1.pbproj")
         End If
     End Sub
 

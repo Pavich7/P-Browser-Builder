@@ -9,7 +9,7 @@
         TabPage2.Enabled = False
         TabPage3.Enabled = False
         Dim apppath As String = Application.StartupPath()
-        TabPage1.BackgroundImage = Image.FromFile(apppath + "\imgassets\setup.png")
+        TabPage1.BackgroundImage = Image.FromFile(apppath + "\assets\setup.png")
     End Sub
 
     Private Sub Label29_Click(sender As Object, e As EventArgs) Handles Label29.Click

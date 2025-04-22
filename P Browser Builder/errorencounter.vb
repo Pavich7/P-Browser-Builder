@@ -21,6 +21,6 @@
 
     Private Sub errorencounter_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim apppath As String = Application.StartupPath()
-        Me.BackgroundImage = Image.FromFile(apppath + "\imgassets\fatal.png")
+        Me.BackgroundImage = Image.FromFile(apppath + "\assets\fatal.png")
     End Sub
 End Class

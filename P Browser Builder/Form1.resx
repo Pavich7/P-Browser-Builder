@@ -123,9 +123,6 @@
   <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>766, 9</value>
   </metadata>
-  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>766, 9</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -695,12 +692,19 @@
 
 ** Release Highlights **
 - HIGHLIGHTS: Introducing App 7.4, preventing external configuration modification.
+- HIGHLIGHTS: New options to enable DevTools while testing.
+- HIGHLIGHTS: New options to disable startup logging.
 
 ** Breaking Changes **
 - BREAKING: This version only support 7.4.0 or newer resource.
+- BREAKING: This version will not support saves from previous versions.
+  -MIGRATION: You can still load your old saves with some errors.
 
 ** Release notes **
-- FIXED: GitHub Wiki in Get Started lead to wrong websites.</value>
+- FIXED: GitHub Wiki in Get Started lead to wrong websites.
+
+** Low-level **
+- CHANGED: Changed application folder structures.</value>
   </data>
   <metadata name="dlworker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>666, 9</value>

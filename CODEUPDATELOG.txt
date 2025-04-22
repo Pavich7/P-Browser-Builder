@@ -12,3 +12,6 @@ Builder Release 9.4.0
 
 ** Release notes **
 - FIXED: GitHub Wiki in Get Started lead to wrong websites.
+
+** Low-level **
+- CHANGED: Changed application folder structures.
