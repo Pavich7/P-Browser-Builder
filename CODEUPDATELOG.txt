@@ -8,9 +8,11 @@ Builder Release 9.4.0
 ** Breaking Changes **
 - BREAKING: This version only support 7.4.0 or newer resource.
 - BREAKING: This version will not support saves from previous versions.
-  -MIGRATION: You can still load your old saves with some errors.
+  - MIGRATION: You can still load your old saves with some errors.
 
 ** Release notes **
+- IMPROVEMENT: Updated CefSharp to 135.0.220
+- IMPROVEMENT: Updated Chromium to 135.0.7049.115
 - FIXED: GitHub Wiki in Get Started lead to wrong websites.
 
 ** Low-level **
