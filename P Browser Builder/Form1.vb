@@ -538,7 +538,7 @@ Public Class Form1
                     If oresver.Contains(stringReader) Then
                         Label20.Visible = False
                         Label18.Visible = False
-                        Panel4.Size = New Size(265, 264)
+                        Panel4.Size = New Size(265, 218)
                     Else
                         Label20.Text = "Resource update available! (" + oresver + ")"
                         Label18.Text = "    Update"
@@ -547,7 +547,7 @@ Public Class Form1
                 Catch ex As Exception
                     Label20.Visible = False
                     Label18.Visible = False
-                    Panel4.Size = New Size(265, 264)
+                    Panel4.Size = New Size(265, 218)
                 End Try
                 'chkpoint
                 If Not System.IO.File.Exists(apppath + "\resource\cpd740") Then
