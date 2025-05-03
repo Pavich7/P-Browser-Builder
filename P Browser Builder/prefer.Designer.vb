@@ -60,14 +60,6 @@ Partial Class prefer
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.Label45 = New System.Windows.Forms.Label()
         Me.Label42 = New System.Windows.Forms.Label()
@@ -100,7 +92,6 @@ Partial Class prefer
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        Me.TabPage3.SuspendLayout()
         Me.TabPage4.SuspendLayout()
         Me.TabPage5.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -229,7 +220,6 @@ Partial Class prefer
         Me.TabControl1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Controls.Add(Me.TabPage5)
         Me.TabControl1.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!)
@@ -569,105 +559,6 @@ Partial Class prefer
         Me.Label26.Size = New System.Drawing.Size(96, 28)
         Me.Label26.TabIndex = 73
         Me.Label26.Text = "Advanced"
-        '
-        'TabPage3
-        '
-        Me.TabPage3.Controls.Add(Me.Label33)
-        Me.TabPage3.Controls.Add(Me.CheckBox1)
-        Me.TabPage3.Controls.Add(Me.Label37)
-        Me.TabPage3.Controls.Add(Me.Label35)
-        Me.TabPage3.Controls.Add(Me.Label36)
-        Me.TabPage3.Controls.Add(Me.Label34)
-        Me.TabPage3.Controls.Add(Me.Label29)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 26)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(493, 350)
-        Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "News Feed"
-        Me.TabPage3.UseVisualStyleBackColor = True
-        '
-        'Label33
-        '
-        Me.Label33.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label33.AutoSize = True
-        Me.Label33.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label33.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label33.Location = New System.Drawing.Point(428, 52)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(43, 21)
-        Me.Label33.TabIndex = 46
-        Me.Label33.Text = "Save"
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.CheckBox1.Location = New System.Drawing.Point(25, 51)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(171, 25)
-        Me.CheckBox1.TabIndex = 45
-        Me.CheckBox1.Text = "Disable startup fetch"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'Label37
-        '
-        Me.Label37.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label37.AutoSize = True
-        Me.Label37.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label37.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label37.Location = New System.Drawing.Point(408, 111)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(63, 21)
-        Me.Label37.TabIndex = 44
-        Me.Label37.Text = "Refresh"
-        '
-        'Label35
-        '
-        Me.Label35.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label35.AutoSize = True
-        Me.Label35.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.Label35.Location = New System.Drawing.Point(22, 138)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(216, 17)
-        Me.Label35.TabIndex = 42
-        Me.Label35.Text = "Manually refresh news feed contents."
-        '
-        'Label36
-        '
-        Me.Label36.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label36.AutoSize = True
-        Me.Label36.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label36.Location = New System.Drawing.Point(21, 111)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(97, 21)
-        Me.Label36.TabIndex = 41
-        Me.Label36.Text = "Refresh feed"
-        '
-        'Label34
-        '
-        Me.Label34.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label34.AutoSize = True
-        Me.Label34.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.Label34.Location = New System.Drawing.Point(22, 79)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(202, 17)
-        Me.Label34.TabIndex = 40
-        Me.Label34.Text = "Do not fetch news feed on startup."
-        '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label29.Location = New System.Drawing.Point(13, 11)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(105, 28)
-        Me.Label29.TabIndex = 38
-        Me.Label29.Text = "News Feed"
         '
         'TabPage4
         '
@@ -1014,8 +905,6 @@ Partial Class prefer
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        Me.TabPage3.ResumeLayout(False)
-        Me.TabPage3.PerformLayout()
         Me.TabPage4.ResumeLayout(False)
         Me.TabPage4.PerformLayout()
         Me.TabPage5.ResumeLayout(False)
@@ -1050,7 +939,6 @@ Partial Class prefer
     Friend WithEvents Label24 As Label
     Friend WithEvents Label25 As Label
     Friend WithEvents Label26 As Label
-    Friend WithEvents TabPage3 As TabPage
     Friend WithEvents TabPage4 As TabPage
     Friend WithEvents Label40 As Label
     Friend WithEvents Label41 As Label
@@ -1076,13 +964,6 @@ Partial Class prefer
     Friend WithEvents Label12 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents Label33 As Label
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents Label37 As Label
-    Friend WithEvents Label35 As Label
-    Friend WithEvents Label36 As Label
-    Friend WithEvents Label34 As Label
-    Friend WithEvents Label29 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label49 As Label
     Friend WithEvents Label52 As Label

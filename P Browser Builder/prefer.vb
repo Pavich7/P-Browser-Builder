@@ -71,15 +71,6 @@ Public Class prefer
         Label21.Enabled = False
         Label45.Text = "Diagnostic Status: Stopped"
         Label42.Text = "Process ID: -"
-        Dim fileReader11 As System.IO.StreamReader
-        fileReader11 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.nfstartfetch.pbcfg")
-        Dim stringReader11 As String
-        stringReader11 = fileReader11.ReadLine()
-        If stringReader11 = "False" Then
-            CheckBox1.Checked = True
-        End If
-        fileReader11.Close()
-
         Dim fileReader111 As System.IO.StreamReader
         fileReader111 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.hidesp.pbcfg")
         Dim stringReader111 As String
@@ -243,34 +234,6 @@ Public Class prefer
             Label20.Enabled = True
             Label21.Enabled = True
         End If
-    End Sub
-
-    Private Sub Label37_Click(sender As Object, e As EventArgs) Handles Label37.Click
-        Try
-            Dim client As WebClient = New WebClient()
-            Dim nf1cont As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v4/feedcontent.txt")
-            Dim lines As String() = nf1cont.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
-            If lines.Length > 0 Then Form1.Label12.Text = lines(0)
-            If lines.Length > 1 Then Form1.Label13.Text = lines(1)
-            If lines.Length > 2 Then Form1.Label14.Text = lines(2)
-            MessageBox.Show("News Feed refreshed!", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Catch ex As Exception
-            MessageBox.Show("Error while refreshing News Feed", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
-
-    Private Sub Label33_Click(sender As Object, e As EventArgs) Handles Label33.Click
-        Dim apppath As String = Application.StartupPath()
-        Dim pbcfg As String = apppath + "\statedata\setting.builder.nfstartfetch.pbcfg"
-        Dim objWriter As New System.IO.StreamWriter(pbcfg)
-        If CheckBox1.Checked = True Then
-            objWriter.Write("False")
-            MessageBox.Show("Success! News Feed will not fetch on startup. You may need to restart to make change.", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Else
-            objWriter.Write("True")
-            MessageBox.Show("Success! News Feed will fetch on startup. You may need to restart to make change.", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        End If
-        objWriter.Close()
     End Sub
 
     Private Sub Label39_Click(sender As Object, e As EventArgs) Handles Label39.Click

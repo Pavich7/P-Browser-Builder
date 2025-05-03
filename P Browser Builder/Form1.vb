@@ -538,7 +538,6 @@ Public Class Form1
                     If oresver.Contains(stringReader) Then
                         Label20.Visible = False
                         Label18.Visible = False
-                        Panel4.Size = New Size(265, 218)
                     Else
                         Label20.Text = "Resource update available! (" + oresver + ")"
                         Label18.Text = "    Update"
@@ -547,7 +546,6 @@ Public Class Form1
                 Catch ex As Exception
                     Label20.Visible = False
                     Label18.Visible = False
-                    Panel4.Size = New Size(265, 218)
                 End Try
                 'chkpoint
                 If Not System.IO.File.Exists(apppath + "\resource\cpd740") Then
@@ -577,7 +575,6 @@ Public Class Form1
             Button8.Enabled = False
             Button7.Enabled = False
             ProgressBar3.Value = 0
-            Label15.Visible = False
             Label7.Visible = True
             Label7.Text = "Fetching in progress..."
             ProgressBar1.Visible = True
@@ -686,64 +683,10 @@ Public Class Form1
         'objWriter111.Write("False")
         'objWriter111.Close()
         'End If
-        'nfstart
-        Dim fileReader999 As System.IO.StreamReader
-        fileReader999 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.nfstartfetch.pbcfg")
-        Dim stringReader999 As String
-        stringReader999 = fileReader999.ReadLine()
-        If stringReader999 = "True" Then
-            Try
-                ProgressBar1.Value = 10
-                Dim client As WebClient = New WebClient()
-                Dim nf1cont As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v4/feedcontent.txt")
-                Dim lines As String() = nf1cont.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
-                ProgressBar1.Value = 50
-                If lines.Length > 0 Then Label12.Text = lines(0)
-                If lines.Length > 1 Then Label13.Text = lines(1)
-                If lines.Length > 2 Then Label14.Text = lines(2)
-                ProgressBar1.Value = 100
-                Label7.Text = "Ready to build"
-                ProgressBar1.Value = 0
-            Catch ex As Exception
-                Label7.Text = "Ready to build"
-                ProgressBar1.Value = 0
-                Label15.Visible = True
-                Label14.Visible = False
-                Label12.Text = "Running in offline mode"
-                Label13.Text = "Can't establish connection and fetch news feed with server."
-            End Try
-        Else
-            Label7.Text = "Ready to build"
-            ProgressBar1.Value = 0
-            Label15.Visible = False
-            Label14.Visible = False
-            Label12.Text = "News Feed disabled"
-            Label13.Text = "News Feed has been disabled. You can re-enable in feed setting."
-        End If
         Dim rscheck As String = apppath + "\resource"
         If Not System.IO.Directory.Exists(rscheck) Then
             Label7.Text = "Not ready, resources required."
         End If
-        fileReader999.Close()
-    End Sub
-
-    Private Sub Label15_Click(sender As Object, e As EventArgs) Handles Label15.Click
-        Try
-            Label15.Text = "Please wait..."
-            Label15.Enabled = False
-            Dim client As WebClient = New WebClient()
-            Dim nf1cont As String = client.DownloadString("https://pavich7.github.io/MBP-Services/pbb-v4/feedcontent.txt")
-            Dim lines As String() = nf1cont.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
-            If lines.Length > 0 Then Label12.Text = lines(0)
-            If lines.Length > 1 Then Label13.Text = lines(1)
-            If lines.Length > 2 Then Label14.Text = lines(2)
-            Label15.Visible = False
-            Label14.Visible = True
-        Catch ex As Exception
-            MessageBox.Show("Cannot connect!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            Label15.Text = "Try again"
-            Label15.Enabled = True
-        End Try
     End Sub
 
     Private Sub ClearAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearAllToolStripMenuItem.Click

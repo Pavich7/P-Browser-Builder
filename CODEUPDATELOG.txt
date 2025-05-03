@@ -1,19 +1,10 @@
-Builder Release 9.4.0
+Builder Release 9.5.0
 
 ** Release Highlights **
-- HIGHLIGHTS: Introducing App 7.4, preventing external configuration modification.
-- HIGHLIGHTS: New options to enable DevTools while testing.
-- HIGHLIGHTS: New options to disable startup logging.
+- [Start Window]: Redesign Start Window.
 
 ** Breaking Changes **
-- BREAKING: This version only support 7.4.0 or newer resource.
-- BREAKING: This version will not support saves from previous versions.
-  - MIGRATION: You can still load your old saves with some errors.
 
 ** Release notes **
-- IMPROVEMENT: Updated CefSharp to 135.0.220
-- IMPROVEMENT: Updated Chromium to 135.0.7049.115
-- FIXED: GitHub Wiki in Get Started lead to wrong websites.
-
-** Low-level **
-- CHANGED: Changed application folder structures.
+- [Preference]: Removed News Feed tab in preference.
+- [Side Panel]: Moved News Feed to Start Window.

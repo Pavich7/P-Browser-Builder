@@ -301,6 +301,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="p_browser_icon_001_rq2_icon.ico" />
+    <None Include="Resources\Screenshot 2025-05-03 163844.png" />
     <None Include="packages.config" />
     <None Include="Resources\curved-up-arrow-.png" />
     <None Include="Resources\welmsgins.png" />
