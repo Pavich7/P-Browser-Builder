@@ -1,7 +1,7 @@
 Builder Release 9.5.0
 
 ** Release Highlights **
-- [Start Window]: Redesign Start Window.
+- [Start Window]: All new redesigned Start Window.
 
 ** Breaking Changes **
 
