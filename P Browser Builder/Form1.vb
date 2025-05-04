@@ -580,7 +580,7 @@ Public Class Form1
             ProgressBar1.Visible = True
             If stringReader111 = "True" Then
                 SidePanelToolStripMenuItem.Checked = False
-                Me.MinimumSize = New Size(580, 650)
+                Me.MinimumSize = New Size(580, 560)
                 Panel6.Hide()
                 TabControl1.Width = TabControl1.Width + 313
             Else
@@ -1119,11 +1119,11 @@ Public Class Form1
     Private Sub SidePanelToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SidePanelToolStripMenuItem.CheckedChanged
         If SidePanelToolStripMenuItem.Checked = True Then
             Panel6.Show()
-            Me.MinimumSize = New Size(900, 650)
+            Me.MinimumSize = New Size(900, 560)
             TabControl1.Width = TabControl1.Width - 313
         Else
             Panel6.Hide()
-            Me.MinimumSize = New Size(580, 650)
+            Me.MinimumSize = New Size(580, 560)
             TabControl1.Width = TabControl1.Width + 313
         End If
     End Sub

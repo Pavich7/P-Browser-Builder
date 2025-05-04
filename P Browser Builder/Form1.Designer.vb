@@ -943,7 +943,7 @@ Partial Class Form1
         Me.Label18.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label18.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label18.Location = New System.Drawing.Point(228, 443)
+        Me.Label18.Location = New System.Drawing.Point(227, 682)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(64, 17)
         Me.Label18.TabIndex = 32
@@ -957,7 +957,7 @@ Partial Class Form1
         Me.Label20.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label20.Font = New System.Drawing.Font("Segoe UI Semilight", 9.25!)
         Me.Label20.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label20.Location = New System.Drawing.Point(23, 443)
+        Me.Label20.Location = New System.Drawing.Point(22, 682)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(193, 17)
         Me.Label20.TabIndex = 30
@@ -2073,7 +2073,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Panel10)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.MinimumSize = New System.Drawing.Size(900, 650)
+        Me.MinimumSize = New System.Drawing.Size(900, 500)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "P Browser Builder"

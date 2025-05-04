@@ -697,6 +697,7 @@
 
 ** Release notes **
 - [Preference]: Removed News Feed tab in preference.
+- [Window]: Window can be resized to smaller height.
 - [Side Panel]: Moved News Feed to Start Window.</value>
   </data>
   <metadata name="dlworker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
