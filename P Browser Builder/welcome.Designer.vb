@@ -37,22 +37,21 @@ Partial Class welcome
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
+        Me.Panel5.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label3
@@ -68,7 +67,7 @@ Partial Class welcome
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.Label3)
@@ -102,7 +101,7 @@ Partial Class welcome
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel2.BackColor = System.Drawing.Color.Transparent
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.PictureBox2)
         Me.Panel2.Controls.Add(Me.Label2)
@@ -147,7 +146,7 @@ Partial Class welcome
         '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel3.BackColor = System.Drawing.Color.Transparent
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Controls.Add(Me.PictureBox3)
         Me.Panel3.Controls.Add(Me.Label6)
@@ -195,8 +194,8 @@ Partial Class welcome
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI Semilight", 10.25!)
-        Me.Label7.Location = New System.Drawing.Point(14, 205)
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
+        Me.Label7.Location = New System.Drawing.Point(4, 4)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(275, 38)
         Me.Label7.TabIndex = 70
@@ -205,16 +204,6 @@ Partial Class welcome
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = Global.P_Browser_Builder.My.Resources.Resources.Screenshot_2025_05_03_163844
-        Me.PictureBox4.Location = New System.Drawing.Point(26, 19)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(457, 91)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox4.TabIndex = 73
-        Me.PictureBox4.TabStop = False
         '
         'Label10
         '
@@ -262,42 +251,40 @@ Partial Class welcome
         '
         'Panel4
         '
-        Me.Panel4.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel4.BackColor = System.Drawing.Color.Transparent
+        Me.Panel4.Controls.Add(Me.Label8)
+        Me.Panel4.Controls.Add(Me.Panel5)
         Me.Panel4.Controls.Add(Me.Label14)
-        Me.Panel4.Controls.Add(Me.Label7)
         Me.Panel4.Controls.Add(Me.Label10)
         Me.Panel4.Controls.Add(Me.Label13)
         Me.Panel4.Controls.Add(Me.Label12)
-        Me.Panel4.Location = New System.Drawing.Point(347, 127)
+        Me.Panel4.Location = New System.Drawing.Point(351, 127)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(327, 258)
         Me.Panel4.TabIndex = 78
         '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.SystemColors.Info
+        Me.Panel5.Controls.Add(Me.Label7)
+        Me.Panel5.Location = New System.Drawing.Point(18, 166)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(288, 48)
+        Me.Panel5.TabIndex = 78
+        '
         'Label8
         '
+        Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(36, 404)
+        Me.Label8.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI Semilight", 10.0!)
+        Me.Label8.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label8.Location = New System.Drawing.Point(15, 225)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(157, 21)
-        Me.Label8.TabIndex = 79
-        Me.Label8.Text = "Version 9.5 (5N35E3)"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI Semilight", 9.25!)
-        Me.Label9.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label9.Location = New System.Drawing.Point(38, 434)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(374, 34)
-        Me.Label9.TabIndex = 80
-        Me.Label9.Text = "© 2025 Pavich Komansil. P Browser, Builder, MadeByPavich Logos" & Global.Microsoft.VisualBasic.ChrW(10) & "are copyright and " &
-    "property of Pavich Komansil."
+        Me.Label8.Size = New System.Drawing.Size(120, 19)
+        Me.Label8.TabIndex = 71
+        Me.Label8.Text = "GitHub Repository"
         '
         'welcome
         '
@@ -305,10 +292,7 @@ Partial Class welcome
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(719, 494)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.PictureBox4)
+        Me.ClientSize = New System.Drawing.Size(719, 486)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -330,11 +314,11 @@ Partial Class welcome
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -352,12 +336,11 @@ Partial Class welcome
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
-    Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents Label10 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Panel4 As Panel
+    Friend WithEvents Panel5 As Panel
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
 End Class

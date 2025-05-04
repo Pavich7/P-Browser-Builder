@@ -13,11 +13,11 @@ Public Class welcome
 
     Private Sub welcome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim apppath As String = Application.StartupPath()
-        'Me.BackgroundImage = Image.FromFile(apppath + "\assets\start.png")
+        Me.BackgroundImage = Image.FromFile(apppath + "\assets\start.png")
         Dim rscheck As String = apppath + "\resource"
-        Label7.Visible = False
+        Panel5.Visible = False
         If Not System.IO.Directory.Exists(rscheck) Then
-            Label7.Visible = True
+            Panel5.Visible = True
         End If
         Form1.Enabled = False
         realclose = True
@@ -62,5 +62,9 @@ Public Class welcome
 
     Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
         MessageBox.Show("After fresh install you will need to install resource to build. (Download size: approx. 150 MB)", "Info...")
+    End Sub
+
+    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+        Process.Start("http://github.com/Pavich7/P-Browser-Builder/")
     End Sub
 End Class
