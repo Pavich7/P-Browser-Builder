@@ -1,9 +1,12 @@
-Builder Release 9.5.0
+﻿Builder Release 9.5.0
 
 ** Release Highlights **
 - [Start Window]: All new redesigned Start Window.
 
-** Breaking Changes **
+** Compatibility **
+- [✓]: This version still compatiable with old resource.
+- [✓]: This version support saves from previous versions.
+- [✓]: This version support settings from previous versions.
 
 ** Release notes **
 - [Preference]: Removed News Feed tab in preference.
