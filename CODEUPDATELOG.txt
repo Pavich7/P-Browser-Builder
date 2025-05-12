@@ -2,6 +2,7 @@
 
 ** Release Highlights **
 - [Start Window]: All new redesigned Start Window.
+- [Check for Updates]: New dedicated tab for Builder updates.
 
 ** Compatibility **
 - [✓]: This version still compatiable with old resource.
@@ -12,3 +13,4 @@
 - [Preference]: Removed News Feed tab in preference.
 - [Window]: Window can be resized to smaller height.
 - [Side Panel]: Moved News Feed to Start Window.
+- [What's new]: Fix tab can be created even if it has already been created before.

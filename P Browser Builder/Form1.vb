@@ -5,6 +5,7 @@ Imports System.Net
 Imports System.Reflection.Emit
 Imports System.Security.Cryptography
 Imports System.Text
+Imports System.Text.RegularExpressions
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports CefSharp
 Imports CefSharp.DevTools
@@ -440,6 +441,8 @@ Public Class Form1
         TextBox6.Visible = False
         TabControl1.TabPages.Remove(TabPage3)
         TabControl1.TabPages.Remove(TabPage4)
+        Panel4.Visible = False
+        TabControl1.TabPages.Remove(TabPage5)
         'Reset
         If stringReader19 = "True" Then
             Me.Enabled = False
@@ -870,7 +873,7 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub ReleaseNoteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReleaseNoteToolStripMenuItem.Click, Label48.Click
+    Private Sub ReleaseNoteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReleaseNoteToolStripMenuItem.Click, Label48.Click, Label57.Click
         Browser.Load("https://github.com/Pavich7/P-Browser-Builder/releases/")
         TabControl1.SelectedTab = TabPage1
     End Sub
@@ -1012,7 +1015,9 @@ Public Class Form1
     End Sub
 
     Private Sub WhatsNewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WhatsNewToolStripMenuItem.Click
-        TabControl1.TabPages.Add(TabPage3)
+        If Not TabControl1.TabPages.Contains(TabPage3) Then
+            TabControl1.TabPages.Add(TabPage3)
+        End If
         TabControl1.SelectedTab = TabPage3
     End Sub
 
@@ -1242,36 +1247,35 @@ Public Class Form1
         ProgressBar1.Style = ProgressBarStyle.Marquee
         ProgressBar1.MarqueeAnimationSpeed = 40
         Label7.Text = "Checking for Updates..."
+        Label13.Text = "Checking for Updates..."
+        Panel4.Visible = False
+        If Not TabControl1.TabPages.Contains(TabPage5) Then
+            TabControl1.TabPages.Add(TabPage5)
+        End If
+        TabControl1.SelectedTab = TabPage5
         cfuworker.RunWorkerAsync()
     End Sub
-
+    Dim obuiver As String
     Private Sub cfuworker_DoWork(sender As Object, e As DoWorkEventArgs) Handles cfuworker.DoWork
         Try
             Dim client As WebClient = New WebClient()
-            Dim obuiver As String = client.DownloadString("https://github.com/Pavich7/P-Browser-Builder/releases/latest/download/release_manifest.txt")
-            Dim bfileReader As System.IO.StreamReader
-            bfileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\metadata\version.txt")
-            Dim bstringReader As String = bfileReader.ReadLine()
-            If obuiver.Contains(bstringReader) Then
-                MessageBox.Show("Latest version installed!", "Update Utility", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Else
-                Dim result As DialogResult = MessageBox.Show("Update available! Do you wish to download an update to the latest version?" + vbNewLine + vbNewLine + "Current version: " + bstringReader + vbNewLine + "Latest version: " + obuiver, "Confirmation?", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-                If (result = DialogResult.Yes) Then
-                    Dim patchr As DialogResult = MessageBox.Show("Would you Like to download the patch? It's smaller, as it only replaces changed files. A full download provides a fresh install. Both keeps your settings. " + vbNewLine + "Note: Patch updates are only supported for the latest release before the new one. " + vbNewLine + "Select YES for the patch or NO for the full download.", "Update options...", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
-                    If (patchr = DialogResult.Yes) Then
-                        Process.Start("https://github.com/Pavich7/P-Browser-Builder/releases/latest/download/Update.P.Browser.Builder.exe")
-                    ElseIf (patchr = DialogResult.No) Then
-                        Process.Start("https://github.com/Pavich7/P-Browser-Builder/releases/latest/download/Install.P.Browser.Builder.exe")
-                    End If
-                End If
-            End If
-            bfileReader.Close()
+            obuiver = client.DownloadString("https://github.com/Pavich7/P-Browser-Builder/releases/latest/download/release_manifest.txt")
         Catch ex As Exception
             MessageBox.Show("Unable to check for update! Please try again later.", "Update Utility", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End Try
     End Sub
 
     Private Sub cfuworker_DoWorkComplete(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles cfuworker.RunWorkerCompleted
+        Dim bfileReader As System.IO.StreamReader
+        bfileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\metadata\version.txt")
+        Dim bstringReader As String = bfileReader.ReadLine()
+        If obuiver.Contains(bstringReader) Then
+            Label13.Text = "Latest version installed!"
+        Else
+            Label13.Text = "New updates available!"
+            Panel4.Visible = True
+        End If
+        bfileReader.Close()
         ProgressBar1.Style = ProgressBarStyle.Blocks
         Label7.Text = "Ready to build"
     End Sub
@@ -1328,5 +1332,21 @@ Public Class Form1
         Else
             MessageBox.Show(TextBox8.Text, TextBox7.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
+    End Sub
+
+    Private Sub Label15_Click(sender As Object, e As EventArgs) Handles Label15.Click
+        MessageBox.Show("Patch Download is smaller, as it only replaces changed files. A full download provides a fresh install. Both keeps your settings. " + vbNewLine + "Note: Patch updates are only supported for the latest release before the new one.", "Updates Help", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        Process.Start("https://github.com/Pavich7/P-Browser-Builder/releases/latest/download/Update.P.Browser.Builder.exe")
+    End Sub
+
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        Process.Start("https://github.com/Pavich7/P-Browser-Builder/releases/latest/download/Install.P.Browser.Builder.exe")
+    End Sub
+
+    Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
+        TabControl1.TabPages.Remove(TabPage5)
     End Sub
 End Class
