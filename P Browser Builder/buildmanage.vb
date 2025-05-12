@@ -48,7 +48,7 @@ Public Class buildmanage
         End Try
     End Sub
 
-    Private Sub buildmanage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub buildmanage_Load(sender As Object, e As EventArgs) Handles MyBase.Load, PictureBox14.Click
         Dim apppath As String = Application.StartupPath()
         TotalSize = 0
         Dim TheSize2 As Long = GetDirSize(apppath + "\binary")
@@ -57,11 +57,15 @@ Public Class buildmanage
         Dim TheSize1 As Long = GetDirSize(apppath + "\binarypkg")
         Label52.Text = FormatNumber(TheSize1 / 1024 / 1024, 1) & " MB"
         If TheSize2 / 1024 / 1024 > 100 Then
-            Dim filePath As String = Path.Combine(apppath, "binary\manifest.pbcfg")
-            Dim lines As String() = File.ReadAllLines(filePath)
-            If lines.Length >= 2 Then
-                Label4.Text = "Application name: " + lines(1)
-            End If
+            Try
+                Dim filePath As String = Path.Combine(apppath, "binary\manifest.pbcfg")
+                Dim lines As String() = File.ReadAllLines(filePath)
+                If lines.Length >= 2 Then
+                    Label4.Text = "Application name: " + lines(1)
+                End If
+            Catch ex As Exception
+                Label4.Text = "Failed to load application name."
+            End Try
         Else
             Label4.Text = "Application name: N/A"
             Label4.Enabled = False

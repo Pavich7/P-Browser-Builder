@@ -15,3 +15,5 @@
 - [Side Panel]: Moved News Feed to Start Window.
 - [What's new]: Fix tab can be created even if it has already been created before.
 - [Check for Updates]: Builder will now check for updates on startup.
+- [Build Manager]: Added refresh button beside disk usage.
+- [Build Manager]: Fix app crash when reading incomplete build.
