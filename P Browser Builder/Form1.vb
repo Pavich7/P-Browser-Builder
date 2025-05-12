@@ -1272,7 +1272,7 @@ Public Class Form1
         TabControl1.SelectedTab = TabPage5
         cfuworker.RunWorkerAsync()
     End Sub
-    Dim obuiver As String
+    Dim obuiver As String = ""
     Private Sub cfuworker_DoWork(sender As Object, e As DoWorkEventArgs) Handles cfuworker.DoWork
         Try
             Dim client As WebClient = New WebClient()
@@ -1288,6 +1288,8 @@ Public Class Form1
         Dim bstringReader As String = bfileReader.ReadLine()
         If obuiver.Contains(bstringReader) Then
             Label13.Text = "Latest version installed!"
+        ElseIf obuiver = "" Then
+            Label13.Text = "Unable to check for update!"
         Else
             Label13.Text = "New updates available!"
             Panel4.Visible = True
