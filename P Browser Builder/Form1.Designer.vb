@@ -213,12 +213,12 @@ Partial Class Form1
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox15 = New System.Windows.Forms.PictureBox()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox15 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -244,12 +244,12 @@ Partial Class Form1
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -1617,8 +1617,8 @@ Partial Class Form1
         Me.TabPage5.Controls.Add(Me.Panel4)
         Me.TabPage5.Controls.Add(Me.Label13)
         Me.TabPage5.Controls.Add(Me.Label12)
-        Me.TabPage5.Controls.Add(Me.PictureBox7)
         Me.TabPage5.Controls.Add(Me.Label10)
+        Me.TabPage5.Controls.Add(Me.PictureBox7)
         Me.TabPage5.Location = New System.Drawing.Point(4, 26)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
@@ -1876,7 +1876,7 @@ Partial Class Form1
         Me.CheckBox12.Size = New System.Drawing.Size(155, 21)
         Me.CheckBox12.TabIndex = 70
         Me.CheckBox12.Text = "Disable startup logging"
-        Me.ToolTip1.SetToolTip(Me.CheckBox12, "Enable message that will show in first launch.")
+        Me.ToolTip1.SetToolTip(Me.CheckBox12, "Disable logging in App.")
         Me.CheckBox12.UseVisualStyleBackColor = True
         '
         'Label46
@@ -2156,6 +2156,17 @@ Partial Class Form1
         Me.PictureBox12.TabIndex = 75
         Me.PictureBox12.TabStop = False
         '
+        'PictureBox15
+        '
+        Me.PictureBox15.Cursor = System.Windows.Forms.Cursors.Default
+        Me.PictureBox15.Image = Global.P_Browser_Builder.My.Resources.Resources.information
+        Me.PictureBox15.Location = New System.Drawing.Point(19, 16)
+        Me.PictureBox15.Name = "PictureBox15"
+        Me.PictureBox15.Size = New System.Drawing.Size(16, 23)
+        Me.PictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox15.TabIndex = 76
+        Me.PictureBox15.TabStop = False
+        '
         'PictureBox7
         '
         Me.PictureBox7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -2216,17 +2227,6 @@ Partial Class Form1
         Me.PictureBox8.TabIndex = 41
         Me.PictureBox8.TabStop = False
         Me.ToolTip1.SetToolTip(Me.PictureBox8, "Use your website title as Application name.")
-        '
-        'PictureBox15
-        '
-        Me.PictureBox15.Cursor = System.Windows.Forms.Cursors.Default
-        Me.PictureBox15.Image = Global.P_Browser_Builder.My.Resources.Resources.information
-        Me.PictureBox15.Location = New System.Drawing.Point(19, 16)
-        Me.PictureBox15.Name = "PictureBox15"
-        Me.PictureBox15.Size = New System.Drawing.Size(16, 23)
-        Me.PictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox15.TabIndex = 76
-        Me.PictureBox15.TabStop = False
         '
         'Form1
         '
@@ -2290,12 +2290,12 @@ Partial Class Form1
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

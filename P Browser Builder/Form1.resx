@@ -153,7 +153,8 @@
 
 ** Release notes **
 - [Preference]: Removed News Feed tab in preference.
-- [Window]: Window can be resized to smaller height.
+- [Builder]: Window can be resized to smaller height.
+- [Builder]: Fix incorrect tooltip in Disable startup logging.
 - [Side Panel]: Moved News Feed to Start Window.
 - [What's new]: Fix tab can be created even if it has already been created before.
 - [Check for Updates]: Builder will now check for updates on startup.
