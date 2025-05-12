@@ -582,6 +582,7 @@ Public Class Form1
                     End If
                     TabControl1.SelectedTab = TabPage5
                     Label13.Text = "New updates available!"
+                    PictureBox12.Image = My.Resources.information
                     Panel4.Visible = True
                 End If
                 fileReader1.Close()
@@ -1271,6 +1272,7 @@ Public Class Form1
         ProgressBar1.MarqueeAnimationSpeed = 40
         Label7.Text = "Checking for Updates..."
         Label13.Text = "Checking for Updates..."
+        PictureBox12.Image = My.Resources.more
         Panel4.Visible = False
         If Not TabControl1.TabPages.Contains(TabPage5) Then
             TabControl1.TabPages.Add(TabPage5)
@@ -1294,10 +1296,13 @@ Public Class Form1
         Dim bstringReader As String = bfileReader.ReadLine()
         If obuiver.Contains(bstringReader) Then
             Label13.Text = "Latest version installed!"
+            PictureBox12.Image = My.Resources.check
         ElseIf obuiver = "" Then
             Label13.Text = "Unable to check for update!"
+            PictureBox12.Image = My.Resources.remove
         Else
             Label13.Text = "New updates available!"
+            PictureBox12.Image = My.Resources.information
             Panel4.Visible = True
         End If
         bfileReader.Close()
