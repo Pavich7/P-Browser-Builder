@@ -564,7 +564,24 @@ Public Class Form1
                     TestProjectToolStripMenuItem.Enabled = False
                 End If
             End If
-
+            'buicheck
+            Try
+                Dim client1 As WebClient = New WebClient()
+                Dim obuiver As String = client1.DownloadString("https://github.com/Pavich7/P-Browser-Builder/releases/latest/download/release_manifest.txt")
+                Dim fileReader11 As System.IO.StreamReader
+                fileReader11 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\metadata\version.txt")
+                Dim stringReader11 As String = fileReader11.ReadLine()
+                If Not obuiver.Contains(stringReader11) Then
+                    If Not TabControl1.TabPages.Contains(TabPage5) Then
+                        TabControl1.TabPages.Add(TabPage5)
+                    End If
+                    TabControl1.SelectedTab = TabPage5
+                    Label13.Text = "New updates available!"
+                    Panel4.Visible = True
+                End If
+                fileReader1.Close()
+            Catch ex As Exception
+            End Try
             Dim fileReader111 As System.IO.StreamReader
             fileReader111 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.hidesp.pbcfg")
             Dim stringReader111 As String = fileReader111.ReadLine()
