@@ -400,7 +400,9 @@ Public Class Form1
         objWriterh.Close()
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = False
         apppath = Application.StartupPath()
+        splash.Label1.Text = "Checking app structure..."
         'Init structure check
         If Not System.IO.Directory.Exists(apppath + "\assets") Then
             Me.Enabled = False
@@ -424,6 +426,7 @@ Public Class Form1
             Dim extractPath As String = apppath + "\"
             ZipFile.ExtractToDirectory(zipPath, extractPath)
         End If
+        splash.Label1.Text = "Loading app state..."
         'Reset state Check
         Dim fileReader19 As System.IO.StreamReader
         fileReader19 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.inrsstate.pbcfg")
@@ -452,7 +455,6 @@ Public Class Form1
                 Dim result As DialogResult = MessageBox.Show("Do you wish to reset all setting?" + vbNewLine + "This cannot be undone!", "You sure about this?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
                 If (result = DialogResult.Yes) Then
                     Dim result1 As DialogResult = MessageBox.Show("Do you wish to delete resource also?" + vbNewLine + "You can reinstall anytime via news feed.", "Resource setting", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-                    splash.Show()
                     'Delete Res if prompted
                     If (result1 = DialogResult.Yes) Then
                         Dim rscheck1 As String = apppath + "\resource"
@@ -497,6 +499,7 @@ Public Class Form1
                 Application.Restart()
             End Try
         Else
+            splash.Label1.Text = "Initializing core..."
             'Init Cef
             Dim setting As New CefSettings With {
                 .RemoteDebuggingPort = 8088
@@ -520,6 +523,7 @@ Public Class Form1
             Button4.Enabled = False
             Button5.Enabled = False
             Dim rscheck As String = apppath + "\resource"
+            splash.Label1.Text = "Checking for resource updates..."
             If Not System.IO.Directory.Exists(rscheck) Then
                 Button1.Enabled = False
                 Button2.Enabled = False
@@ -565,6 +569,7 @@ Public Class Form1
                 End If
             End If
             'buicheck
+            splash.Label1.Text = "Checking for builder updates..."
             Try
                 Dim client1 As WebClient = New WebClient()
                 Dim obuiver As String = client1.DownloadString("https://github.com/Pavich7/P-Browser-Builder/releases/latest/download/release_manifest.txt")
@@ -582,6 +587,7 @@ Public Class Form1
                 fileReader1.Close()
             Catch ex As Exception
             End Try
+            splash.Label1.Text = "Loading user preference..."
             Dim fileReader111 As System.IO.StreamReader
             fileReader111 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.hidesp.pbcfg")
             Dim stringReader111 As String = fileReader111.ReadLine()
@@ -596,7 +602,6 @@ Public Class Form1
             Button7.Enabled = False
             ProgressBar3.Value = 0
             Label7.Visible = True
-            Label7.Text = "Fetching in progress..."
             ProgressBar1.Visible = True
             If stringReader111 = "True" Then
                 SidePanelToolStripMenuItem.Checked = False
@@ -618,6 +623,7 @@ Public Class Form1
             Me.WindowState = FormWindowState.Minimized
             Timer3.Start()
             Timer1.Start()
+            splash.Label1.Text = "Loading completed!"
         End If
     End Sub
 
