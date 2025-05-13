@@ -405,16 +405,12 @@ Public Class Form1
         splash.Label1.Text = "Checking app structure..."
         'Init structure check
         If Not System.IO.Directory.Exists(apppath + "\assets") Then
-            Me.Enabled = False
-            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-            errorencounter.Show()
+            Throw New Exception("Bad data structure! Reinstall might fixed this problem.")
         End If
         If Not System.IO.Directory.Exists(apppath + "\binary") Then System.IO.Directory.CreateDirectory(apppath + "\binary")
         If Not System.IO.Directory.Exists(apppath + "\binarypkg") Then System.IO.Directory.CreateDirectory(apppath + "\binarypkg")
         If Not System.IO.Directory.Exists(apppath + "\metadata") Then
-            Me.Enabled = False
-            errorencounter.RichTextBox1.Text = "Bad data structure! Reinstall might fixed this problem."
-            errorencounter.Show()
+            Throw New Exception("Bad data structure! Reinstall might fixed this problem.")
         End If
         If Not System.IO.Directory.Exists(apppath + "\statecache") Then System.IO.Directory.CreateDirectory(apppath + "\statecache")
         If Not System.IO.Directory.Exists(apppath + "\statecache\buildcache") Then System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache")

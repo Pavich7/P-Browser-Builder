@@ -19,3 +19,4 @@
 - [Check for Updates]: Builder will now check for updates on startup.
 - [Build Manager]: Added refresh button beside disk usage.
 - [Build Manager]: Fix app crash when reading incomplete build.
+- [Error Handler]: Replace Error Screen with new improved message box.

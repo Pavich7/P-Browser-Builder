@@ -185,12 +185,6 @@
     <Compile Include="customscript.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="errorencounter.Designer.vb">
-      <DependentUpon>errorencounter.vb</DependentUpon>
-    </Compile>
-    <Compile Include="errorencounter.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -255,9 +249,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="customscript.resx">
       <DependentUpon>customscript.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="errorencounter.resx">
-      <DependentUpon>errorencounter.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
