@@ -34,6 +34,7 @@ Public Class prefer
             Label2.Enabled = False
             Label5.Enabled = False
             Label23.Enabled = False
+            Label30.Enabled = False
             Label7.Text = "Delete currently installed resource. (Resource not installed)"
             Label8.Enabled = False
         Else
@@ -274,5 +275,19 @@ Public Class prefer
             Form1.DevToolStripMenuItem.Visible = True
             Label60.Enabled = False
         End If
+    End Sub
+
+    Private Sub Label30_Click(sender As Object, e As EventArgs) Handles Label30.Click
+        MessageBox.Show("Builder may freeze temporarily. Please wait until the operation is complete.", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Dim apppath As String = Application.StartupPath()
+        Try
+            System.IO.Directory.Delete(apppath + "\resource\testspace", True)
+            Dim zipPath1 As String = apppath + "\resource\resourcepack\freshapp.zip"
+            Dim extractPath1 As String = apppath + "\resource\testspace"
+            ZipFile.ExtractToDirectory(zipPath1, extractPath1)
+        Catch ex As Exception
+            MessageBox.Show("Operation failed! Please consider reinstall resource.", "FAILED!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End Try
+        MessageBox.Show("Operation completed!", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 End Class

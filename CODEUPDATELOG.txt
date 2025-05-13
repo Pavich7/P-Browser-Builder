@@ -13,6 +13,7 @@
 
 ** Release notes **
 - [Preference]: Removed News Feed tab in preference.
+- [Preference]: New option to restore Test App to default.
 - [Builder]: Window can be resized to smaller height.
 - [Builder]: Fix incorrect tooltip in Disable startup logging.
 - [Side Panel]: Moved News Feed to Start Window.
