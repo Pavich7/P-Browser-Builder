@@ -1888,9 +1888,9 @@ Partial Class Form1
         '
         Me.Button12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button12.Font = New System.Drawing.Font("Segoe UI Semilight", 10.75!)
-        Me.Button12.Location = New System.Drawing.Point(360, 17)
+        Me.Button12.Location = New System.Drawing.Point(372, 17)
         Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(137, 38)
+        Me.Button12.Size = New System.Drawing.Size(125, 38)
         Me.Button12.TabIndex = 38
         Me.Button12.Text = "Full Download"
         Me.Button12.UseVisualStyleBackColor = True
@@ -1899,9 +1899,9 @@ Partial Class Form1
         '
         Me.Button10.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button10.Font = New System.Drawing.Font("Segoe UI Semilight", 10.75!)
-        Me.Button10.Location = New System.Drawing.Point(217, 17)
+        Me.Button10.Location = New System.Drawing.Point(241, 17)
         Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(137, 38)
+        Me.Button10.Size = New System.Drawing.Size(125, 38)
         Me.Button10.TabIndex = 37
         Me.Button10.Text = "Patch Download"
         Me.Button10.UseVisualStyleBackColor = True

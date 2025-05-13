@@ -2,13 +2,9 @@
 Imports System.IO
 Imports System.IO.Compression
 Imports System.Net
-Imports System.Reflection.Emit
 Imports System.Security.Cryptography
 Imports System.Text
-Imports System.Text.RegularExpressions
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports CefSharp
-Imports CefSharp.DevTools
 Imports CefSharp.WinForms
 Public Class Form1
     Public WithEvents Browser As ChromiumWebBrowser
@@ -580,6 +576,7 @@ Public Class Form1
                     Label13.Text = "New updates available!"
                     PictureBox12.Image = My.Resources.information
                     Panel4.Visible = True
+                    Label14.Text = "New updates available! (" + obuiver + ")"
                 End If
                 fileReader1.Close()
             Catch ex As Exception
@@ -1300,6 +1297,7 @@ Public Class Form1
             Label13.Text = "New updates available!"
             PictureBox12.Image = My.Resources.information
             Panel4.Visible = True
+            Label14.Text = "New updates available! (" + obuiver + ")"
         End If
         bfileReader.Close()
         ProgressBar1.Style = ProgressBarStyle.Blocks
