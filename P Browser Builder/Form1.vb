@@ -1240,11 +1240,13 @@ Public Class Form1
             Label21.Visible = False
             Label22.Visible = False
             PictureBox11.Visible = False
+            PictureBox16.Visible = False
         Else
             Label9.Visible = True
             Label21.Visible = True
             Label22.Visible = True
             PictureBox11.Visible = True
+            PictureBox16.Visible = True
         End If
     End Sub
 
@@ -1372,5 +1374,26 @@ Public Class Form1
 
     Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
         TabControl1.TabPages.Remove(TabPage5)
+    End Sub
+
+    Private Sub EnlargeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EnlargeToolStripMenuItem.CheckedChanged
+        If EnlargeToolStripMenuItem.Checked = False Then
+            Me.WindowState = FormWindowState.Normal
+            Me.Size = New Size(1232, 798)
+            TabControl1.Dock = DockStyle.None
+            TabControl1.Anchor = AnchorStyles.Top + AnchorStyles.Left + AnchorStyles.Right + AnchorStyles.Bottom
+            PictureBox16.Image = My.Resources.maximize
+        Else
+            TabControl1.Dock = DockStyle.Fill
+            PictureBox16.Image = My.Resources.minimize
+        End If
+    End Sub
+
+    Private Sub PictureBox16_Click(sender As Object, e As EventArgs) Handles PictureBox16.Click
+        If EnlargeToolStripMenuItem.Checked = False Then
+            EnlargeToolStripMenuItem.Checked = True
+        Else
+            EnlargeToolStripMenuItem.Checked = False
+        End If
     End Sub
 End Class

@@ -41,6 +41,7 @@ Partial Class Form1
         Me.StartLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ActionToolboxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NavigationBarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EnlargeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BuildToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BuildProjectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TestProjectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -213,6 +214,7 @@ Partial Class Form1
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox11 = New System.Windows.Forms.PictureBox()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
@@ -248,6 +250,7 @@ Partial Class Form1
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -331,7 +334,7 @@ Partial Class Form1
         '
         'ViewToolStripMenuItem
         '
-        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SidePanelToolStripMenuItem, Me.DesignViewToolStripMenuItem, Me.StartLogToolStripMenuItem, Me.ActionToolboxToolStripMenuItem, Me.NavigationBarToolStripMenuItem})
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SidePanelToolStripMenuItem, Me.DesignViewToolStripMenuItem, Me.StartLogToolStripMenuItem, Me.ActionToolboxToolStripMenuItem, Me.NavigationBarToolStripMenuItem, Me.EnlargeToolStripMenuItem})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
         Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.ViewToolStripMenuItem.Text = "View"
@@ -341,7 +344,7 @@ Partial Class Form1
         Me.SidePanelToolStripMenuItem.CheckOnClick = True
         Me.SidePanelToolStripMenuItem.Name = "SidePanelToolStripMenuItem"
         Me.SidePanelToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
-        Me.SidePanelToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.SidePanelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SidePanelToolStripMenuItem.Text = "Side Panel"
         '
         'DesignViewToolStripMenuItem
@@ -350,7 +353,7 @@ Partial Class Form1
         Me.DesignViewToolStripMenuItem.CheckOnClick = True
         Me.DesignViewToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.DesignViewToolStripMenuItem.Name = "DesignViewToolStripMenuItem"
-        Me.DesignViewToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.DesignViewToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.DesignViewToolStripMenuItem.Text = "Design View"
         '
         'StartLogToolStripMenuItem
@@ -359,7 +362,7 @@ Partial Class Form1
         Me.StartLogToolStripMenuItem.CheckOnClick = True
         Me.StartLogToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.StartLogToolStripMenuItem.Name = "StartLogToolStripMenuItem"
-        Me.StartLogToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.StartLogToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.StartLogToolStripMenuItem.Text = "Start Log"
         '
         'ActionToolboxToolStripMenuItem
@@ -368,7 +371,7 @@ Partial Class Form1
         Me.ActionToolboxToolStripMenuItem.CheckOnClick = True
         Me.ActionToolboxToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.ActionToolboxToolStripMenuItem.Name = "ActionToolboxToolStripMenuItem"
-        Me.ActionToolboxToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.ActionToolboxToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ActionToolboxToolStripMenuItem.Text = "Action Toolbox"
         '
         'NavigationBarToolStripMenuItem
@@ -377,8 +380,15 @@ Partial Class Form1
         Me.NavigationBarToolStripMenuItem.CheckOnClick = True
         Me.NavigationBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.NavigationBarToolStripMenuItem.Name = "NavigationBarToolStripMenuItem"
-        Me.NavigationBarToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.NavigationBarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.NavigationBarToolStripMenuItem.Text = "Navigation Bar"
+        '
+        'EnlargeToolStripMenuItem
+        '
+        Me.EnlargeToolStripMenuItem.CheckOnClick = True
+        Me.EnlargeToolStripMenuItem.Name = "EnlargeToolStripMenuItem"
+        Me.EnlargeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EnlargeToolStripMenuItem.Text = "Enlarge Tab View"
         '
         'BuildToolStripMenuItem
         '
@@ -1409,7 +1419,7 @@ Partial Class Form1
         Me.Label9.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label9.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.Label9.Location = New System.Drawing.Point(1060, 0)
+        Me.Label9.Location = New System.Drawing.Point(1036, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(19, 20)
         Me.Label9.TabIndex = 43
@@ -1424,7 +1434,7 @@ Partial Class Form1
         Me.Label21.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label21.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label21.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.Label21.Location = New System.Drawing.Point(1085, 0)
+        Me.Label21.Location = New System.Drawing.Point(1061, 0)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(19, 20)
         Me.Label21.TabIndex = 44
@@ -1439,7 +1449,7 @@ Partial Class Form1
         Me.Label22.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label22.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.Label22.Location = New System.Drawing.Point(1134, 4)
+        Me.Label22.Location = New System.Drawing.Point(1110, 4)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(55, 15)
         Me.Label22.TabIndex = 45
@@ -2187,6 +2197,20 @@ Partial Class Form1
         Me.PictureBox8.TabStop = False
         Me.ToolTip1.SetToolTip(Me.PictureBox8, "Use your website title as Application name.")
         '
+        'PictureBox16
+        '
+        Me.PictureBox16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox16.BackColor = System.Drawing.SystemColors.Control
+        Me.PictureBox16.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox16.Image = Global.P_Browser_Builder.My.Resources.Resources.maximize
+        Me.PictureBox16.Location = New System.Drawing.Point(1170, 0)
+        Me.PictureBox16.Name = "PictureBox16"
+        Me.PictureBox16.Size = New System.Drawing.Size(15, 23)
+        Me.PictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox16.TabIndex = 75
+        Me.PictureBox16.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox16, "Toggle enlarge Tab View.")
+        '
         'PictureBox4
         '
         Me.PictureBox4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -2207,7 +2231,7 @@ Partial Class Form1
         Me.PictureBox11.BackColor = System.Drawing.SystemColors.Control
         Me.PictureBox11.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox11.Image = Global.P_Browser_Builder.My.Resources.Resources.reload
-        Me.PictureBox11.Location = New System.Drawing.Point(1112, 0)
+        Me.PictureBox11.Location = New System.Drawing.Point(1088, 0)
         Me.PictureBox11.Name = "PictureBox11"
         Me.PictureBox11.Size = New System.Drawing.Size(13, 23)
         Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -2234,6 +2258,8 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1216, 759)
+        Me.Controls.Add(Me.PictureBox16)
+        Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox11)
@@ -2243,7 +2269,6 @@ Partial Class Form1
         Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Panel6)
-        Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.Panel10)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -2294,6 +2319,7 @@ Partial Class Form1
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -2496,4 +2522,6 @@ Partial Class Form1
     Friend WithEvents Label57 As Label
     Friend WithEvents PictureBox12 As PictureBox
     Friend WithEvents PictureBox15 As PictureBox
+    Friend WithEvents EnlargeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PictureBox16 As PictureBox
 End Class
