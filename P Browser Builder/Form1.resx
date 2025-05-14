@@ -702,10 +702,12 @@
 - [✓]: This version support settings from previous versions.
 
 ** Release notes **
-- [Preference]: Removed News Feed tab in preference.
 - [Preference]: New option to restore Test App to default.
+- [Preference]: Removed News Feed tab in preference.
 - [Builder]: Window can be resized to smaller height.
 - [Builder]: Fix incorrect tooltip in Disable startup logging.
+- [Core]: Updated CefSharp to 136.1.40.
+- [Core]: Updated Chromium to 136.0.7103.93.
 - [Side Panel]: Moved News Feed to Start Window.
 - [What's new]: Fix tab can be created even if it has already been created before.
 - [Check for Updates]: Builder will now check for updates on startup.
