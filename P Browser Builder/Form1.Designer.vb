@@ -152,8 +152,6 @@ Partial Class Form1
         Me.Button4 = New System.Windows.Forms.Button()
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -214,9 +212,11 @@ Partial Class Form1
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.PictureBox17 = New System.Windows.Forms.PictureBox()
         Me.PictureBox16 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox18 = New System.Windows.Forms.PictureBox()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.buildworker = New System.ComponentModel.BackgroundWorker()
         Me.buildfinalworker = New System.ComponentModel.BackgroundWorker()
@@ -250,9 +250,11 @@ Partial Class Form1
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -1411,36 +1413,6 @@ Partial Class Form1
         Me.ToolTip1.SetToolTip(Me.Button5, "Test your Welcome Message.")
         Me.Button5.UseVisualStyleBackColor = True
         '
-        'Label9
-        '
-        Me.Label9.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.SystemColors.Control
-        Me.Label9.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.Label9.Location = New System.Drawing.Point(1036, 0)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(19, 20)
-        Me.Label9.TabIndex = 43
-        Me.Label9.Text = "<"
-        Me.ToolTip1.SetToolTip(Me.Label9, "Go back browser in Design View")
-        '
-        'Label21
-        '
-        Me.Label21.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label21.AutoSize = True
-        Me.Label21.BackColor = System.Drawing.SystemColors.Control
-        Me.Label21.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label21.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.Label21.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.Label21.Location = New System.Drawing.Point(1061, 0)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(19, 20)
-        Me.Label21.TabIndex = 44
-        Me.Label21.Text = ">"
-        Me.ToolTip1.SetToolTip(Me.Label21, "Go forward browser in Design View")
-        '
         'Label22
         '
         Me.Label22.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -2197,6 +2169,20 @@ Partial Class Form1
         Me.PictureBox8.TabStop = False
         Me.ToolTip1.SetToolTip(Me.PictureBox8, "Use your website title as Application name.")
         '
+        'PictureBox17
+        '
+        Me.PictureBox17.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox17.BackColor = System.Drawing.SystemColors.Control
+        Me.PictureBox17.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox17.Image = Global.P_Browser_Builder.My.Resources.Resources.arrow_left
+        Me.PictureBox17.Location = New System.Drawing.Point(1043, 0)
+        Me.PictureBox17.Name = "PictureBox17"
+        Me.PictureBox17.Size = New System.Drawing.Size(12, 24)
+        Me.PictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox17.TabIndex = 76
+        Me.PictureBox17.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox17, "Go back browser in Design View")
+        '
         'PictureBox16
         '
         Me.PictureBox16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -2239,6 +2225,20 @@ Partial Class Form1
         Me.PictureBox11.TabStop = False
         Me.ToolTip1.SetToolTip(Me.PictureBox11, "Reload browser in Design View. (F5)")
         '
+        'PictureBox18
+        '
+        Me.PictureBox18.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox18.BackColor = System.Drawing.SystemColors.Control
+        Me.PictureBox18.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox18.Image = Global.P_Browser_Builder.My.Resources.Resources.arrow_right
+        Me.PictureBox18.Location = New System.Drawing.Point(1063, 0)
+        Me.PictureBox18.Name = "PictureBox18"
+        Me.PictureBox18.Size = New System.Drawing.Size(12, 24)
+        Me.PictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox18.TabIndex = 77
+        Me.PictureBox18.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox18, "Go forward browser in Design View")
+        '
         'FolderBrowserDialog1
         '
         Me.FolderBrowserDialog1.Description = "Browse folder that contains website html files for offline support."
@@ -2258,14 +2258,14 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1216, 759)
+        Me.Controls.Add(Me.PictureBox18)
+        Me.Controls.Add(Me.PictureBox17)
         Me.Controls.Add(Me.PictureBox16)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox11)
         Me.Controls.Add(Me.Label22)
-        Me.Controls.Add(Me.Label21)
-        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Panel6)
@@ -2319,9 +2319,11 @@ Partial Class Form1
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2396,8 +2398,6 @@ Partial Class Form1
     Friend WithEvents FToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RestartInRestoreModeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ShowSplashScreenToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label21 As Label
     Friend WithEvents Label22 As Label
     Friend WithEvents PictureBox9 As PictureBox
     Friend WithEvents CheckBox4 As CheckBox
@@ -2524,4 +2524,6 @@ Partial Class Form1
     Friend WithEvents PictureBox15 As PictureBox
     Friend WithEvents EnlargeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox16 As PictureBox
+    Friend WithEvents PictureBox17 As PictureBox
+    Friend WithEvents PictureBox18 As PictureBox
 End Class

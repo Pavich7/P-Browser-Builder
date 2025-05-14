@@ -16,6 +16,7 @@
 - [Preference]: Removed News Feed tab in preference.
 - [Builder]: Window can be resized to smaller height.
 - [Builder]: Fix incorrect tooltip in Disable startup logging.
+- [Builder]: Minor User Interface Improvements.
 - [Core]: Updated CefSharp to 136.1.40.
 - [Core]: Updated Chromium to 136.0.7103.93.
 - [Side Panel]: Moved News Feed to Start Window.

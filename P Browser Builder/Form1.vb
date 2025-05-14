@@ -945,15 +945,6 @@ Public Class Form1
         splash.Show()
     End Sub
 
-
-    Private Sub Label21_Click(sender As Object, e As EventArgs) Handles Label21.Click
-        Browser.Forward
-    End Sub
-
-    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
-        Browser.Back
-    End Sub
-
     Private Sub Label22_Click(sender As Object, e As EventArgs) Handles Label22.Click, OpenRemoteDebuggingToolStripMenuItem.Click
         Browser.ShowDevTools
     End Sub
@@ -1395,5 +1386,13 @@ Public Class Form1
         Else
             EnlargeToolStripMenuItem.Checked = False
         End If
+    End Sub
+
+    Private Sub PictureBox17_Click(sender As Object, e As EventArgs) Handles PictureBox17.Click
+        Browser.Back
+    End Sub
+
+    Private Sub PictureBox18_Click(sender As Object, e As EventArgs) Handles PictureBox18.Click
+        Browser.Forward
     End Sub
 End Class
