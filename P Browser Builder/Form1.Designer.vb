@@ -2175,7 +2175,7 @@ Partial Class Form1
         Me.PictureBox17.BackColor = System.Drawing.SystemColors.Control
         Me.PictureBox17.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox17.Image = Global.P_Browser_Builder.My.Resources.Resources.arrow_left
-        Me.PictureBox17.Location = New System.Drawing.Point(1043, 0)
+        Me.PictureBox17.Location = New System.Drawing.Point(1040, 0)
         Me.PictureBox17.Name = "PictureBox17"
         Me.PictureBox17.Size = New System.Drawing.Size(12, 24)
         Me.PictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom

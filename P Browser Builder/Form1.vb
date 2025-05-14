@@ -1227,14 +1227,14 @@ Public Class Form1
 
     Private Sub NavigationBarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NavigationBarToolStripMenuItem.Click
         If NavigationBarToolStripMenuItem.Checked = False Then
-            Label9.Visible = False
-            Label21.Visible = False
+            PictureBox17.Visible = False
+            PictureBox18.Visible = False
             Label22.Visible = False
             PictureBox11.Visible = False
             PictureBox16.Visible = False
         Else
-            Label9.Visible = True
-            Label21.Visible = True
+            PictureBox17.Visible = True
+            PictureBox18.Visible = True
             Label22.Visible = True
             PictureBox11.Visible = True
             PictureBox16.Visible = True
