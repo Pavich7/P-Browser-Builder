@@ -49,7 +49,7 @@ Section "P Browser Installer" SecDummy
   FileOpen $0 "$INSTDIR\metadata\version.txt" r
   FileRead $0 $1
   FileClose $0
-  StrCmp $1 "9.3.0" +3
+  StrCmp $1 "9.4.0" +3
   MessageBox MB_OK "Error! Patch is not supported in the currently installed version."
   Abort
 
