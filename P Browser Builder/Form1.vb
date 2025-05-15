@@ -1374,9 +1374,11 @@ Public Class Form1
             TabControl1.Dock = DockStyle.None
             TabControl1.Anchor = AnchorStyles.Top + AnchorStyles.Left + AnchorStyles.Right + AnchorStyles.Bottom
             PictureBox16.Image = My.Resources.maximize
+            SidePanelToolStripMenuItem.Enabled = True
         Else
             TabControl1.Dock = DockStyle.Fill
             PictureBox16.Image = My.Resources.minimize
+            SidePanelToolStripMenuItem.Enabled = False
         End If
     End Sub
 
