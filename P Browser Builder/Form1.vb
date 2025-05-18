@@ -469,6 +469,10 @@ Public Class Form1
                     Dim objWriter1 As New System.IO.StreamWriter(apppath + "\wnannounce.pbstate")
                     objWriter1.Write("True")
                     objWriter1.Close()
+                    'Write default autocfu state
+                    Dim objWriter11 As New System.IO.StreamWriter(apppath + "\autocfu.pbstate")
+                    objWriter11.Write("")
+                    objWriter11.Close()
                     MessageBox.Show("Operation Completed!", "Success!")
                     Dim result11 As DialogResult = MessageBox.Show("Do you wish to restart?" + vbNewLine + "YES to restart, NO to shutdown.", "Restart?", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                     If (result11 = DialogResult.Yes) Then
@@ -491,6 +495,15 @@ Public Class Form1
                 Application.Restart()
             End Try
         Else
+            'Check autocfu
+            Dim autocfu As Boolean = False
+            Dim filePath As String = apppath + "\autocfu.pbstate"
+            Dim currentDate As String = DateTime.Now.ToString("yyyy-MM-dd")
+            Dim lastCheckedDate As String = If(File.Exists(filePath), File.ReadAllText(filePath).Trim(), "")
+            If lastCheckedDate <> currentDate Then
+                autocfu = True
+                File.WriteAllText(filePath, currentDate)
+            End If
             splash.Label1.Text = "Initializing core..."
             'Init Cef
             Dim setting As New CefSettings With {
@@ -527,25 +540,6 @@ Public Class Form1
                 BuildProjectToolStripMenuItem.Enabled = False
                 TestProjectToolStripMenuItem.Enabled = False
             Else
-                'reschk
-                Try
-                    Dim client As WebClient = New WebClient()
-                    Dim oresver As String = client.DownloadString("https://github.com/Pavich7/P-Browser-Builder-Resource/releases/latest/download/release_manifest.txt")
-                    Dim fileReader As System.IO.StreamReader
-                    fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\version.txt")
-                    Dim stringReader As String = fileReader.ReadLine()
-                    If oresver.Contains(stringReader) Then
-                        Label20.Visible = False
-                        Label18.Visible = False
-                    Else
-                        Label20.Text = "Resource update available! (" + oresver + ")"
-                        Label18.Text = "    Update"
-                    End If
-                    fileReader.Close()
-                Catch ex As Exception
-                    Label20.Visible = False
-                    Label18.Visible = False
-                End Try
                 'chkpoint
                 If Not System.IO.File.Exists(apppath + "\resource\cpd740") Then
                     MessageBox.Show("Resource not compatible to this version of Builder!" + vbNewLine + "Please update Builder and Resource to ensure compatibility.", "Resource not compatible!", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -558,29 +552,56 @@ Public Class Form1
                     Button9.Enabled = False
                     BuildProjectToolStripMenuItem.Enabled = False
                     TestProjectToolStripMenuItem.Enabled = False
+                    autocfu = True
+                End If
+                'reschk
+                If autocfu = True Then
+                    Try
+                        Dim client As WebClient = New WebClient()
+                        Dim oresver As String = client.DownloadString("https://github.com/Pavich7/P-Browser-Builder-Resource/releases/latest/download/release_manifest.txt")
+                        Dim fileReader As System.IO.StreamReader
+                        fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\version.txt")
+                        Dim stringReader As String = fileReader.ReadLine()
+                        If oresver.Contains(stringReader) Then
+                            Label20.Visible = False
+                            Label18.Visible = False
+                        Else
+                            Label20.Text = "Resource update available! (" + oresver + ")"
+                            Label18.Text = "    Update"
+                        End If
+                        fileReader.Close()
+                    Catch ex As Exception
+                        Label20.Visible = False
+                        Label18.Visible = False
+                    End Try
+                Else
+                    Label20.Visible = False
+                    Label18.Visible = False
                 End If
             End If
             'buicheck
-            splash.Label1.Text = "Checking for builder updates..."
-            Try
-                Dim client1 As WebClient = New WebClient()
-                Dim obuiver As String = client1.DownloadString("https://github.com/Pavich7/P-Browser-Builder/releases/latest/download/release_manifest.txt")
-                Dim fileReader11 As System.IO.StreamReader
-                fileReader11 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\metadata\version.txt")
-                Dim stringReader11 As String = fileReader11.ReadLine()
-                If Not obuiver.Contains(stringReader11) Then
-                    If Not TabControl1.TabPages.Contains(TabPage5) Then
-                        TabControl1.TabPages.Add(TabPage5)
+            If autocfu = True Then
+                splash.Label1.Text = "Checking for builder updates..."
+                Try
+                    Dim client1 As WebClient = New WebClient()
+                    Dim obuiver As String = client1.DownloadString("https://github.com/Pavich7/P-Browser-Builder/releases/latest/download/release_manifest.txt")
+                    Dim fileReader11 As System.IO.StreamReader
+                    fileReader11 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\metadata\version.txt")
+                    Dim stringReader11 As String = fileReader11.ReadLine()
+                    If Not obuiver.Contains(stringReader11) Then
+                        If Not TabControl1.TabPages.Contains(TabPage5) Then
+                            TabControl1.TabPages.Add(TabPage5)
+                        End If
+                        TabControl1.SelectedTab = TabPage5
+                        Label13.Text = "New updates available!"
+                        PictureBox12.Image = My.Resources.information
+                        Panel4.Visible = True
+                        Label14.Text = "New updates available! (" + obuiver + ")"
                     End If
-                    TabControl1.SelectedTab = TabPage5
-                    Label13.Text = "New updates available!"
-                    PictureBox12.Image = My.Resources.information
-                    Panel4.Visible = True
-                    Label14.Text = "New updates available! (" + obuiver + ")"
-                End If
-                fileReader1.Close()
-            Catch ex As Exception
-            End Try
+                    fileReader1.Close()
+                Catch ex As Exception
+                End Try
+            End If
             splash.Label1.Text = "Loading user preference..."
             Dim fileReader111 As System.IO.StreamReader
             fileReader111 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.hidesp.pbcfg")

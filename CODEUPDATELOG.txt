@@ -2,6 +2,7 @@
 
 ** Release Highlights **
 - [Build Manager]: New option to reset App state in binary.
+- [Software Update]: Builder will now check for update daily for better startup speed.
 
 ** Compatibility **
 - [✓]: This version still compatiable with old resource.
