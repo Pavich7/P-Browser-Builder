@@ -10,7 +10,7 @@ Public Class welcome
             Application.Exit()
         End If
     End Sub
-
+    Dim hyperlink As String = ""
     Private Sub welcome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim apppath As String = Application.StartupPath()
         Me.BackgroundImage = Image.FromFile(apppath + "\assets\start.png")
@@ -28,6 +28,7 @@ Public Class welcome
             If lines.Length > 0 Then Label12.Text = lines(0)
             If lines.Length > 1 Then Label13.Text = lines(1)
             If lines.Length > 2 Then Label14.Text = lines(2)
+            If lines.Length > 3 Then hyperlink = lines(3)
         Catch ex As Exception
             Label12.Text = "Running in offline mode"
             Label13.Text = "Can't establish connection and fetch news feed with server."
@@ -61,10 +62,18 @@ Public Class welcome
     End Sub
 
     Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
-        MessageBox.Show("After fresh install you will need to install resource to build. (Download size: approx. 150 MB)", "Info...")
+        MessageBox.Show("After fresh install you will need to install resource to build. (Download size: approx. 150 MB)", "Info...", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
         Process.Start("http://github.com/Pavich7/P-Browser-Builder/")
+    End Sub
+
+    Private Sub Label12_Click(sender As Object, e As EventArgs) Handles Label12.Click, Label13.Click, Label14.Click
+        If hyperlink = "" Then
+            MessageBox.Show("This news has no hyperlink attached.", "News Feed", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Else
+            Process.Start(hyperlink)
+        End If
     End Sub
 End Class

@@ -42,8 +42,8 @@ Partial Class welcome
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -221,6 +221,7 @@ Partial Class welcome
         '
         Me.Label14.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label14.AutoSize = True
+        Me.Label14.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label14.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.Location = New System.Drawing.Point(15, 117)
         Me.Label14.Name = "Label14"
@@ -231,6 +232,7 @@ Partial Class welcome
         'Label13
         '
         Me.Label13.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label13.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label13.Font = New System.Drawing.Font("Segoe UI Light", 10.0!)
         Me.Label13.Location = New System.Drawing.Point(15, 75)
         Me.Label13.Name = "Label13"
@@ -242,6 +244,7 @@ Partial Class welcome
         '
         Me.Label12.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label12.AutoSize = True
+        Me.Label12.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label12.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.Location = New System.Drawing.Point(15, 50)
         Me.Label12.Name = "Label12"
@@ -263,15 +266,6 @@ Partial Class welcome
         Me.Panel4.Size = New System.Drawing.Size(327, 258)
         Me.Panel4.TabIndex = 78
         '
-        'Panel5
-        '
-        Me.Panel5.BackColor = System.Drawing.SystemColors.Info
-        Me.Panel5.Controls.Add(Me.Label7)
-        Me.Panel5.Location = New System.Drawing.Point(18, 166)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(288, 48)
-        Me.Panel5.TabIndex = 78
-        '
         'Label8
         '
         Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -285,6 +279,15 @@ Partial Class welcome
         Me.Label8.Size = New System.Drawing.Size(120, 19)
         Me.Label8.TabIndex = 71
         Me.Label8.Text = "GitHub Repository"
+        '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.SystemColors.Info
+        Me.Panel5.Controls.Add(Me.Label7)
+        Me.Panel5.Location = New System.Drawing.Point(18, 166)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(288, 48)
+        Me.Panel5.TabIndex = 78
         '
         'welcome
         '
