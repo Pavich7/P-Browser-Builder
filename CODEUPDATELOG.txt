@@ -10,3 +10,4 @@
 
 ** Release notes **
 - [Build Manager]: Added tooltip for features informations.
+- [Start Window]: Fix custom script won't close after enter Start Window.
