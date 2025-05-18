@@ -70,6 +70,11 @@ Public Class buildmanage
             Label4.Text = "Application name: N/A"
             Label4.Enabled = False
         End If
+        If System.IO.Directory.Exists(apppath + "\binary\statecache") Then
+            Label5.Visible = True
+        Else
+            Label5.Visible = False
+        End If
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
@@ -80,5 +85,26 @@ Public Class buildmanage
     Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
         Dim apppath As String = Application.StartupPath()
         Process.Start(apppath + "\binarypkg")
+    End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+        Dim apppath As String = Application.StartupPath()
+        Try
+            System.IO.Directory.Delete(apppath + "\binary\statecache", True)
+            System.IO.Directory.Delete(apppath + "\binary\startlog", True)
+            Dim result As DialogResult = MessageBox.Show("Did your App has Welcome Message enabled?", "Reset App", MessageBoxButtons.YesNo)
+            If (result = DialogResult.Yes) Then
+                Dim filePath As String = apppath + "\binary\manifest.pbcfg"
+                Dim lines As String() = File.ReadAllLines(filePath)
+                If lines.Length >= 7 Then
+                    lines(6) = "True"
+                End If
+                File.WriteAllLines(filePath, lines)
+            End If
+            Label5.Visible = False
+            MessageBox.Show("Successfully reset app!", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Catch ex As Exception
+            MessageBox.Show("Failed to reset app!", "Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 End Class

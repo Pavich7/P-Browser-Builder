@@ -22,6 +22,7 @@ Partial Class buildmanage
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -36,6 +37,8 @@ Partial Class buildmanage
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox14 = New System.Windows.Forms.PictureBox()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -70,11 +73,13 @@ Partial Class buildmanage
         Me.Button3.Size = New System.Drawing.Size(153, 35)
         Me.Button3.TabIndex = 87
         Me.Button3.Text = "Cleanup"
+        Me.ToolTip1.SetToolTip(Me.Button3, "Clear all builds.")
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.Label52)
         Me.Panel2.Controls.Add(Me.Label51)
@@ -96,6 +101,7 @@ Partial Class buildmanage
         Me.Label4.Size = New System.Drawing.Size(61, 17)
         Me.Label4.TabIndex = 81
         Me.Label4.Text = "appname"
+        Me.ToolTip1.SetToolTip(Me.Label4, "Name of an application in binary folder.")
         '
         'Label52
         '
@@ -107,6 +113,7 @@ Partial Class buildmanage
         Me.Label52.Size = New System.Drawing.Size(46, 17)
         Me.Label52.TabIndex = 80
         Me.Label52.Text = "pakmb"
+        Me.ToolTip1.SetToolTip(Me.Label52, "Current packaging mode build size.")
         '
         'Label51
         '
@@ -118,6 +125,7 @@ Partial Class buildmanage
         Me.Label51.Size = New System.Drawing.Size(40, 17)
         Me.Label51.TabIndex = 79
         Me.Label51.Text = "dirmb"
+        Me.ToolTip1.SetToolTip(Me.Label51, "Current directory mode build size.")
         '
         'Label50
         '
@@ -175,6 +183,7 @@ Partial Class buildmanage
         Me.Label1.Size = New System.Drawing.Size(43, 17)
         Me.Label1.TabIndex = 91
         Me.Label1.Text = "Binary"
+        Me.ToolTip1.SetToolTip(Me.Label1, "Open directory build in Explorer.")
         '
         'Label2
         '
@@ -187,6 +196,7 @@ Partial Class buildmanage
         Me.Label2.Size = New System.Drawing.Size(55, 17)
         Me.Label2.TabIndex = 92
         Me.Label2.Text = "Package"
+        Me.ToolTip1.SetToolTip(Me.Label2, "Open package build in Explorer.")
         '
         'PictureBox14
         '
@@ -200,6 +210,20 @@ Partial Class buildmanage
         Me.PictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox14.TabIndex = 93
         Me.PictureBox14.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox14, "Recalculate disk usage.")
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label5.Location = New System.Drawing.Point(310, 29)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(64, 17)
+        Me.Label5.TabIndex = 94
+        Me.Label5.Text = "Reset App"
+        Me.ToolTip1.SetToolTip(Me.Label5, "Clear cache and reset first startup.")
         '
         'buildmanage
         '
@@ -247,4 +271,6 @@ Partial Class buildmanage
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents PictureBox14 As PictureBox
+    Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents Label5 As Label
 End Class

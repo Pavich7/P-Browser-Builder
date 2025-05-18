@@ -688,13 +688,10 @@
     <value>575, 9</value>
   </metadata>
   <data name="RichTextBox2.Text" xml:space="preserve">
-    <value>Builder Release 9.5.0
+    <value>Builder Release 9.6.0
 
 ** Release Highlights **
-- [Start Window]: All new redesigned Start Window.
-- [Check for Updates]: New dedicated tab for Builder updates.
-- [Splash Screen]: Added loading status in Splash Screen.
-- [Builder]: You can enlarge Tab View via Navigation Bar and View Menu.
+- [Build Manager]: New option to reset App state in binary.
 
 ** Compatibility **
 - [✓]: This version still compatiable with old resource.
@@ -702,19 +699,7 @@
 - [✓]: This version support settings from previous versions.
 
 ** Release notes **
-- [Preference]: New option to restore Test App to default.
-- [Preference]: Removed News Feed tab in preference.
-- [Builder]: Window can be resized to smaller height.
-- [Builder]: Fix incorrect tooltip in Disable startup logging.
-- [Builder]: Minor User Interface Improvements.
-- [Core]: Updated CefSharp to 136.1.40.
-- [Core]: Updated Chromium to 136.0.7103.93.
-- [Side Panel]: Moved News Feed to Start Window.
-- [What's new]: Fix tab can be created even if it has already been created before.
-- [Check for Updates]: Builder will now check for updates on startup.
-- [Build Manager]: Added refresh button beside disk usage.
-- [Build Manager]: Fix app crash when reading incomplete build.
-- [Error Handler]: Replace Error Screen with new improved message box.</value>
+- [Build Manager]: Added tooltip for features informations.</value>
   </data>
   <metadata name="dlworker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>666, 9</value>
