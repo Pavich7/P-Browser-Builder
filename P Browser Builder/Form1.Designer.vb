@@ -26,13 +26,8 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ClearAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OpenProjectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
-        Me.StartWindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PreferenceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
-        Me.SaveToFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -43,34 +38,24 @@ Partial Class Form1
         Me.NavigationBarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EnlargeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BuildToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BuildProjectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TestProjectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CleanBinaryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
         Me.BuildManagerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReloadPreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenRemoteDebuggingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.DebugLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CefSharpLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ChromiumLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NormalToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaximizeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MinimizedToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CheckForUpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WhatsNewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReleaseNoteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.GettingStartedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoadSampleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.SupportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OpenBuilderInExplorerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SubmitBugsReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DevToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UnlockIncompleteFeatureToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ForceUnlockDisableButtonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -95,7 +80,6 @@ Partial Class Form1
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label44 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label43 = New System.Windows.Forms.Label()
         Me.Label45 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -125,7 +109,6 @@ Partial Class Form1
         Me.CheckBox11 = New System.Windows.Forms.CheckBox()
         Me.CheckBox10 = New System.Windows.Forms.CheckBox()
         Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label35 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.CheckBox4 = New System.Windows.Forms.CheckBox()
@@ -160,15 +143,12 @@ Partial Class Form1
         Me.Label39 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Label50 = New System.Windows.Forms.Label()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.Label48 = New System.Windows.Forms.Label()
         Me.Label47 = New System.Windows.Forms.Label()
         Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.Label55 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -179,12 +159,9 @@ Partial Class Form1
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.Button11 = New System.Windows.Forms.Button()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
-        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
         Me.Label57 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.PictureBox15 = New System.Windows.Forms.PictureBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Button12 = New System.Windows.Forms.Button()
@@ -192,7 +169,18 @@ Partial Class Form1
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.Label58 = New System.Windows.Forms.Label()
+        Me.Label59 = New System.Windows.Forms.Label()
+        Me.Label60 = New System.Windows.Forms.Label()
+        Me.Label61 = New System.Windows.Forms.Label()
+        Me.Label62 = New System.Windows.Forms.Label()
+        Me.Label63 = New System.Windows.Forms.Label()
+        Me.Label64 = New System.Windows.Forms.Label()
+        Me.Label65 = New System.Windows.Forms.Label()
+        Me.Label66 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
         Me.Label37 = New System.Windows.Forms.Label()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
@@ -204,57 +192,90 @@ Partial Class Form1
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.CheckBox12 = New System.Windows.Forms.CheckBox()
         Me.Label46 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.CheckBox9 = New System.Windows.Forms.CheckBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Label30 = New System.Windows.Forms.Label()
-        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.PictureBox17 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox18 = New System.Windows.Forms.PictureBox()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.buildworker = New System.ComponentModel.BackgroundWorker()
         Me.buildfinalworker = New System.ComponentModel.BackgroundWorker()
         Me.cfuworker = New System.ComponentModel.BackgroundWorker()
+        Me.PictureBox18 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox17 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox15 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox22 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox21 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox20 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox19 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        Me.ClearAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenProjectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StartWindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PreferenceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveToFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BuildProjectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReloadPreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DebugLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CefSharpLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ChromiumLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CheckForUpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReleaseNoteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GettingStartedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenBuilderInExplorerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SubmitBugsReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.Panel9.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel8.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage4.SuspendLayout()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage5.SuspendLayout()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
-        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage6.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel10.SuspendLayout()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -274,53 +295,15 @@ Partial Class Form1
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
         '
-        'ClearAllToolStripMenuItem
-        '
-        Me.ClearAllToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.file
-        Me.ClearAllToolStripMenuItem.Name = "ClearAllToolStripMenuItem"
-        Me.ClearAllToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
-        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(195, 22)
-        Me.ClearAllToolStripMenuItem.Text = "New Project"
-        '
-        'OpenProjectToolStripMenuItem
-        '
-        Me.OpenProjectToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.folder1
-        Me.OpenProjectToolStripMenuItem.Name = "OpenProjectToolStripMenuItem"
-        Me.OpenProjectToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
-        Me.OpenProjectToolStripMenuItem.Size = New System.Drawing.Size(195, 22)
-        Me.OpenProjectToolStripMenuItem.Text = "Open Project..."
-        '
         'ToolStripSeparator7
         '
         Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
         Me.ToolStripSeparator7.Size = New System.Drawing.Size(192, 6)
         '
-        'StartWindowToolStripMenuItem
-        '
-        Me.StartWindowToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.house
-        Me.StartWindowToolStripMenuItem.Name = "StartWindowToolStripMenuItem"
-        Me.StartWindowToolStripMenuItem.Size = New System.Drawing.Size(195, 22)
-        Me.StartWindowToolStripMenuItem.Text = "Start Window"
-        '
-        'PreferenceToolStripMenuItem
-        '
-        Me.PreferenceToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.settings
-        Me.PreferenceToolStripMenuItem.Name = "PreferenceToolStripMenuItem"
-        Me.PreferenceToolStripMenuItem.Size = New System.Drawing.Size(195, 22)
-        Me.PreferenceToolStripMenuItem.Text = "Preference"
-        '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
         Me.ToolStripSeparator4.Size = New System.Drawing.Size(192, 6)
-        '
-        'SaveToFileToolStripMenuItem
-        '
-        Me.SaveToFileToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.diskette
-        Me.SaveToFileToolStripMenuItem.Name = "SaveToFileToolStripMenuItem"
-        Me.SaveToFileToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.SaveToFileToolStripMenuItem.Size = New System.Drawing.Size(195, 22)
-        Me.SaveToFileToolStripMenuItem.Text = "Save As..."
         '
         'ToolStripSeparator5
         '
@@ -399,14 +382,6 @@ Partial Class Form1
         Me.BuildToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
         Me.BuildToolStripMenuItem.Text = "Build"
         '
-        'BuildProjectToolStripMenuItem
-        '
-        Me.BuildProjectToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.hammer
-        Me.BuildProjectToolStripMenuItem.Name = "BuildProjectToolStripMenuItem"
-        Me.BuildProjectToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.B), System.Windows.Forms.Keys)
-        Me.BuildProjectToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
-        Me.BuildProjectToolStripMenuItem.Text = "Build Project"
-        '
         'TestProjectToolStripMenuItem
         '
         Me.TestProjectToolStripMenuItem.Name = "TestProjectToolStripMenuItem"
@@ -438,14 +413,6 @@ Partial Class Form1
         Me.PreviewToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
         Me.PreviewToolStripMenuItem.Text = "Preview"
         '
-        'ReloadPreviewToolStripMenuItem
-        '
-        Me.ReloadPreviewToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.reload
-        Me.ReloadPreviewToolStripMenuItem.Name = "ReloadPreviewToolStripMenuItem"
-        Me.ReloadPreviewToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5
-        Me.ReloadPreviewToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
-        Me.ReloadPreviewToolStripMenuItem.Text = "Reload Preview"
-        '
         'OpenRemoteDebuggingToolStripMenuItem
         '
         Me.OpenRemoteDebuggingToolStripMenuItem.Name = "OpenRemoteDebuggingToolStripMenuItem"
@@ -456,26 +423,6 @@ Partial Class Form1
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
         Me.ToolStripSeparator3.Size = New System.Drawing.Size(206, 6)
-        '
-        'DebugLogToolStripMenuItem
-        '
-        Me.DebugLogToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CefSharpLogToolStripMenuItem, Me.ChromiumLogToolStripMenuItem})
-        Me.DebugLogToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.bug
-        Me.DebugLogToolStripMenuItem.Name = "DebugLogToolStripMenuItem"
-        Me.DebugLogToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
-        Me.DebugLogToolStripMenuItem.Text = "Debug Log"
-        '
-        'CefSharpLogToolStripMenuItem
-        '
-        Me.CefSharpLogToolStripMenuItem.Name = "CefSharpLogToolStripMenuItem"
-        Me.CefSharpLogToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
-        Me.CefSharpLogToolStripMenuItem.Text = "CefSharp Log"
-        '
-        'ChromiumLogToolStripMenuItem
-        '
-        Me.ChromiumLogToolStripMenuItem.Name = "ChromiumLogToolStripMenuItem"
-        Me.ChromiumLogToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
-        Me.ChromiumLogToolStripMenuItem.Text = "Chromium Log"
         '
         'WindowToolStripMenuItem
         '
@@ -515,37 +462,16 @@ Partial Class Form1
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
-        'CheckForUpdatesToolStripMenuItem
-        '
-        Me.CheckForUpdatesToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.curved_up_arrow_
-        Me.CheckForUpdatesToolStripMenuItem.Name = "CheckForUpdatesToolStripMenuItem"
-        Me.CheckForUpdatesToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
-        Me.CheckForUpdatesToolStripMenuItem.Text = "Check for Updates"
-        '
         'WhatsNewToolStripMenuItem
         '
         Me.WhatsNewToolStripMenuItem.Name = "WhatsNewToolStripMenuItem"
         Me.WhatsNewToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
         Me.WhatsNewToolStripMenuItem.Text = "What's new in this version"
         '
-        'ReleaseNoteToolStripMenuItem
-        '
-        Me.ReleaseNoteToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.website
-        Me.ReleaseNoteToolStripMenuItem.Name = "ReleaseNoteToolStripMenuItem"
-        Me.ReleaseNoteToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
-        Me.ReleaseNoteToolStripMenuItem.Text = "Latest release note"
-        '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         Me.ToolStripSeparator1.Size = New System.Drawing.Size(208, 6)
-        '
-        'GettingStartedToolStripMenuItem
-        '
-        Me.GettingStartedToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.compass__1_
-        Me.GettingStartedToolStripMenuItem.Name = "GettingStartedToolStripMenuItem"
-        Me.GettingStartedToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
-        Me.GettingStartedToolStripMenuItem.Text = "Getting Started"
         '
         'LoadSampleToolStripMenuItem
         '
@@ -563,20 +489,6 @@ Partial Class Form1
         Me.SupportToolStripMenuItem.Name = "SupportToolStripMenuItem"
         Me.SupportToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
         Me.SupportToolStripMenuItem.Text = "Support"
-        '
-        'OpenBuilderInExplorerToolStripMenuItem
-        '
-        Me.OpenBuilderInExplorerToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.folder
-        Me.OpenBuilderInExplorerToolStripMenuItem.Name = "OpenBuilderInExplorerToolStripMenuItem"
-        Me.OpenBuilderInExplorerToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
-        Me.OpenBuilderInExplorerToolStripMenuItem.Text = "Open Builder in Explorer"
-        '
-        'SubmitBugsReportToolStripMenuItem
-        '
-        Me.SubmitBugsReportToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.bug
-        Me.SubmitBugsReportToolStripMenuItem.Name = "SubmitBugsReportToolStripMenuItem"
-        Me.SubmitBugsReportToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
-        Me.SubmitBugsReportToolStripMenuItem.Text = "Submit Bugs Report"
         '
         'DevToolStripMenuItem
         '
@@ -788,16 +700,6 @@ Partial Class Form1
         Me.Label17.Size = New System.Drawing.Size(56, 17)
         Me.Label17.TabIndex = 32
         Me.Label17.Text = "example"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(5, 5)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(19, 19)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'Label43
         '
@@ -1115,19 +1017,6 @@ Partial Class Form1
         Me.Panel9.Size = New System.Drawing.Size(325, 23)
         Me.Panel9.TabIndex = 35
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox3.Image = Global.P_Browser_Builder.My.Resources.Resources.close
-        Me.PictureBox3.Location = New System.Drawing.Point(299, 7)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(10, 10)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 65
-        Me.PictureBox3.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.PictureBox3, "Close Side Panel. (Ctrl+R)")
-        '
         'Label35
         '
         Me.Label35.AutoSize = True
@@ -1438,6 +1327,7 @@ Partial Class Form1
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Controls.Add(Me.TabPage5)
+        Me.TabControl1.Controls.Add(Me.TabPage6)
         Me.TabControl1.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.Location = New System.Drawing.Point(344, 24)
         Me.TabControl1.Name = "TabControl1"
@@ -1524,34 +1414,6 @@ Partial Class Form1
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = "Welcome to Start Log Viewer!" & Global.Microsoft.VisualBasic.ChrW(10) & "Please start a test to view app start log..."
         '
-        'PictureBox14
-        '
-        Me.PictureBox14.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox14.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox14.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox14.Image = Global.P_Browser_Builder.My.Resources.Resources.reload
-        Me.PictureBox14.Location = New System.Drawing.Point(489, 645)
-        Me.PictureBox14.Name = "PictureBox14"
-        Me.PictureBox14.Size = New System.Drawing.Size(15, 23)
-        Me.PictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox14.TabIndex = 57
-        Me.PictureBox14.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.PictureBox14, "Reload log.")
-        '
-        'PictureBox13
-        '
-        Me.PictureBox13.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox13.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox13.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox13.Image = Global.P_Browser_Builder.My.Resources.Resources.copy
-        Me.PictureBox13.Location = New System.Drawing.Point(515, 645)
-        Me.PictureBox13.Name = "PictureBox13"
-        Me.PictureBox13.Size = New System.Drawing.Size(16, 23)
-        Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox13.TabIndex = 58
-        Me.PictureBox13.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.PictureBox13, "Copy log to clipboard.")
-        '
         'TabPage3
         '
         Me.TabPage3.Controls.Add(Me.Label50)
@@ -1633,19 +1495,6 @@ Partial Class Form1
         Me.RichTextBox2.Size = New System.Drawing.Size(516, 574)
         Me.RichTextBox2.TabIndex = 67
         Me.RichTextBox2.Text = resources.GetString("RichTextBox2.Text")
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox5.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox5.Image = Global.P_Browser_Builder.My.Resources.Resources.close
-        Me.PictureBox5.Location = New System.Drawing.Point(519, 23)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(15, 15)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox5.TabIndex = 66
-        Me.PictureBox5.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.PictureBox5, "Close tab.")
         '
         'TabPage4
         '
@@ -1765,17 +1614,6 @@ Partial Class Form1
         Me.Button11.Text = "Test"
         Me.Button11.UseVisualStyleBackColor = True
         '
-        'PictureBox6
-        '
-        Me.PictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox6.Image = Global.P_Browser_Builder.My.Resources.Resources.welmsgins
-        Me.PictureBox6.Location = New System.Drawing.Point(156, 216)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(235, 133)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox6.TabIndex = 42
-        Me.PictureBox6.TabStop = False
-        '
         'TabPage5
         '
         Me.TabPage5.Controls.Add(Me.PictureBox12)
@@ -1792,17 +1630,6 @@ Partial Class Form1
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Builder Update"
         Me.TabPage5.UseVisualStyleBackColor = True
-        '
-        'PictureBox12
-        '
-        Me.PictureBox12.Cursor = System.Windows.Forms.Cursors.Default
-        Me.PictureBox12.Image = Global.P_Browser_Builder.My.Resources.Resources.more
-        Me.PictureBox12.Location = New System.Drawing.Point(18, 103)
-        Me.PictureBox12.Name = "PictureBox12"
-        Me.PictureBox12.Size = New System.Drawing.Size(16, 23)
-        Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox12.TabIndex = 75
-        Me.PictureBox12.TabStop = False
         '
         'Label57
         '
@@ -1831,17 +1658,6 @@ Partial Class Form1
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(516, 73)
         Me.Panel4.TabIndex = 73
-        '
-        'PictureBox15
-        '
-        Me.PictureBox15.Cursor = System.Windows.Forms.Cursors.Default
-        Me.PictureBox15.Image = Global.P_Browser_Builder.My.Resources.Resources.information
-        Me.PictureBox15.Location = New System.Drawing.Point(19, 16)
-        Me.PictureBox15.Name = "PictureBox15"
-        Me.PictureBox15.Size = New System.Drawing.Size(16, 23)
-        Me.PictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox15.TabIndex = 76
-        Me.PictureBox15.TabStop = False
         '
         'Label15
         '
@@ -1919,18 +1735,156 @@ Partial Class Form1
         Me.Label10.TabIndex = 69
         Me.Label10.Text = "Software Update"
         '
-        'PictureBox7
+        'TabPage6
         '
-        Me.PictureBox7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox7.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox7.Image = Global.P_Browser_Builder.My.Resources.Resources.close
-        Me.PictureBox7.Location = New System.Drawing.Point(519, 23)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(15, 15)
-        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox7.TabIndex = 70
-        Me.PictureBox7.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.PictureBox7, "Close tab.")
+        Me.TabPage6.Controls.Add(Me.PictureBox22)
+        Me.TabPage6.Controls.Add(Me.PictureBox21)
+        Me.TabPage6.Controls.Add(Me.PictureBox20)
+        Me.TabPage6.Controls.Add(Me.Label58)
+        Me.TabPage6.Controls.Add(Me.Label59)
+        Me.TabPage6.Controls.Add(Me.Label60)
+        Me.TabPage6.Controls.Add(Me.Label61)
+        Me.TabPage6.Controls.Add(Me.Label62)
+        Me.TabPage6.Controls.Add(Me.Label63)
+        Me.TabPage6.Controls.Add(Me.Label64)
+        Me.TabPage6.Controls.Add(Me.Label65)
+        Me.TabPage6.Controls.Add(Me.Label66)
+        Me.TabPage6.Controls.Add(Me.PictureBox19)
+        Me.TabPage6.Controls.Add(Me.Label9)
+        Me.TabPage6.Controls.Add(Me.Label21)
+        Me.TabPage6.Location = New System.Drawing.Point(4, 26)
+        Me.TabPage6.Name = "TabPage6"
+        Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage6.Size = New System.Drawing.Size(551, 682)
+        Me.TabPage6.TabIndex = 5
+        Me.TabPage6.Text = "Get Started"
+        Me.TabPage6.UseVisualStyleBackColor = True
+        '
+        'Label58
+        '
+        Me.Label58.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label58.AutoSize = True
+        Me.Label58.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label58.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label58.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label58.Location = New System.Drawing.Point(504, 223)
+        Me.Label58.Name = "Label58"
+        Me.Label58.Size = New System.Drawing.Size(30, 21)
+        Me.Label58.TabIndex = 92
+        Me.Label58.Text = "Go"
+        Me.ToolTip1.SetToolTip(Me.Label58, "Open GitHub issue in browser.")
+        '
+        'Label59
+        '
+        Me.Label59.AutoSize = True
+        Me.Label59.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label59.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.Label59.Location = New System.Drawing.Point(61, 248)
+        Me.Label59.Name = "Label59"
+        Me.Label59.Size = New System.Drawing.Size(278, 17)
+        Me.Label59.TabIndex = 91
+        Me.Label59.Text = "Submit issue on GitHub so people can answer it."
+        '
+        'Label60
+        '
+        Me.Label60.AutoSize = True
+        Me.Label60.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label60.Location = New System.Drawing.Point(60, 223)
+        Me.Label60.Name = "Label60"
+        Me.Label60.Size = New System.Drawing.Size(110, 21)
+        Me.Label60.TabIndex = 90
+        Me.Label60.Text = "Get some help"
+        '
+        'Label61
+        '
+        Me.Label61.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label61.AutoSize = True
+        Me.Label61.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label61.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label61.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label61.Location = New System.Drawing.Point(504, 163)
+        Me.Label61.Name = "Label61"
+        Me.Label61.Size = New System.Drawing.Size(30, 21)
+        Me.Label61.TabIndex = 89
+        Me.Label61.Text = "Go"
+        Me.ToolTip1.SetToolTip(Me.Label61, "Open GitHub Wiki in browser.")
+        '
+        'Label62
+        '
+        Me.Label62.AutoSize = True
+        Me.Label62.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label62.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.Label62.Location = New System.Drawing.Point(61, 188)
+        Me.Label62.Name = "Label62"
+        Me.Label62.Size = New System.Drawing.Size(251, 17)
+        Me.Label62.TabIndex = 88
+        Me.Label62.Text = "Explore guide how to use P Browser Builder."
+        '
+        'Label63
+        '
+        Me.Label63.AutoSize = True
+        Me.Label63.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label63.Location = New System.Drawing.Point(60, 163)
+        Me.Label63.Name = "Label63"
+        Me.Label63.Size = New System.Drawing.Size(94, 21)
+        Me.Label63.TabIndex = 87
+        Me.Label63.Text = "GitHub Wiki"
+        '
+        'Label64
+        '
+        Me.Label64.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label64.AutoSize = True
+        Me.Label64.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label64.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label64.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label64.Location = New System.Drawing.Point(490, 105)
+        Me.Label64.Name = "Label64"
+        Me.Label64.Size = New System.Drawing.Size(44, 21)
+        Me.Label64.TabIndex = 86
+        Me.Label64.Text = "Load"
+        Me.ToolTip1.SetToolTip(Me.Label64, "Load a Sample Project.")
+        '
+        'Label65
+        '
+        Me.Label65.AutoSize = True
+        Me.Label65.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label65.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.Label65.Location = New System.Drawing.Point(61, 130)
+        Me.Label65.Name = "Label65"
+        Me.Label65.Size = New System.Drawing.Size(264, 17)
+        Me.Label65.TabIndex = 85
+        Me.Label65.Text = "Learning P Browser Builder by Sample Project."
+        '
+        'Label66
+        '
+        Me.Label66.AutoSize = True
+        Me.Label66.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label66.Location = New System.Drawing.Point(60, 105)
+        Me.Label66.Name = "Label66"
+        Me.Label66.Size = New System.Drawing.Size(164, 21)
+        Me.Label66.TabIndex = 84
+        Me.Label66.Text = "Load a Sample Project"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(15, 52)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(411, 34)
+        Me.Label9.TabIndex = 73
+        Me.Label9.Text = "Welcome to P Browser Builder!" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Explore guides and demo designed for both new and " &
+    "experienced users."
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
+        Me.Label21.Location = New System.Drawing.Point(13, 14)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(139, 28)
+        Me.Label21.TabIndex = 72
+        Me.Label21.Text = "Getting Started"
         '
         'Label37
         '
@@ -2091,18 +2045,6 @@ Partial Class Form1
         Me.Label46.TabIndex = 69
         Me.Label46.Text = "Offline websites (Not set)"
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox2.Image = Global.P_Browser_Builder.My.Resources.Resources.folder
-        Me.PictureBox2.Location = New System.Drawing.Point(300, 179)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(15, 23)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 68
-        Me.PictureBox2.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.PictureBox2, "Choose your offline web folder.")
-        '
         'CheckBox9
         '
         Me.CheckBox9.AutoSize = True
@@ -2132,6 +2074,366 @@ Partial Class Form1
         Me.Label30.Size = New System.Drawing.Size(80, 28)
         Me.Label30.TabIndex = 65
         Me.Label30.Text = "Browser"
+        '
+        'FolderBrowserDialog1
+        '
+        Me.FolderBrowserDialog1.Description = "Browse folder that contains website html files for offline support."
+        '
+        'buildworker
+        '
+        '
+        'buildfinalworker
+        '
+        '
+        'cfuworker
+        '
+        '
+        'PictureBox18
+        '
+        Me.PictureBox18.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox18.BackColor = System.Drawing.SystemColors.Control
+        Me.PictureBox18.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox18.Image = Global.P_Browser_Builder.My.Resources.Resources.arrow_right
+        Me.PictureBox18.Location = New System.Drawing.Point(1063, 0)
+        Me.PictureBox18.Name = "PictureBox18"
+        Me.PictureBox18.Size = New System.Drawing.Size(12, 24)
+        Me.PictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox18.TabIndex = 77
+        Me.PictureBox18.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox18, "Go forward browser in Design View")
+        '
+        'PictureBox17
+        '
+        Me.PictureBox17.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox17.BackColor = System.Drawing.SystemColors.Control
+        Me.PictureBox17.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox17.Image = Global.P_Browser_Builder.My.Resources.Resources.arrow_left
+        Me.PictureBox17.Location = New System.Drawing.Point(1040, 0)
+        Me.PictureBox17.Name = "PictureBox17"
+        Me.PictureBox17.Size = New System.Drawing.Size(12, 24)
+        Me.PictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox17.TabIndex = 76
+        Me.PictureBox17.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox17, "Go back browser in Design View")
+        '
+        'PictureBox16
+        '
+        Me.PictureBox16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox16.BackColor = System.Drawing.SystemColors.Control
+        Me.PictureBox16.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox16.Image = Global.P_Browser_Builder.My.Resources.Resources.maximize
+        Me.PictureBox16.Location = New System.Drawing.Point(1170, 0)
+        Me.PictureBox16.Name = "PictureBox16"
+        Me.PictureBox16.Size = New System.Drawing.Size(15, 23)
+        Me.PictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox16.TabIndex = 75
+        Me.PictureBox16.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox16, "Toggle enlarge Tab View.")
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(5, 5)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(19, 19)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox14
+        '
+        Me.PictureBox14.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox14.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox14.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox14.Image = Global.P_Browser_Builder.My.Resources.Resources.reload
+        Me.PictureBox14.Location = New System.Drawing.Point(489, 645)
+        Me.PictureBox14.Name = "PictureBox14"
+        Me.PictureBox14.Size = New System.Drawing.Size(15, 23)
+        Me.PictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox14.TabIndex = 57
+        Me.PictureBox14.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox14, "Reload log.")
+        '
+        'PictureBox13
+        '
+        Me.PictureBox13.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox13.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox13.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox13.Image = Global.P_Browser_Builder.My.Resources.Resources.copy
+        Me.PictureBox13.Location = New System.Drawing.Point(515, 645)
+        Me.PictureBox13.Name = "PictureBox13"
+        Me.PictureBox13.Size = New System.Drawing.Size(16, 23)
+        Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox13.TabIndex = 58
+        Me.PictureBox13.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox13, "Copy log to clipboard.")
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox5.Image = Global.P_Browser_Builder.My.Resources.Resources.close
+        Me.PictureBox5.Location = New System.Drawing.Point(519, 23)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(15, 15)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox5.TabIndex = 66
+        Me.PictureBox5.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox5, "Close tab.")
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PictureBox6.Image = Global.P_Browser_Builder.My.Resources.Resources.welmsgins
+        Me.PictureBox6.Location = New System.Drawing.Point(156, 216)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(235, 133)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox6.TabIndex = 42
+        Me.PictureBox6.TabStop = False
+        '
+        'PictureBox12
+        '
+        Me.PictureBox12.Cursor = System.Windows.Forms.Cursors.Default
+        Me.PictureBox12.Image = Global.P_Browser_Builder.My.Resources.Resources.more
+        Me.PictureBox12.Location = New System.Drawing.Point(18, 103)
+        Me.PictureBox12.Name = "PictureBox12"
+        Me.PictureBox12.Size = New System.Drawing.Size(16, 23)
+        Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox12.TabIndex = 75
+        Me.PictureBox12.TabStop = False
+        '
+        'PictureBox15
+        '
+        Me.PictureBox15.Cursor = System.Windows.Forms.Cursors.Default
+        Me.PictureBox15.Image = Global.P_Browser_Builder.My.Resources.Resources.information
+        Me.PictureBox15.Location = New System.Drawing.Point(19, 16)
+        Me.PictureBox15.Name = "PictureBox15"
+        Me.PictureBox15.Size = New System.Drawing.Size(16, 23)
+        Me.PictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox15.TabIndex = 76
+        Me.PictureBox15.TabStop = False
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox7.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox7.Image = Global.P_Browser_Builder.My.Resources.Resources.close
+        Me.PictureBox7.Location = New System.Drawing.Point(519, 23)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(15, 15)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox7.TabIndex = 70
+        Me.PictureBox7.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox7, "Close tab.")
+        '
+        'PictureBox22
+        '
+        Me.PictureBox22.Cursor = System.Windows.Forms.Cursors.Default
+        Me.PictureBox22.Image = Global.P_Browser_Builder.My.Resources.Resources.question
+        Me.PictureBox22.Location = New System.Drawing.Point(18, 232)
+        Me.PictureBox22.Name = "PictureBox22"
+        Me.PictureBox22.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox22.TabIndex = 95
+        Me.PictureBox22.TabStop = False
+        '
+        'PictureBox21
+        '
+        Me.PictureBox21.Cursor = System.Windows.Forms.Cursors.Default
+        Me.PictureBox21.Image = Global.P_Browser_Builder.My.Resources.Resources.book
+        Me.PictureBox21.Location = New System.Drawing.Point(18, 172)
+        Me.PictureBox21.Name = "PictureBox21"
+        Me.PictureBox21.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox21.TabIndex = 94
+        Me.PictureBox21.TabStop = False
+        '
+        'PictureBox20
+        '
+        Me.PictureBox20.Cursor = System.Windows.Forms.Cursors.Default
+        Me.PictureBox20.Image = Global.P_Browser_Builder.My.Resources.Resources.play_button
+        Me.PictureBox20.Location = New System.Drawing.Point(18, 114)
+        Me.PictureBox20.Name = "PictureBox20"
+        Me.PictureBox20.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox20.TabIndex = 93
+        Me.PictureBox20.TabStop = False
+        '
+        'PictureBox19
+        '
+        Me.PictureBox19.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox19.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox19.Image = Global.P_Browser_Builder.My.Resources.Resources.close
+        Me.PictureBox19.Location = New System.Drawing.Point(519, 23)
+        Me.PictureBox19.Name = "PictureBox19"
+        Me.PictureBox19.Size = New System.Drawing.Size(15, 15)
+        Me.PictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox19.TabIndex = 74
+        Me.PictureBox19.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox19, "Close tab.")
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox4.BackColor = System.Drawing.SystemColors.Control
+        Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox4.Image = Global.P_Browser_Builder.My.Resources.Resources.settings
+        Me.PictureBox4.Location = New System.Drawing.Point(1194, 4)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(16, 16)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox4.TabIndex = 73
+        Me.PictureBox4.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox4, "Preference")
+        '
+        'PictureBox11
+        '
+        Me.PictureBox11.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox11.BackColor = System.Drawing.SystemColors.Control
+        Me.PictureBox11.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox11.Image = Global.P_Browser_Builder.My.Resources.Resources.reload
+        Me.PictureBox11.Location = New System.Drawing.Point(1088, 0)
+        Me.PictureBox11.Name = "PictureBox11"
+        Me.PictureBox11.Size = New System.Drawing.Size(13, 23)
+        Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox11.TabIndex = 55
+        Me.PictureBox11.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox11, "Reload browser in Design View. (F5)")
+        '
+        'ClearAllToolStripMenuItem
+        '
+        Me.ClearAllToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.file
+        Me.ClearAllToolStripMenuItem.Name = "ClearAllToolStripMenuItem"
+        Me.ClearAllToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
+        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(195, 22)
+        Me.ClearAllToolStripMenuItem.Text = "New Project"
+        '
+        'OpenProjectToolStripMenuItem
+        '
+        Me.OpenProjectToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.folder1
+        Me.OpenProjectToolStripMenuItem.Name = "OpenProjectToolStripMenuItem"
+        Me.OpenProjectToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
+        Me.OpenProjectToolStripMenuItem.Size = New System.Drawing.Size(195, 22)
+        Me.OpenProjectToolStripMenuItem.Text = "Open Project..."
+        '
+        'StartWindowToolStripMenuItem
+        '
+        Me.StartWindowToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.house
+        Me.StartWindowToolStripMenuItem.Name = "StartWindowToolStripMenuItem"
+        Me.StartWindowToolStripMenuItem.Size = New System.Drawing.Size(195, 22)
+        Me.StartWindowToolStripMenuItem.Text = "Start Window"
+        '
+        'PreferenceToolStripMenuItem
+        '
+        Me.PreferenceToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.settings
+        Me.PreferenceToolStripMenuItem.Name = "PreferenceToolStripMenuItem"
+        Me.PreferenceToolStripMenuItem.Size = New System.Drawing.Size(195, 22)
+        Me.PreferenceToolStripMenuItem.Text = "Preference"
+        '
+        'SaveToFileToolStripMenuItem
+        '
+        Me.SaveToFileToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.diskette
+        Me.SaveToFileToolStripMenuItem.Name = "SaveToFileToolStripMenuItem"
+        Me.SaveToFileToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
+        Me.SaveToFileToolStripMenuItem.Size = New System.Drawing.Size(195, 22)
+        Me.SaveToFileToolStripMenuItem.Text = "Save As..."
+        '
+        'BuildProjectToolStripMenuItem
+        '
+        Me.BuildProjectToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.hammer
+        Me.BuildProjectToolStripMenuItem.Name = "BuildProjectToolStripMenuItem"
+        Me.BuildProjectToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.B), System.Windows.Forms.Keys)
+        Me.BuildProjectToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
+        Me.BuildProjectToolStripMenuItem.Text = "Build Project"
+        '
+        'ReloadPreviewToolStripMenuItem
+        '
+        Me.ReloadPreviewToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.reload
+        Me.ReloadPreviewToolStripMenuItem.Name = "ReloadPreviewToolStripMenuItem"
+        Me.ReloadPreviewToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5
+        Me.ReloadPreviewToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.ReloadPreviewToolStripMenuItem.Text = "Reload Preview"
+        '
+        'DebugLogToolStripMenuItem
+        '
+        Me.DebugLogToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CefSharpLogToolStripMenuItem, Me.ChromiumLogToolStripMenuItem})
+        Me.DebugLogToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.bug
+        Me.DebugLogToolStripMenuItem.Name = "DebugLogToolStripMenuItem"
+        Me.DebugLogToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.DebugLogToolStripMenuItem.Text = "Debug Log"
+        '
+        'CefSharpLogToolStripMenuItem
+        '
+        Me.CefSharpLogToolStripMenuItem.Name = "CefSharpLogToolStripMenuItem"
+        Me.CefSharpLogToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
+        Me.CefSharpLogToolStripMenuItem.Text = "CefSharp Log"
+        '
+        'ChromiumLogToolStripMenuItem
+        '
+        Me.ChromiumLogToolStripMenuItem.Name = "ChromiumLogToolStripMenuItem"
+        Me.ChromiumLogToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
+        Me.ChromiumLogToolStripMenuItem.Text = "Chromium Log"
+        '
+        'CheckForUpdatesToolStripMenuItem
+        '
+        Me.CheckForUpdatesToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.curved_up_arrow_
+        Me.CheckForUpdatesToolStripMenuItem.Name = "CheckForUpdatesToolStripMenuItem"
+        Me.CheckForUpdatesToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
+        Me.CheckForUpdatesToolStripMenuItem.Text = "Check for Updates"
+        '
+        'ReleaseNoteToolStripMenuItem
+        '
+        Me.ReleaseNoteToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.website
+        Me.ReleaseNoteToolStripMenuItem.Name = "ReleaseNoteToolStripMenuItem"
+        Me.ReleaseNoteToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
+        Me.ReleaseNoteToolStripMenuItem.Text = "Latest release note"
+        '
+        'GettingStartedToolStripMenuItem
+        '
+        Me.GettingStartedToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.compass__1_
+        Me.GettingStartedToolStripMenuItem.Name = "GettingStartedToolStripMenuItem"
+        Me.GettingStartedToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
+        Me.GettingStartedToolStripMenuItem.Text = "Getting Started"
+        '
+        'OpenBuilderInExplorerToolStripMenuItem
+        '
+        Me.OpenBuilderInExplorerToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.folder
+        Me.OpenBuilderInExplorerToolStripMenuItem.Name = "OpenBuilderInExplorerToolStripMenuItem"
+        Me.OpenBuilderInExplorerToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
+        Me.OpenBuilderInExplorerToolStripMenuItem.Text = "Open Builder in Explorer"
+        '
+        'SubmitBugsReportToolStripMenuItem
+        '
+        Me.SubmitBugsReportToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.bug
+        Me.SubmitBugsReportToolStripMenuItem.Name = "SubmitBugsReportToolStripMenuItem"
+        Me.SubmitBugsReportToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
+        Me.SubmitBugsReportToolStripMenuItem.Text = "Submit Bugs Report"
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox3.Image = Global.P_Browser_Builder.My.Resources.Resources.close
+        Me.PictureBox3.Location = New System.Drawing.Point(299, 7)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(10, 10)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 65
+        Me.PictureBox3.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox3, "Close Side Panel. (Ctrl+R)")
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox2.Image = Global.P_Browser_Builder.My.Resources.Resources.folder
+        Me.PictureBox2.Location = New System.Drawing.Point(300, 179)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(15, 23)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 68
+        Me.PictureBox2.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox2, "Choose your offline web folder.")
         '
         'PictureBox10
         '
@@ -2169,89 +2471,6 @@ Partial Class Form1
         Me.PictureBox8.TabStop = False
         Me.ToolTip1.SetToolTip(Me.PictureBox8, "Use your website title as Application name.")
         '
-        'PictureBox17
-        '
-        Me.PictureBox17.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox17.BackColor = System.Drawing.SystemColors.Control
-        Me.PictureBox17.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox17.Image = Global.P_Browser_Builder.My.Resources.Resources.arrow_left
-        Me.PictureBox17.Location = New System.Drawing.Point(1040, 0)
-        Me.PictureBox17.Name = "PictureBox17"
-        Me.PictureBox17.Size = New System.Drawing.Size(12, 24)
-        Me.PictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox17.TabIndex = 76
-        Me.PictureBox17.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.PictureBox17, "Go back browser in Design View")
-        '
-        'PictureBox16
-        '
-        Me.PictureBox16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox16.BackColor = System.Drawing.SystemColors.Control
-        Me.PictureBox16.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox16.Image = Global.P_Browser_Builder.My.Resources.Resources.maximize
-        Me.PictureBox16.Location = New System.Drawing.Point(1170, 0)
-        Me.PictureBox16.Name = "PictureBox16"
-        Me.PictureBox16.Size = New System.Drawing.Size(15, 23)
-        Me.PictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox16.TabIndex = 75
-        Me.PictureBox16.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.PictureBox16, "Toggle enlarge Tab View.")
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox4.BackColor = System.Drawing.SystemColors.Control
-        Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox4.Image = Global.P_Browser_Builder.My.Resources.Resources.settings
-        Me.PictureBox4.Location = New System.Drawing.Point(1194, 4)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(16, 16)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox4.TabIndex = 73
-        Me.PictureBox4.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.PictureBox4, "Preference")
-        '
-        'PictureBox11
-        '
-        Me.PictureBox11.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox11.BackColor = System.Drawing.SystemColors.Control
-        Me.PictureBox11.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox11.Image = Global.P_Browser_Builder.My.Resources.Resources.reload
-        Me.PictureBox11.Location = New System.Drawing.Point(1088, 0)
-        Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.Size = New System.Drawing.Size(13, 23)
-        Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox11.TabIndex = 55
-        Me.PictureBox11.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.PictureBox11, "Reload browser in Design View. (F5)")
-        '
-        'PictureBox18
-        '
-        Me.PictureBox18.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox18.BackColor = System.Drawing.SystemColors.Control
-        Me.PictureBox18.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox18.Image = Global.P_Browser_Builder.My.Resources.Resources.arrow_right
-        Me.PictureBox18.Location = New System.Drawing.Point(1063, 0)
-        Me.PictureBox18.Name = "PictureBox18"
-        Me.PictureBox18.Size = New System.Drawing.Size(12, 24)
-        Me.PictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox18.TabIndex = 77
-        Me.PictureBox18.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.PictureBox18, "Go forward browser in Design View")
-        '
-        'FolderBrowserDialog1
-        '
-        Me.FolderBrowserDialog1.Description = "Browse folder that contains website html files for offline support."
-        '
-        'buildworker
-        '
-        '
-        'buildfinalworker
-        '
-        '
-        'cfuworker
-        '
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2281,49 +2500,55 @@ Partial Class Form1
         Me.MenuStrip1.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
         Me.Panel9.ResumeLayout(False)
         Me.Panel9.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage4.ResumeLayout(False)
         Me.TabPage4.PerformLayout()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage5.ResumeLayout(False)
         Me.TabPage5.PerformLayout()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage6.ResumeLayout(False)
+        Me.TabPage6.PerformLayout()
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel10.ResumeLayout(False)
         Me.Panel10.PerformLayout()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2526,4 +2751,20 @@ Partial Class Form1
     Friend WithEvents PictureBox16 As PictureBox
     Friend WithEvents PictureBox17 As PictureBox
     Friend WithEvents PictureBox18 As PictureBox
+    Friend WithEvents TabPage6 As TabPage
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents PictureBox19 As PictureBox
+    Friend WithEvents Label58 As Label
+    Friend WithEvents Label59 As Label
+    Friend WithEvents Label60 As Label
+    Friend WithEvents Label61 As Label
+    Friend WithEvents Label62 As Label
+    Friend WithEvents Label63 As Label
+    Friend WithEvents Label64 As Label
+    Friend WithEvents Label65 As Label
+    Friend WithEvents Label66 As Label
+    Friend WithEvents PictureBox20 As PictureBox
+    Friend WithEvents PictureBox22 As PictureBox
+    Friend WithEvents PictureBox21 As PictureBox
 End Class

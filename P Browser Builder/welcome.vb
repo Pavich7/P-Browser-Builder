@@ -37,7 +37,12 @@ Public Class welcome
     End Sub
 
     Private Sub getstarted(sender As Object, e As EventArgs) Handles Panel3.Click, PictureBox3.Click, Label6.Click, Label5.Click
-        getstart.Show()
+        Form1.Enabled = True
+        Form1.WindowState = FormWindowState.Normal
+        Form1.TabControl1.TabPages.Add(Form1.TabPage6)
+        Form1.TabControl1.SelectedTab = Form1.TabPage6
+        realclose = False
+        Me.Close()
     End Sub
 
     Private Sub loadsavebtn(sender As Object, e As EventArgs) Handles PictureBox2.Click, Label2.Click, Label1.Click, Panel2.Click

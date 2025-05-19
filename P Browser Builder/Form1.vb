@@ -438,6 +438,7 @@ Public Class Form1
         TabControl1.TabPages.Remove(TabPage4)
         Panel4.Visible = False
         TabControl1.TabPages.Remove(TabPage5)
+        TabControl1.TabPages.Remove(TabPage6)
         'Reset
         If stringReader19 = "True" Then
             Me.Enabled = False
@@ -1214,13 +1215,17 @@ Public Class Form1
     End Sub
 
     Private Sub GettingStartedToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GettingStartedToolStripMenuItem.Click
-        getstart.Show()
+        If Not TabControl1.TabPages.Contains(TabPage6) Then
+            TabControl1.TabPages.Add(TabPage6)
+        End If
+        TabControl1.SelectedTab = TabPage6
     End Sub
 
-    Private Sub LoadSampleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoadSampleToolStripMenuItem.Click
+    Private Sub LoadSampleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoadSampleToolStripMenuItem.Click, Label64.Click
         Dim result As DialogResult = MessageBox.Show("You will lose all data! Please make sure your data is saved.", "You sure about this?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If (result = DialogResult.Yes) Then
             savemanager.loadsave(apppath + "\assets\sample\sample1.pbproj")
+            TabControl1.TabPages.Add(TabPage6)
         End If
     End Sub
 
@@ -1417,5 +1422,17 @@ Public Class Form1
 
     Private Sub PictureBox18_Click(sender As Object, e As EventArgs) Handles PictureBox18.Click
         Browser.Forward
+    End Sub
+
+    Private Sub PictureBox19_Click(sender As Object, e As EventArgs) Handles PictureBox19.Click
+        TabControl1.TabPages.Remove(TabPage6)
+    End Sub
+
+    Private Sub Label58_Click(sender As Object, e As EventArgs) Handles Label58.Click
+        Process.Start("https://github.com/Pavich7/P-Browser-Builder/issues")
+    End Sub
+
+    Private Sub Label61_Click(sender As Object, e As EventArgs) Handles Label61.Click
+        Process.Start("https://github.com/Pavich7/P-Browser-Builder/wiki")
     End Sub
 End Class

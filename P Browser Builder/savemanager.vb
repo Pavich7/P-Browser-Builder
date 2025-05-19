@@ -63,6 +63,7 @@ Module savemanager
         Form1.TabControl1.TabPages.Remove(Form1.TabPage3)
         Form1.TabControl1.TabPages.Remove(Form1.TabPage4)
         Form1.TabControl1.TabPages.Remove(Form1.TabPage5)
+        Form1.TabControl1.TabPages.Remove(Form1.TabPage6)
         Form1.PictureBox1.Image = My.Resources.p_browser_icon_001_rq2_icon
         Form1.EnlargeToolStripMenuItem.Checked = False
         Form1.Browser.Load("about:blank")
