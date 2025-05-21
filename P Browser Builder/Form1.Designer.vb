@@ -243,6 +243,7 @@ Partial Class Form1
         Me.Button14 = New System.Windows.Forms.Button()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.Label69 = New System.Windows.Forms.Label()
+        Me.Label70 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -2544,12 +2545,26 @@ Partial Class Form1
         Me.Label69.TabIndex = 76
         Me.Label69.Text = "Actions Script"
         '
+        'Label70
+        '
+        Me.Label70.AutoSize = True
+        Me.Label70.BackColor = System.Drawing.Color.Red
+        Me.Label70.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label70.ForeColor = System.Drawing.Color.White
+        Me.Label70.Location = New System.Drawing.Point(470, 2)
+        Me.Label70.Name = "Label70"
+        Me.Label70.Size = New System.Drawing.Size(72, 20)
+        Me.Label70.TabIndex = 20
+        Me.Label70.Text = "devmode"
+        Me.Label70.Visible = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1216, 759)
+        Me.Controls.Add(Me.Label70)
         Me.Controls.Add(Me.PictureBox18)
         Me.Controls.Add(Me.PictureBox17)
         Me.Controls.Add(Me.PictureBox16)
@@ -2848,4 +2863,5 @@ Partial Class Form1
     Friend WithEvents Button14 As Button
     Friend WithEvents TextBox9 As TextBox
     Friend WithEvents Label69 As Label
+    Friend WithEvents Label70 As Label
 End Class

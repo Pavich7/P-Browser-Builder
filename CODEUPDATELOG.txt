@@ -15,3 +15,5 @@
 - [Build Manager]: Added tooltip for features informations.
 - [Start Window]: Fix custom script won't close after enter Start Window.
 - [News Feed]: New hyperlink support by clicking on contents.
+- [Preference]: Removed option to open Develop Menu.
+- [DevMode]: Develop Menu only accessible with `--devmode` flag.

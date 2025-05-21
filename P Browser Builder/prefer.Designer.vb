@@ -35,6 +35,9 @@ Partial Class prefer
         Me.Label15 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
         Me.Label56 = New System.Windows.Forms.Label()
         Me.Label57 = New System.Windows.Forms.Label()
         Me.Label58 = New System.Windows.Forms.Label()
@@ -43,9 +46,6 @@ Partial Class prefer
         Me.Label54 = New System.Windows.Forms.Label()
         Me.Label55 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Label60 = New System.Windows.Forms.Label()
-        Me.Label61 = New System.Windows.Forms.Label()
-        Me.Label62 = New System.Windows.Forms.Label()
         Me.Label48 = New System.Windows.Forms.Label()
         Me.Label47 = New System.Windows.Forms.Label()
         Me.Label46 = New System.Windows.Forms.Label()
@@ -87,9 +87,6 @@ Partial Class prefer
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.Label30 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -259,6 +256,42 @@ Partial Class prefer
         Me.TabPage1.Text = "General"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'Label4
+        '
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(21, 147)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(195, 21)
+        Me.Label4.TabIndex = 75
+        Me.Label4.Text = "Restore Test App to default"
+        '
+        'Label29
+        '
+        Me.Label29.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.Label29.Location = New System.Drawing.Point(22, 172)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(278, 17)
+        Me.Label29.TabIndex = 76
+        Me.Label29.Text = "Delete old Test App offline websites and caches."
+        '
+        'Label30
+        '
+        Me.Label30.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label30.AutoSize = True
+        Me.Label30.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label30.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label30.Location = New System.Drawing.Point(407, 147)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(63, 21)
+        Me.Label30.TabIndex = 77
+        Me.Label30.Text = "Restore"
+        '
         'Label56
         '
         Me.Label56.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -343,9 +376,6 @@ Partial Class prefer
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.Label60)
-        Me.TabPage2.Controls.Add(Me.Label61)
-        Me.TabPage2.Controls.Add(Me.Label62)
         Me.TabPage2.Controls.Add(Me.Label48)
         Me.TabPage2.Controls.Add(Me.Label47)
         Me.TabPage2.Controls.Add(Me.Label46)
@@ -368,48 +398,12 @@ Partial Class prefer
         Me.TabPage2.Text = "Advanced"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'Label60
-        '
-        Me.Label60.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label60.AutoSize = True
-        Me.Label60.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label60.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label60.ForeColor = System.Drawing.Color.Red
-        Me.Label60.Location = New System.Drawing.Point(412, 200)
-        Me.Label60.Name = "Label60"
-        Me.Label60.Size = New System.Drawing.Size(58, 21)
-        Me.Label60.TabIndex = 87
-        Me.Label60.Text = "Unlock"
-        '
-        'Label61
-        '
-        Me.Label61.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label61.AutoSize = True
-        Me.Label61.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label61.Location = New System.Drawing.Point(21, 200)
-        Me.Label61.Name = "Label61"
-        Me.Label61.Size = New System.Drawing.Size(177, 21)
-        Me.Label61.TabIndex = 85
-        Me.Label61.Text = "Unlock Developer Menu"
-        '
-        'Label62
-        '
-        Me.Label62.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label62.AutoSize = True
-        Me.Label62.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label62.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.Label62.Location = New System.Drawing.Point(22, 225)
-        Me.Label62.Name = "Label62"
-        Me.Label62.Size = New System.Drawing.Size(250, 17)
-        Me.Label62.TabIndex = 86
-        Me.Label62.Text = "Developer Menu is for testing purpose only."
-        '
         'Label48
         '
         Me.Label48.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label48.AutoSize = True
         Me.Label48.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label48.Location = New System.Drawing.Point(38, 312)
+        Me.Label48.Location = New System.Drawing.Point(38, 253)
         Me.Label48.Name = "Label48"
         Me.Label48.Size = New System.Drawing.Size(25, 17)
         Me.Label48.TabIndex = 84
@@ -420,7 +414,7 @@ Partial Class prefer
         Me.Label47.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label47.AutoSize = True
         Me.Label47.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label47.Location = New System.Drawing.Point(38, 288)
+        Me.Label47.Location = New System.Drawing.Point(38, 229)
         Me.Label47.Name = "Label47"
         Me.Label47.Size = New System.Drawing.Size(44, 17)
         Me.Label47.TabIndex = 83
@@ -431,7 +425,7 @@ Partial Class prefer
         Me.Label46.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label46.AutoSize = True
         Me.Label46.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label46.Location = New System.Drawing.Point(21, 257)
+        Me.Label46.Location = New System.Drawing.Point(21, 198)
         Me.Label46.Name = "Label46"
         Me.Label46.Size = New System.Drawing.Size(147, 21)
         Me.Label46.TabIndex = 82
@@ -580,7 +574,7 @@ Partial Class prefer
         Me.TabPage4.Location = New System.Drawing.Point(4, 26)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(493, 350)
+        Me.TabPage4.Size = New System.Drawing.Size(493, 367)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Diagnostic"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -887,42 +881,6 @@ Partial Class prefer
         Me.Label9.TabIndex = 74
         Me.Label9.Text = "Delete"
         '
-        'Label4
-        '
-        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(21, 147)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(195, 21)
-        Me.Label4.TabIndex = 75
-        Me.Label4.Text = "Restore Test App to default"
-        '
-        'Label29
-        '
-        Me.Label29.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label29.AutoSize = True
-        Me.Label29.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.Label29.Location = New System.Drawing.Point(22, 172)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(278, 17)
-        Me.Label29.TabIndex = 76
-        Me.Label29.Text = "Delete old Test App offline websites and caches."
-        '
-        'Label30
-        '
-        Me.Label30.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label30.AutoSize = True
-        Me.Label30.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label30.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label30.Location = New System.Drawing.Point(407, 147)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(63, 21)
-        Me.Label30.TabIndex = 77
-        Me.Label30.Text = "Restore"
-        '
         'prefer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1018,9 +976,6 @@ Partial Class prefer
     Friend WithEvents Label56 As Label
     Friend WithEvents Label57 As Label
     Friend WithEvents Label58 As Label
-    Friend WithEvents Label60 As Label
-    Friend WithEvents Label61 As Label
-    Friend WithEvents Label62 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label29 As Label
     Friend WithEvents Label30 As Label

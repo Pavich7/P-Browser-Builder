@@ -2,6 +2,7 @@
 Imports System.IO
 Imports System.IO.Compression
 Imports System.Net
+Imports System.Reflection
 Imports System.Security.Cryptography
 Imports System.Text
 Imports CefSharp
@@ -685,9 +686,17 @@ Public Class Form1
         'fileReader01.Close()
         If My.Application.CommandLineArgs.Count > 0 Then
             Dim FileNameOpenWith As String = My.Application.CommandLineArgs(0)
-            savemanager.loadsave(FileNameOpenWith)
-            Me.Enabled = True
-            Me.WindowState = FormWindowState.Normal
+            If FileNameOpenWith = "--devmode" Then
+                Dim fecha = IO.File.GetCreationTime(Assembly.GetExecutingAssembly().Location)
+                DevToolStripMenuItem.Visible = True
+                Label70.Visible = True
+                Label70.Text = "DEVMODE BUILT: " + fecha + " CEFPROD:" + AssemblyInfo.AssemblyVersion
+                welcome.Show()
+            Else
+                savemanager.loadsave(FileNameOpenWith)
+                Me.Enabled = True
+                Me.WindowState = FormWindowState.Normal
+            End If
         Else
             welcome.Show()
         End If

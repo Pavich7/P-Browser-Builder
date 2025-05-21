@@ -269,14 +269,6 @@ Public Class prefer
         Process.Start(apppath + "/statedata")
     End Sub
 
-    Private Sub Label60_Click(sender As Object, e As EventArgs) Handles Label60.Click
-        Dim result As DialogResult = MessageBox.Show("Unlocking the Dev Menu is dangerous." + vbNewLine + "It is used to test incomplete features at runtime." + vbNewLine + "Some incomplete or faulty features can damage your Builder!" + vbNewLine + "For developers, you can go check the code in the repository." + vbNewLine + "Do you want to process it?", "You sure about this?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-        If (result = DialogResult.Yes) Then
-            Form1.DevToolStripMenuItem.Visible = True
-            Label60.Enabled = False
-        End If
-    End Sub
-
     Private Sub Label30_Click(sender As Object, e As EventArgs) Handles Label30.Click
         MessageBox.Show("Builder may freeze temporarily. Please wait until the operation is complete.", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Dim apppath As String = Application.StartupPath()
