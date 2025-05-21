@@ -55,7 +55,7 @@
         TabPage1.Enabled = False
     End Sub
 
-    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click, Label13.Click
         Dim apppath As String = Application.StartupPath()
         If CheckBox1.Checked = False Then
             Dim pbcfg1 As String = apppath + "\statedata\setting.builder.datacol.pbcfg"

@@ -690,7 +690,8 @@ Public Class Form1
                 Dim fecha = IO.File.GetCreationTime(Assembly.GetExecutingAssembly().Location)
                 DevToolStripMenuItem.Visible = True
                 Label70.Visible = True
-                Label70.Text = "DEVMODE BUILT: " + fecha + " CEFPROD:" + AssemblyInfo.AssemblyVersion
+                Label70.Text = "DEV_ENV BUILT: " + fecha + " CEFPROD:" + AssemblyInfo.AssemblyVersion
+                fsstate.Label13.Visible = True
                 welcome.Show()
             Else
                 savemanager.loadsave(FileNameOpenWith)

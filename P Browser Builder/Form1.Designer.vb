@@ -2550,6 +2550,7 @@ Partial Class Form1
         Me.Label70.Size = New System.Drawing.Size(72, 20)
         Me.Label70.TabIndex = 20
         Me.Label70.Text = "devmode"
+        Me.ToolTip1.SetToolTip(Me.Label70, "In dev env.")
         Me.Label70.Visible = False
         '
         'Form1

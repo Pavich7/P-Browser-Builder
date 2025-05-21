@@ -35,16 +35,17 @@ Partial Class fsstate
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -149,6 +150,7 @@ Partial Class fsstate
         'TabPage1
         '
         Me.TabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.TabPage1.Controls.Add(Me.Label13)
         Me.TabPage1.Controls.Add(Me.Label6)
         Me.TabPage1.Controls.Add(Me.Label5)
         Me.TabPage1.Location = New System.Drawing.Point(4, 26)
@@ -204,6 +206,63 @@ Partial Class fsstate
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Agreement"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Underline)
+        Me.Label12.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label12.Location = New System.Drawing.Point(40, 131)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(216, 17)
+        Me.Label12.TabIndex = 75
+        Me.Label12.Text = "MadeByPavich Source Code License"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label11.Location = New System.Drawing.Point(40, 107)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(175, 17)
+        Me.Label11.TabIndex = 74
+        Me.Label11.Text = "End User License Agreement"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(40, 57)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(421, 34)
+        Me.Label10.TabIndex = 73
+        Me.Label10.Text = "Please read both agreement carefully before clicking the ""I Agree"" button," & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "downl" &
+    "oading, or using P Browser Builder."
+        '
+        'CheckBox3
+        '
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox3.Location = New System.Drawing.Point(43, 260)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(268, 21)
+        Me.CheckBox3.TabIndex = 72
+        Me.CheckBox3.Text = "I agree to the End User License Agreement"
+        Me.CheckBox3.UseVisualStyleBackColor = True
+        '
+        'CheckBox4
+        '
+        Me.CheckBox4.AutoSize = True
+        Me.CheckBox4.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox4.Location = New System.Drawing.Point(43, 287)
+        Me.CheckBox4.Name = "CheckBox4"
+        Me.CheckBox4.Size = New System.Drawing.Size(308, 21)
+        Me.CheckBox4.TabIndex = 71
+        Me.CheckBox4.Text = "I agree to the MadeByPavich Source Code License"
+        Me.CheckBox4.UseVisualStyleBackColor = True
         '
         'TabPage3
         '
@@ -261,62 +320,19 @@ Partial Class fsstate
         Me.Label7.TabIndex = 64
         Me.Label7.Text = "Start Building!"
         '
-        'CheckBox3
+        'Label13
         '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox3.Location = New System.Drawing.Point(43, 260)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(268, 21)
-        Me.CheckBox3.TabIndex = 72
-        Me.CheckBox3.Text = "I agree to the End User License Agreement"
-        Me.CheckBox3.UseVisualStyleBackColor = True
-        '
-        'CheckBox4
-        '
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox4.Location = New System.Drawing.Point(43, 287)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(308, 21)
-        Me.CheckBox4.TabIndex = 71
-        Me.CheckBox4.Text = "I agree to the MadeByPavich Source Code License"
-        Me.CheckBox4.UseVisualStyleBackColor = True
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(40, 57)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(421, 34)
-        Me.Label10.TabIndex = 73
-        Me.Label10.Text = "Please read both agreement carefully before clicking the ""I Agree"" button," & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "downl" &
-    "oading, or using P Browser Builder."
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label11.Location = New System.Drawing.Point(40, 107)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(175, 17)
-        Me.Label11.TabIndex = 74
-        Me.Label11.Text = "End User License Agreement"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Underline)
-        Me.Label12.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label12.Location = New System.Drawing.Point(40, 131)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(216, 17)
-        Me.Label12.TabIndex = 75
-        Me.Label12.Text = "MadeByPavich Source Code License"
+        Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.Color.Red
+        Me.Label13.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label13.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.White
+        Me.Label13.Location = New System.Drawing.Point(438, 14)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(81, 21)
+        Me.Label13.TabIndex = 67
+        Me.Label13.Text = "SKIP_INFS"
+        Me.Label13.Visible = False
         '
         'fsstate
         '
@@ -366,4 +382,5 @@ Partial Class fsstate
     Friend WithEvents Label10 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
+    Friend WithEvents Label13 As Label
 End Class
