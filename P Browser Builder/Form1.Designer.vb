@@ -77,10 +77,9 @@ Partial Class Form1
         Me.FToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResetWhatsNewStateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowSplashScreenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.KillSplashToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RestartInRestoreModeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GoBackToDefaultToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ResetExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProjnameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -209,6 +208,12 @@ Partial Class Form1
         Me.PictureBox19 = New System.Windows.Forms.PictureBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
+        Me.TabPage7 = New System.Windows.Forms.TabPage()
+        Me.Label69 = New System.Windows.Forms.Label()
+        Me.Button14 = New System.Windows.Forms.Button()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.Label67 = New System.Windows.Forms.Label()
+        Me.Label68 = New System.Windows.Forms.Label()
         Me.Label37 = New System.Windows.Forms.Label()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
@@ -237,12 +242,6 @@ Partial Class Form1
         Me.buildworker = New System.ComponentModel.BackgroundWorker()
         Me.buildfinalworker = New System.ComponentModel.BackgroundWorker()
         Me.cfuworker = New System.ComponentModel.BackgroundWorker()
-        Me.TabPage7 = New System.Windows.Forms.TabPage()
-        Me.Label67 = New System.Windows.Forms.Label()
-        Me.Label68 = New System.Windows.Forms.Label()
-        Me.Button14 = New System.Windows.Forms.Button()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.Label69 = New System.Windows.Forms.Label()
         Me.Label70 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -271,6 +270,7 @@ Partial Class Form1
         CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage7.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel10.SuspendLayout()
@@ -283,7 +283,6 @@ Partial Class Form1
         CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage7.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -609,13 +608,14 @@ Partial Class Form1
         '
         'DevToolStripMenuItem
         '
-        Me.DevToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UnlockIncompleteFeatureToolStripMenuItem, Me.ForceUnlockDisableButtonToolStripMenuItem, Me.FToolStripMenuItem, Me.ResetWhatsNewStateToolStripMenuItem, Me.ShowSplashScreenToolStripMenuItem, Me.RestartInRestoreModeToolStripMenuItem, Me.GoBackToDefaultToolStripMenuItem})
+        Me.DevToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UnlockIncompleteFeatureToolStripMenuItem, Me.ForceUnlockDisableButtonToolStripMenuItem, Me.FToolStripMenuItem, Me.ResetWhatsNewStateToolStripMenuItem, Me.ShowSplashScreenToolStripMenuItem, Me.KillSplashToolStripMenuItem, Me.RestartInRestoreModeToolStripMenuItem, Me.GoBackToDefaultToolStripMenuItem})
         Me.DevToolStripMenuItem.Name = "DevToolStripMenuItem"
         Me.DevToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
         Me.DevToolStripMenuItem.Text = "Develop"
         '
         'UnlockIncompleteFeatureToolStripMenuItem
         '
+        Me.UnlockIncompleteFeatureToolStripMenuItem.Enabled = False
         Me.UnlockIncompleteFeatureToolStripMenuItem.Name = "UnlockIncompleteFeatureToolStripMenuItem"
         Me.UnlockIncompleteFeatureToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
         Me.UnlockIncompleteFeatureToolStripMenuItem.Text = "Unlock incomplete feature"
@@ -630,10 +630,11 @@ Partial Class Form1
         '
         Me.FToolStripMenuItem.Name = "FToolStripMenuItem"
         Me.FToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
-        Me.FToolStripMenuItem.Text = "Fallback first startup state"
+        Me.FToolStripMenuItem.Text = "Fallback infs_state"
         '
         'ResetWhatsNewStateToolStripMenuItem
         '
+        Me.ResetWhatsNewStateToolStripMenuItem.Enabled = False
         Me.ResetWhatsNewStateToolStripMenuItem.Name = "ResetWhatsNewStateToolStripMenuItem"
         Me.ResetWhatsNewStateToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
         Me.ResetWhatsNewStateToolStripMenuItem.Text = "Reset whats new state"
@@ -642,32 +643,25 @@ Partial Class Form1
         '
         Me.ShowSplashScreenToolStripMenuItem.Name = "ShowSplashScreenToolStripMenuItem"
         Me.ShowSplashScreenToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
-        Me.ShowSplashScreenToolStripMenuItem.Text = "Show splash screen"
+        Me.ShowSplashScreenToolStripMenuItem.Text = "Show splash"
+        '
+        'KillSplashToolStripMenuItem
+        '
+        Me.KillSplashToolStripMenuItem.Name = "KillSplashToolStripMenuItem"
+        Me.KillSplashToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.KillSplashToolStripMenuItem.Text = "Kill splash"
         '
         'RestartInRestoreModeToolStripMenuItem
         '
         Me.RestartInRestoreModeToolStripMenuItem.Name = "RestartInRestoreModeToolStripMenuItem"
         Me.RestartInRestoreModeToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
-        Me.RestartInRestoreModeToolStripMenuItem.Text = "Restart in Restore Mode"
+        Me.RestartInRestoreModeToolStripMenuItem.Text = "Restart  to inrs_state"
         '
         'GoBackToDefaultToolStripMenuItem
         '
-        Me.GoBackToDefaultToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ResetExitToolStripMenuItem, Me.ReToolStripMenuItem})
         Me.GoBackToDefaultToolStripMenuItem.Name = "GoBackToDefaultToolStripMenuItem"
         Me.GoBackToDefaultToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
-        Me.GoBackToDefaultToolStripMenuItem.Text = "Go back to default"
-        '
-        'ResetExitToolStripMenuItem
-        '
-        Me.ResetExitToolStripMenuItem.Name = "ResetExitToolStripMenuItem"
-        Me.ResetExitToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.ResetExitToolStripMenuItem.Text = "Reset and Exit"
-        '
-        'ReToolStripMenuItem
-        '
-        Me.ReToolStripMenuItem.Name = "ReToolStripMenuItem"
-        Me.ReToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.ReToolStripMenuItem.Text = "Reset and Restart"
+        Me.GoBackToDefaultToolStripMenuItem.Text = "Restart"
         '
         'ProjnameToolStripMenuItem
         '
@@ -2160,6 +2154,71 @@ Partial Class Form1
         Me.Label21.TabIndex = 72
         Me.Label21.Text = "Getting Started"
         '
+        'TabPage7
+        '
+        Me.TabPage7.Controls.Add(Me.Label69)
+        Me.TabPage7.Controls.Add(Me.Button14)
+        Me.TabPage7.Controls.Add(Me.TextBox9)
+        Me.TabPage7.Controls.Add(Me.Label67)
+        Me.TabPage7.Controls.Add(Me.Label68)
+        Me.TabPage7.Location = New System.Drawing.Point(4, 26)
+        Me.TabPage7.Name = "TabPage7"
+        Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage7.Size = New System.Drawing.Size(551, 682)
+        Me.TabPage7.TabIndex = 6
+        Me.TabPage7.Text = "Custom Actions"
+        Me.TabPage7.UseVisualStyleBackColor = True
+        '
+        'Label69
+        '
+        Me.Label69.AutoSize = True
+        Me.Label69.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label69.Location = New System.Drawing.Point(15, 574)
+        Me.Label69.Name = "Label69"
+        Me.Label69.Size = New System.Drawing.Size(83, 17)
+        Me.Label69.TabIndex = 76
+        Me.Label69.Text = "Actions Script"
+        '
+        'Button14
+        '
+        Me.Button14.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.Button14.Location = New System.Drawing.Point(18, 638)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(93, 29)
+        Me.Button14.TabIndex = 75
+        Me.Button14.Text = "Learn more..."
+        Me.ToolTip1.SetToolTip(Me.Button14, "Learn more about Process.Start()")
+        Me.Button14.UseVisualStyleBackColor = True
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Location = New System.Drawing.Point(18, 599)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(513, 25)
+        Me.TextBox9.TabIndex = 74
+        Me.ToolTip1.SetToolTip(Me.TextBox9, "Your script.")
+        '
+        'Label67
+        '
+        Me.Label67.AutoSize = True
+        Me.Label67.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label67.Location = New System.Drawing.Point(15, 52)
+        Me.Label67.Name = "Label67"
+        Me.Label67.Size = New System.Drawing.Size(253, 34)
+        Me.Label67.TabIndex = 73
+        Me.Label67.Text = "This will use Process.Start(YOUR_SCRIPT)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Make sure you have """" to correct the is" &
+    "sues."
+        '
+        'Label68
+        '
+        Me.Label68.AutoSize = True
+        Me.Label68.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
+        Me.Label68.Location = New System.Drawing.Point(13, 14)
+        Me.Label68.Name = "Label68"
+        Me.Label68.Size = New System.Drawing.Size(177, 28)
+        Me.Label68.TabIndex = 72
+        Me.Label68.Text = "Run custom actions"
+        '
         'Label37
         '
         Me.Label37.AutoSize = True
@@ -2480,71 +2539,6 @@ Partial Class Form1
         'cfuworker
         '
         '
-        'TabPage7
-        '
-        Me.TabPage7.Controls.Add(Me.Label69)
-        Me.TabPage7.Controls.Add(Me.Button14)
-        Me.TabPage7.Controls.Add(Me.TextBox9)
-        Me.TabPage7.Controls.Add(Me.Label67)
-        Me.TabPage7.Controls.Add(Me.Label68)
-        Me.TabPage7.Location = New System.Drawing.Point(4, 26)
-        Me.TabPage7.Name = "TabPage7"
-        Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage7.Size = New System.Drawing.Size(551, 682)
-        Me.TabPage7.TabIndex = 6
-        Me.TabPage7.Text = "Custom Actions"
-        Me.TabPage7.UseVisualStyleBackColor = True
-        '
-        'Label67
-        '
-        Me.Label67.AutoSize = True
-        Me.Label67.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label67.Location = New System.Drawing.Point(15, 52)
-        Me.Label67.Name = "Label67"
-        Me.Label67.Size = New System.Drawing.Size(253, 34)
-        Me.Label67.TabIndex = 73
-        Me.Label67.Text = "This will use Process.Start(YOUR_SCRIPT)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Make sure you have """" to correct the is" &
-    "sues."
-        '
-        'Label68
-        '
-        Me.Label68.AutoSize = True
-        Me.Label68.Font = New System.Drawing.Font("Segoe UI Semilight", 15.0!)
-        Me.Label68.Location = New System.Drawing.Point(13, 14)
-        Me.Label68.Name = "Label68"
-        Me.Label68.Size = New System.Drawing.Size(177, 28)
-        Me.Label68.TabIndex = 72
-        Me.Label68.Text = "Run custom actions"
-        '
-        'Button14
-        '
-        Me.Button14.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        Me.Button14.Location = New System.Drawing.Point(18, 638)
-        Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(93, 29)
-        Me.Button14.TabIndex = 75
-        Me.Button14.Text = "Learn more..."
-        Me.ToolTip1.SetToolTip(Me.Button14, "Learn more about Process.Start()")
-        Me.Button14.UseVisualStyleBackColor = True
-        '
-        'TextBox9
-        '
-        Me.TextBox9.Location = New System.Drawing.Point(18, 599)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(513, 25)
-        Me.TextBox9.TabIndex = 74
-        Me.ToolTip1.SetToolTip(Me.TextBox9, "Your script.")
-        '
-        'Label69
-        '
-        Me.Label69.AutoSize = True
-        Me.Label69.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label69.Location = New System.Drawing.Point(15, 574)
-        Me.Label69.Name = "Label69"
-        Me.Label69.Size = New System.Drawing.Size(83, 17)
-        Me.Label69.TabIndex = 76
-        Me.Label69.Text = "Actions Script"
-        '
         'Label70
         '
         Me.Label70.AutoSize = True
@@ -2623,6 +2617,8 @@ Partial Class Form1
         CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage7.ResumeLayout(False)
+        Me.TabPage7.PerformLayout()
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
         Me.Panel1.ResumeLayout(False)
@@ -2637,8 +2633,6 @@ Partial Class Form1
         CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage7.ResumeLayout(False)
-        Me.TabPage7.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2698,8 +2692,6 @@ Partial Class Form1
     Friend WithEvents UnlockIncompleteFeatureToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ForceUnlockDisableButtonToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GoBackToDefaultToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ResetExitToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ReToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Panel8 As Panel
     Friend WithEvents Label28 As Label
     Friend WithEvents Label27 As Label
@@ -2864,4 +2856,5 @@ Partial Class Form1
     Friend WithEvents TextBox9 As TextBox
     Friend WithEvents Label69 As Label
     Friend WithEvents Label70 As Label
+    Friend WithEvents KillSplashToolStripMenuItem As ToolStripMenuItem
 End Class

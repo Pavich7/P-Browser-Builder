@@ -20,9 +20,6 @@ Public Class prefer
         If Not System.IO.File.Exists(cachecheck) Then
             Label9.Enabled = False
         End If
-        If Form1.DevToolStripMenuItem.Visible = True Then
-            Label60.Enabled = False
-        End If
         TotalSize = 0
         Dim TheSize2 As Long = GetDirSize(apppath + "\statecache\updatecache\")
         Label52.Text = FormatNumber(TheSize2 / 1024 / 1024, 1) & " MB"

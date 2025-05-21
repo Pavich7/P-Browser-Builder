@@ -899,14 +899,6 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub ResetExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetExitToolStripMenuItem.Click
-        Application.Exit()
-    End Sub
-
-    Private Sub ReToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReToolStripMenuItem.Click
-        Application.Restart()
-    End Sub
-
     Private Sub ShowSplashScreenToolStripMenuItem_Click(sender As Object, e As EventArgs)
         splash.Show()
     End Sub
@@ -1450,5 +1442,13 @@ Public Class Form1
 
     Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
         Process.Start("https://www.thoughtco.com/how-to-use-processstart-in-vbnet-3424455")
+    End Sub
+
+    Private Sub GoBackToDefaultToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GoBackToDefaultToolStripMenuItem.Click
+        Application.Restart()
+    End Sub
+
+    Private Sub KillSplashToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KillSplashToolStripMenuItem.Click
+        splash.Close()
     End Sub
 End Class

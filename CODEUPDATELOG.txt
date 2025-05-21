@@ -16,4 +16,5 @@
 - [Start Window]: Fix custom script won't close after enter Start Window.
 - [News Feed]: New hyperlink support by clicking on contents.
 - [Preference]: Removed option to open Develop Menu.
-- [DevMode]: Develop Menu only accessible with `--devmode` flag.
+- [Develop]: Develop Menu only accessible with `--devmode` flag.
+- [Develop]: Redesigned new Developments Environments.
