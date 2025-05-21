@@ -179,12 +179,6 @@
     <Compile Include="buildmanage.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="customscript.Designer.vb">
-      <DependentUpon>customscript.vb</DependentUpon>
-    </Compile>
-    <Compile Include="customscript.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -240,9 +234,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="buildmanage.resx">
       <DependentUpon>buildmanage.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="customscript.resx">
-      <DependentUpon>customscript.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>

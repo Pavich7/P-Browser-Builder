@@ -4,6 +4,7 @@
 - [Build Manager]: New option to reset App state in binary.
 - [Software Update]: Builder will now check for update daily for better startup speed.
 - [Get Started]: New redesigned and dedicated tab for Get Started.
+- [Custom Actions]: New redesigned and dedicated tab for Run Custom Actions.
 
 ** Compatibility **
 - [✓]: This version still compatiable with old resource.

@@ -338,7 +338,7 @@ Public Class Form1
                 End If
                 If CheckBox4.Checked = True Then
                     Try
-                        Process.Start(My.Settings.tempScript)
+                        Process.Start(TextBox9.Text)
                     Catch ex As Exception
                         MessageBox.Show("Cannot run script! Your app is build and ready!", "Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End Try
@@ -439,6 +439,7 @@ Public Class Form1
         Panel4.Visible = False
         TabControl1.TabPages.Remove(TabPage5)
         TabControl1.TabPages.Remove(TabPage6)
+        TabControl1.TabPages.Remove(TabPage7)
         'Reset
         If stringReader19 = "True" Then
             Me.Enabled = False
@@ -986,14 +987,16 @@ Public Class Form1
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        customscript.Show()
+        TabControl1.SelectedTab = TabPage7
     End Sub
 
     Private Sub CheckBox4_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox4.CheckedChanged
-        If CheckBox4.Checked = True Then
-            Button6.Enabled = True
-        Else
+        If CheckBox4.Checked = False Then
             Button6.Enabled = False
+            TabControl1.TabPages.Remove(TabPage7)
+        Else
+            Button6.Enabled = True
+            TabControl1.TabPages.Add(TabPage7)
         End If
     End Sub
 
@@ -1434,5 +1437,9 @@ Public Class Form1
 
     Private Sub Label61_Click(sender As Object, e As EventArgs) Handles Label61.Click
         Process.Start("https://github.com/Pavich7/P-Browser-Builder/wiki")
+    End Sub
+
+    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
+        Process.Start("https://www.thoughtco.com/how-to-use-processstart-in-vbnet-3424455")
     End Sub
 End Class

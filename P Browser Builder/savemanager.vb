@@ -39,6 +39,7 @@ Module savemanager
         Form1.TextBox6.Text = ""
         Form1.TextBox8.Text = ""
         Form1.TextBox7.Text = ""
+        Form1.TextBox9.Text = ""
         Form1.ComboBox1.Text = "Information"
         Form1.RadioButton2.Checked = True
         Form1.RadioButton3.Checked = False
@@ -64,15 +65,14 @@ Module savemanager
         Form1.TabControl1.TabPages.Remove(Form1.TabPage4)
         Form1.TabControl1.TabPages.Remove(Form1.TabPage5)
         Form1.TabControl1.TabPages.Remove(Form1.TabPage6)
+        Form1.TabControl1.TabPages.Remove(Form1.TabPage7)
         Form1.PictureBox1.Image = My.Resources.p_browser_icon_001_rq2_icon
         Form1.EnlargeToolStripMenuItem.Checked = False
         Form1.Browser.Load("about:blank")
         Form1.Label16.Text = "Application icons (*.ico)"
         Form1.Label46.Text = "Offline websites (Not set)"
         My.Settings.tempIcoLoc = ""
-        My.Settings.tempScript = ""
         My.Settings.tempOffWebLoc = ""
-        customscript.Close()
         System.IO.Directory.Delete(apppath + "\statecache\buildcache\appicns", True)
         System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
         System.IO.Directory.Delete(apppath + "\statecache\buildcache\offlineweb", True)
