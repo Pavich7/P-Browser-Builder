@@ -687,7 +687,7 @@ Public Class Form1
         If My.Application.CommandLineArgs.Count > 0 Then
             Dim FileNameOpenWith As String = My.Application.CommandLineArgs(0)
             If FileNameOpenWith = "--devmode" Then
-                Dim fecha = IO.File.GetCreationTime(Assembly.GetExecutingAssembly().Location)
+                Dim fecha = IO.File.GetLastWriteTime(Assembly.GetExecutingAssembly().Location)
                 DevToolStripMenuItem.Visible = True
                 Label70.Visible = True
                 Label70.Text = "DEV_ENV BUILT: " + fecha + " CEFPROD:" + AssemblyInfo.AssemblyVersion
