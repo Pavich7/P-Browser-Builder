@@ -238,11 +238,11 @@ Partial Class Form1
         Me.PictureBox16 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        Me.Label70 = New System.Windows.Forms.Label()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.buildworker = New System.ComponentModel.BackgroundWorker()
         Me.buildfinalworker = New System.ComponentModel.BackgroundWorker()
         Me.cfuworker = New System.ComponentModel.BackgroundWorker()
-        Me.Label70 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -2526,19 +2526,6 @@ Partial Class Form1
         Me.PictureBox11.TabStop = False
         Me.ToolTip1.SetToolTip(Me.PictureBox11, "Reload browser in Design View. (F5)")
         '
-        'FolderBrowserDialog1
-        '
-        Me.FolderBrowserDialog1.Description = "Browse folder that contains website html files for offline support."
-        '
-        'buildworker
-        '
-        '
-        'buildfinalworker
-        '
-        '
-        'cfuworker
-        '
-        '
         'Label70
         '
         Me.Label70.AutoSize = True
@@ -2552,6 +2539,19 @@ Partial Class Form1
         Me.Label70.Text = "devmode"
         Me.ToolTip1.SetToolTip(Me.Label70, "In dev env.")
         Me.Label70.Visible = False
+        '
+        'FolderBrowserDialog1
+        '
+        Me.FolderBrowserDialog1.Description = "Browse folder that contains website html files for offline support."
+        '
+        'buildworker
+        '
+        '
+        'buildfinalworker
+        '
+        '
+        'cfuworker
+        '
         '
         'Form1
         '

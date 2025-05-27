@@ -1376,9 +1376,9 @@ Public Class Form1
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click, Button5.Click
         If ComboBox1.Text = "Warning" Then
-            MessageBox.Show(TextBox8.Text, TextBox7.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show(TextBox7.Text, TextBox8.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
-            MessageBox.Show(TextBox8.Text, TextBox7.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show(TextBox7.Text, TextBox8.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
 
