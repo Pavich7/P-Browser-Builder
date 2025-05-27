@@ -274,6 +274,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="p_browser_icon_001_rq2_icon.ico" />
+    <None Include="Resources\play-button1.png" />
     <None Include="Resources\question.png" />
     <None Include="Resources\book.png" />
     <None Include="Resources\play-button.png" />

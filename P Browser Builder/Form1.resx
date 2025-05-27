@@ -690,6 +690,9 @@
   <data name="RichTextBox2.Text" xml:space="preserve">
     <value>Builder Release 9.6.1
 
+** Release Highlights **
+- [Offline Websites]: New Play button to open offline websites in Design View.
+
 ** Compatibility **
 - [✓]: This version still compatiable with old resource.
 - [✓]: This version support saves from previous versions.

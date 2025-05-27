@@ -60,6 +60,7 @@ Module savemanager
         Form1.Button6.Visible = False
         Form1.CheckBox4.Visible = False
         Form1.Label24.Visible = True
+        Form1.PictureBox23.Visible = False
         Form1.TabControl1.SelectedTab = Form1.TabPage1
         Form1.TabControl1.TabPages.Remove(Form1.TabPage3)
         Form1.TabControl1.TabPages.Remove(Form1.TabPage4)

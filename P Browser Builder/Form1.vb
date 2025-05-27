@@ -6,6 +6,7 @@ Imports System.Reflection
 Imports System.Security.Cryptography
 Imports System.Text
 Imports CefSharp
+Imports CefSharp.SchemeHandler
 Imports CefSharp.WinForms
 Public Class Form1
     Public WithEvents Browser As ChromiumWebBrowser
@@ -513,6 +514,15 @@ Public Class Form1
                 .RemoteDebuggingPort = 8088
             }
             setting.CachePath = apppath + "\statecache"
+            setting.RegisterScheme(New CefCustomScheme() With {
+                .SchemeName = "offline",
+                .DomainName = "pbrowserapp",
+                .SchemeHandlerFactory = New FolderSchemeHandlerFactory(
+                    rootFolder:=apppath + "\statecache\buildcache\offlineweb",
+                    hostName:="pbrowserapp",
+                    defaultPage:="index.html"
+                 )
+            })
             'setting.UserAgent = "P Browser (x64, Builder Kit, Chromium 126.0.6478.115)"
             CefSharp.Cef.Initialize(setting)
             Browser = New ChromiumWebBrowser("")
@@ -1359,6 +1369,7 @@ Public Class Form1
             My.Settings.tempOffWebLoc = FolderBrowserDialog1.SelectedPath
             My.Computer.FileSystem.CopyDirectory(FolderBrowserDialog1.SelectedPath, apppath + "\statecache\buildcache\offlineweb\")
             Label46.Text = "Offline websites (Ready)"
+            PictureBox23.Visible = True
         End If
     End Sub
 
@@ -1451,5 +1462,13 @@ Public Class Form1
 
     Private Sub KillSplashToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KillSplashToolStripMenuItem.Click
         splash.Close()
+    End Sub
+
+    Private Sub PictureBox23_Click(sender As Object, e As EventArgs) Handles PictureBox23.Click
+        If My.Settings.tempOffWebLoc = "" Then
+            MessageBox.Show("Please choose your offline web folder first!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        Else
+            Browser.Load("offline://pbrowserapp/")
+        End If
     End Sub
 End Class
