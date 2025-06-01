@@ -1,7 +1,8 @@
-﻿Builder Release 9.6.1
+﻿Builder Release 9.7.0
 
 ** Release Highlights **
 - [Offline Websites]: New Play button to open offline websites in Design View.
+- [Custom Actions]: You can now test your script in tab using the new Test function.
 
 ** Compatibility **
 - [✓]: This version still compatiable with old resource.
@@ -10,3 +11,4 @@
 
 ** Release notes **
 - [Welcome Message]: Fix wrong title and description order in testing.
+- [Custom Actions]: Fix issue where the script runs even when no script is provided.

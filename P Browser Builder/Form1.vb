@@ -340,7 +340,9 @@ Public Class Form1
                 End If
                 If CheckBox4.Checked = True Then
                     Try
-                        Process.Start(TextBox9.Text)
+                        If TextBox9.Text IsNot "" Then
+                            Process.Start(TextBox9.Text)
+                        End If
                     Catch ex As Exception
                         MessageBox.Show("Cannot run script! Your app is build and ready!", "Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End Try
@@ -1452,10 +1454,6 @@ Public Class Form1
         Process.Start("https://github.com/Pavich7/P-Browser-Builder/wiki")
     End Sub
 
-    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
-        Process.Start("https://www.thoughtco.com/how-to-use-processstart-in-vbnet-3424455")
-    End Sub
-
     Private Sub GoBackToDefaultToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GoBackToDefaultToolStripMenuItem.Click
         Application.Restart()
     End Sub
@@ -1470,5 +1468,21 @@ Public Class Form1
         Else
             Browser.Load("offline://pbrowserapp/")
         End If
+    End Sub
+
+    Private Sub Label71_Click(sender As Object, e As EventArgs) Handles Label71.Click
+        Process.Start("https://www.thoughtco.com/how-to-use-processstart-in-vbnet-3424455")
+    End Sub
+
+    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
+        Try
+            If TextBox9.Text IsNot "" Then
+                Process.Start(TextBox9.Text)
+            Else
+                MessageBox.Show("Script is empty!", "Failed!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Failed to run script!", "Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 End Class
