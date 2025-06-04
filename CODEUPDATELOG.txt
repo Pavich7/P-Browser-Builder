@@ -5,7 +5,7 @@
 - [Custom Actions]: You can now test your script in tab using the new Test function.
 
 ** Compatibility **
-- [✓]: This version still compatiable with old resource.
+- [✓]: This version still compatible with old resource.
 - [✓]: This version support saves from previous versions.
 - [✓]: This version support settings from previous versions.
 
