@@ -25,7 +25,7 @@
 ; --------------------------------
 ; Pages
   !insertmacro MUI_PAGE_WELCOME
-  !insertmacro MUI_PAGE_LICENSE "C:\Users\Pavich Komansil\Desktop\updpbb\eula.txt"
+  !insertmacro MUI_PAGE_LICENSE "C:\Users\Pavich\Desktop\updpbb\eula.txt"
   !insertmacro MUI_PAGE_DIRECTORY
   !insertmacro MUI_PAGE_INSTFILES
   !insertmacro MUI_PAGE_FINISH
@@ -54,7 +54,7 @@ Section "P Browser Installer" SecDummy
   Abort
 
   ; ADD YOUR OWN FILES HERE...
-  File /r "C:\Users\Pavich Komansil\Desktop\updpbb\*"
+  File /r "C:\Users\Pavich\Desktop\updpbb\*"
 
   ; ExecWait '"$INSTDIR\assets\packages\VC_redist.x64.exe"  /install /quiet /norestart'
 
