@@ -891,25 +891,22 @@ Public Class Form1
     End Sub
 
     Private Sub ForceUnlockDisableButtonToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ForceUnlockDisableButtonToolStripMenuItem.Click
-        Dim result As DialogResult = MessageBox.Show("Force Unlocking the button is extremely dangerous." + vbNewLine + "YOUR MAY NEED TO REINSTALL YOUR BUILDER IN CASE OF DAMAGED!" + vbNewLine + "Do you want to process it?", "You sure about this?", MessageBoxButtons.YesNo)
-        If (result = DialogResult.Yes) Then
-            Button1.Enabled = True
-            Button2.Enabled = True
-            Button3.Enabled = True
-            Button4.Enabled = True
-            Button5.Enabled = True
-            Button6.Enabled = True
-            Button7.Enabled = True
-            Button8.Enabled = True
-            Label4.Enabled = True
-            Label8.Enabled = True
-            RadioButton2.Enabled = True
-            RadioButton3.Enabled = True
-            CheckBox1.Enabled = True
-            CheckBox2.Enabled = True
-            ForceUnlockDisableButtonToolStripMenuItem.Enabled = True
-            UnlockIncompleteFeatureToolStripMenuItem.Enabled = True
-        End If
+        Button1.Enabled = True
+        Button2.Enabled = True
+        Button3.Enabled = True
+        Button4.Enabled = True
+        Button5.Enabled = True
+        Button6.Enabled = True
+        Button7.Enabled = True
+        Button8.Enabled = True
+        Label4.Enabled = True
+        Label8.Enabled = True
+        RadioButton2.Enabled = True
+        RadioButton3.Enabled = True
+        CheckBox1.Enabled = True
+        CheckBox2.Enabled = True
+        ForceUnlockDisableButtonToolStripMenuItem.Enabled = True
+        UnlockIncompleteFeatureToolStripMenuItem.Enabled = True
     End Sub
 
     Private Sub ShowSplashScreenToolStripMenuItem_Click(sender As Object, e As EventArgs)
@@ -1484,5 +1481,10 @@ Public Class Form1
         Catch ex As Exception
             MessageBox.Show("Failed to run script!", "Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub ResetCfustateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetCfustateToolStripMenuItem.Click
+        Dim filePath As String = apppath + "\autocfu.pbstate"
+        File.WriteAllText(filePath, "")
     End Sub
 End Class

@@ -245,6 +245,7 @@ Partial Class Form1
         Me.buildworker = New System.ComponentModel.BackgroundWorker()
         Me.buildfinalworker = New System.ComponentModel.BackgroundWorker()
         Me.cfuworker = New System.ComponentModel.BackgroundWorker()
+        Me.ResetCfustateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -611,7 +612,7 @@ Partial Class Form1
         '
         'DevToolStripMenuItem
         '
-        Me.DevToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UnlockIncompleteFeatureToolStripMenuItem, Me.ForceUnlockDisableButtonToolStripMenuItem, Me.FToolStripMenuItem, Me.ResetWhatsNewStateToolStripMenuItem, Me.ShowSplashScreenToolStripMenuItem, Me.KillSplashToolStripMenuItem, Me.RestartInRestoreModeToolStripMenuItem, Me.GoBackToDefaultToolStripMenuItem})
+        Me.DevToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UnlockIncompleteFeatureToolStripMenuItem, Me.ForceUnlockDisableButtonToolStripMenuItem, Me.FToolStripMenuItem, Me.ResetWhatsNewStateToolStripMenuItem, Me.ResetCfustateToolStripMenuItem, Me.ShowSplashScreenToolStripMenuItem, Me.KillSplashToolStripMenuItem, Me.RestartInRestoreModeToolStripMenuItem, Me.GoBackToDefaultToolStripMenuItem})
         Me.DevToolStripMenuItem.Name = "DevToolStripMenuItem"
         Me.DevToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
         Me.DevToolStripMenuItem.Text = "Develop"
@@ -2587,6 +2588,12 @@ Partial Class Form1
         'cfuworker
         '
         '
+        'ResetCfustateToolStripMenuItem
+        '
+        Me.ResetCfustateToolStripMenuItem.Name = "ResetCfustateToolStripMenuItem"
+        Me.ResetCfustateToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.ResetCfustateToolStripMenuItem.Text = "Reset cfu_state"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2895,4 +2902,5 @@ Partial Class Form1
     Friend WithEvents KillSplashToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox23 As PictureBox
     Friend WithEvents Label71 As Label
+    Friend WithEvents ResetCfustateToolStripMenuItem As ToolStripMenuItem
 End Class
