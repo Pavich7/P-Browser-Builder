@@ -2,10 +2,6 @@
     Dim stage As Integer = 0
     Private Sub fsstate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         welcome.Enabled = False
-        Label2.Visible = False
-        Label4.Visible = False
-        CheckBox1.Visible = False
-        CheckBox2.Visible = False
         TabPage2.Enabled = False
         TabPage3.Enabled = False
         Dim apppath As String = Application.StartupPath()
