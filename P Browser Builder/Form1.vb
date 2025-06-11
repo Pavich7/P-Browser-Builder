@@ -1307,16 +1307,19 @@ Public Class Form1
         cfuworker.RunWorkerAsync()
     End Sub
     Dim obuiver As String = ""
+    Dim oresver As String = ""
     Private Sub cfuworker_DoWork(sender As Object, e As DoWorkEventArgs) Handles cfuworker.DoWork
         Try
             Dim client As WebClient = New WebClient()
             obuiver = client.DownloadString("https://github.com/Pavich7/P-Browser-Builder/releases/latest/download/release_manifest.txt")
+            oresver = client.DownloadString("https://github.com/Pavich7/P-Browser-Builder-Resource/releases/latest/download/release_manifest.txt")
         Catch ex As Exception
             MessageBox.Show("Unable to check for update! Please try again later.", "Update Utility", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End Try
     End Sub
 
     Private Sub cfuworker_DoWorkComplete(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles cfuworker.RunWorkerCompleted
+        'buivercheck
         Dim bfileReader As System.IO.StreamReader
         bfileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\metadata\version.txt")
         Dim bstringReader As String = bfileReader.ReadLine()
@@ -1333,6 +1336,21 @@ Public Class Form1
             Label14.Text = "New updates available! (" + obuiver + ")"
         End If
         bfileReader.Close()
+        'resvercheck
+        Dim rfileReader As System.IO.StreamReader
+        rfileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\version.txt")
+        Dim rstringReader As String = rfileReader.ReadLine()
+        If oresver.Contains(rstringReader) Then
+            Label20.Visible = False
+            Label18.Visible = False
+        Else
+            Label20.Visible = True
+            Label18.Visible = True
+            Label20.Text = "Resource update available! (" + oresver + ")"
+            Label18.Text = "    Update"
+        End If
+        rfileReader.Close()
+
         ProgressBar1.Style = ProgressBarStyle.Blocks
         Label7.Text = "Ready to build"
     End Sub

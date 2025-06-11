@@ -1820,7 +1820,7 @@ Partial Class Form1
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage5.Size = New System.Drawing.Size(551, 682)
         Me.TabPage5.TabIndex = 4
-        Me.TabPage5.Text = "Builder Update"
+        Me.TabPage5.Text = "Software Update"
         Me.TabPage5.UseVisualStyleBackColor = True
         '
         'PictureBox12

@@ -688,20 +688,20 @@
     <value>575, 9</value>
   </metadata>
   <data name="RichTextBox2.Text" xml:space="preserve">
-    <value>Builder Release 9.7.0
+    <value>Builder Release 9.8.0
 
 ** Release Highlights **
-- [Offline Websites]: New Play button to open offline websites in Design View.
-- [Custom Actions]: You can now test your script in tab using the new Test function.
 
 ** Compatibility **
-- [✓]: This version still compatiable with old resource.
+- [✓]: This version still compatible with old resource.
 - [✓]: This version support saves from previous versions.
 - [✓]: This version support settings from previous versions.
 
 ** Release notes **
-- [Welcome Message]: Fix wrong title and description order in testing.
-- [Custom Actions]: Fix issue where the script runs even when no script is provided.</value>
+- [Software Update]: Checking for updates will also check for resource update.
+- [Software Update]: Rename tab from Builder Update to Software Update.
+- [Core]: Updated CefSharp to 137.0.100.
+- [Core]: Updated Chromium to 137.0.7151.69.</value>
   </data>
   <metadata name="dlworker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>666, 9</value>
