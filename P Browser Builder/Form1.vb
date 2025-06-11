@@ -418,11 +418,10 @@ Public Class Form1
         If Not System.IO.Directory.Exists(apppath + "\statecache\buildcache\appicns") Then System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
         If Not System.IO.Directory.Exists(apppath + "\statecache\buildcache\offlineweb") Then System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\offlineweb")
         If Not System.IO.Directory.Exists(apppath + "\statecache\updatecache") Then System.IO.Directory.CreateDirectory(apppath + "\statecache\updatecache")
-        If Not System.IO.Directory.Exists(apppath + "\statedata") Then
-            Dim zipPath As String = apppath + "\assets\packages\datatemplate.zip"
-            Dim extractPath As String = apppath + "\"
-            ZipFile.ExtractToDirectory(zipPath, extractPath)
+        If Not File.Exists(apppath + "\settings.pbcfg") Then
+            File.Copy(apppath + "\assets\settings_origin.pbcfg", apppath + "\settings.pbcfg")
         End If
+
         splash.Label1.Text = "Loading app state..."
         'Reset state Check
         Button6.Visible = False
@@ -458,7 +457,7 @@ Public Class Form1
                         End If
                     End If
                     'Delete config files
-                    System.IO.Directory.Delete(apppath + "\statedata", True)
+                    File.Delete(apppath + "\settings.pbcfg")
                     'Delete Main Cache Dir
                     System.IO.Directory.Delete(apppath + "\statecache", True)
                     'Delete Build Dir

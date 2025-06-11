@@ -234,7 +234,6 @@ Public Class prefer
 
     Private Sub Label56_Click(sender As Object, e As EventArgs) Handles Label56.Click
         Dim apppath As String = Application.StartupPath()
-        Process.Start(apppath + "/statedata")
     End Sub
 
     Private Sub Label30_Click(sender As Object, e As EventArgs) Handles Label30.Click

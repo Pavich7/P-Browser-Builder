@@ -56,7 +56,7 @@ Section "P Browser Installer" SecDummy
   ; ADD YOUR OWN FILES HERE...
   File /r "C:\Users\Pavich\Desktop\updpbb\*"
 
-  ; ExecWait '"$INSTDIR\assets\packages\VC_redist.x64.exe"  /install /quiet /norestart'
+  ; ExecWait '"$INSTDIR\assets\redist\VC_redist.x64.exe"  /install /quiet /norestart'
 
 SectionEnd
 

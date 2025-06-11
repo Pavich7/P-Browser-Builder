@@ -3,7 +3,7 @@ Imports CefSharp.DevTools.CSS
 
 Module settings
 
-    'datacol (deprecated, empty slot)
+    'settingver
     'hidesp
     'infsstate
     'inrsstate
@@ -13,13 +13,11 @@ Module settings
     'winstatew
 
     Dim apppath = Application.StartupPath
-    Dim filePath As String = apppath + "\statedata\settings.pbcfg"
+    Dim filePath As String = apppath + "\settings.pbcfg"
 
     Sub save(ByVal slotname As String, value As String)
         Dim lines As String() = File.ReadAllLines(filePath)
-        If slotname = "datacol" Then
-            lines(0) = value
-        ElseIf slotname = "hidesp" Then
+        If slotname = "hidesp" Then
             lines(1) = value
         ElseIf slotname = "infsstate" Then
             lines(2) = value
@@ -42,7 +40,7 @@ Module settings
     Function load(ByVal slotname As String)
         Dim lines As String() = File.ReadAllLines(filePath)
         Dim value As String
-        If slotname = "datacol" Then
+        If slotname = "settingver" Then
             value = lines(0)
         ElseIf slotname = "hidesp" Then
             value = lines(1)
