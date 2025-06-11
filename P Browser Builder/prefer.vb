@@ -1,4 +1,5 @@
-﻿Imports System.IO.Compression
+﻿Imports System.IO
+Imports System.IO.Compression
 Imports System.Net
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
@@ -234,6 +235,16 @@ Public Class prefer
 
     Private Sub Label56_Click(sender As Object, e As EventArgs) Handles Label56.Click
         Dim apppath As String = Application.StartupPath()
+        Dim filePath As String = apppath + "\settings.pbcfg"
+        Using folderDialog As New FolderBrowserDialog()
+            folderDialog.Description = "Select a folder to export the settings file"
+            If folderDialog.ShowDialog() = DialogResult.OK Then
+                Dim selectedPath As String = folderDialog.SelectedPath
+                Dim destinationPath As String = Path.Combine(selectedPath, "settings.pbcfg")
+                File.Copy(filePath, destinationPath, True)
+                MessageBox.Show("Settings exported!", "Export Complete", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+        End Using
     End Sub
 
     Private Sub Label30_Click(sender As Object, e As EventArgs) Handles Label30.Click
@@ -248,5 +259,20 @@ Public Class prefer
             MessageBox.Show("Operation failed! Please consider reinstall resource.", "FAILED!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End Try
         MessageBox.Show("Operation completed!", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
+
+    Private Sub Label33_Click(sender As Object, e As EventArgs) Handles Label33.Click
+        Dim apppath As String = Application.StartupPath()
+        MessageBox.Show("Please make sure that settings are from same Builder version.", "Import Assistance", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        Dim destinationPath As String = apppath + "\settings.pbcfg"
+        Using openDialog As New OpenFileDialog()
+            openDialog.Title = "Select settings.pbcfg to import"
+            openDialog.Filter = "Settings File (*.pbcfg)|*.pbcfg"
+            If openDialog.ShowDialog() = DialogResult.OK Then
+                File.Copy(openDialog.FileName, destinationPath, True)
+                MessageBox.Show("Settings imported! Click OK to restart.", "Import Complete", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Application.Restart()
+            End If
+        End Using
     End Sub
 End Class

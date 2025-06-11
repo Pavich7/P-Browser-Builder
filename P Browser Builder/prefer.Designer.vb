@@ -35,6 +35,7 @@ Partial Class prefer
         Me.Label15 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label33 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
@@ -231,6 +232,7 @@ Partial Class prefer
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Label33)
         Me.TabPage1.Controls.Add(Me.Label4)
         Me.TabPage1.Controls.Add(Me.Label29)
         Me.TabPage1.Controls.Add(Me.Label30)
@@ -255,6 +257,19 @@ Partial Class prefer
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "General"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Label33
+        '
+        Me.Label33.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label33.AutoSize = True
+        Me.Label33.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label33.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label33.Location = New System.Drawing.Point(353, 200)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(57, 21)
+        Me.Label33.TabIndex = 78
+        Me.Label33.Text = "Import"
         '
         'Label4
         '
@@ -313,9 +328,9 @@ Partial Class prefer
         Me.Label57.ForeColor = System.Drawing.SystemColors.GrayText
         Me.Label57.Location = New System.Drawing.Point(22, 225)
         Me.Label57.Name = "Label57"
-        Me.Label57.Size = New System.Drawing.Size(237, 17)
+        Me.Label57.Size = New System.Drawing.Size(244, 17)
         Me.Label57.TabIndex = 73
-        Me.Label57.Text = "Show builder user data folder in Explorer."
+        Me.Label57.Text = "Import or export settings (restart required)."
         '
         'Label58
         '
@@ -324,9 +339,9 @@ Partial Class prefer
         Me.Label58.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label58.Location = New System.Drawing.Point(21, 200)
         Me.Label58.Name = "Label58"
-        Me.Label58.Size = New System.Drawing.Size(165, 21)
+        Me.Label58.Size = New System.Drawing.Size(117, 21)
         Me.Label58.TabIndex = 72
-        Me.Label58.Text = "Export builder settings"
+        Me.Label58.Text = "Builder settings"
         '
         'Label53
         '
@@ -979,4 +994,5 @@ Partial Class prefer
     Friend WithEvents Label4 As Label
     Friend WithEvents Label29 As Label
     Friend WithEvents Label30 As Label
+    Friend WithEvents Label33 As Label
 End Class

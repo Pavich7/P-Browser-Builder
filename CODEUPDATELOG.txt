@@ -1,11 +1,12 @@
 ﻿Builder Release 9.8.0
 
 ** Release Highlights **
+- [Preference]: New option to export or import Builder settings.
 
 ** Compatibility **
 - [✓]: This version still compatible with old resource.
 - [✓]: This version support saves from previous versions.
-- [✓]: This version support settings from previous versions.
+- [✕]: This version support settings from previous versions.
 
 ** Release notes **
 - [Software Update]: Checking for updates will also check for resource update.
@@ -14,3 +15,4 @@
 - [Core]: Updated Chromium to 137.0.7151.69.
 - [Builder]: Fix Builder can run more than one instances.
 - [Builder]: Fix blank project name in menu bar if app name is not specified.
+- [Low-level]: Implemented new settings system.
