@@ -402,6 +402,11 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = False
         apppath = Application.StartupPath()
+        If Process.GetProcessesByName(Process.GetCurrentProcess.ProcessName).Length > 1 Then
+            splash.Hide()
+            MessageBox.Show("P Browser Builder is already running!", "Already running", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Environment.Exit(0)
+        End If
         splash.Label1.Text = "Checking app structure..."
         'Init structure check
         If Not System.IO.Directory.Exists(apppath + "\assets") Then

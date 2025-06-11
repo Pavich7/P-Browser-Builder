@@ -12,3 +12,4 @@
 - [Software Update]: Rename tab from Builder Update to Software Update.
 - [Core]: Updated CefSharp to 137.0.100.
 - [Core]: Updated Chromium to 137.0.7151.69.
+- [Builder]: Fix Builder can run more than one instances.
