@@ -69,22 +69,11 @@ Public Class prefer
         Label21.Enabled = False
         Label45.Text = "Diagnostic Status: Stopped"
         Label42.Text = "Process ID: -"
-        Dim fileReader111 As System.IO.StreamReader
-        fileReader111 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.hidesp.pbcfg")
-        Dim stringReader111 As String
-        stringReader111 = fileReader111.ReadLine()
-        If stringReader111 = "True" Then
+        Dim hidesp As String = settings.load("hidesp")
+        If hidesp = "True" Then
             CheckBox2.Checked = True
         End If
-        fileReader111.Close()
-
-        Dim fileReader1 As System.IO.StreamReader
-        fileReader1 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.usageinterv.pbcfg")
-        Dim stringReader1 As String
-        stringReader1 = fileReader1.ReadLine()
-        TextBox2.Text = stringReader1
-        fileReader1.Close()
-
+        TextBox2.Text = settings.load("usageinterv")
         Dim pros As Process = Process.GetCurrentProcess()
         Dim demround1 As Double = pros.WorkingSet / 1024 / 1024
         demround1 = Math.Round(demround1, 2)
@@ -161,21 +150,13 @@ Public Class prefer
         If TextBox1.Text = "" Then
             MessageBox.Show("Please Enter URL!", "FAILED!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
-            Dim apppath As String = Application.StartupPath()
-            Dim pbcfg As String = apppath + "\statedata\setting.builder.resdlserver.pbcfg"
-            Dim objWriter As New System.IO.StreamWriter(pbcfg)
-            objWriter.Write(TextBox1.Text)
-            objWriter.Close()
+            settings.save("resdlserver", TextBox1.Text)
             MessageBox.Show("Success!", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
 
     Private Sub Label28_Click(sender As Object, e As EventArgs) Handles Label28.Click
-        Dim apppath As String = Application.StartupPath()
-        Dim pbcfg As String = apppath + "\statedata\setting.builder.resdlserver.pbcfg"
-        Dim objWriter As New System.IO.StreamWriter(pbcfg)
-        objWriter.Write("https://github.com/Pavich7/P-Browser-Builder-Resource/releases/latest/download/pbb-resource.zip")
-        objWriter.Close()
+        settings.save("resdlserver", "https://github.com/Pavich7/P-Browser-Builder-Resource/releases/latest/download/pbb-resource.zip")
         MessageBox.Show("Reset!", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
@@ -191,9 +172,7 @@ Public Class prefer
         Dim result As DialogResult = MessageBox.Show("Do you wish to reset all setting?" + vbNewLine + "This cannot be undone!", "You sure about this?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If (result = DialogResult.Yes) Then
             Dim apppath As String = Application.StartupPath()
-            Dim objWriter As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.inrsstate.pbcfg")
-            objWriter.Write("True")
-            objWriter.Close()
+            settings.save("inrsstate", "True")
             Application.Restart()
         End If
     End Sub
@@ -238,27 +217,19 @@ Public Class prefer
         If TextBox2.Text = "" Then
             MessageBox.Show("Please Enter value!", "FAILED!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
-            Dim apppath As String = Application.StartupPath()
-            Dim pbcfg As String = apppath + "\statedata\setting.builder.usageinterv.pbcfg"
-            Dim objWriter As New System.IO.StreamWriter(pbcfg)
-            objWriter.Write(TextBox2.Text)
-            objWriter.Close()
+            settings.save("usageinterv", TextBox2.Text)
             MessageBox.Show("Success! You may need to restart to apply the change.", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
 
     Private Sub Label53_Click(sender As Object, e As EventArgs) Handles Label53.Click
-        Dim apppath As String = Application.StartupPath()
-        Dim pbcfg As String = apppath + "\statedata\setting.builder.hidesp.pbcfg"
-        Dim objWriter As New System.IO.StreamWriter(pbcfg)
         If CheckBox2.Checked = True Then
-            objWriter.Write("True")
+            settings.save("hidesp", "True")
             MessageBox.Show("Success! Side panel will hide on startup. You may need to restart to make change.", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Else
-            objWriter.Write("False")
+            settings.save("hidesp", "False")
             MessageBox.Show("Success! Side panel will show on startup. You may need to restart to make change.", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
-        objWriter.Close()
     End Sub
 
     Private Sub Label56_Click(sender As Object, e As EventArgs) Handles Label56.Click

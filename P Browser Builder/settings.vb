@@ -3,7 +3,7 @@ Imports CefSharp.DevTools.CSS
 
 Module settings
 
-    'datacol
+    'datacol (deprecated, empty slot)
     'hidesp
     'infsstate
     'inrsstate

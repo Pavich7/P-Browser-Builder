@@ -37,10 +37,6 @@
         TabControl1.SelectedTab = TabPage1
     End Sub
 
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
-        MessageBox.Show("About data collection..." + vbNewLine + "Mandatory: Only collect data when first startup." + vbNewLine + "Optional: Collect data when every startup." + vbNewLine + "We are collecting your Builder Version, Hostname, IP Address.", "About data")
-    End Sub
-
     Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
         Dim result As DialogResult = MessageBox.Show("Do you wish to exit P Browser Builder?", "Confirm exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If (result = DialogResult.Yes) Then
@@ -57,21 +53,7 @@
 
     Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click, Label13.Click
         Dim apppath As String = Application.StartupPath()
-        If CheckBox1.Checked = False Then
-            Dim pbcfg1 As String = apppath + "\statedata\setting.builder.datacol.pbcfg"
-            Dim objWriter1 As New System.IO.StreamWriter(pbcfg1)
-            objWriter1.Write("False")
-            objWriter1.Close()
-        Else
-            Dim pbcfg11 As String = apppath + "\statedata\setting.builder.datacol.pbcfg"
-            Dim objWriter11 As New System.IO.StreamWriter(pbcfg11)
-            objWriter11.Write("True")
-            objWriter11.Close()
-        End If
-        Dim pbcfg As String = apppath + "\statedata\setting.builder.infsstate.pbcfg"
-        Dim objWriter As New System.IO.StreamWriter(pbcfg)
-        objWriter.Write("False")
-        objWriter.Close()
+        settings.save("infsstate", "False")
         welcome.Enabled = True
         Me.Close()
     End Sub

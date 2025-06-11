@@ -425,11 +425,6 @@ Public Class Form1
         End If
         splash.Label1.Text = "Loading app state..."
         'Reset state Check
-        Dim fileReader19 As System.IO.StreamReader
-        fileReader19 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.inrsstate.pbcfg")
-        Dim stringReader19 As String
-        stringReader19 = fileReader19.ReadLine()
-        fileReader19.Close()
         Button6.Visible = False
         CheckBox4.Visible = False
         PictureBox14.Enabled = False
@@ -446,7 +441,8 @@ Public Class Form1
         TabControl1.TabPages.Remove(TabPage6)
         TabControl1.TabPages.Remove(TabPage7)
         'Reset
-        If stringReader19 = "True" Then
+        Dim inrsstate = settings.load("inrsstate")
+        If inrsstate = "True" Then
             Me.Enabled = False
             Try
                 splash.Hide()
@@ -488,16 +484,12 @@ Public Class Form1
                         Application.Exit()
                     End If
                 Else
-                    Dim objWriter11 As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.inrsstate.pbcfg")
-                    objWriter11.Write("False")
-                    objWriter11.Close()
+                    settings.save("inrsstate", "False")
                     MessageBox.Show("Operation Aborted, Nothing Happened! Builder needs restart.", "Aborted!", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Application.Restart()
                 End If
             Catch ex As Exception
-                Dim objWriter111 As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.inrsstate.pbcfg")
-                objWriter111.Write("False")
-                objWriter111.Close()
+                settings.save("inrsstate", "False")
                 MessageBox.Show("Failed to reset. Builder needs restart." + vbNewLine + ex.Message, "Fatal Error!", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Application.Restart()
             End Try
@@ -537,10 +529,7 @@ Public Class Form1
             System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
             System.IO.Directory.Delete(apppath + "\statecache\buildcache\offlineweb", True)
             System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\offlineweb")
-            Dim fileReader1 As System.IO.StreamReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.usageinterv.pbcfg")
-            Dim stringReader1 As String = fileReader1.ReadLine()
-            Timer2.Interval = stringReader1
-            fileReader1.Close()
+            Timer2.Interval = settings.load("usageinterv")
             Button4.Enabled = False
             Button5.Enabled = False
             Dim rscheck As String = apppath + "\resource"
@@ -614,14 +603,12 @@ Public Class Form1
                         Panel4.Visible = True
                         Label14.Text = "New updates available! (" + obuiver + ")"
                     End If
-                    fileReader1.Close()
+                    fileReader11.Close()
                 Catch ex As Exception
                 End Try
             End If
             splash.Label1.Text = "Loading user preference..."
-            Dim fileReader111 As System.IO.StreamReader
-            fileReader111 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.hidesp.pbcfg")
-            Dim stringReader111 As String = fileReader111.ReadLine()
+            Dim hidesp As String = settings.load("hidesp")
             Dim cachecheck As String = apppath + "\statecache\updatecache\pbb-resource.zip"
             Button7.Enabled = False
             DevToolStripMenuItem.Visible = False
@@ -634,7 +621,7 @@ Public Class Form1
             ProgressBar3.Value = 0
             Label7.Visible = True
             ProgressBar1.Visible = True
-            If stringReader111 = "True" Then
+            If hidesp = "True" Then
                 SidePanelToolStripMenuItem.Checked = False
                 Me.MinimumSize = New Size(580, 560)
                 Panel6.Hide()
@@ -643,7 +630,6 @@ Public Class Form1
                 SidePanelToolStripMenuItem.Checked = True
                 TabControl1.Width = TabControl1.Width + 313
             End If
-            fileReader111.Close()
             Dim sizew As String = settings.load("winstatew")
             Dim sizeh As String = settings.load("winstateh")
             Me.Size = New Size(sizew, sizeh)
@@ -688,11 +674,6 @@ Public Class Form1
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Timer1.Stop()
-        'Dim fileReader01 As System.IO.StreamReader
-        'fileReader01 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.datacol.pbcfg")
-        'Dim stringReader01 As String
-        'stringReader01 = fileReader01.ReadLine()
-        'fileReader01.Close()
         If My.Application.CommandLineArgs.Count > 0 Then
             Dim FileNameOpenWith As String = My.Application.CommandLineArgs(0)
             If FileNameOpenWith = "--devmode" Then
@@ -723,12 +704,8 @@ Public Class Form1
         'Browser.Load("about:blank")
         'End If
         'fsstate
-        Dim fileReader0 As System.IO.StreamReader
-        fileReader0 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.infsstate.pbcfg")
-        Dim stringReader0 As String
-        stringReader0 = fileReader0.ReadLine()
-        fileReader0.Close()
-        If stringReader0 = "True" Then
+        Dim infsstate As String = settings.load("infsstate")
+        If infsstate = "True" Then
             Me.Enabled = False
             fsstate.Show()
         End If
@@ -805,11 +782,7 @@ Public Class Form1
             End If
             System.IO.Directory.Delete(apppath + "\statecache\updatecache", True)
             System.IO.Directory.CreateDirectory(apppath + "\statecache\updatecache")
-            Dim fileReader As System.IO.StreamReader
-            fileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\setting.builder.resdlserver.pbcfg")
-            Dim stringReader As String
-            stringReader = fileReader.ReadLine()
-            Dim strURL As String = stringReader
+            Dim strURL As String = settings.load("resdlserver")
             Using webcli As WebClient = New WebClient()
                 webcli.DownloadFile(strURL, apppath + "\statecache\updatecache\pbb-resource.zip")
             End Using
@@ -959,16 +932,11 @@ Public Class Form1
     End Sub
 
     Private Sub FToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FToolStripMenuItem.Click
-        Dim pbcfg As String = apppath + "\statedata\setting.builder.infsstate.pbcfg"
-        Dim objWriter As New System.IO.StreamWriter(pbcfg)
-        objWriter.Write("True")
-        objWriter.Close()
+        settings.save("infsstate", "True")
     End Sub
 
     Private Sub RestartInRestoreModeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RestartInRestoreModeToolStripMenuItem.Click
-        Dim objWriter As New System.IO.StreamWriter(apppath + "\statedata\setting.builder.inrsstate.pbcfg")
-        objWriter.Write("True")
-        objWriter.Close()
+        settings.save("inrsstate", "True")
         Application.Restart()
     End Sub
 
