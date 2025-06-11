@@ -467,10 +467,6 @@ Public Class Form1
                     Dim objWriter As New System.IO.StreamWriter(apppath + "\debug.log")
                     objWriter.Write("")
                     objWriter.Close()
-                    'Write default whats news state
-                    Dim objWriter1 As New System.IO.StreamWriter(apppath + "\wnannounce.pbstate")
-                    objWriter1.Write("True")
-                    objWriter1.Close()
                     'Write default autocfu state
                     Dim objWriter11 As New System.IO.StreamWriter(apppath + "\autocfu.pbstate")
                     objWriter11.Write("")
@@ -690,37 +686,12 @@ Public Class Form1
         Else
             welcome.Show()
         End If
-        'Sent analytics
-        'Dim regDate As Date = Date.Now()
-        'Dim strDate As String = regDate.ToString("ddMMMyyyy")
-        'Dim strHostName As String
-        'Dim strIPAddress As String
-        'strHostName = System.Net.Dns.GetHostName()
-        'strIPAddress = System.Net.Dns.GetHostEntry(strHostName).AddressList(0).ToString()
-        'If stringReader01 = "True" Then
-        'Browser.Load("http://pavichdev.ddns.net/api/v1-act/activate.php?ver=" + "PBrowserBuilder+startup+" + strDate + "+" + Application.ProductVersion + "+" + strHostName + "+" + strIPAddress)
-        'Snooze(1)
-        'Browser.Load("about:blank")
-        'End If
         'fsstate
         Dim infsstate As String = settings.load("infsstate")
         If infsstate = "True" Then
             Me.Enabled = False
             fsstate.Show()
         End If
-        'wnstate
-        'Dim fileReader110 As System.IO.StreamReader
-        'fileReader110 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\wnannounce.pbstate")
-        'Dim stringReader110 As String
-        'stringReader110 = fileReader110.ReadLine()
-        'fileReader110.Close()
-        'If stringReader110 = "True" Then
-        'whatsnew.Show()
-        'Dim pbcfg111 As String = apppath + "\wnannounce.pbstate"
-        'Dim objWriter111 As New System.IO.StreamWriter(pbcfg111)
-        'objWriter111.Write("False")
-        'objWriter111.Close()
-        'End If
         Dim rscheck As String = apppath + "\resource"
         If Not System.IO.Directory.Exists(rscheck) Then
             Label7.Text = "Not ready, resources required."
@@ -1005,13 +976,6 @@ Public Class Form1
         CheckBox5.Checked = False
         CheckBox6.Checked = False
         CheckBox7.Checked = False
-    End Sub
-
-    Private Sub ResetWhatsNewStateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetWhatsNewStateToolStripMenuItem.Click
-        Dim pbcfg1 As String = apppath + "\wnannounce.pbstate"
-        Dim objWriter1 As New System.IO.StreamWriter(pbcfg1)
-        objWriter1.Write("False")
-        objWriter1.Close()
     End Sub
 
     Private Sub Label37_Click(sender As Object, e As EventArgs) Handles Label37.Click

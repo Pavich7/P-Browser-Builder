@@ -75,7 +75,6 @@ Partial Class Form1
         Me.UnlockIncompleteFeatureToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ForceUnlockDisableButtonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ResetWhatsNewStateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResetCfustateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowSplashScreenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.KillSplashToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -612,7 +611,7 @@ Partial Class Form1
         '
         'DevToolStripMenuItem
         '
-        Me.DevToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UnlockIncompleteFeatureToolStripMenuItem, Me.ForceUnlockDisableButtonToolStripMenuItem, Me.FToolStripMenuItem, Me.ResetWhatsNewStateToolStripMenuItem, Me.ResetCfustateToolStripMenuItem, Me.ShowSplashScreenToolStripMenuItem, Me.KillSplashToolStripMenuItem, Me.RestartInRestoreModeToolStripMenuItem, Me.GoBackToDefaultToolStripMenuItem})
+        Me.DevToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UnlockIncompleteFeatureToolStripMenuItem, Me.ForceUnlockDisableButtonToolStripMenuItem, Me.FToolStripMenuItem, Me.ResetCfustateToolStripMenuItem, Me.ShowSplashScreenToolStripMenuItem, Me.KillSplashToolStripMenuItem, Me.RestartInRestoreModeToolStripMenuItem, Me.GoBackToDefaultToolStripMenuItem})
         Me.DevToolStripMenuItem.Name = "DevToolStripMenuItem"
         Me.DevToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
         Me.DevToolStripMenuItem.Text = "Develop"
@@ -635,13 +634,6 @@ Partial Class Form1
         Me.FToolStripMenuItem.Name = "FToolStripMenuItem"
         Me.FToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
         Me.FToolStripMenuItem.Text = "Fallback infs_state"
-        '
-        'ResetWhatsNewStateToolStripMenuItem
-        '
-        Me.ResetWhatsNewStateToolStripMenuItem.Enabled = False
-        Me.ResetWhatsNewStateToolStripMenuItem.Name = "ResetWhatsNewStateToolStripMenuItem"
-        Me.ResetWhatsNewStateToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
-        Me.ResetWhatsNewStateToolStripMenuItem.Text = "Reset whats new state"
         '
         'ResetCfustateToolStripMenuItem
         '
@@ -2767,7 +2759,6 @@ Partial Class Form1
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents ResetWhatsNewStateToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label37 As Label
     Friend WithEvents Label38 As Label
     Friend WithEvents Panel7 As Panel
