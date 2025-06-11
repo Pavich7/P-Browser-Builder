@@ -215,6 +215,7 @@
     <Compile Include="prefer.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="settings.vb" />
     <Compile Include="splash.Designer.vb">
       <DependentUpon>splash.vb</DependentUpon>
     </Compile>

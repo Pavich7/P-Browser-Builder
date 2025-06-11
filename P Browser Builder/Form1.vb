@@ -392,12 +392,8 @@ Public Class Form1
                 e.Cancel = True
             End If
         End If
-        Dim objWriterw As New System.IO.StreamWriter(apppath + "\statedata\state.builder.winstatew.pbcfg")
-        Dim objWriterh As New System.IO.StreamWriter(apppath + "\statedata\state.builder.winstateh.pbcfg")
-        objWriterw.Write(Me.Width)
-        objWriterh.Write(Me.Height)
-        objWriterw.Close()
-        objWriterh.Close()
+        settings.save("winstatew", Me.Width)
+        settings.save("winstateh", Me.Height)
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = False
@@ -648,13 +644,9 @@ Public Class Form1
                 TabControl1.Width = TabControl1.Width + 313
             End If
             fileReader111.Close()
-            Dim fileReaderw As System.IO.StreamReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\state.builder.winstatew.pbcfg")
-            Dim stringReaderw As String = fileReaderw.ReadLine()
-            Dim fileReaderh As System.IO.StreamReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\statedata\state.builder.winstateh.pbcfg")
-            Dim stringReaderh As String = fileReaderh.ReadLine()
-            Me.Size = New Size(stringReaderw, stringReaderh)
-            fileReaderh.Close()
-            fileReaderw.Close()
+            Dim sizew As String = settings.load("winstatew")
+            Dim sizeh As String = settings.load("winstateh")
+            Me.Size = New Size(sizew, sizeh)
             Me.WindowState = FormWindowState.Minimized
             Timer3.Start()
             Timer1.Start()
