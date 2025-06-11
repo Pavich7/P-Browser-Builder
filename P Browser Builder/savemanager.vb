@@ -101,7 +101,11 @@ Module savemanager
                 If Form1.TextBox6.Text IsNot "" Then
                     Form1.CheckBox9.Checked = True
                 End If
-                Form1.ProjnameToolStripMenuItem.Text = Form1.TextBox2.Text
+                If Form1.TextBox2.Text = "" Then
+                    Form1.ProjnameToolStripMenuItem.Text = "Untitled Project"
+                Else
+                    Form1.ProjnameToolStripMenuItem.Text = Form1.TextBox2.Text
+                End If
                 Dim IcoLoc As String = fileReader.ReadLine()
                 If IcoLoc IsNot "" Then
                     Try
@@ -180,7 +184,11 @@ Module savemanager
                     Snooze(3)
                     Form1.ProgressBar1.Value = 0
                     Form1.Label7.Text = "Ready to build"
-                    Form1.ProjnameToolStripMenuItem.Text = Form1.TextBox2.Text
+                    If Form1.TextBox2.Text = "" Then
+                        Form1.ProjnameToolStripMenuItem.Text = "Untitled Project"
+                    Else
+                        Form1.ProjnameToolStripMenuItem.Text = Form1.TextBox2.Text
+                    End If
                 End If
             End If
         Catch ex As Exception

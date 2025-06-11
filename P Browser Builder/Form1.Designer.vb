@@ -76,6 +76,7 @@ Partial Class Form1
         Me.ForceUnlockDisableButtonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResetWhatsNewStateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ResetCfustateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowSplashScreenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.KillSplashToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RestartInRestoreModeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -245,7 +246,6 @@ Partial Class Form1
         Me.buildworker = New System.ComponentModel.BackgroundWorker()
         Me.buildfinalworker = New System.ComponentModel.BackgroundWorker()
         Me.cfuworker = New System.ComponentModel.BackgroundWorker()
-        Me.ResetCfustateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -642,6 +642,12 @@ Partial Class Form1
         Me.ResetWhatsNewStateToolStripMenuItem.Name = "ResetWhatsNewStateToolStripMenuItem"
         Me.ResetWhatsNewStateToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
         Me.ResetWhatsNewStateToolStripMenuItem.Text = "Reset whats new state"
+        '
+        'ResetCfustateToolStripMenuItem
+        '
+        Me.ResetCfustateToolStripMenuItem.Name = "ResetCfustateToolStripMenuItem"
+        Me.ResetCfustateToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.ResetCfustateToolStripMenuItem.Text = "Reset cfu_state"
         '
         'ShowSplashScreenToolStripMenuItem
         '
@@ -2587,12 +2593,6 @@ Partial Class Form1
         '
         'cfuworker
         '
-        '
-        'ResetCfustateToolStripMenuItem
-        '
-        Me.ResetCfustateToolStripMenuItem.Name = "ResetCfustateToolStripMenuItem"
-        Me.ResetCfustateToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
-        Me.ResetCfustateToolStripMenuItem.Text = "Reset cfu_state"
         '
         'Form1
         '
