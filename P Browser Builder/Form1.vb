@@ -598,8 +598,6 @@ Public Class Form1
                 End Try
             End If
             splash.Label1.Text = "Loading user preference..."
-            Dim hidesp As String = settings.load("hidesp")
-            Dim cachecheck As String = apppath + "\statecache\updatecache\pbb-resource.zip"
             Button7.Enabled = False
             DevToolStripMenuItem.Visible = False
             Label23.Text = "Begin Test to start diagnostic..."
@@ -611,6 +609,7 @@ Public Class Form1
             ProgressBar3.Value = 0
             Label7.Visible = True
             ProgressBar1.Visible = True
+            Dim hidesp As String = settings.load("hidesp")
             If hidesp = "True" Then
                 SidePanelToolStripMenuItem.Checked = False
                 Me.MinimumSize = New Size(580, 560)
