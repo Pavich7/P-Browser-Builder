@@ -716,7 +716,7 @@ Public Class Form1
                 Dim fecha = IO.File.GetLastWriteTime(Assembly.GetExecutingAssembly().Location)
                 DevToolStripMenuItem.Visible = True
                 Label70.Visible = True
-                Label70.Text = "DEV_ENV BUILT: " + fecha + " CEFPROD:" + AssemblyInfo.AssemblyVersion
+                Label70.Text = "Developer Environment - Built: " + fecha + " CefProd:" + AssemblyInfo.AssemblyVersion
                 fsstate.Label13.Visible = True
                 welcome.Show()
             Else

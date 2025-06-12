@@ -2493,11 +2493,11 @@ Partial Class Form1
         '
         Me.Label70.AutoSize = True
         Me.Label70.BackColor = System.Drawing.Color.Red
-        Me.Label70.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label70.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.Label70.ForeColor = System.Drawing.Color.White
-        Me.Label70.Location = New System.Drawing.Point(470, 2)
+        Me.Label70.Location = New System.Drawing.Point(472, 2)
         Me.Label70.Name = "Label70"
-        Me.Label70.Size = New System.Drawing.Size(72, 20)
+        Me.Label70.Size = New System.Drawing.Size(66, 19)
         Me.Label70.TabIndex = 20
         Me.Label70.Text = "devmode"
         Me.ToolTip1.SetToolTip(Me.Label70, "In dev env.")
