@@ -70,10 +70,6 @@ Public Class prefer
         Label21.Enabled = False
         Label45.Text = "Diagnostic Status: Stopped"
         Label42.Text = "Process ID: -"
-        Dim hidesp As String = settings.load("hidesp")
-        If hidesp = "True" Then
-            CheckBox2.Checked = True
-        End If
         TextBox2.Text = settings.load("usageinterv")
         Dim pros As Process = Process.GetCurrentProcess()
         Dim demround1 As Double = pros.WorkingSet / 1024 / 1024
@@ -220,16 +216,6 @@ Public Class prefer
         Else
             settings.save("usageinterv", TextBox2.Text)
             MessageBox.Show("Success! You may need to restart to apply the change.", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        End If
-    End Sub
-
-    Private Sub Label53_Click(sender As Object, e As EventArgs) Handles Label53.Click
-        If CheckBox2.Checked = True Then
-            settings.save("hidesp", "True")
-            MessageBox.Show("Success! Side panel will hide on startup. You may need to restart to make change.", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Else
-            settings.save("hidesp", "False")
-            MessageBox.Show("Success! Side panel will show on startup. You may need to restart to make change.", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
 

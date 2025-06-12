@@ -14,6 +14,7 @@
 - [Software Update]: Rename tab from Builder Update to Software Update.
 - [Core]: Updated CefSharp to 137.0.100.
 - [Core]: Updated Chromium to 137.0.7151.69.
+- [Preference]: Removed always hide side panel in general.
 - [Builder]: Fix Builder can run more than one instances.
 - [Builder]: Fix blank project name in menu bar if app name is not specified.
 - [Low-level]: Implemented new settings system.

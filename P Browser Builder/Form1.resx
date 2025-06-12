@@ -704,12 +704,16 @@
 - [Software Update]: Rename tab from Builder Update to Software Update.
 - [Core]: Updated CefSharp to 137.0.100.
 - [Core]: Updated Chromium to 137.0.7151.69.
+- [Preference]: Removed always hide side panel in general.
 - [Builder]: Fix Builder can run more than one instances.
 - [Builder]: Fix blank project name in menu bar if app name is not specified.
 - [Low-level]: Implemented new settings system.</value>
   </data>
   <metadata name="dlworker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>666, 9</value>
+  </metadata>
+  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>766, 9</value>
   </metadata>
   <metadata name="FolderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>866, 9</value>
