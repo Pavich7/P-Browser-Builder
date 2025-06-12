@@ -467,10 +467,6 @@ Public Class Form1
                     Dim objWriter As New System.IO.StreamWriter(apppath + "\debug.log")
                     objWriter.Write("")
                     objWriter.Close()
-                    'Write default autocfu state
-                    Dim objWriter11 As New System.IO.StreamWriter(apppath + "\autocfu.pbstate")
-                    objWriter11.Write("")
-                    objWriter11.Close()
                     MessageBox.Show("Operation Completed!", "Success!")
                     Dim result11 As DialogResult = MessageBox.Show("Do you wish to restart?" + vbNewLine + "YES to restart, NO to shutdown.", "Restart?", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                     If (result11 = DialogResult.Yes) Then
@@ -491,12 +487,11 @@ Public Class Form1
         Else
             'Check autocfu
             Dim autocfu As Boolean = False
-            Dim filePath As String = apppath + "\autocfu.pbstate"
             Dim currentDate As String = DateTime.Now.ToString("yyyy-MM-dd")
-            Dim lastCheckedDate As String = If(File.Exists(filePath), File.ReadAllText(filePath).Trim(), "")
+            Dim lastCheckedDate As String = settings.load("autocfu")
             If lastCheckedDate <> currentDate Then
                 autocfu = True
-                File.WriteAllText(filePath, currentDate)
+                settings.save("autocfu", currentDate)
             End If
             splash.Label1.Text = "Initializing core..."
             'Init Cef
@@ -1430,7 +1425,6 @@ Public Class Form1
     End Sub
 
     Private Sub ResetCfustateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetCfustateToolStripMenuItem.Click
-        Dim filePath As String = apppath + "\autocfu.pbstate"
-        File.WriteAllText(filePath, "")
+        settings.save("autocfu", "")
     End Sub
 End Class

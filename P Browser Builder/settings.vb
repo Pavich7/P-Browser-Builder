@@ -11,6 +11,7 @@ Module settings
     'usageinterv
     'winstateh
     'winstatew
+    'autocfu
 
     Dim apppath = Application.StartupPath
     Dim filePath As String = apppath + "\settings.pbcfg"
@@ -31,8 +32,8 @@ Module settings
             lines(6) = value
         ElseIf slotname = "winstatew" Then
             lines(7) = value
-        Else
-            MessageBox.Show("Invalid saveslot!")
+        ElseIf slotname = "autocfu" Then
+            lines(8) = value
         End If
         File.WriteAllLines(filePath, lines)
     End Sub
@@ -56,8 +57,8 @@ Module settings
             value = lines(6)
         ElseIf slotname = "winstatew" Then
             value = lines(7)
-        Else
-            MessageBox.Show("Invalid loadslot!")
+        ElseIf slotname = "autocfu" Then
+            value = lines(8)
         End If
         Return value
     End Function
