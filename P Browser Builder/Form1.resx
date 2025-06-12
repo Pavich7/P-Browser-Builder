@@ -705,6 +705,7 @@
 - [Core]: Updated CefSharp to 137.0.100.
 - [Core]: Updated Chromium to 137.0.7151.69.
 - [Preference]: Removed always hide side panel in general.
+- [Preference]: Added confirmation dialog before reset test app.
 - [Builder]: Fix Builder can run more than one instances.
 - [Builder]: Fix blank project name in menu bar if app name is not specified.
 - [Low-level]: Implemented new settings system.</value>

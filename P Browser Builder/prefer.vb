@@ -234,17 +234,19 @@ Public Class prefer
     End Sub
 
     Private Sub Label30_Click(sender As Object, e As EventArgs) Handles Label30.Click
-        MessageBox.Show("Builder may freeze temporarily. Please wait until the operation is complete.", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Dim apppath As String = Application.StartupPath()
-        Try
-            System.IO.Directory.Delete(apppath + "\resource\testspace", True)
-            Dim zipPath1 As String = apppath + "\resource\resourcepack\freshapp.zip"
-            Dim extractPath1 As String = apppath + "\resource\testspace"
-            ZipFile.ExtractToDirectory(zipPath1, extractPath1)
-        Catch ex As Exception
-            MessageBox.Show("Operation failed! Please consider reinstall resource.", "FAILED!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        End Try
-        MessageBox.Show("Operation completed!", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Dim result As DialogResult = MessageBox.Show("Builder may freeze temporarily. Please wait until the operation is complete. Do you want to reset?", "Warning!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+        If (result = DialogResult.Yes) Then
+            Dim apppath As String = Application.StartupPath()
+            Try
+                System.IO.Directory.Delete(apppath + "\resource\testspace", True)
+                Dim zipPath1 As String = apppath + "\resource\resourcepack\freshapp.zip"
+                Dim extractPath1 As String = apppath + "\resource\testspace"
+                ZipFile.ExtractToDirectory(zipPath1, extractPath1)
+            Catch ex As Exception
+                MessageBox.Show("Operation failed! Please consider reinstall resource.", "FAILED!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            End Try
+            MessageBox.Show("Operation completed!", "OK!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
     End Sub
 
     Private Sub Label33_Click(sender As Object, e As EventArgs) Handles Label33.Click
