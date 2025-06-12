@@ -12,6 +12,10 @@ Module settings
     'winstateh
     'winstatew
     'autocfu
+    'designview
+    'startlog
+    'actiontoolbox
+    'navigationbar
 
     Dim apppath = Application.StartupPath
     Dim filePath As String = apppath + "\settings.pbcfg"
@@ -34,6 +38,14 @@ Module settings
             lines(7) = value
         ElseIf slotname = "autocfu" Then
             lines(8) = value
+        ElseIf slotname = "designview" Then
+            lines(9) = value
+        ElseIf slotname = "startlog" Then
+            lines(10) = value
+        ElseIf slotname = "actiontoolbox" Then
+            lines(11) = value
+        ElseIf slotname = "navigationbar" Then
+            lines(12) = value
         End If
         File.WriteAllLines(filePath, lines)
     End Sub
@@ -59,6 +71,14 @@ Module settings
             value = lines(7)
         ElseIf slotname = "autocfu" Then
             value = lines(8)
+        ElseIf slotname = "designview" Then
+            value = lines(9)
+        ElseIf slotname = "startlog" Then
+            value = lines(10)
+        ElseIf slotname = "actiontoolbox" Then
+            value = lines(11)
+        ElseIf slotname = "navigationbar" Then
+            value = lines(12)
         End If
         Return value
     End Function

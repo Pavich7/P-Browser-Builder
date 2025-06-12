@@ -2,6 +2,7 @@
 
 ** Release Highlights **
 - [Preference]: New option to export or import Builder settings.
+- [Builder]: Builder can now remember View menu state after restart.
 
 ** Compatibility **
 - [✓]: This version still compatible with old resource.

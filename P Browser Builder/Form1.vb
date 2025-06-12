@@ -394,6 +394,31 @@ Public Class Form1
         End If
         settings.save("winstatew", Me.Width)
         settings.save("winstateh", Me.Height)
+        If SidePanelToolStripMenuItem.Checked = True Then
+            settings.save("hidesp", "False")
+        Else
+            settings.save("hidesp", "True")
+        End If
+        If DesignViewToolStripMenuItem.Checked = True Then
+            settings.save("designview", "True")
+        Else
+            settings.save("designview", "False")
+        End If
+        If StartLogToolStripMenuItem.Checked = True Then
+            settings.save("startlog", "True")
+        Else
+            settings.save("startlog", "False")
+        End If
+        If ActionToolboxToolStripMenuItem.Checked = True Then
+            settings.save("actiontoolbox", "True")
+        Else
+            settings.save("actiontoolbox", "False")
+        End If
+        If NavigationBarToolStripMenuItem.Checked = True Then
+            settings.save("navigationbar", "True")
+        Else
+            settings.save("navigationbar", "False")
+        End If
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = False
@@ -609,8 +634,7 @@ Public Class Form1
             ProgressBar3.Value = 0
             Label7.Visible = True
             ProgressBar1.Visible = True
-            Dim hidesp As String = settings.load("hidesp")
-            If hidesp = "True" Then
+            If settings.load("hidesp") = "True" Then
                 SidePanelToolStripMenuItem.Checked = False
                 Me.MinimumSize = New Size(580, 560)
                 Panel6.Hide()
@@ -618,6 +642,29 @@ Public Class Form1
             Else
                 SidePanelToolStripMenuItem.Checked = True
                 TabControl1.Width = TabControl1.Width + 313
+            End If
+            If settings.load("designview") = "False" Then
+                TabControl1.TabPages.Remove(TabPage1)
+                DesignViewToolStripMenuItem.Checked = False
+            End If
+            If settings.load("startlog") = "False" Then
+                TabControl1.TabPages.Remove(TabPage2)
+                StartLogToolStripMenuItem.Checked = False
+            End If
+            If settings.load("actiontoolbox") = "False" Then
+                Panel7.Visible = False
+                Me.WindowState = FormWindowState.Normal
+                Me.Size = New Size(1232, 646)
+                Panel10.Height = 500
+                ActionToolboxToolStripMenuItem.Checked = False
+            End If
+            If settings.load("navigationbar") = "False" Then
+                PictureBox17.Visible = False
+                PictureBox18.Visible = False
+                Label22.Visible = False
+                PictureBox11.Visible = False
+                PictureBox16.Visible = False
+                NavigationBarToolStripMenuItem.Checked = False
             End If
             Dim sizew As String = settings.load("winstatew")
             Dim sizeh As String = settings.load("winstateh")
