@@ -492,13 +492,8 @@ Public Class Form1
                     Dim objWriter As New System.IO.StreamWriter(apppath + "\debug.log")
                     objWriter.Write("")
                     objWriter.Close()
-                    MessageBox.Show("Operation Completed!", "Success!")
-                    Dim result11 As DialogResult = MessageBox.Show("Do you wish to restart?" + vbNewLine + "YES to restart, NO to shutdown.", "Restart?", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-                    If (result11 = DialogResult.Yes) Then
-                        Application.Restart()
-                    Else
-                        Application.Exit()
-                    End If
+                    MessageBox.Show("Operation Completed! Builder will shutdown.", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Environment.Exit(0)
                 Else
                     settings.save("inrsstate", "False")
                     MessageBox.Show("Operation Aborted, Nothing Happened! Builder needs restart.", "Aborted!", MessageBoxButtons.OK, MessageBoxIcon.Information)
