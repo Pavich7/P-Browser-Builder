@@ -43,7 +43,7 @@ Partial Class splash
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label1.Cursor = System.Windows.Forms.Cursors.Default
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(18, 409)
         Me.Label1.Name = "Label1"
@@ -59,7 +59,7 @@ Partial Class splash
         Me.ClientSize = New System.Drawing.Size(722, 445)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox3)
-        Me.Cursor = System.Windows.Forms.Cursors.WaitCursor
+        Me.Cursor = System.Windows.Forms.Cursors.AppStarting
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False

@@ -18,4 +18,5 @@
 - [Preference]: Added confirmation dialog before reset test app.
 - [Builder]: Fix Builder can run more than one instances.
 - [Builder]: Fix blank project name in menu bar if app name is not specified.
+- [Splash Screen]: Loading mouse cursor will appear more responsive.
 - [Low-level]: Implemented new settings system.
