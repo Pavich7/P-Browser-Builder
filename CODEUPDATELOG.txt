@@ -16,6 +16,8 @@
 - [Core]: Updated Chromium to 137.0.7151.69.
 - [Preference]: Removed always hide side panel in general.
 - [Preference]: Added confirmation dialog before reset test app.
+- [Builder]: Rename Open Remote Debugging in Preview Menu to Open DevTools.
+- [Builder]: Minimal User Interface improvements.
 - [Builder]: Fix Builder can run more than one instances.
 - [Builder]: Fix blank project name in menu bar if app name is not specified.
 - [Splash Screen]: Loading mouse cursor will appear more responsive.
