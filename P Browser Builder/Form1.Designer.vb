@@ -41,6 +41,7 @@ Partial Class Form1
         Me.StartLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ActionToolboxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NavigationBarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
         Me.EnlargeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BuildToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BuildProjectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -245,7 +246,6 @@ Partial Class Form1
         Me.buildworker = New System.ComponentModel.BackgroundWorker()
         Me.buildfinalworker = New System.ComponentModel.BackgroundWorker()
         Me.cfuworker = New System.ComponentModel.BackgroundWorker()
-        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -378,7 +378,7 @@ Partial Class Form1
         Me.SidePanelToolStripMenuItem.CheckOnClick = True
         Me.SidePanelToolStripMenuItem.Name = "SidePanelToolStripMenuItem"
         Me.SidePanelToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
-        Me.SidePanelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SidePanelToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
         Me.SidePanelToolStripMenuItem.Text = "Side Panel"
         '
         'DesignViewToolStripMenuItem
@@ -387,7 +387,7 @@ Partial Class Form1
         Me.DesignViewToolStripMenuItem.CheckOnClick = True
         Me.DesignViewToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.DesignViewToolStripMenuItem.Name = "DesignViewToolStripMenuItem"
-        Me.DesignViewToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DesignViewToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
         Me.DesignViewToolStripMenuItem.Text = "Design View"
         '
         'StartLogToolStripMenuItem
@@ -396,7 +396,7 @@ Partial Class Form1
         Me.StartLogToolStripMenuItem.CheckOnClick = True
         Me.StartLogToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.StartLogToolStripMenuItem.Name = "StartLogToolStripMenuItem"
-        Me.StartLogToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.StartLogToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
         Me.StartLogToolStripMenuItem.Text = "Start Log"
         '
         'ActionToolboxToolStripMenuItem
@@ -405,7 +405,7 @@ Partial Class Form1
         Me.ActionToolboxToolStripMenuItem.CheckOnClick = True
         Me.ActionToolboxToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.ActionToolboxToolStripMenuItem.Name = "ActionToolboxToolStripMenuItem"
-        Me.ActionToolboxToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ActionToolboxToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
         Me.ActionToolboxToolStripMenuItem.Text = "Action Toolbox"
         '
         'NavigationBarToolStripMenuItem
@@ -414,14 +414,19 @@ Partial Class Form1
         Me.NavigationBarToolStripMenuItem.CheckOnClick = True
         Me.NavigationBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.NavigationBarToolStripMenuItem.Name = "NavigationBarToolStripMenuItem"
-        Me.NavigationBarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.NavigationBarToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
         Me.NavigationBarToolStripMenuItem.Text = "Navigation Bar"
+        '
+        'ToolStripSeparator8
+        '
+        Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(166, 6)
         '
         'EnlargeToolStripMenuItem
         '
         Me.EnlargeToolStripMenuItem.CheckOnClick = True
         Me.EnlargeToolStripMenuItem.Name = "EnlargeToolStripMenuItem"
-        Me.EnlargeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EnlargeToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
         Me.EnlargeToolStripMenuItem.Text = "Enlarge Tab View"
         '
         'BuildToolStripMenuItem
@@ -475,26 +480,26 @@ Partial Class Form1
         Me.ReloadPreviewToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.reload
         Me.ReloadPreviewToolStripMenuItem.Name = "ReloadPreviewToolStripMenuItem"
         Me.ReloadPreviewToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5
-        Me.ReloadPreviewToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.ReloadPreviewToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
         Me.ReloadPreviewToolStripMenuItem.Text = "Reload Preview"
         '
         'OpenRemoteDebuggingToolStripMenuItem
         '
         Me.OpenRemoteDebuggingToolStripMenuItem.Name = "OpenRemoteDebuggingToolStripMenuItem"
-        Me.OpenRemoteDebuggingToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.OpenRemoteDebuggingToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
         Me.OpenRemoteDebuggingToolStripMenuItem.Text = "Open DevTools"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(206, 6)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(170, 6)
         '
         'DebugLogToolStripMenuItem
         '
         Me.DebugLogToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CefSharpLogToolStripMenuItem, Me.ChromiumLogToolStripMenuItem})
         Me.DebugLogToolStripMenuItem.Image = Global.P_Browser_Builder.My.Resources.Resources.bug
         Me.DebugLogToolStripMenuItem.Name = "DebugLogToolStripMenuItem"
-        Me.DebugLogToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.DebugLogToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
         Me.DebugLogToolStripMenuItem.Text = "Debug Log"
         '
         'CefSharpLogToolStripMenuItem
@@ -2586,11 +2591,6 @@ Partial Class Form1
         '
         'cfuworker
         '
-        '
-        'ToolStripSeparator8
-        '
-        Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(177, 6)
         '
         'Form1
         '
