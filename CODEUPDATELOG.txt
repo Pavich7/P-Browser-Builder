@@ -1,26 +1,12 @@
-﻿Builder Release 9.8.0
+﻿Builder Release 9.8.1
 
 ** Release Highlights **
-- [Preference]: New option to export or import Builder settings.
-- [Builder]: Builder can now remember View menu state after restart.
 
 ** Compatibility **
 - [✓]: This version still compatible with old resource.
 - [✓]: This version support saves from previous versions.
-- [✕]: This version support settings from previous versions.
+- [✓]: This version support settings from previous versions.
 
 ** Release notes **
-- [Software Update]: Checking for updates will also check for resource update.
-- [Software Update]: Rename tab from Builder Update to Software Update.
-- [Core]: Updated CefSharp to 137.0.100.
-- [Core]: Updated Chromium to 137.0.7151.69.
-- [Preference]: Removed always hide side panel in general.
-- [Preference]: Added confirmation dialog before reset test app.
-- [Builder]: Rename Open Remote Debugging in Preview Menu to Open DevTools.
-- [Builder]: Minimal User Interface improvements.
-- [Builder]: Fix Builder can run more than one instances.
-- [Builder]: Fix blank project name in menu bar if app name is not specified.
-- [Builder]: Fix fatal error after reset Builder by removing option to restart.
-- [Splash Screen]: Loading mouse cursor will appear more responsive.
-- [Low-level]: Implemented new settings system.
-- [Low-level]: Updated Visual C++ Redistributable to 14.44.35208.0
+- [Core]: Updated CefSharp to 138.0.170.
+- [Core]: Updated Chromium to 138.0.7204.97
