@@ -1,6 +1,7 @@
 ﻿Builder Release 9.8.1
 
 ** Release Highlights **
+- [About]: New redesigned About page design.
 
 ** Compatibility **
 - [✓]: This version still compatible with old resource.

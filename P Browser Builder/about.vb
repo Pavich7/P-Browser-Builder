@@ -8,10 +8,6 @@
         Process.Start("http://github.com/Pavich7/P-Browser-Builder/")
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-        Process.Start("http://github.com/Pavich7/")
-    End Sub
-
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
         Process.Start("http://github.com/Pavich7/P-Browser-Builder/blob/master/LICENSE.md")
     End Sub
