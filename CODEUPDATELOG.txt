@@ -1,7 +1,6 @@
-﻿Builder Release 9.8.1
+﻿Builder Release 9.8.2
 
 ** Release Highlights **
-- [About]: New redesigned About page design.
 
 ** Compatibility **
 - [✓]: This version still compatible with old resource.
@@ -9,5 +8,5 @@
 - [✓]: This version support settings from previous versions.
 
 ** Release notes **
-- [Core]: Updated CefSharp to 138.0.170.
-- [Core]: Updated Chromium to 138.0.7204.97
+- [Core]: Updated CefSharp to 139.0.280
+- [Core]: Updated Chromium to 139.0.7258.139
