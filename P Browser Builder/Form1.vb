@@ -1301,19 +1301,23 @@ Public Class Form1
         End If
         bfileReader.Close()
         'resvercheck
-        Dim rfileReader As System.IO.StreamReader
-        rfileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\version.txt")
-        Dim rstringReader As String = rfileReader.ReadLine()
-        If oresver.Contains(rstringReader) Then
-            Label20.Visible = False
-            Label18.Visible = False
-        Else
-            Label20.Visible = True
-            Label18.Visible = True
-            Label20.Text = "Resource update available! (" + oresver + ")"
-            Label18.Text = "    Update"
+        Dim rscheck As String = apppath + "\resource"
+        splash.Label1.Text = "Checking for resource updates..."
+        If System.IO.Directory.Exists(rscheck) Then
+            Dim rfileReader As System.IO.StreamReader
+            rfileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\version.txt")
+            Dim rstringReader As String = rfileReader.ReadLine()
+            If oresver.Contains(rstringReader) Then
+                Label20.Visible = False
+                Label18.Visible = False
+            Else
+                Label20.Visible = True
+                Label18.Visible = True
+                Label20.Text = "Resource update available! (" + oresver + ")"
+                Label18.Text = "    Update"
+            End If
+            rfileReader.Close()
         End If
-        rfileReader.Close()
 
         ProgressBar1.Style = ProgressBarStyle.Blocks
         Label7.Text = "Ready to build"
