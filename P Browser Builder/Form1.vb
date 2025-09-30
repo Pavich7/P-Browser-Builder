@@ -1301,9 +1301,7 @@ Public Class Form1
         End If
         bfileReader.Close()
         'resvercheck
-        Dim rscheck As String = apppath + "\resource"
-        splash.Label1.Text = "Checking for resource updates..."
-        If System.IO.Directory.Exists(rscheck) Then
+        If System.IO.Directory.Exists(apppath + "\resource") Then
             Dim rfileReader As System.IO.StreamReader
             rfileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\resource\version.txt")
             Dim rstringReader As String = rfileReader.ReadLine()
