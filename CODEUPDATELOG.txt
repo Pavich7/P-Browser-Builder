@@ -1,4 +1,4 @@
-﻿Builder Release 9.8.2
+﻿Builder Release 9.8.3
 
 ** Release Highlights **
 
@@ -8,6 +8,5 @@
 - [✓]: This version support settings from previous versions.
 
 ** Release notes **
-- [Software Update]: Fix crash while checking for update when no resource installed.
-- [Core]: Updated CefSharp to 139.0.280
-- [Core]: Updated Chromium to 139.0.7258.139
+- [Core]: Updated CefSharp to 140.1.140
+- [Core]: Updated Chromium to 140.0.7339.185
