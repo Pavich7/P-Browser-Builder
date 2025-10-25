@@ -697,7 +697,8 @@
 
 ** Release notes **
 - [Core]: Updated CefSharp to 140.1.140
-- [Core]: Updated Chromium to 140.0.7339.185</value>
+- [Core]: Updated Chromium to 140.0.7339.185
+- [Low-level]: Updated Visual C++ Redistributable to 14.44.35211.0</value>
   </data>
   <metadata name="dlworker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>666, 9</value>
