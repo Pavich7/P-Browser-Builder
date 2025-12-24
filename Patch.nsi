@@ -25,7 +25,7 @@
 ; --------------------------------
 ; Pages
   !insertmacro MUI_PAGE_WELCOME
-  !insertmacro MUI_PAGE_LICENSE "C:\Users\Pavich\Desktop\updpbb\eula.txt"
+  !insertmacro MUI_PAGE_LICENSE "C:\Users\phavi\Desktop\updpbb\eula.txt"
   !insertmacro MUI_PAGE_DIRECTORY
   !insertmacro MUI_PAGE_INSTFILES
   !insertmacro MUI_PAGE_FINISH
@@ -49,14 +49,12 @@ Section "P Browser Installer" SecDummy
   FileOpen $0 "$INSTDIR\metadata\version.txt" r
   FileRead $0 $1
   FileClose $0
-  StrCmp $1 "9.8.3" +3
+  StrCmp $1 "9.8.4" +3
   MessageBox MB_OK "Error! Patch is not supported in the currently installed version."
   Abort
 
   ; ADD YOUR OWN FILES HERE...
-  File /r "C:\Users\Pavich\Desktop\updpbb\*"
-
-  ; ExecWait '"$INSTDIR\assets\redist\VC_redist.x64.exe"  /install /quiet /norestart'
+  File /r "C:\Users\phavi\Desktop\updpbb\*"
 
 SectionEnd
 

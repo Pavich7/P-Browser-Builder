@@ -25,7 +25,7 @@
 ; --------------------------------
 ; Pages
   !insertmacro MUI_PAGE_WELCOME
-  !insertmacro MUI_PAGE_LICENSE "C:\Users\Pavich\Desktop\inspbb\eula.txt"
+  !insertmacro MUI_PAGE_LICENSE "C:\Users\phavi\Desktop\inspbb\eula.txt"
   !insertmacro MUI_PAGE_DIRECTORY
   !insertmacro MUI_PAGE_INSTFILES
   !insertmacro MUI_PAGE_FINISH
@@ -46,8 +46,21 @@ Section "P Browser Installer" SecDummy
   SetOutPath "$INSTDIR"
   
   ; ADD YOUR OWN FILES HERE...
-  File /r "C:\Users\Pavich\Desktop\inspbb\*"
-  ExecWait '"$INSTDIR\assets\redist\VC_redist.x64.exe"  /install /quiet /norestart'
+  File /r "C:\Users\phavi\Desktop\inspbb\*"
+  
+  ; Check registry vc runtime
+  ReadRegDWORD $R0 HKLM "SOFTWARE\Microsoft\VisualStudio\14.0\VC\Runtimes\x64" "Installed"
+  StrCmp $R0 1 skip_vcredist
+
+  ; Not installed > download and install
+  inetc::get /popup /caption "Downloading VC++ Redistributable..." \
+    "https://aka.ms/vc14/vc_redist.x64.exe" \
+    "$TEMP\vc_redist.x64.exe"
+  Pop $0
+
+  ExecWait '"$TEMP\vc_redist.x64.exe"'
+
+  skip_vcredist:
 
   ; Store installation folder
   WriteRegStr HKCU "Software\P Browser Builder" "" $INSTDIR
