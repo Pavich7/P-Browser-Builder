@@ -688,7 +688,7 @@
     <value>575, 9</value>
   </metadata>
   <data name="RichTextBox2.Text" xml:space="preserve">
-    <value>Builder Release 9.8.4
+    <value>Builder Release 9.8.5
 
 ** Compatibility **
 - [✓]: This version still compatible with old resource.
@@ -696,15 +696,12 @@
 - [✓]: This version support settings from previous versions.
 
 ** Release notes **
-- [Core]: Updated CefSharp to 141.0.110
-- [Core]: Updated Chromium to 141.0.7390.123
-- [Installer]: Updated Visual C++ Redistributable to 14.50.35710.0</value>
+- [Core]: Updated CefSharp to 143.0.90
+- [Core]: Updated Chromium to 143.0.7499.40
+- [Installer]: Visual C++ Redistributable will only download and install when needed.</value>
   </data>
   <metadata name="dlworker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>666, 9</value>
-  </metadata>
-  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>766, 9</value>
   </metadata>
   <metadata name="FolderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>866, 9</value>

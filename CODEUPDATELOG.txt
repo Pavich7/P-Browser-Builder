@@ -1,4 +1,4 @@
-﻿Builder Release 9.8.4
+﻿Builder Release 9.8.5
 
 ** Release Highlights **
 
@@ -8,6 +8,6 @@
 - [✓]: This version support settings from previous versions.
 
 ** Release notes **
-- [Core]: Updated CefSharp to 141.0.110
-- [Core]: Updated Chromium to 141.0.7390.123
-- [Installer]: Updated Visual C++ Redistributable to 14.50.35710.0
+- [Core]: Updated CefSharp to 143.0.90
+- [Core]: Updated Chromium to 143.0.7499.40
+- [Installer]: Visual C++ Redistributable will only download and install when needed.

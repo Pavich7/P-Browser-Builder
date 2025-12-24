@@ -58,7 +58,7 @@ Section "P Browser Installer" SecDummy
     "$TEMP\vc_redist.x64.exe"
   Pop $0
 
-  ExecWait '"$TEMP\vc_redist.x64.exe"'
+  ExecWait '"$TEMP\vc_redist.x64.exe" /quiet /norestart'
 
   skip_vcredist:
 
