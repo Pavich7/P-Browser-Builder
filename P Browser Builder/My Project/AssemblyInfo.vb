@@ -11,7 +11,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Easily create your web-based app without any coding!")>
 <Assembly: AssemblyCompany("MadeByPavich")>
 <Assembly: AssemblyProduct("P Browser Builder")>
-<Assembly: AssemblyCopyright("Copyright © 2025 Pavich Komansil. All rights reserved.")>
+<Assembly: AssemblyCopyright("Copyright © 2026 Pavich Komansil. All rights reserved.")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
