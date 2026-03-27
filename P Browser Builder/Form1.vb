@@ -1280,7 +1280,9 @@ Public Class Form1
             TabControl1.TabPages.Add(TabPage5)
         End If
         TabControl1.SelectedTab = TabPage5
-        cfuworker.RunWorkerAsync()
+        If Not cfuworker.IsBusy Then
+            cfuworker.RunWorkerAsync()
+        End If
     End Sub
     Dim obuiver As String = ""
     Dim oresver As String = ""

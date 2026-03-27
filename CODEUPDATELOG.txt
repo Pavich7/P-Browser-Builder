@@ -11,3 +11,4 @@
 - [Core]: Updated CefSharp to 145.0.260
 - [Core]: Updated Chromium to 145.0.7632.110
 - [Builder]: Fix certain windows won't reappear when already opened.
+- [Builder]: Fix crash when rapidly click on check for update.
