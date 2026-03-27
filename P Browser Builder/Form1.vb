@@ -384,7 +384,11 @@ Public Class Form1
         Next
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click, BuildManagerToolStripMenuItem.Click
-        buildmanage.Show()
+        If Not buildmanage.Visible Then
+            buildmanage.Show()
+        Else
+            buildmanage.Activate()
+        End If
     End Sub
     Public Sub MyForm_FormClosing(ByVal sender As Object, ByVal e As FormClosingEventArgs) Handles Me.FormClosing
         If Not TextBox1.Text = "" Then
@@ -680,7 +684,11 @@ Public Class Form1
     End Sub
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
-        about.Show()
+        If Not about.Visible Then
+            about.Show()
+        Else
+            about.Activate()
+        End If
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
@@ -1246,7 +1254,11 @@ Public Class Form1
     End Sub
 
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click, PreferenceToolStripMenuItem.Click
-        prefer.Show()
+        If Not prefer.Visible Then
+            prefer.Show()
+        Else
+            prefer.Activate()
+        End If
     End Sub
 
     Private Sub TextBox_KeyPress_Check(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox3.KeyPress, TextBox4.KeyPress, TextBox5.KeyPress

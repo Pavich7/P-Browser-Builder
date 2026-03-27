@@ -108,7 +108,11 @@ Public Class prefer
     End Sub
 
     Private Sub Label16_Click(sender As Object, e As EventArgs) Handles Label16.Click
-        about.Show()
+        If Not about.Visible Then
+            about.Show()
+        Else
+            about.Activate()
+        End If
     End Sub
 
     Private Sub Label19_Click(sender As Object, e As EventArgs) Handles Label19.Click

@@ -1,4 +1,4 @@
-﻿Builder Release 9.8.5
+﻿Builder Release 9.8.6
 
 ** Release Highlights **
 
@@ -10,4 +10,4 @@
 ** Release notes **
 - [Core]: Updated CefSharp to 143.0.90
 - [Core]: Updated Chromium to 143.0.7499.40
-- [Installer]: Visual C++ Redistributable will only download and install when needed.
+- [Builder]: Fix certain windows won't reappear when already opened.
