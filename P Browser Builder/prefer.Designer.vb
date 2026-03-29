@@ -69,9 +69,7 @@ Partial Class prefer
         Me.Label43 = New System.Windows.Forms.Label()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label52 = New System.Windows.Forms.Label()
         Me.Label51 = New System.Windows.Forms.Label()
-        Me.Label50 = New System.Windows.Forms.Label()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -81,9 +79,6 @@ Partial Class prefer
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -212,7 +207,7 @@ Partial Class prefer
         Me.TabControl1.Location = New System.Drawing.Point(0, 48)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(501, 359)
+        Me.TabControl1.Size = New System.Drawing.Size(501, 323)
         Me.TabControl1.TabIndex = 70
         '
         'TabPage1
@@ -234,7 +229,7 @@ Partial Class prefer
         Me.TabPage1.Location = New System.Drawing.Point(4, 26)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(493, 367)
+        Me.TabPage1.Size = New System.Drawing.Size(493, 293)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "General"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -353,7 +348,7 @@ Partial Class prefer
         Me.TabPage2.Location = New System.Drawing.Point(4, 26)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(493, 321)
+        Me.TabPage2.Size = New System.Drawing.Size(493, 293)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Advanced"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -534,7 +529,7 @@ Partial Class prefer
         Me.TabPage4.Location = New System.Drawing.Point(4, 26)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(493, 321)
+        Me.TabPage4.Size = New System.Drawing.Size(493, 293)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Diagnostic"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -646,13 +641,10 @@ Partial Class prefer
         Me.TabPage5.Controls.Add(Me.Label6)
         Me.TabPage5.Controls.Add(Me.Label7)
         Me.TabPage5.Controls.Add(Me.Label8)
-        Me.TabPage5.Controls.Add(Me.Label12)
-        Me.TabPage5.Controls.Add(Me.Label10)
-        Me.TabPage5.Controls.Add(Me.Label9)
         Me.TabPage5.Location = New System.Drawing.Point(4, 26)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage5.Size = New System.Drawing.Size(493, 329)
+        Me.TabPage5.Size = New System.Drawing.Size(493, 293)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Resource"
         Me.TabPage5.UseVisualStyleBackColor = True
@@ -660,25 +652,12 @@ Partial Class prefer
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
-        Me.Panel2.Controls.Add(Me.Label52)
         Me.Panel2.Controls.Add(Me.Label51)
-        Me.Panel2.Controls.Add(Me.Label50)
         Me.Panel2.Controls.Add(Me.Label49)
         Me.Panel2.Location = New System.Drawing.Point(27, 54)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(440, 86)
         Me.Panel2.TabIndex = 76
-        '
-        'Label52
-        '
-        Me.Label52.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label52.AutoSize = True
-        Me.Label52.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label52.Location = New System.Drawing.Point(371, 28)
-        Me.Label52.Name = "Label52"
-        Me.Label52.Size = New System.Drawing.Size(46, 17)
-        Me.Label52.TabIndex = 80
-        Me.Label52.Text = "chemb"
         '
         'Label51
         '
@@ -690,17 +669,6 @@ Partial Class prefer
         Me.Label51.Size = New System.Drawing.Size(42, 17)
         Me.Label51.TabIndex = 79
         Me.Label51.Text = "resmb"
-        '
-        'Label50
-        '
-        Me.Label50.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label50.AutoSize = True
-        Me.Label50.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label50.Location = New System.Drawing.Point(8, 28)
-        Me.Label50.Name = "Label50"
-        Me.Label50.Size = New System.Drawing.Size(109, 17)
-        Me.Label50.TabIndex = 78
-        Me.Label50.Text = "Installation Cache"
         '
         'Label49
         '
@@ -805,48 +773,12 @@ Partial Class prefer
         Me.Label8.TabIndex = 71
         Me.Label8.Text = "Uninstall"
         '
-        'Label12
-        '
-        Me.Label12.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(23, 265)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(180, 21)
-        Me.Label12.TabIndex = 72
-        Me.Label12.Text = "Delete Installation Cache"
-        '
-        'Label10
-        '
-        Me.Label10.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.Label10.Location = New System.Drawing.Point(24, 290)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(183, 17)
-        Me.Label10.TabIndex = 73
-        Me.Label10.Text = "Delete resource installer cache."
-        '
-        'Label9
-        '
-        Me.Label9.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label9.AutoSize = True
-        Me.Label9.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label9.Location = New System.Drawing.Point(416, 265)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(54, 21)
-        Me.Label9.TabIndex = 74
-        Me.Label9.Text = "Delete"
-        '
         'prefer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(501, 406)
+        Me.ClientSize = New System.Drawing.Size(501, 370)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -920,14 +852,9 @@ Partial Class prefer
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label9 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label49 As Label
-    Friend WithEvents Label52 As Label
     Friend WithEvents Label51 As Label
-    Friend WithEvents Label50 As Label
     Friend WithEvents Label55 As Label
     Friend WithEvents Label56 As Label
     Friend WithEvents Label57 As Label

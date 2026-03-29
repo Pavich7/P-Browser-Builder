@@ -10,4 +10,6 @@
 ** Release notes **
 - [Core]: Updated CefSharp to 146.0.70
 - [Core]: Updated Chromium to 146.0.7680.165
+- [Resource]: Remove cache option and will always deleted after install.
+- [Preference]: Remove delete resource cache and cache size viewer.
 - [Low-level]: System libraries are no longer bundled to reduce size.

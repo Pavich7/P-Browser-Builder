@@ -17,13 +17,6 @@ Public Class prefer
     Private Sub prefer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim apppath As String = Application.StartupPath()
         Dim rescheck As String = apppath + "\resource"
-        Dim cachecheck As String = apppath + "\statecache\updatecache\pbb-resource.zip"
-        If Not System.IO.File.Exists(cachecheck) Then
-            Label9.Enabled = False
-        End If
-        TotalSize = 0
-        Dim TheSize2 As Long = GetDirSize(apppath + "\statecache\updatecache\")
-        Label52.Text = FormatNumber(TheSize2 / 1024 / 1024, 1) & " MB"
         If Not System.IO.Directory.Exists(rescheck) Then
             Label2.Text = "Chromium : N/A"
             Label5.Text = "CefSharp : N/A"
@@ -90,20 +83,6 @@ Public Class prefer
             End If
         Catch ex As Exception
             MessageBox.Show("Could not attempt to uninstall resource!" + vbNewLine + ex.Message + vbNewLine + "You may need to restart builder and try again.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
-
-    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
-        Try
-            Dim apppath As String = Application.StartupPath()
-            System.IO.Directory.Delete(apppath + "\statecache\updatecache", True)
-            System.IO.Directory.CreateDirectory(apppath + "\statecache\updatecache")
-            Label9.Enabled = False
-            TotalSize = 0
-            Dim TheSize3 As Long = GetDirSize(apppath + "\statecache\updatecache\")
-            Label52.Text = FormatNumber(TheSize3 / 1024 / 1024, 1) & " MB"
-        Catch ex As Exception
-            MessageBox.Show("Could not attempt to delete installer cache!" + vbNewLine + ex.Message + vbNewLine + "You may need to restart builder and try again.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 

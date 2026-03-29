@@ -774,11 +774,8 @@ Public Class Form1
     End Sub
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles dlworker.RunWorkerCompleted
         ProgressBar1.Style = ProgressBarStyle.Blocks
-        Dim result0 As DialogResult = MessageBox.Show("Do you want to delete installation cache?" + vbNewLine + "Cache can be used to reinstall using advanced sideload. Delete if you wanted to save space. You can delete it later in preference.", "Delete cache?", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-        If (result0 = DialogResult.Yes) Then
-            System.IO.Directory.Delete(apppath + "\statecache\updatecache", True)
-            System.IO.Directory.CreateDirectory(apppath + "\statecache\updatecache")
-        End If
+        System.IO.Directory.Delete(apppath + "\statecache\updatecache", True)
+        System.IO.Directory.CreateDirectory(apppath + "\statecache\updatecache")
         Dim result1 As DialogResult = MessageBox.Show("Installation completed but restart required for fully functional!" + vbNewLine + "Do you want to restart P Browser Builder now?", "Installation completed!", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If (result1 = DialogResult.Yes) Then
             Application.Restart()
