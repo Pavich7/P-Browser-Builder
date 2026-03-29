@@ -468,6 +468,7 @@ Public Class Form1
         TabControl1.TabPages.Remove(TabPage5)
         TabControl1.TabPages.Remove(TabPage6)
         TabControl1.TabPages.Remove(TabPage7)
+        ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
         'Reset
         Dim inrsstate = settings.load("inrsstate")
         If inrsstate = "True" Then
