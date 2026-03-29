@@ -35,6 +35,7 @@ Public Class buildmanage
             Label52.Text = "0.0 MB"
             Label4.Text = "Application name: N/A"
             Label4.Enabled = False
+            Label5.Visible = False
             Form1.Label7.Text = "Cleanup completed!"
             Snooze(3)
             Form1.ProgressBar1.Value = 0

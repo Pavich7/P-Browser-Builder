@@ -11,6 +11,7 @@
 - [Core]: Updated CefSharp to 146.0.70
 - [Core]: Updated Chromium to 146.0.7680.165
 - [Builder]: Fix user can edit welcome message box icon name.
+- [Build Manager]: Fix Reset App still show after cleanup completed.
 - [Resource]: Remove cache option and will always deleted after install.
 - [Preference]: Remove delete resource cache and cache size viewer.
 - [Preference]: Uninstalling resource will no longer require restart.
