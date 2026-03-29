@@ -2,6 +2,8 @@
 Imports System.IO.Compression
 Imports System.Net
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Button
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar
 
 Public Class prefer
     Dim TotalSize As Long = 0
@@ -78,8 +80,31 @@ Public Class prefer
             If (result = DialogResult.Yes) Then
                 Dim apppath As String = Application.StartupPath()
                 System.IO.Directory.Delete(apppath + "\resource", True)
-                MessageBox.Show("P Browser Builder need to restart app", "Uninstall Completed!", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Application.Restart()
+                Form1.Label7.Text = "Not ready, resources required."
+                Form1.Button1.Enabled = False
+                Form1.Button2.Enabled = False
+                Form1.CheckBox1.Enabled = False
+                Form1.CheckBox2.Enabled = False
+                Form1.Label8.Enabled = False
+                Form1.Label24.Enabled = False
+                Form1.Button9.Enabled = False
+                Form1.BuildProjectToolStripMenuItem.Enabled = False
+                Form1.TestProjectToolStripMenuItem.Enabled = False
+                Form1.Label18.Visible = True
+                Form1.Label18.Text = "Download"
+                Form1.Label20.Visible = True
+                Form1.Label20.Text = "Builder resource not installed yet."
+                Label2.Text = "Chromium : N/A"
+                Label5.Text = "CefSharp : N/A"
+                Label23.Text = "Version : N/A"
+                Label51.Text = "0.0 MB"
+                Label2.Enabled = False
+                Label5.Enabled = False
+                Label23.Enabled = False
+                Label30.Enabled = False
+                Label7.Text = "Delete currently installed resource. (Resource not installed)"
+                Label8.Enabled = False
+                MessageBox.Show("Uninstalled! You can reinstall via side panel.", "Uninstall Completed!", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
         Catch ex As Exception
             MessageBox.Show("Could not attempt to uninstall resource!" + vbNewLine + ex.Message + vbNewLine + "You may need to restart builder and try again.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error)
