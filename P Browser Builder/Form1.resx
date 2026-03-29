@@ -688,7 +688,7 @@
     <value>575, 9</value>
   </metadata>
   <data name="RichTextBox2.Text" xml:space="preserve">
-    <value>Builder Release 9.8.6
+    <value>Builder Release 9.8.7
 
 ** Compatibility **
 - [✓]: This version still compatible with old resource.
@@ -696,16 +696,12 @@
 - [✓]: This version support settings from previous versions.
 
 ** Release notes **
-- [Core]: Updated CefSharp to 145.0.260
-- [Core]: Updated Chromium to 145.0.7632.110
-- [Builder]: Fix certain windows won't reappear when already opened.
-- [Builder]: Fix crash when rapidly click on check for update.</value>
+- [Core]: Updated CefSharp to 146.0.70
+- [Core]: Updated Chromium to 146.0.7680.165
+- [Low-level]: System libraries are no longer bundled to reduce size.</value>
   </data>
   <metadata name="dlworker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>666, 9</value>
-  </metadata>
-  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>766, 9</value>
   </metadata>
   <metadata name="FolderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>866, 9</value>

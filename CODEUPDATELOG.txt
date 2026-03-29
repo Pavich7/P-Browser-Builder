@@ -8,6 +8,6 @@
 - [✓]: This version support settings from previous versions.
 
 ** Release notes **
-- [Core]: Updated CefSharp to 145.0.260
-- [Core]: Updated Chromium to 145.0.7632.110
+- [Core]: Updated CefSharp to 146.0.70
+- [Core]: Updated Chromium to 146.0.7680.165
 - [Low-level]: System libraries are no longer bundled to reduce size.
