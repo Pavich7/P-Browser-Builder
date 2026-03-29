@@ -1,4 +1,4 @@
-﻿Builder Release 9.8.6
+﻿Builder Release 9.8.7
 
 ** Release Highlights **
 
@@ -10,5 +10,4 @@
 ** Release notes **
 - [Core]: Updated CefSharp to 145.0.260
 - [Core]: Updated Chromium to 145.0.7632.110
-- [Builder]: Fix certain windows won't reappear when already opened.
-- [Builder]: Fix crash when rapidly click on check for update.
+- [Low-level]: System libraries are no longer bundled to reduce size.
