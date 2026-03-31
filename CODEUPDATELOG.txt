@@ -3,8 +3,8 @@
 ** Release Highlights **
 
 ** Compatibility **
-- [✓]: This version still compatible with old resource.
-- [✓]: This version support saves from previous versions.
+- [X]: This version still compatible with old resource.
+- [X]: This version support saves from previous versions.
 - [✓]: This version support settings from previous versions.
 
 ** Release notes **
