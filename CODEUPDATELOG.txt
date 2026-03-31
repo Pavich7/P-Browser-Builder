@@ -1,6 +1,7 @@
-﻿Builder Release 9.8.7
+﻿Builder Release 9.9
 
 ** Release Highlights **
+- [Proxy]: New proxy option, Support proxy without authentication.
 
 ** Compatibility **
 - [X]: This version still compatible with old resource.

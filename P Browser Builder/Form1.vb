@@ -585,7 +585,7 @@ Public Class Form1
                 TestProjectToolStripMenuItem.Enabled = False
             Else
                 'chkpoint
-                If Not System.IO.File.Exists(apppath + "\resource\cpd740") Then
+                If Not System.IO.File.Exists(apppath + "\resource\cpd7150") Then
                     MessageBox.Show("Resource not compatible to this version of Builder!" + vbNewLine + "Please update Builder and Resource to ensure compatibility.", "Resource not compatible!", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Button1.Enabled = False
                     Button2.Enabled = False
