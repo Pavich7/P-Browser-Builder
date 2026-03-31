@@ -439,9 +439,6 @@ Public Class Form1
         End If
         If Not System.IO.Directory.Exists(apppath + "\binary") Then System.IO.Directory.CreateDirectory(apppath + "\binary")
         If Not System.IO.Directory.Exists(apppath + "\binarypkg") Then System.IO.Directory.CreateDirectory(apppath + "\binarypkg")
-        If Not System.IO.Directory.Exists(apppath + "\metadata") Then
-            Throw New Exception("Bad data structure! Reinstall might fixed this problem.")
-        End If
         If Not System.IO.Directory.Exists(apppath + "\statecache") Then System.IO.Directory.CreateDirectory(apppath + "\statecache")
         If Not System.IO.Directory.Exists(apppath + "\statecache\buildcache") Then System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache")
         If Not System.IO.Directory.Exists(apppath + "\statecache\buildcache\appicns") Then System.IO.Directory.CreateDirectory(apppath + "\statecache\buildcache\appicns")
@@ -605,9 +602,7 @@ Public Class Form1
                 Try
                     Dim client1 As WebClient = New WebClient()
                     Dim obuiver As String = client1.DownloadString("https://github.com/Pavich7/P-Browser-Builder/releases/latest/download/release_manifest.txt")
-                    Dim fileReader11 As System.IO.StreamReader
-                    fileReader11 = My.Computer.FileSystem.OpenTextFileReader(apppath + "\metadata\version.txt")
-                    Dim stringReader11 As String = fileReader11.ReadLine()
+                    Dim stringReader11 As String = Application.ProductVersion
                     If Not obuiver.Contains(stringReader11) Then
                         If Not TabControl1.TabPages.Contains(TabPage5) Then
                             TabControl1.TabPages.Add(TabPage5)
@@ -618,7 +613,6 @@ Public Class Form1
                         Panel4.Visible = True
                         Label14.Text = "New updates available! (" + obuiver + ")"
                     End If
-                    fileReader11.Close()
                 Catch ex As Exception
                 End Try
             End If
@@ -1296,9 +1290,7 @@ Public Class Form1
 
     Private Sub cfuworker_DoWorkComplete(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles cfuworker.RunWorkerCompleted
         'buivercheck
-        Dim bfileReader As System.IO.StreamReader
-        bfileReader = My.Computer.FileSystem.OpenTextFileReader(apppath + "\metadata\version.txt")
-        Dim bstringReader As String = bfileReader.ReadLine()
+        Dim bstringReader As String = Application.ProductVersion
         If obuiver.Contains(bstringReader) Then
             Label13.Text = "Latest version installed!"
             PictureBox12.Image = My.Resources.check
@@ -1311,7 +1303,6 @@ Public Class Form1
             Panel4.Visible = True
             Label14.Text = "New updates available! (" + obuiver + ")"
         End If
-        bfileReader.Close()
         'resvercheck
         If System.IO.Directory.Exists(apppath + "\resource") Then
             Dim rfileReader As System.IO.StreamReader
