@@ -57,6 +57,9 @@ Public Class Form1
                         'appaot
                         'apphico
                         'useragent
+                        'proxyena
+                        'proxyserv
+                        'proxyport
                         writer.WriteLine(TextBox1.Text)
                         writer.WriteLine(TextBox2.Text)
                         If CheckBox8.Checked = True Then
@@ -88,7 +91,16 @@ Public Class Form1
                         End If
                         If CheckBox9.Checked = True Then
                             writer.WriteLine(TextBox6.Text)
+                        Else
+                            writer.WriteLine("")
                         End If
+                        If CheckBox13.Checked = True Then
+                            writer.WriteLine("True")
+                        Else
+                            writer.WriteLine("False")
+                        End If
+                        writer.WriteLine(TextBox10.Text)
+                        writer.WriteLine(TextBox11.Text)
                     End Using
                     'create hash
                     Dim lines As List(Of String) = File.ReadAllLines(apppath + "\resource\testspace\manifest.pbcfg").ToList()
@@ -240,6 +252,9 @@ Public Class Form1
                     'appaot
                     'apphico
                     'useragent
+                    'proxyena
+                    'proxyserv
+                    'proxyport
                     writer.WriteLine(TextBox1.Text)
                     writer.WriteLine(TextBox2.Text)
                     If CheckBox8.Checked = True Then
@@ -275,7 +290,16 @@ Public Class Form1
                     End If
                     If CheckBox9.Checked = True Then
                         writer.WriteLine(TextBox6.Text)
+                    Else
+                        writer.WriteLine("")
                     End If
+                    If CheckBox13.Checked = True Then
+                        writer.WriteLine("True")
+                    Else
+                        writer.WriteLine("False")
+                    End If
+                    writer.WriteLine(TextBox10.Text)
+                    writer.WriteLine(TextBox11.Text)
                 End Using
                 'bootbit
                 Using bitwriter As New StreamWriter(apppath + "\binary\bootbit.pbcfg", False)
