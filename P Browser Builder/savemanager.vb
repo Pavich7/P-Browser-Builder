@@ -21,6 +21,9 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 'appico
 'offweb
 'dislog
+'proxyena
+'proxyserv
+'proxyport
 
 Module savemanager
     Private Sub Snooze(ByVal seconds As Integer)
@@ -131,6 +134,9 @@ Module savemanager
                     End Try
                 End If
                 Form1.CheckBox12.Checked = fileReader.ReadLine()
+                Form1.CheckBox13.Checked = fileReader.ReadLine()
+                Form1.TextBox10.Text = fileReader.ReadLine()
+                Form1.TextBox11.Text = fileReader.ReadLine()
                 fileReader.Close()
             Catch ex As Exception
                 MessageBox.Show("Load Failed!" & vbNewLine & "Project is not compatiable or corrupt!" & vbNewLine & ex.Message, "Load error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -180,6 +186,9 @@ Module savemanager
                             writer.WriteLine(My.Settings.tempOffWebLoc)
                         End If
                         writer.WriteLine(Form1.CheckBox12.CheckState)
+                        writer.WriteLine(Form1.CheckBox13.CheckState)
+                        writer.WriteLine(Form1.TextBox10.Text)
+                        writer.WriteLine(Form1.TextBox11.Text)
                     End Using
                     myStream.Close()
                     Form1.ProgressBar1.Value = 100
