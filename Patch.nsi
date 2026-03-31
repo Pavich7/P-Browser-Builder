@@ -44,12 +44,13 @@
 Section "P Browser Installer" SecDummy
 
   SetOutPath "$INSTDIR"
-  
-  ; Check version.txt
-  FileOpen $0 "$INSTDIR\metadata\version.txt" r
-  FileRead $0 $1
-  FileClose $0
-  StrCmp $1 "9.8.6" +3
+
+  !include "FileFunc.nsh"
+  !insertmacro GetFileVersion
+
+  ; Check installed program version from EXE
+  ${GetFileVersion} "$INSTDIR\P Browser Builder.exe" $R0
+  StrCmp $R0 "9.8.6.0" +3
   MessageBox MB_OK "Error! Patch is not supported in the currently installed version."
   Abort
 
