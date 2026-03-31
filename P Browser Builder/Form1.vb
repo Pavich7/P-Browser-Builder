@@ -92,9 +92,8 @@ Public Class Form1
                     End Using
                     'create hash
                     Dim lines As List(Of String) = File.ReadAllLines(apppath + "\resource\testspace\manifest.pbcfg").ToList()
-                    If lines.Count >= 7 Then
-                        lines.RemoveAt(6)
-                    End If
+                    'Remove fsmsg.enab line
+                    lines.RemoveAt(6)
                     Dim combinedString As String = String.Join(Environment.NewLine, lines)
                     Dim md5 As MD5 = MD5.Create()
                     Dim inputBytes As Byte() = Encoding.UTF8.GetBytes(combinedString)
@@ -293,9 +292,8 @@ Public Class Form1
                 End Using
                 'create hash
                 Dim lines As List(Of String) = File.ReadAllLines(apppath + "\binary\manifest.pbcfg").ToList()
-                If lines.Count >= 7 Then
-                    lines.RemoveAt(6)
-                End If
+                'Remove fsmsg.enab line
+                lines.RemoveAt(6)
                 Dim combinedString As String = String.Join(Environment.NewLine, lines)
                 Dim md5 As MD5 = MD5.Create()
                 Dim inputBytes As Byte() = Encoding.UTF8.GetBytes(combinedString)
