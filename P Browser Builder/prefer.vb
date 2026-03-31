@@ -76,7 +76,7 @@ Public Class prefer
 
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
         Try
-            Dim result As DialogResult = MessageBox.Show("Do you wish to completely uninstall builder resource?" + vbNewLine + "You can reinstall resource later via notification box", "You sure about this?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+            Dim result As DialogResult = MessageBox.Show("Do you wish to completely uninstall builder resource?" + vbNewLine + "You can reinstall resource later via side panel.", "You sure about this?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
             If (result = DialogResult.Yes) Then
                 Dim apppath As String = Application.StartupPath()
                 System.IO.Directory.Delete(apppath + "\resource", True)
