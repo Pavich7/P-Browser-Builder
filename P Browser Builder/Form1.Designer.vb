@@ -2611,7 +2611,7 @@ Partial Class Form1
         Me.CheckBox13.Size = New System.Drawing.Size(64, 21)
         Me.CheckBox13.TabIndex = 73
         Me.CheckBox13.Text = "Proxy :"
-        Me.ToolTip1.SetToolTip(Me.CheckBox13, "Enable Custom Browser User Agent for better websites detection.")
+        Me.ToolTip1.SetToolTip(Me.CheckBox13, "Enable proxy for browser.")
         Me.CheckBox13.UseVisualStyleBackColor = True
         '
         'TextBox10
