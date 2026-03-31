@@ -457,6 +457,11 @@ Public Class Form1
         CheckBox1.Checked = True
         Label42.Enabled = False
         TextBox6.Visible = False
+        CheckBox13.Text = "Enable Proxy"
+        Label72.Visible = False
+        Label73.Visible = False
+        TextBox10.Visible = False
+        TextBox11.Visible = False
         TabControl1.TabPages.Remove(TabPage3)
         TabControl1.TabPages.Remove(TabPage4)
         Panel4.Visible = False
@@ -1470,5 +1475,21 @@ Public Class Form1
 
     Private Sub ResetCfustateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetCfustateToolStripMenuItem.Click
         settings.save("autocfu", "")
+    End Sub
+
+    Private Sub CheckBox13_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox13.CheckedChanged
+        If CheckBox13.Checked = True Then
+            CheckBox13.Text = "Proxy :"
+            Label72.Visible = True
+            Label73.Visible = True
+            TextBox10.Visible = True
+            TextBox11.Visible = True
+        Else
+            CheckBox13.Text = "Enable Proxy"
+            Label72.Visible = False
+            Label73.Visible = False
+            TextBox10.Visible = False
+            TextBox11.Visible = False
+        End If
     End Sub
 End Class

@@ -40,6 +40,8 @@ Module savemanager
         Form1.TextBox8.Text = ""
         Form1.TextBox7.Text = ""
         Form1.TextBox9.Text = ""
+        Form1.TextBox10.Text = ""
+        Form1.TextBox11.Text = ""
         Form1.ComboBox1.Text = "Information"
         Form1.RadioButton2.Checked = True
         Form1.RadioButton3.Checked = False
@@ -57,6 +59,7 @@ Module savemanager
         Form1.CheckBox10.Checked = False
         Form1.CheckBox11.Checked = False
         Form1.CheckBox12.Checked = False
+        Form1.CheckBox13.Checked = False
         Form1.Button6.Visible = False
         Form1.CheckBox4.Visible = False
         Form1.Label24.Visible = True
