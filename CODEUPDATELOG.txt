@@ -16,3 +16,4 @@
 - [Preference]: Remove delete resource cache and cache size viewer.
 - [Preference]: Uninstalling resource will no longer require restart.
 - [Low-level]: System libraries are no longer bundled to reduce size.
+- [Low-level]: Remove version text and switch to file metadata for version info.
