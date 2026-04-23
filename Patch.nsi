@@ -50,7 +50,7 @@ Section "P Browser Installer" SecDummy
 
   ; Check installed program version from EXE
   ${GetFileVersion} "$INSTDIR\P Browser Builder.exe" $R0
-  StrCmp $R0 "9.8.6.0" +3
+  StrCmp $R0 "9.9.0.0" +3
   MessageBox MB_OK "Error! Patch is not supported in the currently installed version."
   Abort
 
