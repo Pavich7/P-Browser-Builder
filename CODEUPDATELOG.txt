@@ -1,20 +1,12 @@
-﻿Builder Release 9.9
+﻿Builder Release 9.9.1
 
 ** Release Highlights **
-- [Proxy]: New proxy option, Support proxy without authentication.
 
 ** Compatibility **
-- [X]: This version still compatible with old resource.
-- [X]: This version support saves from previous versions.
+- [✓]: This version still compatible with old resource.
+- [✓]: This version support saves from previous versions.
 - [✓]: This version support settings from previous versions.
 
 ** Release notes **
-- [Core]: Updated CefSharp to 146.0.70
-- [Core]: Updated Chromium to 146.0.7680.165
-- [Builder]: Fix user can edit welcome message box icon name.
-- [Build Manager]: Fix Reset App still show after cleanup completed.
-- [Resource]: Remove cache option and will always deleted after install.
-- [Preference]: Remove delete resource cache and cache size viewer.
-- [Preference]: Uninstalling resource will no longer require restart.
-- [Low-level]: System libraries are no longer bundled to reduce size.
-- [Low-level]: Remove version text and switch to file metadata for version info.
+- [Core]: Updated CefSharp to 146.0.100
+- [Core]: Updated Chromium to 146.0.7680.179
