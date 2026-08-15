@@ -1,5 +1,9 @@
 !include "MUI2.nsh"
 
+; ###################################################
+;  This script is no longer used since Builder 9.9.2
+; ###################################################
+
 ; General
 
   ; Name and output file
