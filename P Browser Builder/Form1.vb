@@ -1406,14 +1406,6 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub Label15_Click(sender As Object, e As EventArgs) Handles Label15.Click
-        MessageBox.Show("Patch Download is smaller, as it only replaces changed files. A full download provides a fresh install. Both keeps your settings. " + vbNewLine + "Note: Patch updates are only supported for the latest release before the new one.", "Updates Help", MessageBoxButtons.OK, MessageBoxIcon.Information)
-    End Sub
-
-    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-        Process.Start("https://github.com/Pavich7/P-Browser-Builder/releases/latest/download/Update.P.Browser.Builder.exe")
-    End Sub
-
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
         Process.Start("https://github.com/Pavich7/P-Browser-Builder/releases/latest/download/Install.P.Browser.Builder.exe")
     End Sub

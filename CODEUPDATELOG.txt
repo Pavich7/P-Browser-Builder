@@ -8,5 +8,6 @@
 - [✓]: This version support settings from previous versions.
 
 ** Release notes **
+- [Software Update]: Remove patch download support.
 - [Core]: Updated CefSharp to 150.0.110
 - [Core]: Updated Chromium to 150.0.7871.115
