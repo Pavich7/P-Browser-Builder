@@ -1,4 +1,4 @@
-﻿Builder Release 9.9.1
+﻿Builder Release 9.9.2
 
 ** Release Highlights **
 
@@ -8,5 +8,5 @@
 - [✓]: This version support settings from previous versions.
 
 ** Release notes **
-- [Core]: Updated CefSharp to 146.0.100
-- [Core]: Updated Chromium to 146.0.7680.179
+- [Core]: Updated CefSharp to 150.0.110
+- [Core]: Updated Chromium to 150.0.7871.115
